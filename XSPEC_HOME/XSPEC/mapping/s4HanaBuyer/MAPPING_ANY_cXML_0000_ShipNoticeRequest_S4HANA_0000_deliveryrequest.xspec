@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xsl">
+    <x:scenario label="Test Ship Notice 1 - ASN40729 - Partial Quantity">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>
+
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN40729_partial_quantity_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/ASN40729_partial_quantity_AM.xml" 
+            label="Test Ship Notice 1 - ASN40729 - Partial Quantity" select="*"/>
+    </x:scenario>
+    
+    <x:scenario label="Test Ship Notice 2 - ASN40667 - Full Quantity">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN40667_full_quantity_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/ASN40667_full_quantity_AM.xml" 
+            label="Test Ship Notice 2 - ASN40667 - Full Quantity" select="*"/>
+    </x:scenario>
+    
+    <x:scenario label="Test Ship Notice 3 - ASN_2986 - BATCH">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>     
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN_2986_Batch_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/ASN_2986_Batch_AM.xml" 
+            label="Test Ship Notice 3 - ASN_2986 - BATCH" select="*"/>
+    </x:scenario>
+    
+    <x:scenario label="Test Ship Notice 4 - ASN4204 - Component BATCH">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>     
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN4204_ComponentBatch_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/ASN4204_ComponentBatch_AM.xml" 
+            label="Test Ship Notice 4 - ASN4204 - Component BATCH" select="*"/>
+    </x:scenario>
+    
+    <x:scenario label="Test Ship Notice 5 - ASN2648 - Serial numbers">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>     
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN2648_SerialNumbers_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/ASN2648_SerialNumbers_AM.xml" 
+            label="Test Ship Notice 5 - ASN2648 - Serial numbers" select="*"/>
+    </x:scenario>
+    <x:scenario label="Test Ship Notice 6 - Multi level packaging one SKU">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>     
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/Multi level packaging one SKU_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/Multi level packaging one SKU_AM.xml" 
+            label="Test Ship Notice 6 - Multi level packaging one SKU" select="*"/>
+    </x:scenario>
+    <x:scenario label="Test Ship Notice 7 - Single level packaging with Auxiliary Material">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>     
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/Single level packaging with Auxiliary Material_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/Single level packaging with Auxiliary Material_AM.xml" 
+            label="Test Ship Notice 7 - Single level packaging with Auxiliary Material" select="*"/>
+    </x:scenario>
+    <x:scenario label="Test Ship Notice 8 - Mixed HU: Different materials in same HU">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>     
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/Mixed HU- Different materials in same HU_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/Mixed HU- Different materials in same HU_AM.xml" 
+            label="Test Ship Notice 8 - Mixed HU: Different materials in same HU" select="*"/>
+    </x:scenario>
+    <x:scenario label="Test Ship Notice 9 - Attachment">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="p_ansysid"/>
+        <x:param name="p_erpsysid"/>
+        <x:param name="p_date"/>
+        <x:param name="p_timezone"/>     
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN_cXML_BM_file_with_Attachments.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/DeliveryRequest/ASN_cXML_AM_file_with_Attachments.xml" 
+            label="Test Ship Notice 9 - Attachment" select="*"/>
+    </x:scenario>
+</x:description>

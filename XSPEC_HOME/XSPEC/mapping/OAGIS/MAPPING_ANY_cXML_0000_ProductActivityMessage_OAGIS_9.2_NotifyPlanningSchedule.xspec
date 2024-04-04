@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_cXML_0000_ProductActivityMessage_OAGIS_9.2_NotifyPlanningSchedule.xsl">
+    <x:scenario label="Product Activity Message Notify Planning Schedule">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'081466849T'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/ProductActivity/ProductActivity_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/ProductActivity/ProductActivity_AM.dat"
+            select="element()" label="Product Activity Message Notify Planning Schedule"/>
+    </x:scenario>
+    <x:scenario label="Product Activity Message Notify Planning Schedule">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'081466849T'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/ProductActivity/ProductActivityTimeSeries_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/ProductActivity/ProductActivityTimeSeries_AM.dat"
+            select="element()" label="Product Activity Message Notify Planning Schedule"/>
+    </x:scenario>
+</x:description>

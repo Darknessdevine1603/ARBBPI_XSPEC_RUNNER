@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_UN-EDIFACT_D96A_DESADV_cXML_0000_ShipNoticeRequest.xsl">
+    <x:scenario label="Ship Notice Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004579339-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/ShipNotice/ShipNotice_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/ShipNotice/ShipNotice_AM.xml"
+            select="element()" label="Ship Notice Request"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request - ASN delete">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004579339-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/ShipNotice/ShipNotice_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/ShipNotice/ShipNotice_AM1.xml"
+            select="element()" label="Ship Notice Request - ASN delete"/>
+    </x:scenario>
+    
+    <x:scenario label="Ship Notice Request - multi PO">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004579339-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/ShipNotice/ShipNotice_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/ShipNotice/ShipNotice_AM2.xml"
+            select="element()" label="Ship Notice Request - multi PO"/>
+    </x:scenario>
+    
+    <x:scenario label="Ship Notice Request - multi PO-2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004579339-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/ShipNotice/ShipNotice_BM3.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/ShipNotice/ShipNotice_AM3.xml"
+            select="element()" label="Ship Notice Request - multi PO-2"/>
+    </x:scenario>
+</x:description>

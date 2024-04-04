@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_ASC-X12_004010_824_cXML_0000_StatusUpdateRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_824_cXML_0000_StatusUpdateRequest.xsl"
+        date="2023-04-27T16:06:03.490421+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_ASC-X12_004010_824_cXML_0000_StatusUpdateRequest.xspec">
+      <label>Status Update Request Accepted</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_824_Accept_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T16:06:03+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004417465-T</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004417464-T</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="production">
+                  <StatusUpdateRequest>
+                     <Status text="accepted" code="200">accepted</Status>
+                     <DocumentStatus type="accepted">
+                        <DocumentInfo documentID="ORDER#Long"
+                                      documentType="OrderRequest"
+                                      documentDate="2018-06-07T03:40:12-07:00"/>
+                     </DocumentStatus>
+                  </StatusUpdateRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Status Update Request Accepted</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004417465-T</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004417464-T</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="production">
+                     <StatusUpdateRequest>
+                        <Status text="accepted" code="200">accepted</Status>
+                        <DocumentStatus type="accepted">
+                           <DocumentInfo documentID="ORDER#Long"
+                                         documentType="OrderRequest"
+                                         documentDate="2018-06-07T03:40:12-07:00"/>
+                        </DocumentStatus>
+                     </StatusUpdateRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_ASC-X12_004010_824_cXML_0000_StatusUpdateRequest.xspec">
+      <label>Status Update Request Rejected</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_824_Reject_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T16:06:03+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004417465-T</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004417464-T</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <StatusUpdateRequest>
+                     <Status text="Status-Text" code="400">Status-Text</Status>
+                     <DocumentStatus type="rejected">
+                        <DocumentInfo documentID="ORDER#Long"
+                                      documentType="OrderRequest"
+                                      documentDate="2018-06-07T03:40:12-07:00"/>
+                        <Comments>1. Serial Number format res2. Ship from Postal Code not valid Please resend the</Comments>
+                        <Comments> ASN</Comments>
+                     </DocumentStatus>
+                  </StatusUpdateRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Status Update Request Rejected</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004417465-T</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004417464-T</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <StatusUpdateRequest>
+                        <Status text="Status-Text" code="400">Status-Text</Status>
+                        <DocumentStatus type="rejected">
+                           <DocumentInfo documentID="ORDER#Long"
+                                         documentType="OrderRequest"
+                                         documentDate="2018-06-07T03:40:12-07:00"/>
+                           <Comments>1. Serial Number format res2. Ship from Postal Code not valid Please resend the</Comments>
+                           <Comments> ASN</Comments>
+                        </DocumentStatus>
+                     </StatusUpdateRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

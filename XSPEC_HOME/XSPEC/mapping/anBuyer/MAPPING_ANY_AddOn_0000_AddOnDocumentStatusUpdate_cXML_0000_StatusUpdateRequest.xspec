@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xsl">
+    <x:scenario label="Status Update for ASN">
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anEnvName"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-InboundDelivery.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-InboundDelivery.dat"
+            select="element()" label="Status Update for ASN"/>
+    </x:scenario>
+    <!-- IG-33446 new Rejected scenario added as this was not covered earlier-->
+    <x:scenario label="Rejected Status Update for ASN">
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anEnvName"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-InboundDelivery_Rejected.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-InboundDelivery_Rejected.dat"
+            select="element()" label="Rejected Status Update for ASN"/>
+    </x:scenario>
+    <x:scenario label="Status Update for Incoming SES">
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-SES.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-SES.dat"
+            select="element()" label="Status Update for Incoming SES"/>
+    </x:scenario>
+    <x:scenario label="Status Update for Payment Receipt Confirmation">
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anEnvName"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+01:00'"/>
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentReceiptConf.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentReceiptConf.dat"
+            select="element()" label="Status Update for Payment Receipt Confirmation"/>
+    </x:scenario>
+    <x:scenario label="Status Update for Scheduling Agreement Release">
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anEnvName"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+01:00'"/>
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-SAR.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-SAR.dat"
+            select="element()" label="Status Update for Scheduling Agreement Release"/>
+    </x:scenario>
+    <x:scenario label="Status Update for Order Confirmation Approval">
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anEnvName"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+01:00'"/>
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-OCA.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-OCA.dat"
+            select="element()" label="Status Update for Order Confirmation Approval"/>
+    </x:scenario>
+</x:description>

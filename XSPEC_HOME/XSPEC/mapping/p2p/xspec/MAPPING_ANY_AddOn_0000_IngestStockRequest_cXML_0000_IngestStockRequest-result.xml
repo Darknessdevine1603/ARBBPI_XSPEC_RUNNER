@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_IngestStockRequest_cXML_0000_IngestStockRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_IngestStockRequest_cXML_0000_IngestStockRequest.xsl"
+        date="2023-04-27T15:38:21.114584+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_IngestStockRequest_cXML_0000_IngestStockRequest.xspec">
+      <label>IngestStockRequest</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/IngestStock/IngestStock_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <IngestStock transactionId="1554874647662" batchNumber="1" lastBatch="true">
+               <stockInfos>
+                  <matnr>000000000000019554</matnr>
+                  <plant>0001</plant>
+                  <lgort>0001</lgort>
+                  <labst>100.0</labst>
+               </stockInfos>
+               <stockInfos>
+                  <matnr>000000000000019581</matnr>
+                  <plant>0001</plant>
+                  <lgort>0001</lgort>
+                  <labst>100.0</labst>
+               </stockInfos>
+               <stockInfos>
+                  <matnr>000000000000019582</matnr>
+                  <plant>0001</plant>
+                  <lgort>0001</lgort>
+                  <labst>100.0</labst>
+               </stockInfos>
+               <stockInfos>
+                  <matnr>000000000000019583</matnr>
+                  <plant>0001</plant>
+                  <lgort>0001</lgort>
+                  <labst>100.0</labst>
+               </stockInfos>
+            </IngestStock>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>IngestStockRequest</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <IngestStock batchNumber="1" lastBatch="true" transactionId="1554874647662">
+                  <stockInfos>
+                     <matnr>000000000000019554</matnr>
+                     <plant>0001</plant>
+                     <lgort>0001</lgort>
+                     <labst>100.0</labst>
+                  </stockInfos>
+                  <stockInfos>
+                     <matnr>000000000000019581</matnr>
+                     <plant>0001</plant>
+                     <lgort>0001</lgort>
+                     <labst>100.0</labst>
+                  </stockInfos>
+                  <stockInfos>
+                     <matnr>000000000000019582</matnr>
+                     <plant>0001</plant>
+                     <lgort>0001</lgort>
+                     <labst>100.0</labst>
+                  </stockInfos>
+                  <stockInfos>
+                     <matnr>000000000000019583</matnr>
+                     <plant>0001</plant>
+                     <lgort>0001</lgort>
+                     <labst>100.0</labst>
+                  </stockInfos>
+               </IngestStock>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

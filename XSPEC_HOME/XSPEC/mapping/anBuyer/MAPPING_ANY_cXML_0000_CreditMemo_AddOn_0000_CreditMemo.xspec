@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_CreditMemo_AddOn_0000_CreditMemo.xsl">
+    <x:scenario label="Credit Memo Request">
+
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>        
+        <x:param name="anSourceDocumentType" select="'CreditMemo'"/> 
+        <x:param name="anPayloadID"/>        
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/CreditMemo/CreditMemo.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/CreditMemo/CreditMemo.dat"
+            select="element()" label="Credit Memo Request"/>
+    </x:scenario>
+    <x:scenario label="Credit Memo Request with Attachment">
+        
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>        
+        <x:param name="anSourceDocumentType" select="'CreditMemo'"/> 
+        <x:param name="anPayloadID"/>        
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/CreditMemo/CreditMemoAttachment.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/CreditMemo/CreditMemoAttachment.dat"
+            select="element()" label="Credit Memo Request with Attachment"/>
+    </x:scenario>
+    <x:scenario label="Credit Memo Request for External PO">
+        
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>        
+        <x:param name="anSourceDocumentType" select="'CreditMemo'"/> 
+        <x:param name="anPayloadID"/>        
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/CreditMemo/CreditMemoExternalPO.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/CreditMemo/CreditMemoExternalPO.dat"
+            select="element()" label="Credit Memo Request for External PO"/>
+    </x:scenario>
+    <x:scenario label="Credit Memo Request for External PO LS Enabled">
+        
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>        
+        <x:param name="anSourceDocumentType" select="'CreditMemoLS'"/> 
+        <x:param name="anPayloadID"/>        
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/CreditMemo/CreditMemoComments.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/CreditMemo/CreditMemoComments.dat"
+            select="element()" label="Credit Memo Request for External PO LS Enabled"/>
+    </x:scenario>
+  
+</x:description>

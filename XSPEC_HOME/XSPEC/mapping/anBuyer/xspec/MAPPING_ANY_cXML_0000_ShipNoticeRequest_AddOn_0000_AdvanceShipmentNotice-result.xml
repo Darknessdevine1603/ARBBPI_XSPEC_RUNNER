@@ -1,0 +1,3518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xsl"
+        date="2023-04-27T15:27:36.841414+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticeSARSingleLine</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeSARSingleLine.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2020-06-28T23:27:50-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1593412070487-7545391086266727384@10.163.3.1942</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>ASN-5100000075</ID>
+                  <ShipmentType>planned</ShipmentType>
+                  <CreationDateTime>2019-04-05T18:30:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2019-04-05T18:30:00-12:00</ArrivalDateTime>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID/>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>ARIBA CIG Test Vendor- UAT</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>IN</CountryCode>
+                           <RegionCode>IN-</RegionCode>
+                           <POBoxPostalCode>500032</POBoxPostalCode>
+                           <CityName>Hyderabad</CityName>
+                           <StreetName>Madhapur</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">100</Quantity>
+                     <SchedulingAgreementReference>
+                        <ID>5100000075JIT</ID>
+                        <ItemID>10</ItemID>
+                     </SchedulingAgreementReference>
+                     <Product>
+                        <InternalID>00000000000000000045670000000000000000000000002100002</InternalID>
+                        <ProductRecipientID>00000000000000000045670000000000000000000000002100002</ProductRecipientID>
+                        <StandardID schemeAgencyID="">123456</StandardID>
+                        <VendorID>Non Catalog Item</VendorID>
+                        <ManufacturerPartID>MFRPART50418</ManufacturerPartID>
+                     </Product>
+                  </Item>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ShipNoticeSARSingleLine</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2020-06-28T23:27:50-07:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1593412070487-7545391086266727384@10.163.3.1942</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>ASN-5100000075</ID>
+                     <ShipmentType>planned</ShipmentType>
+                     <CreationDateTime>2019-04-05T18:30:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2019-04-05T18:30:00-12:00</ArrivalDateTime>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID/>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>ARIBA CIG Test Vendor- UAT</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>IN</CountryCode>
+                              <RegionCode>IN-</RegionCode>
+                              <POBoxPostalCode>500032</POBoxPostalCode>
+                              <CityName>Hyderabad</CityName>
+                              <StreetName>Madhapur</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">100</Quantity>
+                        <SchedulingAgreementReference>
+                           <ID>5100000075JIT</ID>
+                           <ItemID>10</ItemID>
+                        </SchedulingAgreementReference>
+                        <Product>
+                           <InternalID>00000000000000000045670000000000000000000000002100002</InternalID>
+                           <ProductRecipientID>00000000000000000045670000000000000000000000002100002</ProductRecipientID>
+                           <StandardID schemeAgencyID="">123456</StandardID>
+                           <VendorID>Non Catalog Item</VendorID>
+                           <ManufacturerPartID>MFRPART50418</ManufacturerPartID>
+                        </Product>
+                     </Item>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticePOSingleLine</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticePOSingleLine.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2020-11-04T04:52:39-08:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1604494358555-7820520851931919712@10.163.3.194</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>ASN4500055725</ID>
+                  <ShipmentType>actual</ShipmentType>
+                  <CreationDateTime>2020-11-05T18:30:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2020-11-05T18:30:00-12:00</ArrivalDateTime>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID/>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>t1q8jqis - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>MX</CountryCode>
+                           <RegionCode>AGU</RegionCode>
+                           <POBoxPostalCode>12345</POBoxPostalCode>
+                           <CityName>Puebla</CityName>
+                           <StreetName>jUnitDummy, Address 1,!@#$%^&amp;*(), Puebla</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="BG">3</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500055725</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>184642</InternalID>
+                        <ProductRecipientID>184642</ProductRecipientID>
+                        <VendorID/>
+                     </Product>
+                     <Batch>
+                        <InternalID>sup_batch1</InternalID>
+                        <ProductRecipientID/>
+                        <ManufacturingDate>2020-08-26</ManufacturingDate>
+                        <BestBeforeDate>2020-08-26</BestBeforeDate>
+                     </Batch>
+                  </Item>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>ShipNoticePOSingleLine</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2020-11-04T04:52:39-08:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1604494358555-7820520851931919712@10.163.3.194</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>ASN4500055725</ID>
+                     <ShipmentType>actual</ShipmentType>
+                     <CreationDateTime>2020-11-05T18:30:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2020-11-05T18:30:00-12:00</ArrivalDateTime>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID/>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>t1q8jqis - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>MX</CountryCode>
+                              <RegionCode>AGU</RegionCode>
+                              <POBoxPostalCode>12345</POBoxPostalCode>
+                              <CityName>Puebla</CityName>
+                              <StreetName>jUnitDummy, Address 1,!@#$%^&amp;*(), Puebla</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="BG">3</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500055725</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>184642</InternalID>
+                           <ProductRecipientID>184642</ProductRecipientID>
+                           <VendorID/>
+                        </Product>
+                        <Batch>
+                           <InternalID>sup_batch1</InternalID>
+                           <ProductRecipientID/>
+                           <ManufacturingDate>2020-08-26</ManufacturingDate>
+                           <BestBeforeDate>2020-08-26</BestBeforeDate>
+                        </Batch>
+                     </Item>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticeHU</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeHU.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2019-01-15T06:37:33-08:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1547563053153-5116521774815523012@10.163.3.203</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>SN-22722</ID>
+                  <ShipmentType>actual</ShipmentType>
+                  <CreationDateTime>2019-01-16T18:30:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2019-01-16T18:30:00-12:00</ArrivalDateTime>
+                  <GrossWeightMeasure unitCode="">20.0</GrossWeightMeasure>
+                  <VolumeMeasure unitCode="">20.5</VolumeMeasure>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID>1234</ProductRecipientID>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>Ranjan - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>US</CountryCode>
+                           <RegionCode>CA</RegionCode>
+                           <POBoxPostalCode>94089</POBoxPostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <StreetName>jUnitDummy</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <GrossWeightMeasure unitCode="">20.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="">35.35</NetWeightMeasure>
+                     <VolumeMeasure unitCode="">40.35</VolumeMeasure>
+                     <Quantity unitCode="EA">25</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500031175</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>19413</InternalID>
+                        <ProductRecipientID>19413</ProductRecipientID>
+                        <VendorID>Non Catalog Item</VendorID>
+                     </Product>
+                     <Batch>
+                        <InternalID>sup_batch1</InternalID>
+                        <ProductRecipientID/>
+                        <ManufacturingDate>2020-08-26</ManufacturingDate>
+                        <BestBeforeDate>2020-08-26</BestBeforeDate>
+                     </Batch>
+                  </Item>
+                  <HandlingUnit>
+                     <ID>00000000000000000089</ID>
+                     <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                     <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                     <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>00000000000000000089</InternalID>
+                           <ProductRecipientID>19419</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">25.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>SN-22722</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>00000000000000000088</ID>
+                     <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                     <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                     <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>00000000000000000088</InternalID>
+                           <ProductRecipientID>19417</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <LowerLevelHandlingUnit>
+                        <ID>00000000000000000089</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>ShipNoticeHU</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2019-01-15T06:37:33-08:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1547563053153-5116521774815523012@10.163.3.203</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>SN-22722</ID>
+                     <ShipmentType>actual</ShipmentType>
+                     <CreationDateTime>2019-01-16T18:30:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2019-01-16T18:30:00-12:00</ArrivalDateTime>
+                     <GrossWeightMeasure unitCode="">20.0</GrossWeightMeasure>
+                     <VolumeMeasure unitCode="">20.5</VolumeMeasure>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID>1234</ProductRecipientID>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>Ranjan - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>US</CountryCode>
+                              <RegionCode>CA</RegionCode>
+                              <POBoxPostalCode>94089</POBoxPostalCode>
+                              <CityName>Sunnyvale</CityName>
+                              <StreetName>jUnitDummy</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <GrossWeightMeasure unitCode="">20.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="">35.35</NetWeightMeasure>
+                        <VolumeMeasure unitCode="">40.35</VolumeMeasure>
+                        <Quantity unitCode="EA">25</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500031175</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>19413</InternalID>
+                           <ProductRecipientID>19413</ProductRecipientID>
+                           <VendorID>Non Catalog Item</VendorID>
+                        </Product>
+                        <Batch>
+                           <InternalID>sup_batch1</InternalID>
+                           <ProductRecipientID/>
+                           <ManufacturingDate>2020-08-26</ManufacturingDate>
+                           <BestBeforeDate>2020-08-26</BestBeforeDate>
+                        </Batch>
+                     </Item>
+                     <HandlingUnit>
+                        <ID>00000000000000000089</ID>
+                        <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                        <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                        <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>00000000000000000089</InternalID>
+                              <ProductRecipientID>19419</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">25.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>SN-22722</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>00000000000000000088</ID>
+                        <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                        <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                        <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>00000000000000000088</InternalID>
+                              <ProductRecipientID>19417</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <LowerLevelHandlingUnit>
+                           <ID>00000000000000000089</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticeCancel</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeCancel.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2019-01-14T03:03:48-08:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1547463827953-2174753953151870805@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="03">
+                  <ID>SN-22723</ID>
+                  <ShipmentType>actual</ShipmentType>
+                  <CreationDateTime>2019-01-19T18:30:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2019-01-19T18:30:00-12:00</ArrivalDateTime>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID/>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>Ranjan - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>US</CountryCode>
+                           <RegionCode>CA</RegionCode>
+                           <POBoxPostalCode>94089</POBoxPostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <StreetName>jUnitDummy</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">99</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500031158</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>19311</InternalID>
+                        <ProductRecipientID>19311</ProductRecipientID>
+                        <VendorID>Non Catalog Item</VendorID>
+                     </Product>
+                  </Item>
+                  <HandlingUnit>
+                     <ID>00000000000000000085</ID>
+                     <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                     <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                     <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>00000000000000000085</InternalID>
+                           <ProductRecipientID>19316</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">80.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>SN-22723_1</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>00000000000000000084</ID>
+                     <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                     <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                     <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>00000000000000000084</InternalID>
+                           <ProductRecipientID>19314</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <LowerLevelHandlingUnit>
+                        <ID>00000000000000000085</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>00000000000000000086</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>00000000000000000083</ID>
+                     <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                     <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                     <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>00000000000000000083</InternalID>
+                           <ProductRecipientID>19315</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <LowerLevelHandlingUnit>
+                        <ID>00000000000000000084</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>00000000000000000086</ID>
+                     <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                     <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                     <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>00000000000000000086</InternalID>
+                           <ProductRecipientID>19316</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">19.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>SN-22723_1</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>ShipNoticeCancel</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2019-01-14T03:03:48-08:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1547463827953-2174753953151870805@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="03">
+                     <ID>SN-22723</ID>
+                     <ShipmentType>actual</ShipmentType>
+                     <CreationDateTime>2019-01-19T18:30:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2019-01-19T18:30:00-12:00</ArrivalDateTime>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID/>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>Ranjan - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>US</CountryCode>
+                              <RegionCode>CA</RegionCode>
+                              <POBoxPostalCode>94089</POBoxPostalCode>
+                              <CityName>Sunnyvale</CityName>
+                              <StreetName>jUnitDummy</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">99</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500031158</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>19311</InternalID>
+                           <ProductRecipientID>19311</ProductRecipientID>
+                           <VendorID>Non Catalog Item</VendorID>
+                        </Product>
+                     </Item>
+                     <HandlingUnit>
+                        <ID>00000000000000000085</ID>
+                        <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                        <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                        <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>00000000000000000085</InternalID>
+                              <ProductRecipientID>19316</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">80.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>SN-22723_1</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>00000000000000000084</ID>
+                        <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                        <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                        <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>00000000000000000084</InternalID>
+                              <ProductRecipientID>19314</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <LowerLevelHandlingUnit>
+                           <ID>00000000000000000085</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>00000000000000000086</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>00000000000000000083</ID>
+                        <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                        <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                        <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>00000000000000000083</InternalID>
+                              <ProductRecipientID>19315</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <LowerLevelHandlingUnit>
+                           <ID>00000000000000000084</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>00000000000000000086</ID>
+                        <HeightMeasure unitCode="IN">5.35</HeightMeasure>
+                        <LengthMeasure unitCode="IN">5.35</LengthMeasure>
+                        <WidthMeasure unitCode="IN">3.35</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">20.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KG">35.35</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KG">40.35</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>00000000000000000086</InternalID>
+                              <ProductRecipientID>19316</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">19.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>SN-22723_1</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticeUpdate</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeUpdate.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-04-25T08:59:35-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1619366375307-4454256011001260528@10.163.3.187</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="02">
+                  <ID>ASN4500022367</ID>
+                  <ShipmentType>actual</ShipmentType>
+                  <CreationDateTime>2021-04-25T18:30:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2021-04-25T18:30:00-12:00</ArrivalDateTime>
+                  <VendorParty>
+                     <InternalID>A0001</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID/>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>CI CIG Supplier - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>US</CountryCode>
+                           <RegionCode>CA</RegionCode>
+                           <POBoxPostalCode>94089</POBoxPostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <StreetName>1600,P (!@#$%^&amp;),United States</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <SerialNumber>
+                        <SerialID>71</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>72</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>73</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>74</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>75</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>76</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>77</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>78</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>79</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>80</SerialID>
+                     </SerialNumber>
+                     <PurchaseOrderReference>
+                        <ID>4500022367</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>3485</InternalID>
+                        <ProductRecipientID>3485</ProductRecipientID>
+                        <VendorID/>
+                     </Product>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">10.000</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500022368</ID>
+                        <ItemID>20</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>3577</InternalID>
+                        <ProductRecipientID>3577</ProductRecipientID>
+                        <VendorID>99837</VendorID>
+                     </Product>
+                     <Batch>
+                        <InternalID>sup_batch1</InternalID>
+                        <ProductRecipientID/>
+                        <ManufacturingDate>2020-08-26</ManufacturingDate>
+                        <BestBeforeDate>2021-04-24</BestBeforeDate>
+                     </Batch>
+                  </Item>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>ShipNoticeUpdate</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2021-04-25T08:59:35-07:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1619366375307-4454256011001260528@10.163.3.187</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="02">
+                     <ID>ASN4500022367</ID>
+                     <ShipmentType>actual</ShipmentType>
+                     <CreationDateTime>2021-04-25T18:30:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2021-04-25T18:30:00-12:00</ArrivalDateTime>
+                     <VendorParty>
+                        <InternalID>A0001</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID/>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>CI CIG Supplier - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>US</CountryCode>
+                              <RegionCode>CA</RegionCode>
+                              <POBoxPostalCode>94089</POBoxPostalCode>
+                              <CityName>Sunnyvale</CityName>
+                              <StreetName>1600,P (!@#$%^&amp;),United States</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <SerialNumber>
+                           <SerialID>71</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>72</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>73</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>74</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>75</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>76</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>77</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>78</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>79</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>80</SerialID>
+                        </SerialNumber>
+                        <PurchaseOrderReference>
+                           <ID>4500022367</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>3485</InternalID>
+                           <ProductRecipientID>3485</ProductRecipientID>
+                           <VendorID/>
+                        </Product>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">10.000</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500022368</ID>
+                           <ItemID>20</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>3577</InternalID>
+                           <ProductRecipientID>3577</ProductRecipientID>
+                           <VendorID>99837</VendorID>
+                        </Product>
+                        <Batch>
+                           <InternalID>sup_batch1</InternalID>
+                           <ProductRecipientID/>
+                           <ManufacturingDate>2020-08-26</ManufacturingDate>
+                           <BestBeforeDate>2021-04-24</BestBeforeDate>
+                        </Batch>
+                     </Item>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticeSTO</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeSTO.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2020-08-27T04:45:52-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1598528752013-2939999152404662159@10.163.3.187</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>SN_4500046791</ID>
+                  <CreationDateTime/>
+                  <ArrivalDateTime/>
+                  <VendorParty>
+                     <InternalID>501</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID/>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>Nagendra Supplier - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>US</CountryCode>
+                           <RegionCode>CA</RegionCode>
+                           <POBoxPostalCode>94089</POBoxPostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <StreetName>jUnitDummy</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">2</Quantity>
+                     <StockTransferType>intra</StockTransferType>
+                     <OutboundType>stockTransport</OutboundType>
+                     <PurchaseOrderReference>
+                        <ID>4500046791</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>1005_INTER_BATCH1</InternalID>
+                        <ProductRecipientID>1005_INTER_BATCH1</ProductRecipientID>
+                        <VendorID/>
+                     </Product>
+                     <Batch>
+                        <InternalID>sup_batch1</InternalID>
+                        <ProductRecipientID/>
+                        <ManufacturingDate>2020-08-26</ManufacturingDate>
+                        <ManufacturingTime>18:30:00</ManufacturingTime>
+                        <BestBeforeDate>2021-04-24</BestBeforeDate>
+                        <BestBeforeTime>23:00:00</BestBeforeTime>
+                     </Batch>
+                  </Item>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>ShipNoticeSTO</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2020-08-27T04:45:52-07:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1598528752013-2939999152404662159@10.163.3.187</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>SN_4500046791</ID>
+                     <CreationDateTime/>
+                     <ArrivalDateTime/>
+                     <VendorParty>
+                        <InternalID>501</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID/>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>Nagendra Supplier - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>US</CountryCode>
+                              <RegionCode>CA</RegionCode>
+                              <POBoxPostalCode>94089</POBoxPostalCode>
+                              <CityName>Sunnyvale</CityName>
+                              <StreetName>jUnitDummy</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">2</Quantity>
+                        <StockTransferType>intra</StockTransferType>
+                        <OutboundType>stockTransport</OutboundType>
+                        <PurchaseOrderReference>
+                           <ID>4500046791</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>1005_INTER_BATCH1</InternalID>
+                           <ProductRecipientID>1005_INTER_BATCH1</ProductRecipientID>
+                           <VendorID/>
+                        </Product>
+                        <Batch>
+                           <InternalID>sup_batch1</InternalID>
+                           <ProductRecipientID/>
+                           <ManufacturingDate>2020-08-26</ManufacturingDate>
+                           <ManufacturingTime>18:30:00</ManufacturingTime>
+                           <BestBeforeDate>2021-04-24</BestBeforeDate>
+                           <BestBeforeTime>23:00:00</BestBeforeTime>
+                        </Batch>
+                     </Item>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticeBuyerBatchID</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeBuyerBatchID.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2018-12-13T22:53:36-08:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1544770415565-433971792328110020@10.163.3.203</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>ASN-811</ID>
+                  <ShipmentType>planned</ShipmentType>
+                  <CreationDateTime>2018-12-14T18:30:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2018-12-14T18:30:00-12:00</ArrivalDateTime>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID/>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>Ranjan - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>US</CountryCode>
+                           <RegionCode>CA</RegionCode>
+                           <POBoxPostalCode>94089</POBoxPostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <StreetName>jUnitDummy</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">8</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500030811</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>19331</InternalID>
+                        <ProductRecipientID>19331</ProductRecipientID>
+                        <VendorID>Non Catalog Item</VendorID>
+                     </Product>
+                     <SubcontractingComponent>
+                        <Quantity unitCode="EA">16</Quantity>
+                        <Product>
+                           <BuyerID>19333</BuyerID>
+                           <VendorID>19333</VendorID>
+                        </Product>
+                        <Batch>
+                           <BuyerID>19333-B2</BuyerID>
+                           <VendorID/>
+                        </Batch>
+                     </SubcontractingComponent>
+                     <SubcontractingComponent>
+                        <Quantity unitCode="EA">24</Quantity>
+                        <Product>
+                           <BuyerID>19334</BuyerID>
+                        </Product>
+                        <Batch>
+                           <BuyerID>19334-B3</BuyerID>
+                           <VendorID/>
+                        </Batch>
+                     </SubcontractingComponent>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">3</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500030811</ID>
+                        <ItemID>20</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <VendorID>Non Catalog Item</VendorID>
+                     </Product>
+                  </Item>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="true">
+         <label>ShipNoticeBuyerBatchID</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2018-12-13T22:53:36-08:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1544770415565-433971792328110020@10.163.3.203</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>ASN-811</ID>
+                     <ShipmentType>planned</ShipmentType>
+                     <CreationDateTime>2018-12-14T18:30:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2018-12-14T18:30:00-12:00</ArrivalDateTime>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID/>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>Ranjan - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>US</CountryCode>
+                              <RegionCode>CA</RegionCode>
+                              <POBoxPostalCode>94089</POBoxPostalCode>
+                              <CityName>Sunnyvale</CityName>
+                              <StreetName>jUnitDummy</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">8</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500030811</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>19331</InternalID>
+                           <ProductRecipientID>19331</ProductRecipientID>
+                           <VendorID>Non Catalog Item</VendorID>
+                        </Product>
+                        <SubcontractingComponent>
+                           <Quantity unitCode="EA">16</Quantity>
+                           <Product>
+                              <BuyerID>19333</BuyerID>
+                              <VendorID>19333</VendorID>
+                           </Product>
+                           <Batch>
+                              <BuyerID>19333-B2</BuyerID>
+                              <VendorID/>
+                           </Batch>
+                        </SubcontractingComponent>
+                        <SubcontractingComponent>
+                           <Quantity unitCode="EA">24</Quantity>
+                           <Product>
+                              <BuyerID>19334</BuyerID>
+                           </Product>
+                           <Batch>
+                              <BuyerID>19334-B3</BuyerID>
+                              <VendorID/>
+                           </Batch>
+                        </SubcontractingComponent>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">3</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500030811</ID>
+                           <ItemID>20</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <VendorID>Non Catalog Item</VendorID>
+                        </Product>
+                     </Item>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario8"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticeBuyerBatchID with zero Dimension</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeNoDimension.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2019-01-15T06:37:33-08:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1547563053153-5116521774815523012@10.163.3.203</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>SN-22722</ID>
+                  <ShipmentType>actual</ShipmentType>
+                  <CreationDateTime>2019-01-16T18:30:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2019-01-16T18:30:00-12:00</ArrivalDateTime>
+                  <GrossWeightMeasure unitCode="">20.0</GrossWeightMeasure>
+                  <VolumeMeasure unitCode="">20.5</VolumeMeasure>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID>1234</ProductRecipientID>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>Ranjan - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>US</CountryCode>
+                           <RegionCode>CA</RegionCode>
+                           <POBoxPostalCode>94089</POBoxPostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <StreetName>jUnitDummy</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <GrossWeightMeasure unitCode="">20.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="">35.35</NetWeightMeasure>
+                     <VolumeMeasure unitCode="">40.35</VolumeMeasure>
+                     <Quantity unitCode="EA">25</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500031175</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>19413</InternalID>
+                        <ProductRecipientID>19413</ProductRecipientID>
+                        <StandardID schemeAgencyID="">EANID</StandardID>
+                        <VendorID>Non Catalog Item</VendorID>
+                     </Product>
+                     <Batch>
+                        <InternalID>sup_batch1</InternalID>
+                        <ProductRecipientID/>
+                        <ManufacturingDate>2020-08-26</ManufacturingDate>
+                        <ManufacturingTime>18:30:00</ManufacturingTime>
+                        <BestBeforeDate>2020-08-26</BestBeforeDate>
+                        <BestBeforeTime>18:30:00</BestBeforeTime>
+                     </Batch>
+                  </Item>
+                  <HandlingUnit>
+                     <ID>00000000000000000089</ID>
+                     <HeightMeasure unitCode="IN">0</HeightMeasure>
+                     <LengthMeasure unitCode="IN">0</LengthMeasure>
+                     <WidthMeasure unitCode="IN">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KG">0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KG">0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>00000000000000000089</InternalID>
+                           <ProductRecipientID>19419</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">25.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>SN-22722</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario8-expect1" successful="true">
+         <label>ShipNoticeBuyerBatchID with zero Dimension</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2019-01-15T06:37:33-08:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1547563053153-5116521774815523012@10.163.3.203</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>SN-22722</ID>
+                     <ShipmentType>actual</ShipmentType>
+                     <CreationDateTime>2019-01-16T18:30:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2019-01-16T18:30:00-12:00</ArrivalDateTime>
+                     <GrossWeightMeasure unitCode="">20.0</GrossWeightMeasure>
+                     <VolumeMeasure unitCode="">20.5</VolumeMeasure>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID>1234</ProductRecipientID>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>Ranjan - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>US</CountryCode>
+                              <RegionCode>CA</RegionCode>
+                              <POBoxPostalCode>94089</POBoxPostalCode>
+                              <CityName>Sunnyvale</CityName>
+                              <StreetName>jUnitDummy</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <GrossWeightMeasure unitCode="">20.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="">35.35</NetWeightMeasure>
+                        <VolumeMeasure unitCode="">40.35</VolumeMeasure>
+                        <Quantity unitCode="EA">25</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500031175</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>19413</InternalID>
+                           <ProductRecipientID>19413</ProductRecipientID>
+                           <StandardID schemeAgencyID="">EANID</StandardID>
+                           <VendorID>Non Catalog Item</VendorID>
+                        </Product>
+                        <Batch>
+                           <InternalID>sup_batch1</InternalID>
+                           <ProductRecipientID/>
+                           <ManufacturingDate>2020-08-26</ManufacturingDate>
+                           <ManufacturingTime>18:30:00</ManufacturingTime>
+                           <BestBeforeDate>2020-08-26</BestBeforeDate>
+                           <BestBeforeTime>18:30:00</BestBeforeTime>
+                        </Batch>
+                     </Item>
+                     <HandlingUnit>
+                        <ID>00000000000000000089</ID>
+                        <HeightMeasure unitCode="IN">0</HeightMeasure>
+                        <LengthMeasure unitCode="IN">0</LengthMeasure>
+                        <WidthMeasure unitCode="IN">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KG">0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KG">0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>00000000000000000089</InternalID>
+                              <ProductRecipientID>19419</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">25.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>SN-22722</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario9"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ShipNoticeHUwithEmptyBOX containing Packing Material is empty</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeHUwithEmptyBOX.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2022-03-08T01:26:23-08:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1646731582536-6568764038717173604@10.163.193.142</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>ASN4500114013</ID>
+                  <ShipmentType>actual</ShipmentType>
+                  <CreationDateTime>2022-03-07T18:30:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2022-03-07T18:30:00-12:00</ArrivalDateTime>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID/>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>t1q8jqis - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>MX</CountryCode>
+                           <RegionCode>AGU</RegionCode>
+                           <POBoxPostalCode>12345</POBoxPostalCode>
+                           <CityName>Puebla</CityName>
+                           <StreetName>jUnitDummy, Address 1,!@#$%^&amp;*(), Puebla</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="KGM">2</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500114013</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>349709</InternalID>
+                        <ProductRecipientID>349709</ProductRecipientID>
+                        <VendorID>NOT AVAILABLE</VendorID>
+                     </Product>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="KGM">2</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500114013</ID>
+                        <ItemID>20</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>349782</InternalID>
+                        <ProductRecipientID>349782</ProductRecipientID>
+                        <VendorID>NOT AVAILABLE</VendorID>
+                     </Product>
+                  </Item>
+                  <Item>
+                     <ID>3</ID>
+                     <Quantity unitCode="KGM">2</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4500114013</ID>
+                        <ItemID>30</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>349709</InternalID>
+                        <ProductRecipientID>349709</ProductRecipientID>
+                        <VendorID>NOT AVAILABLE</VendorID>
+                     </Product>
+                  </Item>
+                  <HandlingUnit>
+                     <ID>0000000329</ID>
+                     <HeightMeasure unitCode="CM">60.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">60.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">60.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">216000.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">100.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">90.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000329</InternalID>
+                           <ProductRecipientID>349775</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349773</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349744</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <LowerLevelHandlingUnit>
+                        <ID>0000000330</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000330</ID>
+                     <HeightMeasure unitCode="CM">30.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">30.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">30.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">27000.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">50.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">40.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000330</InternalID>
+                           <ProductRecipientID>349778</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349772</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349743</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <LowerLevelHandlingUnit>
+                        <ID>0000000331</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000331</ID>
+                     <HeightMeasure unitCode="CM">15.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">15.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">15.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">3375.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">25.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">15.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000331</InternalID>
+                           <ProductRecipientID>349777</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349771</InternalID>
+                        </Product>
+                        <Quantity unitCode="EA">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349742</InternalID>
+                        </Product>
+                        <Quantity unitCode="EA">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <Load>
+                        <Quantity unitCode="KGM">2.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN4500114013</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000332</ID>
+                     <HeightMeasure unitCode="CM">60.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">60.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">60.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">216000.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">100.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">90.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000332</InternalID>
+                           <ProductRecipientID>349775</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349772</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <LowerLevelHandlingUnit>
+                        <ID>0000000333</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000333</ID>
+                     <HeightMeasure unitCode="CM">30.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">30.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">30.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">27000.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">50.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">40.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000333</InternalID>
+                           <ProductRecipientID>349778</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349742</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <LowerLevelHandlingUnit>
+                        <ID>0000000334</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000334</ID>
+                     <HeightMeasure unitCode="CM">15.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">15.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">15.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">3375.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">25.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">15.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000334</InternalID>
+                           <ProductRecipientID>349777</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349771</InternalID>
+                        </Product>
+                        <Quantity unitCode="EA">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <Load>
+                        <Quantity unitCode="KGM">2.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN4500114013</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000336</ID>
+                     <HeightMeasure unitCode="CM">60.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">60.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">60.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">216000.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">100.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">90.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000336</InternalID>
+                           <ProductRecipientID>349775</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349773</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349744</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <LowerLevelHandlingUnit>
+                        <ID>0000000337</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000337</ID>
+                     <HeightMeasure unitCode="CM">30.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">30.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">30.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">27000.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">50.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">40.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000337</InternalID>
+                           <ProductRecipientID>349778</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349772</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349743</InternalID>
+                        </Product>
+                        <Quantity unitCode="PCE">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <LowerLevelHandlingUnit>
+                        <ID>0000000338</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>0000000339</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000338</ID>
+                     <HeightMeasure unitCode="CM">15.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">15.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">15.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">3375.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">25.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">15.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000338</InternalID>
+                           <ProductRecipientID>349777</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349771</InternalID>
+                        </Product>
+                        <Quantity unitCode="EA">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <AdditionalPackaging>
+                        <Product>
+                           <InternalID>349742</InternalID>
+                        </Product>
+                        <Quantity unitCode="EA">2.0</Quantity>
+                     </AdditionalPackaging>
+                     <Load>
+                        <Quantity unitCode="KGM">2.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN4500114013</ID>
+                           <ItemID>3</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>0000000339</ID>
+                     <HeightMeasure unitCode="CM">15.0</HeightMeasure>
+                     <LengthMeasure unitCode="CM">15.0</LengthMeasure>
+                     <WidthMeasure unitCode="CM">15.0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="M3">3375.0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">25.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">15.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>0000000339</InternalID>
+                           <ProductRecipientID>349777</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                  </HandlingUnit>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario9-expect1" successful="true">
+         <label>ShipNoticeHUwithEmptyBOX containing Packing Material is empty</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2022-03-08T01:26:23-08:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1646731582536-6568764038717173604@10.163.193.142</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>ASN4500114013</ID>
+                     <ShipmentType>actual</ShipmentType>
+                     <CreationDateTime>2022-03-07T18:30:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2022-03-07T18:30:00-12:00</ArrivalDateTime>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID/>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>t1q8jqis - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>MX</CountryCode>
+                              <RegionCode>AGU</RegionCode>
+                              <POBoxPostalCode>12345</POBoxPostalCode>
+                              <CityName>Puebla</CityName>
+                              <StreetName>jUnitDummy, Address 1,!@#$%^&amp;*(), Puebla</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="KGM">2</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500114013</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>349709</InternalID>
+                           <ProductRecipientID>349709</ProductRecipientID>
+                           <VendorID>NOT AVAILABLE</VendorID>
+                        </Product>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="KGM">2</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500114013</ID>
+                           <ItemID>20</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>349782</InternalID>
+                           <ProductRecipientID>349782</ProductRecipientID>
+                           <VendorID>NOT AVAILABLE</VendorID>
+                        </Product>
+                     </Item>
+                     <Item>
+                        <ID>3</ID>
+                        <Quantity unitCode="KGM">2</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4500114013</ID>
+                           <ItemID>30</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>349709</InternalID>
+                           <ProductRecipientID>349709</ProductRecipientID>
+                           <VendorID>NOT AVAILABLE</VendorID>
+                        </Product>
+                     </Item>
+                     <HandlingUnit>
+                        <ID>0000000329</ID>
+                        <HeightMeasure unitCode="CM">60.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">60.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">60.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">216000.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">100.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">90.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000329</InternalID>
+                              <ProductRecipientID>349775</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349773</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349744</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <LowerLevelHandlingUnit>
+                           <ID>0000000330</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000330</ID>
+                        <HeightMeasure unitCode="CM">30.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">30.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">30.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">27000.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">50.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">40.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000330</InternalID>
+                              <ProductRecipientID>349778</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349772</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349743</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <LowerLevelHandlingUnit>
+                           <ID>0000000331</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000331</ID>
+                        <HeightMeasure unitCode="CM">15.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">15.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">15.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">3375.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">25.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">15.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000331</InternalID>
+                              <ProductRecipientID>349777</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349771</InternalID>
+                           </Product>
+                           <Quantity unitCode="EA">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349742</InternalID>
+                           </Product>
+                           <Quantity unitCode="EA">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <Load>
+                           <Quantity unitCode="KGM">2.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN4500114013</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000332</ID>
+                        <HeightMeasure unitCode="CM">60.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">60.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">60.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">216000.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">100.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">90.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000332</InternalID>
+                              <ProductRecipientID>349775</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349772</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <LowerLevelHandlingUnit>
+                           <ID>0000000333</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000333</ID>
+                        <HeightMeasure unitCode="CM">30.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">30.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">30.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">27000.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">50.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">40.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000333</InternalID>
+                              <ProductRecipientID>349778</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349742</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <LowerLevelHandlingUnit>
+                           <ID>0000000334</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000334</ID>
+                        <HeightMeasure unitCode="CM">15.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">15.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">15.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">3375.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">25.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">15.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000334</InternalID>
+                              <ProductRecipientID>349777</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349771</InternalID>
+                           </Product>
+                           <Quantity unitCode="EA">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <Load>
+                           <Quantity unitCode="KGM">2.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN4500114013</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000336</ID>
+                        <HeightMeasure unitCode="CM">60.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">60.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">60.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">216000.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">100.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">90.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000336</InternalID>
+                              <ProductRecipientID>349775</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349773</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349744</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <LowerLevelHandlingUnit>
+                           <ID>0000000337</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000337</ID>
+                        <HeightMeasure unitCode="CM">30.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">30.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">30.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">27000.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">50.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">40.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000337</InternalID>
+                              <ProductRecipientID>349778</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349772</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349743</InternalID>
+                           </Product>
+                           <Quantity unitCode="PCE">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <LowerLevelHandlingUnit>
+                           <ID>0000000338</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>0000000339</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000338</ID>
+                        <HeightMeasure unitCode="CM">15.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">15.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">15.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">3375.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">25.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">15.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000338</InternalID>
+                              <ProductRecipientID>349777</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349771</InternalID>
+                           </Product>
+                           <Quantity unitCode="EA">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <AdditionalPackaging>
+                           <Product>
+                              <InternalID>349742</InternalID>
+                           </Product>
+                           <Quantity unitCode="EA">2.0</Quantity>
+                        </AdditionalPackaging>
+                        <Load>
+                           <Quantity unitCode="KGM">2.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN4500114013</ID>
+                              <ItemID>3</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>0000000339</ID>
+                        <HeightMeasure unitCode="CM">15.0</HeightMeasure>
+                        <LengthMeasure unitCode="CM">15.0</LengthMeasure>
+                        <WidthMeasure unitCode="CM">15.0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="M3">3375.0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">25.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">15.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>0000000339</InternalID>
+                              <ProductRecipientID>349777</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                     </HandlingUnit>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario10"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>ASN HU with Duplicate Serial Code across line items(ship portion)</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/ShipNoticeHUDuplicate.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2022-03-28T20:39:34+07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1648525174379-9083619849944423978@10.162.97.181</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>PK-MC-610</ID>
+                  <ShipmentType>actual</ShipmentType>
+                  <CreationDateTime>2022-04-05T05:00:00-12:00</CreationDateTime>
+                  <ArrivalDateTime>2022-04-05T05:00:00-12:00</ArrivalDateTime>
+                  <VendorParty>
+                     <InternalID>17300002</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID>companyName</InternalID>
+                     <CarrierID>DHL</CarrierID>
+                     <ProductRecipientID>TRK-MC-610</ProductRecipientID>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>Seller SCC Sandbox - Consulting Team - TEST</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>DE</CountryCode>
+                           <RegionCode>BE</RegionCode>
+                           <POBoxPostalCode>12345</POBoxPostalCode>
+                           <CityName>Berlin</CityName>
+                           <StreetName>central 22</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="PCE">3</Quantity>
+                     <SerialNumber>
+                        <SerialID>SN1</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>SN2</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>SN3</SerialID>
+                     </SerialNumber>
+                     <PurchaseOrderReference>
+                        <ID>4500000610</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>SP001</InternalID>
+                        <ProductRecipientID>SP001</ProductRecipientID>
+                        <VendorID>MATERIALINFO1</VendorID>
+                     </Product>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="PCE">2</Quantity>
+                     <SerialNumber>
+                        <SerialID>SN4</SerialID>
+                     </SerialNumber>
+                     <SerialNumber>
+                        <SerialID>SN5</SerialID>
+                     </SerialNumber>
+                     <PurchaseOrderReference>
+                        <ID>4500000610</ID>
+                        <ItemID>20</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>SP004</InternalID>
+                        <ProductRecipientID>SP004</ProductRecipientID>
+                        <VendorID/>
+                     </Product>
+                  </Item>
+                  <HandlingUnit>
+                     <ID>50000159</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="LBR">50</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="LBR">50</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>50000159</InternalID>
+                           <ProductRecipientID>SCC_HU_CARTON</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="PCE">3</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>PK-MC-610</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                     <Load>
+                        <Quantity unitCode="PCE">2</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>PK-MC-610</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario10-expect1" successful="true">
+         <label>ASN HU with Duplicate Serial Code across line items(ship portion)</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2022-03-28T20:39:34+07:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1648525174379-9083619849944423978@10.162.97.181</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>PK-MC-610</ID>
+                     <ShipmentType>actual</ShipmentType>
+                     <CreationDateTime>2022-04-05T05:00:00-12:00</CreationDateTime>
+                     <ArrivalDateTime>2022-04-05T05:00:00-12:00</ArrivalDateTime>
+                     <VendorParty>
+                        <InternalID>17300002</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID>companyName</InternalID>
+                        <CarrierID>DHL</CarrierID>
+                        <ProductRecipientID>TRK-MC-610</ProductRecipientID>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>Seller SCC Sandbox - Consulting Team - TEST</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>DE</CountryCode>
+                              <RegionCode>BE</RegionCode>
+                              <POBoxPostalCode>12345</POBoxPostalCode>
+                              <CityName>Berlin</CityName>
+                              <StreetName>central 22</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="PCE">3</Quantity>
+                        <SerialNumber>
+                           <SerialID>SN1</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>SN2</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>SN3</SerialID>
+                        </SerialNumber>
+                        <PurchaseOrderReference>
+                           <ID>4500000610</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>SP001</InternalID>
+                           <ProductRecipientID>SP001</ProductRecipientID>
+                           <VendorID>MATERIALINFO1</VendorID>
+                        </Product>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="PCE">2</Quantity>
+                        <SerialNumber>
+                           <SerialID>SN4</SerialID>
+                        </SerialNumber>
+                        <SerialNumber>
+                           <SerialID>SN5</SerialID>
+                        </SerialNumber>
+                        <PurchaseOrderReference>
+                           <ID>4500000610</ID>
+                           <ItemID>20</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>SP004</InternalID>
+                           <ProductRecipientID>SP004</ProductRecipientID>
+                           <VendorID/>
+                        </Product>
+                     </Item>
+                     <HandlingUnit>
+                        <ID>50000159</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="LBR">50</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="LBR">50</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>50000159</InternalID>
+                              <ProductRecipientID>SCC_HU_CARTON</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="PCE">3</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>PK-MC-610</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                        <Load>
+                           <Quantity unitCode="PCE">2</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>PK-MC-610</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario11"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>Move entire HU to ANOTHER Higher Level HU</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/Move%20entire%20HU%20to%20ANOTHER%20Higher%20Level%20HU.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2022-05-24T20:35:33+07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1653449733238-2149226666249713665@10.162.96.191</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="02">
+                  <ID>ASN000000000791</ID>
+                  <CreationDateTime>2022-05-24T19:30:00+05:30</CreationDateTime>
+                  <ArrivalDateTime>2022-05-24T19:30:00+05:30</ArrivalDateTime>
+                  <VendorParty>
+                     <InternalID>4100001567</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID>companyName</InternalID>
+                     <CarrierID>DHL</CarrierID>
+                     <ProductRecipientID>BOL1</ProductRecipientID>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>PARAGON PACKAGING</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>US</CountryCode>
+                           <RegionCode>NJ</RegionCode>
+                           <POBoxPostalCode>07008</POBoxPostalCode>
+                           <CityName>Carteret</CityName>
+                           <StreetName>600 Blair Rd</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">20</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4560001812</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>000000000600204418</InternalID>
+                        <ProductRecipientID>000000000600204418</ProductRecipientID>
+                        <VendorID/>
+                     </Product>
+                     <Batch>
+                        <InternalID>2062G</InternalID>
+                        <ProductRecipientID/>
+                        <ManufacturingDate>2022-04-01</ManufacturingDate>
+                        <BestBeforeDate>2023-04-30</BestBeforeDate>
+                     </Batch>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">20</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4560001812</ID>
+                        <ItemID>20</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>000000000012021474</InternalID>
+                        <ProductRecipientID>000000000012021474</ProductRecipientID>
+                        <StandardID schemeAgencyID="">978020137962</StandardID>
+                        <VendorID/>
+                     </Product>
+                     <Batch>
+                        <InternalID>S441802</InternalID>
+                        <ProductRecipientID/>
+                        <ManufacturingDate>2022-02-01</ManufacturingDate>
+                        <BestBeforeDate>2023-02-01</BestBeforeDate>
+                     </Batch>
+                  </Item>
+                  <HandlingUnit>
+                     <ID>007308530000007474</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007474</InternalID>
+                           <ProductRecipientID>BOX</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">5.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN000000000791</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007467</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">510.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">500.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007467</InternalID>
+                           <ProductRecipientID>PALLET</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <LowerLevelHandlingUnit>
+                        <ID>007308530000007474</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>007308530000007481</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>007308530000007498</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>007308530000007504</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>007308530000007511</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>007308530000007528</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>007308530000007535</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007481</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007481</InternalID>
+                           <ProductRecipientID>BOX</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">5.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN000000000791</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007498</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007498</InternalID>
+                           <ProductRecipientID>BOX</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">5.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN000000000791</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007504</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007504</InternalID>
+                           <ProductRecipientID>BOX</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">5.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN000000000791</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007511</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007511</InternalID>
+                           <ProductRecipientID>BOX</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">5.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN000000000791</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007528</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007528</InternalID>
+                           <ProductRecipientID>BOX</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">5.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN000000000791</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007535</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007535</InternalID>
+                           <ProductRecipientID>BOX</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">5.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN000000000791</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007559</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007559</InternalID>
+                           <ProductRecipientID>BOX</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="EA">5.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>ASN000000000791</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>007308530000007542</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">510.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">500.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>007308530000007542</InternalID>
+                           <ProductRecipientID>PALLET</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <LowerLevelHandlingUnit>
+                        <ID>007308530000007559</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario11-expect1" successful="true">
+         <label>Move entire HU to ANOTHER Higher Level HU</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2022-05-24T20:35:33+07:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1653449733238-2149226666249713665@10.162.96.191</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="02">
+                     <ID>ASN000000000791</ID>
+                     <CreationDateTime>2022-05-24T19:30:00+05:30</CreationDateTime>
+                     <ArrivalDateTime>2022-05-24T19:30:00+05:30</ArrivalDateTime>
+                     <VendorParty>
+                        <InternalID>4100001567</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID>companyName</InternalID>
+                        <CarrierID>DHL</CarrierID>
+                        <ProductRecipientID>BOL1</ProductRecipientID>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>PARAGON PACKAGING</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>US</CountryCode>
+                              <RegionCode>NJ</RegionCode>
+                              <POBoxPostalCode>07008</POBoxPostalCode>
+                              <CityName>Carteret</CityName>
+                              <StreetName>600 Blair Rd</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">20</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4560001812</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>000000000600204418</InternalID>
+                           <ProductRecipientID>000000000600204418</ProductRecipientID>
+                           <VendorID/>
+                        </Product>
+                        <Batch>
+                           <InternalID>2062G</InternalID>
+                           <ProductRecipientID/>
+                           <ManufacturingDate>2022-04-01</ManufacturingDate>
+                           <BestBeforeDate>2023-04-30</BestBeforeDate>
+                        </Batch>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">20</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4560001812</ID>
+                           <ItemID>20</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>000000000012021474</InternalID>
+                           <ProductRecipientID>000000000012021474</ProductRecipientID>
+                           <StandardID schemeAgencyID="">978020137962</StandardID>
+                           <VendorID/>
+                        </Product>
+                        <Batch>
+                           <InternalID>S441802</InternalID>
+                           <ProductRecipientID/>
+                           <ManufacturingDate>2022-02-01</ManufacturingDate>
+                           <BestBeforeDate>2023-02-01</BestBeforeDate>
+                        </Batch>
+                     </Item>
+                     <HandlingUnit>
+                        <ID>007308530000007474</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007474</InternalID>
+                              <ProductRecipientID>BOX</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">5.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN000000000791</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007467</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">510.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">500.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007467</InternalID>
+                              <ProductRecipientID>PALLET</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <LowerLevelHandlingUnit>
+                           <ID>007308530000007474</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>007308530000007481</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>007308530000007498</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>007308530000007504</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>007308530000007511</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>007308530000007528</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>007308530000007535</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007481</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007481</InternalID>
+                              <ProductRecipientID>BOX</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">5.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN000000000791</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007498</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007498</InternalID>
+                              <ProductRecipientID>BOX</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">5.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN000000000791</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007504</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007504</InternalID>
+                              <ProductRecipientID>BOX</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">5.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN000000000791</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007511</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007511</InternalID>
+                              <ProductRecipientID>BOX</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">5.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN000000000791</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007528</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007528</InternalID>
+                              <ProductRecipientID>BOX</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">5.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN000000000791</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007535</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007535</InternalID>
+                              <ProductRecipientID>BOX</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">5.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN000000000791</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007559</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">5.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">5.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007559</InternalID>
+                              <ProductRecipientID>BOX</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="EA">5.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>ASN000000000791</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>007308530000007542</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">510.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">500.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>007308530000007542</InternalID>
+                              <ProductRecipientID>PALLET</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <LowerLevelHandlingUnit>
+                           <ID>007308530000007559</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario12"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_AddOn_0000_AdvanceShipmentNotice.xspec">
+      <label>Move entire HU to ANOTHER Higher Level HU - Multiple PO</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ShipNotice/Move%20entire%20HU%20to%20ANOTHER%20Higher%20Level%20HU%20-%20Multiple%20PO.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2022-05-05T21:56:58-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1651813017650-2490145385424044138@10.162.97.185</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Delivery actionCode="01">
+                  <ID>H1_06052022</ID>
+                  <CreationDateTime>2022-05-09T15:30:00+05:30</CreationDateTime>
+                  <ArrivalDateTime>2022-05-09T15:30:00+05:30</ArrivalDateTime>
+                  <GrossWeightMeasure unitCode="KGM">66</GrossWeightMeasure>
+                  <VolumeMeasure unitCode="M3">0.278</VolumeMeasure>
+                  <VendorParty>
+                     <InternalID>0001006939</InternalID>
+                  </VendorParty>
+                  <CarrierParty>
+                     <InternalID/>
+                     <CarrierID/>
+                     <ProductRecipientID/>
+                  </CarrierParty>
+                  <ShipFromLocation>
+                     <Name>Herzog GmbH</Name>
+                     <Address>
+                        <PhysicalAddress>
+                           <CountryCode>DE</CountryCode>
+                           <RegionCode>BW</RegionCode>
+                           <POBoxPostalCode>78713</POBoxPostalCode>
+                           <CityName>Schramberg</CityName>
+                           <StreetName>Brambach 38</StreetName>
+                        </PhysicalAddress>
+                     </Address>
+                  </ShipFromLocation>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="PCE">1224.000</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4532527619</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>000000000000355386</InternalID>
+                        <ProductRecipientID>000000000000355386</ProductRecipientID>
+                        <VendorID>92-13-20179</VendorID>
+                     </Product>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="PCE">1440.000</Quantity>
+                     <PurchaseOrderReference>
+                        <ID>4532616898</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <Product>
+                        <InternalID>000000000000327745</InternalID>
+                        <ProductRecipientID>000000000000327745</ProductRecipientID>
+                        <VendorID>92-13-16341</VendorID>
+                     </Product>
+                  </Item>
+                  <HandlingUnit>
+                     <ID>HU00000002955460</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">14.333</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">12.667</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>HU00000002955460</InternalID>
+                           <ProductRecipientID>CARTON</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="PCE">408.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>H1_06052022</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>HU00000002955459</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">6.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">0.001</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>HU00000002955459</InternalID>
+                           <ProductRecipientID>1-PAL</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <LowerLevelHandlingUnit>
+                        <ID>HU00000002955460</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>HU00000002955461</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>HU00000002955462</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>HU00000002955463</ID>
+                     </LowerLevelHandlingUnit>
+                     <LowerLevelHandlingUnit>
+                        <ID>HU00000002955464</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>HU00000002955461</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">14.333</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">12.667</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>HU00000002955461</InternalID>
+                           <ProductRecipientID>CARTON</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="PCE">408.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>H1_06052022</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>HU00000002955462</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">14.333</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">12.667</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>HU00000002955462</InternalID>
+                           <ProductRecipientID>CARTON</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="PCE">408.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>H1_06052022</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>HU00000002955463</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">8.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">7.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>HU00000002955463</InternalID>
+                           <ProductRecipientID>CARTON</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="PCE">720.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>H1_06052022</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>HU00000002955464</ID>
+                     <HeightMeasure unitCode="">0</HeightMeasure>
+                     <LengthMeasure unitCode="">0</LengthMeasure>
+                     <WidthMeasure unitCode="">0</WidthMeasure>
+                     <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                     <GrossWeightMeasure unitCode="KGM">8.0</GrossWeightMeasure>
+                     <NetWeightMeasure unitCode="KGM">7.0</NetWeightMeasure>
+                     <LoadCarrier>
+                        <Product>
+                           <InternalID>HU00000002955464</InternalID>
+                           <ProductRecipientID>CARTON</ProductRecipientID>
+                        </Product>
+                     </LoadCarrier>
+                     <Load>
+                        <Quantity unitCode="PCE">720.0</Quantity>
+                        <BusinessTransactionDocumentReference>
+                           <ID>H1_06052022</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                     </Load>
+                  </HandlingUnit>
+               </Delivery>
+               <AribaComment/>
+            </n0:DsptchdDelivNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario12-expect1" successful="true">
+         <label>Move entire HU to ANOTHER Higher Level HU - Multiple PO</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DsptchdDelivNotifMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2022-05-05T21:56:58-07:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1651813017650-2490145385424044138@10.162.97.185</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Delivery actionCode="01">
+                     <ID>H1_06052022</ID>
+                     <CreationDateTime>2022-05-09T15:30:00+05:30</CreationDateTime>
+                     <ArrivalDateTime>2022-05-09T15:30:00+05:30</ArrivalDateTime>
+                     <GrossWeightMeasure unitCode="KGM">66</GrossWeightMeasure>
+                     <VolumeMeasure unitCode="M3">0.278</VolumeMeasure>
+                     <VendorParty>
+                        <InternalID>0001006939</InternalID>
+                     </VendorParty>
+                     <CarrierParty>
+                        <InternalID/>
+                        <CarrierID/>
+                        <ProductRecipientID/>
+                     </CarrierParty>
+                     <ShipFromLocation>
+                        <Name>Herzog GmbH</Name>
+                        <Address>
+                           <PhysicalAddress>
+                              <CountryCode>DE</CountryCode>
+                              <RegionCode>BW</RegionCode>
+                              <POBoxPostalCode>78713</POBoxPostalCode>
+                              <CityName>Schramberg</CityName>
+                              <StreetName>Brambach 38</StreetName>
+                           </PhysicalAddress>
+                        </Address>
+                     </ShipFromLocation>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="PCE">1224.000</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4532527619</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>000000000000355386</InternalID>
+                           <ProductRecipientID>000000000000355386</ProductRecipientID>
+                           <VendorID>92-13-20179</VendorID>
+                        </Product>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="PCE">1440.000</Quantity>
+                        <PurchaseOrderReference>
+                           <ID>4532616898</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <Product>
+                           <InternalID>000000000000327745</InternalID>
+                           <ProductRecipientID>000000000000327745</ProductRecipientID>
+                           <VendorID>92-13-16341</VendorID>
+                        </Product>
+                     </Item>
+                     <HandlingUnit>
+                        <ID>HU00000002955460</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">14.333</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">12.667</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>HU00000002955460</InternalID>
+                              <ProductRecipientID>CARTON</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="PCE">408.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>H1_06052022</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>HU00000002955459</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">6.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">0.001</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>HU00000002955459</InternalID>
+                              <ProductRecipientID>1-PAL</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <LowerLevelHandlingUnit>
+                           <ID>HU00000002955460</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>HU00000002955461</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>HU00000002955462</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>HU00000002955463</ID>
+                        </LowerLevelHandlingUnit>
+                        <LowerLevelHandlingUnit>
+                           <ID>HU00000002955464</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>HU00000002955461</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">14.333</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">12.667</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>HU00000002955461</InternalID>
+                              <ProductRecipientID>CARTON</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="PCE">408.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>H1_06052022</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>HU00000002955462</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">14.333</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">12.667</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>HU00000002955462</InternalID>
+                              <ProductRecipientID>CARTON</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="PCE">408.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>H1_06052022</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>HU00000002955463</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">8.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">7.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>HU00000002955463</InternalID>
+                              <ProductRecipientID>CARTON</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="PCE">720.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>H1_06052022</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>HU00000002955464</ID>
+                        <HeightMeasure unitCode="">0</HeightMeasure>
+                        <LengthMeasure unitCode="">0</LengthMeasure>
+                        <WidthMeasure unitCode="">0</WidthMeasure>
+                        <NetVolumeMeasure unitCode="">0</NetVolumeMeasure>
+                        <GrossWeightMeasure unitCode="KGM">8.0</GrossWeightMeasure>
+                        <NetWeightMeasure unitCode="KGM">7.0</NetWeightMeasure>
+                        <LoadCarrier>
+                           <Product>
+                              <InternalID>HU00000002955464</InternalID>
+                              <ProductRecipientID>CARTON</ProductRecipientID>
+                           </Product>
+                        </LoadCarrier>
+                        <Load>
+                           <Quantity unitCode="PCE">720.0</Quantity>
+                           <BusinessTransactionDocumentReference>
+                              <ID>H1_06052022</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                        </Load>
+                     </HandlingUnit>
+                  </Delivery>
+                  <AribaComment/>
+               </n0:DsptchdDelivNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

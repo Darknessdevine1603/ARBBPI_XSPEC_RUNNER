@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/PIDX/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_PIDX_1.61_InvoiceResponseSESR.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/PIDX/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_PIDX_1.61_InvoiceResponseSESR.xsl"
+        date="2023-04-27T16:00:21.857155+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/PIDX/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_PIDX_1.61_InvoiceResponseSESR.xspec">
+      <label>Service Entry Sheet Response Status Update Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/PIDX/StatusUpdate/ServiceSheetResponse_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <pidx:InvoiceResponse xmlns:pidx="http://www.pidx.org/schemas/v1.61"
+                                  pidx:transactionPurposeIndicator="Original"
+                                  pidx:version="1.61">
+               <pidx:InvoiceResponseProperties>
+                  <pidx:InvoiceResponseNumber>PLT_xCBL_SESR_t1</pidx:InvoiceResponseNumber>
+                  <pidx:StatusCode>Pending</pidx:StatusCode>
+                  <pidx:InvoiceResponseDate>2017-01-29</pidx:InvoiceResponseDate>
+                  <pidx:PartnerInformation partnerRoleIndicator="SoldTo">
+                     <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber"/>
+                  </pidx:PartnerInformation>
+                  <pidx:PartnerInformation partnerRoleIndicator="Seller">
+                     <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber"/>
+                  </pidx:PartnerInformation>
+                  <pidx:InvoiceInformation>
+                     <pidx:InvoiceNumber>PLT_xCBL_SESR_t1</pidx:InvoiceNumber>
+                     <pidx:InvoiceDate>2017-01-29</pidx:InvoiceDate>
+                  </pidx:InvoiceInformation>
+                  <pidx:SpecialInstructions instructionIndicator="Other">Pending</pidx:SpecialInstructions>
+                  <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                     <pidx:ReferenceNumber>ServiceEntryRequest</pidx:ReferenceNumber>
+                     <pidx:Description>SourceDocumentType</pidx:Description>
+                  </pidx:ReferenceInformation>
+                  <pidx:Comment/>
+               </pidx:InvoiceResponseProperties>
+               <pidx:InvoiceResponseDetails>
+                  <pidx:InvoiceResponseLineItem/>
+               </pidx:InvoiceResponseDetails>
+               <pidx:InvoiceResponseSummary/>
+            </pidx:InvoiceResponse>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Service Entry Sheet Response Status Update Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <pidx:InvoiceResponse xmlns:pidx="http://www.pidx.org/schemas/v1.61"
+                                     pidx:transactionPurposeIndicator="Original"
+                                     pidx:version="1.61">
+                  <pidx:InvoiceResponseProperties>
+                     <pidx:InvoiceResponseNumber>PLT_xCBL_SESR_t1</pidx:InvoiceResponseNumber>
+                     <pidx:StatusCode>Pending</pidx:StatusCode>
+                     <pidx:InvoiceResponseDate>2017-01-29</pidx:InvoiceResponseDate>
+                     <pidx:PartnerInformation partnerRoleIndicator="SoldTo">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber"/>
+                     </pidx:PartnerInformation>
+                     <pidx:PartnerInformation partnerRoleIndicator="Seller">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber"/>
+                     </pidx:PartnerInformation>
+                     <pidx:InvoiceInformation>
+                        <pidx:InvoiceNumber>PLT_xCBL_SESR_t1</pidx:InvoiceNumber>
+                        <pidx:InvoiceDate>2017-01-29</pidx:InvoiceDate>
+                     </pidx:InvoiceInformation>
+                     <pidx:SpecialInstructions instructionIndicator="Other">Pending</pidx:SpecialInstructions>
+                     <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                        <pidx:ReferenceNumber>ServiceEntryRequest</pidx:ReferenceNumber>
+                        <pidx:Description>SourceDocumentType</pidx:Description>
+                     </pidx:ReferenceInformation>
+                     <pidx:Comment/>
+                  </pidx:InvoiceResponseProperties>
+                  <pidx:InvoiceResponseDetails>
+                     <pidx:InvoiceResponseLineItem/>
+                  </pidx:InvoiceResponseDetails>
+                  <pidx:InvoiceResponseSummary/>
+               </pidx:InvoiceResponse>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/PIDX/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_PIDX_1.61_InvoiceResponseSESR.xspec">
+      <label>Service Entry Sheet Response Status Update Request with InvoiceID value</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/PIDX/StatusUpdate/ServiceSheetResponse_RIT1_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <pidx:InvoiceResponse xmlns:pidx="http://www.pidx.org/schemas/v1.61"
+                                  pidx:transactionPurposeIndicator="Original"
+                                  pidx:version="1.61">
+               <pidx:InvoiceResponseProperties>
+                  <pidx:InvoiceResponseNumber>RIT_PIDX_INVR_DUNS</pidx:InvoiceResponseNumber>
+                  <pidx:StatusCode>Reject</pidx:StatusCode>
+                  <pidx:InvoiceResponseDate>2020-06-12</pidx:InvoiceResponseDate>
+                  <pidx:PartnerInformation partnerRoleIndicator="SoldTo">
+                     <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber"/>
+                  </pidx:PartnerInformation>
+                  <pidx:PartnerInformation partnerRoleIndicator="Seller">
+                     <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber"/>
+                  </pidx:PartnerInformation>
+                  <pidx:InvoiceInformation>
+                     <pidx:InvoiceNumber>RIT_PIDX_INVR_DUNS</pidx:InvoiceNumber>
+                     <pidx:InvoiceDate>2020-06-30</pidx:InvoiceDate>
+                  </pidx:InvoiceInformation>
+                  <pidx:SpecialInstructions instructionIndicator="Other">Reject</pidx:SpecialInstructions>
+                  <pidx:Comment>Comment: [MDC] Devon is disputing this invoice for the following reason(s). We are not able to process this invoice, because credit memo lines must be submitted via the original invoice or entered as a discount to the line item. If the credit is for a discount to the current invoice you will enter a discount to the line item not to exceed or equal the amount of the line item. Discounts may be split between more than one line if necessary. If the credit line is due to a change in a previous invoice entry please submit a credit memo by locating the original invoice in your Ariba outbox or email, then selecting the credit memo button to enter the information. If you have any questions or concerns, please contact DevonDirect@dvn.com. OR view the video tutorials at http://www.devonenergy.com/operations/supply-chain/information. (Zelene Estrada, 2020-06-12T04:03:23-07:00) Header Level Exceptions: Contract Review This invoice reconciliation has been determined to have a contract or BPO and needs to be reviewed. Line item: Line Number:1 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:2 Part Number:1100359 Description:1100359-AL MON MONITOR/SURV RNTL-INSPATIAL VRZN Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:3 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:4 Part Number:1100359 Description:1100359-AL MON MONITOR/SURV RNTL-INSPATIAL VRZN Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:5 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:6 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:7 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:8 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:9 Part Number:1101393 Description:1101393-AL CONCESSION CREDIT - SERVICES Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:10 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error.</pidx:Comment>
+               </pidx:InvoiceResponseProperties>
+               <pidx:InvoiceResponseDetails>
+                  <pidx:InvoiceResponseLineItem/>
+               </pidx:InvoiceResponseDetails>
+               <pidx:InvoiceResponseSummary/>
+            </pidx:InvoiceResponse>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Service Entry Sheet Response Status Update Request with InvoiceID value</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <pidx:InvoiceResponse xmlns:pidx="http://www.pidx.org/schemas/v1.61"
+                                     pidx:transactionPurposeIndicator="Original"
+                                     pidx:version="1.61">
+                  <pidx:InvoiceResponseProperties>
+                     <pidx:InvoiceResponseNumber>RIT_PIDX_INVR_DUNS</pidx:InvoiceResponseNumber>
+                     <pidx:StatusCode>Reject</pidx:StatusCode>
+                     <pidx:InvoiceResponseDate>2020-06-12</pidx:InvoiceResponseDate>
+                     <pidx:PartnerInformation partnerRoleIndicator="SoldTo">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber"/>
+                     </pidx:PartnerInformation>
+                     <pidx:PartnerInformation partnerRoleIndicator="Seller">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber"/>
+                     </pidx:PartnerInformation>
+                     <pidx:InvoiceInformation>
+                        <pidx:InvoiceNumber>RIT_PIDX_INVR_DUNS</pidx:InvoiceNumber>
+                        <pidx:InvoiceDate>2020-06-30</pidx:InvoiceDate>
+                     </pidx:InvoiceInformation>
+                     <pidx:SpecialInstructions instructionIndicator="Other">Reject</pidx:SpecialInstructions>
+                     <pidx:Comment>Comment: [MDC] Devon is disputing this invoice for the following reason(s). We are not able to process this invoice, because credit memo lines must be submitted via the original invoice or entered as a discount to the line item. If the credit is for a discount to the current invoice you will enter a discount to the line item not to exceed or equal the amount of the line item. Discounts may be split between more than one line if necessary. If the credit line is due to a change in a previous invoice entry please submit a credit memo by locating the original invoice in your Ariba outbox or email, then selecting the credit memo button to enter the information. If you have any questions or concerns, please contact DevonDirect@dvn.com. OR view the video tutorials at http://www.devonenergy.com/operations/supply-chain/information. (Zelene Estrada, 2020-06-12T04:03:23-07:00) Header Level Exceptions: Contract Review This invoice reconciliation has been determined to have a contract or BPO and needs to be reviewed. Line item: Line Number:1 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:2 Part Number:1100359 Description:1100359-AL MON MONITOR/SURV RNTL-INSPATIAL VRZN Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:3 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:4 Part Number:1100359 Description:1100359-AL MON MONITOR/SURV RNTL-INSPATIAL VRZN Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:5 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:6 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:7 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:8 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:9 Part Number:1101393 Description:1101393-AL CONCESSION CREDIT - SERVICES Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error. Line item: Line Number:10 Part Number:1095537 Description:1095537-AL ESP WELL TEST RENTAL RATE, MONTHLY Exceptions: Contract Item Date Variance The invoice item's date, Sun, 31 May, 2020, was not in the valid range. Please use a valid contract for invoicing or contact the customer directly if you believe this to be in error.</pidx:Comment>
+                  </pidx:InvoiceResponseProperties>
+                  <pidx:InvoiceResponseDetails>
+                     <pidx:InvoiceResponseLineItem/>
+                  </pidx:InvoiceResponseDetails>
+                  <pidx:InvoiceResponseSummary/>
+               </pidx:InvoiceResponse>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/PIDX/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_PIDX_1.61_InvoiceResponseSESR.xspec">
+      <label>Service Entry Sheet Response Status Update Request with Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/PIDX/StatusUpdate/ServiceSheetResponse_RIT2_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <pidx:InvoiceResponse xmlns:pidx="http://www.pidx.org/schemas/v1.61"
+                                  pidx:transactionPurposeIndicator="Original"
+                                  pidx:version="1.61">
+               <pidx:InvoiceResponseProperties>
+                  <pidx:InvoiceResponseNumber>PLT_xCBL_SESR_t1</pidx:InvoiceResponseNumber>
+                  <pidx:StatusCode>Pending</pidx:StatusCode>
+                  <pidx:InvoiceResponseDate/>
+                  <pidx:PartnerInformation partnerRoleIndicator="SoldTo">
+                     <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200507</pidx:PartnerIdentifier>
+                     <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005076320-T</pidx:PartnerIdentifier>
+                  </pidx:PartnerInformation>
+                  <pidx:PartnerInformation partnerRoleIndicator="Seller">
+                     <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200507</pidx:PartnerIdentifier>
+                     <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005076320-T</pidx:PartnerIdentifier>
+                  </pidx:PartnerInformation>
+                  <pidx:InvoiceInformation>
+                     <pidx:InvoiceNumber>PLT_xCBL_SESR_t1</pidx:InvoiceNumber>
+                     <pidx:InvoiceDate/>
+                  </pidx:InvoiceInformation>
+                  <pidx:SpecialInstructions instructionIndicator="Other">Pending</pidx:SpecialInstructions>
+                  <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                     <pidx:ReferenceNumber>AN02005076319-T</pidx:ReferenceNumber>
+                     <pidx:Description>BillToPurchaserGroup</pidx:Description>
+                  </pidx:ReferenceInformation>
+                  <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                     <pidx:ReferenceNumber>ServiceEntryRequest</pidx:ReferenceNumber>
+                     <pidx:Description>SourceDocumentType</pidx:Description>
+                  </pidx:ReferenceInformation>
+                  <pidx:Comment>Comment: [MDC] Devon is disputing this invoice for the following reason(s). We are not able to process this invoice, because credit memo lines must be submitted via the original invoice or entered as a discount to the line item. If the credit is for a discount to the current invoice you will enter a discount to the line item not to exceed or equal the amount of the line item. Discounts may be split between more than one line if necessary. If the credit line is due to a change in a previous invoice entry please submit a credit memo by locating the original invoice</pidx:Comment>
+               </pidx:InvoiceResponseProperties>
+               <pidx:InvoiceResponseDetails>
+                  <pidx:InvoiceResponseLineItem/>
+               </pidx:InvoiceResponseDetails>
+               <pidx:InvoiceResponseSummary/>
+            </pidx:InvoiceResponse>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Service Entry Sheet Response Status Update Request with Comments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <pidx:InvoiceResponse xmlns:pidx="http://www.pidx.org/schemas/v1.61"
+                                     pidx:transactionPurposeIndicator="Original"
+                                     pidx:version="1.61">
+                  <pidx:InvoiceResponseProperties>
+                     <pidx:InvoiceResponseNumber>PLT_xCBL_SESR_t1</pidx:InvoiceResponseNumber>
+                     <pidx:StatusCode>Pending</pidx:StatusCode>
+                     <pidx:InvoiceResponseDate/>
+                     <pidx:PartnerInformation partnerRoleIndicator="SoldTo">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200507</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005076320-T</pidx:PartnerIdentifier>
+                     </pidx:PartnerInformation>
+                     <pidx:PartnerInformation partnerRoleIndicator="Seller">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200507</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005076320-T</pidx:PartnerIdentifier>
+                     </pidx:PartnerInformation>
+                     <pidx:InvoiceInformation>
+                        <pidx:InvoiceNumber>PLT_xCBL_SESR_t1</pidx:InvoiceNumber>
+                        <pidx:InvoiceDate/>
+                     </pidx:InvoiceInformation>
+                     <pidx:SpecialInstructions instructionIndicator="Other">Pending</pidx:SpecialInstructions>
+                     <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                        <pidx:ReferenceNumber>AN02005076319-T</pidx:ReferenceNumber>
+                        <pidx:Description>BillToPurchaserGroup</pidx:Description>
+                     </pidx:ReferenceInformation>
+                     <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                        <pidx:ReferenceNumber>ServiceEntryRequest</pidx:ReferenceNumber>
+                        <pidx:Description>SourceDocumentType</pidx:Description>
+                     </pidx:ReferenceInformation>
+                     <pidx:Comment>Comment: [MDC] Devon is disputing this invoice for the following reason(s). We are not able to process this invoice, because credit memo lines must be submitted via the original invoice or entered as a discount to the line item. If the credit is for a discount to the current invoice you will enter a discount to the line item not to exceed or equal the amount of the line item. Discounts may be split between more than one line if necessary. If the credit line is due to a change in a previous invoice entry please submit a credit memo by locating the original invoice</pidx:Comment>
+                  </pidx:InvoiceResponseProperties>
+                  <pidx:InvoiceResponseDetails>
+                     <pidx:InvoiceResponseLineItem/>
+                  </pidx:InvoiceResponseDetails>
+                  <pidx:InvoiceResponseSummary/>
+               </pidx:InvoiceResponse>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

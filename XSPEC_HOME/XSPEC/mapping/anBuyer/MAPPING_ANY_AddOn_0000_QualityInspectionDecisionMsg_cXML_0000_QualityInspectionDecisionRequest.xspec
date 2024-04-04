@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_QualityInspectionDecisionMsg_cXML_0000_QualityInspectionDecisionRequest.xsl">
+    <x:scenario label="Quality Inspection Decision">
+        
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anERPName"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anTargetDocumentType"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/anBuyer/QualityInspection/QualInspDecision.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/QualityInspection/QualInspDecision.dat"
+            select="element()" label="Quality Inspection Decision"/>
+    </x:scenario>
+    <x:scenario label="Quality Inspection Decision Prod Deployment">
+        
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anERPName"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anTargetDocumentType"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/anBuyer/QualityInspection/QualInspDecisionProd.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/QualityInspection/QualInspDecisionProd.dat"
+            select="element()" label="Quality Inspection Decision Prod Deployment"/>
+    </x:scenario>
+    
+</x:description>

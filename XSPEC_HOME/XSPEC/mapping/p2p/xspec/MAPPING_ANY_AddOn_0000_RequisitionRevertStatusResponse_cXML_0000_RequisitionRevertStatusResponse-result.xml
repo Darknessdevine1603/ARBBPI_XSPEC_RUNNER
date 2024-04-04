@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_RequisitionRevertStatusResponse_cXML_0000_RequisitionRevertStatusResponse.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_RequisitionRevertStatusResponse_cXML_0000_RequisitionRevertStatusResponse.xsl"
+        date="2023-04-27T15:36:44.019633+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_RequisitionRevertStatusResponse_cXML_0000_RequisitionRevertStatusResponse.xspec">
+      <label>Success case</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/RequisitionRevertStatus/RequisitionRealTimeRevertBudgetExportReply_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <RequisitionRealTimeRevertBudgetExportReply partition="PREALM_156" variant="VREALM_156">
+               <Requisition_RequisitionRealTimeBudgetResponseImport_Item>
+                  <item>
+                     <ERPRequisitionID>0010033550</ERPRequisitionID>
+                     <RealTimeBudgetResponse>
+                        <Approvable>
+                           <UniqueName>VRPR1177</UniqueName>
+                        </Approvable>
+                        <LogMessages>
+                           <item>
+                              <Message>Purchase requisition 10033550 changed</Message>
+                              <Type>S</Type>
+                           </item>
+                        </LogMessages>
+                        <UniqueName>VRPR1177</UniqueName>
+                     </RealTimeBudgetResponse>
+                     <UniqueName>VRPR1177</UniqueName>
+                  </item>
+               </Requisition_RequisitionRealTimeBudgetResponseImport_Item>
+            </RequisitionRealTimeRevertBudgetExportReply>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Success case</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <RequisitionRealTimeRevertBudgetExportReply partition="PREALM_156" variant="VREALM_156">
+                  <Requisition_RequisitionRealTimeBudgetResponseImport_Item>
+                     <item>
+                        <ERPRequisitionID>0010033550</ERPRequisitionID>
+                        <RealTimeBudgetResponse>
+                           <Approvable>
+                              <UniqueName>VRPR1177</UniqueName>
+                           </Approvable>
+                           <LogMessages>
+                              <item>
+                                 <Message>Purchase requisition 10033550 changed</Message>
+                                 <Type>S</Type>
+                              </item>
+                           </LogMessages>
+                           <UniqueName>VRPR1177</UniqueName>
+                        </RealTimeBudgetResponse>
+                        <UniqueName>VRPR1177</UniqueName>
+                     </item>
+                  </Requisition_RequisitionRealTimeBudgetResponseImport_Item>
+               </RequisitionRealTimeRevertBudgetExportReply>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_RequisitionRevertStatusResponse_cXML_0000_RequisitionRevertStatusResponse.xspec">
+      <label>Error case</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/RequisitionRevertStatus/RequisitionRealTimeRevertError_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <RequisitionRealTimeRevertBudgetExportReply partition="PREALM_156" variant="VREALM_156">
+               <RequisitionError_RequisitionErrorImport_Item>
+                  <item>
+                     <Date>2023-04-27T15:36:44</Date>
+                     <ErrorClient>Q8JCLNT002</ErrorClient>
+                     <ErrorMessage>Purchase requisition does not exist</ErrorMessage>
+                     <ErrorNumber>407</ErrorNumber>
+                     <ErrorSAPField>SAP</ErrorSAPField>
+                     <ErrorSAPId>06</ErrorSAPId>
+                     <ErrorSAPModule>SAP</ErrorSAPModule>
+                     <ErrorSAPScreen>SAP</ErrorSAPScreen>
+                     <ErrorSystem>Q8JCLNT002</ErrorSystem>
+                     <Id>VRPR1177</Id>
+                     <NumInSet>1</NumInSet>
+                     <Type>E</Type>
+                  </item>
+               </RequisitionError_RequisitionErrorImport_Item>
+            </RequisitionRealTimeRevertBudgetExportReply>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Error case</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <RequisitionRealTimeRevertBudgetExportReply partition="PREALM_156" variant="VREALM_156">
+                  <RequisitionError_RequisitionErrorImport_Item>
+                     <item>
+                        <Date>...</Date>
+                        <ErrorClient>Q8JCLNT002</ErrorClient>
+                        <ErrorMessage>Purchase requisition does not exist</ErrorMessage>
+                        <ErrorNumber>407</ErrorNumber>
+                        <ErrorSAPField>SAP</ErrorSAPField>
+                        <ErrorSAPId>06</ErrorSAPId>
+                        <ErrorSAPModule>SAP</ErrorSAPModule>
+                        <ErrorSAPScreen>SAP</ErrorSAPScreen>
+                        <ErrorSystem>Q8JCLNT002</ErrorSystem>
+                        <Id>VRPR1177</Id>
+                        <NumInSet>1</NumInSet>
+                        <Type>E</Type>
+                     </item>
+                  </RequisitionError_RequisitionErrorImport_Item>
+               </RequisitionRealTimeRevertBudgetExportReply>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

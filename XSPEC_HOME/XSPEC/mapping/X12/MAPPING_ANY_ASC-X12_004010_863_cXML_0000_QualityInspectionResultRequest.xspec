@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_863_cXML_0000_QualityInspectionResultRequest.xsl">
+    <x:scenario label="Quality Inspection Result Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/QualityInspection/QualityInspection_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/QualityInspection/QualityInspection_AM.dat"
+            select="element()" label="Quality Inspection Result Request"/>
+    </x:scenario>
+    
+    <x:scenario label="Quality Inspection Result Request - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/QualityInspection/QualityInspection_2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/QualityInspection/QualityInspection_2_AM.dat"
+            select="element()" label="Quality Inspection Result Request - 2"/>
+    </x:scenario>
+</x:description>

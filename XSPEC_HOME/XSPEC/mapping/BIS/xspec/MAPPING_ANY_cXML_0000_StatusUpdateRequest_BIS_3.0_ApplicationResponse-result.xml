@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/BIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_BIS_3.0_ApplicationResponse.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/BIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_BIS_3.0_ApplicationResponse.xsl"
+        date="2023-04-27T15:50:57.700248+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/BIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_BIS_3.0_ApplicationResponse.xspec">
+      <label>StatusUpdateRequest</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/BIS/StatusUpdateRequest/StatusUpdateRequest_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+               <sh:StandardBusinessDocumentHeader>
+                  <sh:HeaderVersion>1.0</sh:HeaderVersion>
+                  <sh:Sender>
+                     <sh:Identifier Authority="iso6523-actorid-upis"/>
+                  </sh:Sender>
+                  <sh:Receiver>
+                     <sh:Identifier sh:Authority="iso6523-actorid-upis"/>
+                  </sh:Receiver>
+                  <sh:DocumentIdentification>
+                     <sh:Standard>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</sh:Standard>
+                     <sh:TypeVersion>2.1</sh:TypeVersion>
+                     <sh:InstanceIdentifier>payload</sh:InstanceIdentifier>
+                     <sh:Type>ApplicationResponse</sh:Type>
+                     <sh:CreationDateAndTime>2020-10-12T12:39:31+00:00</sh:CreationDateAndTime>
+                  </sh:DocumentIdentification>
+               </sh:StandardBusinessDocumentHeader>
+               <ubl:ApplicationResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+                                        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                        xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2">
+                  <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:invoice_response:3</cbc:CustomizationID>
+                  <cbc:ProfileID>urn:fdc:peppol.eu:poacc:bis:invoice_response:3</cbc:ProfileID>
+                  <cbc:ID>payloadID0</cbc:ID>
+                  <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                  <cbc:IssueTime>12:39:31+00:00</cbc:IssueTime>
+                  <cbc:Note>200 - OK - Accepted without error</cbc:Note>
+                  <cac:SenderParty>
+                     <EndpointID schemeID=""/>
+                     <cac:PartyLegalEntity>
+                        <cbc:RegistrationName/>
+                     </cac:PartyLegalEntity>
+                  </cac:SenderParty>
+                  <cac:ReceiverParty>
+                     <EndpointID schemeID=""/>
+                     <cac:PartyLegalEntity>
+                        <cbc:RegistrationName>SupplierName</cbc:RegistrationName>
+                     </cac:PartyLegalEntity>
+                  </cac:ReceiverParty>
+                  <cac:DocumentResponse>
+                     <cac:Response>
+                        <cbc:ResponseCode>PD</cbc:ResponseCode>
+                        <cac:Status>
+                           <cbc:StatusReasonCode listID="OPActionCode"/>
+                           <cbc:StatusReason>No action required</cbc:StatusReason>
+                        </cac:Status>
+                        <cac:Status>
+                           <cbc:StatusReasonCode listID="OPReasonCode"/>
+                           <cbc:StatusReason>No Issue</cbc:StatusReason>
+                        </cac:Status>
+                     </cac:Response>
+                  </cac:DocumentResponse>
+                  <cac:DocumentReference>
+                     <cbc:ID>invoiceID0</cbc:ID>
+                     <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                     <cbc:DocumentTypeCode>380</cbc:DocumentTypeCode>
+                  </cac:DocumentReference>
+               </ubl:ApplicationResponse>
+            </sh:StandardBusinessDocument>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>StatusUpdateRequest</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+                  <sh:StandardBusinessDocumentHeader>
+                     <sh:HeaderVersion>1.0</sh:HeaderVersion>
+                     <sh:Sender>
+                        <sh:Identifier Authority="iso6523-actorid-upis"/>
+                     </sh:Sender>
+                     <sh:Receiver>
+                        <sh:Identifier sh:Authority="iso6523-actorid-upis"/>
+                     </sh:Receiver>
+                     <sh:DocumentIdentification>
+                        <sh:Standard>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</sh:Standard>
+                        <sh:TypeVersion>2.1</sh:TypeVersion>
+                        <sh:InstanceIdentifier>payload</sh:InstanceIdentifier>
+                        <sh:Type>ApplicationResponse</sh:Type>
+                        <sh:CreationDateAndTime>2020-10-12T12:39:31+00:00</sh:CreationDateAndTime>
+                     </sh:DocumentIdentification>
+                  </sh:StandardBusinessDocumentHeader>
+                  <ubl:ApplicationResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+                                           xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                           xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                           xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2">
+                     <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:invoice_response:3</cbc:CustomizationID>
+                     <cbc:ProfileID>urn:fdc:peppol.eu:poacc:bis:invoice_response:3</cbc:ProfileID>
+                     <cbc:ID>payloadID0</cbc:ID>
+                     <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                     <cbc:IssueTime>12:39:31+00:00</cbc:IssueTime>
+                     <cbc:Note>200 - OK - Accepted without error</cbc:Note>
+                     <cac:SenderParty>
+                        <EndpointID schemeID=""/>
+                        <cac:PartyLegalEntity>
+                           <cbc:RegistrationName/>
+                        </cac:PartyLegalEntity>
+                     </cac:SenderParty>
+                     <cac:ReceiverParty>
+                        <EndpointID schemeID=""/>
+                        <cac:PartyLegalEntity>
+                           <cbc:RegistrationName>SupplierName</cbc:RegistrationName>
+                        </cac:PartyLegalEntity>
+                     </cac:ReceiverParty>
+                     <cac:DocumentResponse>
+                        <cac:Response>
+                           <cbc:ResponseCode>PD</cbc:ResponseCode>
+                           <cac:Status>
+                              <cbc:StatusReasonCode listID="OPActionCode"/>
+                              <cbc:StatusReason>No action required</cbc:StatusReason>
+                           </cac:Status>
+                           <cac:Status>
+                              <cbc:StatusReasonCode listID="OPReasonCode"/>
+                              <cbc:StatusReason>No Issue</cbc:StatusReason>
+                           </cac:Status>
+                        </cac:Response>
+                     </cac:DocumentResponse>
+                     <cac:DocumentReference>
+                        <cbc:ID>invoiceID0</cbc:ID>
+                        <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                        <cbc:DocumentTypeCode>380</cbc:DocumentTypeCode>
+                     </cac:DocumentReference>
+                  </ubl:ApplicationResponse>
+               </sh:StandardBusinessDocument>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/BIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_BIS_3.0_ApplicationResponse.xspec">
+      <label>Invoice StatusUpdateRequest</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/BIS/StatusUpdateRequest/StatusUpdateRequestInvoice_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+               <sh:StandardBusinessDocumentHeader>
+                  <sh:HeaderVersion>1.0</sh:HeaderVersion>
+                  <sh:Sender>
+                     <sh:Identifier Authority="iso6523-actorid-upis"/>
+                  </sh:Sender>
+                  <sh:Receiver>
+                     <sh:Identifier sh:Authority="iso6523-actorid-upis"/>
+                  </sh:Receiver>
+                  <sh:DocumentIdentification>
+                     <sh:Standard>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</sh:Standard>
+                     <sh:TypeVersion>2.1</sh:TypeVersion>
+                     <sh:InstanceIdentifier>payload</sh:InstanceIdentifier>
+                     <sh:Type>ApplicationResponse</sh:Type>
+                     <sh:CreationDateAndTime>2020-10-12T12:39:31+00:00</sh:CreationDateAndTime>
+                  </sh:DocumentIdentification>
+               </sh:StandardBusinessDocumentHeader>
+               <ubl:ApplicationResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+                                        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                        xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2">
+                  <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:invoice_response:3</cbc:CustomizationID>
+                  <cbc:ProfileID>urn:fdc:peppol.eu:poacc:bis:invoice_response:3</cbc:ProfileID>
+                  <cbc:ID>payloadID0</cbc:ID>
+                  <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                  <cbc:IssueTime>12:39:31+00:00</cbc:IssueTime>
+                  <cbc:Note>200 - OK - Forwarded to manufacturer</cbc:Note>
+                  <cac:SenderParty>
+                     <EndpointID schemeID=""/>
+                     <cac:PartyLegalEntity>
+                        <cbc:RegistrationName/>
+                     </cac:PartyLegalEntity>
+                  </cac:SenderParty>
+                  <cac:ReceiverParty>
+                     <EndpointID schemeID=""/>
+                     <cac:PartyLegalEntity>
+                        <cbc:RegistrationName>SupplierName</cbc:RegistrationName>
+                     </cac:PartyLegalEntity>
+                  </cac:ReceiverParty>
+                  <cac:DocumentResponse>
+                     <cac:Response>
+                        <cbc:ResponseCode>RE</cbc:ResponseCode>
+                        <cac:Status>
+                           <cbc:StatusReasonCode listID="OPActionCode"/>
+                           <cbc:StatusReason>Issue new invoice</cbc:StatusReason>
+                        </cac:Status>
+                        <cac:Status>
+                           <cbc:StatusReasonCode listID="OPReasonCode"/>
+                           <cbc:StatusReason>References incorrect</cbc:StatusReason>
+                        </cac:Status>
+                        <cac:Status>
+                           <cbc:StatusReasonCode listID="OPReasonCode"/>
+                           <cbc:StatusReason>Payment terms incorrect</cbc:StatusReason>
+                        </cac:Status>
+                     </cac:Response>
+                  </cac:DocumentResponse>
+                  <cac:DocumentReference>
+                     <cbc:ID>invoiceID0</cbc:ID>
+                     <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                     <cbc:DocumentTypeCode>380</cbc:DocumentTypeCode>
+                  </cac:DocumentReference>
+               </ubl:ApplicationResponse>
+            </sh:StandardBusinessDocument>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Invoice StatusUpdateRequest</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+                  <sh:StandardBusinessDocumentHeader>
+                     <sh:HeaderVersion>1.0</sh:HeaderVersion>
+                     <sh:Sender>
+                        <sh:Identifier Authority="iso6523-actorid-upis"/>
+                     </sh:Sender>
+                     <sh:Receiver>
+                        <sh:Identifier sh:Authority="iso6523-actorid-upis"/>
+                     </sh:Receiver>
+                     <sh:DocumentIdentification>
+                        <sh:Standard>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</sh:Standard>
+                        <sh:TypeVersion>2.1</sh:TypeVersion>
+                        <sh:InstanceIdentifier>payload</sh:InstanceIdentifier>
+                        <sh:Type>ApplicationResponse</sh:Type>
+                        <sh:CreationDateAndTime>2020-10-12T12:39:31+00:00</sh:CreationDateAndTime>
+                     </sh:DocumentIdentification>
+                  </sh:StandardBusinessDocumentHeader>
+                  <ubl:ApplicationResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+                                           xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                           xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                           xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2">
+                     <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:invoice_response:3</cbc:CustomizationID>
+                     <cbc:ProfileID>urn:fdc:peppol.eu:poacc:bis:invoice_response:3</cbc:ProfileID>
+                     <cbc:ID>payloadID0</cbc:ID>
+                     <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                     <cbc:IssueTime>12:39:31+00:00</cbc:IssueTime>
+                     <cbc:Note>200 - OK - Forwarded to manufacturer</cbc:Note>
+                     <cac:SenderParty>
+                        <EndpointID schemeID=""/>
+                        <cac:PartyLegalEntity>
+                           <cbc:RegistrationName/>
+                        </cac:PartyLegalEntity>
+                     </cac:SenderParty>
+                     <cac:ReceiverParty>
+                        <EndpointID schemeID=""/>
+                        <cac:PartyLegalEntity>
+                           <cbc:RegistrationName>SupplierName</cbc:RegistrationName>
+                        </cac:PartyLegalEntity>
+                     </cac:ReceiverParty>
+                     <cac:DocumentResponse>
+                        <cac:Response>
+                           <cbc:ResponseCode>RE</cbc:ResponseCode>
+                           <cac:Status>
+                              <cbc:StatusReasonCode listID="OPActionCode"/>
+                              <cbc:StatusReason>Issue new invoice</cbc:StatusReason>
+                           </cac:Status>
+                           <cac:Status>
+                              <cbc:StatusReasonCode listID="OPReasonCode"/>
+                              <cbc:StatusReason>References incorrect</cbc:StatusReason>
+                           </cac:Status>
+                           <cac:Status>
+                              <cbc:StatusReasonCode listID="OPReasonCode"/>
+                              <cbc:StatusReason>Payment terms incorrect</cbc:StatusReason>
+                           </cac:Status>
+                        </cac:Response>
+                     </cac:DocumentResponse>
+                     <cac:DocumentReference>
+                        <cbc:ID>invoiceID0</cbc:ID>
+                        <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                        <cbc:DocumentTypeCode>380</cbc:DocumentTypeCode>
+                     </cac:DocumentReference>
+                  </ubl:ApplicationResponse>
+               </sh:StandardBusinessDocument>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/BIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_BIS_3.0_ApplicationResponse.xspec">
+      <label>Invoice with Reason StatusUpdateRequest</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/BIS/StatusUpdateRequest/StatusUpdateRequestInvoiceReason_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+               <sh:StandardBusinessDocumentHeader>
+                  <sh:HeaderVersion>1.0</sh:HeaderVersion>
+                  <sh:Sender>
+                     <sh:Identifier Authority="iso6523-actorid-upis"/>
+                  </sh:Sender>
+                  <sh:Receiver>
+                     <sh:Identifier sh:Authority="iso6523-actorid-upis"/>
+                  </sh:Receiver>
+                  <sh:DocumentIdentification>
+                     <sh:Standard>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</sh:Standard>
+                     <sh:TypeVersion>2.1</sh:TypeVersion>
+                     <sh:InstanceIdentifier>payload</sh:InstanceIdentifier>
+                     <sh:Type>ApplicationResponse</sh:Type>
+                     <sh:CreationDateAndTime>2020-10-12T12:39:31+00:00</sh:CreationDateAndTime>
+                  </sh:DocumentIdentification>
+               </sh:StandardBusinessDocumentHeader>
+               <ubl:ApplicationResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+                                        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                        xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2">
+                  <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:invoice_response:3</cbc:CustomizationID>
+                  <cbc:ProfileID>urn:fdc:peppol.eu:poacc:bis:invoice_response:3</cbc:ProfileID>
+                  <cbc:ID>payloadID0</cbc:ID>
+                  <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                  <cbc:IssueTime>12:39:31+00:00</cbc:IssueTime>
+                  <cbc:Note>200 - OK - Forwarded to manufacturer</cbc:Note>
+                  <cac:SenderParty>
+                     <EndpointID schemeID=""/>
+                     <cac:PartyLegalEntity>
+                        <cbc:RegistrationName/>
+                     </cac:PartyLegalEntity>
+                  </cac:SenderParty>
+                  <cac:ReceiverParty>
+                     <EndpointID schemeID=""/>
+                     <cac:PartyLegalEntity>
+                        <cbc:RegistrationName>SupplierName</cbc:RegistrationName>
+                     </cac:PartyLegalEntity>
+                  </cac:ReceiverParty>
+                  <cac:DocumentResponse>
+                     <cac:Response>
+                        <cbc:ResponseCode>RE</cbc:ResponseCode>
+                        <cac:Status>
+                           <cbc:StatusReasonCode listID="OPActionCode"/>
+                           <cbc:StatusReason>Provide information</cbc:StatusReason>
+                        </cac:Status>
+                        <cac:Status>
+                           <cbc:StatusReasonCode listID="OPReasonCode"/>
+                           <cbc:StatusReason>Prices incorrect</cbc:StatusReason>
+                        </cac:Status>
+                        <cac:Status>
+                           <cbc:StatusReasonCode listID="OPReasonCode"/>
+                           <cbc:StatusReason>Quantity incorrect</cbc:StatusReason>
+                        </cac:Status>
+                     </cac:Response>
+                  </cac:DocumentResponse>
+                  <cac:DocumentReference>
+                     <cbc:ID>documentID0</cbc:ID>
+                     <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                     <cbc:DocumentTypeCode/>
+                  </cac:DocumentReference>
+               </ubl:ApplicationResponse>
+            </sh:StandardBusinessDocument>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Invoice with Reason StatusUpdateRequest</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+                  <sh:StandardBusinessDocumentHeader>
+                     <sh:HeaderVersion>1.0</sh:HeaderVersion>
+                     <sh:Sender>
+                        <sh:Identifier Authority="iso6523-actorid-upis"/>
+                     </sh:Sender>
+                     <sh:Receiver>
+                        <sh:Identifier sh:Authority="iso6523-actorid-upis"/>
+                     </sh:Receiver>
+                     <sh:DocumentIdentification>
+                        <sh:Standard>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</sh:Standard>
+                        <sh:TypeVersion>2.1</sh:TypeVersion>
+                        <sh:InstanceIdentifier>payload</sh:InstanceIdentifier>
+                        <sh:Type>ApplicationResponse</sh:Type>
+                        <sh:CreationDateAndTime>2020-10-12T12:39:31+00:00</sh:CreationDateAndTime>
+                     </sh:DocumentIdentification>
+                  </sh:StandardBusinessDocumentHeader>
+                  <ubl:ApplicationResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+                                           xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                           xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                           xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2">
+                     <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:invoice_response:3</cbc:CustomizationID>
+                     <cbc:ProfileID>urn:fdc:peppol.eu:poacc:bis:invoice_response:3</cbc:ProfileID>
+                     <cbc:ID>payloadID0</cbc:ID>
+                     <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                     <cbc:IssueTime>12:39:31+00:00</cbc:IssueTime>
+                     <cbc:Note>200 - OK - Forwarded to manufacturer</cbc:Note>
+                     <cac:SenderParty>
+                        <EndpointID schemeID=""/>
+                        <cac:PartyLegalEntity>
+                           <cbc:RegistrationName/>
+                        </cac:PartyLegalEntity>
+                     </cac:SenderParty>
+                     <cac:ReceiverParty>
+                        <EndpointID schemeID=""/>
+                        <cac:PartyLegalEntity>
+                           <cbc:RegistrationName>SupplierName</cbc:RegistrationName>
+                        </cac:PartyLegalEntity>
+                     </cac:ReceiverParty>
+                     <cac:DocumentResponse>
+                        <cac:Response>
+                           <cbc:ResponseCode>RE</cbc:ResponseCode>
+                           <cac:Status>
+                              <cbc:StatusReasonCode listID="OPActionCode"/>
+                              <cbc:StatusReason>Provide information</cbc:StatusReason>
+                           </cac:Status>
+                           <cac:Status>
+                              <cbc:StatusReasonCode listID="OPReasonCode"/>
+                              <cbc:StatusReason>Prices incorrect</cbc:StatusReason>
+                           </cac:Status>
+                           <cac:Status>
+                              <cbc:StatusReasonCode listID="OPReasonCode"/>
+                              <cbc:StatusReason>Quantity incorrect</cbc:StatusReason>
+                           </cac:Status>
+                        </cac:Response>
+                     </cac:DocumentResponse>
+                     <cac:DocumentReference>
+                        <cbc:ID>documentID0</cbc:ID>
+                        <cbc:IssueDate>2020-10-12</cbc:IssueDate>
+                        <cbc:DocumentTypeCode/>
+                     </cac:DocumentReference>
+                  </ubl:ApplicationResponse>
+               </sh:StandardBusinessDocument>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

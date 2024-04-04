@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_CreditMemo_AddOn_0000_CreditMemo.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_CreditMemo_AddOn_0000_CreditMemo.xsl"
+        date="2023-04-27T15:27:23.796349+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_CreditMemo_AddOn_0000_CreditMemo.xspec">
+      <label>Credit Memo Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/CreditMemo/CreditMemo.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:CreditMemoMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>INV2904-2_1</ID>
+                  <AribaNetworkPayloadID>TC_e2450957-3612-458e-981b-6ae2069cc077</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <CreationDateTime>2023-04-27T15:27:24.167028+05:30</CreationDateTime>
+                  <RecipientParty>
+                     <InternalID schemeID="LI">100000</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Item>
+                  <VendorID>100000</VendorID>
+                  <ERPInvoiceNo/>
+                  <ERPInvoiceDate/>
+                  <ASNInvoiceNo>INV2904-2_1</ASNInvoiceNo>
+                  <LogicalSystem>supplier</LogicalSystem>
+                  <DocumentDate>2020-04-28</DocumentDate>
+                  <DocumentTime>20:58:24</DocumentTime>
+                  <DocumentStatus>delete</DocumentStatus>
+                  <FIInvoice/>
+                  <CompanyCode>0001</CompanyCode>
+                  <CompanyName>SAP ARIBA -1</CompanyName>
+                  <RemitToPartner>
+                     <InternalID>88000088</InternalID>
+                     <OrganisationFormattedName>t1q8jqis - TEST</OrganisationFormattedName>
+                  </RemitToPartner>
+                  <AribaComment/>
+               </Item>
+            </n0:CreditMemoMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Credit Memo Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:CreditMemoMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>INV2904-2_1</ID>
+                     <AribaNetworkPayloadID>TC_e2450957-3612-458e-981b-6ae2069cc077</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <RecipientParty>
+                        <InternalID schemeID="LI">100000</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Item>
+                     <VendorID>100000</VendorID>
+                     <ERPInvoiceNo/>
+                     <ERPInvoiceDate/>
+                     <ASNInvoiceNo>INV2904-2_1</ASNInvoiceNo>
+                     <LogicalSystem>supplier</LogicalSystem>
+                     <DocumentDate>2020-04-28</DocumentDate>
+                     <DocumentTime>20:58:24</DocumentTime>
+                     <DocumentStatus>delete</DocumentStatus>
+                     <FIInvoice/>
+                     <CompanyCode>0001</CompanyCode>
+                     <CompanyName>SAP ARIBA -1</CompanyName>
+                     <RemitToPartner>
+                        <InternalID>88000088</InternalID>
+                        <OrganisationFormattedName>t1q8jqis - TEST</OrganisationFormattedName>
+                     </RemitToPartner>
+                     <AribaComment/>
+                  </Item>
+               </n0:CreditMemoMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_CreditMemo_AddOn_0000_CreditMemo.xspec">
+      <label>Credit Memo Request with Attachment</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/CreditMemo/CreditMemoAttachment.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:CreditMemoMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>INV2904-2_1</ID>
+                  <AribaNetworkPayloadID>TC_e2450957-3612-458e-981b-6ae2069cc077</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <CreationDateTime>2023-04-27T15:27:24.229403+05:30</CreationDateTime>
+                  <RecipientParty>
+                     <InternalID schemeID="LI">100000</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Item>
+                  <VendorID>100000</VendorID>
+                  <ERPInvoiceNo/>
+                  <ERPInvoiceDate/>
+                  <ASNInvoiceNo>INV2904-2_1</ASNInvoiceNo>
+                  <LogicalSystem>supplier</LogicalSystem>
+                  <DocumentDate>2020-04-28</DocumentDate>
+                  <DocumentTime>20:58:24</DocumentTime>
+                  <DocumentStatus>delete</DocumentStatus>
+                  <FIInvoice/>
+                  <CompanyCode>0001</CompanyCode>
+                  <CompanyName>SAP ARIBA -1</CompanyName>
+                  <RemitToPartner>
+                     <InternalID>88000088</InternalID>
+                     <OrganisationFormattedName>t1q8jqis - TEST</OrganisationFormattedName>
+                  </RemitToPartner>
+                  <AribaComment/>
+                  <Attachment>
+                     <Item>
+                        <FileName>Line Attachment - Copy.txt</FileName>
+                        <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                        <ContentId>2062305473.1588132705210@cxml.org</ContentId>
+                        <Content>line1</Content>
+                     </Item>
+                     <Item>
+                        <FileName>Payload.xml</FileName>
+                        <ContentType>xml</ContentType>
+                        <ContentId>PAYLOAD</ContentId>
+                        <Content>&lt;cXML payloadID="TC_e2450957-3612-458e-981b-6ae2069cc077" timestamp="2019-11-05T08:09:49+00:00" version="1.2.043"&gt;&lt;Header&gt;&lt;From&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;AN02003049496-T&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="VendorID"&gt;&lt;Identity&gt;100000&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="PrivateID"&gt;&lt;Identity&gt;100000&lt;/Identity&gt;&lt;/Credential&gt;&lt;/From&gt;&lt;To&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;%%BUYER%%&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="SystemID"&gt;&lt;Identity&gt;%%SNDPRN%%&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="EndPointID"&gt;&lt;Identity&gt;CIG&lt;/Identity&gt;&lt;/Credential&gt;&lt;/To&gt;&lt;Sender&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;AN01000000001&lt;/Identity&gt;&lt;SharedSecret&gt;&lt;/SharedSecret&gt;&lt;/Credential&gt;&lt;UserAgent&gt;SCMSupplier&lt;/UserAgent&gt;&lt;/Sender&gt;&lt;/Header&gt;&lt;Request deploymentMode="test"&gt;&lt;InvoiceDetailRequest&gt;&lt;InvoiceDetailRequestHeader invoiceDate="2020-04-28T20:58:24-07:00" invoiceID="INV2904-2_1" invoiceOrigin="supplier" operation="delete" purpose="lineLevelCreditMemo"&gt;&lt;InvoiceDetailHeaderIndicator&gt;&lt;/InvoiceDetailHeaderIndicator&gt;&lt;InvoiceDetailLineIndicator isTaxInLine="yes"&gt;&lt;/InvoiceDetailLineIndicator&gt;&lt;InvoicePartner&gt;&lt;Contact addressID="88000088" role="remitTo"&gt;&lt;Name xml:lang="en-US"&gt;t1q8jqis - TEST&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;Test Remit1&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Arizona&lt;/City&gt;&lt;State isoStateCode="US-AZ"&gt;AZ&lt;/State&gt;&lt;PostalCode&gt;85001&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact addressID="0001" role="billTo"&gt;&lt;Name xml:lang="EN"&gt;SAP ARIBA -1&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;234-123456&lt;/Street&gt;&lt;City&gt;Berlin&lt;/City&gt;&lt;Municipality&gt;bangalore North&lt;/Municipality&gt;&lt;State&gt;Berlin&lt;/State&gt;&lt;PostalCode&gt;10243&lt;/PostalCode&gt;&lt;Country isoCountryCode="DE"&gt;&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="from"&gt;&lt;Name xml:lang="en-US"&gt;t1q8jqis - TEST&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="billFrom"&gt;&lt;Name xml:lang="en-US"&gt;t1q8jqis - TEST&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="soldTo"&gt;&lt;Name xml:lang="en-US"&gt;t1q8jb10 buyer - TEST&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummyn2&lt;/Street&gt;&lt;Street&gt;1234&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Sunnyvale&lt;/City&gt;&lt;State isoStateCode="US-CA"&gt;CA&lt;/State&gt;&lt;PostalCode&gt;94089&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="receivingBank"&gt;&lt;Name xml:lang="en-US"&gt;City&lt;/Name&gt;&lt;/Contact&gt;&lt;IdReference domain="accountName" identifier="Remit"&gt;&lt;/IdReference&gt;&lt;IdReference domain="accountType" identifier="Saving"&gt;&lt;/IdReference&gt;&lt;IdReference domain="branchName" identifier="Orange Park"&gt;&lt;/IdReference&gt;&lt;IdReference domain="accountID" identifier="123456789012345"&gt;&lt;/IdReference&gt;&lt;IdReference domain="bankRoutingID" identifier="266086554"&gt;&lt;/IdReference&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="wireReceivingBank"&gt;&lt;Name xml:lang="en-US"&gt;HDFC&lt;/Name&gt;&lt;/Contact&gt;&lt;IdReference domain="accountName" identifier="Test"&gt;&lt;/IdReference&gt;&lt;IdReference domain="accountType" identifier="Saving"&gt;&lt;/IdReference&gt;&lt;IdReference domain="branchName" identifier="Majestic"&gt;&lt;/IdReference&gt;&lt;IdReference domain="accountID" identifier="123456789012345"&gt;&lt;/IdReference&gt;&lt;IdReference domain="swiftID" identifier="HDFCINBBTRS"&gt;&lt;/IdReference&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="receivingCorrespondentBank"&gt;&lt;Name xml:lang="en-US"&gt;HDFC&lt;/Name&gt;&lt;/Contact&gt;&lt;IdReference domain="accountName" identifier="Test"&gt;&lt;/IdReference&gt;&lt;IdReference domain="accountType" identifier="Saving"&gt;&lt;/IdReference&gt;&lt;IdReference domain="branchName" identifier="MG Road"&gt;&lt;/IdReference&gt;&lt;IdReference domain="accountID" identifier="123456789012356"&gt;&lt;/IdReference&gt;&lt;IdReference domain="swiftID" identifier="HDFCINBBTRS"&gt;&lt;/IdReference&gt;&lt;/InvoicePartner&gt;&lt;DocumentReference payloadID="1588132520187-24510112092660353@10.163.3.224"&gt;&lt;/DocumentReference&gt;&lt;InvoiceDetailShipping&gt;&lt;Contact role="shipFrom"&gt;&lt;Name xml:lang="en-US"&gt;t1q8jqis - TEST&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Puebla&lt;/City&gt;&lt;State isoStateCode="MX-AGU"&gt;Aguascalientes&lt;/State&gt;&lt;PostalCode&gt;12345&lt;/PostalCode&gt;&lt;Country isoCountryCode="MX"&gt;Mexico&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;Contact addressID="0001" role="shipTo"&gt;&lt;Name xml:lang="EN"&gt;Werk 0001&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;123-321 456-654&lt;/Street&gt;&lt;City&gt;Berlin&lt;/City&gt;&lt;State&gt;Berlin&lt;/State&gt;&lt;PostalCode&gt;12345&lt;/PostalCode&gt;&lt;Country isoCountryCode="DE"&gt;&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;Email name="default" preferredLang="en"&gt;email@plant0001.com&lt;/Email&gt;&lt;/Contact&gt;&lt;/InvoiceDetailShipping&gt;&lt;Extrinsic name="invoiceSubmissionMethod"&gt;Online&lt;/Extrinsic&gt;&lt;Extrinsic name="paymentMethod"&gt;ach&lt;/Extrinsic&gt;&lt;Extrinsic name="invoicePDF"&gt;&lt;Attachment&gt;&lt;URL&gt;cid:2062305473.1588132705210@cxml.org&lt;/URL&gt;&lt;/Attachment&gt;&lt;/Extrinsic&gt;&lt;/InvoiceDetailRequestHeader&gt;&lt;InvoiceDetailOrder&gt;&lt;InvoiceDetailOrderInfo&gt;&lt;OrderReference orderID="4500043825"&gt;&lt;DocumentReference payloadID="42010AEE24F71EEAA2B8AB3B289369E4"&gt;&lt;/DocumentReference&gt;&lt;/OrderReference&gt;&lt;/InvoiceDetailOrderInfo&gt;&lt;InvoiceDetailItem invoiceLineNumber="1" quantity="-50"&gt;&lt;UnitOfMeasure&gt;EA&lt;/UnitOfMeasure&gt;&lt;UnitPrice&gt;&lt;Money currency="EUR"&gt;10&lt;/Money&gt;&lt;/UnitPrice&gt;&lt;PriceBasisQuantity conversionFactor="1" quantity="1"&gt;&lt;UnitOfMeasure&gt;EA&lt;/UnitOfMeasure&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;/PriceBasisQuantity&gt;&lt;InvoiceDetailItemReference lineNumber="10"&gt;&lt;ItemID&gt;&lt;SupplierPartID&gt;285&lt;/SupplierPartID&gt;&lt;BuyerPartID&gt;138&lt;/BuyerPartID&gt;&lt;/ItemID&gt;&lt;Description xml:lang="DE"&gt;##138-SEMI FINISHED SUBCONPO$$&lt;/Description&gt;&lt;Classification domain="NotAvailable"&gt;01&lt;/Classification&gt;&lt;Classification domain="ERPCommodityCode"&gt;01&lt;/Classification&gt;&lt;/InvoiceDetailItemReference&gt;&lt;SubtotalAmount&gt;&lt;Money currency="EUR"&gt;-500.00&lt;/Money&gt;&lt;/SubtotalAmount&gt;&lt;Tax&gt;&lt;Money currency="EUR"&gt;-20.00&lt;/Money&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;TaxDetail category="pst" percentageRate="4"&gt;&lt;TaxableAmount&gt;&lt;Money currency="EUR"&gt;-500.00&lt;/Money&gt;&lt;/TaxableAmount&gt;&lt;TaxAmount&gt;&lt;Money currency="EUR"&gt;-20.00&lt;/Money&gt;&lt;/TaxAmount&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;/TaxDetail&gt;&lt;/Tax&gt;&lt;GrossAmount&gt;&lt;Money currency="EUR"&gt;-520.00&lt;/Money&gt;&lt;/GrossAmount&gt;&lt;TotalAmountWithoutTax&gt;&lt;Money currency="EUR"&gt;-500.00&lt;/Money&gt;&lt;/TotalAmountWithoutTax&gt;&lt;NetAmount&gt;&lt;Money currency="EUR"&gt;-520.00&lt;/Money&gt;&lt;/NetAmount&gt;&lt;Extrinsic name="punchinItemFromCatalog"&gt;no&lt;/Extrinsic&gt;&lt;/InvoiceDetailItem&gt;&lt;/InvoiceDetailOrder&gt;&lt;InvoiceDetailSummary&gt;&lt;SubtotalAmount&gt;&lt;Money currency="EUR"&gt;-500.00&lt;/Money&gt;&lt;/SubtotalAmount&gt;&lt;Tax&gt;&lt;Money currency="EUR"&gt;-20.00&lt;/Money&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;TaxDetail category="pst" percentageRate="4"&gt;&lt;TaxableAmount&gt;&lt;Money currency="EUR"&gt;-500.00&lt;/Money&gt;&lt;/TaxableAmount&gt;&lt;TaxAmount&gt;&lt;Money currency="EUR"&gt;-20.00&lt;/Money&gt;&lt;/TaxAmount&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;/TaxDetail&gt;&lt;/Tax&gt;&lt;GrossAmount&gt;&lt;Money currency="EUR"&gt;-520.00&lt;/Money&gt;&lt;/GrossAmount&gt;&lt;TotalAmountWithoutTax&gt;&lt;Money currency="EUR"&gt;-500.00&lt;/Money&gt;&lt;/TotalAmountWithoutTax&gt;&lt;NetAmount&gt;&lt;Money currency="EUR"&gt;-520.00&lt;/Money&gt;&lt;/NetAmount&gt;&lt;DueAmount&gt;&lt;Money currency="EUR"&gt;-520.00&lt;/Money&gt;&lt;/DueAmount&gt;&lt;/InvoiceDetailSummary&gt;&lt;/InvoiceDetailRequest&gt;&lt;/Request&gt;&lt;/cXML&gt;</Content>
+                     </Item>
+                  </Attachment>
+               </Item>
+            </n0:CreditMemoMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Credit Memo Request with Attachment</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:CreditMemoMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>INV2904-2_1</ID>
+                     <AribaNetworkPayloadID>TC_e2450957-3612-458e-981b-6ae2069cc077</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <RecipientParty>
+                        <InternalID schemeID="LI">100000</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Item>
+                     <VendorID>100000</VendorID>
+                     <ERPInvoiceNo/>
+                     <ERPInvoiceDate/>
+                     <ASNInvoiceNo>INV2904-2_1</ASNInvoiceNo>
+                     <LogicalSystem>supplier</LogicalSystem>
+                     <DocumentDate>2020-04-28</DocumentDate>
+                     <DocumentTime>20:58:24</DocumentTime>
+                     <DocumentStatus>delete</DocumentStatus>
+                     <FIInvoice/>
+                     <CompanyCode>0001</CompanyCode>
+                     <CompanyName>SAP ARIBA -1</CompanyName>
+                     <RemitToPartner>
+                        <InternalID>88000088</InternalID>
+                        <OrganisationFormattedName>t1q8jqis - TEST</OrganisationFormattedName>
+                     </RemitToPartner>
+                     <AribaComment/>
+                     <Attachment>
+                        <Item>
+                           <FileName>Line Attachment - Copy.txt</FileName>
+                           <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                           <ContentId>2062305473.1588132705210@cxml.org</ContentId>
+                           <Content>line1</Content>
+                        </Item>
+                        <Item>
+                           <FileName>Payload.xml</FileName>
+                           <ContentType>xml</ContentType>
+                           <ContentId>PAYLOAD</ContentId>
+                           <Content>...</Content>
+                        </Item>
+                     </Attachment>
+                  </Item>
+               </n0:CreditMemoMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_CreditMemo_AddOn_0000_CreditMemo.xspec">
+      <label>Credit Memo Request for External PO</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/CreditMemo/CreditMemoExternalPO.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:CreditMemoMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>1900000406</ID>
+                  <AribaNetworkPayloadID>1500893926075-8419508972716543520@10.163.3.224</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <CreationDateTime>2023-04-27T15:27:24.423081+05:30</CreationDateTime>
+                  <RecipientParty>
+                     <InternalID schemeID="LI">0000100000</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Item>
+                  <VendorID>0000100000</VendorID>
+                  <ERPInvoiceNo>1900000406</ERPInvoiceNo>
+                  <ERPInvoiceDate>2017-08-04</ERPInvoiceDate>
+                  <ASNInvoiceNo>11</ASNInvoiceNo>
+                  <LogicalSystem>supplier</LogicalSystem>
+                  <DocumentDate>2017-08-04</DocumentDate>
+                  <DocumentTime>05:15:34</DocumentTime>
+                  <DocumentStatus>new</DocumentStatus>
+                  <FIInvoice>true</FIInvoice>
+                  <CompanyCode>0001</CompanyCode>
+                  <CompanyName>IDES US INC</CompanyName>
+                  <RemitToPartner>
+                     <OrganisationFormattedName>Ranjan supplier</OrganisationFormattedName>
+                  </RemitToPartner>
+                  <AribaComment/>
+                  <Attachment>
+                     <Item>
+                        <FileName>Payload.xml</FileName>
+                        <ContentType>xml</ContentType>
+                        <ContentId>PAYLOAD</ContentId>
+                        <Content>&lt;cXML payloadID="1500893926075-8419508972716543520@10.163.3.224" timestamp="2017-07-24T03:58:46-07:00" version="1.2.034"&gt;&lt;Header&gt;&lt;From&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;AN02003056532-T&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="VendorID"&gt;&lt;Identity&gt;0000100000&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="PrivateID"&gt;&lt;Identity&gt;0000100000&lt;/Identity&gt;&lt;/Credential&gt;&lt;/From&gt;&lt;To&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;%%BUYER%%&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="EndPointID"&gt;&lt;Identity&gt;CIG&lt;/Identity&gt;&lt;/Credential&gt;&lt;/To&gt;&lt;Sender&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;AN01000000001&lt;/Identity&gt;&lt;SharedSecret&gt;welcome1a&lt;/SharedSecret&gt;&lt;/Credential&gt;&lt;UserAgent&gt;SCMSupplier&lt;/UserAgent&gt;&lt;/Sender&gt;&lt;/Header&gt;&lt;Request deploymentMode="test"&gt;&lt;InvoiceDetailRequest&gt;&lt;InvoiceDetailRequestHeader invoiceDate="2017-08-04T05:15:34-07:00" invoiceID="1111" invoiceOrigin="supplier" operation="new" purpose="lineLevelCreditMemo"&gt;&lt;InvoiceDetailHeaderIndicator isPriceBasedLineLevelCreditMemo="yes"&gt;&lt;/InvoiceDetailHeaderIndicator&gt;&lt;InvoiceDetailLineIndicator isAccountingInLine="yes"&gt;&lt;/InvoiceDetailLineIndicator&gt;&lt;InvoicePartner&gt;&lt;Contact role="remitTo"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan supplier&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Sunnyvale&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;PostalCode&gt;94089&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact addressID="0001" role="billTo"&gt;&lt;Name xml:lang="EN"&gt;IDES US INC&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;1230 Lincoln Avenue&lt;/Street&gt;&lt;City&gt;NEW YORK&lt;/City&gt;&lt;Municipality&gt;NEW YORK&lt;/Municipality&gt;&lt;State&gt;NY&lt;/State&gt;&lt;PostalCode&gt;10019&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="from"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan supplier&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="billFrom"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan supplier&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="soldTo"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan Sahu&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Sunnyvale&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;PostalCode&gt;94089&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;DocumentReference payloadID="1490184382457-724851139703010662@10.163.4.208"&gt;&lt;/DocumentReference&gt;&lt;InvoiceIDInfo invoiceDate="2017-08-04T17:36:22+05:30" invoiceID="1900000406"&gt;&lt;/InvoiceIDInfo&gt;&lt;PaymentProposalIDInfo paymentProposalID="190000040620170010001Q8J"&gt;&lt;/PaymentProposalIDInfo&gt;&lt;InvoiceDetailShipping&gt;&lt;Contact role="shipFrom"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan supplier&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Sunnyvale&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;PostalCode&gt;94089&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;Contact addressID="3000" role="shipTo"&gt;&lt;Name xml:lang="EN"&gt;New York&lt;/Name&gt;&lt;PostalAddress&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;Street&gt;691 Broadway&lt;/Street&gt;&lt;City&gt;NEW YORK&lt;/City&gt;&lt;Municipality&gt;NEW YORK&lt;/Municipality&gt;&lt;State&gt;NY&lt;/State&gt;&lt;PostalCode&gt;10001&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoiceDetailShipping&gt;&lt;Extrinsic name="invoiceSourceDocument"&gt;ExternalPurchaseOrder&lt;/Extrinsic&gt;&lt;Extrinsic name="invoiceSubmissionMethod"&gt;cXML&lt;/Extrinsic&gt;&lt;Extrinsic name="isAutoflip"&gt;yes&lt;/Extrinsic&gt;&lt;Extrinsic name="dynamicDiscountingCreditMemo"&gt;yes&lt;/Extrinsic&gt;&lt;Extrinsic name="invoicePDF"&gt;&lt;/Extrinsic&gt;&lt;/InvoiceDetailRequestHeader&gt;&lt;InvoiceDetailOrder&gt;&lt;InvoiceDetailOrderInfo&gt;&lt;OrderReference orderID="4500028234"&gt;&lt;DocumentReference payloadID="1490178476277_1150004134@10.97.28.126"&gt;&lt;/DocumentReference&gt;&lt;/OrderReference&gt;&lt;/InvoiceDetailOrderInfo&gt;&lt;InvoiceDetailItem invoiceLineNumber="1" quantity="10"&gt;&lt;UnitOfMeasure&gt;EA&lt;/UnitOfMeasure&gt;&lt;UnitPrice&gt;&lt;Money currency="USD"&gt;-0.251000000000000&lt;/Money&gt;&lt;/UnitPrice&gt;&lt;PriceBasisQuantity conversionFactor="1" quantity="1"&gt;&lt;UnitOfMeasure&gt;EA&lt;/UnitOfMeasure&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;/PriceBasisQuantity&gt;&lt;InvoiceDetailItemReference lineNumber="10"&gt;&lt;ItemID&gt;&lt;SupplierPartID&gt;Non Catalog Item&lt;/SupplierPartID&gt;&lt;/ItemID&gt;&lt;Description xml:lang="EN"&gt;Test Demo&lt;/Description&gt;&lt;/InvoiceDetailItemReference&gt;&lt;SubtotalAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/SubtotalAmount&gt;&lt;GrossAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/GrossAmount&gt;&lt;NetAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/NetAmount&gt;&lt;Distribution&gt;&lt;Accounting name="DistributionCharge"&gt;&lt;AccountingSegment id="0000400000"&gt;&lt;Name xml:lang="en"&gt;GeneralLedger&lt;/Name&gt;&lt;Description xml:lang="en"&gt;&lt;/Description&gt;&lt;/AccountingSegment&gt;&lt;AccountingSegment id="0000001200"&gt;&lt;Name xml:lang="en"&gt;CostCenter&lt;/Name&gt;&lt;Description xml:lang="en"&gt;&lt;/Description&gt;&lt;/AccountingSegment&gt;&lt;AccountingSegment id="100.00"&gt;&lt;Name xml:lang="en"&gt;Percentage&lt;/Name&gt;&lt;Description xml:lang="en"&gt;&lt;/Description&gt;&lt;/AccountingSegment&gt;&lt;/Accounting&gt;&lt;Charge&gt;&lt;Money currency="USD"&gt;1000.00&lt;/Money&gt;&lt;/Charge&gt;&lt;/Distribution&gt;&lt;Extrinsic name="punchinItemFromCatalog"&gt;no&lt;/Extrinsic&gt;&lt;/InvoiceDetailItem&gt;&lt;/InvoiceDetailOrder&gt;&lt;InvoiceDetailSummary&gt;&lt;SubtotalAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/SubtotalAmount&gt;&lt;Tax&gt;&lt;Money currency="USD"&gt;0&lt;/Money&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;/Tax&gt;&lt;GrossAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/GrossAmount&gt;&lt;NetAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/NetAmount&gt;&lt;DueAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/DueAmount&gt;&lt;/InvoiceDetailSummary&gt;&lt;/InvoiceDetailRequest&gt;&lt;/Request&gt;&lt;/cXML&gt;</Content>
+                     </Item>
+                  </Attachment>
+               </Item>
+            </n0:CreditMemoMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Credit Memo Request for External PO</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:CreditMemoMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>1900000406</ID>
+                     <AribaNetworkPayloadID>1500893926075-8419508972716543520@10.163.3.224</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <RecipientParty>
+                        <InternalID schemeID="LI">0000100000</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Item>
+                     <VendorID>0000100000</VendorID>
+                     <ERPInvoiceNo>1900000406</ERPInvoiceNo>
+                     <ERPInvoiceDate>2017-08-04</ERPInvoiceDate>
+                     <ASNInvoiceNo>11</ASNInvoiceNo>
+                     <LogicalSystem>supplier</LogicalSystem>
+                     <DocumentDate>2017-08-04</DocumentDate>
+                     <DocumentTime>05:15:34</DocumentTime>
+                     <DocumentStatus>new</DocumentStatus>
+                     <FIInvoice>true</FIInvoice>
+                     <CompanyCode>0001</CompanyCode>
+                     <CompanyName>IDES US INC</CompanyName>
+                     <RemitToPartner>
+                        <OrganisationFormattedName>Ranjan supplier</OrganisationFormattedName>
+                     </RemitToPartner>
+                     <AribaComment/>
+                     <Attachment>
+                        <Item>
+                           <FileName>Payload.xml</FileName>
+                           <ContentType>xml</ContentType>
+                           <ContentId>PAYLOAD</ContentId>
+                           <Content>...</Content>
+                        </Item>
+                     </Attachment>
+                  </Item>
+               </n0:CreditMemoMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_CreditMemo_AddOn_0000_CreditMemo.xspec">
+      <label>Credit Memo Request for External PO LS Enabled</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/CreditMemo/CreditMemoComments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:CreditMemoMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>1900000406</ID>
+                  <AribaNetworkPayloadID>1500893926075-8419508972716543520@10.163.3.224</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <CreationDateTime>2023-04-27T15:27:24.501601+05:30</CreationDateTime>
+                  <RecipientParty>
+                     <InternalID schemeID="LS">QKDCLNT521</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <Item>
+                  <VendorID>0000100000</VendorID>
+                  <ERPInvoiceNo>1900000406</ERPInvoiceNo>
+                  <ERPInvoiceDate>2017-08-04</ERPInvoiceDate>
+                  <ASNInvoiceNo>11</ASNInvoiceNo>
+                  <LogicalSystem>supplier</LogicalSystem>
+                  <DocumentDate>2017-08-04</DocumentDate>
+                  <DocumentTime>05:15:34</DocumentTime>
+                  <DocumentStatus>new</DocumentStatus>
+                  <FIInvoice>true</FIInvoice>
+                  <CompanyCode>0001</CompanyCode>
+                  <CompanyName>IDES US INC</CompanyName>
+                  <RemitToPartner>
+                     <OrganisationFormattedName>Ranjan supplier</OrganisationFormattedName>
+                  </RemitToPartner>
+                  <AribaComment/>
+                  <Attachment>
+                     <Item>
+                        <FileName>Payload.xml</FileName>
+                        <ContentType>xml</ContentType>
+                        <ContentId>PAYLOAD</ContentId>
+                        <Content>&lt;cXML payloadID="1500893926075-8419508972716543520@10.163.3.224" timestamp="2017-07-24T03:58:46-07:00" version="1.2.034"&gt;&lt;Header&gt;&lt;From&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;AN02003056532-T&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="VendorID"&gt;&lt;Identity&gt;0000100000&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="PrivateID"&gt;&lt;Identity&gt;0000100000&lt;/Identity&gt;&lt;/Credential&gt;&lt;/From&gt;&lt;To&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;%%BUYER%%&lt;/Identity&gt;&lt;/Credential&gt;&lt;Credential domain="EndPointID"&gt;&lt;Identity&gt;CIG&lt;/Identity&gt;&lt;/Credential&gt;&lt;/To&gt;&lt;Sender&gt;&lt;Credential domain="NetworkID"&gt;&lt;Identity&gt;AN01000000001&lt;/Identity&gt;&lt;SharedSecret&gt;welcome1a&lt;/SharedSecret&gt;&lt;/Credential&gt;&lt;UserAgent&gt;SCMSupplier&lt;/UserAgent&gt;&lt;/Sender&gt;&lt;/Header&gt;&lt;Request deploymentMode="test"&gt;&lt;InvoiceDetailRequest&gt;&lt;InvoiceDetailRequestHeader invoiceDate="2017-08-04T05:15:34-07:00" invoiceID="1111" invoiceOrigin="supplier" operation="new" purpose="lineLevelCreditMemo"&gt;&lt;InvoiceDetailHeaderIndicator isPriceBasedLineLevelCreditMemo="yes"&gt;&lt;/InvoiceDetailHeaderIndicator&gt;&lt;InvoiceDetailLineIndicator isAccountingInLine="yes"&gt;&lt;/InvoiceDetailLineIndicator&gt;&lt;InvoicePartner&gt;&lt;Contact role="remitTo"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan supplier&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Sunnyvale&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;PostalCode&gt;94089&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact addressID="0001" role="billTo"&gt;&lt;Name xml:lang="EN"&gt;IDES US INC&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;1230 Lincoln Avenue&lt;/Street&gt;&lt;City&gt;NEW YORK&lt;/City&gt;&lt;Municipality&gt;NEW YORK&lt;/Municipality&gt;&lt;State&gt;NY&lt;/State&gt;&lt;PostalCode&gt;10019&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="from"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan supplier&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="billFrom"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan supplier&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;InvoicePartner&gt;&lt;Contact role="soldTo"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan Sahu&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Sunnyvale&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;PostalCode&gt;94089&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoicePartner&gt;&lt;DocumentReference payloadID="1490184382457-724851139703010662@10.163.4.208"&gt;&lt;/DocumentReference&gt;&lt;InvoiceIDInfo invoiceDate="2017-08-04T17:36:22+05:30" invoiceID="1900000406"&gt;&lt;/InvoiceIDInfo&gt;&lt;PaymentProposalIDInfo paymentProposalID="190000040620170010001Q8J"&gt;&lt;/PaymentProposalIDInfo&gt;&lt;InvoiceDetailShipping&gt;&lt;Contact role="shipFrom"&gt;&lt;Name xml:lang="en-US"&gt;Ranjan supplier&lt;/Name&gt;&lt;PostalAddress&gt;&lt;Street&gt;jUnitDummy&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;Street&gt;&lt;/Street&gt;&lt;City&gt;Sunnyvale&lt;/City&gt;&lt;State&gt;CA&lt;/State&gt;&lt;PostalCode&gt;94089&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;United States&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;Contact addressID="3000" role="shipTo"&gt;&lt;Name xml:lang="EN"&gt;New York&lt;/Name&gt;&lt;PostalAddress&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;DeliverTo&gt;&lt;/DeliverTo&gt;&lt;Street&gt;691 Broadway&lt;/Street&gt;&lt;City&gt;NEW YORK&lt;/City&gt;&lt;Municipality&gt;NEW YORK&lt;/Municipality&gt;&lt;State&gt;NY&lt;/State&gt;&lt;PostalCode&gt;10001&lt;/PostalCode&gt;&lt;Country isoCountryCode="US"&gt;&lt;/Country&gt;&lt;/PostalAddress&gt;&lt;/Contact&gt;&lt;/InvoiceDetailShipping&gt;&lt;Comments xml:lang="FR"&gt;COmments&lt;/Comments&gt;&lt;Extrinsic name="invoiceSourceDocument"&gt;ExternalPurchaseOrder&lt;/Extrinsic&gt;&lt;Extrinsic name="invoiceSubmissionMethod"&gt;cXML&lt;/Extrinsic&gt;&lt;Extrinsic name="isAutoflip"&gt;yes&lt;/Extrinsic&gt;&lt;Extrinsic name="dynamicDiscountingCreditMemo"&gt;yes&lt;/Extrinsic&gt;&lt;Extrinsic name="invoicePDF"&gt;&lt;/Extrinsic&gt;&lt;/InvoiceDetailRequestHeader&gt;&lt;InvoiceDetailOrder&gt;&lt;InvoiceDetailOrderInfo&gt;&lt;OrderReference orderID="4500028234"&gt;&lt;DocumentReference payloadID="1490178476277_1150004134@10.97.28.126"&gt;&lt;/DocumentReference&gt;&lt;/OrderReference&gt;&lt;/InvoiceDetailOrderInfo&gt;&lt;InvoiceDetailItem invoiceLineNumber="1" quantity="10"&gt;&lt;UnitOfMeasure&gt;EA&lt;/UnitOfMeasure&gt;&lt;UnitPrice&gt;&lt;Money currency="USD"&gt;-0.251000000000000&lt;/Money&gt;&lt;/UnitPrice&gt;&lt;PriceBasisQuantity conversionFactor="1" quantity="1"&gt;&lt;UnitOfMeasure&gt;EA&lt;/UnitOfMeasure&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;/PriceBasisQuantity&gt;&lt;InvoiceDetailItemReference lineNumber="10"&gt;&lt;ItemID&gt;&lt;SupplierPartID&gt;Non Catalog Item&lt;/SupplierPartID&gt;&lt;/ItemID&gt;&lt;Description xml:lang="EN"&gt;Test Demo&lt;/Description&gt;&lt;/InvoiceDetailItemReference&gt;&lt;SubtotalAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/SubtotalAmount&gt;&lt;GrossAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/GrossAmount&gt;&lt;NetAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/NetAmount&gt;&lt;Distribution&gt;&lt;Accounting name="DistributionCharge"&gt;&lt;AccountingSegment id="0000400000"&gt;&lt;Name xml:lang="en"&gt;GeneralLedger&lt;/Name&gt;&lt;Description xml:lang="en"&gt;&lt;/Description&gt;&lt;/AccountingSegment&gt;&lt;AccountingSegment id="0000001200"&gt;&lt;Name xml:lang="en"&gt;CostCenter&lt;/Name&gt;&lt;Description xml:lang="en"&gt;&lt;/Description&gt;&lt;/AccountingSegment&gt;&lt;AccountingSegment id="100.00"&gt;&lt;Name xml:lang="en"&gt;Percentage&lt;/Name&gt;&lt;Description xml:lang="en"&gt;&lt;/Description&gt;&lt;/AccountingSegment&gt;&lt;/Accounting&gt;&lt;Charge&gt;&lt;Money currency="USD"&gt;1000.00&lt;/Money&gt;&lt;/Charge&gt;&lt;/Distribution&gt;&lt;Extrinsic name="punchinItemFromCatalog"&gt;no&lt;/Extrinsic&gt;&lt;/InvoiceDetailItem&gt;&lt;/InvoiceDetailOrder&gt;&lt;InvoiceDetailSummary&gt;&lt;SubtotalAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/SubtotalAmount&gt;&lt;Tax&gt;&lt;Money currency="USD"&gt;0&lt;/Money&gt;&lt;Description xml:lang="en-US"&gt;&lt;/Description&gt;&lt;/Tax&gt;&lt;GrossAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/GrossAmount&gt;&lt;NetAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/NetAmount&gt;&lt;DueAmount&gt;&lt;Money currency="USD"&gt;-4.60&lt;/Money&gt;&lt;/DueAmount&gt;&lt;/InvoiceDetailSummary&gt;&lt;/InvoiceDetailRequest&gt;&lt;/Request&gt;&lt;/cXML&gt;</Content>
+                     </Item>
+                  </Attachment>
+               </Item>
+            </n0:CreditMemoMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>Credit Memo Request for External PO LS Enabled</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:CreditMemoMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>1900000406</ID>
+                     <AribaNetworkPayloadID>1500893926075-8419508972716543520@10.163.3.224</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <RecipientParty>
+                        <InternalID schemeID="LS">QKDCLNT521</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <Item>
+                     <VendorID>0000100000</VendorID>
+                     <ERPInvoiceNo>1900000406</ERPInvoiceNo>
+                     <ERPInvoiceDate>2017-08-04</ERPInvoiceDate>
+                     <ASNInvoiceNo>11</ASNInvoiceNo>
+                     <LogicalSystem>supplier</LogicalSystem>
+                     <DocumentDate>2017-08-04</DocumentDate>
+                     <DocumentTime>05:15:34</DocumentTime>
+                     <DocumentStatus>new</DocumentStatus>
+                     <FIInvoice>true</FIInvoice>
+                     <CompanyCode>0001</CompanyCode>
+                     <CompanyName>IDES US INC</CompanyName>
+                     <RemitToPartner>
+                        <OrganisationFormattedName>Ranjan supplier</OrganisationFormattedName>
+                     </RemitToPartner>
+                     <AribaComment/>
+                     <Attachment>
+                        <Item>
+                           <FileName>Payload.xml</FileName>
+                           <ContentType>xml</ContentType>
+                           <ContentId>PAYLOAD</ContentId>
+                           <Content>...</Content>
+                        </Item>
+                     </Attachment>
+                  </Item>
+               </n0:CreditMemoMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

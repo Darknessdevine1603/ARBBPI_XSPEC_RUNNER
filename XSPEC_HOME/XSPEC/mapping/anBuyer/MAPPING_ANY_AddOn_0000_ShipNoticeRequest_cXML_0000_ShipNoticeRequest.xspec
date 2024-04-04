@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_ShipNoticeRequest_cXML_0000_ShipNoticeRequest.xsl">
+    <x:scenario label="Ship Notice Outbound">
+
+        <x:param name="anTargetDocumentType" select="'ShipNoticeRequest'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/ShipNotice/ShipNotice.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/ShipNotice/ShipNotice.dat"
+            select="element()" label="Ship Notice Outbound"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Comments">
+
+        <x:param name="anTargetDocumentType" select="'ShipNoticeRequest'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/anBuyer/ShipNotice/ShipNoticeComments.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/anBuyer/ShipNotice/ShipNoticeComments.dat"
+            select="element()" label="Ship Notice Comments"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Multi Lines">
+
+        <x:param name="anTargetDocumentType" select="'ShipNoticeRequest'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/anBuyer/ShipNotice/ShipNoticeMultiLine.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/anBuyer/ShipNotice/ShipNoticeMultiLine.dat"
+            select="element()" label="Ship Notice Multi Lines"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice with EAN">
+        
+        <x:param name="anTargetDocumentType" select="'ShipNoticeRequest'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/anBuyer/ShipNotice/ShipNoticeEAN.xml"/>        
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/anBuyer/ShipNotice/ShipNoticeEAN.dat"
+            select="element()" label="Ship Notice with EAN"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/PIDX/MAPPING_ANY_cXML_0000_ReceiptRequest_PIDX_1.61_Receipt.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/PIDX/MAPPING_ANY_cXML_0000_ReceiptRequest_PIDX_1.61_Receipt.xsl"
+        date="2023-04-27T16:00:05.576513+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/PIDX/MAPPING_ANY_cXML_0000_ReceiptRequest_PIDX_1.61_Receipt.xspec">
+      <label>Receipt Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/PIDX/Receipts/Receipt_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <pidx:Receipt xmlns:pidx="http://www.pidx.org/schemas/v1.61" pidx:version="1.61">
+               <pidx:ReceiptProperties>
+                  <pidx:ReceiptDate>2016-05-13T08:00:00-07:00</pidx:ReceiptDate>
+                  <pidx:PurchaseOrderReferenceInformation>
+                     <pidx:OrderNumber>6400003058_new1</pidx:OrderNumber>
+                     <pidx:OrderDate>2016-05-12T12:00:00-07:00</pidx:OrderDate>
+                  </pidx:PurchaseOrderReferenceInformation>
+                  <pidx:ReferenceNumber>RIT_PIDX_Receipts</pidx:ReferenceNumber>
+                  <pidx:DocumentReference referenceType="DeliveryNote">
+                     <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                     <pidx:DocumentDate>2016-05-16T12:00:00-07:00</pidx:DocumentDate>
+                  </pidx:DocumentReference>
+                  <pidx:DocumentReference referenceType="Other">
+                     <pidx:DocumentIdentifier>H1</pidx:DocumentIdentifier>
+                     <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                        <pidx:Description>h1ext</pidx:Description>
+                     </pidx:ReferenceInformation>
+                  </pidx:DocumentReference>
+                  <pidx:DocumentReference referenceType="Other">
+                     <pidx:DocumentIdentifier>H2</pidx:DocumentIdentifier>
+                     <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                        <pidx:Description>h2ext</pidx:Description>
+                     </pidx:ReferenceInformation>
+                  </pidx:DocumentReference>
+               </pidx:ReceiptProperties>
+               <pidx:ReceiptDetails>
+                  <pidx:ReceiptLineItems>
+                     <pidx:LineItemNumber>0006405142</pidx:LineItemNumber>
+                     <pidx:DocumentReference referenceType="LineItemNumber">
+                        <pidx:DocumentIdentifier>10</pidx:DocumentIdentifier>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="PurchaseOrderNumber">
+                        <pidx:DocumentIdentifier>6400003058_new1</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>closeForReceiving</pidx:Description>
+                        </pidx:ReferenceInformation>
+                        <pidx:DocumentDate>2016-05-12T12:00:00-07:00</pidx:DocumentDate>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="DeliveryNote">
+                        <pidx:DocumentIdentifier>23</pidx:DocumentIdentifier>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="BatchNumber">
+                           <pidx:Description>SupplierBatchID</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>L1</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>l1ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>L2</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>l2ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">01BP</pidx:PartnerIdentifier>
+                        <pidx:PartnerName>BAYTOWN REFINERY:MPP:0944</pidx:PartnerName>
+                        <pidx:AddressInformation>
+                           <pidx:StreetName>SAN JACINTO AND RAILROAD</pidx:StreetName>
+                           <pidx:CityName>Baytown</pidx:CityName>
+                           <pidx:StateProvince>TX</pidx:StateProvince>
+                           <pidx:PostalCode>77520</pidx:PostalCode>
+                           <pidx:PostalCountry>
+                              <pidx:CountryCode>US</pidx:CountryCode>
+                           </pidx:PostalCountry>
+                        </pidx:AddressInformation>
+                     </pidx:PartnerInformation>
+                     <pidx:CustomerSpecificInformation informationType="ReceivedQuantity">5</pidx:CustomerSpecificInformation>
+                     <pidx:CustomerSpecificInformation informationType="UnitOfMeasurement">WA</pidx:CustomerSpecificInformation>
+                     <pidx:CustomerSpecificInformation informationType="SupplierPartID">X942067-001</pidx:CustomerSpecificInformation>
+                  </pidx:ReceiptLineItems>
+               </pidx:ReceiptDetails>
+            </pidx:Receipt>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Receipt Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <pidx:Receipt xmlns:pidx="http://www.pidx.org/schemas/v1.61" pidx:version="1.61">
+                  <pidx:ReceiptProperties>
+                     <pidx:ReceiptDate>2016-05-13T08:00:00-07:00</pidx:ReceiptDate>
+                     <pidx:PurchaseOrderReferenceInformation>
+                        <pidx:OrderNumber>6400003058_new1</pidx:OrderNumber>
+                        <pidx:OrderDate>2016-05-12T12:00:00-07:00</pidx:OrderDate>
+                     </pidx:PurchaseOrderReferenceInformation>
+                     <pidx:ReferenceNumber>RIT_PIDX_Receipts</pidx:ReferenceNumber>
+                     <pidx:DocumentReference referenceType="DeliveryNote">
+                        <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                        <pidx:DocumentDate>2016-05-16T12:00:00-07:00</pidx:DocumentDate>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>H1</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>h1ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>H2</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>h2ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                  </pidx:ReceiptProperties>
+                  <pidx:ReceiptDetails>
+                     <pidx:ReceiptLineItems>
+                        <pidx:LineItemNumber>0006405142</pidx:LineItemNumber>
+                        <pidx:DocumentReference referenceType="LineItemNumber">
+                           <pidx:DocumentIdentifier>10</pidx:DocumentIdentifier>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="PurchaseOrderNumber">
+                           <pidx:DocumentIdentifier>6400003058_new1</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>closeForReceiving</pidx:Description>
+                           </pidx:ReferenceInformation>
+                           <pidx:DocumentDate>2016-05-12T12:00:00-07:00</pidx:DocumentDate>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="DeliveryNote">
+                           <pidx:DocumentIdentifier>23</pidx:DocumentIdentifier>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="BatchNumber">
+                              <pidx:Description>SupplierBatchID</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>L1</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>l1ext</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>L2</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>l2ext</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:PartnerInformation partnerRoleIndicator="...">
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">01BP</pidx:PartnerIdentifier>
+                           <pidx:PartnerName>BAYTOWN REFINERY:MPP:0944</pidx:PartnerName>
+                           <pidx:AddressInformation>
+                              <pidx:StreetName>SAN JACINTO AND RAILROAD</pidx:StreetName>
+                              <pidx:CityName>Baytown</pidx:CityName>
+                              <pidx:StateProvince>TX</pidx:StateProvince>
+                              <pidx:PostalCode>77520</pidx:PostalCode>
+                              <pidx:PostalCountry>
+                                 <pidx:CountryCode>US</pidx:CountryCode>
+                              </pidx:PostalCountry>
+                           </pidx:AddressInformation>
+                        </pidx:PartnerInformation>
+                        <pidx:CustomerSpecificInformation informationType="ReceivedQuantity">5</pidx:CustomerSpecificInformation>
+                        <pidx:CustomerSpecificInformation informationType="UnitOfMeasurement">WA</pidx:CustomerSpecificInformation>
+                        <pidx:CustomerSpecificInformation informationType="SupplierPartID">X942067-001</pidx:CustomerSpecificInformation>
+                     </pidx:ReceiptLineItems>
+                  </pidx:ReceiptDetails>
+               </pidx:Receipt>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/PIDX/MAPPING_ANY_cXML_0000_ReceiptRequest_PIDX_1.61_Receipt.xspec">
+      <label>Receipt Request with Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/PIDX/Receipts/ReceiptComments_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <pidx:Receipt xmlns:pidx="http://www.pidx.org/schemas/v1.61" pidx:version="1.61">
+               <pidx:ReceiptProperties>
+                  <pidx:ReceiptDate>2016-05-13T08:00:00-07:00</pidx:ReceiptDate>
+                  <pidx:PurchaseOrderReferenceInformation>
+                     <pidx:OrderNumber>6400003058_new1</pidx:OrderNumber>
+                     <pidx:OrderDate>2016-05-12T12:00:00-07:00</pidx:OrderDate>
+                  </pidx:PurchaseOrderReferenceInformation>
+                  <pidx:ReferenceNumber>RIT_PIDX_Receipts</pidx:ReferenceNumber>
+                  <pidx:DocumentReference referenceType="DeliveryNote">
+                     <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                     <pidx:DocumentDate>2016-05-16T12:00:00-07:00</pidx:DocumentDate>
+                  </pidx:DocumentReference>
+                  <pidx:DocumentReference referenceType="Other">
+                     <pidx:DocumentIdentifier>H1</pidx:DocumentIdentifier>
+                     <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                        <pidx:Description>h1ext</pidx:Description>
+                     </pidx:ReferenceInformation>
+                  </pidx:DocumentReference>
+                  <pidx:DocumentReference referenceType="Other">
+                     <pidx:DocumentIdentifier>H2</pidx:DocumentIdentifier>
+                     <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                        <pidx:Description>h2ext</pidx:Description>
+                     </pidx:ReferenceInformation>
+                  </pidx:DocumentReference>
+                  <pidx:Comment>ReceiptRequestHeader operationReceiptRequestHeader operationReceiptRequestHeader operationReceiptRequestHeader operation</pidx:Comment>
+               </pidx:ReceiptProperties>
+               <pidx:ReceiptDetails>
+                  <pidx:ReceiptLineItems>
+                     <pidx:LineItemNumber>0006405142</pidx:LineItemNumber>
+                     <pidx:DocumentReference referenceType="LineItemNumber">
+                        <pidx:DocumentIdentifier>10</pidx:DocumentIdentifier>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="PurchaseOrderNumber">
+                        <pidx:DocumentIdentifier>6400003058_new1</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>closeForReceiving</pidx:Description>
+                        </pidx:ReferenceInformation>
+                        <pidx:DocumentDate>2016-05-12T12:00:00-07:00</pidx:DocumentDate>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="ContractNumber">
+                        <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>closeForReceiving</pidx:Description>
+                        </pidx:ReferenceInformation>
+                        <pidx:DocumentDate>2016-05-14T12:00:00-07:00</pidx:DocumentDate>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="DeliveryNote">
+                        <pidx:DocumentIdentifier>23</pidx:DocumentIdentifier>
+                        <pidx:DocumentDate>2016-05-12T12:00:00-07:00</pidx:DocumentDate>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="BatchNumber">
+                           <pidx:Description>SupplierBatchID</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>L1</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>l1ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>L2</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>l2ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">01BP</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200575</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005757092-T</pidx:PartnerIdentifier>
+                        <pidx:PartnerName>BAYTOWN REFINERY:MPP:0944</pidx:PartnerName>
+                        <pidx:AddressInformation>
+                           <pidx:StreetName>SAN JACINTO AND RAILROAD</pidx:StreetName>
+                           <pidx:CityName>Baytown</pidx:CityName>
+                           <pidx:StateProvince>TX</pidx:StateProvince>
+                           <pidx:PostalCode>77520</pidx:PostalCode>
+                           <pidx:PostalCountry>
+                              <pidx:CountryCode>US</pidx:CountryCode>
+                           </pidx:PostalCountry>
+                        </pidx:AddressInformation>
+                     </pidx:PartnerInformation>
+                     <pidx:CustomerSpecificInformation informationType="ReceivedQuantity">5</pidx:CustomerSpecificInformation>
+                     <pidx:CustomerSpecificInformation informationType="UnitOfMeasurement">WA</pidx:CustomerSpecificInformation>
+                     <pidx:CustomerSpecificInformation informationType="SupplierPartID">X942067-001</pidx:CustomerSpecificInformation>
+                     <pidx:Comment>ReceiptRequestHeader operationReceiptRequestHeader operationReceiptRequestHeader operationReceiptRequestHeader operation</pidx:Comment>
+                  </pidx:ReceiptLineItems>
+                  <pidx:ReceiptLineItems>
+                     <pidx:LineItemNumber>0006405153</pidx:LineItemNumber>
+                     <pidx:DocumentReference referenceType="LineItemNumber">
+                        <pidx:DocumentIdentifier>20</pidx:DocumentIdentifier>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="PurchaseOrderNumber">
+                        <pidx:DocumentIdentifier>6400003058_new1</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>closeForReceiving</pidx:Description>
+                        </pidx:ReferenceInformation>
+                        <pidx:DocumentDate>2016-05-12T12:00:00-07:00</pidx:DocumentDate>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="ContractNumber">
+                        <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>closeForReceiving</pidx:Description>
+                        </pidx:ReferenceInformation>
+                        <pidx:DocumentDate>2016-05-14T12:00:00-07:00</pidx:DocumentDate>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="DeliveryNote">
+                        <pidx:DocumentIdentifier>23</pidx:DocumentIdentifier>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="BatchNumber">
+                           <pidx:Description>SupplierBatchID</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>L1</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>l1ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>L2</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>l2ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">Seller</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200575</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005757092-T</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="Other" definitionOfOther="domain">identifier</pidx:PartnerIdentifier>
+                        <pidx:PartnerName>BAYTOWN REFINERY:MPP:0944</pidx:PartnerName>
+                        <pidx:AddressInformation>
+                           <pidx:StreetName>SAN JACINTO AND RAILROAD</pidx:StreetName>
+                           <pidx:CityName>Baytown</pidx:CityName>
+                           <pidx:StateProvince>TX</pidx:StateProvince>
+                           <pidx:PostalCode>77520</pidx:PostalCode>
+                           <pidx:PostalCountry>
+                              <pidx:CountryCode>US</pidx:CountryCode>
+                           </pidx:PostalCountry>
+                        </pidx:AddressInformation>
+                        <pidx:ContactInformation contactInformationIndicator="OrderContact">
+                           <pidx:ContactName>DeliverTo</pidx:ContactName>
+                           <pidx:Telephone telephoneIndicator="Voice">
+                              <pidx:PhoneNumber>1234567</pidx:PhoneNumber>
+                              <pidx:PhoneNumberExtension>13</pidx:PhoneNumberExtension>
+                              <pidx:TelecomCountryCode>1</pidx:TelecomCountryCode>
+                              <pidx:TelecomAreaCode>314</pidx:TelecomAreaCode>
+                           </pidx:Telephone>
+                           <pidx:Telephone telephoneIndicator="Fax">
+                              <pidx:PhoneNumber>1234567</pidx:PhoneNumber>
+                              <pidx:PhoneNumberExtension>13</pidx:PhoneNumberExtension>
+                              <pidx:TelecomCountryCode>1</pidx:TelecomCountryCode>
+                              <pidx:TelecomAreaCode>314</pidx:TelecomAreaCode>
+                           </pidx:Telephone>
+                           <pidx:EmailAddress>Email@sap.com</pidx:EmailAddress>
+                        </pidx:ContactInformation>
+                        <pidx:URL>www.test.com</pidx:URL>
+                     </pidx:PartnerInformation>
+                     <pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">SoldTo</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200575</pidx:PartnerIdentifier>
+                        <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005757092-T</pidx:PartnerIdentifier>
+                        <pidx:PartnerName>BAYTOWN REFINERY:MPP:0944</pidx:PartnerName>
+                        <pidx:AddressInformation>
+                           <pidx:StreetName>SAN JACINTO AND RAILROAD</pidx:StreetName>
+                           <pidx:CityName>Baytown</pidx:CityName>
+                           <pidx:StateProvince>TX</pidx:StateProvince>
+                           <pidx:PostalCode>77520</pidx:PostalCode>
+                           <pidx:PostalCountry>
+                              <pidx:CountryCode>US</pidx:CountryCode>
+                           </pidx:PostalCountry>
+                        </pidx:AddressInformation>
+                     </pidx:PartnerInformation>
+                     <pidx:CustomerSpecificInformation informationType="ReceivedQuantity">10</pidx:CustomerSpecificInformation>
+                     <pidx:CustomerSpecificInformation informationType="UnitOfMeasurement">WA</pidx:CustomerSpecificInformation>
+                     <pidx:CustomerSpecificInformation informationType="SupplierPartID">X942067-001</pidx:CustomerSpecificInformation>
+                  </pidx:ReceiptLineItems>
+               </pidx:ReceiptDetails>
+            </pidx:Receipt>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Receipt Request with Comments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <pidx:Receipt xmlns:pidx="http://www.pidx.org/schemas/v1.61" pidx:version="1.61">
+                  <pidx:ReceiptProperties>
+                     <pidx:ReceiptDate>2016-05-13T08:00:00-07:00</pidx:ReceiptDate>
+                     <pidx:PurchaseOrderReferenceInformation>
+                        <pidx:OrderNumber>6400003058_new1</pidx:OrderNumber>
+                        <pidx:OrderDate>2016-05-12T12:00:00-07:00</pidx:OrderDate>
+                     </pidx:PurchaseOrderReferenceInformation>
+                     <pidx:ReferenceNumber>RIT_PIDX_Receipts</pidx:ReferenceNumber>
+                     <pidx:DocumentReference referenceType="DeliveryNote">
+                        <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                        <pidx:DocumentDate>2016-05-16T12:00:00-07:00</pidx:DocumentDate>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>H1</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>h1ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:DocumentReference referenceType="Other">
+                        <pidx:DocumentIdentifier>H2</pidx:DocumentIdentifier>
+                        <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                           <pidx:Description>h2ext</pidx:Description>
+                        </pidx:ReferenceInformation>
+                     </pidx:DocumentReference>
+                     <pidx:Comment>ReceiptRequestHeader operationReceiptRequestHeader operationReceiptRequestHeader operationReceiptRequestHeader operation</pidx:Comment>
+                  </pidx:ReceiptProperties>
+                  <pidx:ReceiptDetails>
+                     <pidx:ReceiptLineItems>
+                        <pidx:LineItemNumber>0006405142</pidx:LineItemNumber>
+                        <pidx:DocumentReference referenceType="LineItemNumber">
+                           <pidx:DocumentIdentifier>10</pidx:DocumentIdentifier>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="PurchaseOrderNumber">
+                           <pidx:DocumentIdentifier>6400003058_new1</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>closeForReceiving</pidx:Description>
+                           </pidx:ReferenceInformation>
+                           <pidx:DocumentDate>2016-05-12T12:00:00-07:00</pidx:DocumentDate>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="ContractNumber">
+                           <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>closeForReceiving</pidx:Description>
+                           </pidx:ReferenceInformation>
+                           <pidx:DocumentDate>2016-05-14T12:00:00-07:00</pidx:DocumentDate>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="DeliveryNote">
+                           <pidx:DocumentIdentifier>23</pidx:DocumentIdentifier>
+                           <pidx:DocumentDate>2016-05-12T12:00:00-07:00</pidx:DocumentDate>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="BatchNumber">
+                              <pidx:Description>SupplierBatchID</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>L1</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>l1ext</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>L2</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>l2ext</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">01BP</pidx:PartnerIdentifier>
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200575</pidx:PartnerIdentifier>
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005757092-T</pidx:PartnerIdentifier>
+                           <pidx:PartnerName>BAYTOWN REFINERY:MPP:0944</pidx:PartnerName>
+                           <pidx:AddressInformation>
+                              <pidx:StreetName>SAN JACINTO AND RAILROAD</pidx:StreetName>
+                              <pidx:CityName>Baytown</pidx:CityName>
+                              <pidx:StateProvince>TX</pidx:StateProvince>
+                              <pidx:PostalCode>77520</pidx:PostalCode>
+                              <pidx:PostalCountry>
+                                 <pidx:CountryCode>US</pidx:CountryCode>
+                              </pidx:PostalCountry>
+                           </pidx:AddressInformation>
+                        </pidx:PartnerInformation>
+                        <pidx:CustomerSpecificInformation informationType="ReceivedQuantity">5</pidx:CustomerSpecificInformation>
+                        <pidx:CustomerSpecificInformation informationType="UnitOfMeasurement">WA</pidx:CustomerSpecificInformation>
+                        <pidx:CustomerSpecificInformation informationType="SupplierPartID">X942067-001</pidx:CustomerSpecificInformation>
+                        <pidx:Comment>ReceiptRequestHeader operationReceiptRequestHeader operationReceiptRequestHeader operationReceiptRequestHeader operation</pidx:Comment>
+                     </pidx:ReceiptLineItems>
+                     <pidx:ReceiptLineItems>
+                        <pidx:LineItemNumber>0006405153</pidx:LineItemNumber>
+                        <pidx:DocumentReference referenceType="LineItemNumber">
+                           <pidx:DocumentIdentifier>20</pidx:DocumentIdentifier>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="PurchaseOrderNumber">
+                           <pidx:DocumentIdentifier>6400003058_new1</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>closeForReceiving</pidx:Description>
+                           </pidx:ReferenceInformation>
+                           <pidx:DocumentDate>2016-05-12T12:00:00-07:00</pidx:DocumentDate>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="ContractNumber">
+                           <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>closeForReceiving</pidx:Description>
+                           </pidx:ReferenceInformation>
+                           <pidx:DocumentDate>2016-05-14T12:00:00-07:00</pidx:DocumentDate>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="DeliveryNote">
+                           <pidx:DocumentIdentifier>23</pidx:DocumentIdentifier>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>123</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="BatchNumber">
+                              <pidx:Description>SupplierBatchID</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>L1</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>l1ext</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:DocumentReference referenceType="Other">
+                           <pidx:DocumentIdentifier>L2</pidx:DocumentIdentifier>
+                           <pidx:ReferenceInformation referenceInformationIndicator="Other">
+                              <pidx:Description>l2ext</pidx:Description>
+                           </pidx:ReferenceInformation>
+                        </pidx:DocumentReference>
+                        <pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">Seller</pidx:PartnerIdentifier>
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200575</pidx:PartnerIdentifier>
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005757092-T</pidx:PartnerIdentifier>
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="Other" definitionOfOther="domain">identifier</pidx:PartnerIdentifier>
+                           <pidx:PartnerName>BAYTOWN REFINERY:MPP:0944</pidx:PartnerName>
+                           <pidx:AddressInformation>
+                              <pidx:StreetName>SAN JACINTO AND RAILROAD</pidx:StreetName>
+                              <pidx:CityName>Baytown</pidx:CityName>
+                              <pidx:StateProvince>TX</pidx:StateProvince>
+                              <pidx:PostalCode>77520</pidx:PostalCode>
+                              <pidx:PostalCountry>
+                                 <pidx:CountryCode>US</pidx:CountryCode>
+                              </pidx:PostalCountry>
+                           </pidx:AddressInformation>
+                           <pidx:ContactInformation contactInformationIndicator="OrderContact">
+                              <pidx:ContactName>DeliverTo</pidx:ContactName>
+                              <pidx:Telephone telephoneIndicator="Voice">
+                                 <pidx:PhoneNumber>1234567</pidx:PhoneNumber>
+                                 <pidx:PhoneNumberExtension>13</pidx:PhoneNumberExtension>
+                                 <pidx:TelecomCountryCode>1</pidx:TelecomCountryCode>
+                                 <pidx:TelecomAreaCode>314</pidx:TelecomAreaCode>
+                              </pidx:Telephone>
+                              <pidx:Telephone telephoneIndicator="Fax">
+                                 <pidx:PhoneNumber>1234567</pidx:PhoneNumber>
+                                 <pidx:PhoneNumberExtension>13</pidx:PhoneNumberExtension>
+                                 <pidx:TelecomCountryCode>1</pidx:TelecomCountryCode>
+                                 <pidx:TelecomAreaCode>314</pidx:TelecomAreaCode>
+                              </pidx:Telephone>
+                              <pidx:EmailAddress>Email@sap.com</pidx:EmailAddress>
+                           </pidx:ContactInformation>
+                           <pidx:URL>www.test.com</pidx:URL>
+                        </pidx:PartnerInformation>
+                        <pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">SoldTo</pidx:PartnerIdentifier>
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">AN0200575</pidx:PartnerIdentifier>
+                           <pidx:PartnerIdentifier partnerIdentifierIndicator="DUNS+4Number">AN02005757092-T</pidx:PartnerIdentifier>
+                           <pidx:PartnerName>BAYTOWN REFINERY:MPP:0944</pidx:PartnerName>
+                           <pidx:AddressInformation>
+                              <pidx:StreetName>SAN JACINTO AND RAILROAD</pidx:StreetName>
+                              <pidx:CityName>Baytown</pidx:CityName>
+                              <pidx:StateProvince>TX</pidx:StateProvince>
+                              <pidx:PostalCode>77520</pidx:PostalCode>
+                              <pidx:PostalCountry>
+                                 <pidx:CountryCode>US</pidx:CountryCode>
+                              </pidx:PostalCountry>
+                           </pidx:AddressInformation>
+                        </pidx:PartnerInformation>
+                        <pidx:CustomerSpecificInformation informationType="ReceivedQuantity">10</pidx:CustomerSpecificInformation>
+                        <pidx:CustomerSpecificInformation informationType="UnitOfMeasurement">WA</pidx:CustomerSpecificInformation>
+                        <pidx:CustomerSpecificInformation informationType="SupplierPartID">X942067-001</pidx:CustomerSpecificInformation>
+                     </pidx:ReceiptLineItems>
+                  </pidx:ReceiptDetails>
+               </pidx:Receipt>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

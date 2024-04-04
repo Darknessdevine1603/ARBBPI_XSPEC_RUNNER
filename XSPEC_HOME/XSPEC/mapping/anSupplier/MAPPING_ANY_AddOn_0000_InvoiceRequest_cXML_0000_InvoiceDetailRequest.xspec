@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anSupplier/MAPPING_ANY_AddOn_0000_InvoiceRequest_cXML_0000_InvoiceDetailRequest.xsl">
+    <x:scenario label="Billing Document">
+
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anTargetDocumentType" />
+        <x:param name="anBuyerANID" />
+        <x:param name="anEnvName"/>        
+        <!--        Headers for Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/Invoice/BillingDocument.xml"/>
+        
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/Invoice/BillingDocument.dat"
+            select="element()" label="Billing Document"/>
+    </x:scenario>
+    
+    <x:scenario label="Billing Document with Bank Account">
+        
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anTargetDocumentType" />
+        <x:param name="anBuyerANID" />
+        <x:param name="anEnvName" select="'PROD'"/>        
+        <!--       Headers for Parameter Cross Reference Files  -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/Invoice/BillingDocumentwithBank.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/Invoice/BillingDocumentwithBank.dat"
+            select="element()" label="Billing Document with Bank Account"/>
+    </x:scenario>
+    <x:scenario label="Billing Document with no Purchase Order Reference">
+        
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" />
+        <x:param name="anTargetDocumentType" />
+        <x:param name="anBuyerANID" />
+        <x:param name="anEnvName" select="'PROD'"/>        
+        <!--       Headers for Parameter Cross Reference Files  -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/Invoice/BillingDocumentwithNoPO.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/Invoice/BillingDocumentwithNoPO.dat"
+            select="element()" label="Billing Document with no Purchase Order Reference"/>
+    </x:scenario>
+   
+</x:description>

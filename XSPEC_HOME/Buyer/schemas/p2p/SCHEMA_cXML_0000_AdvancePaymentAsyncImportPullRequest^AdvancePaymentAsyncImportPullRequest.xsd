@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="urn:Ariba:Buyer:vsap" xmlns:typens="urn:Ariba:Buyer:vsap">
+    <xsd:element name="Headers">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="AdvancePaymentAsyncImportPullRequest">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0" name="AdvancePayment_AdvancePaymentIDImport_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:AdvancePayment_AdvancePaymentIDImport"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AdvancePaymentError_AdvancePaymentErrorImport_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:AdvancePaymentError_AdvancePaymentErrorImport"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="AdvancePaymentAsyncImportPullReply">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="1" name="status" type="xsd:string"/>
+            </xsd:all>
+            <xsd:anyAttribute namespace="##local" processContents="lax"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="AdvancePayment_AdvancePaymentIDImport">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.payment.core.AdvancePayment, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="ERPPostingDate" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>The date of posting a document in ERP.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.util.core.Date, group name
+                        AdvancePaymentIDImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ERPRequestID" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The unique identifier of the payment request created in the
+                        ERP for the advance payment</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentIDImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="FiscalYear" nillable="true" type="xsd:integer">
+                <xsd:annotation>
+                    <xsd:documentation>The financial year of the advance payment
+                        transaction.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.Integer, group name
+                        AdvancePaymentIDImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="UniqueName" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The unique identifier of the advance payment
+                        document</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentIDImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomBoolean"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:boolean">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomDate"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:dateTime">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomInteger"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:integer">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomMoney"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:complexContent>
+                                    <xsd:extension base="typens:Money_Reference">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:complexContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomString"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="AdvancePaymentError_AdvancePaymentErrorImport">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.payment.core.AdvancePaymentError, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="1" name="Date" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>The date of creation of the error record.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.util.core.Date, group name
+                        AdvancePaymentErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorMessage" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The description of the error.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.base.core.MultiLingualString, group name
+                        AdvancePaymentErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorNumber" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines the error number.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPField" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines a field name having an error.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPId" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines an error message ID.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="Id" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The unique identifier of the advance payment
+                        document.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="NumInSet" nillable="true" type="xsd:integer">
+                <xsd:annotation>
+                    <xsd:documentation>The number of error records in a batch.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.Integer, group name
+                        AdvancePaymentErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="Type" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The type of the transaction for which the error was
+                        generated</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="Money_Reference">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.basic.core.Money, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="Amount" nillable="true" type="xsd:decimal">
+                <xsd:annotation>
+                    <xsd:documentation>Monetary amount.</xsd:documentation>
+                    <xsd:documentation>Class name java.math.BigDecimal, group name Reference, variant vsap.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="AmountInReportingCurrency" nillable="true"                type="xsd:decimal">
+                <xsd:annotation>
+                    <xsd:documentation>Amount converted to the reporting currency of the system.</xsd:documentation>
+                    <xsd:documentation>Class name java.math.BigDecimal, group name Reference, variant vsap.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ApproxAmountInBaseCurrency" nillable="true"                type="xsd:decimal">
+                <xsd:annotation>
+                    <xsd:documentation>Amount converted into the base currency of the system.</xsd:documentation>
+                    <xsd:documentation>Class name java.math.BigDecimal, group name Reference, variant vsap.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ConversionDate" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>Conversion date when the amounts were computed in the ApproxAmountInBaseCurrency and the AmountInReportingCurrency fields.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.util.core.Date, group name Reference, variant vsap.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="Currency">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Transaction currency of the amount.</xsd:documentation>
+                        <xsd:documentation>Class name ariba.basic.core.Currency, group name Reference, variant vsap.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="UniqueName" nillable="true"                            type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>Unique three-letter identifier for the currency. For example, USD, DEM, GBP.</xsd:documentation>
+                                <xsd:documentation>Class name java.lang.String, group name Reference, variant vsap.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+</xsd:schema>
+

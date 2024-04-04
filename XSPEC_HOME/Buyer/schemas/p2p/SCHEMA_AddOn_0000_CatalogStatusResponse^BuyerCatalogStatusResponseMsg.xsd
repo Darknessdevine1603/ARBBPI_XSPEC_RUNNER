@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://sap.com/xi/ARBCIG1" xmlns="http://sap.com/xi/ARBCIG1"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="BuyerCatalogStatusResponseMsg" type="BuyerCatalogStatusResponse"/>
+    <xsd:simpleType name="BusinessSystemID">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="60"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="BusinessTransactionDocumentType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="LANGUAGEINDEPENDENT_SHORT_Name">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="0"/>
+            <xsd:maxLength value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DocumentStatus">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">DT</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="Comment">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="NOSC_BusinessTransactionDocumentID">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="35"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="BuyerCatalogStatusResponse">
+        <xsd:sequence>
+            <xsd:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="SystemID" type="BusinessSystemID" minOccurs="0"/>
+                        <xsd:element name="RealmID" type="BusinessSystemID" minOccurs="0"/>
+                        <xsd:element name="DocumentType" type="BusinessTransactionDocumentType"
+                            minOccurs="0"/>
+                        <xsd:element name="SubscriptionName" type="Comment" minOccurs="0"/>
+                        <xsd:element name="LoadMode" type="LANGUAGEINDEPENDENT_SHORT_Name"
+                            minOccurs="0"/>
+                        <xsd:element name="BatchID" type="NOSC_BusinessTransactionDocumentID"
+                            minOccurs="0"/>
+                        <xsd:element name="FileID" type="NOSC_BusinessTransactionDocumentID"
+                            minOccurs="0"/>
+                        <xsd:element name="FileName" type="Comment" minOccurs="0"/>
+                        <xsd:element name="UploadStatus" type="DocumentStatus" minOccurs="0"/>
+                        <xsd:element name="UploadComments" type="Comment" minOccurs="0"/>
+                        <xsd:element name="AribaExtension" type="AribaExtension" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AribaExtension">
+        <xsd:attribute name="objectName" type="xsd:string"/>
+        <xsd:attribute name="objectKey" type="xsd:string"/>
+        <xsd:attribute name="fieldName" type="xsd:string"/>
+        <xsd:attribute name="fieldValue" type="xsd:string"/>
+    </xsd:complexType>
+</xsd:schema>

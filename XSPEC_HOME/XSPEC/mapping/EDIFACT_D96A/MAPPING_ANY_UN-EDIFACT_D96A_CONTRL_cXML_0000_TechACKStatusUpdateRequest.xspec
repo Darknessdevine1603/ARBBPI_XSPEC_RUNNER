@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_UN-EDIFACT_D96A_CONTRL_cXML_0000_TechACKStatusUpdateRequest.xsl">
+    <x:scenario label="Status Update Request Received">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anPayloadID"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderID" select="'AN02004579340-T'"/>
+        <x:param name="anReceiverID" select="'AN02004579339-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anOrginalPayloadID"  select="'Some Ramdomly Generated Payload ID'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/StatusUpdate/StatusUpdateRequestReceived_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/StatusUpdate/StatusUpdateRequestReceived_AM.dat"
+            select="element()" label="Status Update Request Received"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request Failed">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anPayloadID"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderID" select="'AN02004579340-T'"/>
+        <x:param name="anReceiverID" select="'AN02004579339-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anOrginalPayloadID"  select="'Some Ramdomly Generated Payload ID'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/StatusUpdate/StatusUpdateRequestFailed_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/StatusUpdate/StatusUpdateRequestFailed_AM.dat"
+            select="element()" label="Status Update Request Failed"/>
+    </x:scenario>
+</x:description>

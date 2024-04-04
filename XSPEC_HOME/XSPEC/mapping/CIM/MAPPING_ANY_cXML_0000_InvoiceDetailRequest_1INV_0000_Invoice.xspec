@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/CIM/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_1INV_0000_Invoice.xsl">
+    <x:scenario label="Scenario for Service PO Invoice">
+        <x:context href="../../payloads/base/inbound/CIM/InvoiceDetailRequest/InvoiceDetailRequest_Srv_PO_INV_BM.xml"/>
+        <x:expect href="../../payloads/target/inbound/CIM/InvoiceDetailrequest/InvoiceDetailRequest_Srv_PO_INV_AM.xml" 
+                  label="Scenario for Service PO Invoice" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for Service PO Invoice with Header level tax">
+        <x:context href="../../payloads/base/inbound/CIM/InvoiceDetailRequest/InvoiceDetailRequest_Srv_PO_INV_HLT_BM.xml"/>
+        <x:expect href="../../payloads/target/inbound/CIM/InvoiceDetailrequest/InvoiceDetailRequest_Srv_PO_HTL_INV_AM.xml" 
+            label="Scenario for Service PO Invoice Header level tax" select="element()"/>
+    </x:scenario>   
+    <x:scenario label="Scenario for PO based Invoice with line item tax and charges">
+        <x:context href="../../payloads/base/inbound/CIM/InvoiceDetailRequest/InvoiceDetailRequest_PO_INV_TLC_BM.xml"/>
+        <x:expect href="../../payloads/target/inbound/CIM/InvoiceDetailrequest/InvoiceDetailRequest_PO_INV_TLC_AM.xml" 
+            label="Scenario for PO based Invoice with line item tax and charges" select="element()"/>
+    </x:scenario> 
+    <x:scenario label="Scenario for PO based Invoice with header level tax and charges">
+        <x:context href="../../payloads/base/inbound/CIM/InvoiceDetailRequest/InvoiceDetailRequest_PO_INV_HTLC_BM.xml"/>
+        <x:expect href="../../payloads/target/inbound/CIM/InvoiceDetailrequest/InvoiceDetailRequest_PO_INV_HTLC_AM.xml" 
+            label="Scenario for PO based Invoice with header level tax and charges" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for Multi PO based Invoice">
+        <x:context href="../../payloads/base/inbound/CIM/InvoiceDetailRequest/InvoiceDetailRequest_Multi_PO_INV_BM.xml"/>
+        <x:expect href="../../payloads/target/inbound/CIM/InvoiceDetailrequest/InvoiceDetailRequest_Multi_PO_INV_AM.xml" 
+            label="Scenario for Multi PO based Invoice" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for Credit Memo Service Invoice">
+        <x:context href="../../payloads/base/inbound/CIM/InvoiceDetailRequest/InvoiceDetailRequest_CreditMemo_srv_INV_BM.xml"/>
+        <x:expect href="../../payloads/target/inbound/CIM/InvoiceDetailrequest/InvoiceDetailRequest_CreditMemo_Srv_INV_AM.xml" 
+            label="Scenario for Credit Memo Service Invoice" select="element()"/>
+    </x:scenario>      
+</x:description>

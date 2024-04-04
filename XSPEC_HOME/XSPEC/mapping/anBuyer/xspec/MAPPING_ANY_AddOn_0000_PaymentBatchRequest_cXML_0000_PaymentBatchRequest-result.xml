@@ -1,0 +1,2728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentBatchRequest_cXML_0000_PaymentBatchRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentBatchRequest_cXML_0000_PaymentBatchRequest.xsl"
+        date="2023-04-27T15:28:58.624097+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentBatchRequest_cXML_0000_PaymentBatchRequest.xspec">
+      <label>Payment Batch Request 1</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PaymentBatch/PaymentBatch1.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:28:59.02565+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent/>
+                        </Sender>
+                     </Header>
+                     <Request>
+                        <PaymentBatchRequest>
+                           <PaymentBatchRequestHeader batchID="20190529AP0181000926119"
+                                                      paymentDate="2019-05-29T12:00:00+05:30"
+                                                      creationDate="2019-05-29T16:27:46.245Z+05:30">
+                              <PaymentMethod type="other">
+                                 <Description xml:lang="en">
+                                    <ShortName>aribapay</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                           </PaymentBatchRequestHeader>
+                           <PaymentBatchSummary>
+                              <ControlSum>100.00</ControlSum>
+                              <NumberOfPayments>1</NumberOfPayments>
+                           </PaymentBatchSummary>
+                           <PaymentRemittanceRequest>
+                              <PaymentRemittanceRequestHeader paymentRemittanceID="4310000095"
+                                                              paymentDate="2019-05-29T12:00:00+05:30"
+                                                              status="new"
+                                                              companyCode="2000">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>aribapay</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                                 <PaymentPartner>
+                                    <Contact role="payer" addressID="2000">
+                                       <Name xml:lang="en">LOUISIANA-PACIFIC CANADA</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>LOUISIANA-PACIFIC CANADA</DeliverTo>
+                                          <Street>1012 Chemin du Park Industriel</Street>
+                                          <City>BOIS FRANC</City>
+                                          <State>QC</State>
+                                          <PostalCode>J9E 3A9</PostalCode>
+                                          <Country isoCountryCode="CA">CA</Country>
+                                       </PostalAddress>
+                                       <Email>ctrujillo@thehackettgroup.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="US">US</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+16159865600</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                    </Contact>
+                                    <IdReference identifier="000101361518" domain="bankAccountID"/>
+                                    <AccountCurrency code="CAD"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="payee">
+                                       <Name xml:lang="en">LP AribaPay Test Supplier</Name>
+                                       <PostalAddress>
+                                          <DeliverTo/>
+                                          <Street>9901 Main St</Street>
+                                          <City>Fremont</City>
+                                          <State>CA</State>
+                                          <PostalCode>94539</PostalCode>
+                                          <Country isoCountryCode="US">US</Country>
+                                       </PostalAddress>
+                                       <Email>ctrujillo@thehackettgroup.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="1001262" domain="bankAccountID"/>
+                                    <IdReference identifier="0000210101" domain="VendorID"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="originatingBank">
+                                       <Name xml:lang="en">Royal Bank</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>Royal Bank</DeliverTo>
+                                          <Street>1055 W. Georgia St. 34th Flr</Street>
+                                          <City>Vancouver</City>
+                                          <State>BC</State>
+                                          <PostalCode>V6E 3N9</PostalCode>
+                                          <Country isoCountryCode="CA">CA</Country>
+                                       </PostalAddress>
+                                       <Email>ctrujillo@thehackettgroup.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="21000021" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="ROYCCAT2" domain="swiftID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="receivingBank">
+                                       <Name xml:lang="en">ROYAL BANK OF CANADA</Name>
+                                    </Contact>
+                                    <IdReference identifier="000301043" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                              </PaymentRemittanceRequestHeader>
+                              <PaymentRemittanceSummary>
+                                 <NetAmount>
+                                    <Money currency="CAD">100.00</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="CAD">100.00</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="CAD">0.00</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="CAD">0.00</Money>
+                                 </AdjustmentAmount>
+                              </PaymentRemittanceSummary>
+                              <RemittanceDetail lineNumber="1"
+                                                referenceDocumentNumber="5108511607"
+                                                paymentProposalID="510851160720190012000ECQ">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="05292019SP1" invoiceDate="2019-05-29"/>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="CAD">100.0</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="CAD">100.0</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="CAD">0.0</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="CAD">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="CAD">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                           </PaymentRemittanceRequest>
+                        </PaymentBatchRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Payment Batch Request 1</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent/>
+                           </Sender>
+                        </Header>
+                        <Request>
+                           <PaymentBatchRequest>
+                              <PaymentBatchRequestHeader batchID="20190529AP0181000926119"
+                                                         paymentDate="2019-05-29T12:00:00+05:30"
+                                                         creationDate="2019-05-29T16:27:46.245Z+05:30">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>aribapay</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                              </PaymentBatchRequestHeader>
+                              <PaymentBatchSummary>
+                                 <ControlSum>100.00</ControlSum>
+                                 <NumberOfPayments>1</NumberOfPayments>
+                              </PaymentBatchSummary>
+                              <PaymentRemittanceRequest>
+                                 <PaymentRemittanceRequestHeader paymentRemittanceID="4310000095"
+                                                                 paymentDate="2019-05-29T12:00:00+05:30"
+                                                                 status="new"
+                                                                 companyCode="2000">
+                                    <PaymentMethod type="other">
+                                       <Description xml:lang="en">
+                                          <ShortName>aribapay</ShortName>
+                                       </Description>
+                                    </PaymentMethod>
+                                    <PaymentPartner>
+                                       <Contact role="payer" addressID="2000">
+                                          <Name xml:lang="en">LOUISIANA-PACIFIC CANADA</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>LOUISIANA-PACIFIC CANADA</DeliverTo>
+                                             <Street>1012 Chemin du Park Industriel</Street>
+                                             <City>BOIS FRANC</City>
+                                             <State>QC</State>
+                                             <PostalCode>J9E 3A9</PostalCode>
+                                             <Country isoCountryCode="CA">CA</Country>
+                                          </PostalAddress>
+                                          <Email>ctrujillo@thehackettgroup.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="US">US</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+16159865600</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                       </Contact>
+                                       <IdReference identifier="000101361518" domain="bankAccountID"/>
+                                       <AccountCurrency code="CAD"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="payee">
+                                          <Name xml:lang="en">LP AribaPay Test Supplier</Name>
+                                          <PostalAddress>
+                                             <DeliverTo/>
+                                             <Street>9901 Main St</Street>
+                                             <City>Fremont</City>
+                                             <State>CA</State>
+                                             <PostalCode>94539</PostalCode>
+                                             <Country isoCountryCode="US">US</Country>
+                                          </PostalAddress>
+                                          <Email>ctrujillo@thehackettgroup.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="1001262" domain="bankAccountID"/>
+                                       <IdReference identifier="0000210101" domain="VendorID"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="originatingBank">
+                                          <Name xml:lang="en">Royal Bank</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>Royal Bank</DeliverTo>
+                                             <Street>1055 W. Georgia St. 34th Flr</Street>
+                                             <City>Vancouver</City>
+                                             <State>BC</State>
+                                             <PostalCode>V6E 3N9</PostalCode>
+                                             <Country isoCountryCode="CA">CA</Country>
+                                          </PostalAddress>
+                                          <Email>ctrujillo@thehackettgroup.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="21000021" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="ROYCCAT2" domain="swiftID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="receivingBank">
+                                          <Name xml:lang="en">ROYAL BANK OF CANADA</Name>
+                                       </Contact>
+                                       <IdReference identifier="000301043" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                 </PaymentRemittanceRequestHeader>
+                                 <PaymentRemittanceSummary>
+                                    <NetAmount>
+                                       <Money currency="CAD">100.00</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="CAD">100.00</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="CAD">0.00</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="CAD">0.00</Money>
+                                    </AdjustmentAmount>
+                                 </PaymentRemittanceSummary>
+                                 <RemittanceDetail lineNumber="1"
+                                                   referenceDocumentNumber="5108511607"
+                                                   paymentProposalID="510851160720190012000ECQ">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="05292019SP1" invoiceDate="2019-05-29"/>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="CAD">100.0</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="CAD">100.0</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="CAD">0.0</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="CAD">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="CAD">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                              </PaymentRemittanceRequest>
+                           </PaymentBatchRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentBatchRequest_cXML_0000_PaymentBatchRequest.xspec">
+      <label>Payment Batch Request 2</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PaymentBatch/PaymentBatch2.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:28:59.226011+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent/>
+                        </Sender>
+                     </Header>
+                     <Request>
+                        <PaymentBatchRequest>
+                           <PaymentBatchRequestHeader batchID="20200501SAN901000048114"
+                                                      paymentDate="2020-05-01T12:00:00+05:30"
+                                                      creationDate="2019-05-29T16:27:46.245Z+05:30">
+                              <PaymentMethod type="other">
+                                 <Description xml:lang="en">
+                                    <ShortName>SCF Payment</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                           </PaymentBatchRequestHeader>
+                           <PaymentBatchSummary>
+                              <ControlSum>898.00</ControlSum>
+                              <NumberOfPayments>1</NumberOfPayments>
+                           </PaymentBatchSummary>
+                           <PaymentRemittanceRequest>
+                              <PaymentRemittanceRequestHeader paymentRemittanceID="2000001521"
+                                                              paymentDate="2020-05-01T12:00:00+05:30"
+                                                              status="new"
+                                                              companyCode="0001">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>SCF Payment</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                                 <PaymentPartner>
+                                    <Contact role="payer" addressID="0001">
+                                       <Name xml:lang="en">SAP A.G.</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>SAP A.G.</DeliverTo>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>12345</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+91123456781234</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+9123344557788123456</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                    <IdReference identifier="123456789" domain="bankAccountID"/>
+                                    <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                    <AccountCurrency code="EUR"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="payee">
+                                       <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                       <PostalAddress>
+                                          <DeliverTo/>
+                                          <Street>Kolping Str. 15 1277</Street>
+                                          <City>NY</City>
+                                          <State>11</State>
+                                          <PostalCode>56066</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>12345667-8910</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>1234567-8655</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="23456" domain="federalTaxID"/>
+                                    <IdReference identifier="113100" domain="bankAccountID"/>
+                                    <IdReference identifier="0000100000" domain="VendorID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                    <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                    <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="originatingBank">
+                                       <Name xml:lang="en">House bank</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>House bank</DeliverTo>
+                                          <Street>Test Street</Street>
+                                          <City>Bengaluru</City>
+                                          <State>01</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="receivingBank">
+                                       <Name xml:lang="en">Deutsche Bank11</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>Deutsche Bank11</DeliverTo>
+                                          <Street>church street</Street>
+                                          <City>Banaglore</City>
+                                          <State>02</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                    <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                              </PaymentRemittanceRequestHeader>
+                              <PaymentRemittanceSummary>
+                                 <NetAmount>
+                                    <Money currency="EUR">898.00</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">898.00</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </AdjustmentAmount>
+                              </PaymentRemittanceSummary>
+                              <RemittanceDetail lineNumber="1"
+                                                referenceDocumentNumber="1900002497"
+                                                paymentProposalID="190000249720200010001Q8J">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="1900002497" invoiceDate="2020-05-01"/>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="EUR">898.0</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">898.0</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="EUR">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                           </PaymentRemittanceRequest>
+                        </PaymentBatchRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Payment Batch Request 2</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent/>
+                           </Sender>
+                        </Header>
+                        <Request>
+                           <PaymentBatchRequest>
+                              <PaymentBatchRequestHeader batchID="20200501SAN901000048114"
+                                                         paymentDate="2020-05-01T12:00:00+05:30"
+                                                         creationDate="2019-05-29T16:27:46.245Z+05:30">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>SCF Payment</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                              </PaymentBatchRequestHeader>
+                              <PaymentBatchSummary>
+                                 <ControlSum>898.00</ControlSum>
+                                 <NumberOfPayments>1</NumberOfPayments>
+                              </PaymentBatchSummary>
+                              <PaymentRemittanceRequest>
+                                 <PaymentRemittanceRequestHeader paymentRemittanceID="2000001521"
+                                                                 paymentDate="2020-05-01T12:00:00+05:30"
+                                                                 status="new"
+                                                                 companyCode="0001">
+                                    <PaymentMethod type="other">
+                                       <Description xml:lang="en">
+                                          <ShortName>SCF Payment</ShortName>
+                                       </Description>
+                                    </PaymentMethod>
+                                    <PaymentPartner>
+                                       <Contact role="payer" addressID="0001">
+                                          <Name xml:lang="en">SAP A.G.</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>SAP A.G.</DeliverTo>
+                                             <Street>234</Street>
+                                             <City>Berlin</City>
+                                             <State>11</State>
+                                             <PostalCode>12345</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+91123456781234</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+9123344557788123456</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                       <IdReference identifier="123456789" domain="bankAccountID"/>
+                                       <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                       <AccountCurrency code="EUR"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="payee">
+                                          <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                          <PostalAddress>
+                                             <DeliverTo/>
+                                             <Street>Kolping Str. 15 1277</Street>
+                                             <City>NY</City>
+                                             <State>11</State>
+                                             <PostalCode>56066</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>12345667-8910</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>1234567-8655</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="23456" domain="federalTaxID"/>
+                                       <IdReference identifier="113100" domain="bankAccountID"/>
+                                       <IdReference identifier="0000100000" domain="VendorID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                       <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                       <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="originatingBank">
+                                          <Name xml:lang="en">House bank</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>House bank</DeliverTo>
+                                             <Street>Test Street</Street>
+                                             <City>Bengaluru</City>
+                                             <State>01</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="receivingBank">
+                                          <Name xml:lang="en">Deutsche Bank11</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>Deutsche Bank11</DeliverTo>
+                                             <Street>church street</Street>
+                                             <City>Banaglore</City>
+                                             <State>02</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                       <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                 </PaymentRemittanceRequestHeader>
+                                 <PaymentRemittanceSummary>
+                                    <NetAmount>
+                                       <Money currency="EUR">898.00</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">898.00</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </AdjustmentAmount>
+                                 </PaymentRemittanceSummary>
+                                 <RemittanceDetail lineNumber="1"
+                                                   referenceDocumentNumber="1900002497"
+                                                   paymentProposalID="190000249720200010001Q8J">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="1900002497" invoiceDate="2020-05-01"/>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="EUR">898.0</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">898.0</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="EUR">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                              </PaymentRemittanceRequest>
+                           </PaymentBatchRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentBatchRequest_cXML_0000_PaymentBatchRequest.xspec">
+      <label>Payment Batch Request 3</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PaymentBatch/PaymentBatch3.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:28:59.2816+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent/>
+                        </Sender>
+                     </Header>
+                     <Request>
+                        <PaymentBatchRequest>
+                           <PaymentBatchRequestHeader batchID="20210414TC021000097219"
+                                                      paymentDate="2021-04-14T12:00:00+05:30"
+                                                      creationDate="2021-04-14T11:40:16.781Z+05:30">
+                              <PaymentMethod type="other">
+                                 <Description xml:lang="en">
+                                    <ShortName>fx</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                           </PaymentBatchRequestHeader>
+                           <PaymentBatchSummary>
+                              <ControlSum>1147.98</ControlSum>
+                              <NumberOfPayments>1</NumberOfPayments>
+                           </PaymentBatchSummary>
+                           <PaymentRemittanceRequest>
+                              <PaymentRemittanceRequestHeader paymentRemittanceID="1500000973"
+                                                              paymentDate="2021-04-14T12:00:00+05:30"
+                                                              status="new"
+                                                              companyCode="0001">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>fx</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                                 <PaymentPartner>
+                                    <Contact role="payer" addressID="0001">
+                                       <Name xml:lang="en">SAP A.G.</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>SAP A.G.</DeliverTo>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>12345</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+91123456781234</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+9123344557788123456</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="DE456789012" domain="federalTaxId"/>
+                                    <IdReference identifier="17581450" domain="bankAccountID"/>
+                                    <IdReference identifier="DE49175814490017581450" domain="ibanID"/>
+                                    <IdReference identifier="1" domain="accountID"/>
+                                    <IdReference identifier="7734532344" domain="companyRegistrationNumber"/>
+                                    <AccountCurrency code="EUR"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="payee">
+                                       <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                       <PostalAddress>
+                                          <DeliverTo/>
+                                          <Street>Kolping Str. 15 1277</Street>
+                                          <City>NY</City>
+                                          <State>11</State>
+                                          <PostalCode>56066</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>098885544444</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>1234567-8655</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="23456AS" domain="federalTaxID"/>
+                                    <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                                    <IdReference identifier="0000100000" domain="VendorID"/>
+                                    <IdReference identifier="DE70100200300012345098" domain="ibanID"/>
+                                    <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                    <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="originatingBank">
+                                       <Name xml:lang="en">GS Bank USA OBO Project Maple Test
+                            Entit</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>GS Bank USA OBO Project Maple Test
+                            Entit</DeliverTo>
+                                          <Street>910 Hermosa Ct</Street>
+                                          <City>sunnyvale</City>
+                                          <State>02</State>
+                                          <Country isoCountryCode="GB">GB</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="17581449" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="DEUTDEF0XXX" domain="swiftID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="receivingBank">
+                                       <Name xml:lang="en">Deutsche Bank11</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>Deutsche Bank11</DeliverTo>
+                                          <Street>church street</Street>
+                                          <City>Banaglore</City>
+                                          <State>02</State>
+                                          <Country isoCountryCode="GB">GB</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="10020030" domain="bankRoutingID"/>
+                                    <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                    <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                    <IdReference identifier="DE70100200300012345098" domain="ibanID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="payeeContact">
+                                       <Name xml:lang="en">SUPPLIERNAME</Name>
+                                    </Contact>
+                                 </PaymentPartner>
+                                 <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                              </PaymentRemittanceRequestHeader>
+                              <PaymentRemittanceSummary>
+                                 <NetAmount>
+                                    <Money currency="EUR">1147.98</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">1208.40</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">60.42</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </AdjustmentAmount>
+                              </PaymentRemittanceSummary>
+                              <RemittanceDetail lineNumber="1"
+                                                referenceDocumentNumber="5100036393"
+                                                paymentProposalID="510003639320210010001Q8J">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="5105643732" invoiceDate="2021-04-14"/>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="EUR">513.76</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">540.8</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">27.04</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="EUR">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                              <RemittanceDetail lineNumber="2"
+                                                referenceDocumentNumber="5100036394"
+                                                paymentProposalID="510003639420210010001Q8J">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="5105643733" invoiceDate="2021-04-14"/>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="EUR">513.76</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">540.8</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">27.04</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="EUR">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                              <RemittanceDetail lineNumber="3"
+                                                referenceDocumentNumber="5100036395"
+                                                paymentProposalID="510003639520210010001Q8J">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="MRRLDEBIT" invoiceDate="2021-04-14"/>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="EUR">120.46</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">126.8</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">6.34</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="EUR">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                           </PaymentRemittanceRequest>
+                        </PaymentBatchRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Payment Batch Request 3</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent/>
+                           </Sender>
+                        </Header>
+                        <Request>
+                           <PaymentBatchRequest>
+                              <PaymentBatchRequestHeader batchID="20210414TC021000097219"
+                                                         paymentDate="2021-04-14T12:00:00+05:30"
+                                                         creationDate="2021-04-14T11:40:16.781Z+05:30">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>fx</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                              </PaymentBatchRequestHeader>
+                              <PaymentBatchSummary>
+                                 <ControlSum>1147.98</ControlSum>
+                                 <NumberOfPayments>1</NumberOfPayments>
+                              </PaymentBatchSummary>
+                              <PaymentRemittanceRequest>
+                                 <PaymentRemittanceRequestHeader paymentRemittanceID="1500000973"
+                                                                 paymentDate="2021-04-14T12:00:00+05:30"
+                                                                 status="new"
+                                                                 companyCode="0001">
+                                    <PaymentMethod type="other">
+                                       <Description xml:lang="en">
+                                          <ShortName>fx</ShortName>
+                                       </Description>
+                                    </PaymentMethod>
+                                    <PaymentPartner>
+                                       <Contact role="payer" addressID="0001">
+                                          <Name xml:lang="en">SAP A.G.</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>SAP A.G.</DeliverTo>
+                                             <Street>234</Street>
+                                             <City>Berlin</City>
+                                             <State>11</State>
+                                             <PostalCode>12345</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+91123456781234</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+9123344557788123456</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="DE456789012" domain="federalTaxId"/>
+                                       <IdReference identifier="17581450" domain="bankAccountID"/>
+                                       <IdReference identifier="DE49175814490017581450" domain="ibanID"/>
+                                       <IdReference identifier="1" domain="accountID"/>
+                                       <IdReference identifier="7734532344" domain="companyRegistrationNumber"/>
+                                       <AccountCurrency code="EUR"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="payee">
+                                          <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                          <PostalAddress>
+                                             <DeliverTo/>
+                                             <Street>Kolping Str. 15 1277</Street>
+                                             <City>NY</City>
+                                             <State>11</State>
+                                             <PostalCode>56066</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>098885544444</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>1234567-8655</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="23456AS" domain="federalTaxID"/>
+                                       <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                                       <IdReference identifier="0000100000" domain="VendorID"/>
+                                       <IdReference identifier="DE70100200300012345098" domain="ibanID"/>
+                                       <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                       <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="originatingBank">
+                                          <Name xml:lang="en">GS Bank USA OBO Project Maple Test
+                            Entit</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>GS Bank USA OBO Project Maple Test
+                            Entit</DeliverTo>
+                                             <Street>910 Hermosa Ct</Street>
+                                             <City>sunnyvale</City>
+                                             <State>02</State>
+                                             <Country isoCountryCode="GB">GB</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="17581449" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="DEUTDEF0XXX" domain="swiftID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="receivingBank">
+                                          <Name xml:lang="en">Deutsche Bank11</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>Deutsche Bank11</DeliverTo>
+                                             <Street>church street</Street>
+                                             <City>Banaglore</City>
+                                             <State>02</State>
+                                             <Country isoCountryCode="GB">GB</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="10020030" domain="bankRoutingID"/>
+                                       <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                       <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                       <IdReference identifier="DE70100200300012345098" domain="ibanID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="payeeContact">
+                                          <Name xml:lang="en">SUPPLIERNAME</Name>
+                                       </Contact>
+                                    </PaymentPartner>
+                                    <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                                 </PaymentRemittanceRequestHeader>
+                                 <PaymentRemittanceSummary>
+                                    <NetAmount>
+                                       <Money currency="EUR">1147.98</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">1208.40</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">60.42</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </AdjustmentAmount>
+                                 </PaymentRemittanceSummary>
+                                 <RemittanceDetail lineNumber="1"
+                                                   referenceDocumentNumber="5100036393"
+                                                   paymentProposalID="510003639320210010001Q8J">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="5105643732" invoiceDate="2021-04-14"/>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="EUR">513.76</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">540.8</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">27.04</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="EUR">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                                 <RemittanceDetail lineNumber="2"
+                                                   referenceDocumentNumber="5100036394"
+                                                   paymentProposalID="510003639420210010001Q8J">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="5105643733" invoiceDate="2021-04-14"/>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="EUR">513.76</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">540.8</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">27.04</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="EUR">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                                 <RemittanceDetail lineNumber="3"
+                                                   referenceDocumentNumber="5100036395"
+                                                   paymentProposalID="510003639520210010001Q8J">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="MRRLDEBIT" invoiceDate="2021-04-14"/>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="EUR">120.46</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">126.8</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">6.34</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="EUR">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                              </PaymentRemittanceRequest>
+                           </PaymentBatchRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentBatchRequest_cXML_0000_PaymentBatchRequest.xspec">
+      <label>Payment Batch Request 4</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PaymentBatch/PaymentBatch4.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:28:59.331498+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent/>
+                        </Sender>
+                     </Header>
+                     <Request>
+                        <PaymentBatchRequest>
+                           <PaymentBatchRequestHeader batchID="20200630STE011000068116"
+                                                      paymentDate="2020-06-30T12:00:00+05:30"
+                                                      creationDate="2020-06-30T14:34:22.399Z+05:30">
+                              <PaymentMethod type="other">
+                                 <Description xml:lang="en">
+                                    <ShortName>FX Global Payment</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                           </PaymentBatchRequestHeader>
+                           <PaymentBatchSummary>
+                              <ControlSum>4246.50</ControlSum>
+                              <NumberOfPayments>4</NumberOfPayments>
+                           </PaymentBatchSummary>
+                           <PaymentRemittanceRequest>
+                              <PaymentRemittanceRequestHeader paymentRemittanceID="2000001756"
+                                                              paymentDate="2020-06-30T12:00:00+05:30"
+                                                              status="new"
+                                                              companyCode="0001">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>FX Global Payment</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                                 <PaymentPartner>
+                                    <Contact role="payer" addressID="0001">
+                                       <Name xml:lang="en">SAP A.G.</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>SAP A.G.</DeliverTo>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>12345</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+91123456781234</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+9123344557788123456</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                    <IdReference identifier="123456789" domain="bankAccountID"/>
+                                    <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                    <AccountCurrency code="EUR"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="payee">
+                                       <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                       <PostalAddress>
+                                          <DeliverTo/>
+                                          <Street>Kolping Str. 15 1277</Street>
+                                          <City>NY</City>
+                                          <State>11</State>
+                                          <PostalCode>56066</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>12345667-8910</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>1234567-8655</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="23456" domain="federalTaxID"/>
+                                    <IdReference identifier="113100" domain="bankAccountID"/>
+                                    <IdReference identifier="0000100000" domain="VendorID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                    <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                    <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="originatingBank">
+                                       <Name xml:lang="en">House bank</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>House bank</DeliverTo>
+                                          <Street>Test Street</Street>
+                                          <City>Bengaluru</City>
+                                          <State>01</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="receivingBank">
+                                       <Name xml:lang="en">Deutsche Bank11</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>Deutsche Bank11</DeliverTo>
+                                          <Street>church street</Street>
+                                          <City>Banaglore</City>
+                                          <State>02</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                    <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                              </PaymentRemittanceRequestHeader>
+                              <PaymentRemittanceSummary>
+                                 <NetAmount>
+                                    <Money currency="EUR">47.50</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">50.00</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">2.50</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </AdjustmentAmount>
+                              </PaymentRemittanceSummary>
+                              <RemittanceDetail lineNumber="1"
+                                                referenceDocumentNumber="5100005923"
+                                                paymentProposalID="510000592320200010001Q8J">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="MMINV1SC1" invoiceDate="2020-06-30"/>
+                                       <PayableOrderInfo>
+                                          <OrderIDInfo orderID="4500044883"/>
+                                       </PayableOrderInfo>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="EUR">47.5</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">50.0</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">2.5</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="EUR">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                           </PaymentRemittanceRequest>
+                           <PaymentRemittanceRequest>
+                              <PaymentRemittanceRequestHeader paymentRemittanceID="2000001757"
+                                                              paymentDate="2020-06-30T12:00:00+05:30"
+                                                              status="new"
+                                                              companyCode="0001">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>FX Global Payment</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                                 <PaymentPartner>
+                                    <Contact role="payer" addressID="0001">
+                                       <Name xml:lang="en">SAP A.G.</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>SAP A.G.</DeliverTo>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>12345</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+91123456781234</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+9123344557788123456</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                    <IdReference identifier="123456789" domain="bankAccountID"/>
+                                    <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                    <AccountCurrency code="EUR"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="payee">
+                                       <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                       <PostalAddress>
+                                          <DeliverTo/>
+                                          <Street>Kolping Str. 15 1277</Street>
+                                          <City>NY</City>
+                                          <State>11</State>
+                                          <PostalCode>56066</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>12345667-8910</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>1234567-8655</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="23456" domain="federalTaxID"/>
+                                    <IdReference identifier="113100" domain="bankAccountID"/>
+                                    <IdReference identifier="0000100000" domain="VendorID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                    <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                    <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="originatingBank">
+                                       <Name xml:lang="en">House bank</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>House bank</DeliverTo>
+                                          <Street>Test Street</Street>
+                                          <City>Bengaluru</City>
+                                          <State>01</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="receivingBank">
+                                       <Name xml:lang="en">Deutsche Bank11</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>Deutsche Bank11</DeliverTo>
+                                          <Street>church street</Street>
+                                          <City>Banaglore</City>
+                                          <State>02</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                    <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                              </PaymentRemittanceRequestHeader>
+                              <PaymentRemittanceSummary>
+                                 <NetAmount>
+                                    <Money currency="EUR">19.00</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">20.00</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">1.00</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </AdjustmentAmount>
+                              </PaymentRemittanceSummary>
+                              <RemittanceDetail lineNumber="1"
+                                                referenceDocumentNumber="5100005925"
+                                                paymentProposalID="510000592520200010001Q8J">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="5100005925" invoiceDate="2020-06-30"/>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="EUR">19.0</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">20.0</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">1.0</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="EUR">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                           </PaymentRemittanceRequest>
+                           <PaymentRemittanceRequest>
+                              <PaymentRemittanceRequestHeader paymentRemittanceID="2000001758"
+                                                              paymentDate="2020-06-30T12:00:00+05:30"
+                                                              status="new"
+                                                              companyCode="0001">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>FX Global Payment</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                                 <PaymentPartner>
+                                    <Contact role="payer" addressID="0001">
+                                       <Name xml:lang="en">SAP A.G.</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>SAP A.G.</DeliverTo>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>12345</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+91123456781234</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+9123344557788123456</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                    <IdReference identifier="123456789" domain="bankAccountID"/>
+                                    <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                    <AccountCurrency code="EUR"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="payee">
+                                       <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                       <PostalAddress>
+                                          <DeliverTo/>
+                                          <Street>Kolping Str. 15 1277</Street>
+                                          <City>NY</City>
+                                          <State>11</State>
+                                          <PostalCode>56066</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>12345667-8910</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>1234567-8655</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="23456" domain="federalTaxID"/>
+                                    <IdReference identifier="113100" domain="bankAccountID"/>
+                                    <IdReference identifier="0000100000" domain="VendorID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                    <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                    <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="originatingBank">
+                                       <Name xml:lang="en">House bank</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>House bank</DeliverTo>
+                                          <Street>Test Street</Street>
+                                          <City>Bengaluru</City>
+                                          <State>01</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="receivingBank">
+                                       <Name xml:lang="en">Deutsche Bank11</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>Deutsche Bank11</DeliverTo>
+                                          <Street>church street</Street>
+                                          <City>Banaglore</City>
+                                          <State>02</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                    <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                              </PaymentRemittanceRequestHeader>
+                              <PaymentRemittanceSummary>
+                                 <NetAmount>
+                                    <Money currency="EUR">3800.00</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">4000.00</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">200.00</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </AdjustmentAmount>
+                              </PaymentRemittanceSummary>
+                              <RemittanceDetail lineNumber="1"
+                                                referenceDocumentNumber="5100005926"
+                                                paymentProposalID="510000592620200010001Q8J">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="5105612494" invoiceDate="2020-06-30"/>
+                                       <PayableOrderInfo>
+                                          <OrderIDInfo orderID="4500044887"/>
+                                       </PayableOrderInfo>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="EUR">3800.0</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">4000.0</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">200.0</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="EUR">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                           </PaymentRemittanceRequest>
+                           <PaymentRemittanceRequest>
+                              <PaymentRemittanceRequestHeader paymentRemittanceID="2000001755"
+                                                              paymentDate="2020-06-30T12:00:00+05:30"
+                                                              status="new"
+                                                              companyCode="0001">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>FX Global Payment</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                                 <PaymentPartner>
+                                    <Contact role="payer" addressID="0001">
+                                       <Name xml:lang="en">SAP A.G.</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>SAP A.G.</DeliverTo>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>12345</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+91123456781234</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                             <AreaOrCityCode/>
+                                             <Number>+9123344557788123456</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                    <IdReference identifier="123456789" domain="bankAccountID"/>
+                                    <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                    <AccountCurrency code="EUR"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="payee">
+                                       <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                       <PostalAddress>
+                                          <DeliverTo/>
+                                          <Street>Kolping Str. 15 1277</Street>
+                                          <City>NY</City>
+                                          <State>11</State>
+                                          <PostalCode>56066</PostalCode>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>12345667-8910</Number>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode=""/>
+                                             <AreaOrCityCode/>
+                                             <Number>1234567-8655</Number>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                    <IdReference identifier="23456" domain="federalTaxID"/>
+                                    <IdReference identifier="113100" domain="bankAccountID"/>
+                                    <IdReference identifier="0000100000" domain="VendorID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                    <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                    <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="originatingBank">
+                                       <Name xml:lang="en">House bank</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>House bank</DeliverTo>
+                                          <Street>Test Street</Street>
+                                          <City>Bengaluru</City>
+                                          <State>01</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPartner>
+                                    <Contact role="receivingBank">
+                                       <Name xml:lang="en">Deutsche Bank11</Name>
+                                       <PostalAddress>
+                                          <DeliverTo>Deutsche Bank11</DeliverTo>
+                                          <Street>church street</Street>
+                                          <City>Banaglore</City>
+                                          <State>02</State>
+                                          <Country isoCountryCode="DE">DE</Country>
+                                       </PostalAddress>
+                                       <Email>Aribadefect@sap.com</Email>
+                                    </Contact>
+                                    <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                    <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                    <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                    <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                    <IdReference identifier="checking" domain="accountType"/>
+                                 </PaymentPartner>
+                                 <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                              </PaymentRemittanceRequestHeader>
+                              <PaymentRemittanceSummary>
+                                 <NetAmount>
+                                    <Money currency="EUR">380.00</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">400.00</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">20.00</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </AdjustmentAmount>
+                              </PaymentRemittanceSummary>
+                              <RemittanceDetail lineNumber="1"
+                                                referenceDocumentNumber="1900002995"
+                                                paymentProposalID="190000299520200010001Q8J">
+                                 <PayableInfo>
+                                    <PayableInvoiceInfo>
+                                       <InvoiceIDInfo invoiceID="FIINV1SC1" invoiceDate="2020-06-30"/>
+                                    </PayableInvoiceInfo>
+                                 </PayableInfo>
+                                 <NetAmount>
+                                    <Money currency="EUR">380.0</Money>
+                                 </NetAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">400.0</Money>
+                                 </GrossAmount>
+                                 <DiscountAmount>
+                                    <Money currency="EUR">20.0</Money>
+                                 </DiscountAmount>
+                                 <AdjustmentAmount>
+                                    <Money currency="EUR">0.0</Money>
+                                    <Modifications>
+                                       <Modification>
+                                          <AdditionalDeduction type="withholdingTax">
+                                             <DeductionAmount>
+                                                <Money currency="EUR">0.0</Money>
+                                             </DeductionAmount>
+                                          </AdditionalDeduction>
+                                       </Modification>
+                                    </Modifications>
+                                 </AdjustmentAmount>
+                              </RemittanceDetail>
+                           </PaymentRemittanceRequest>
+                        </PaymentBatchRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>Payment Batch Request 4</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent/>
+                           </Sender>
+                        </Header>
+                        <Request>
+                           <PaymentBatchRequest>
+                              <PaymentBatchRequestHeader batchID="20200630STE011000068116"
+                                                         paymentDate="2020-06-30T12:00:00+05:30"
+                                                         creationDate="2020-06-30T14:34:22.399Z+05:30">
+                                 <PaymentMethod type="other">
+                                    <Description xml:lang="en">
+                                       <ShortName>FX Global Payment</ShortName>
+                                    </Description>
+                                 </PaymentMethod>
+                              </PaymentBatchRequestHeader>
+                              <PaymentBatchSummary>
+                                 <ControlSum>4246.50</ControlSum>
+                                 <NumberOfPayments>4</NumberOfPayments>
+                              </PaymentBatchSummary>
+                              <PaymentRemittanceRequest>
+                                 <PaymentRemittanceRequestHeader paymentRemittanceID="2000001756"
+                                                                 paymentDate="2020-06-30T12:00:00+05:30"
+                                                                 status="new"
+                                                                 companyCode="0001">
+                                    <PaymentMethod type="other">
+                                       <Description xml:lang="en">
+                                          <ShortName>FX Global Payment</ShortName>
+                                       </Description>
+                                    </PaymentMethod>
+                                    <PaymentPartner>
+                                       <Contact role="payer" addressID="0001">
+                                          <Name xml:lang="en">SAP A.G.</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>SAP A.G.</DeliverTo>
+                                             <Street>234</Street>
+                                             <City>Berlin</City>
+                                             <State>11</State>
+                                             <PostalCode>12345</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+91123456781234</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+9123344557788123456</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                       <IdReference identifier="123456789" domain="bankAccountID"/>
+                                       <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                       <AccountCurrency code="EUR"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="payee">
+                                          <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                          <PostalAddress>
+                                             <DeliverTo/>
+                                             <Street>Kolping Str. 15 1277</Street>
+                                             <City>NY</City>
+                                             <State>11</State>
+                                             <PostalCode>56066</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>12345667-8910</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>1234567-8655</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="23456" domain="federalTaxID"/>
+                                       <IdReference identifier="113100" domain="bankAccountID"/>
+                                       <IdReference identifier="0000100000" domain="VendorID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                       <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                       <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="originatingBank">
+                                          <Name xml:lang="en">House bank</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>House bank</DeliverTo>
+                                             <Street>Test Street</Street>
+                                             <City>Bengaluru</City>
+                                             <State>01</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="receivingBank">
+                                          <Name xml:lang="en">Deutsche Bank11</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>Deutsche Bank11</DeliverTo>
+                                             <Street>church street</Street>
+                                             <City>Banaglore</City>
+                                             <State>02</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                       <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                                 </PaymentRemittanceRequestHeader>
+                                 <PaymentRemittanceSummary>
+                                    <NetAmount>
+                                       <Money currency="EUR">47.50</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">50.00</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">2.50</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </AdjustmentAmount>
+                                 </PaymentRemittanceSummary>
+                                 <RemittanceDetail lineNumber="1"
+                                                   referenceDocumentNumber="5100005923"
+                                                   paymentProposalID="510000592320200010001Q8J">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="MMINV1SC1" invoiceDate="2020-06-30"/>
+                                          <PayableOrderInfo>
+                                             <OrderIDInfo orderID="4500044883"/>
+                                          </PayableOrderInfo>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="EUR">47.5</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">50.0</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">2.5</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="EUR">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                              </PaymentRemittanceRequest>
+                              <PaymentRemittanceRequest>
+                                 <PaymentRemittanceRequestHeader paymentRemittanceID="2000001757"
+                                                                 paymentDate="2020-06-30T12:00:00+05:30"
+                                                                 status="new"
+                                                                 companyCode="0001">
+                                    <PaymentMethod type="other">
+                                       <Description xml:lang="en">
+                                          <ShortName>FX Global Payment</ShortName>
+                                       </Description>
+                                    </PaymentMethod>
+                                    <PaymentPartner>
+                                       <Contact role="payer" addressID="0001">
+                                          <Name xml:lang="en">SAP A.G.</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>SAP A.G.</DeliverTo>
+                                             <Street>234</Street>
+                                             <City>Berlin</City>
+                                             <State>11</State>
+                                             <PostalCode>12345</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+91123456781234</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+9123344557788123456</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                       <IdReference identifier="123456789" domain="bankAccountID"/>
+                                       <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                       <AccountCurrency code="EUR"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="payee">
+                                          <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                          <PostalAddress>
+                                             <DeliverTo/>
+                                             <Street>Kolping Str. 15 1277</Street>
+                                             <City>NY</City>
+                                             <State>11</State>
+                                             <PostalCode>56066</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>12345667-8910</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>1234567-8655</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="23456" domain="federalTaxID"/>
+                                       <IdReference identifier="113100" domain="bankAccountID"/>
+                                       <IdReference identifier="0000100000" domain="VendorID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                       <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                       <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="originatingBank">
+                                          <Name xml:lang="en">House bank</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>House bank</DeliverTo>
+                                             <Street>Test Street</Street>
+                                             <City>Bengaluru</City>
+                                             <State>01</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="receivingBank">
+                                          <Name xml:lang="en">Deutsche Bank11</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>Deutsche Bank11</DeliverTo>
+                                             <Street>church street</Street>
+                                             <City>Banaglore</City>
+                                             <State>02</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                       <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                                 </PaymentRemittanceRequestHeader>
+                                 <PaymentRemittanceSummary>
+                                    <NetAmount>
+                                       <Money currency="EUR">19.00</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">20.00</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">1.00</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </AdjustmentAmount>
+                                 </PaymentRemittanceSummary>
+                                 <RemittanceDetail lineNumber="1"
+                                                   referenceDocumentNumber="5100005925"
+                                                   paymentProposalID="510000592520200010001Q8J">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="5100005925" invoiceDate="2020-06-30"/>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="EUR">19.0</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">20.0</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">1.0</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="EUR">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                              </PaymentRemittanceRequest>
+                              <PaymentRemittanceRequest>
+                                 <PaymentRemittanceRequestHeader paymentRemittanceID="2000001758"
+                                                                 paymentDate="2020-06-30T12:00:00+05:30"
+                                                                 status="new"
+                                                                 companyCode="0001">
+                                    <PaymentMethod type="other">
+                                       <Description xml:lang="en">
+                                          <ShortName>FX Global Payment</ShortName>
+                                       </Description>
+                                    </PaymentMethod>
+                                    <PaymentPartner>
+                                       <Contact role="payer" addressID="0001">
+                                          <Name xml:lang="en">SAP A.G.</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>SAP A.G.</DeliverTo>
+                                             <Street>234</Street>
+                                             <City>Berlin</City>
+                                             <State>11</State>
+                                             <PostalCode>12345</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+91123456781234</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+9123344557788123456</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                       <IdReference identifier="123456789" domain="bankAccountID"/>
+                                       <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                       <AccountCurrency code="EUR"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="payee">
+                                          <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                          <PostalAddress>
+                                             <DeliverTo/>
+                                             <Street>Kolping Str. 15 1277</Street>
+                                             <City>NY</City>
+                                             <State>11</State>
+                                             <PostalCode>56066</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>12345667-8910</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>1234567-8655</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="23456" domain="federalTaxID"/>
+                                       <IdReference identifier="113100" domain="bankAccountID"/>
+                                       <IdReference identifier="0000100000" domain="VendorID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                       <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                       <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="originatingBank">
+                                          <Name xml:lang="en">House bank</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>House bank</DeliverTo>
+                                             <Street>Test Street</Street>
+                                             <City>Bengaluru</City>
+                                             <State>01</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="receivingBank">
+                                          <Name xml:lang="en">Deutsche Bank11</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>Deutsche Bank11</DeliverTo>
+                                             <Street>church street</Street>
+                                             <City>Banaglore</City>
+                                             <State>02</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                       <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                                 </PaymentRemittanceRequestHeader>
+                                 <PaymentRemittanceSummary>
+                                    <NetAmount>
+                                       <Money currency="EUR">3800.00</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">4000.00</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">200.00</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </AdjustmentAmount>
+                                 </PaymentRemittanceSummary>
+                                 <RemittanceDetail lineNumber="1"
+                                                   referenceDocumentNumber="5100005926"
+                                                   paymentProposalID="510000592620200010001Q8J">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="5105612494" invoiceDate="2020-06-30"/>
+                                          <PayableOrderInfo>
+                                             <OrderIDInfo orderID="4500044887"/>
+                                          </PayableOrderInfo>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="EUR">3800.0</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">4000.0</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">200.0</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="EUR">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                              </PaymentRemittanceRequest>
+                              <PaymentRemittanceRequest>
+                                 <PaymentRemittanceRequestHeader paymentRemittanceID="2000001755"
+                                                                 paymentDate="2020-06-30T12:00:00+05:30"
+                                                                 status="new"
+                                                                 companyCode="0001">
+                                    <PaymentMethod type="other">
+                                       <Description xml:lang="en">
+                                          <ShortName>FX Global Payment</ShortName>
+                                       </Description>
+                                    </PaymentMethod>
+                                    <PaymentPartner>
+                                       <Contact role="payer" addressID="0001">
+                                          <Name xml:lang="en">SAP A.G.</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>SAP A.G.</DeliverTo>
+                                             <Street>234</Street>
+                                             <City>Berlin</City>
+                                             <State>11</State>
+                                             <PostalCode>12345</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+91123456781234</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode="IN">IN</CountryCode>
+                                                <AreaOrCityCode/>
+                                                <Number>+9123344557788123456</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="DEU23445666" domain="federalTaxId"/>
+                                       <IdReference identifier="123456789" domain="bankAccountID"/>
+                                       <IdReference identifier="DE66110000000123456789" domain="ibanID"/>
+                                       <AccountCurrency code="EUR"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="payee">
+                                          <Name xml:lang="en">Best Vendor For Product
+                            12123</Name>
+                                          <PostalAddress>
+                                             <DeliverTo/>
+                                             <Street>Kolping Str. 15 1277</Street>
+                                             <City>NY</City>
+                                             <State>11</State>
+                                             <PostalCode>56066</PostalCode>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                          <Phone>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>12345667-8910</Number>
+                                             </TelephoneNumber>
+                                          </Phone>
+                                          <Fax>
+                                             <TelephoneNumber>
+                                                <CountryCode isoCountryCode=""/>
+                                                <AreaOrCityCode/>
+                                                <Number>1234567-8655</Number>
+                                             </TelephoneNumber>
+                                          </Fax>
+                                       </Contact>
+                                       <IdReference identifier="23456" domain="federalTaxID"/>
+                                       <IdReference identifier="113100" domain="bankAccountID"/>
+                                       <IdReference identifier="0000100000" domain="VendorID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="COMPANYREG1" domain="companyRegistrationNumber"/>
+                                       <NatureOfBusiness>Automotive</NatureOfBusiness>
+                                       <IncorporationType>Automotive Spare Parts</IncorporationType>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="originatingBank">
+                                          <Name xml:lang="en">House bank</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>House bank</DeliverTo>
+                                             <Street>Test Street</Street>
+                                             <City>Bengaluru</City>
+                                             <State>01</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="11000000" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="ABCD5678" domain="swiftID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPartner>
+                                       <Contact role="receivingBank">
+                                          <Name xml:lang="en">Deutsche Bank11</Name>
+                                          <PostalAddress>
+                                             <DeliverTo>Deutsche Bank11</DeliverTo>
+                                             <Street>church street</Street>
+                                             <City>Banaglore</City>
+                                             <State>02</State>
+                                             <Country isoCountryCode="DE">DE</Country>
+                                          </PostalAddress>
+                                          <Email>Aribadefect@sap.com</Email>
+                                       </Contact>
+                                       <IdReference identifier="10020030" domain="abaRoutingNumber"/>
+                                       <IdReference identifier="DEUTDEBB" domain="isoBicID"/>
+                                       <IdReference identifier="DEUTDEBB" domain="swiftID"/>
+                                       <IdReference identifier="DE65100200300000113100" domain="ibanID"/>
+                                       <IdReference identifier="checking" domain="accountType"/>
+                                    </PaymentPartner>
+                                    <PaymentPurpose code="01">Payment to beneficiary only</PaymentPurpose>
+                                 </PaymentRemittanceRequestHeader>
+                                 <PaymentRemittanceSummary>
+                                    <NetAmount>
+                                       <Money currency="EUR">380.00</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">400.00</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">20.00</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </AdjustmentAmount>
+                                 </PaymentRemittanceSummary>
+                                 <RemittanceDetail lineNumber="1"
+                                                   referenceDocumentNumber="1900002995"
+                                                   paymentProposalID="190000299520200010001Q8J">
+                                    <PayableInfo>
+                                       <PayableInvoiceInfo>
+                                          <InvoiceIDInfo invoiceID="FIINV1SC1" invoiceDate="2020-06-30"/>
+                                       </PayableInvoiceInfo>
+                                    </PayableInfo>
+                                    <NetAmount>
+                                       <Money currency="EUR">380.0</Money>
+                                    </NetAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">400.0</Money>
+                                    </GrossAmount>
+                                    <DiscountAmount>
+                                       <Money currency="EUR">20.0</Money>
+                                    </DiscountAmount>
+                                    <AdjustmentAmount>
+                                       <Money currency="EUR">0.0</Money>
+                                       <Modifications>
+                                          <Modification>
+                                             <AdditionalDeduction type="withholdingTax">
+                                                <DeductionAmount>
+                                                   <Money currency="EUR">0.0</Money>
+                                                </DeductionAmount>
+                                             </AdditionalDeduction>
+                                          </Modification>
+                                       </Modifications>
+                                    </AdjustmentAmount>
+                                 </RemittanceDetail>
+                              </PaymentRemittanceRequest>
+                           </PaymentBatchRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

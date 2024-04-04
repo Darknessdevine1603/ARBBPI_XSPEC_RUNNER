@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="IngestStock">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element id="stockInfos" name="stockInfos" 
+                    type ="stockinfo" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="transactionId" type="xs:long" use="required"/>
+            <xs:attribute name="batchNumber" type = "xs:integer" use="required"/>
+            <xs:attribute name="lastBatch" type = "xs:boolean" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="stockinfo">
+        <xs:sequence>
+            <xs:element id="matnr" name="matnr" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+            <xs:element id="plant" name="plant" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+            <xs:element id="lgort" name="lgort" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+            <xs:element id="labst" name="labst" type="xs:double"  minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

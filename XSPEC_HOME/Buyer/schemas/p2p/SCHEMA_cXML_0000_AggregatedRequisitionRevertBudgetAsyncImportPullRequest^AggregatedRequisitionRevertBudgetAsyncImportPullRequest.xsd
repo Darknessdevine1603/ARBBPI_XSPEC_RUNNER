@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="urn:Ariba:Buyer:vsap" xmlns:typens="urn:Ariba:Buyer:vsap">
+    <xsd:element name="Headers">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="AggregatedRequisitionRevertBudgetAsyncImportPullRequest">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0"
+                    name="Requisition_AggregatedRequisitionRevertBudgetAsyncImportSuccess_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:Requisition_AggregatedRequisitionRevertBudgetAsyncImportSuccess"
+                            />
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RequisitionError_RequisitionErrorImport_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:RequisitionError_RequisitionErrorImport"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="AggregatedRequisitionRevertBudgetAsyncImportPullReply">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="1" name="status" type="xsd:string"/>
+            </xsd:all>
+            <xsd:anyAttribute namespace="##local" processContents="lax"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="Requisition_AggregatedRequisitionRevertBudgetAsyncImportSuccess">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.purchasing.core.Requisition, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="RealTimeBudgetResponse">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name ariba.procure.core.RealTimeBudgetResponse,
+                            group name FullObject, variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="LogMessages">
+                            <xsd:complexType>
+                                <xsd:annotation>
+                                    <xsd:documentation>Class name
+                                        ariba.procure.core.RealTimeBudgetResponseLogMsg, group name
+                                        LogMessagesData, variant vrealm_40.</xsd:documentation>
+                                </xsd:annotation>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="item">
+                                        <xsd:complexType>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="1" name="Message"                                                  nillable="true" type="xsd:string">
+                                                <xsd:annotation>
+                                                                <xsd:documentation>Text in the real time budget check response log message.</xsd:documentation>
+                                                                <xsd:documentation>Class name java.lang.String, group name LogMessagesData, variant vrealm_40.</xsd:documentation>
+                                                            </xsd:annotation>
+                                                        </xsd:element>
+                                                        <xsd:element minOccurs="1" name="Type"                                                  nillable="true" type="xsd:string">
+                                            <xsd:annotation>
+                                                                <xsd:documentation>Type of real time budget check response log message.</xsd:documentation>
+                                                                <xsd:documentation>Class name java.lang.String, group name LogMessagesData, variant vrealm_40.</xsd:documentation>
+                                                            </xsd:annotation>
+                                                        </xsd:element>
+                                                    </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="UniqueName" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the unique ID of every requisition for which it shows
+                        a status. This value must match with a REQ_ID</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AggregatedRequisitionRevertBudgetAsyncImportSuccess, variant
+                        vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomBoolean"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:boolean">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomDate"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:dateTime">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomInteger"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:integer">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomMoney"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:complexContent>
+                                    <xsd:extension base="typens:Money_Reference">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:complexContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomString"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="RequisitionError_RequisitionErrorImport">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.integration.core.RequisitionError, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="1" name="Date" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>Timestamp of the error.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.util.core.Date, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorClient" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Client corresponding to the error.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorMessage" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Description of the error.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.base.core.MultiLingualString, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorNumber" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Error number for the error that occurred.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPField" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Field name that corresponds to the error that has occured in SAP.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPId" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Error ID that is defined in SAP ERP.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPModule" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>SAP module of the error, which is the Dynapro name.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPScreen" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Dynapro number of the error on the screen.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSystem" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>System ID of an error.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="Id" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Unique Requisition ID.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="NumInSet" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Line number of the corresponding line item.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ReqLineNumber" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Line number that resulted in error when the requisition was exported to ERP.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="Type" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>SAP Message type.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        RequisitionErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="Money_Reference">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.basic.core.Money, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="Amount" nillable="true" type="xsd:decimal">
+            <xsd:annotation>
+                            <xsd:documentation>Monetary amount.</xsd:documentation>
+                            <xsd:documentation>Class name java.math.BigDecimal, group name Reference, variant vrealm_40.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="AmountInReportingCurrency" nillable="true"                type="xsd:decimal">
+            <xsd:annotation>
+                            <xsd:documentation>Amount converted to the reporting currency of the system.</xsd:documentation>
+                            <xsd:documentation>Class name java.math.BigDecimal, group name Reference, variant vrealm_40.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="ApproxAmountInBaseCurrency" nillable="true"                type="xsd:decimal">
+            <xsd:annotation>
+                            <xsd:documentation>Amount converted into the base currency of the system.</xsd:documentation>
+                            <xsd:documentation>Class name java.math.BigDecimal, group name Reference, variant vrealm_40.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="ConversionDate" nillable="true" type="xsd:dateTime">
+            <xsd:annotation>
+                            <xsd:documentation>Conversion date when the amounts were computed in the ApproxAmountInBaseCurrency and the AmountInReportingCurrency fields.</xsd:documentation>
+                            <xsd:documentation>Class name ariba.util.core.Date, group name Reference, variant vrealm_40.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="Currency">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Transaction currency of the amount.</xsd:documentation>
+                                <xsd:documentation>Class name ariba.basic.core.Currency, group name
+                            Reference, variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="UniqueName" nillable="true"                            type="xsd:string">
+                    <xsd:annotation>
+                                        <xsd:documentation>Unique three-letter identifier for the currency. For example, USD, DEM, GBP.</xsd:documentation>
+                                        <xsd:documentation>Class name java.lang.String, group name Reference, variant vrealm_40.</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+</xsd:schema>

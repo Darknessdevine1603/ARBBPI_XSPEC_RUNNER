@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetStatusAsyncResponsePullRequest_cXML_0000_ServiceSheetStatusAsyncResponsePullRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetStatusAsyncResponsePullRequest_cXML_0000_ServiceSheetStatusAsyncResponsePullRequest.xsl"
+        date="2023-04-27T15:37:25.946196+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetStatusAsyncResponsePullRequest_cXML_0000_ServiceSheetStatusAsyncResponsePullRequest.xspec">
+      <label>ServiceSheetStatusResponse</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/ServiceSheetStatusAsyncResponsePullRequest/ServiceSheetStatusAsyncResponsePullRequestBM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:ServiceSheetStatusAsyncResponsePullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                            partition="prealm_156"
+                                                            variant="vrealm_156">
+               <urn:ServiceSheet_ServiceSheetIDImport_Item>
+                  <urn:item>
+                     <urn:UniqueName>SS606</urn:UniqueName>
+                     <urn:ERPPOVersionNumber>2</urn:ERPPOVersionNumber>
+                     <urn:FiscalYear>2022</urn:FiscalYear>
+                     <urn:ERPServiceSheetID>1000736340</urn:ERPServiceSheetID>
+                     <urn:InvoiceNumber>CIGTC-33511_MMIN</urn:InvoiceNumber>
+                     <urn:InvoiceDate>2022-01-31</urn:InvoiceDate>
+                     <urn:RejectionReasonCodes>
+                        <urn:item>02</urn:item>
+                     </urn:RejectionReasonCodes>
+                     <urn:item>
+                        <urn:NumberInCollection>1</urn:NumberInCollection>
+                        <urn:PackageInfo>00021986280002198629</urn:PackageInfo>
+                        <urn:ServiceMapKey>Str 205</urn:ServiceMapKey>
+                        <urn:PODeliveryDate>2020-04-29T09:23:27+02:00</urn:PODeliveryDate>
+                        <urn:POQuantity>1.000 </urn:POQuantity>
+                        <urn:POUnitPrice>28000.000000000 </urn:POUnitPrice>
+                     </urn:item>
+                  </urn:item>
+               </urn:ServiceSheet_ServiceSheetIDImport_Item>
+            </urn:ServiceSheetStatusAsyncResponsePullRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ServiceSheetStatusResponse</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:ServiceSheetStatusAsyncResponsePullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                               partition="prealm_156"
+                                                               variant="vrealm_156">
+                  <urn:ServiceSheet_ServiceSheetIDImport_Item>
+                     <urn:item>
+                        <urn:UniqueName>SS606</urn:UniqueName>
+                        <urn:ERPPOVersionNumber>2</urn:ERPPOVersionNumber>
+                        <urn:FiscalYear>2022</urn:FiscalYear>
+                        <urn:ERPServiceSheetID>1000736340</urn:ERPServiceSheetID>
+                        <urn:InvoiceNumber>CIGTC-33511_MMIN</urn:InvoiceNumber>
+                        <urn:InvoiceDate>2022-01-31</urn:InvoiceDate>
+                        <urn:RejectionReasonCodes>
+                           <urn:item>02</urn:item>
+                        </urn:RejectionReasonCodes>
+                        <urn:item>
+                           <urn:NumberInCollection>1</urn:NumberInCollection>
+                           <urn:PackageInfo>00021986280002198629</urn:PackageInfo>
+                           <urn:ServiceMapKey>Str 205</urn:ServiceMapKey>
+                           <urn:PODeliveryDate>2020-04-29T09:23:27+02:00</urn:PODeliveryDate>
+                           <urn:POQuantity>1.000 </urn:POQuantity>
+                           <urn:POUnitPrice>28000.000000000 </urn:POUnitPrice>
+                        </urn:item>
+                     </urn:item>
+                  </urn:ServiceSheet_ServiceSheetIDImport_Item>
+               </urn:ServiceSheetStatusAsyncResponsePullRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetStatusAsyncResponsePullRequest_cXML_0000_ServiceSheetStatusAsyncResponsePullRequest.xspec">
+      <label>ServiceSheetStatusResponseError</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/ServiceSheetStatusAsyncResponsePullRequest/ServiceSheetStatusAsyncResponsePullRequestBM_err.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:ServiceSheetStatusAsyncResponsePullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                            partition="prealm_156"
+                                                            variant="vrealm_156">
+               <urn:ServiceSheetError_ServiceSheetErrorImport_Item>
+                  <urn:item>
+                     <urn:Id>INV_Error-499</urn:Id>
+                     <urn:NumInSet>1</urn:NumInSet>
+                     <urn:Type>E</urn:Type>
+                     <urn:Date>2023-04-27T15:37:25.946196+05:30</urn:Date>
+                     <urn:ErrorMessage>Error in document: BKPFF $ Q8JCLNT002</urn:ErrorMessage>
+                     <urn:ErrorNumber>609</urn:ErrorNumber>
+                     <urn:ErrorSAPField>Addon</urn:ErrorSAPField>
+                     <urn:ErrorSAPId>RW</urn:ErrorSAPId>
+                     <urn:ErrorClient>002</urn:ErrorClient>
+                     <urn:ErrorSAPModule>2</urn:ErrorSAPModule>
+                     <urn:ErrorSAPScreen>1</urn:ErrorSAPScreen>
+                     <urn:ErrorSystem>Q8JCLNT002</urn:ErrorSystem>
+                  </urn:item>
+                  <urn:item>
+                     <urn:Id>INV_Error-499</urn:Id>
+                     <urn:NumInSet>2</urn:NumInSet>
+                     <urn:Type>E</urn:Type>
+                     <urn:Date>2023-04-27T15:37:25.946196+05:30</urn:Date>
+                     <urn:ErrorMessage>Required field VENDOR_NO was not transferred in parameter ACCOUNTPAYABLE</urn:ErrorMessage>
+                     <urn:ErrorNumber>602</urn:ErrorNumber>
+                     <urn:ErrorSAPField>VENDOR_NO</urn:ErrorSAPField>
+                     <urn:ErrorSAPId>RW</urn:ErrorSAPId>
+                     <urn:ErrorClient>002</urn:ErrorClient>
+                     <urn:ErrorSAPModule>4</urn:ErrorSAPModule>
+                     <urn:ErrorSAPScreen>3</urn:ErrorSAPScreen>
+                     <urn:ErrorSystem>Q8JCLNT002</urn:ErrorSystem>
+                     <urn:ReqLineNumber>123</urn:ReqLineNumber>
+                  </urn:item>
+               </urn:ServiceSheetError_ServiceSheetErrorImport_Item>
+            </urn:ServiceSheetStatusAsyncResponsePullRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>ServiceSheetStatusResponseError</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:ServiceSheetStatusAsyncResponsePullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                               partition="prealm_156"
+                                                               variant="vrealm_156">
+                  <urn:ServiceSheetError_ServiceSheetErrorImport_Item>
+                     <urn:item>
+                        <urn:Id>INV_Error-499</urn:Id>
+                        <urn:NumInSet>1</urn:NumInSet>
+                        <urn:Type>E</urn:Type>
+                        <urn:Date>...</urn:Date>
+                        <urn:ErrorMessage>Error in document: BKPFF $ Q8JCLNT002</urn:ErrorMessage>
+                        <urn:ErrorNumber>609</urn:ErrorNumber>
+                        <urn:ErrorSAPField>Addon</urn:ErrorSAPField>
+                        <urn:ErrorSAPId>RW</urn:ErrorSAPId>
+                        <urn:ErrorClient>002</urn:ErrorClient>
+                        <urn:ErrorSAPModule>2</urn:ErrorSAPModule>
+                        <urn:ErrorSAPScreen>1</urn:ErrorSAPScreen>
+                        <urn:ErrorSystem>Q8JCLNT002</urn:ErrorSystem>
+                     </urn:item>
+                     <urn:item>
+                        <urn:Id>INV_Error-499</urn:Id>
+                        <urn:NumInSet>2</urn:NumInSet>
+                        <urn:Type>E</urn:Type>
+                        <urn:Date>...</urn:Date>
+                        <urn:ErrorMessage>Required field VENDOR_NO was not transferred in parameter ACCOUNTPAYABLE</urn:ErrorMessage>
+                        <urn:ErrorNumber>602</urn:ErrorNumber>
+                        <urn:ErrorSAPField>VENDOR_NO</urn:ErrorSAPField>
+                        <urn:ErrorSAPId>RW</urn:ErrorSAPId>
+                        <urn:ErrorClient>002</urn:ErrorClient>
+                        <urn:ErrorSAPModule>4</urn:ErrorSAPModule>
+                        <urn:ErrorSAPScreen>3</urn:ErrorSAPScreen>
+                        <urn:ErrorSystem>Q8JCLNT002</urn:ErrorSystem>
+                        <urn:ReqLineNumber>123</urn:ReqLineNumber>
+                     </urn:item>
+                  </urn:ServiceSheetError_ServiceSheetErrorImport_Item>
+               </urn:ServiceSheetStatusAsyncResponsePullRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetStatusAsyncResponsePullRequest_cXML_0000_ServiceSheetStatusAsyncResponsePullRequest.xspec">
+      <label>ServiceSheetStatusResponseMulti</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/ServiceSheetStatusAsyncResponsePullRequest/ServiceSheetStatusAsyncResponsePullRequestBM_multi.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:ServiceSheetStatusAsyncResponsePullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                            partition="prealm_140"
+                                                            variant="vrealm_140">
+               <urn:ServiceSheetStatus_Item>
+                  <urn:item>
+                     <urn:UniqueName>SS830</urn:UniqueName>
+                     <urn:ServiceSheetStatus_Item>
+                        <urn:item>
+                           <urn:objectName208>objectName209</urn:objectName208>
+                           <urn:objectName212>objectName213</urn:objectName212>
+                        </urn:item>
+                     </urn:ServiceSheetStatus_Item>
+                  </urn:item>
+               </urn:ServiceSheetStatus_Item>
+            </urn:ServiceSheetStatusAsyncResponsePullRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>ServiceSheetStatusResponseMulti</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:ServiceSheetStatusAsyncResponsePullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                               partition="prealm_140"
+                                                               variant="vrealm_140">
+                  <urn:ServiceSheetStatus_Item>
+                     <urn:item>
+                        <urn:UniqueName>SS830</urn:UniqueName>
+                        <urn:ServiceSheetStatus_Item>
+                           <urn:item>
+                              <urn:objectName208>objectName209</urn:objectName208>
+                              <urn:objectName212>objectName213</urn:objectName212>
+                           </urn:item>
+                        </urn:ServiceSheetStatus_Item>
+                     </urn:item>
+                  </urn:ServiceSheetStatus_Item>
+               </urn:ServiceSheetStatusAsyncResponsePullRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

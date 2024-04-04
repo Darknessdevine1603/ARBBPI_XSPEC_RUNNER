@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_RFQConfirmation_S4HANA_0000_RFQConfirmationS4Request.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_RFQConfirmation_S4HANA_0000_RFQConfirmationS4Request.xsl"
+        date="2023-04-27T15:45:40.847349+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_RFQConfirmation_S4HANA_0000_RFQConfirmationS4Request.xspec">
+      <label>RFQConfirmation_Acknowledged</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/RFQConfirmation/RFQConfirmation_Acknowledged_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:RFQConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <ID>FA163E9771F91EEC8080DA12933C60E2</ID>
+                  <UUID/>
+                  <ReferenceID/>
+                  <ReferenceUUID/>
+                  <CreationDateTime>2021-08-18T09:29:41Z</CreationDateTime>
+                  <TestDataIndicator/>
+                  <ReconciliationIndicator/>
+                  <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+               </MessageHeader>
+               <RFQConfirmation>
+                  <RequestForQuotationID>7000003327</RequestForQuotationID>
+                  <ExternalDocumentType>ESR</ExternalDocumentType>
+                  <ExternalDocumentID>SR2821284</ExternalDocumentID>
+                  <ExternalSystemID>0LOI36K</ExternalSystemID>
+                  <LogMessage>
+                     <LogMessageCode/>
+                     <LogMessageClass/>
+                     <LogMessageSeverityCode>S</LogMessageSeverityCode>
+                     <LogMessageText>Acknowledged</LogMessageText>
+                  </LogMessage>
+               </RFQConfirmation>
+            </n0:RFQConfirmationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>RFQConfirmation_Acknowledged</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:RFQConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <ID>FA163E9771F91EEC8080DA12933C60E2</ID>
+                     <UUID/>
+                     <ReferenceID/>
+                     <ReferenceUUID/>
+                     <CreationDateTime>2021-08-18T09:29:41Z</CreationDateTime>
+                     <TestDataIndicator/>
+                     <ReconciliationIndicator/>
+                     <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <RFQConfirmation>
+                     <RequestForQuotationID>7000003327</RequestForQuotationID>
+                     <ExternalDocumentType>ESR</ExternalDocumentType>
+                     <ExternalDocumentID>SR2821284</ExternalDocumentID>
+                     <ExternalSystemID>0LOI36K</ExternalSystemID>
+                     <LogMessage>
+                        <LogMessageCode/>
+                        <LogMessageClass/>
+                        <LogMessageSeverityCode>S</LogMessageSeverityCode>
+                        <LogMessageText>Acknowledged</LogMessageText>
+                     </LogMessage>
+                  </RFQConfirmation>
+               </n0:RFQConfirmationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_RFQConfirmation_S4HANA_0000_RFQConfirmationS4Request.xspec">
+      <label>RFQConfirmation_No_SR_ID</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/RFQConfirmation/RFQConfirmation_No_SR_ID_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:RFQConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <ID>FA163E9771F91EEC8080CDB06DE2C0D9</ID>
+                  <UUID/>
+                  <ReferenceID/>
+                  <ReferenceUUID/>
+                  <CreationDateTime>2021-08-18T09:26:55Z</CreationDateTime>
+                  <TestDataIndicator/>
+                  <ReconciliationIndicator/>
+                  <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+               </MessageHeader>
+               <RFQConfirmation>
+                  <RequestForQuotationID>7000003326</RequestForQuotationID>
+                  <ExternalDocumentType>ESR</ExternalDocumentType>
+                  <ExternalDocumentID>NO_SR_ID</ExternalDocumentID>
+                  <ExternalSystemID>0LOI36K</ExternalSystemID>
+                  <LogMessage>
+                     <LogMessageCode/>
+                     <LogMessageClass/>
+                     <LogMessageSeverityCode>E</LogMessageSeverityCode>
+                     <LogMessageText>The request could not be handled, a fatal error occurred. Error while
+                creating the Sourcing Request</LogMessageText>
+                  </LogMessage>
+               </RFQConfirmation>
+            </n0:RFQConfirmationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>RFQConfirmation_No_SR_ID</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:RFQConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <ID>FA163E9771F91EEC8080CDB06DE2C0D9</ID>
+                     <UUID/>
+                     <ReferenceID/>
+                     <ReferenceUUID/>
+                     <CreationDateTime>2021-08-18T09:26:55Z</CreationDateTime>
+                     <TestDataIndicator/>
+                     <ReconciliationIndicator/>
+                     <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <RFQConfirmation>
+                     <RequestForQuotationID>7000003326</RequestForQuotationID>
+                     <ExternalDocumentType>ESR</ExternalDocumentType>
+                     <ExternalDocumentID>NO_SR_ID</ExternalDocumentID>
+                     <ExternalSystemID>0LOI36K</ExternalSystemID>
+                     <LogMessage>
+                        <LogMessageCode/>
+                        <LogMessageClass/>
+                        <LogMessageSeverityCode>E</LogMessageSeverityCode>
+                        <LogMessageText>The request could not be handled, a fatal error occurred. Error while
+                creating the Sourcing Request</LogMessageText>
+                     </LogMessage>
+                  </RFQConfirmation>
+               </n0:RFQConfirmationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

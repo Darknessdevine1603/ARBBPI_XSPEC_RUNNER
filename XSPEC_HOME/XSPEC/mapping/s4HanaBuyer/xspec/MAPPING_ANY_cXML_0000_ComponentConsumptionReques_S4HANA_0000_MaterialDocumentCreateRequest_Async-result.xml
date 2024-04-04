@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ComponentConsumptionReques_S4HANA_0000_MaterialDocumentCreateRequest_Async.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ComponentConsumptionReques_S4HANA_0000_MaterialDocumentCreateRequest_Async.xsl"
+        date="2023-04-27T15:46:36.558464+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ComponentConsumptionReques_S4HANA_0000_MaterialDocumentCreateRequest_Async.xspec">
+      <label>Scenario 1 for ConsumentConsumption</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/ComponentConsumption/4500040515_CD_ComponentConsumption_cXML.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:MaterialDocumentCreateRequest_Async xmlns:n0="http://sap.com/xi/APPL/Global2">
+               <MessageHeader>
+                  <ID>1623160029568-7419129890575455079</ID>
+                  <CreationDateTime>2021-06-08T06:47:09-07:00</CreationDateTime>
+                  <ReconciliationIndicator>false</ReconciliationIndicator>
+                  <SenderBusinessSystemID>Ariba_Network</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>AN02005083674-T</RecipientBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>0LOALS1</InternalID>
+                  </SenderParty>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <MaterialDocument>
+                  <GoodsMovementCode>03</GoodsMovementCode>
+                  <PostingDate>2021-06-08</PostingDate>
+                  <ReferenceDocument>4500040515</ReferenceDocument>
+                  <MaterialDocumentItem>
+                     <GoodsMovementType>543</GoodsMovementType>
+                     <Batch>cb1</Batch>
+                     <BatchBySupplier>b1</BatchBySupplier>
+                     <QuantityInEntryUnit>25.0</QuantityInEntryUnit>
+                     <Customer>SUBCONMTL4</Customer>
+                     <Supplier>Non-Catalog-Item</Supplier>
+                     <PurchaseOrder>4500040515</PurchaseOrder>
+                     <PurchaseOrderItem>10</PurchaseOrderItem>
+                  </MaterialDocumentItem>
+                  <MaterialDocumentItem>
+                     <GoodsMovementType>543</GoodsMovementType>
+                     <Batch>cb2</Batch>
+                     <BatchBySupplier>b2</BatchBySupplier>
+                     <QuantityInEntryUnit>25.0</QuantityInEntryUnit>
+                     <Customer>SUBCONMTL4</Customer>
+                     <Supplier>Non-Catalog-Item</Supplier>
+                     <PurchaseOrder>4500040515</PurchaseOrder>
+                     <PurchaseOrderItem>10</PurchaseOrderItem>
+                  </MaterialDocumentItem>
+                  <MaterialDocumentItem>
+                     <GoodsMovementType>543</GoodsMovementType>
+                     <Batch>cb3</Batch>
+                     <BatchBySupplier>b3</BatchBySupplier>
+                     <QuantityInEntryUnit>50.0</QuantityInEntryUnit>
+                     <Customer>SUBCONMTL4</Customer>
+                     <Supplier>Non-Catalog-Item</Supplier>
+                     <PurchaseOrder>4500040515</PurchaseOrder>
+                     <PurchaseOrderItem>10</PurchaseOrderItem>
+                  </MaterialDocumentItem>
+               </MaterialDocument>
+            </n0:MaterialDocumentCreateRequest_Async>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ComponentConsumption</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:MaterialDocumentCreateRequest_Async xmlns:n0="http://sap.com/xi/APPL/Global2">
+                  <MessageHeader>
+                     <ID>1623160029568-7419129890575455079</ID>
+                     <CreationDateTime>2021-06-08T06:47:09-07:00</CreationDateTime>
+                     <ReconciliationIndicator>false</ReconciliationIndicator>
+                     <SenderBusinessSystemID>Ariba_Network</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>AN02005083674-T</RecipientBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>0LOALS1</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <MaterialDocument>
+                     <GoodsMovementCode>03</GoodsMovementCode>
+                     <PostingDate>2021-06-08</PostingDate>
+                     <ReferenceDocument>4500040515</ReferenceDocument>
+                     <MaterialDocumentItem>
+                        <GoodsMovementType>543</GoodsMovementType>
+                        <Batch>cb1</Batch>
+                        <BatchBySupplier>b1</BatchBySupplier>
+                        <QuantityInEntryUnit>25.0</QuantityInEntryUnit>
+                        <Customer>SUBCONMTL4</Customer>
+                        <Supplier>Non-Catalog-Item</Supplier>
+                        <PurchaseOrder>4500040515</PurchaseOrder>
+                        <PurchaseOrderItem>10</PurchaseOrderItem>
+                     </MaterialDocumentItem>
+                     <MaterialDocumentItem>
+                        <GoodsMovementType>543</GoodsMovementType>
+                        <Batch>cb2</Batch>
+                        <BatchBySupplier>b2</BatchBySupplier>
+                        <QuantityInEntryUnit>25.0</QuantityInEntryUnit>
+                        <Customer>SUBCONMTL4</Customer>
+                        <Supplier>Non-Catalog-Item</Supplier>
+                        <PurchaseOrder>4500040515</PurchaseOrder>
+                        <PurchaseOrderItem>10</PurchaseOrderItem>
+                     </MaterialDocumentItem>
+                     <MaterialDocumentItem>
+                        <GoodsMovementType>543</GoodsMovementType>
+                        <Batch>cb3</Batch>
+                        <BatchBySupplier>b3</BatchBySupplier>
+                        <QuantityInEntryUnit>50.0</QuantityInEntryUnit>
+                        <Customer>SUBCONMTL4</Customer>
+                        <Supplier>Non-Catalog-Item</Supplier>
+                        <PurchaseOrder>4500040515</PurchaseOrder>
+                        <PurchaseOrderItem>10</PurchaseOrderItem>
+                     </MaterialDocumentItem>
+                  </MaterialDocument>
+               </n0:MaterialDocumentCreateRequest_Async>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

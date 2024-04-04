@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_cXML_0000_ChangeOrderRequest_OAGIS_9.2_ProcessPurchaseOrderChange.xsl">
+    <x:scenario label="Order Request Multi Comments">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'081466849T'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequestMultiComments_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequestMultiComments_AM.dat"
+            select="element()" label="Order Request Multi Comments"/>
+    </x:scenario>
+    <x:scenario label="Order Request with Attachment">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag" select="'Yes'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_RIT4_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_RIT4_AM.dat"
+            select="element()" label="Order Request with Attachment"/>
+    </x:scenario>
+    <x:scenario label="Order Request Delete">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag" select="'Yes'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_RIT5_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_RIT5_AM.dat"
+            select="element()" label="Order Request Delete"/>
+    </x:scenario>
+    <x:scenario label="Order Request Change Copy PO ">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag" select="'Yes'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_RIT6_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_RIT6_AM.dat"
+            select="element()" label="Order Request Change Copy PO"/>
+    </x:scenario>
+    <x:scenario label="Order Request Change PO">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_RIT6_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_RIT6A_AM.dat"
+            select="element()" label="Order Request Change PO"/>
+    </x:scenario>
+    <x:scenario label="Order Request Change">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_RIT7_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_RIT7_AM.dat"
+            select="element()" label="Order Request Change"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/PIDX/MAPPING_ANY_PIDX_1.61_AdvancedShipNotice_cXML_0000_ShipNoticeRequest.xsl">
+    <x:scenario label="Ship Notice Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>               
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ShipNotice/ShipNotice_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ShipNotice/ShipNotice_AM.dat"
+            select="element()" label="Ship Notice Request"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request with Attachments">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>     
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>               
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ShipNotice/ShipNoticeAttach_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ShipNotice/ShipNoticeAttach_AM.dat"
+            select="element()" label="Ship Notice Request with Attachments"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request Buyer">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>               
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ShipNotice/ShipNoticeBuyer_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ShipNotice/ShipNoticeBuyer_AM.dat"
+            select="element()" label="Ship Notice Request Buyer"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request Supplier">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>               
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ShipNotice/ShipNoticeSupplier_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ShipNotice/ShipNoticeSupplier_AM.dat"
+            select="element()" label="Ship Notice Request Supplier"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request DUNS+4">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>               
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ShipNotice/ShipNoticeDUNS+4_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ShipNotice/ShipNoticeDUNS+4_AM.dat"
+            select="element()" label="Ship Notice Request DUNS+4"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request DUNS">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>               
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ShipNotice/ShipNoticeDUNS_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ShipNotice/ShipNoticeDUNS_AM.dat"
+            select="element()" label="Ship Notice Request DUNS"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request Other">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>               
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ShipNotice/ShipNoticeOther_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ShipNotice/ShipNoticeOther_AM.dat"
+            select="element()" label="Ship Notice Request Other"/>
+    </x:scenario>
+</x:description>

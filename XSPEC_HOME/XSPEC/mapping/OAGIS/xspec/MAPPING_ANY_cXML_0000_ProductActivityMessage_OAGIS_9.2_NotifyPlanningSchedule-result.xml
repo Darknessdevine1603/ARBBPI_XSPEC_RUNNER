@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_cXML_0000_ProductActivityMessage_OAGIS_9.2_NotifyPlanningSchedule.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/OAGIS/MAPPING_ANY_cXML_0000_ProductActivityMessage_OAGIS_9.2_NotifyPlanningSchedule.xsl"
+        date="2023-04-27T15:59:07.00554+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_cXML_0000_ProductActivityMessage_OAGIS_9.2_NotifyPlanningSchedule.xspec">
+      <label>Product Activity Message Notify Planning Schedule</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/OAGIS/ProductActivity/ProductActivity_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <NotifyPlanningSchedule>
+               <ApplicationArea>
+                  <Sender>
+                     <LogicalID>081466849T</LogicalID>
+                     <TaskID>FORECAST</TaskID>
+                  </Sender>
+                  <CreationDateTime>2015-07-20T17:48:37-07:00</CreationDateTime>
+                  <BODID>a013022127-b532bb5b07a1</BODID>
+               </ApplicationArea>
+               <DataArea>
+                  <Notify>
+                     <ActionCriteria>
+                        <ActionExpression actionCode="Add">Create</ActionExpression>
+                        <ChangeStatus>
+                           <Code name="Priority">Normal</Code>
+                        </ChangeStatus>
+                     </ActionCriteria>
+                  </Notify>
+                  <PlanningSchedule>
+                     <PlanningScheduleHeader>
+                        <DocumentReference>
+                           <DocumentDateTime>2017-04-24T17:43:02+00:00</DocumentDateTime>
+                        </DocumentReference>
+                        <Party>
+                           <PartyIDs>
+                              <ID>658731930T</ID>
+                           </PartyIDs>
+                        </Party>
+                        <ShipToParty>
+                           <PartyIDs>
+                              <ID>081466849T</ID>
+                           </PartyIDs>
+                        </ShipToParty>
+                     </PlanningScheduleHeader>
+                     <PlanningScheduleLine>
+                        <LineNumber>1</LineNumber>
+                        <ManufacturingItem>
+                           <CustomerItemID>
+                              <ID>QH2-00001</ID>
+                           </CustomerItemID>
+                           <SupplierItemID>
+                              <ID>123</ID>
+                           </SupplierItemID>
+                           <Description languageID="en"/>
+                           <LeadTimeDuration>P5D</LeadTimeDuration>
+                        </ManufacturingItem>
+                        <ShipToParty>
+                           <PartyIDs>
+                              <ID>4260</ID>
+                           </PartyIDs>
+                           <Name>CEVA Logistics</Name>
+                           <Location>
+                              <Name>CEVA Logistics</Name>
+                           </Location>
+                        </ShipToParty>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-03-07T00:00:00-08:00</StartDateTime>
+                              <EndDateTime>2016-03-07T00:00:00-08:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">1000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-03-14T00:00:00-07:00</StartDateTime>
+                              <EndDateTime>2016-03-14T00:00:00-07:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">2000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-03-21T00:00:00-07:00</StartDateTime>
+                              <EndDateTime>2016-03-21T00:00:00-07:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">3000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-03-28T00:00:00-07:00</StartDateTime>
+                              <EndDateTime>2016-03-28T00:00:00-07:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">4000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-04-04T00:00:00-07:00</StartDateTime>
+                              <EndDateTime>2016-04-04T00:00:00-07:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">5000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                     </PlanningScheduleLine>
+                  </PlanningSchedule>
+               </DataArea>
+            </NotifyPlanningSchedule>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="false">
+         <label>Product Activity Message Notify Planning Schedule</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <NotifyPlanningSchedule>
+                  <ApplicationArea>
+                     <Sender>
+                        <LogicalID>081466849T</LogicalID>
+                        <TaskID>FORECAST</TaskID>
+                     </Sender>
+                     <CreationDateTime>2015-07-20T17:48:37-07:00</CreationDateTime>
+                     <BODID>a013022127-b532bb5b07a1</BODID>
+                  </ApplicationArea>
+                  <DataArea>
+                     <Notify>
+                        <ActionCriteria>
+                           <ActionExpression actionCode="Add">Create</ActionExpression>
+                           <ChangeStatus>
+                              <Code name="Priority">Normal</Code>
+                           </ChangeStatus>
+                        </ActionCriteria>
+                     </Notify>
+                     <PlanningSchedule>
+                        <PlanningScheduleHeader>
+                           <DocumentReference>
+                              <DocumentDateTime>2017-04-24T17:43:02+00:00</DocumentDateTime>
+                           </DocumentReference>
+                           <Party>
+                              <PartyIDs>
+                                 <ID>658731930T</ID>
+                              </PartyIDs>
+                           </Party>
+                           <ShipToParty>
+                              <PartyIDs>
+                                 <ID>081466849T</ID>
+                              </PartyIDs>
+                           </ShipToParty>
+                        </PlanningScheduleHeader>
+                        <PlanningScheduleLine>
+                           <LineNumber>1</LineNumber>
+                           <ManufacturingItem>
+                              <CustomerItemID>
+                                 <ID>QH2-00001</ID>
+                              </CustomerItemID>
+                              <SupplierItemID>
+                                 <ID>123</ID>
+                              </SupplierItemID>
+                              <Description languageID="en"/>
+                              <LeadTimeDuration>P5D</LeadTimeDuration>
+                           </ManufacturingItem>
+                           <ShipToParty>
+                              <PartyIDs>
+                                 <ID schemeName="locationTo">4260</ID>
+                              </PartyIDs>
+                              <Name>CEVA Logistics</Name>
+                              <Location>
+                                 <Name>CEVA Logistics</Name>
+                              </Location>
+                           </ShipToParty>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-03-07T00:00:00-08:00</StartDateTime>
+                                 <EndDateTime>2016-03-07T00:00:00-08:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">1000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-03-14T00:00:00-07:00</StartDateTime>
+                                 <EndDateTime>2016-03-14T00:00:00-07:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">2000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-03-21T00:00:00-07:00</StartDateTime>
+                                 <EndDateTime>2016-03-21T00:00:00-07:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">3000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-03-28T00:00:00-07:00</StartDateTime>
+                                 <EndDateTime>2016-03-28T00:00:00-07:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">4000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-04-04T00:00:00-07:00</StartDateTime>
+                                 <EndDateTime>2016-04-04T00:00:00-07:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">5000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                        </PlanningScheduleLine>
+                     </PlanningSchedule>
+                  </DataArea>
+               </NotifyPlanningSchedule>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_cXML_0000_ProductActivityMessage_OAGIS_9.2_NotifyPlanningSchedule.xspec">
+      <label>Product Activity Message Notify Planning Schedule</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/OAGIS/ProductActivity/ProductActivityTimeSeries_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <NotifyPlanningSchedule>
+               <ApplicationArea>
+                  <Sender>
+                     <LogicalID>081466849T</LogicalID>
+                     <TaskID>FORECAST</TaskID>
+                  </Sender>
+                  <CreationDateTime>2015-07-20T17:48:37-07:00</CreationDateTime>
+                  <BODID>a013022127-b532bb5b07a1</BODID>
+               </ApplicationArea>
+               <DataArea>
+                  <Notify>
+                     <ActionCriteria>
+                        <ActionExpression actionCode="Add">Create</ActionExpression>
+                        <ChangeStatus>
+                           <Code name="Priority">Normal</Code>
+                        </ChangeStatus>
+                     </ActionCriteria>
+                  </Notify>
+                  <PlanningSchedule>
+                     <PlanningScheduleHeader>
+                        <DocumentReference>
+                           <DocumentDateTime>2017-04-24T17:43:02+00:00</DocumentDateTime>
+                        </DocumentReference>
+                        <Party>
+                           <PartyIDs>
+                              <ID>658731930T</ID>
+                           </PartyIDs>
+                        </Party>
+                        <ShipToParty>
+                           <PartyIDs>
+                              <ID>081466849T</ID>
+                           </PartyIDs>
+                        </ShipToParty>
+                     </PlanningScheduleHeader>
+                     <PlanningScheduleLine>
+                        <LineNumber>1</LineNumber>
+                        <DocumentReference>
+                           <Status>
+                              <Description type="domain" languageID="en">domain</Description>
+                           </Status>
+                        </DocumentReference>
+                        <ManufacturingItem>
+                           <CustomerItemID>
+                              <ID>QH2-00001</ID>
+                           </CustomerItemID>
+                           <SupplierItemID>
+                              <ID>123</ID>
+                           </SupplierItemID>
+                           <Description languageID="en">CEVA Logistics</Description>
+                           <LeadTimeDuration>P5D</LeadTimeDuration>
+                        </ManufacturingItem>
+                        <ShipToParty>
+                           <PartyIDs>
+                              <ID>4260</ID>
+                           </PartyIDs>
+                           <Name>CEVA Logistics</Name>
+                           <Location>
+                              <Name>CEVA Logistics</Name>
+                           </Location>
+                        </ShipToParty>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-03-07T00:00:00-08:00</StartDateTime>
+                              <EndDateTime>2016-03-07T00:00:00-08:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">1000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-03-14T00:00:00-07:00</StartDateTime>
+                              <EndDateTime>2016-03-14T00:00:00-07:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">2000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-03-21T00:00:00-07:00</StartDateTime>
+                              <EndDateTime>2016-03-21T00:00:00-07:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">3000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-03-28T00:00:00-07:00</StartDateTime>
+                              <EndDateTime>2016-03-28T00:00:00-07:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">4000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                        <PlanningScheduleDetail>
+                           <EffectiveTimePeriod>
+                              <StartDateTime>2016-04-04T00:00:00-07:00</StartDateTime>
+                              <EndDateTime>2016-04-04T00:00:00-07:00</EndDateTime>
+                           </EffectiveTimePeriod>
+                           <ItemQuantity unitCode="EA">5000.000</ItemQuantity>
+                        </PlanningScheduleDetail>
+                     </PlanningScheduleLine>
+                  </PlanningSchedule>
+               </DataArea>
+            </NotifyPlanningSchedule>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="false">
+         <label>Product Activity Message Notify Planning Schedule</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <NotifyPlanningSchedule>
+                  <ApplicationArea>
+                     <Sender>
+                        <LogicalID>081466849T</LogicalID>
+                        <TaskID>FORECAST</TaskID>
+                     </Sender>
+                     <CreationDateTime>2015-07-20T17:48:37-07:00</CreationDateTime>
+                     <BODID>a013022127-b532bb5b07a1</BODID>
+                  </ApplicationArea>
+                  <DataArea>
+                     <Notify>
+                        <ActionCriteria>
+                           <ActionExpression actionCode="Add">Create</ActionExpression>
+                           <ChangeStatus>
+                              <Code name="Priority">Normal</Code>
+                           </ChangeStatus>
+                        </ActionCriteria>
+                     </Notify>
+                     <PlanningSchedule>
+                        <PlanningScheduleHeader>
+                           <DocumentReference>
+                              <DocumentDateTime>2017-04-24T17:43:02+00:00</DocumentDateTime>
+                           </DocumentReference>
+                           <Party>
+                              <PartyIDs>
+                                 <ID>658731930T</ID>
+                              </PartyIDs>
+                           </Party>
+                           <ShipToParty>
+                              <PartyIDs>
+                                 <ID>081466849T</ID>
+                              </PartyIDs>
+                           </ShipToParty>
+                        </PlanningScheduleHeader>
+                        <PlanningScheduleLine>
+                           <LineNumber>1</LineNumber>
+                           <DocumentReference>
+                              <Status>
+                                 <Description type="domain" languageID="en">domain</Description>
+                              </Status>
+                           </DocumentReference>
+                           <ManufacturingItem>
+                              <CustomerItemID>
+                                 <ID>QH2-00001</ID>
+                              </CustomerItemID>
+                              <SupplierItemID>
+                                 <ID>123</ID>
+                              </SupplierItemID>
+                              <Description languageID="en">CEVA Logistics</Description>
+                              <LeadTimeDuration>P5D</LeadTimeDuration>
+                           </ManufacturingItem>
+                           <ShipToParty>
+                              <PartyIDs>
+                                 <ID schemeName="locationTo">4260</ID>
+                              </PartyIDs>
+                              <Name>CEVA Logistics</Name>
+                              <Location>
+                                 <Name>CEVA Logistics</Name>
+                              </Location>
+                           </ShipToParty>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-03-07T00:00:00-08:00</StartDateTime>
+                                 <EndDateTime>2016-03-07T00:00:00-08:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">1000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-03-14T00:00:00-07:00</StartDateTime>
+                                 <EndDateTime>2016-03-14T00:00:00-07:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">2000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-03-21T00:00:00-07:00</StartDateTime>
+                                 <EndDateTime>2016-03-21T00:00:00-07:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">3000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-03-28T00:00:00-07:00</StartDateTime>
+                                 <EndDateTime>2016-03-28T00:00:00-07:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">4000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime>2016-04-04T00:00:00-07:00</StartDateTime>
+                                 <EndDateTime>2016-04-04T00:00:00-07:00</EndDateTime>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity unitCode="EA">5000.000</ItemQuantity>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <DocumentReference type=""/>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime/>
+                                 <EndDateTime/>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity/>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <DocumentReference type=""/>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime/>
+                                 <EndDateTime/>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity/>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <DocumentReference type=""/>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime/>
+                                 <EndDateTime/>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity/>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <DocumentReference type=""/>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime/>
+                                 <EndDateTime/>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity/>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <DocumentReference type=""/>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime/>
+                                 <EndDateTime/>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity/>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <DocumentReference type=""/>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime/>
+                                 <EndDateTime/>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity/>
+                           </PlanningScheduleDetail>
+                           <PlanningScheduleDetail>
+                              <DocumentReference type=""/>
+                              <EffectiveTimePeriod>
+                                 <StartDateTime/>
+                                 <EndDateTime/>
+                              </EffectiveTimePeriod>
+                              <ItemQuantity/>
+                           </PlanningScheduleDetail>
+                        </PlanningScheduleLine>
+                     </PlanningSchedule>
+                  </DataArea>
+               </NotifyPlanningSchedule>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://sap.com/xi/ARBCIG1" xmlns="http://sap.com/xi/ARBCIG1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:simpleType name="AgencyIdentificationCode">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="3"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="Amount">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+     <xsd:extension base="Amount.Content">
+      <xsd:attribute name="currencyCode" use="required" type="CurrencyCode"/>
+     </xsd:extension>
+    </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:simpleType name="Amount.Content">
+    <xsd:restriction base="xsd:decimal">
+     <xsd:totalDigits value="28"/>
+     <xsd:fractionDigits value="6"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="AribaComment">
+    <xsd:sequence>
+     <xsd:element name="Item" minOccurs="0" maxOccurs="unbounded">
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="TextObject" type="TextObject" minOccurs="0"/>
+        <xsd:element name="TextName" type="TextName" minOccurs="0"/>
+        <xsd:element name="TextID" type="TextID" minOccurs="0"/>
+        <xsd:element name="TextLang" type="LanguageCode" minOccurs="0"/>
+        <xsd:element name="ItemNumber" type="BusinessTransactionDocumentItemID" minOccurs="0"/>
+        <xsd:element name="AribaLine" minOccurs="0" maxOccurs="unbounded">
+         <xsd:complexType>
+          <xsd:sequence>
+           <xsd:element name="TextFormat" type="TextFormat" minOccurs="0"/>
+           <xsd:element name="TextLine" type="TextTDLine" minOccurs="0"/>
+          </xsd:sequence>
+         </xsd:complexType>
+        </xsd:element>
+       </xsd:sequence>
+      </xsd:complexType>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="AribaExtension">
+    <xsd:attribute name="objectName" type="xsd:string"/>
+    <xsd:attribute name="objectKey" type="xsd:string"/>
+    <xsd:attribute name="fieldName" type="xsd:string"/>
+    <xsd:attribute name="fieldValue" type="xsd:string"/>
+   </xsd:complexType>
+   <xsd:complexType name="Attachments">
+    <xsd:sequence>
+     <xsd:element name="Item" minOccurs="0" maxOccurs="unbounded">
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="FileName" type="xsd:string"/>
+        <xsd:element name="Charset" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="LineNumber" type="BusinessTransactionDocumentItemID" minOccurs="0"/>
+        <xsd:element name="ContentId" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="ContentType" type="xsd:string"/>
+        <xsd:element name="ContentLength" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="Content" type="xsd:string"/>
+       </xsd:sequence>
+      </xsd:complexType>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:simpleType name="BusinessObjectTypeCode">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="5"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="BusinessSystemID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="60"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="BusinessTransactionDocumentItemGroupID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="10"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="BusinessTransactionDocumentItemID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="10"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="BusinessTransactionDocumentType">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="CountryCode">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="3"/>
+     <xsd:minLength value="2"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CurrencyCode">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:length value="3"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="Date">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:date">
+     <xsd:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DecimalValue">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:decimal">
+     <xsd:totalDigits value="31"/>
+     <xsd:fractionDigits value="14"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DueCategoryCode">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:length value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="EmailAddress">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="241"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="GeneralLedgerAccountID">
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="10"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="Indicator">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
+   <xsd:complexType name="InternalOrderID">
+    <xsd:simpleContent>
+     <xsd:extension base="InternalOrderID.Content">
+      <xsd:attribute name="schemeAgencyID">
+       <xsd:simpleType>
+        <xsd:restriction base="xsd:token">
+         <xsd:maxLength value="60"/>
+         <xsd:minLength value="1"/>
+        </xsd:restriction>
+       </xsd:simpleType>
+      </xsd:attribute>
+     </xsd:extension>
+    </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:simpleType name="InternalOrderID.Content">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="12"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LANGUAGEINDEPENDENT_MEDIUM_Name">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="40"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LanguageCode">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:language">
+     <xsd:maxLength value="9"/>
+     <xsd:minLength value="2"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="MEDIUM_Description">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+     <xsd:extension base="MEDIUM_Description.Content">
+      <xsd:attribute name="languageCode" type="LanguageCode"/>
+     </xsd:extension>
+    </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:simpleType name="MEDIUM_Description.Content">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="80"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="MaterialGroup">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="9"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="MaterialLong">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="40"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="MeasureUnitCode">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="3"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="NOSC_ProjectWorkBreakdownStructureElementID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="32"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="OrganisationalCentreID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="20"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="Percent">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:decimal">
+     <xsd:totalDigits value="16"/>
+     <xsd:fractionDigits value="6"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PhoneNumberAreaID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="10"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="PlantID">
+    <xsd:simpleContent>
+     <xsd:extension base="PlantID.Content">
+      <xsd:attribute name="schemeAgencyID">
+       <xsd:simpleType>
+        <xsd:restriction base="xsd:token">
+         <xsd:maxLength value="60"/>
+         <xsd:minLength value="1"/>
+        </xsd:restriction>
+       </xsd:simpleType>
+      </xsd:attribute>
+     </xsd:extension>
+    </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:simpleType name="PlantID.Content">
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="4"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PostalCode">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="10"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ProductCategoryPartyID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="40"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ProductPartyID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="60"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="ProjectID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+     <xsd:extension base="ProjectID.Content">
+      <xsd:attribute name="schemeID">
+       <xsd:simpleType>
+        <xsd:restriction base="xsd:token">
+         <xsd:maxLength value="60"/>
+         <xsd:minLength value="1"/>
+        </xsd:restriction>
+       </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="schemeAgencyID">
+       <xsd:simpleType>
+        <xsd:restriction base="xsd:token">
+         <xsd:maxLength value="60"/>
+         <xsd:minLength value="1"/>
+        </xsd:restriction>
+       </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="schemeAgencySchemeAgencyID" type="AgencyIdentificationCode"/>
+     </xsd:extension>
+    </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:simpleType name="ProjectID.Content">
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="32"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="Quantity">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+     <xsd:extension base="Quantity.Content">
+      <xsd:attribute name="unitCode" type="MeasureUnitCode"/>
+     </xsd:extension>
+    </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:simpleType name="Quantity.Content">
+    <xsd:restriction base="xsd:decimal">
+     <xsd:totalDigits value="31"/>
+     <xsd:fractionDigits value="14"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="Requisition">
+    <xsd:sequence>
+     <xsd:element name="Header" maxOccurs="unbounded">
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="DocumentID" type="BusinessTransactionDocumentItemID"/>
+        <xsd:element name="DocumentType" type="BusinessTransactionDocumentType"/>
+        <xsd:element name="DocumentDate" type="Date"/>
+        <xsd:element name="SystemID" type="BusinessSystemID"/>
+        <xsd:element name="AribaExtension" type="AribaExtension" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element name="ItemDetails" minOccurs="0" maxOccurs="unbounded">
+         <xsd:complexType>
+          <xsd:sequence>
+           <xsd:element name="ItemID" type="BusinessTransactionDocumentItemID"/>
+           <xsd:element name="PurchasingGroup" type="BusinessTransactionDocumentItemGroupID"/>
+           <xsd:element name="CreatedBy" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="CreatedByStreet" type="StreetName"/>
+           <xsd:element name="CreatedByCity" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="CreatedByState" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="CreatedByPcode" type="PostalCode"/>
+           <xsd:element name="CreatedByCountry" type="CountryCode"/>
+           <xsd:element name="CreatedByIsoCountry" type="CountryCode"/>
+           <xsd:element name="CreatedByPhone" type="TelephoneNumber"/>
+           <xsd:element name="CreatedByFax" type="TelephoneNumber"/>
+           <xsd:element name="CreatedByName" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="CreatedByLang" type="LanguageCode"/>
+           <xsd:element name="CreatedByEmail" type="EmailAddress"/>
+           <xsd:element name="PreqName" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="RequesterStreet" type="StreetName"/>
+           <xsd:element name="RequesterCity" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="RequesterState" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="RequesterPcode" type="PostalCode"/>
+           <xsd:element name="RequesterCountry" type="CountryCode"/>
+           <xsd:element name="RequesterIsoCountry" type="CountryCode"/>
+           <xsd:element name="RequesterPhone" type="TelephoneNumber"/>
+           <xsd:element name="RequesterFax" type="TelephoneNumber"/>
+           <xsd:element name="RequesterName" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="RequesterLang" type="LanguageCode"/>
+           <xsd:element name="RequesterEmail" type="EmailAddress"/>
+           <xsd:element name="Material" type="MaterialLong"/>
+           <xsd:element name="VendorMaterial" type="ProductPartyID"/>
+           <xsd:element name="FixedVendor" type="ProductCategoryPartyID"/>
+           <xsd:element name="DESVendor" type="ProductCategoryPartyID"/>
+           <xsd:element name="Plant" type="PlantID"/>
+           <xsd:element name="PlantName" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="PlantLang" type="LanguageCode"/>
+           <xsd:element name="MaterialGrp" type="MaterialGroup"/>
+           <xsd:element name="Quantity" type="Quantity"/>
+           <xsd:element name="CAmtBapi" type="DecimalValue"/>
+           <xsd:element name="Unit" type="MeasureUnitCode"/>
+           <xsd:element name="DelivDate" type="Date"/>
+           <xsd:element name="PriceUnit" type="MeasureUnitCode"/>
+           <xsd:element name="ItemCat" type="DueCategoryCode"/>
+           <xsd:element name="AcctAssCat" type="DueCategoryCode"/>
+           <xsd:element name="GRIndicator" type="Indicator"/>
+           <xsd:element name="GRNonValuated" type="Indicator"/>
+           <xsd:element name="IR_Ind" type="Indicator"/>
+           <xsd:element name="PurchOrg" type="BusinessObjectTypeCode"/>
+           <xsd:element name="Currency" type="CountryCode"/>
+           <xsd:element name="CurrencyISO" type="CurrencyCode"/>
+           <xsd:element name="DeleteInd" type="Indicator"/>
+           <xsd:element name="ShortText" type="MEDIUM_Description"/>
+           <xsd:element name="Lang" type="LanguageCode"/>
+           <xsd:element name="PlantStreet" type="StreetName"/>
+           <xsd:element name="PlantCity" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="PlantState" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="PlantPcode" type="PostalCode"/>
+           <xsd:element name="PlantCountry" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="PlantIsoCountry" type="CountryCode"/>
+           <xsd:element name="PlantPhone" type="TelephoneNumber"/>
+           <xsd:element name="PlantAreaCode" type="LANGUAGEINDEPENDENT_MEDIUM_Name"/>
+           <xsd:element name="PlantEmail" type="EmailAddress"/>
+           <xsd:element name="PlantFax" type="TelephoneNumber"/>
+           <xsd:element name="FaxCountryCode" type="PhoneNumberAreaID"/>
+           <xsd:element name="PhoneCountryCode" type="PhoneNumberAreaID"/>
+           <xsd:element name="AcctLineItems" minOccurs="0" maxOccurs="unbounded">
+            <xsd:complexType>
+             <xsd:sequence>
+              <xsd:element name="SerialNo" type="SerialID"/>
+              <xsd:element name="DeleteInd" type="Indicator"/>
+              <xsd:element name="Quantity" type="Quantity"/>
+              <xsd:element name="GLAccount" type="GeneralLedgerAccountID"/>
+              <xsd:element name="BusinessArea" type="SubNumber"/>
+              <xsd:element name="Currency" type="CurrencyCode"/>
+              <xsd:element name="CostCenter" type="OrganisationalCentreID"/>
+              <xsd:element name="ProjectNumber" type="ProjectID"/>
+              <xsd:element name="AssetNumber" type="InternalOrderID"/>
+              <xsd:element name="SubNumber" type="SubNumber"/>
+              <xsd:element name="DistrPerc" type="Percent"/>
+              <xsd:element name="Amount" type="Amount"/>
+              <xsd:element name="OrderNumber" type="InternalOrderID"/>
+              <xsd:element name="WBSElem" type="NOSC_ProjectWorkBreakdownStructureElementID"/>
+              <xsd:element name="AribaExtension" type="AribaExtension" minOccurs="0" maxOccurs="unbounded"/>
+             </xsd:sequence>
+            </xsd:complexType>
+           </xsd:element>
+           <xsd:element name="AribaExtension" type="AribaExtension" minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+         </xsd:complexType>
+        </xsd:element>
+       </xsd:sequence>
+      </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="Attachments" type="Attachments" minOccurs="0"/>
+     <xsd:element name="AribaComment" type="AribaComment" minOccurs="0"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:simpleType name="SerialID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="30"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="StreetName">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="70"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SubNumber">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="4"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TelephoneNumber">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="30"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TextFormat">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="3"/>
+     <xsd:minLength value="2"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TextID">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="4"/>
+     <xsd:minLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TextName">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="TextObject">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="TextTDLine">
+    <xsd:annotation>
+     <xsd:documentation xml:lang="EN">
+      
+     </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="132"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:element name="RequisitionDetailsRequest" type="Requisition"/>
+  </xsd:schema>

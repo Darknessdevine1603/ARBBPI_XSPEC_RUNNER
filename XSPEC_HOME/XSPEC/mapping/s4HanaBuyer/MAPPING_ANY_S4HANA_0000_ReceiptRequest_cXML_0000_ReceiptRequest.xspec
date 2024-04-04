@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_ReceiptRequest_cXML_0000_ReceiptRequest.xsl">
+    
+    <x:scenario label="Receipt Request - Goods Movement Type 101 (Goods receipt)">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/ReceiptRequest/PGR_IBD_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/ReceiptRequest/PGR_IBD_AM.dat"
+            select="element()" label="Receipt Request - Goods Movement Type 101 (Goods receipt)"/>
+    </x:scenario>
+
+    <x:scenario label="Receipt Request - Goods Movement Type 102 (Goods receipt for reversal)">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/ReceiptRequest/PGR_Reversal_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/ReceiptRequest/PGR_Reversal_AM.dat"
+            select="element()" label="Receipt Request - Goods Movement Type 102 (Goods receipt for reversal)"/>
+    </x:scenario>
+    
+    <x:scenario label="Receipt Request - Goods Movement Type 122 (Return to supplier)">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/ReceiptRequest/MIGO_Return_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/ReceiptRequest/MIGO_Return_AM.dat"
+            select="element()" label="Receipt Request - Goods Movement Type 122 (Return to supplier)"/>
+    </x:scenario>
+
+    <x:scenario label="Receipt Request - Goods Movement Type 123 (Goods return/cancellation)">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/ReceiptRequest/GoodsReturnReversal_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/ReceiptRequest/GoodsReturnReversal_AM.dat"
+            select="element()" label="Receipt Request - Goods Movement Type 123 (Goods return/cancellation)"/>
+    </x:scenario>
+    
+    <x:scenario label="Receipt Request - Production">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/ReceiptRequest/GoodsReturnReversal_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/ReceiptRequest/GoodsReturnReversalProd_AM.dat"
+            select="element()" label="Receipt Request - Production"/>
+    </x:scenario>
+    
+
+</x:description>

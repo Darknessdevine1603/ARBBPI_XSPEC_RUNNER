@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_cXML_0000_ReceiptRequest_UN-EDIFACT_D96A_RECADV.xsl">
+    <x:scenario label="Receipt Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'ARIBA'"/>
+        <x:param name="anISASenderQual" select="'ZZZ'"/>
+        <x:param name="anISAReceiver" select="'RITSupplier'"/>
+        <x:param name="anISAReceiverQual" select="'ZZZ'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime" /> 
+        <x:param name="anICNValue" select="'00000000039546'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"  select="'RITBuyer'"/>
+        <x:param name="anReceiverGroupID"  select="'RITSupplier'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/ReceiptRequest/ReceiptRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/ReceiptRequest/ReceiptRequest_AM.dat"
+            select="element()" label="Receipt Request"/>
+    </x:scenario>
+    <x:scenario label="Receipt Request production">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'ARIBA'"/>
+        <x:param name="anISASenderQual" select="'ZZZ'"/>
+        <x:param name="anISAReceiver" select="'RITSupplier'"/>
+        <x:param name="anISAReceiverQual" select="'ZZZ'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime" /> 
+        <x:param name="anICNValue" select="'00000000039546'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderGroupID"  select="'RITBuyer'"/>
+        <x:param name="anReceiverGroupID"  select="'RITSupplier'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/ReceiptRequest/ReceiptRequestProd_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/ReceiptRequest/ReceiptRequestProd_AM.dat"
+            select="element()" label="Receipt Request production"/>
+    </x:scenario>
+</x:description>

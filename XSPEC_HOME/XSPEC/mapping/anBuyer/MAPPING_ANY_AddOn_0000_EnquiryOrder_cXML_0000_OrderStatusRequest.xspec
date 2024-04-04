@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_EnquiryOrder_cXML_0000_OrderStatusRequest.xsl">
+    <x:scenario label="Order Enquiry">
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anBuyerANID" select="'AN02004204493-T'"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPName" select="'Q8JCLNT002'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSupplierANID" select="'AN02004204493-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/OrderInquiry/OrderEnquiry1.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/OrderInquiry/OrderEnquiry1.dat"
+            select="element()" label="Order Enquiry"/>
+    </x:scenario>
+    <x:scenario label="Order Enquiry">
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anBuyerANID" select="'AN02005543705-T'"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPName" select="'Q8JCLNT002'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/OrderInquiry/OrderEnquiry2.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/OrderInquiry/OrderEnquiry2.dat"
+            select="element()" label="Order Enquiry"/>
+    </x:scenario>
+    <x:scenario label="Order Enquiry with Attachments">
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anBuyerANID" select="'AN02004404205-T'"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPName" select="'QKDCLNT521'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/OrderInquiry/OrderEnquirywithAttach.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/OrderInquiry/OrderEnquirywithAttach.dat"
+            select="element()" label="Order Enquiry with Attachments"/>
+    </x:scenario>
+</x:description>

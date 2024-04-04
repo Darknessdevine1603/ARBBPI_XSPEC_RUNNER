@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+ <xsd:element name="ARBCIG_ADV_PAY_REMIT_EXPORT">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="ADVANCE_PAYREMITTANCE" minOccurs="0" type="ARBCIG_ADV_PAY_REMITTANCE"/>
+    <xsd:element name="ARIBA_EXTENSION" minOccurs="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="ARBCIG_ARIBA_EXTN"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="LOGICAL_SYSTEM" minOccurs="0">
+     <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="10"/>
+      </xsd:restriction>
+     </xsd:simpleType>
+    </xsd:element>
+    <xsd:element name="PARTITION" minOccurs="0">
+     <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="20"/>
+      </xsd:restriction>
+     </xsd:simpleType>
+    </xsd:element>
+    <xsd:element name="UUID" minOccurs="0">
+     <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="14"/>
+       <xsd:pattern value="\d+"/>
+      </xsd:restriction>
+     </xsd:simpleType>
+    </xsd:element>
+    <xsd:element name="VARIANT" minOccurs="0">
+     <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="20"/>
+      </xsd:restriction>
+     </xsd:simpleType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+ <xsd:complexType name="ARBCIG_ADV_PAY_REMITTANCE">
+  <xsd:sequence>
+   <xsd:element name="ITEM" minOccurs="0" type="ARBCIG_APRCSV_REMHEADER_T"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ARBCIG_APRCSV_REMHEADER">
+  <xsd:sequence>
+   <xsd:element name="CURRENCY" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="5"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="AMOUNT" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="23"/>
+      <xsd:fractionDigits value="4"/>
+      <xsd:maxInclusive value="9999999999999999999.9999"/>
+      <xsd:minInclusive value="-9999999999999999999.9999"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="APR_ID" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="16"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ERPREQUESTID" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="10"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="LOOKUPID" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="20"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ITEM" minOccurs="0" type="ARBCIG_APRCSV_REMITEM_T"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ARBCIG_APRCSV_REMHEADER_T">
+  <xsd:sequence>
+   <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="ARBCIG_APRCSV_REMHEADER"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ARBCIG_APRCSV_REMITEM">
+  <xsd:sequence>
+   <xsd:element name="APR_ID" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="16"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="LINENUMBER" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="3"/>
+      <xsd:pattern value="\d+"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="AMOUNT" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="23"/>
+      <xsd:fractionDigits value="4"/>
+      <xsd:maxInclusive value="9999999999999999999.9999"/>
+      <xsd:minInclusive value="-9999999999999999999.9999"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="CURRENCY" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="5"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ERPREQUESTID" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="10"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="VDP_ITEM" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="3"/>
+      <xsd:pattern value="\d+"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ARBCIG_APRCSV_REMITEM_T">
+  <xsd:sequence>
+   <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="ARBCIG_APRCSV_REMITEM"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ARBCIG_ARIBA_EXTN">
+  <xsd:sequence>
+   <xsd:element name="OBJECT_NAME" minOccurs="0" type="xsd:string"/>
+   <xsd:element name="OBJECT_KEY" minOccurs="0" type="xsd:string"/>
+   <xsd:element name="FIELD_NAME" minOccurs="0" type="xsd:string"/>
+   <xsd:element name="FIELD_VALUE" minOccurs="0" type="xsd:string"/>
+  </xsd:sequence>
+ </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xsl"
+        date="2023-04-27T15:27:55.74598+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec">
+      <label>Status Update for ASN</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-InboundDelivery.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:27:56191+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="SystemID">
+                              <Identity>QKDCLNT521</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <StatusUpdateRequest>
+                           <DocumentReference payloadID="TC_4e521c45-80ff-46a9-84a5-5ba2a66df1ab"/>
+                           <Status code="200" text="OK" xml:lang="en">0001 inbound delivery/deliveries created (nos. 180002085 to 180002085)</Status>
+                           <IntegrationStatus documentStatus="customerConfirmed">
+                              <IntegrationMessage isSuccessful="yes" type="AddOn"/>
+                           </IntegrationStatus>
+                           <Extrinsic name="ERPDocumentNo">180002085</Extrinsic>
+                        </StatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Status Update for ASN</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="SystemID">
+                                 <Identity>QKDCLNT521</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <StatusUpdateRequest>
+                              <DocumentReference payloadID="TC_4e521c45-80ff-46a9-84a5-5ba2a66df1ab"/>
+                              <Status xml:lang="en" code="200" text="OK">0001 inbound delivery/deliveries created (nos. 180002085 to 180002085)</Status>
+                              <IntegrationStatus documentStatus="customerConfirmed">
+                                 <IntegrationMessage isSuccessful="yes" type="AddOn"/>
+                              </IntegrationStatus>
+                              <Extrinsic name="ERPDocumentNo">180002085</Extrinsic>
+                           </StatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec">
+      <label>Rejected Status Update for ASN</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-InboundDelivery_Rejected.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:27:56113+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="SystemID">
+                              <Identity>QKDCLNT521</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <StatusUpdateRequest>
+                           <DocumentReference payloadID="TC_4e521c45-80ff-46a9-84a5-5ba2a66df1ab"/>
+                           <Status code="406" text="Not Acceptable" xml:lang="en">0001 inbound delivery/deliveries created (nos. 180002085 to 180002085)</Status>
+                           <IntegrationStatus documentStatus="customerFailed">
+                              <IntegrationMessage isSuccessful="no" type="AddOn"/>
+                           </IntegrationStatus>
+                           <Extrinsic name="ERPDocumentNo">180002085</Extrinsic>
+                        </StatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Rejected Status Update for ASN</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="SystemID">
+                                 <Identity>QKDCLNT521</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <StatusUpdateRequest>
+                              <DocumentReference payloadID="TC_4e521c45-80ff-46a9-84a5-5ba2a66df1ab"/>
+                              <Status code="406" text="Not Acceptable" xml:lang="en">0001 inbound delivery/deliveries created (nos. 180002085 to 180002085)</Status>
+                              <IntegrationStatus documentStatus="customerFailed">
+                                 <IntegrationMessage isSuccessful="no" type="AddOn"/>
+                              </IntegrationStatus>
+                              <Extrinsic name="ERPDocumentNo">180002085</Extrinsic>
+                           </StatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec">
+      <label>Status Update for Incoming SES</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-SES.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:27:56202+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="SystemID">
+                              <Identity>QKDCLNT521</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="production">
+                        <StatusUpdateRequest>
+                           <DocumentReference payloadID="TC_43ff40a3-4188-448b-ac66-5bceeb2c8f86"/>
+                           <Status code="200" text="OK" xml:lang="en">Entry sheet 1000002163 created</Status>
+                           <IntegrationStatus documentStatus="customerConfirmed">
+                              <IntegrationMessage isSuccessful="yes" type="AddOn"/>
+                           </IntegrationStatus>
+                           <Extrinsic name="ERPDocumentNo">1000002163</Extrinsic>
+                        </StatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Status Update for Incoming SES</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="SystemID">
+                                 <Identity>QKDCLNT521</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="production">
+                           <StatusUpdateRequest>
+                              <DocumentReference payloadID="TC_43ff40a3-4188-448b-ac66-5bceeb2c8f86"/>
+                              <Status xml:lang="en" code="200" text="OK">Entry sheet 1000002163 created</Status>
+                              <IntegrationStatus documentStatus="customerConfirmed">
+                                 <IntegrationMessage isSuccessful="yes" type="AddOn"/>
+                              </IntegrationStatus>
+                              <Extrinsic name="ERPDocumentNo">1000002163</Extrinsic>
+                           </StatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec">
+      <label>Status Update for Payment Receipt Confirmation</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentReceiptConf.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:27:56415+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="SystemID">
+                              <Identity>QKDCLNT521</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005437204-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <StatusUpdateRequest>
+                           <DocumentReference payloadID="1533050101677-38364238672748517@10.163.3.194"/>
+                           <Status code="200" text="OK"/>
+                           <DocumentStatus type="approved">
+                              <DocumentInfo documentID="RCPT1235"
+                                            documentType="PAYMENTRECEIPTCONFIR"
+                                            documentDate="2021-07-12T10:34:27+01:00"/>
+                              <Comments>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxjZmRpOkNvbXByb2JhbnRlIENlcnRpZmljYWRvPSJNSUlGSGpDQ0JBYWdBd0lCQWdJVU1EUVlKS29aSWh2Y05BUUVMQlFBd2dnR0tNVGd3TmdZRFZRUUREQzlCTGtNdUlH dwcsD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxjZmRpOkNvbXByb2JhbnRlIENlcnRpZmljYWRvPSJNSUlGSGpDQ0JBYWdBd0lCQWdJVU1EUVlKS29aSWh2Y05BUUVMQlFBd2dnR0tNVGd3TmdZRFZRUUREQzlCTGtNdUlH</Comments>
+                           </DocumentStatus>
+                           <Extrinsic name="ERPDocumentNo">5605101234</Extrinsic>
+                        </StatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>Status Update for Payment Receipt Confirmation</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="SystemID">
+                                 <Identity>QKDCLNT521</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005437204-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <StatusUpdateRequest>
+                              <DocumentReference payloadID="1533050101677-38364238672748517@10.163.3.194"/>
+                              <Status code="200" text="OK"/>
+                              <DocumentStatus type="approved">
+                                 <DocumentInfo documentDate="2021-07-12T10:34:27+01:00"
+                                               documentType="PAYMENTRECEIPTCONFIR"
+                                               documentID="RCPT1235"/>
+                                 <Comments>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxjZmRpOkNvbXByb2JhbnRlIENlcnRpZmljYWRvPSJNSUlGSGpDQ0JBYWdBd0lCQWdJVU1EUVlKS29aSWh2Y05BUUVMQlFBd2dnR0tNVGd3TmdZRFZRUUREQzlCTGtNdUlH dwcsD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxjZmRpOkNvbXByb2JhbnRlIENlcnRpZmljYWRvPSJNSUlGSGpDQ0JBYWdBd0lCQWdJVU1EUVlKS29aSWh2Y05BUUVMQlFBd2dnR0tNVGd3TmdZRFZRUUREQzlCTGtNdUlH</Comments>
+                              </DocumentStatus>
+                              <Extrinsic name="ERPDocumentNo">5605101234</Extrinsic>
+                           </StatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec">
+      <label>Status Update for Scheduling Agreement Release</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-SAR.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:27:56682+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="SystemID">
+                              <Identity>QKDCLNT521</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005437204-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <StatusUpdateRequest>
+                           <DocumentReference payloadID="TC_8ed18a83-6a4e-4c5b-a3f2-9824d8f53795"/>
+                           <Status code="200" text="OK" xml:lang="en">Instance 5500000886 of object type PurchSchedAgreement has been changed. Scheduling Agreement 5500000886 changed Instance 5500000886 of object type PurchSchedAgreement has been changed. Scheduling Agreement 5500000886 changed No Purchase Requisition exist Delivery date: next workday is 04.06.2021 Can delivery date be met? Delivery date: next workday is 07.06.2021 Can delivery date be met? Delivery date: next workday is 07.06.2021 Can delivery date be met? Delivery date: next workday is 04.06.2021 Can delivery date be met? Delivery date: next workday is 07.06.2021 Can delivery date be met? Delivery date: next workday is 07.06.2021 Can delivery date be met?</Status>
+                           <IntegrationStatus documentStatus="customerConfirmed">
+                              <IntegrationMessage isSuccessful="yes" type="AddOn"/>
+                           </IntegrationStatus>
+                        </StatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>Status Update for Scheduling Agreement Release</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="SystemID">
+                                 <Identity>QKDCLNT521</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005437204-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <StatusUpdateRequest>
+                              <DocumentReference payloadID="TC_8ed18a83-6a4e-4c5b-a3f2-9824d8f53795"/>
+                              <Status xml:lang="en" code="200" text="OK">...</Status>
+                              <IntegrationStatus documentStatus="customerConfirmed">
+                                 <IntegrationMessage isSuccessful="yes" type="AddOn"/>
+                              </IntegrationStatus>
+                           </StatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_AddOnDocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec">
+      <label>Status Update for Order Confirmation Approval</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/StatusUpdate/StatusUpdateRequest-OCA.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:27:56608+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="SystemID">
+                              <Identity>QKDCLNT521</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005437204-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <StatusUpdateRequest>
+                           <DocumentReference payloadID="1622047782539-6301225915276463169@10.163.3.224"/>
+                           <Status code="406" text="Not Acceptable" xml:lang="en">Document 4500059700 does not exist</Status>
+                           <IntegrationStatus documentStatus="customerFailed">
+                              <IntegrationMessage isSuccessful="no" type="AddOn"/>
+                           </IntegrationStatus>
+                           <Extrinsic name="ERPDocumentNo">4500059700</Extrinsic>
+                        </StatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>Status Update for Order Confirmation Approval</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="SystemID">
+                                 <Identity>QKDCLNT521</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005437204-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <StatusUpdateRequest>
+                              <DocumentReference payloadID="1622047782539-6301225915276463169@10.163.3.224"/>
+                              <Status xml:lang="en" code="406" text="Not Acceptable">Document 4500059700 does not exist</Status>
+                              <IntegrationStatus documentStatus="customerFailed">
+                                 <IntegrationMessage isSuccessful="no" type="AddOn"/>
+                              </IntegrationStatus>
+                              <Extrinsic name="ERPDocumentNo">4500059700</Extrinsic>
+                           </StatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

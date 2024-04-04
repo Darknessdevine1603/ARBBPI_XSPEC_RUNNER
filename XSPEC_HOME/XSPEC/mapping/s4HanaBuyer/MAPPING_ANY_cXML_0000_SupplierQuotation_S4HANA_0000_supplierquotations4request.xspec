@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_SupplierQuotation_S4HANA_0000_supplierquotations4request.xsl">
+    <x:scenario label="SupplierQuotation Standard">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/SupplierQuotation/SupplierQuotationS4RequestAsync_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/SupplierQuotation/SupplierQuotationS4RequestAsync_AM.xml" 
+            select="element()" label="SupplierQuotation Standard"/>
+    </x:scenario> 
+    <x:scenario label="SupplierQuotation with Text Collection">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/SupplierQuotation/SQ_7500001411_Notes_before.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/SupplierQuotation/SQ_7500001411_Notes_after.xml" 
+            select="element()" label="SupplierQuotation with Text Collection"/>
+    </x:scenario>
+    <x:scenario label="SupplierQuotation with Condition Quantity">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/SupplierQuotation/SQ_7500001411_ConditionQuantity.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/SupplierQuotation/SQ_7500001411_ConditionQuantity.xml" 
+            select="element()" label="SupplierQuotation with Condition Quantity"/>
+    </x:scenario>
+</x:description>

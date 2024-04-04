@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4/MAPPING_ANY_cXML_0000_ArticleMaster_AddOn_0000_ArticleMaster.xsl">
+    <x:scenario label="Scenario for ArticleMaster_SingleArticle">
+        <x:param name="anERPName" select="'QODCLNT521'"/>
+        <x:param name="anReceiverID" select="'QODCLNT521'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT521'"/>
+        <x:param name="anSourceDocumentType" select="'ArticleMaster'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4/ArticleMaster/ArticleMaster_SingleArticle_BM.xml"/>
+        <x:expect label="ArticleMaster" href="../../../XSPEC/payloads/target/inbound/s4/ArticleMaster/ArticleMaster_SingleArticle_AM.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for ArticleMaster_VariantArticle">
+        <x:param name="anERPName" select="'QODCLNT521'"/>
+        <x:param name="anReceiverID" select="'QODCLNT521'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT521'"/>
+        <x:param name="anSourceDocumentType" select="'ArticleMaster'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4/ArticleMaster/ArticleMaster_VariantArticle_BM.xml"/>
+        <x:expect label="ArticleMaster_VariantArticle" href="../../../XSPEC/payloads/target/inbound/s4/ArticleMaster/ArticleMaster_VariantArticle_AM.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for ArticleMaster_MaterialLong">
+        <x:param name="anERPName" select="'QODCLNT521'"/>
+        <x:param name="anReceiverID" select="'QODCLNT521'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT521'"/>
+        <x:param name="anSourceDocumentType" select="'ArticleMaster'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4/ArticleMaster/ArticleMaster_MaterialLong_BM.xml"/>
+        <x:expect label="ArticleMasterMaterial Long" href="../../../XSPEC/payloads/target/inbound/s4/ArticleMaster/ArticleMaster_MaterialLong_AM.xml" select="element()"/>
+    </x:scenario>
+</x:description>

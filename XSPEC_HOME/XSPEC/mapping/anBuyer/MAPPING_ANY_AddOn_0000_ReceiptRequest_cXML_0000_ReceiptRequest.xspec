@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_ReceiptRequest_cXML_0000_ReceiptRequest.xsl">
+    <x:scenario label="Goods Receipt with Serial Numbers">
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+01:00'"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anTargetDocumentType" select="'ReceiptRequest'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Receipts/ReceiptwithSerialNumbers.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Receipts/ReceiptwithSerialNumbers.dat"
+            select="element()" label="Goods Receipt with Serial Numbers"/>
+    </x:scenario>
+    <x:scenario label="Goods Receipt with PO reference">
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anTargetDocumentType" select="'ReceiptRequest'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Receipts/ReceiptforPO.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Receipts/ReceiptforPO.dat"
+            select="element()" label="Goods Receipt with PO reference"/>
+    </x:scenario>
+    <x:scenario label="Goods Receipt with PO reference with Shipment Notice">
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+01:00'"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anTargetDocumentType" select="'ReceiptRequest'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Receipts/ReceiptforPOwithASN.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Receipts/ReceiptforPOwithASN.dat"
+            select="element()" label="Goods Receipt with PO reference with Shipment Notice"/>
+    </x:scenario>
+    <x:scenario label="Goods Receipt with Reference Document">
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+01:00'"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anTargetDocumentType" select="'ReceiptRequest'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Receipts/ReceiptRefDoc.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Receipts/ReceiptRefDoc.dat"
+            select="element()" label="Goods Receipt with Reference Document"/>
+    </x:scenario>
+    <x:scenario label="GR created referencing IBD with Multi line SAR Item Level release">
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+01:00'"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anTargetDocumentType" select="'ReceiptRequest'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Receipts/GR created referencing IBD with Multi line SAR Item Level release.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Receipts/GR created referencing IBD with Multi line SAR Item Level release.dat"
+            select="element()" label="GR created referencing IBD with Multi line SAR Item Level release"/>
+    </x:scenario>
+</x:description>

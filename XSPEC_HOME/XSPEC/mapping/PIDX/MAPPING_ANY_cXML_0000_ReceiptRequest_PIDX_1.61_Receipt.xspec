@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/PIDX/MAPPING_ANY_cXML_0000_ReceiptRequest_PIDX_1.61_Receipt.xsl">
+    <x:scenario label="Receipt Request">
+        <!--        Parameter in main XSLT -->
+        
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/Receipts/Receipt_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/PIDX/Receipts/Receipt_AM.dat"
+            select="element()" label="Receipt Request"/>
+    </x:scenario>
+    <x:scenario label="Receipt Request with Comments">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/Receipts/ReceiptComments_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/PIDX/Receipts/ReceiptComments_AM.dat"
+            select="element()" label="Receipt Request with Comments"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_S4HANA_0000_ProofOfDeliveryRequest.xsl">
+    <x:scenario label="ProofOfDeliveryRequest">
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/ProofOfDelivery/CR_80000716_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/ProofOfDelivery/CR_80000716_AM.xml"
+            select="*" label="ProofOfDeliveryRequest"/>
+    </x:scenario>
+</x:description>

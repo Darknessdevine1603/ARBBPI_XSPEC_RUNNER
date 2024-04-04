@@ -1,0 +1,3511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xsl"
+        date="2023-04-27T15:29:26.695356+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoice.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>inv0303</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-03-03T13:40:32+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>inv0303</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-03-03</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>98736</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>1652</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">500.00</GrossAmount>
+                        <NetAmount currencyCode="USD">500.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">50.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <TaxCalculation>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="USD">500.00</TaxBaseAmount>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                     </ProductTaxDetails>
+                  </TaxCalculation>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">520.00</GrossAmount>
+                     <NetAmount currencyCode="USD">520.00</NetAmount>
+                     <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                  </PriceCalculation>
+                  <UnplannedDeliveryCostsDets>
+                     <TaxTypeCode>VAT</TaxTypeCode>
+                     <TaxPercent>4</TaxPercent>
+                     <TaxBaseAmount currencyCode="USD">500.00</TaxBaseAmount>
+                     <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                  </UnplannedDeliveryCostsDets>
+               </Invoice>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>FI Invoice</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>inv0303</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>inv0303</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>98736</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>1652</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">500.00</GrossAmount>
+                           <NetAmount currencyCode="USD">500.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">50.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">500.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">520.00</GrossAmount>
+                        <NetAmount currencyCode="USD">520.00</NetAmount>
+                        <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                     </PriceCalculation>
+                     <UnplannedDeliveryCostsDets>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxBaseAmount currencyCode="USD">500.00</TaxBaseAmount>
+                        <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                     </UnplannedDeliveryCostsDets>
+                  </Invoice>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice Consignment</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceConsignment.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>CIGTC-34924</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-03-08T22:00:47+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>CIGTC-34924</ID>
+                  <CompanyID/>
+                  <TypeCode>CONS</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-03-08</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>98736</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">5</Quantity>
+                     <LineType>material</LineType>
+                     <ProductMovementItemIDInfo>
+                        <ID>1</ID>
+                        <CompanyCode>0001</CompanyCode>
+                        <MaterialDocument>4900003320</MaterialDocument>
+                        <Year>2020</Year>
+                        <MaterialDate>2020-03-08</MaterialDate>
+                     </ProductMovementItemIDInfo>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">3</Quantity>
+                     <LineType>material</LineType>
+                     <ProductMovementItemIDInfo>
+                        <ID>2</ID>
+                        <CompanyCode>0001</CompanyCode>
+                        <MaterialDocument>4900003320</MaterialDocument>
+                        <Year>2020</Year>
+                        <MaterialDate>2020-03-08</MaterialDate>
+                     </ProductMovementItemIDInfo>
+                  </Item>
+                  <Item>
+                     <ID>3</ID>
+                     <Quantity unitCode="EA">4</Quantity>
+                     <LineType>material</LineType>
+                     <ProductMovementItemIDInfo>
+                        <ID>1</ID>
+                        <CompanyCode>0001</CompanyCode>
+                        <MaterialDocument>4900003321</MaterialDocument>
+                        <Year>2020</Year>
+                        <MaterialDate>2020-03-08</MaterialDate>
+                     </ProductMovementItemIDInfo>
+                  </Item>
+                  <Item>
+                     <ID>4</ID>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <LineType>material</LineType>
+                     <ProductMovementItemIDInfo>
+                        <ID>2</ID>
+                        <CompanyCode>0001</CompanyCode>
+                        <MaterialDocument>4900003321</MaterialDocument>
+                        <Year>2020</Year>
+                        <MaterialDate>2020-03-08</MaterialDate>
+                     </ProductMovementItemIDInfo>
+                  </Item>
+                  <TaxCalculation>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="EUR">194.00</TaxBaseAmount>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxAmount currencyCode="EUR">7.76</TaxAmount>
+                     </ProductTaxDetails>
+                  </TaxCalculation>
+               </Invoice>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>FI Invoice Consignment</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>CIGTC-34924</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>CIGTC-34924</ID>
+                     <CompanyID/>
+                     <TypeCode>CONS</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>98736</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">5</Quantity>
+                        <LineType>material</LineType>
+                        <ProductMovementItemIDInfo>
+                           <ID>1</ID>
+                           <CompanyCode>0001</CompanyCode>
+                           <MaterialDocument>4900003320</MaterialDocument>
+                           <Year>2020</Year>
+                           <MaterialDate>2020-03-08</MaterialDate>
+                        </ProductMovementItemIDInfo>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">3</Quantity>
+                        <LineType>material</LineType>
+                        <ProductMovementItemIDInfo>
+                           <ID>2</ID>
+                           <CompanyCode>0001</CompanyCode>
+                           <MaterialDocument>4900003320</MaterialDocument>
+                           <Year>2020</Year>
+                           <MaterialDate>2020-03-08</MaterialDate>
+                        </ProductMovementItemIDInfo>
+                     </Item>
+                     <Item>
+                        <ID>3</ID>
+                        <Quantity unitCode="EA">4</Quantity>
+                        <LineType>material</LineType>
+                        <ProductMovementItemIDInfo>
+                           <ID>1</ID>
+                           <CompanyCode>0001</CompanyCode>
+                           <MaterialDocument>4900003321</MaterialDocument>
+                           <Year>2020</Year>
+                           <MaterialDate>2020-03-08</MaterialDate>
+                        </ProductMovementItemIDInfo>
+                     </Item>
+                     <Item>
+                        <ID>4</ID>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <LineType>material</LineType>
+                        <ProductMovementItemIDInfo>
+                           <ID>2</ID>
+                           <CompanyCode>0001</CompanyCode>
+                           <MaterialDocument>4900003321</MaterialDocument>
+                           <Year>2020</Year>
+                           <MaterialDate>2020-03-08</MaterialDate>
+                        </ProductMovementItemIDInfo>
+                     </Item>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="EUR">194.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="EUR">7.76</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                  </Invoice>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice with Comments and Attachments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceCommentsAttachments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>IPTDISCOUNT</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-04-21T13:12:05+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>IPTDISCOUNT</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-04-21</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>88000088</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <LineType>material</LineType>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">12.00</GrossAmount>
+                        <NetAmount currencyCode="USD">12.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">12.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>11</OrdinalNumberValue>
+                           <LineNumber>1</LineNumber>
+                           <Amount currencyCode="USD">12.00</Amount>
+                           <Percentage>100</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <WBSElement>TEST_FI</WBSElement>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">12.00</GrossAmount>
+                     <NetAmount currencyCode="USD">11.76</NetAmount>
+                     <TaxAmount currencyCode="USD">0</TaxAmount>
+                     <DiscountPrice currencyCode="USD">0.24</DiscountPrice>
+                  </PriceCalculation>
+               </Invoice>
+               <Comments>
+                  <Item>
+                     <TextID>F02</TextID>
+                     <TextLang/>
+                     <AribaLine>
+                        <TextLine>KFC (short for Kentucky Fried Chicken[6]) is an American fast food
+                            restaurant chain headquartered in Lou</TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>isville, Kentucky, that specializes in
+                            fried chicken. It is the world's second-largest restaurant chain </TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>(as
+                            measured by sales) after McDonald's, with 22,621 locations globally in 136
+                         </TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>   countries as of December 2018.[7] The chain is a subsidiary of Yum! Brands, a
+                            restaurant company that</TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine> also owns the Pizza Hut, Taco Bell, and WingStreet chains.[8]!@#$%^&amp;amp;*())__+</TextLine>
+                     </AribaLine>
+                  </Item>
+               </Comments>
+               <Attachment>
+                  <Item>
+                     <FileName>Line Attachment - Copy.txt</FileName>
+                     <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                     <ContentId>990199189.1585632300500@cxml.org</ContentId>
+                     <LineNumber/>
+                     <Content>line1</Content>
+                  </Item>
+                  <Item>
+                     <FileName>Header Attachment.pdf</FileName>
+                     <ContentType>application/pdf; name="Header Attachment.pdf"</ContentType>
+                     <ContentId>1424187435.1585632338013@cxml.org</ContentId>
+                     <LineNumber/>
+                     <Content>header1</Content>
+                  </Item>
+                  <Item>
+                     <FileName>Header Attachment.txt</FileName>
+                     <ContentType>text/plain; name="Header Attachment.txt"</ContentType>
+                     <ContentId>761085387.1585632375680@cxml.org</ContentId>
+                     <LineNumber/>
+                     <Content>header2</Content>
+                  </Item>
+               </Attachment>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>FI Invoice with Comments and Attachments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>IPTDISCOUNT</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>IPTDISCOUNT</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>88000088</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <LineType>material</LineType>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">12.00</GrossAmount>
+                           <NetAmount currencyCode="USD">12.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">12.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>11</OrdinalNumberValue>
+                              <LineNumber>1</LineNumber>
+                              <Amount currencyCode="USD">12.00</Amount>
+                              <Percentage>100</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <WBSElement>TEST_FI</WBSElement>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">12.00</GrossAmount>
+                        <NetAmount currencyCode="USD">11.76</NetAmount>
+                        <TaxAmount currencyCode="USD">0</TaxAmount>
+                        <DiscountPrice currencyCode="USD">0.24</DiscountPrice>
+                     </PriceCalculation>
+                  </Invoice>
+                  <Comments>
+                     <Item>
+                        <TextID>F02</TextID>
+                        <TextLang/>
+                        <AribaLine>
+                           <TextLine>KFC (short for Kentucky Fried Chicken[6]) is an American fast food
+                            restaurant chain headquartered in Lou</TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>isville, Kentucky, that specializes in
+                            fried chicken. It is the world's second-largest restaurant chain </TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>(as
+                            measured by sales) after McDonald's, with 22,621 locations globally in 136
+                         </TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>   countries as of December 2018.[7] The chain is a subsidiary of Yum! Brands, a
+                            restaurant company that</TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine> also owns the Pizza Hut, Taco Bell, and WingStreet chains.[8]!@#$%^&amp;amp;*())__+</TextLine>
+                        </AribaLine>
+                     </Item>
+                  </Comments>
+                  <Attachment>
+                     <Item>
+                        <FileName>Line Attachment - Copy.txt</FileName>
+                        <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                        <ContentId>990199189.1585632300500@cxml.org</ContentId>
+                        <LineNumber/>
+                        <Content>line1</Content>
+                     </Item>
+                     <Item>
+                        <FileName>Header Attachment.pdf</FileName>
+                        <ContentType>application/pdf; name="Header Attachment.pdf"</ContentType>
+                        <ContentId>1424187435.1585632338013@cxml.org</ContentId>
+                        <LineNumber/>
+                        <Content>header1</Content>
+                     </Item>
+                     <Item>
+                        <FileName>Header Attachment.txt</FileName>
+                        <ContentType>text/plain; name="Header Attachment.txt"</ContentType>
+                        <ContentId>761085387.1585632375680@cxml.org</ContentId>
+                        <LineNumber/>
+                        <Content>header2</Content>
+                     </Item>
+                  </Attachment>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice Service Items</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceServiceItems.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>06.03_TJ2_Header_Combo</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-03-06T13:33:59+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>06.03_TJ2_Header_Combo</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-03-06</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>98736</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <InternalID>Mat_1_C</InternalID>
+                        <SupplierPartID>Mat_1</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">105.00</GrossAmount>
+                        <NetAmount currencyCode="USD">105.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">10.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">20</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <InternalID>Mat_2_C</InternalID>
+                        <SupplierPartID>Mat_2</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">410.00</GrossAmount>
+                        <NetAmount currencyCode="USD">410.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">20.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <Item>
+                     <ID>3</ID>
+                     <Quantity unitCode="EA">30</Quantity>
+                     <LineType>service</LineType>
+                     <Product>
+                        <InternalID>Service_1_C</InternalID>
+                        <SupplierPartID>Service_1</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">900.00</GrossAmount>
+                        <NetAmount currencyCode="USD">900.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">30.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <Item>
+                     <ID>4</ID>
+                     <Quantity unitCode="EA">40</Quantity>
+                     <LineType>service</LineType>
+                     <Product>
+                        <InternalID>Service_2_C</InternalID>
+                        <SupplierPartID>Service_2</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">1600.00</GrossAmount>
+                        <NetAmount currencyCode="USD">1600.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">40.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <Item>
+                     <ID>5</ID>
+                     <Quantity unitCode="EA">50</Quantity>
+                     <LineType>service</LineType>
+                     <Product>
+                        <InternalID>Labor_1_C</InternalID>
+                        <SupplierPartID>Labor_1</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">250.00</GrossAmount>
+                        <NetAmount currencyCode="USD">250.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">2.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <LaborDetails>
+                        <StartDate>2020-02-20</StartDate>
+                        <EndDate>2020-02-21</EndDate>
+                        <UnitRate>
+                           <Money currencyCode="USD">2.00</Money>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <TermReference>
+                              <Term>2</Term>
+                              <TermName>payCode</TermName>
+                           </TermReference>
+                        </UnitRate>
+                        <TimeCardID/>
+                        <Contractor>
+                           <Name languageCode=""/>
+                        </Contractor>
+                        <ContractIdentifier Domain=""/>
+                        <JobDescription languageCode="en-US"/>
+                        <Supervisor/>
+                        <Address>
+                           <PhysicalAddress>
+                              <StreetName/>
+                              <StreetPrefixName/>
+                              <StreetSuffixName/>
+                              <CityName/>
+                              <RegionCode/>
+                              <RegionName/>
+                              <CompanyPostalCode/>
+                              <CountryCode/>
+                              <CountryName/>
+                           </PhysicalAddress>
+                        </Address>
+                     </LaborDetails>
+                  </Item>
+                  <Item>
+                     <ID>6</ID>
+                     <Quantity unitCode="EA">60</Quantity>
+                     <LineType>service</LineType>
+                     <Product>
+                        <InternalID>Labor_2_C</InternalID>
+                        <SupplierPartID>Labor_2</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">3000.00</GrossAmount>
+                        <NetAmount currencyCode="USD">3000.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">10.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <LaborDetails>
+                        <StartDate>2020-02-26</StartDate>
+                        <EndDate>2020-02-27</EndDate>
+                        <UnitRate>
+                           <Money currencyCode="USD">10.00</Money>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <TermReference>
+                              <Term>3</Term>
+                              <TermName>payCode</TermName>
+                           </TermReference>
+                        </UnitRate>
+                        <TimeCardID/>
+                        <Contractor>
+                           <Name languageCode=""/>
+                        </Contractor>
+                        <ContractIdentifier Domain=""/>
+                        <JobDescription languageCode="en-US"/>
+                        <Supervisor/>
+                        <Address>
+                           <PhysicalAddress>
+                              <StreetName/>
+                              <StreetPrefixName/>
+                              <StreetSuffixName/>
+                              <CityName/>
+                              <RegionCode/>
+                              <RegionName/>
+                              <CompanyPostalCode/>
+                              <CountryCode/>
+                              <CountryName/>
+                           </PhysicalAddress>
+                        </Address>
+                     </LaborDetails>
+                  </Item>
+                  <Item>
+                     <ID>7</ID>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <LineType>charges</LineType>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">20.00</GrossAmount>
+                        <NetAmount currencyCode="USD">20.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">20.00@#$</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <Item>
+                     <ID>8</ID>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <LineType>charges</LineType>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">30.00</GrossAmount>
+                        <NetAmount currencyCode="USD">30.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">30.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <TaxCalculation>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="USD">6174.00</TaxBaseAmount>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxAmount currencyCode="USD">246.96</TaxAmount>
+                     </ProductTaxDetails>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>SAL</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="USD">6174.00</TaxBaseAmount>
+                        <TaxPercent>8</TaxPercent>
+                        <TaxAmount currencyCode="USD">493.92</TaxAmount>
+                     </ProductTaxDetails>
+                  </TaxCalculation>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">7055.88</GrossAmount>
+                     <NetAmount currencyCode="USD">6929.88</NetAmount>
+                     <TaxAmount currencyCode="USD">740.88</TaxAmount>
+                     <DiscountPrice currencyCode="USD">126.00</DiscountPrice>
+                  </PriceCalculation>
+               </Invoice>
+               <Comments>
+                  <Item>
+                     <TextID>F02</TextID>
+                     <TextLang/>
+                     <AribaLine>
+                        <TextLine>The Big Bang theory is a cosmological model of the observable
+                            universe from the earliest known periods t</TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>hrough its subsequent
+                            large-scale evolution.[1][2][3] The model describes how the universe
+             </TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>               expanded from a very high-density and high-temperature state,[4] and
+                            offers a comprehensi</TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>ve explanation for a broad range of phenomena,
+                            including the abundance of light elements, the cosmic mic</TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>rowave
+                            background (CMB) radiation, large-scale structure and Hubble's law (the
+                         </TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>   farther away galaxies are, the faster they are moving away from Earth).
+                            If the observed conditions ar</TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>e extrapolated backwards in time using the
+                            known laws of physics, the prediction is that just before a p</TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>eriod of
+                            very high density there was a singularity which is typically associated
+                       </TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>     with the Big Bang. Current knowledge is insufficient to determine if the
+                            singularity was
+          </TextLine>
+                     </AribaLine>
+                     <AribaLine>
+                        <TextLine>                          primordial.</TextLine>
+                     </AribaLine>
+                  </Item>
+               </Comments>
+               <Attachment>
+                  <Item>
+                     <FileName>Attachment1 - Copy.txt</FileName>
+                     <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                     <ContentId>75796314.1583481382541@cxml.org</ContentId>
+                     <LineNumber/>
+                     <Content>line1</Content>
+                  </Item>
+                  <Item>
+                     <FileName>Attachment2 - Copy.txt</FileName>
+                     <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                     <ContentId>395115592.1583481394977@cxml.org</ContentId>
+                     <LineNumber/>
+                     <Content>line1</Content>
+                  </Item>
+               </Attachment>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>FI Invoice Service Items</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>06.03_TJ2_Header_Combo</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>06.03_TJ2_Header_Combo</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>98736</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <InternalID>Mat_1_C</InternalID>
+                           <SupplierPartID>Mat_1</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">105.00</GrossAmount>
+                           <NetAmount currencyCode="USD">105.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">10.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">20</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <InternalID>Mat_2_C</InternalID>
+                           <SupplierPartID>Mat_2</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">410.00</GrossAmount>
+                           <NetAmount currencyCode="USD">410.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">20.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <Item>
+                        <ID>3</ID>
+                        <Quantity unitCode="EA">30</Quantity>
+                        <LineType>service</LineType>
+                        <Product>
+                           <InternalID>Service_1_C</InternalID>
+                           <SupplierPartID>Service_1</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">900.00</GrossAmount>
+                           <NetAmount currencyCode="USD">900.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">30.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <Item>
+                        <ID>4</ID>
+                        <Quantity unitCode="EA">40</Quantity>
+                        <LineType>service</LineType>
+                        <Product>
+                           <InternalID>Service_2_C</InternalID>
+                           <SupplierPartID>Service_2</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">1600.00</GrossAmount>
+                           <NetAmount currencyCode="USD">1600.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">40.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <Item>
+                        <ID>5</ID>
+                        <Quantity unitCode="EA">50</Quantity>
+                        <LineType>service</LineType>
+                        <Product>
+                           <InternalID>Labor_1_C</InternalID>
+                           <SupplierPartID>Labor_1</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">250.00</GrossAmount>
+                           <NetAmount currencyCode="USD">250.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">2.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <LaborDetails>
+                           <StartDate>2020-02-20</StartDate>
+                           <EndDate>2020-02-21</EndDate>
+                           <UnitRate>
+                              <Money currencyCode="USD">2.00</Money>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <TermReference>
+                                 <Term>2</Term>
+                                 <TermName>payCode</TermName>
+                              </TermReference>
+                           </UnitRate>
+                           <TimeCardID/>
+                           <Contractor>
+                              <Name languageCode=""/>
+                           </Contractor>
+                           <ContractIdentifier Domain=""/>
+                           <JobDescription languageCode="en-US"/>
+                           <Supervisor/>
+                           <Address>
+                              <PhysicalAddress>
+                                 <StreetName/>
+                                 <StreetPrefixName/>
+                                 <StreetSuffixName/>
+                                 <CityName/>
+                                 <RegionCode/>
+                                 <RegionName/>
+                                 <CompanyPostalCode/>
+                                 <CountryCode/>
+                                 <CountryName/>
+                              </PhysicalAddress>
+                           </Address>
+                        </LaborDetails>
+                     </Item>
+                     <Item>
+                        <ID>6</ID>
+                        <Quantity unitCode="EA">60</Quantity>
+                        <LineType>service</LineType>
+                        <Product>
+                           <InternalID>Labor_2_C</InternalID>
+                           <SupplierPartID>Labor_2</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">3000.00</GrossAmount>
+                           <NetAmount currencyCode="USD">3000.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">10.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <LaborDetails>
+                           <StartDate>2020-02-26</StartDate>
+                           <EndDate>2020-02-27</EndDate>
+                           <UnitRate>
+                              <Money currencyCode="USD">10.00</Money>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <TermReference>
+                                 <Term>3</Term>
+                                 <TermName>payCode</TermName>
+                              </TermReference>
+                           </UnitRate>
+                           <TimeCardID/>
+                           <Contractor>
+                              <Name languageCode=""/>
+                           </Contractor>
+                           <ContractIdentifier Domain=""/>
+                           <JobDescription languageCode="en-US"/>
+                           <Supervisor/>
+                           <Address>
+                              <PhysicalAddress>
+                                 <StreetName/>
+                                 <StreetPrefixName/>
+                                 <StreetSuffixName/>
+                                 <CityName/>
+                                 <RegionCode/>
+                                 <RegionName/>
+                                 <CompanyPostalCode/>
+                                 <CountryCode/>
+                                 <CountryName/>
+                              </PhysicalAddress>
+                           </Address>
+                        </LaborDetails>
+                     </Item>
+                     <Item>
+                        <ID>7</ID>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <LineType>charges</LineType>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">20.00</GrossAmount>
+                           <NetAmount currencyCode="USD">20.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">20.00@#$</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <Item>
+                        <ID>8</ID>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <LineType>charges</LineType>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">30.00</GrossAmount>
+                           <NetAmount currencyCode="USD">30.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">30.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">6174.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">246.96</TaxAmount>
+                        </ProductTaxDetails>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>SAL</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">6174.00</TaxBaseAmount>
+                           <TaxPercent>8</TaxPercent>
+                           <TaxAmount currencyCode="USD">493.92</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">7055.88</GrossAmount>
+                        <NetAmount currencyCode="USD">6929.88</NetAmount>
+                        <TaxAmount currencyCode="USD">740.88</TaxAmount>
+                        <DiscountPrice currencyCode="USD">126.00</DiscountPrice>
+                     </PriceCalculation>
+                  </Invoice>
+                  <Comments>
+                     <Item>
+                        <TextID>F02</TextID>
+                        <TextLang/>
+                        <AribaLine>
+                           <TextLine>The Big Bang theory is a cosmological model of the observable
+                            universe from the earliest known periods t</TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>hrough its subsequent
+                            large-scale evolution.[1][2][3] The model describes how the universe
+             </TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>               expanded from a very high-density and high-temperature state,[4] and
+                            offers a comprehensi</TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>ve explanation for a broad range of phenomena,
+                            including the abundance of light elements, the cosmic mic</TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>rowave
+                            background (CMB) radiation, large-scale structure and Hubble's law (the
+                         </TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>   farther away galaxies are, the faster they are moving away from Earth).
+                            If the observed conditions ar</TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>e extrapolated backwards in time using the
+                            known laws of physics, the prediction is that just before a p</TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>eriod of
+                            very high density there was a singularity which is typically associated
+                       </TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>     with the Big Bang. Current knowledge is insufficient to determine if the
+                            singularity was
+          </TextLine>
+                        </AribaLine>
+                        <AribaLine>
+                           <TextLine>                          primordial.</TextLine>
+                        </AribaLine>
+                     </Item>
+                  </Comments>
+                  <Attachment>
+                     <Item>
+                        <FileName>Attachment1 - Copy.txt</FileName>
+                        <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                        <ContentId>75796314.1583481382541@cxml.org</ContentId>
+                        <LineNumber/>
+                        <Content>line1</Content>
+                     </Item>
+                     <Item>
+                        <FileName>Attachment2 - Copy.txt</FileName>
+                        <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                        <ContentId>395115592.1583481394977@cxml.org</ContentId>
+                        <LineNumber/>
+                        <Content>line1</Content>
+                     </Item>
+                  </Attachment>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice with Unplanned Delivery Costs</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceUnplannedCosts.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>shiphandle</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-03-26T10:52:31+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>shiphandle</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-03-26</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">3</Quantity>
+                     <LineType>material</LineType>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">36.00</GrossAmount>
+                        <NetAmount currencyCode="USD">36.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">12.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <TaxCalculation>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="USD">36.00</TaxBaseAmount>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxAmount currencyCode="USD">1.44</TaxAmount>
+                     </ProductTaxDetails>
+                  </TaxCalculation>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">50.44</GrossAmount>
+                     <NetAmount currencyCode="USD">50.44</NetAmount>
+                     <TaxAmount currencyCode="USD">1.44</TaxAmount>
+                  </PriceCalculation>
+                  <UnplannedDeliveryCostsDets>
+                     <Purpose>ShippingAndHandlingCosts</Purpose>
+                     <TaxTypeCode>VAT</TaxTypeCode>
+                     <TaxPercent>4</TaxPercent>
+                     <TaxBaseAmount currencyCode="USD">36.00</TaxBaseAmount>
+                     <TaxAmount currencyCode="USD">1.44</TaxAmount>
+                  </UnplannedDeliveryCostsDets>
+                  <UnplannedDeliveryCostsDets>
+                     <Purpose>specialHandlingAmount</Purpose>
+                     <TaxBaseAmount currencyCode="USD">8.00</TaxBaseAmount>
+                  </UnplannedDeliveryCostsDets>
+                  <UnplannedDeliveryCostsDets>
+                     <Purpose>shippingAmount</Purpose>
+                     <TaxBaseAmount currencyCode="USD">5.00</TaxBaseAmount>
+                  </UnplannedDeliveryCostsDets>
+               </Invoice>
+               <Attachment>
+                  <Item>
+                     <FileName>Line Attachment - Copy.txt</FileName>
+                     <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                     <ContentId>755006107.1585200181852@cxml.org</ContentId>
+                     <LineNumber/>
+                     <Content>line1</Content>
+                  </Item>
+               </Attachment>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>FI Invoice with Unplanned Delivery Costs</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>shiphandle</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>shiphandle</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">3</Quantity>
+                        <LineType>material</LineType>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">36.00</GrossAmount>
+                           <NetAmount currencyCode="USD">36.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">12.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">36.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">1.44</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">50.44</GrossAmount>
+                        <NetAmount currencyCode="USD">50.44</NetAmount>
+                        <TaxAmount currencyCode="USD">1.44</TaxAmount>
+                     </PriceCalculation>
+                     <UnplannedDeliveryCostsDets>
+                        <Purpose>ShippingAndHandlingCosts</Purpose>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxBaseAmount currencyCode="USD">36.00</TaxBaseAmount>
+                        <TaxAmount currencyCode="USD">1.44</TaxAmount>
+                     </UnplannedDeliveryCostsDets>
+                     <UnplannedDeliveryCostsDets>
+                        <Purpose>specialHandlingAmount</Purpose>
+                        <TaxBaseAmount currencyCode="USD">8.00</TaxBaseAmount>
+                     </UnplannedDeliveryCostsDets>
+                     <UnplannedDeliveryCostsDets>
+                        <Purpose>shippingAmount</Purpose>
+                        <TaxBaseAmount currencyCode="USD">5.00</TaxBaseAmount>
+                     </UnplannedDeliveryCostsDets>
+                  </Invoice>
+                  <Attachment>
+                     <Item>
+                        <FileName>Line Attachment - Copy.txt</FileName>
+                        <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                        <ContentId>755006107.1585200181852@cxml.org</ContentId>
+                        <LineNumber/>
+                        <Content>line1</Content>
+                     </Item>
+                  </Attachment>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice with Taxes and Discounts</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceTaxDiscount.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>DISCOUNT2</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-04-17T16:23:28+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>DISCOUNT2</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-04-17</IssueDate>
+                  <OrderInfo>
+                     <ContractNumber>345621</ContractNumber>
+                  </OrderInfo>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>88000088</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <LineType>material</LineType>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="EUR">200.00</GrossAmount>
+                        <NetAmount currencyCode="EUR">200.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="EUR">200.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <TaxCalculation>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="EUR">196.00</TaxBaseAmount>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxAmount currencyCode="EUR">7.84</TaxAmount>
+                     </ProductTaxDetails>
+                  </TaxCalculation>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="EUR">207.84</GrossAmount>
+                     <NetAmount currencyCode="EUR">203.84</NetAmount>
+                     <TaxAmount currencyCode="EUR">7.84</TaxAmount>
+                     <DiscountPrice currencyCode="EUR">4.00</DiscountPrice>
+                  </PriceCalculation>
+                  <UnplannedDeliveryCostsDets>
+                     <TaxTypeCode>VAT</TaxTypeCode>
+                     <TaxPercent>4</TaxPercent>
+                     <TaxBaseAmount currencyCode="EUR">196.00</TaxBaseAmount>
+                     <TaxAmount currencyCode="EUR">7.84</TaxAmount>
+                  </UnplannedDeliveryCostsDets>
+               </Invoice>
+               <Attachment>
+                  <Item>
+                     <FileName>Attachment1 - Copy.txt</FileName>
+                     <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                     <ContentId>1241500264.1587120846081@cxml.org</ContentId>
+                     <LineNumber/>
+                     <Content>line1</Content>
+                  </Item>
+               </Attachment>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>FI Invoice with Taxes and Discounts</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>DISCOUNT2</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>DISCOUNT2</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <OrderInfo>
+                        <ContractNumber>345621</ContractNumber>
+                     </OrderInfo>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>88000088</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <LineType>material</LineType>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="EUR">200.00</GrossAmount>
+                           <NetAmount currencyCode="EUR">200.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="EUR">200.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="EUR">196.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="EUR">7.84</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="EUR">207.84</GrossAmount>
+                        <NetAmount currencyCode="EUR">203.84</NetAmount>
+                        <TaxAmount currencyCode="EUR">7.84</TaxAmount>
+                        <DiscountPrice currencyCode="EUR">4.00</DiscountPrice>
+                     </PriceCalculation>
+                     <UnplannedDeliveryCostsDets>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxBaseAmount currencyCode="EUR">196.00</TaxBaseAmount>
+                        <TaxAmount currencyCode="EUR">7.84</TaxAmount>
+                     </UnplannedDeliveryCostsDets>
+                  </Invoice>
+                  <Attachment>
+                     <Item>
+                        <FileName>Attachment1 - Copy.txt</FileName>
+                        <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                        <ContentId>1241500264.1587120846081@cxml.org</ContentId>
+                        <LineNumber/>
+                        <Content>line1</Content>
+                     </Item>
+                  </Attachment>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice with Cost Center Distribution</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceCostCenter.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>TEST1</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-04-17T17:07:37+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>TEST1</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-04-17</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>88000088</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <LineType>material</LineType>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">208.00</GrossAmount>
+                        <NetAmount currencyCode="USD">208.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">200.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VST</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">200.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">8.00</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>11</OrdinalNumberValue>
+                           <LineNumber>1</LineNumber>
+                           <Amount currencyCode="USD">200.00</Amount>
+                           <Percentage>100</Percentage>
+                           <GLAccount>0000400000</GLAccount>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <LineType>charges</LineType>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">52.00</GrossAmount>
+                        <NetAmount currencyCode="USD">52.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">50.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <Purpose>shippingTax</Purpose>
+                           <TaxTypeCode>VST</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">50.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">2.00</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>12</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">50.00</Amount>
+                           <Percentage>100</Percentage>
+                           <GLAccount>0000400000</GLAccount>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item>
+                     <ID>3</ID>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <LineType>charges</LineType>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">20.80</GrossAmount>
+                        <NetAmount currencyCode="USD">20.80</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">20.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <Purpose>specialHandingTax</Purpose>
+                           <TaxTypeCode>VST</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">20.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">0.80</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>13</OrdinalNumberValue>
+                           <LineNumber>3</LineNumber>
+                           <Amount currencyCode="USD">20.00</Amount>
+                           <Percentage>100</Percentage>
+                           <GLAccount>0000400000</GLAccount>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">280.80</GrossAmount>
+                     <NetAmount currencyCode="USD">280.80</NetAmount>
+                     <TaxAmount currencyCode="USD">10.80</TaxAmount>
+                  </PriceCalculation>
+               </Invoice>
+               <Attachment>
+                  <Item>
+                     <FileName>Line Attachment - Copy.txt</FileName>
+                     <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                     <ContentId>1972916077.1587123498578@cxml.org</ContentId>
+                     <LineNumber/>
+                     <Content>line1</Content>
+                  </Item>
+               </Attachment>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="true">
+         <label>FI Invoice with Cost Center Distribution</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>TEST1</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>TEST1</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>88000088</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <LineType>material</LineType>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">208.00</GrossAmount>
+                           <NetAmount currencyCode="USD">208.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">200.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <TaxCalculation>
+                           <ProductTaxDetails>
+                              <TaxTypeCode>VST</TaxTypeCode>
+                              <TaxBaseAmount currencyCode="USD">200.00</TaxBaseAmount>
+                              <TaxPercent>4</TaxPercent>
+                              <TaxAmount currencyCode="USD">8.00</TaxAmount>
+                           </ProductTaxDetails>
+                        </TaxCalculation>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>11</OrdinalNumberValue>
+                              <LineNumber>1</LineNumber>
+                              <Amount currencyCode="USD">200.00</Amount>
+                              <Percentage>100</Percentage>
+                              <GLAccount>0000400000</GLAccount>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <LineType>charges</LineType>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">52.00</GrossAmount>
+                           <NetAmount currencyCode="USD">52.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">50.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <TaxCalculation>
+                           <ProductTaxDetails>
+                              <Purpose>shippingTax</Purpose>
+                              <TaxTypeCode>VST</TaxTypeCode>
+                              <TaxBaseAmount currencyCode="USD">50.00</TaxBaseAmount>
+                              <TaxPercent>4</TaxPercent>
+                              <TaxAmount currencyCode="USD">2.00</TaxAmount>
+                           </ProductTaxDetails>
+                        </TaxCalculation>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>12</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">50.00</Amount>
+                              <Percentage>100</Percentage>
+                              <GLAccount>0000400000</GLAccount>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item>
+                        <ID>3</ID>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <LineType>charges</LineType>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">20.80</GrossAmount>
+                           <NetAmount currencyCode="USD">20.80</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">20.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <TaxCalculation>
+                           <ProductTaxDetails>
+                              <Purpose>specialHandingTax</Purpose>
+                              <TaxTypeCode>VST</TaxTypeCode>
+                              <TaxBaseAmount currencyCode="USD">20.00</TaxBaseAmount>
+                              <TaxPercent>4</TaxPercent>
+                              <TaxAmount currencyCode="USD">0.80</TaxAmount>
+                           </ProductTaxDetails>
+                        </TaxCalculation>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>13</OrdinalNumberValue>
+                              <LineNumber>3</LineNumber>
+                              <Amount currencyCode="USD">20.00</Amount>
+                              <Percentage>100</Percentage>
+                              <GLAccount>0000400000</GLAccount>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">280.80</GrossAmount>
+                        <NetAmount currencyCode="USD">280.80</NetAmount>
+                        <TaxAmount currencyCode="USD">10.80</TaxAmount>
+                     </PriceCalculation>
+                  </Invoice>
+                  <Attachment>
+                     <Item>
+                        <FileName>Line Attachment - Copy.txt</FileName>
+                        <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                        <ContentId>1972916077.1587123498578@cxml.org</ContentId>
+                        <LineNumber/>
+                        <Content>line1</Content>
+                     </Item>
+                  </Attachment>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario8"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice with Asset and SubAsset Distribution</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceAsset.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>03.04_2_Ln_1_Gc</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-04-03T10:06:17+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>03.04_2_Ln_1_Gc</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-04-03</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>88000088</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">2</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>1652</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">4.00</GrossAmount>
+                        <NetAmount currencyCode="USD">4.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">2.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>11</OrdinalNumberValue>
+                           <LineNumber>1</LineNumber>
+                           <Amount currencyCode="USD">2.00</Amount>
+                           <Percentage>50</Percentage>
+                           <WBSElement>TEST_FI</WBSElement>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>21</OrdinalNumberValue>
+                           <LineNumber>1</LineNumber>
+                           <Amount currencyCode="USD">1.20</Amount>
+                           <GLAccount>0000404000</GLAccount>
+                           <AssetID>SAP-DUMMY</AssetID>
+                           <Percentage>30</Percentage>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>31</OrdinalNumberValue>
+                           <LineNumber>1</LineNumber>
+                           <Amount currencyCode="USD">0.80</Amount>
+                           <Percentage>20</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <AssetID>000000100220</AssetID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">3</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>R1000</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">9.00</GrossAmount>
+                        <NetAmount currencyCode="USD">9.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">3.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>12</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">2.70</Amount>
+                           <Percentage>30</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <SubAsset>000000100220</SubAsset>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>22</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">1.80</Amount>
+                           <Percentage>20</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <SubAsset>TEST_FI</SubAsset>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>32</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">1.35</Amount>
+                           <Percentage>15</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <SubAsset>SAP-DUMMY</SubAsset>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>42</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">3.15</Amount>
+                           <Percentage>35</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <InternalOrderID>000000100221</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">13.00</GrossAmount>
+                     <NetAmount currencyCode="USD">13.00</NetAmount>
+                     <TaxAmount currencyCode="USD">0</TaxAmount>
+                  </PriceCalculation>
+               </Invoice>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario8-expect1" successful="true">
+         <label>FI Invoice with Asset and SubAsset Distribution</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>03.04_2_Ln_1_Gc</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>03.04_2_Ln_1_Gc</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>88000088</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">2</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>1652</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">4.00</GrossAmount>
+                           <NetAmount currencyCode="USD">4.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">2.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>11</OrdinalNumberValue>
+                              <LineNumber>1</LineNumber>
+                              <Amount currencyCode="USD">2.00</Amount>
+                              <Percentage>50</Percentage>
+                              <WBSElement>TEST_FI</WBSElement>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>21</OrdinalNumberValue>
+                              <LineNumber>1</LineNumber>
+                              <Amount currencyCode="USD">1.20</Amount>
+                              <GLAccount>0000404000</GLAccount>
+                              <AssetID>SAP-DUMMY</AssetID>
+                              <Percentage>30</Percentage>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>31</OrdinalNumberValue>
+                              <LineNumber>1</LineNumber>
+                              <Amount currencyCode="USD">0.80</Amount>
+                              <Percentage>20</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <AssetID>000000100220</AssetID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">3</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>R1000</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">9.00</GrossAmount>
+                           <NetAmount currencyCode="USD">9.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">3.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>12</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">2.70</Amount>
+                              <Percentage>30</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <SubAsset>000000100220</SubAsset>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>22</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">1.80</Amount>
+                              <Percentage>20</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <SubAsset>TEST_FI</SubAsset>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>32</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">1.35</Amount>
+                              <Percentage>15</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <SubAsset>SAP-DUMMY</SubAsset>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>42</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">3.15</Amount>
+                              <Percentage>35</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <InternalOrderID>000000100221</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">13.00</GrossAmount>
+                        <NetAmount currencyCode="USD">13.00</NetAmount>
+                        <TaxAmount currencyCode="USD">0</TaxAmount>
+                     </PriceCalculation>
+                  </Invoice>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario9"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice with Internal Order Distribution</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceInternalOrder.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>03.04_2_Ln_1_Gc</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-04-03T10:06:17+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>03.04_2_Ln_1_Gc</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-04-03</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>88000088</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jqis - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">2</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>1652</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">4.00</GrossAmount>
+                        <NetAmount currencyCode="USD">4.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">2.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>11</OrdinalNumberValue>
+                           <LineNumber>1</LineNumber>
+                           <Amount currencyCode="USD">2.00</Amount>
+                           <Percentage>50</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <WBSElement>TEST_FI</WBSElement>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>21</OrdinalNumberValue>
+                           <LineNumber>1</LineNumber>
+                           <Amount currencyCode="USD">1.20</Amount>
+                           <GLAccount>0000404000</GLAccount>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <Percentage>30</Percentage>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>31</OrdinalNumberValue>
+                           <LineNumber>1</LineNumber>
+                           <Amount currencyCode="USD">0.80</Amount>
+                           <Percentage>20</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <InternalOrderID>000000100220</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">3</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>R1000</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">9.00</GrossAmount>
+                        <NetAmount currencyCode="USD">9.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">3.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>12</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">2.70</Amount>
+                           <Percentage>30</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <InternalOrderID>000000100220</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>22</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">1.80</Amount>
+                           <Percentage>20</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <WBSElement>TEST_FI</WBSElement>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>32</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">1.35</Amount>
+                           <Percentage>15</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>42</OrdinalNumberValue>
+                           <LineNumber>2</LineNumber>
+                           <Amount currencyCode="USD">3.15</Amount>
+                           <Percentage>35</Percentage>
+                           <GLAccount>0000404000</GLAccount>
+                           <InternalOrderID>000000100221</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">13.00</GrossAmount>
+                     <NetAmount currencyCode="USD">13.00</NetAmount>
+                     <TaxAmount currencyCode="USD">0</TaxAmount>
+                  </PriceCalculation>
+               </Invoice>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario9-expect1" successful="true">
+         <label>FI Invoice with Internal Order Distribution</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>03.04_2_Ln_1_Gc</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>03.04_2_Ln_1_Gc</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>88000088</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jqis - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">2</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>1652</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">4.00</GrossAmount>
+                           <NetAmount currencyCode="USD">4.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">2.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>11</OrdinalNumberValue>
+                              <LineNumber>1</LineNumber>
+                              <Amount currencyCode="USD">2.00</Amount>
+                              <Percentage>50</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <WBSElement>TEST_FI</WBSElement>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>21</OrdinalNumberValue>
+                              <LineNumber>1</LineNumber>
+                              <Amount currencyCode="USD">1.20</Amount>
+                              <GLAccount>0000404000</GLAccount>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <Percentage>30</Percentage>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>31</OrdinalNumberValue>
+                              <LineNumber>1</LineNumber>
+                              <Amount currencyCode="USD">0.80</Amount>
+                              <Percentage>20</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <InternalOrderID>000000100220</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">3</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>R1000</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">9.00</GrossAmount>
+                           <NetAmount currencyCode="USD">9.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">3.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>12</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">2.70</Amount>
+                              <Percentage>30</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <InternalOrderID>000000100220</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>22</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">1.80</Amount>
+                              <Percentage>20</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <WBSElement>TEST_FI</WBSElement>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>32</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">1.35</Amount>
+                              <Percentage>15</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>42</OrdinalNumberValue>
+                              <LineNumber>2</LineNumber>
+                              <Amount currencyCode="USD">3.15</Amount>
+                              <Percentage>35</Percentage>
+                              <GLAccount>0000404000</GLAccount>
+                              <InternalOrderID>000000100221</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">13.00</GrossAmount>
+                        <NetAmount currencyCode="USD">13.00</NetAmount>
+                        <TaxAmount currencyCode="USD">0</TaxAmount>
+                     </PriceCalculation>
+                  </Invoice>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario10"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice with Discounts</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceDiscount.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>INV_4323</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-03-05T11:49:32+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>INV_4323</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-03-05</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>98736</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>39800</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">1036.00</GrossAmount>
+                        <NetAmount currencyCode="USD">936.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">100.00</Amount>
+                        </NetUnitPrice>
+                        <DiscountPrice>
+                           <Amount currencyCode="USD">100.00</Amount>
+                        </DiscountPrice>
+                     </PriceCalculation>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">900.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">36.00</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                  </Item>
+                  <Item>
+                     <ID>2</ID>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>22</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">1036.00</GrossAmount>
+                        <NetAmount currencyCode="USD">936.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">100.00</Amount>
+                        </NetUnitPrice>
+                        <DiscountPrice>
+                           <Amount currencyCode="USD">100.00</Amount>
+                        </DiscountPrice>
+                     </PriceCalculation>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">900.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">36.00</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                  </Item>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">2072.00</GrossAmount>
+                     <NetAmount currencyCode="USD">1872.00</NetAmount>
+                     <TaxAmount currencyCode="USD">72.00</TaxAmount>
+                  </PriceCalculation>
+                  <UnplannedDeliveryCostsDets>
+                     <TaxTypeCode>VAT</TaxTypeCode>
+                     <TaxPercent>4</TaxPercent>
+                     <TaxBaseAmount currencyCode="USD">1800.00</TaxBaseAmount>
+                     <TaxAmount currencyCode="USD">72.00</TaxAmount>
+                  </UnplannedDeliveryCostsDets>
+               </Invoice>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario10-expect1" successful="true">
+         <label>FI Invoice with Discounts</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>INV_4323</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>INV_4323</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>98736</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>39800</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">1036.00</GrossAmount>
+                           <NetAmount currencyCode="USD">936.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">100.00</Amount>
+                           </NetUnitPrice>
+                           <DiscountPrice>
+                              <Amount currencyCode="USD">100.00</Amount>
+                           </DiscountPrice>
+                        </PriceCalculation>
+                        <TaxCalculation>
+                           <ProductTaxDetails>
+                              <TaxTypeCode>VAT</TaxTypeCode>
+                              <TaxBaseAmount currencyCode="USD">900.00</TaxBaseAmount>
+                              <TaxPercent>4</TaxPercent>
+                              <TaxAmount currencyCode="USD">36.00</TaxAmount>
+                           </ProductTaxDetails>
+                        </TaxCalculation>
+                     </Item>
+                     <Item>
+                        <ID>2</ID>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>22</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">1036.00</GrossAmount>
+                           <NetAmount currencyCode="USD">936.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">100.00</Amount>
+                           </NetUnitPrice>
+                           <DiscountPrice>
+                              <Amount currencyCode="USD">100.00</Amount>
+                           </DiscountPrice>
+                        </PriceCalculation>
+                        <TaxCalculation>
+                           <ProductTaxDetails>
+                              <TaxTypeCode>VAT</TaxTypeCode>
+                              <TaxBaseAmount currencyCode="USD">900.00</TaxBaseAmount>
+                              <TaxPercent>4</TaxPercent>
+                              <TaxAmount currencyCode="USD">36.00</TaxAmount>
+                           </ProductTaxDetails>
+                        </TaxCalculation>
+                     </Item>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">2072.00</GrossAmount>
+                        <NetAmount currencyCode="USD">1872.00</NetAmount>
+                        <TaxAmount currencyCode="USD">72.00</TaxAmount>
+                     </PriceCalculation>
+                     <UnplannedDeliveryCostsDets>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxBaseAmount currencyCode="USD">1800.00</TaxBaseAmount>
+                        <TaxAmount currencyCode="USD">72.00</TaxAmount>
+                     </UnplannedDeliveryCostsDets>
+                  </Invoice>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario11"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice Customer Order</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceCustomerOrder.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>INV_4555</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-03-03T14:52:05+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>INV_4555</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-03-03</IssueDate>
+                  <OrderInfo>
+                     <CustomerOrder>987653456</CustomerOrder>
+                     <ContractNumber>2345</ContractNumber>
+                  </OrderInfo>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>98736</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>39800</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">1100.00</GrossAmount>
+                        <NetAmount currencyCode="USD">1100.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">100.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <TaxCalculation>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="USD">1000.00</TaxBaseAmount>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                     </ProductTaxDetails>
+                  </TaxCalculation>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">1140.00</GrossAmount>
+                     <NetAmount currencyCode="USD">1140.00</NetAmount>
+                     <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                  </PriceCalculation>
+                  <UnplannedDeliveryCostsDets>
+                     <TaxTypeCode>VAT</TaxTypeCode>
+                     <TaxPercent>4</TaxPercent>
+                     <TaxBaseAmount currencyCode="USD">1000.00</TaxBaseAmount>
+                     <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                  </UnplannedDeliveryCostsDets>
+                  <UnplannedDeliveryCostsDets>
+                     <Purpose>specialHandlingAmount</Purpose>
+                     <TaxBaseAmount currencyCode="USD">100</TaxBaseAmount>
+                  </UnplannedDeliveryCostsDets>
+               </Invoice>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario11-expect1" successful="true">
+         <label>FI Invoice Customer Order</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>INV_4555</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>INV_4555</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <OrderInfo>
+                        <CustomerOrder>987653456</CustomerOrder>
+                        <ContractNumber>2345</ContractNumber>
+                     </OrderInfo>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>98736</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>39800</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">1100.00</GrossAmount>
+                           <NetAmount currencyCode="USD">1100.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">100.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">1000.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">1140.00</GrossAmount>
+                        <NetAmount currencyCode="USD">1140.00</NetAmount>
+                        <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                     </PriceCalculation>
+                     <UnplannedDeliveryCostsDets>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxBaseAmount currencyCode="USD">1000.00</TaxBaseAmount>
+                        <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                     </UnplannedDeliveryCostsDets>
+                     <UnplannedDeliveryCostsDets>
+                        <Purpose>specialHandlingAmount</Purpose>
+                        <TaxBaseAmount currencyCode="USD">100</TaxBaseAmount>
+                     </UnplannedDeliveryCostsDets>
+                  </Invoice>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario12"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice Sales Order</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoiceSalesOrder.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>INV_4555555666777889</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-03-03T14:52:05+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>INV_4555555666777889</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-03-03</IssueDate>
+                  <OrderInfo>
+                     <SalesOrder>987653456</SalesOrder>
+                     <ContractNumber>2345</ContractNumber>
+                  </OrderInfo>
+                  <PartnerType>LS</PartnerType>
+                  <IsInformationOnly>true</IsInformationOnly>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>98736</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>39800</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">1100.00</GrossAmount>
+                        <NetAmount currencyCode="USD">1100.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">100.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <TaxCalculation>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="USD">1000.00</TaxBaseAmount>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                     </ProductTaxDetails>
+                  </TaxCalculation>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">1140.00</GrossAmount>
+                     <NetAmount currencyCode="USD">1140.00</NetAmount>
+                     <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                  </PriceCalculation>
+                  <UnplannedDeliveryCostsDets>
+                     <TaxTypeCode>VAT</TaxTypeCode>
+                     <TaxPercent>4</TaxPercent>
+                     <TaxBaseAmount currencyCode="USD">1000.00</TaxBaseAmount>
+                     <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                  </UnplannedDeliveryCostsDets>
+                  <UnplannedDeliveryCostsDets>
+                     <Purpose>specialHandlingAmount</Purpose>
+                     <TaxBaseAmount currencyCode="USD">100</TaxBaseAmount>
+                  </UnplannedDeliveryCostsDets>
+               </Invoice>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario12-expect1" successful="true">
+         <label>FI Invoice Sales Order</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>INV_4555555666777889</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>INV_4555555666777889</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <OrderInfo>
+                        <SalesOrder>987653456</SalesOrder>
+                        <ContractNumber>2345</ContractNumber>
+                     </OrderInfo>
+                     <PartnerType>LS</PartnerType>
+                     <IsInformationOnly>true</IsInformationOnly>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>98736</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>39800</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">1100.00</GrossAmount>
+                           <NetAmount currencyCode="USD">1100.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">100.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">1000.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">1140.00</GrossAmount>
+                        <NetAmount currencyCode="USD">1140.00</NetAmount>
+                        <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                     </PriceCalculation>
+                     <UnplannedDeliveryCostsDets>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxBaseAmount currencyCode="USD">1000.00</TaxBaseAmount>
+                        <TaxAmount currencyCode="USD">40.00</TaxAmount>
+                     </UnplannedDeliveryCostsDets>
+                     <UnplannedDeliveryCostsDets>
+                        <Purpose>specialHandlingAmount</Purpose>
+                        <TaxBaseAmount currencyCode="USD">100</TaxBaseAmount>
+                     </UnplannedDeliveryCostsDets>
+                  </Invoice>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario13"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_FIInvoiceDetailRequest_AddOn_0000_FIInvoice.xspec">
+      <label>FI Invoice with Longer supplier name lenght more than 40</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Invoice/FIInvoice_longer_suppname.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>inv0303</ID>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                  <CreationDateTime>2020-03-03T13:40:32+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Invoice actionCode="01">
+                  <ID>inv0303</ID>
+                  <CompanyID/>
+                  <TypeCode>FI</TypeCode>
+                  <ProcessingTypeCode>standard</ProcessingTypeCode>
+                  <IssueDate>2020-03-03</IssueDate>
+                  <PartnerType>LS</PartnerType>
+                  <BillToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>SAP ARIBA -1</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </BillToParty>
+                  <BillFromParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST This is longer text more t</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                     <VendorID>100000</VendorID>
+                  </BillFromParty>
+                  <RemitToParty>
+                     <InternalID>98736</InternalID>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>Ranjan - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </RemitToParty>
+                  <SoldToParty>
+                     <Address>
+                        <OrganisationFormOfAddress>
+                           <Name>t1q8jb10 buyer - TEST</Name>
+                        </OrganisationFormOfAddress>
+                     </Address>
+                  </SoldToParty>
+                  <Item>
+                     <ID>1</ID>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <LineType>material</LineType>
+                     <Product>
+                        <SupplierPartID>1652</SupplierPartID>
+                     </Product>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">500.00</GrossAmount>
+                        <NetAmount currencyCode="USD">500.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">50.00</Amount>
+                        </NetUnitPrice>
+                     </PriceCalculation>
+                  </Item>
+                  <TaxCalculation>
+                     <ProductTaxDetails>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxBaseAmount currencyCode="USD">500.00</TaxBaseAmount>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                     </ProductTaxDetails>
+                  </TaxCalculation>
+                  <PriceCalculation>
+                     <GrossAmount currencyCode="USD">520.00</GrossAmount>
+                     <NetAmount currencyCode="USD">520.00</NetAmount>
+                     <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                  </PriceCalculation>
+                  <UnplannedDeliveryCostsDets>
+                     <TaxTypeCode>VAT</TaxTypeCode>
+                     <TaxPercent>4</TaxPercent>
+                     <TaxBaseAmount currencyCode="USD">500.00</TaxBaseAmount>
+                     <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                  </UnplannedDeliveryCostsDets>
+               </Invoice>
+            </n0:InvoiceERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario13-expect1" successful="true">
+         <label>FI Invoice with Long supplier name </label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>inv0303</ID>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02003049496-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02003049496-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT002</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Invoice actionCode="01">
+                     <ID>inv0303</ID>
+                     <CompanyID/>
+                     <TypeCode>FI</TypeCode>
+                     <ProcessingTypeCode>standard</ProcessingTypeCode>
+                     <IssueDate>...</IssueDate>
+                     <PartnerType>LS</PartnerType>
+                     <BillToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>SAP ARIBA -1</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </BillToParty>
+                     <BillFromParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST This is longer text more t</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                        <VendorID>100000</VendorID>
+                     </BillFromParty>
+                     <RemitToParty>
+                        <InternalID>98736</InternalID>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>Ranjan - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </RemitToParty>
+                     <SoldToParty>
+                        <Address>
+                           <OrganisationFormOfAddress>
+                              <Name>t1q8jb10 buyer - TEST</Name>
+                           </OrganisationFormOfAddress>
+                        </Address>
+                     </SoldToParty>
+                     <Item>
+                        <ID>1</ID>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <LineType>material</LineType>
+                        <Product>
+                           <SupplierPartID>1652</SupplierPartID>
+                        </Product>
+                        <PriceCalculation>
+                           <GrossAmount currencyCode="USD">500.00</GrossAmount>
+                           <NetAmount currencyCode="USD">500.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">50.00</Amount>
+                           </NetUnitPrice>
+                        </PriceCalculation>
+                     </Item>
+                     <TaxCalculation>
+                        <ProductTaxDetails>
+                           <TaxTypeCode>VAT</TaxTypeCode>
+                           <TaxBaseAmount currencyCode="USD">500.00</TaxBaseAmount>
+                           <TaxPercent>4</TaxPercent>
+                           <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                        </ProductTaxDetails>
+                     </TaxCalculation>
+                     <PriceCalculation>
+                        <GrossAmount currencyCode="USD">520.00</GrossAmount>
+                        <NetAmount currencyCode="USD">520.00</NetAmount>
+                        <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                     </PriceCalculation>
+                     <UnplannedDeliveryCostsDets>
+                        <TaxTypeCode>VAT</TaxTypeCode>
+                        <TaxPercent>4</TaxPercent>
+                        <TaxBaseAmount currencyCode="USD">500.00</TaxBaseAmount>
+                        <TaxAmount currencyCode="USD">20.00</TaxAmount>
+                     </UnplannedDeliveryCostsDets>
+                  </Invoice>
+               </n0:InvoiceERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

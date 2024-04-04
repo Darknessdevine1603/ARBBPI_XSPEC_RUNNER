@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderChangeExportRequest_AddOn_0000_PurchaseOrderChangeExportRequest.xsl">
+    <x:scenario label="Scenario for Purchase Order change with PO service contract">
+        <x:param name="anLocalTesting" select="'YES'"/> 
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anSenderID1"/>
+        <x:param name="anSourceDocumentType" select="'PurchaseOrderChangeExportRequest'"/>
+        <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+        <x:param name="attachSeparator" select="'\|'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_BM_SRV.xml"/>
+        <x:expect label="Scenario for Purchase Order change with PO service contract" href="../../../XSPEC/payloads/target/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_AM_SRV.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for Purchase Order change with PO Services and schedule lines">
+        <x:param name="anLocalTesting" select="'YES'"/> 
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anSenderID1"/>
+        <x:param name="anSourceDocumentType" select="'PurchaseOrderChangeExportRequest'"/>
+        <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+        <x:param name="attachSeparator" select="'\|'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_BM_SRV_CL.xml"/>
+        <x:expect label="Scenario for Purchase Order change with PO Services and schedule lines" href="../../../XSPEC/payloads/target/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_AM_SRV_CL.xml" select="element()"/>
+    </x:scenario>  
+    <x:scenario label="Scenario for Purchase Order change with PO charge line">
+        <x:param name="anLocalTesting" select="'YES'"/> 
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSenderID1"/>
+        <x:param name="anSourceDocumentType" select="'PurchaseOrderChangeExportRequest'"/>
+        <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+        <x:param name="attachSeparator" select="'\|'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_BM_CH.xml"/>
+        <x:expect label="Scenario for Purchase Order change with PO charge line" href="../../../XSPEC/payloads/target/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_AM_CH.xml" select="element()"/>
+    </x:scenario>    
+    <x:scenario label="Scenario for Purchase Order change with PO charge line and tax">
+        <x:param name="anLocalTesting" select="'YES'"/> 
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSenderID1"/>
+        <x:param name="anSourceDocumentType" select="'PurchaseOrderChangeExportRequest'"/>
+        <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+        <x:param name="attachSeparator" select="'\|'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_BM_CT.xml"/>
+        <x:expect label="Scenario for Purchase Order change with PO charge line and tax" href="../../../XSPEC/payloads/target/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_AM_CT.xml" select="element()"/>
+    </x:scenario>  
+    <x:scenario label="Scenario for Purchase Order change for PO with attachment">
+        <x:param name="anLocalTesting" select="'YES'"/> 
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSenderID1"/>
+        <x:param name="anSourceDocumentType" select="'PurchaseOrderChangeExportRequest'"/>
+        <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+        <x:param name="attachSeparator" select="'\|'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_BM_ATT.xml"/>
+        <x:expect label="Scenario for Purchase Order change for PO with attachment" href="../../../XSPEC/payloads/target/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_AM_Att.xml" select="element()"/>
+    </x:scenario>
+    <!-- IG-37134 : Amount formatting based on currency -->
+    <x:scenario label="Scenario for Purchase Order change with PO Services and schedule lines with non Decimal currency">
+        <x:param name="anLocalTesting" select="'YES'"/> 
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSenderID1"/>
+        <x:param name="anSourceDocumentType" select="'PurchaseOrderChangeExportRequest'"/>
+        <x:param name="anAddOnCIVersion" select="'ARBCI10017'"/>
+        <x:param name="attachSeparator" select="'\|'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_SRV_NonDecimalCurrency_BM.xml"/>
+        <x:expect label="Scenario for Purchase Order change with PO Services and schedule lines with non Decimal currency" href="../../../XSPEC/payloads/target/inbound/p2p/ChangePO/PurchaseOrderChangeExportRequest_SRV_NonDecimalCurrency_AM.xml" select="element()"/>
+    </x:scenario>    
+    
+</x:description>

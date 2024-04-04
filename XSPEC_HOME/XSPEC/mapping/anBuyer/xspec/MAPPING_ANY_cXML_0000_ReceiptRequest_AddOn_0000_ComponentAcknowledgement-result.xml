@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_AddOn_0000_ComponentAcknowledgement.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_AddOn_0000_ComponentAcknowledgement.xsl"
+        date="2023-04-27T15:30:01.003871+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_AddOn_0000_ComponentAcknowledgement.xspec">
+      <label>CompAckSTOCMtoCMwithcopy</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Receipts/CompAckSTOCMtoCMwithcopy.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2023-04-27T15:30:01.413051+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>1618911309200-1710136073237177403@10.163.3.186</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ReceiptRequestHeader receiptID="CA_4500059043" receiptDate="2021-04-20" operation="01">
+                  <VendorID>
+                     <InternalID>501</InternalID>
+                  </VendorID>
+                  <Total currencyCode="">0</Total>
+                  <ReceiptItem lineNumber="1" receiptLineNumber="1" PO_lineNumber="10">
+                     <ShipNoticeID>SN_4500059043</ShipNoticeID>
+                     <SupplierPartID/>
+                     <BuyerPartID>1005_INTER_BATCH1</BuyerPartID>
+                     <SupplierBatchID>SUP_BATCH1</SupplierBatchID>
+                     <Description languageCode="en">STO - Batch material - Inter- 1</Description>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <orderID>4500059043</orderID>
+                  </ReceiptItem>
+               </ReceiptRequestHeader>
+               <AribaComment/>
+            </n0:ComponentAcknowledgement>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>CompAckSTOCMtoCMwithcopy</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>1618911309200-1710136073237177403@10.163.3.186</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ReceiptRequestHeader receiptID="CA_4500059043" receiptDate="2021-04-20" operation="01">
+                     <VendorID>
+                        <InternalID>501</InternalID>
+                     </VendorID>
+                     <Total currencyCode="">0</Total>
+                     <ReceiptItem lineNumber="1" receiptLineNumber="1" PO_lineNumber="10">
+                        <ShipNoticeID>SN_4500059043</ShipNoticeID>
+                        <SupplierPartID/>
+                        <BuyerPartID>1005_INTER_BATCH1</BuyerPartID>
+                        <SupplierBatchID>SUP_BATCH1</SupplierBatchID>
+                        <Description languageCode="en">STO - Batch material - Inter- 1</Description>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <orderID>4500059043</orderID>
+                     </ReceiptItem>
+                  </ReceiptRequestHeader>
+                  <AribaComment/>
+               </n0:ComponentAcknowledgement>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_AddOn_0000_ComponentAcknowledgement.xspec">
+      <label>CompAckSTOCMtoCMwithoutcopy</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Receipts/CompAckSTOCMtoCMwithoutcopy.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2023-04-27T15:30:01.495646+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>1618912035079-9085335426073056146@10.163.3.186</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ReceiptRequestHeader receiptID="CA_4500059044" receiptDate="2021-04-20" operation="01">
+                  <VendorID>
+                     <InternalID>509</InternalID>
+                  </VendorID>
+                  <Total currencyCode="">0</Total>
+                  <ReceiptItem lineNumber="10" receiptLineNumber="1" PO_lineNumber="10">
+                     <ShipNoticeID>80002568</ShipNoticeID>
+                     <SupplierPartID/>
+                     <BuyerPartID>1005_INTER_BATCH1</BuyerPartID>
+                     <BuyerBatchID>SUP_BATCH1</BuyerBatchID>
+                     <SupplierBatchID>SUP_BATCH1</SupplierBatchID>
+                     <Description languageCode="en">STO - Batch material - Inter- 1</Description>
+                     <Quantity unitCode="EA">10.0</Quantity>
+                     <orderID/>
+                  </ReceiptItem>
+               </ReceiptRequestHeader>
+               <AribaComment/>
+            </n0:ComponentAcknowledgement>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>CompAckSTOCMtoCMwithoutcopy</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>1618912035079-9085335426073056146@10.163.3.186</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ReceiptRequestHeader receiptID="CA_4500059044" receiptDate="2021-04-20" operation="01">
+                     <VendorID>
+                        <InternalID>509</InternalID>
+                     </VendorID>
+                     <Total currencyCode="">0</Total>
+                     <ReceiptItem lineNumber="10" receiptLineNumber="1" PO_lineNumber="10">
+                        <ShipNoticeID>80002568</ShipNoticeID>
+                        <SupplierPartID/>
+                        <BuyerPartID>1005_INTER_BATCH1</BuyerPartID>
+                        <BuyerBatchID>SUP_BATCH1</BuyerBatchID>
+                        <SupplierBatchID>SUP_BATCH1</SupplierBatchID>
+                        <Description languageCode="en">STO - Batch material - Inter- 1</Description>
+                        <Quantity unitCode="EA">10.0</Quantity>
+                        <orderID/>
+                     </ReceiptItem>
+                  </ReceiptRequestHeader>
+                  <AribaComment/>
+               </n0:ComponentAcknowledgement>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_AddOn_0000_ComponentAcknowledgement.xspec">
+      <label>CompAckSTOOEMtoCM</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Receipts/CompAckSTOOEMtoCM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2023-04-27T15:30:01.545871+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>1618916699542-3160414178831796941@10.163.3.194</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ReceiptRequestHeader receiptID="CA_80002571" receiptDate="2021-04-20" operation="01">
+                  <VendorID>
+                     <InternalID>501</InternalID>
+                  </VendorID>
+                  <Total currencyCode="EUR">100.00</Total>
+                  <ReceiptItem lineNumber="10" receiptLineNumber="1" PO_lineNumber="10">
+                     <ShipNoticeID>80002571</ShipNoticeID>
+                     <SupplierPartID/>
+                     <BuyerPartID>1005_INTER_BATCH1</BuyerPartID>
+                     <BuyerBatchID>SUP_BATCH1</BuyerBatchID>
+                     <SupplierBatchID>SUP_BATCH2</SupplierBatchID>
+                     <Description languageCode="en">STO - Batch material - Inter- 1</Description>
+                     <Quantity unitCode="EA">10.0</Quantity>
+                     <orderID/>
+                  </ReceiptItem>
+               </ReceiptRequestHeader>
+               <AribaComment/>
+            </n0:ComponentAcknowledgement>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>CompAckSTOOEMtoCM</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>1618916699542-3160414178831796941@10.163.3.194</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ReceiptRequestHeader receiptID="CA_80002571" receiptDate="2021-04-20" operation="01">
+                     <VendorID>
+                        <InternalID>501</InternalID>
+                     </VendorID>
+                     <Total currencyCode="EUR">100.00</Total>
+                     <ReceiptItem lineNumber="10" receiptLineNumber="1" PO_lineNumber="10">
+                        <ShipNoticeID>80002571</ShipNoticeID>
+                        <SupplierPartID/>
+                        <BuyerPartID>1005_INTER_BATCH1</BuyerPartID>
+                        <BuyerBatchID>SUP_BATCH1</BuyerBatchID>
+                        <SupplierBatchID>SUP_BATCH2</SupplierBatchID>
+                        <Description languageCode="en">STO - Batch material - Inter- 1</Description>
+                        <Quantity unitCode="EA">10.0</Quantity>
+                        <orderID/>
+                     </ReceiptItem>
+                  </ReceiptRequestHeader>
+                  <AribaComment>...</AribaComment>
+               </n0:ComponentAcknowledgement>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_AddOn_0000_ComponentAcknowledgement.xspec">
+      <label>CompAckMultiTieroperationdelete</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Receipts/CompAckMultiTieroperationdelete.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2023-04-27T15:30:01.590632+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>1620384702957-7661025386631913346@10.163.3.186</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ReceiptRequestHeader receiptID="CA_4500059309" receiptDate="2021-05-07" operation="03">
+                  <VendorID>
+                     <InternalID>100000</InternalID>
+                  </VendorID>
+                  <Total currencyCode="">0</Total>
+                  <ReceiptItem lineNumber="1" receiptLineNumber="1" PO_lineNumber="10">
+                     <ShipNoticeID>SN_4500059309</ShipNoticeID>
+                     <SupplierPartID>123456</SupplierPartID>
+                     <BuyerPartID>69958</BuyerPartID>
+                     <SupplierBatchID>SUP_BATCH5</SupplierBatchID>
+                     <Description languageCode="en">Test Subcon Prod 7 new</Description>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <orderID>4500059309</orderID>
+                  </ReceiptItem>
+               </ReceiptRequestHeader>
+               <AribaComment/>
+            </n0:ComponentAcknowledgement>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>CompAckMultiTieroperationdelete</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>1620384702957-7661025386631913346@10.163.3.186</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ReceiptRequestHeader receiptID="CA_4500059309" receiptDate="2021-05-07" operation="03">
+                     <VendorID>
+                        <InternalID>100000</InternalID>
+                     </VendorID>
+                     <Total currencyCode="">0</Total>
+                     <ReceiptItem lineNumber="1" receiptLineNumber="1" PO_lineNumber="10">
+                        <ShipNoticeID>SN_4500059309</ShipNoticeID>
+                        <SupplierPartID>123456</SupplierPartID>
+                        <BuyerPartID>69958</BuyerPartID>
+                        <SupplierBatchID>SUP_BATCH5</SupplierBatchID>
+                        <Description languageCode="en">Test Subcon Prod 7 new</Description>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <orderID>4500059309</orderID>
+                     </ReceiptItem>
+                  </ReceiptRequestHeader>
+                  <AribaComment/>
+               </n0:ComponentAcknowledgement>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_AddOn_0000_ComponentAcknowledgement.xspec">
+      <label>CompAckSubcon30A30CoperationchangewithoutshipnoticeIDandshipnoticelinereferencenumber</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Receipts/CompAckSubcon30A30C.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2023-04-27T15:30:01.625578+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>1620386667483-3594691724446659749@10.163.3.186</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ReceiptRequestHeader receiptID="CA_4500059314" receiptDate="2021-05-07" operation="02">
+                  <VendorID>
+                     <InternalID>100000</InternalID>
+                  </VendorID>
+                  <Total currencyCode="">0</Total>
+                  <ReceiptItem lineNumber="10" receiptLineNumber="1" PO_lineNumber="10">
+                     <ShipNoticeID/>
+                     <SupplierPartID/>
+                     <BuyerPartID>69945</BuyerPartID>
+                     <BuyerBatchID>BATCH1</BuyerBatchID>
+                     <SupplierBatchID>SUP_BATCH4</SupplierBatchID>
+                     <Description languageCode="en">Component 3</Description>
+                     <Quantity unitCode="EA">18.0</Quantity>
+                     <orderID>4500059314</orderID>
+                  </ReceiptItem>
+               </ReceiptRequestHeader>
+               <AribaComment/>
+            </n0:ComponentAcknowledgement>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>CompAckSubcon30A30CoperationchangewithoutshipnoticeIDandshipnoticelinereferencenumber</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>1620386667483-3594691724446659749@10.163.3.186</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ReceiptRequestHeader receiptID="CA_4500059314" receiptDate="2021-05-07" operation="02">
+                     <VendorID>
+                        <InternalID>100000</InternalID>
+                     </VendorID>
+                     <Total currencyCode="">0</Total>
+                     <ReceiptItem lineNumber="10" receiptLineNumber="1" PO_lineNumber="10">
+                        <ShipNoticeID/>
+                        <SupplierPartID/>
+                        <BuyerPartID>69945</BuyerPartID>
+                        <BuyerBatchID>BATCH1</BuyerBatchID>
+                        <SupplierBatchID>SUP_BATCH4</SupplierBatchID>
+                        <Description languageCode="en">Component 3</Description>
+                        <Quantity unitCode="EA">18.0</Quantity>
+                        <orderID>4500059314</orderID>
+                     </ReceiptItem>
+                  </ReceiptRequestHeader>
+                  <AribaComment/>
+               </n0:ComponentAcknowledgement>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_AddOn_0000_ComponentAcknowledgement.xspec">
+      <label>CompAckSubcon30A30CoperationchangewithoutshipnoticeIDandshipnoticelinereferencenumber with Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/Receipts/CompAckSubconComments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2023-04-27T15:30:01.648872+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>1620386667483-3594691724446659749@10.163.3.186</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ReceiptRequestHeader receiptID="CA_4500059314" receiptDate="2021-05-07" operation="02">
+                  <VendorID>
+                     <InternalID>100000</InternalID>
+                  </VendorID>
+                  <Total currencyCode="">0</Total>
+                  <ReceiptItem lineNumber="10" receiptLineNumber="1" PO_lineNumber="10">
+                     <ShipNoticeID/>
+                     <SupplierPartID/>
+                     <BuyerPartID>69945</BuyerPartID>
+                     <BuyerBatchID>BATCH1</BuyerBatchID>
+                     <SupplierBatchID>SUP_BATCH4</SupplierBatchID>
+                     <Description languageCode="en">Component 3</Description>
+                     <Quantity unitCode="EA">18.0</Quantity>
+                     <orderID>4500059314</orderID>
+                  </ReceiptItem>
+               </ReceiptRequestHeader>
+               <AribaComment/>
+            </n0:ComponentAcknowledgement>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>CompAckSubcon30A30CoperationchangewithoutshipnoticeIDandshipnoticelinereferencenumber with Comments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ComponentAcknowledgement xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>1620386667483-3594691724446659749@10.163.3.186</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ReceiptRequestHeader receiptID="CA_4500059314" receiptDate="2021-05-07" operation="02">
+                     <VendorID>
+                        <InternalID>100000</InternalID>
+                     </VendorID>
+                     <Total currencyCode="">0</Total>
+                     <ReceiptItem lineNumber="10" receiptLineNumber="1" PO_lineNumber="10">
+                        <ShipNoticeID/>
+                        <SupplierPartID/>
+                        <BuyerPartID>69945</BuyerPartID>
+                        <BuyerBatchID>BATCH1</BuyerBatchID>
+                        <SupplierBatchID>SUP_BATCH4</SupplierBatchID>
+                        <Description languageCode="en">Component 3</Description>
+                        <Quantity unitCode="EA">18.0</Quantity>
+                        <orderID>4500059314</orderID>
+                     </ReceiptItem>
+                  </ReceiptRequestHeader>
+                  <AribaComment/>
+               </n0:ComponentAcknowledgement>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

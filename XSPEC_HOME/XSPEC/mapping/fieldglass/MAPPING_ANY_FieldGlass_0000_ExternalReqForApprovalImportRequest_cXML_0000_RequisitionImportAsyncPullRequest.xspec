@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/fieldglass/MAPPING_ANY_FieldGlass_0000_ExternalReqForApprovalImportRequest_cXML_0000_RequisitionImportAsyncPullRequest.xsl">
+    <x:scenario
+        label="Import PR with comments">
+        <x:context href="../../payloads/base/outbound/fieldglass/Requisition%20Import/SoW%20Comment.xml"/>
+        <x:expect href="../../payloads/target/outbound/fieldglass/Requisiton%20Import/AM%20SoW%20Comment.xml" 
+                  select="element()" label="Import PR with comments"/>
+    </x:scenario>
+    <x:scenario
+        label="Import PR with muliple line items">
+        <x:context href="../../payloads/base/outbound/fieldglass/Requisition%20Import/Sow%20PR%20Create%20Multi-line.xml"/>
+        <x:expect href="../../payloads/target/outbound/fieldglass/Requisiton%20Import/AM%20Sow%20PR%20Create%20Multi-line.xml" 
+            select="element()" label="Import PR with muliple line item"/>
+    </x:scenario>   
+    <x:scenario
+        label="Import PR with Account assignment N">
+        <x:context href="../../payloads/base/outbound/fieldglass/Requisition%20Import/SoW%20with%20Account%20category%20N.xml"/>
+        <x:expect href="../../payloads/target/outbound/fieldglass/Requisiton%20Import/AM%20SoW%20with%20Account%20category%20N.xml" 
+            select="element()" label="Import PR with Account assignment N"/>
+    </x:scenario>   
+    <x:scenario
+        label="Import PR with Asset with discount">
+        <x:context href="../../payloads/base/outbound/fieldglass/Requisition%20Import/SoW%20with%20Asset%20-%20with%20Discount.xml"/>
+        <x:expect href="../../payloads/target/outbound/fieldglass/Requisiton%20Import/AM%20SoW%20with%20Asset%20-%20with%20Discount.xml" 
+            select="element()" label="Import PR with Asset with discount"/>
+    </x:scenario>      
+</x:description>

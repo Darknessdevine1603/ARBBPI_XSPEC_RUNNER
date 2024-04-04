@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/BIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_BIS_3.0_ApplicationResponse.xsl">
+    <x:scenario label="StatusUpdateRequest">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/BIS/StatusUpdateRequest/StatusUpdateRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/BIS/StatusUpdateRequest/StatusUpdateRequest_AM.dat"
+            select="element()" label="StatusUpdateRequest"/>
+    </x:scenario>
+    <x:scenario label="Invoice StatusUpdateRequest">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/BIS/StatusUpdateRequest/StatusUpdateRequestInvoice_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/BIS/StatusUpdateRequest/StatusUpdateRequestInvoice_AM.dat"
+            select="element()" label="Invoice StatusUpdateRequest"/>
+    </x:scenario>
+    <x:scenario label="Invoice with Reason StatusUpdateRequest">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/BIS/StatusUpdateRequest/StatusUpdateRequestInvoiceReason_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/BIS/StatusUpdateRequest/StatusUpdateRequestInvoiceReason_AM.dat"
+            select="element()" label="Invoice with Reason StatusUpdateRequest"/>
+    </x:scenario>
+</x:description>

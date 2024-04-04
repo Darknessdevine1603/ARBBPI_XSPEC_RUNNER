@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as ='external' xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4/MAPPING_ANY_cXML_0000_ArticleComponents_AddOn_0000_ArticleComponents.xsl">
+    <x:scenario label="Scenario for ArticleComponents">
+        <x:param name="anERPName" select="'QODCLNT521'"/>
+        <x:param name="anReceiverID" select="'QODCLNT521'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT521'"/>
+        <x:param name="anSourceDocumentType" select="'ArticleComponents'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4/ArticleComponents/ArticleComponents_BM.xml"/>
+        <x:expect label="ArticleComponents" href="../../../XSPEC/payloads/target/inbound/s4/ArticleComponents/ArticleComponents_AM.xml" select="element()"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_S4DocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_S4DocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xsl"
+        date="2023-04-27T15:44:24.456169+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_S4DocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec">
+      <label>S4DocumentStatusUpdate accepted</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/S4DocumentStatusUpdate/SU_accepted_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML payloadID="" timestamp="2023-04-27T15:44:2457+05:30">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <Credential domain="EndPointID">
+                        <Identity>CIG</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="VendorID">
+                        <Identity>ASTRID2</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <StatusUpdateRequest>
+                     <DocumentReference payloadID="1649414684776-1773420640797281103@10.163.193.138"/>
+                     <Status code="200" text="OK" xml:lang="en">Purchase order is updated</Status>
+                     <IntegrationStatus documentStatus="deliverySuccessful">
+                        <IntegrationMessage isSuccessful="yes" type="S4HANA"/>
+                     </IntegrationStatus>
+                     <Extrinsic name="ERPDocumentNo">4500358367</Extrinsic>
+                  </StatusUpdateRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>S4DocumentStatusUpdate accepted</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML payloadID="" timestamp="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <Credential domain="EndPointID">
+                           <Identity>CIG</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="VendorID">
+                           <Identity>ASTRID2</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <StatusUpdateRequest>
+                        <DocumentReference payloadID="1649414684776-1773420640797281103@10.163.193.138"/>
+                        <Status code="200" text="OK" xml:lang="en">Purchase order is updated</Status>
+                        <IntegrationStatus documentStatus="deliverySuccessful">
+                           <IntegrationMessage isSuccessful="yes" type="S4HANA"/>
+                        </IntegrationStatus>
+                        <Extrinsic name="ERPDocumentNo">4500358367</Extrinsic>
+                     </StatusUpdateRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_S4DocumentStatusUpdate_cXML_0000_StatusUpdateRequest.xspec">
+      <label>S4DocumentStatusUpdate rejected</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/S4DocumentStatusUpdate/SU_rejected_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML payloadID="" timestamp="2023-04-27T15:44:25953+05:30">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <Credential domain="EndPointID">
+                        <Identity>CIG</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="VendorID">
+                        <Identity>10300089</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <StatusUpdateRequest>
+                     <DocumentReference payloadID="1649414684776-1773420640797281103@10.163.193.138"/>
+                     <Status code="406" text="Not Acceptable" xml:lang="en">Comment1 Comment11 Comment111 Comment1111</Status>
+                     <IntegrationStatus documentStatus="deliveryDelayed">
+                        <IntegrationMessage isSuccessful="no" type="S4HANA"/>
+                     </IntegrationStatus>
+                     <Extrinsic name="ERPDocumentNo">4500119999</Extrinsic>
+                  </StatusUpdateRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>S4DocumentStatusUpdate rejected</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML payloadID="" timestamp="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <Credential domain="EndPointID">
+                           <Identity>CIG</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="VendorID">
+                           <Identity>10300089</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <StatusUpdateRequest>
+                        <DocumentReference payloadID="1649414684776-1773420640797281103@10.163.193.138"/>
+                        <Status code="406" text="Not Acceptable" xml:lang="en">Comment1 Comment11 Comment111 Comment1111</Status>
+                        <IntegrationStatus documentStatus="deliveryDelayed">
+                           <IntegrationMessage isSuccessful="no" type="S4HANA"/>
+                        </IntegrationStatus>
+                        <Extrinsic name="ERPDocumentNo">4500119999</Extrinsic>
+                     </StatusUpdateRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xsl"
+        date="2023-04-27T15:47:38.871138+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xspec">
+      <label>OrderConfirmationRequest - Mat. limit + Service limit + Attachment</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Mat_Service_limit_Attachment_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1647339046039-1509527430448510587</ID>
+                  <ReferenceID>OC10571</ReferenceID>
+                  <CreationDateTime>2022-03-15T03:10:46-07:00</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>10300085</InternalID>
+                  </SenderParty>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083745-T</InternalID>
+                  </RecipientParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1647339046039-1509527430448510587@10.163.193.137"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <OrderConfirmation>
+                  <PurchaseOrderID>4500010571</PurchaseOrderID>
+                  <SalesOrderID>OC10571</SalesOrderID>
+                  <TransactionCurrency>EUR</TransactionCurrency>
+                  <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                  <Party PartyType="SoldTo">
+                     <SupplierPartyID>10300085</SupplierPartyID>
+                  </Party>
+                  <Item>
+                     <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                     <OrderItemText>material limit item</OrderItemText>
+                     <RequestedQuantity>1</RequestedQuantity>
+                     <NetPrice>
+                        <Amount currencyCode="EUR">10000.0</Amount>
+                        <BaseQuantity unitCode="">1</BaseQuantity>
+                     </NetPrice>
+                     <ScheduleLine>
+                        <ConfirmedDeliveryDate>2022-03-29</ConfirmedDeliveryDate>
+                        <ConfirmedDeliveryDateTime>2022-03-29T03:00:00-07:00</ConfirmedDeliveryDateTime>
+                        <ConfirmedOrderQuantityByMaterialAvailableCheck>1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                        <Service>
+                           <PerformancePeriodStartDate>2022-03-15</PerformancePeriodStartDate>
+                           <ServicePerfPeriodStartDateTime>2022-03-15T04:00:00-07:00</ServicePerfPeriodStartDateTime>
+                           <PerformancePeriodEndDate>2022-03-29</PerformancePeriodEndDate>
+                           <SrvcPerformancePeriodEndDteTme>2022-03-29T03:00:00-07:00</SrvcPerformancePeriodEndDteTme>
+                        </Service>
+                        <ConfirmedExpectedOverallLmtAmt currencyCode="EUR">10000.00</ConfirmedExpectedOverallLmtAmt>
+                     </ScheduleLine>
+                  </Item>
+                  <Item>
+                     <PurchaseOrderItemID>20</PurchaseOrderItemID>
+                     <OrderItemText>service limit item</OrderItemText>
+                     <RequestedQuantity>1</RequestedQuantity>
+                     <NetPrice>
+                        <Amount currencyCode="EUR">12000.0</Amount>
+                        <BaseQuantity unitCode="">1</BaseQuantity>
+                     </NetPrice>
+                     <ScheduleLine>
+                        <ConfirmedDeliveryDate>2022-04-20</ConfirmedDeliveryDate>
+                        <ConfirmedDeliveryDateTime>2022-04-20T03:00:00-07:00</ConfirmedDeliveryDateTime>
+                        <ConfirmedOrderQuantityByMaterialAvailableCheck>1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                        <Service>
+                           <PerformancePeriodStartDate>2022-03-15</PerformancePeriodStartDate>
+                           <ServicePerfPeriodStartDateTime>2022-03-15T04:00:00-07:00</ServicePerfPeriodStartDateTime>
+                           <PerformancePeriodEndDate>2022-04-20</PerformancePeriodEndDate>
+                           <SrvcPerformancePeriodEndDteTme>2022-04-20T03:00:00-07:00</SrvcPerformancePeriodEndDteTme>
+                        </Service>
+                        <ConfirmedExpectedOverallLmtAmt currencyCode="EUR">12000.00</ConfirmedExpectedOverallLmtAmt>
+                     </ScheduleLine>
+                  </Item>
+                  <Attachment FileName="" MimeType="" FileSize="">
+                     <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                  </Attachment>
+               </OrderConfirmation>
+            </n0:OrderConfRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="false">
+         <label>OrderConfirmationRequest - Mat. limit + Service limit + Attachment</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1647339046039-1509527430448510587</ID>
+                     <ReferenceID>OC10571</ReferenceID>
+                     <CreationDateTime>2022-03-15T03:10:46-07:00</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>10300085</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1647339046039-1509527430448510587@10.163.193.137"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <OrderConfirmation>
+                     <PurchaseOrderID>4500010571</PurchaseOrderID>
+                     <SalesOrderID>OC10571</SalesOrderID>
+                     <TransactionCurrency>EUR</TransactionCurrency>
+                     <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                     <Party PartyType="SoldTo">
+                        <SupplierPartyID>10300085</SupplierPartyID>
+                     </Party>
+                     <Item>
+                        <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                        <OrderItemText>material limit item</OrderItemText>
+                        <RequestedQuantity>1</RequestedQuantity>
+                        <NetPrice>
+                           <Amount currencyCode="EUR">10000.0</Amount>
+                           <BaseQuantity unitCode="">1</BaseQuantity>
+                        </NetPrice>
+                        <ScheduleLine>
+                           <ConfirmedDeliveryDate>2022-03-29</ConfirmedDeliveryDate>
+                           <ConfirmedDeliveryDateTime>2022-03-29T03:00:00-07:00</ConfirmedDeliveryDateTime>
+                           <ConfirmedOrderQuantityByMaterialAvailableCheck>1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                           <Service>
+                              <PerformancePeriodStartDate>2022-03-15</PerformancePeriodStartDate>
+                              <ServicePerfPeriodStartDateTime>2022-03-15T04:00:00-07:00</ServicePerfPeriodStartDateTime>
+                              <PerformancePeriodEndDate>2022-03-29</PerformancePeriodEndDate>
+                              <SrvcPerformancePeriodEndDteTme>2022-03-29T03:00:00-07:00</SrvcPerformancePeriodEndDteTme>
+                           </Service>
+                           <ConfirmedExpectedOverallLmtAmt currencyCode="EUR">10000.00</ConfirmedExpectedOverallLmtAmt>
+                        </ScheduleLine>
+                     </Item>
+                     <Item>
+                        <PurchaseOrderItemID>20</PurchaseOrderItemID>
+                        <OrderItemText>service limit item</OrderItemText>
+                        <RequestedQuantity>1</RequestedQuantity>
+                        <NetPrice>
+                           <Amount currencyCode="EUR">12000.0</Amount>
+                           <BaseQuantity unitCode="">1</BaseQuantity>
+                        </NetPrice>
+                        <ScheduleLine>
+                           <ConfirmedDeliveryDate>2022-04-20</ConfirmedDeliveryDate>
+                           <ConfirmedDeliveryDateTime>2022-04-20T03:00:00-07:00</ConfirmedDeliveryDateTime>
+                           <ConfirmedOrderQuantityByMaterialAvailableCheck>1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                           <Service>
+                              <PerformancePeriodStartDate>2022-03-15</PerformancePeriodStartDate>
+                              <ServicePerfPeriodStartDateTime>2022-03-15T04:00:00-07:00</ServicePerfPeriodStartDateTime>
+                              <PerformancePeriodEndDate>2022-04-20</PerformancePeriodEndDate>
+                              <SrvcPerformancePeriodEndDteTme>2022-04-20T03:00:00-07:00</SrvcPerformancePeriodEndDteTme>
+                           </Service>
+                           <ConfirmedExpectedOverallLmtAmt currencyCode="EUR">12000.00</ConfirmedExpectedOverallLmtAmt>
+                        </ScheduleLine>
+                     </Item>
+                     <Attachment FileName="" MimeType="" FileSize="">
+                        <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                     </Attachment>
+                  </OrderConfirmation>
+               </n0:OrderConfRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xspec">
+      <label>OrderConfirmationRequest - Mat. + Service</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Mat_Service_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1645626029389-3017681079197203727</ID>
+                  <ReferenceID>OC44546</ReferenceID>
+                  <CreationDateTime>2022-02-23T06:20:29-08:00</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>10300089</InternalID>
+                  </SenderParty>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1645626029389-3017681079197203727@10.163.193.142"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <OrderConfirmation>
+                  <PurchaseOrderID>4500044546</PurchaseOrderID>
+                  <SalesOrderID>OC44546</SalesOrderID>
+                  <TransactionCurrency>EUR</TransactionCurrency>
+                  <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                  <Party PartyType="SoldTo">
+                     <SupplierPartyID>10300089</SupplierPartyID>
+                  </Party>
+                  <Item>
+                     <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                     <OrderItemText>MacBook - Laptop</OrderItemText>
+                     <RequestedQuantity unitCode="PCE">10</RequestedQuantity>
+                     <NetPrice>
+                        <Amount currencyCode="EUR">10.0</Amount>
+                        <BaseQuantity unitCode="PCE">1</BaseQuantity>
+                     </NetPrice>
+                     <ScheduleLine>
+                        <ConfirmedDeliveryDate>2022-03-03</ConfirmedDeliveryDate>
+                        <ConfirmedDeliveryDateTime>2022-03-03T03:00:00-08:00</ConfirmedDeliveryDateTime>
+                        <ConfirmedOrderQuantityByMaterialAvailableCheck unitCode="PCE">10</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                     </ScheduleLine>
+                  </Item>
+                  <Item>
+                     <PurchaseOrderItemID>20</PurchaseOrderItemID>
+                     <OrderItemText>Software Development</OrderItemText>
+                     <RequestedQuantity unitCode="HUR">5</RequestedQuantity>
+                     <NetPrice>
+                        <Amount currencyCode="EUR">10.0</Amount>
+                        <BaseQuantity unitCode="HUR">1</BaseQuantity>
+                     </NetPrice>
+                     <ScheduleLine>
+                        <ConfirmedDeliveryDate>2022-03-02</ConfirmedDeliveryDate>
+                        <ConfirmedDeliveryDateTime>2022-03-02T03:00:00-08:00</ConfirmedDeliveryDateTime>
+                        <ConfirmedOrderQuantityByMaterialAvailableCheck unitCode="HUR">5</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                        <Service>
+                           <PerformancePeriodStartDate>2022-02-23</PerformancePeriodStartDate>
+                           <ServicePerfPeriodStartDateTime>2022-02-23T03:00:00-08:00</ServicePerfPeriodStartDateTime>
+                           <PerformancePeriodEndDate>2022-03-02</PerformancePeriodEndDate>
+                           <SrvcPerformancePeriodEndDteTme>2022-03-02T03:00:00-08:00</SrvcPerformancePeriodEndDteTme>
+                        </Service>
+                     </ScheduleLine>
+                  </Item>
+               </OrderConfirmation>
+            </n0:OrderConfRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="false">
+         <label>OrderConfirmationRequest - Mat. + Service</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1645626029389-3017681079197203727</ID>
+                     <ReferenceID>OC44546</ReferenceID>
+                     <CreationDateTime>2022-02-23T06:20:29-08:00</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>10300089</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1645626029389-3017681079197203727@10.163.193.142"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <OrderConfirmation>
+                     <PurchaseOrderID>4500044546</PurchaseOrderID>
+                     <SalesOrderID>OC44546</SalesOrderID>
+                     <TransactionCurrency>EUR</TransactionCurrency>
+                     <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                     <Party PartyType="SoldTo">
+                        <SupplierPartyID>10300089</SupplierPartyID>
+                     </Party>
+                     <Item>
+                        <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                        <OrderItemText>MacBook - Laptop</OrderItemText>
+                        <RequestedQuantity unitCode="PCE">10</RequestedQuantity>
+                        <NetPrice>
+                           <Amount currencyCode="EUR">10.0</Amount>
+                           <BaseQuantity unitCode="PCE">1</BaseQuantity>
+                        </NetPrice>
+                        <ScheduleLine>
+                           <ConfirmedDeliveryDate>2022-03-03</ConfirmedDeliveryDate>
+                           <ConfirmedDeliveryDateTime>2022-03-03T03:00:00-08:00</ConfirmedDeliveryDateTime>
+                           <ConfirmedOrderQuantityByMaterialAvailableCheck unitCode="PCE">10</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                        </ScheduleLine>
+                     </Item>
+                     <Item>
+                        <PurchaseOrderItemID>20</PurchaseOrderItemID>
+                        <OrderItemText>Software Development</OrderItemText>
+                        <RequestedQuantity unitCode="HUR">5</RequestedQuantity>
+                        <NetPrice>
+                           <Amount currencyCode="EUR">10.0</Amount>
+                           <BaseQuantity unitCode="HUR">1</BaseQuantity>
+                        </NetPrice>
+                        <ScheduleLine>
+                           <ConfirmedDeliveryDate>2022-03-02</ConfirmedDeliveryDate>
+                           <ConfirmedDeliveryDateTime>2022-03-02T03:00:00-08:00</ConfirmedDeliveryDateTime>
+                           <ConfirmedOrderQuantityByMaterialAvailableCheck unitCode="HUR">5</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                           <Service>
+                              <PerformancePeriodStartDate>2022-02-23</PerformancePeriodStartDate>
+                              <ServicePerfPeriodStartDateTime>2022-02-23T03:00:00-08:00</ServicePerfPeriodStartDateTime>
+                              <PerformancePeriodEndDate>2022-03-02</PerformancePeriodEndDate>
+                              <SrvcPerformancePeriodEndDteTme>2022-03-02T03:00:00-08:00</SrvcPerformancePeriodEndDteTme>
+                           </Service>
+                        </ScheduleLine>
+                     </Item>
+                  </OrderConfirmation>
+               </n0:OrderConfRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xspec">
+      <label>OrderConfirmationRequest - Item Rejected</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Mat_Item_Rejected_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1646333257763-7207475433245338247</ID>
+                  <ReferenceID>REJ</ReferenceID>
+                  <CreationDateTime>2022-03-03T10:47:38-08:00</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>10300085</InternalID>
+                  </SenderParty>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083745-T</InternalID>
+                  </RecipientParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1646333257763-7207475433245338247@10.163.193.137"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <OrderConfirmation>
+                  <PurchaseOrderID>4500010328</PurchaseOrderID>
+                  <SalesOrderID>REJ</SalesOrderID>
+                  <TransactionCurrency>EUR</TransactionCurrency>
+                  <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                  <Party PartyType="SoldTo">
+                     <SupplierPartyID>10300085</SupplierPartyID>
+                  </Party>
+                  <Text Type="SupplierComments">
+                     <TextElementLanguage>en-DE</TextElementLanguage>
+                     <TextElementText>rejected </TextElementText>
+                  </Text>
+                  <Item>
+                     <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                     <OrderItemText>Lager</OrderItemText>
+                     <RequestedQuantity unitCode="PCE">10.0</RequestedQuantity>
+                     <RejectionReasonText>RE</RejectionReasonText>
+                     <NetPrice>
+                        <Amount currencyCode="EUR">200.0</Amount>
+                        <BaseQuantity unitCode="PCE">1</BaseQuantity>
+                     </NetPrice>
+                     <Text Type="SupplierComments">
+                        <TextElementLanguage>en-DE</TextElementLanguage>
+                        <TextElementText>rejected</TextElementText>
+                     </Text>
+                  </Item>
+               </OrderConfirmation>
+            </n0:OrderConfRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="false">
+         <label>OrderConfirmationRequest - Item Rejected</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1646333257763-7207475433245338247</ID>
+                     <ReferenceID>REJ</ReferenceID>
+                     <CreationDateTime>2022-03-03T10:47:38-08:00</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>10300085</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1646333257763-7207475433245338247@10.163.193.137"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <OrderConfirmation>
+                     <PurchaseOrderID>4500010328</PurchaseOrderID>
+                     <SalesOrderID>REJ</SalesOrderID>
+                     <TransactionCurrency>EUR</TransactionCurrency>
+                     <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                     <Party PartyType="SoldTo">
+                        <SupplierPartyID>10300085</SupplierPartyID>
+                     </Party>
+                     <Text type="SupplierComments">
+                        <TextElementLanguage>en-DE</TextElementLanguage>
+                        <TextElementText>rejected </TextElementText>
+                     </Text>
+                     <Item>
+                        <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                        <OrderItemText>Lager</OrderItemText>
+                        <RequestedQuantity unitCode="PCE">10.0</RequestedQuantity>
+                        <RejectionReasonText>RE</RejectionReasonText>
+                        <NetPrice>
+                           <Amount currencyCode="EUR">200.0</Amount>
+                           <BaseQuantity unitCode="PCE">1</BaseQuantity>
+                        </NetPrice>
+                        <Text type="SupplierComments">
+                           <TextElementLanguage>en-DE</TextElementLanguage>
+                           <TextElementText>rejected</TextElementText>
+                        </Text>
+                     </Item>
+                  </OrderConfirmation>
+               </n0:OrderConfRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xspec">
+      <label>OrderConfirmationRequest - Hierarchy</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Hierarchy_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1635843928880-45942782649302835</ID>
+                  <ReferenceID>1</ReferenceID>
+                  <CreationDateTime>2021-11-02T02:05:29-07:00</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>10300085</InternalID>
+                  </SenderParty>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083745-T</InternalID>
+                  </RecipientParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1635843928880-45942782649302835@10.163.193.142"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <OrderConfirmation>
+                  <PurchaseOrderID>4500007839</PurchaseOrderID>
+                  <SalesOrderID>1</SalesOrderID>
+                  <TransactionCurrency>EUR</TransactionCurrency>
+                  <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                  <Party PartyType="SoldTo">
+                     <SupplierPartyID>10300085</SupplierPartyID>
+                  </Party>
+                  <Item>
+                     <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                     <RequestedQuantity>1</RequestedQuantity>
+                     <ScheduleLine>
+                        <ConfirmedOrderQuantityByMaterialAvailableCheck>1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                     </ScheduleLine>
+                  </Item>
+                  <Item>
+                     <PurchaseOrderItemID>20</PurchaseOrderItemID>
+                     <OrderItemText>c1</OrderItemText>
+                     <RequestedQuantity unitCode="PCE">1</RequestedQuantity>
+                     <NetPrice>
+                        <Amount currencyCode="EUR">1.0</Amount>
+                        <BaseQuantity unitCode="PCE">1</BaseQuantity>
+                     </NetPrice>
+                     <ScheduleLine>
+                        <ConfirmedDeliveryDate>2021-11-04</ConfirmedDeliveryDate>
+                        <ConfirmedDeliveryDateTime>2021-11-04T23:30:00-07:00</ConfirmedDeliveryDateTime>
+                        <ConfirmedOrderQuantityByMaterialAvailableCheck unitCode="PCE">1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                     </ScheduleLine>
+                  </Item>
+                  <Item>
+                     <PurchaseOrderItemID>30</PurchaseOrderItemID>
+                     <OrderItemText>c2</OrderItemText>
+                     <RequestedQuantity unitCode="PCE">1</RequestedQuantity>
+                     <RejectionReasonText>RE</RejectionReasonText>
+                     <NetPrice>
+                        <Amount currencyCode="EUR">1.0</Amount>
+                        <BaseQuantity unitCode="PCE">1</BaseQuantity>
+                     </NetPrice>
+                  </Item>
+               </OrderConfirmation>
+            </n0:OrderConfRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="false">
+         <label>OrderConfirmationRequest - Hierarchy</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1635843928880-45942782649302835</ID>
+                     <ReferenceID>1</ReferenceID>
+                     <CreationDateTime>2021-11-02T02:05:29-07:00</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>10300085</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1635843928880-45942782649302835@10.163.193.142"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <OrderConfirmation>
+                     <PurchaseOrderID>4500007839</PurchaseOrderID>
+                     <SalesOrderID>1</SalesOrderID>
+                     <TransactionCurrency>EUR</TransactionCurrency>
+                     <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                     <Party PartyType="SoldTo">
+                        <SupplierPartyID>10300085</SupplierPartyID>
+                     </Party>
+                     <Item>
+                        <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                        <RequestedQuantity>1</RequestedQuantity>
+                        <ScheduleLine>
+                           <ConfirmedOrderQuantityByMaterialAvailableCheck>1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                        </ScheduleLine>
+                     </Item>
+                     <Item>
+                        <PurchaseOrderItemID>20</PurchaseOrderItemID>
+                        <OrderItemText>c1</OrderItemText>
+                        <RequestedQuantity unitCode="PCE">1</RequestedQuantity>
+                        <NetPrice>
+                           <Amount currencyCode="EUR">1.0</Amount>
+                           <BaseQuantity unitCode="PCE">1</BaseQuantity>
+                        </NetPrice>
+                        <ScheduleLine>
+                           <ConfirmedDeliveryDate>2021-11-04</ConfirmedDeliveryDate>
+                           <ConfirmedDeliveryDateTime>2021-11-04T23:30:00-07:00</ConfirmedDeliveryDateTime>
+                           <ConfirmedOrderQuantityByMaterialAvailableCheck unitCode="PCE">1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                        </ScheduleLine>
+                     </Item>
+                     <Item>
+                        <PurchaseOrderItemID>30</PurchaseOrderItemID>
+                        <OrderItemText>c2</OrderItemText>
+                        <RequestedQuantity unitCode="PCE">1</RequestedQuantity>
+                        <RejectionReasonText>RE</RejectionReasonText>
+                        <NetPrice>
+                           <Amount currencyCode="EUR">1.0</Amount>
+                           <BaseQuantity unitCode="PCE">1</BaseQuantity>
+                        </NetPrice>
+                     </Item>
+                  </OrderConfirmation>
+               </n0:OrderConfRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xspec">
+      <label>OrderConfirmationRequest - Header accept</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Header_accept_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1646657033770-6377712631735149189</ID>
+                  <ReferenceID>OC16</ReferenceID>
+                  <CreationDateTime>2022-03-07T04:43:54-08:00</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>10300084</InternalID>
+                  </SenderParty>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005822251-T</InternalID>
+                  </RecipientParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1646657033770-6377712631735149189@10.163.193.140"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <OrderConfirmation>
+                  <PurchaseOrderID>4500000616</PurchaseOrderID>
+                  <SalesOrderID>OC16</SalesOrderID>
+                  <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                  <Party PartyType="SoldTo">
+                     <SupplierPartyID>10300084</SupplierPartyID>
+                  </Party>
+                  <Item>
+                     <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                     <RequestedQuantity unitCode="PCE">10.0</RequestedQuantity>
+                     <ScheduleLine>
+                        <ConfirmedDeliveryDate>2022-03-10</ConfirmedDeliveryDate>
+                        <ConfirmedDeliveryDateTime>2022-03-10T03:00:00-08:00</ConfirmedDeliveryDateTime>
+                        <ConfirmedOrderQuantityByMaterialAvailableCheck unitCode="PCE">10.0</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                     </ScheduleLine>
+                  </Item>
+               </OrderConfirmation>
+            </n0:OrderConfRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="false">
+         <label>OrderConfirmationRequest - Header accept</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1646657033770-6377712631735149189</ID>
+                     <ReferenceID>OC16</ReferenceID>
+                     <CreationDateTime>2022-03-07T04:43:54-08:00</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>10300084</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1646657033770-6377712631735149189@10.163.193.140"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <OrderConfirmation>
+                     <PurchaseOrderID>4500000616</PurchaseOrderID>
+                     <SalesOrderID>OC16</SalesOrderID>
+                     <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                     <Party PartyType="SoldTo">
+                        <SupplierPartyID>10300084</SupplierPartyID>
+                     </Party>
+                     <Item>
+                        <PurchaseOrderItemID>10</PurchaseOrderItemID>
+                        <RequestedQuantity unitCode="PCE">10.0</RequestedQuantity>
+                        <ScheduleLine>
+                           <ConfirmedDeliveryDate>2022-03-10</ConfirmedDeliveryDate>
+                           <ConfirmedDeliveryDateTime>2022-03-10T03:00:00-08:00</ConfirmedDeliveryDateTime>
+                           <ConfirmedOrderQuantityByMaterialAvailableCheck unitCode="PCE">10.0</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                        </ScheduleLine>
+                     </Item>
+                  </OrderConfirmation>
+               </n0:OrderConfRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xspec">
+      <label>OrderConfirmationRequest - Service limit</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Service_limit_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1647339046039-1509527430448510587</ID>
+                  <ReferenceID>OC10571</ReferenceID>
+                  <CreationDateTime>2022-03-15T03:10:46-07:00</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>10300085</InternalID>
+                  </SenderParty>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083745-T</InternalID>
+                  </RecipientParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1647339046039-1509527430448510587@10.163.193.137"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <OrderConfirmation>
+                  <PurchaseOrderID>4500010571</PurchaseOrderID>
+                  <SalesOrderID>OC10571</SalesOrderID>
+                  <TransactionCurrency>EUR</TransactionCurrency>
+                  <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                  <Party PartyType="SoldTo">
+                     <SupplierPartyID>10300085</SupplierPartyID>
+                  </Party>
+                  <Item>
+                     <PurchaseOrderItemID>20</PurchaseOrderItemID>
+                     <OrderItemText>service limit item</OrderItemText>
+                     <RequestedQuantity>1</RequestedQuantity>
+                     <NetPrice>
+                        <Amount currencyCode="EUR">12000.0</Amount>
+                        <BaseQuantity unitCode="">1</BaseQuantity>
+                     </NetPrice>
+                     <ScheduleLine>
+                        <ConfirmedDeliveryDate>2022-04-20</ConfirmedDeliveryDate>
+                        <ConfirmedDeliveryDateTime>2022-04-20T03:00:00-07:00</ConfirmedDeliveryDateTime>
+                        <ConfirmedOrderQuantityByMaterialAvailableCheck>1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                        <Service>
+                           <PerformancePeriodStartDate>2022-03-15</PerformancePeriodStartDate>
+                           <ServicePerfPeriodStartDateTime>2022-03-15T04:00:00-07:00</ServicePerfPeriodStartDateTime>
+                           <PerformancePeriodEndDate>2022-04-20</PerformancePeriodEndDate>
+                           <SrvcPerformancePeriodEndDteTme>2022-04-20T03:00:00-07:00</SrvcPerformancePeriodEndDteTme>
+                        </Service>
+                        <ConfirmedExpectedOverallLmtAmt currencyCode="EUR">12000.00</ConfirmedExpectedOverallLmtAmt>
+                     </ScheduleLine>
+                  </Item>
+               </OrderConfirmation>
+            </n0:OrderConfRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="false">
+         <label>OrderConfirmationRequest - Service limit</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrderConfRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1647339046039-1509527430448510587</ID>
+                     <ReferenceID>OC10571</ReferenceID>
+                     <CreationDateTime>2022-03-15T03:10:46-07:00</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>10300085</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1647339046039-1509527430448510587@10.163.193.137"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <OrderConfirmation>
+                     <PurchaseOrderID>4500010571</PurchaseOrderID>
+                     <SalesOrderID>OC10571</SalesOrderID>
+                     <TransactionCurrency>EUR</TransactionCurrency>
+                     <ItemListIsCompletelyTransferred>true</ItemListIsCompletelyTransferred>
+                     <Party PartyType="SoldTo">
+                        <SupplierPartyID>10300085</SupplierPartyID>
+                     </Party>
+                     <Item>
+                        <PurchaseOrderItemID>20</PurchaseOrderItemID>
+                        <OrderItemText>service limit item</OrderItemText>
+                        <RequestedQuantity>1</RequestedQuantity>
+                        <NetPrice>
+                           <Amount currencyCode="EUR">12000.0</Amount>
+                           <BaseQuantity unitCode="">1</BaseQuantity>
+                        </NetPrice>
+                        <ScheduleLine>
+                           <ConfirmedDeliveryDate>2022-04-20</ConfirmedDeliveryDate>
+                           <ConfirmedDeliveryDateTime>2022-04-20T03:00:00-07:00</ConfirmedDeliveryDateTime>
+                           <ConfirmedOrderQuantityByMaterialAvailableCheck>1</ConfirmedOrderQuantityByMaterialAvailableCheck>
+                           <Service>
+                              <PerformancePeriodStartDate>2022-03-15</PerformancePeriodStartDate>
+                              <ServicePerfPeriodStartDateTime>2022-03-15T04:00:00-07:00</ServicePerfPeriodStartDateTime>
+                              <PerformancePeriodEndDate>2022-04-20</PerformancePeriodEndDate>
+                              <SrvcPerformancePeriodEndDteTme>2022-04-20T03:00:00-07:00</SrvcPerformancePeriodEndDteTme>
+                           </Service>
+                           <ConfirmedExpectedOverallLmtAmt currencyCode="EUR">12000.00</ConfirmedExpectedOverallLmtAmt>
+                        </ScheduleLine>
+                     </Item>
+                  </OrderConfirmation>
+               </n0:OrderConfRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_OAGIS_9.2_ConfirmBOD.xsl">
+    <x:scenario label="ConfirmBOD Accepted">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/StatusUpdateRequest/ConfirmBOD_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/StatusUpdateRequest/ConfirmBOD_AM.dat"
+            select="element()" label="ConfirmBOD Accepted"/>
+    </x:scenario>
+    <x:scenario label="ConfirmBOD Rejected">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/StatusUpdateRequest/ConfirmBODRejected_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/StatusUpdateRequest/ConfirmBODRejected_AM.dat"
+            select="element()" label="ConfirmBOD Rejected"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_cXML_0000_ProductActivityMessage_UN-EDIFACT_D96A_DELFOR.xsl">
+    <x:scenario label="Product Activity Message SMI">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'ARIBA'"/>
+        <x:param name="anISASenderQual" select="'ZZZ'"/>
+        <x:param name="anISAReceiver" select="'RITSupplier'"/>
+        <x:param name="anISAReceiverQual" select="'ZZZ'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime" /> 
+        <x:param name="anICNValue" select="'20000000004754'"/>
+        <x:param name="anEnvName" select="'TEST'"/>
+        <x:param name="anSenderGroupID"  select="'RITBuyer'"/>
+        <x:param name="anReceiverGroupID"  select="'RITSupplier'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/ProductActivity/ProductActivitySMI_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/ProductActivity/ProductActivitySMI_AM.dat"
+            select="element()" label="Product Activity Message SMI"/>
+    </x:scenario>
+    <x:scenario label="Product Activity Message Forecast">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'ARIBA'"/>
+        <x:param name="anISASenderQual" select="'ZZZ'"/>
+        <x:param name="anISAReceiver" select="'RITSupplier'"/>
+        <x:param name="anISAReceiverQual" select="'ZZZ'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime" /> 
+        <x:param name="anICNValue" select="'10000000004623'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderGroupID"  select="'RITBuyer'"/>
+        <x:param name="anReceiverGroupID"  select="'RITSupplier'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/ProductActivity/ProductActivityForecast_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/ProductActivity/ProductActivityForecast_AM.dat"
+            select="element()" label="Product Activity Message Forecast"/>
+    </x:scenario>
+</x:description>

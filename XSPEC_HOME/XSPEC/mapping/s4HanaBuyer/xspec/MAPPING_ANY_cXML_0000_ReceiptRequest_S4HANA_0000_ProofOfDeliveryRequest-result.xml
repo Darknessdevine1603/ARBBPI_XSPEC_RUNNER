@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_S4HANA_0000_ProofOfDeliveryRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_S4HANA_0000_ProofOfDeliveryRequest.xsl"
+        date="2023-04-27T15:49:11.455455+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ReceiptRequest_S4HANA_0000_ProofOfDeliveryRequest.xspec">
+      <label>ProofOfDeliveryRequest</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/ProofOfDelivery/CR_80000716_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ProofOfDeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1629973208908-195028964072223431@10</ID>
+                  <CreationDateTime>2023-04-27T15:49:11+05:30</CreationDateTime>
+                  <RecipientParty>
+                     <InternalID>0LOALS1</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ProofOfDelivery>
+                  <DeliveryDocument>80000716</DeliveryDocument>
+                  <ProofOfDeliveryDate>2021-08-26</ProofOfDeliveryDate>
+                  <ProofOfDeliveryItem>
+                     <DeliveryDocumentItem>10</DeliveryDocumentItem>
+                     <ProofOfDeliveryDifferences>
+                        <ProofOfDeliveryQtyInSlsUnit unitCode="PCE">1.0</ProofOfDeliveryQtyInSlsUnit>
+                     </ProofOfDeliveryDifferences>
+                  </ProofOfDeliveryItem>
+                  <ProofOfDeliveryItem>
+                     <DeliveryDocumentItem>20</DeliveryDocumentItem>
+                     <ProofOfDeliveryDifferences>
+                        <ProofOfDeliveryQtyInSlsUnit unitCode="PCE">1.0</ProofOfDeliveryQtyInSlsUnit>
+                     </ProofOfDeliveryDifferences>
+                  </ProofOfDeliveryItem>
+                  <ProofOfDeliveryItem>
+                     <DeliveryDocumentItem>30</DeliveryDocumentItem>
+                     <ProofOfDeliveryDifferences>
+                        <ProofOfDeliveryQtyInSlsUnit unitCode="PCE">2.0</ProofOfDeliveryQtyInSlsUnit>
+                     </ProofOfDeliveryDifferences>
+                  </ProofOfDeliveryItem>
+                  <ProofOfDeliveryItem>
+                     <DeliveryDocumentItem>40</DeliveryDocumentItem>
+                     <ProofOfDeliveryDifferences>
+                        <ProofOfDeliveryQtyInSlsUnit unitCode="PCE">2.0</ProofOfDeliveryQtyInSlsUnit>
+                     </ProofOfDeliveryDifferences>
+                  </ProofOfDeliveryItem>
+               </ProofOfDelivery>
+            </n0:ProofOfDeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ProofOfDeliveryRequest</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ProofOfDeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1629973208908-195028964072223431@10</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <RecipientParty>
+                        <InternalID>0LOALS1</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ProofOfDelivery>
+                     <DeliveryDocument>80000716</DeliveryDocument>
+                     <ProofOfDeliveryDate>2021-08-26</ProofOfDeliveryDate>
+                     <ProofOfDeliveryItem>
+                        <DeliveryDocumentItem>10</DeliveryDocumentItem>
+                        <ProofOfDeliveryDifferences>
+                           <ProofOfDeliveryQtyInSlsUnit unitCode="PCE">1.0</ProofOfDeliveryQtyInSlsUnit>
+                        </ProofOfDeliveryDifferences>
+                     </ProofOfDeliveryItem>
+                     <ProofOfDeliveryItem>
+                        <DeliveryDocumentItem>20</DeliveryDocumentItem>
+                        <ProofOfDeliveryDifferences>
+                           <ProofOfDeliveryQtyInSlsUnit unitCode="PCE">1.0</ProofOfDeliveryQtyInSlsUnit>
+                        </ProofOfDeliveryDifferences>
+                     </ProofOfDeliveryItem>
+                     <ProofOfDeliveryItem>
+                        <DeliveryDocumentItem>30</DeliveryDocumentItem>
+                        <ProofOfDeliveryDifferences>
+                           <ProofOfDeliveryQtyInSlsUnit unitCode="PCE">2.0</ProofOfDeliveryQtyInSlsUnit>
+                        </ProofOfDeliveryDifferences>
+                     </ProofOfDeliveryItem>
+                     <ProofOfDeliveryItem>
+                        <DeliveryDocumentItem>40</DeliveryDocumentItem>
+                        <ProofOfDeliveryDifferences>
+                           <ProofOfDeliveryQtyInSlsUnit unitCode="PCE">2.0</ProofOfDeliveryQtyInSlsUnit>
+                        </ProofOfDeliveryDifferences>
+                     </ProofOfDeliveryItem>
+                  </ProofOfDelivery>
+               </n0:ProofOfDeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

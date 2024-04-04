@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_OAGIS_9.2_NotifyShipment_cXML_0000_ShipNoticeRequest.xsl">
+    <x:scenario label="Notify Shipment">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="anSupplierANID" select="'AN02003013907-T'"/>
+        <x:param name="anBuyerANID" select="'AN02003013906-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/OAGIS/ShipNotice/ShipNotice_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/OAGIS/ShipNotice/ShipNotice_AM_1.xml"
+            select="*" label="Notify Shipment"/>
+    </x:scenario>
+    <x:scenario label="Notify Shipment in production mode/delete action code">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="anSupplierANID" select="'AN02003013907-T'"/>
+        <x:param name="anBuyerANID" select="'AN02003013906-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/OAGIS/ShipNotice/ShipNotice_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/OAGIS/ShipNotice/ShipNotice_AM1.xml"
+            select="*" label="Notify Shipment in production mode/delete action code"/>
+    </x:scenario>  
+    <x:scenario label="Notify Shipment with attachments/replace action code">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="anSupplierANID" select="'AN02003013907-T'"/>
+        <x:param name="anBuyerANID" select="'AN02003013906-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="cXMLAttachments" select="'../../../XSPEC/payloads/base/outbound/OAGIS/ShipNotice/Test_Attachment'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/OAGIS/ShipNotice/ShipNotice_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/OAGIS/ShipNotice/ShipNotice_AM2.xml"
+            select="*" label="Notify Shipment with attachments/replace action code"/>
+    </x:scenario>   
+    <x:scenario label="Notify Shipment with transport mode as ship">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="anSupplierANID" select="'AN02003013907-T'"/>
+        <x:param name="anBuyerANID" select="'AN02003013906-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/OAGIS/ShipNotice/ShipNotice_BM3.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/OAGIS/ShipNotice/ShipNotice_AM3.xml"
+            select="*" label="Notify Shipment with transport mode as ship"/>
+    </x:scenario>     
+</x:description>

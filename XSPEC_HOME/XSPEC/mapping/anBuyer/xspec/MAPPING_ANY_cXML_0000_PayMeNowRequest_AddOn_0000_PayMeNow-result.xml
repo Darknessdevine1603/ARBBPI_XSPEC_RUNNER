@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_AddOn_0000_PayMeNow.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_AddOn_0000_PayMeNow.xsl"
+        date="2023-04-27T15:30:20.250307+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_AddOn_0000_PayMeNow.xspec">
+      <label>PayMeNowMMInv</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/PayMeNow/PayMeNowMMInv.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ARBCIG_FIDCCH>
+               <IDOC BEGIN="1">
+                  <EDI_DC40 SEGMENT="1">
+                     <IDOCTYP>ARBCIG_FIDCCH</IDOCTYP>
+                     <MESTYP>FIDCCH</MESTYP>
+                     <SNDPOR>SAPQOD</SNDPOR>
+                     <SNDPRT>LS</SNDPRT>
+                     <SNDPFC>LS</SNDPFC>
+                     <SNDPRN>QODCLNT002</SNDPRN>
+                     <RCVPRT>LS</RCVPRT>
+                     <RCVPFC>LS</RCVPFC>
+                     <RCVPRN>QODCLNT002</RCVPRN>
+                     <RCVPOR>SAPQOD</RCVPOR>
+                  </EDI_DC40>
+                  <E1FIREF SEGMENT="1">
+                     <AWSYS>QODCLNT002</AWSYS>
+                     <BUKRS>0002</BUKRS>
+                     <BELNR>5100000428</BELNR>
+                     <OBZEI>001</OBZEI>
+                     <BUKRS_SND>0002</BUKRS_SND>
+                     <GJAHR>2020</GJAHR>
+                     <E1ARBCIG_ADDITIONAL_DATA SEGMENT="1">
+                        <ANPAYLOAD_ID>1587836994336-1474428851068750076@10.163.3.187</ANPAYLOAD_ID>
+                        <ARIBANETWORKID>AN02004204493-T</ARIBANETWORKID>
+                        <ERPSYSTEMID>QODCLNT002</ERPSYSTEMID>
+                     </E1ARBCIG_ADDITIONAL_DATA>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>ZBD1T</FDNAME>
+                        <NEWVAL>20200426</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>ZBD1P</FDNAME>
+                        <NEWVAL>15</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BKPF</TABNAME>
+                        <FDNAME>XREF1_HD</FDNAME>
+                        <NEWVAL>ARIBA_PMN</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>WSKTO</FDNAME>
+                        <NEWVAL>1500.00</NEWVAL>
+                     </E1FICHD>
+                  </E1FIREF>
+               </IDOC>
+            </ARBCIG_FIDCCH>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>PayMeNowMMInv</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ARBCIG_FIDCCH>
+                  <IDOC BEGIN="1">
+                     <EDI_DC40 SEGMENT="1">
+                        <IDOCTYP>ARBCIG_FIDCCH</IDOCTYP>
+                        <MESTYP>FIDCCH</MESTYP>
+                        <SNDPOR>SAPQOD</SNDPOR>
+                        <SNDPRT>LS</SNDPRT>
+                        <SNDPFC>LS</SNDPFC>
+                        <SNDPRN>QODCLNT002</SNDPRN>
+                        <RCVPRT>LS</RCVPRT>
+                        <RCVPFC>LS</RCVPFC>
+                        <RCVPRN>QODCLNT002</RCVPRN>
+                        <RCVPOR>SAPQOD</RCVPOR>
+                     </EDI_DC40>
+                     <E1FIREF SEGMENT="1">
+                        <AWSYS>QODCLNT002</AWSYS>
+                        <BUKRS>0002</BUKRS>
+                        <BELNR>5100000428</BELNR>
+                        <OBZEI>001</OBZEI>
+                        <BUKRS_SND>0002</BUKRS_SND>
+                        <GJAHR>2020</GJAHR>
+                        <E1ARBCIG_ADDITIONAL_DATA SEGMENT="1">
+                           <ANPAYLOAD_ID>1587836994336-1474428851068750076@10.163.3.187</ANPAYLOAD_ID>
+                           <ARIBANETWORKID>AN02004204493-T</ARIBANETWORKID>
+                           <ERPSYSTEMID>QODCLNT002</ERPSYSTEMID>
+                        </E1ARBCIG_ADDITIONAL_DATA>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>ZBD1T</FDNAME>
+                           <NEWVAL>20200426</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>ZBD1P</FDNAME>
+                           <NEWVAL>15</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BKPF</TABNAME>
+                           <FDNAME>XREF1_HD</FDNAME>
+                           <NEWVAL>ARIBA_PMN</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>WSKTO</FDNAME>
+                           <NEWVAL>1500.00</NEWVAL>
+                        </E1FICHD>
+                     </E1FIREF>
+                  </IDOC>
+               </ARBCIG_FIDCCH>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_AddOn_0000_PayMeNow.xspec">
+      <label>PayMeNowFIInv</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/PayMeNow/PayMeNowFIInv.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ARBCIG_FIDCCH>
+               <IDOC BEGIN="1">
+                  <EDI_DC40 SEGMENT="1">
+                     <IDOCTYP>ARBCIG_FIDCCH</IDOCTYP>
+                     <MESTYP>FIDCCH</MESTYP>
+                     <SNDPOR>SAPQOD</SNDPOR>
+                     <SNDPRT>LS</SNDPRT>
+                     <SNDPFC>LS</SNDPFC>
+                     <SNDPRN>QODCLNT002</SNDPRN>
+                     <RCVPRT>LS</RCVPRT>
+                     <RCVPFC>LS</RCVPFC>
+                     <RCVPRN>QODCLNT002</RCVPRN>
+                     <RCVPOR>SAPQOD</RCVPOR>
+                  </EDI_DC40>
+                  <E1FIREF SEGMENT="1">
+                     <AWSYS>QODCLNT002</AWSYS>
+                     <BUKRS>0001</BUKRS>
+                     <BELNR>1900000813</BELNR>
+                     <OBZEI>001</OBZEI>
+                     <BUKRS_SND>0001</BUKRS_SND>
+                     <GJAHR>2018</GJAHR>
+                     <E1ARBCIG_COMMENT SEGMENT="1"/>
+                     <E1ARBCIG_ADDITIONAL_DATA SEGMENT="1">
+                        <ANPAYLOAD_ID>1529645207270-1929235452443691593@10.163.3.224</ANPAYLOAD_ID>
+                        <ARIBANETWORKID>AN02004204493-T</ARIBANETWORKID>
+                        <ERPSYSTEMID>QODCLNT002</ERPSYSTEMID>
+                     </E1ARBCIG_ADDITIONAL_DATA>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>ZBD1T</FDNAME>
+                        <NEWVAL>20180627</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>ZBD1P</FDNAME>
+                        <NEWVAL>3.1530000000000005</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BKPF</TABNAME>
+                        <FDNAME>XREF1_HD</FDNAME>
+                        <NEWVAL>ARIBA_PMN</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>WSKTO</FDNAME>
+                        <NEWVAL>41.53</NEWVAL>
+                     </E1FICHD>
+                  </E1FIREF>
+               </IDOC>
+            </ARBCIG_FIDCCH>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>PayMeNowFIInv</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ARBCIG_FIDCCH>
+                  <IDOC BEGIN="1">
+                     <EDI_DC40 SEGMENT="1">
+                        <IDOCTYP>ARBCIG_FIDCCH</IDOCTYP>
+                        <MESTYP>FIDCCH</MESTYP>
+                        <SNDPOR>SAPQOD</SNDPOR>
+                        <SNDPRT>LS</SNDPRT>
+                        <SNDPFC>LS</SNDPFC>
+                        <SNDPRN>QODCLNT002</SNDPRN>
+                        <RCVPRT>LS</RCVPRT>
+                        <RCVPFC>LS</RCVPFC>
+                        <RCVPRN>QODCLNT002</RCVPRN>
+                        <RCVPOR>SAPQOD</RCVPOR>
+                     </EDI_DC40>
+                     <E1FIREF SEGMENT="1">
+                        <AWSYS>QODCLNT002</AWSYS>
+                        <BUKRS>0001</BUKRS>
+                        <BELNR>1900000813</BELNR>
+                        <OBZEI>001</OBZEI>
+                        <BUKRS_SND>0001</BUKRS_SND>
+                        <GJAHR>2018</GJAHR>
+                        <E1ARBCIG_COMMENT SEGMENT="1"/>
+                        <E1ARBCIG_ADDITIONAL_DATA SEGMENT="1">
+                           <ANPAYLOAD_ID>1529645207270-1929235452443691593@10.163.3.224</ANPAYLOAD_ID>
+                           <ARIBANETWORKID>AN02004204493-T</ARIBANETWORKID>
+                           <ERPSYSTEMID>QODCLNT002</ERPSYSTEMID>
+                        </E1ARBCIG_ADDITIONAL_DATA>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>ZBD1T</FDNAME>
+                           <NEWVAL>20180627</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>ZBD1P</FDNAME>
+                           <NEWVAL>3.1530000000000005</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BKPF</TABNAME>
+                           <FDNAME>XREF1_HD</FDNAME>
+                           <NEWVAL>ARIBA_PMN</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>WSKTO</FDNAME>
+                           <NEWVAL>41.53</NEWVAL>
+                        </E1FICHD>
+                     </E1FIREF>
+                  </IDOC>
+               </ARBCIG_FIDCCH>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_AddOn_0000_PayMeNow.xspec">
+      <label>PayMeNowFIInvMissedfields</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/PayMeNow/PayMeNowFIInvMissedfields.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ARBCIG_FIDCCH>
+               <IDOC BEGIN="1">
+                  <EDI_DC40 SEGMENT="1">
+                     <IDOCTYP>ARBCIG_FIDCCH</IDOCTYP>
+                     <MESTYP>FIDCCH</MESTYP>
+                     <SNDPOR>SAPQOD</SNDPOR>
+                     <SNDPRT>LS</SNDPRT>
+                     <SNDPFC>LS</SNDPFC>
+                     <SNDPRN>QODCLNT002</SNDPRN>
+                     <RCVPRT>LS</RCVPRT>
+                     <RCVPFC>LS</RCVPFC>
+                     <RCVPRN>QODCLNT002</RCVPRN>
+                     <RCVPOR>SAPQOD</RCVPOR>
+                  </EDI_DC40>
+                  <E1FIREF SEGMENT="1">
+                     <AWSYS>QODCLNT002</AWSYS>
+                     <BUKRS>0001</BUKRS>
+                     <BELNR>1900000813</BELNR>
+                     <OBZEI>001</OBZEI>
+                     <BUKRS_SND>0001</BUKRS_SND>
+                     <GJAHR>2018</GJAHR>
+                     <E1ARBCIG_COMMENT SEGMENT="1"/>
+                     <E1ARBCIG_ADDITIONAL_DATA SEGMENT="1">
+                        <ANPAYLOAD_ID>1529645207270-1929235452443691593@10.163.3.224</ANPAYLOAD_ID>
+                        <ARIBANETWORKID>AN02004204493-T</ARIBANETWORKID>
+                        <ERPSYSTEMID>QODCLNT002</ERPSYSTEMID>
+                     </E1ARBCIG_ADDITIONAL_DATA>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>ZBD1T</FDNAME>
+                        <NEWVAL>20180627</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>ZBD1P</FDNAME>
+                        <NEWVAL>3.1530000000000005</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BKPF</TABNAME>
+                        <FDNAME>XREF1_HD</FDNAME>
+                        <NEWVAL>ARIBA_PMN</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>WSKTO</FDNAME>
+                        <NEWVAL>41.53</NEWVAL>
+                     </E1FICHD>
+                  </E1FIREF>
+               </IDOC>
+            </ARBCIG_FIDCCH>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>PayMeNowFIInvMissedfields</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ARBCIG_FIDCCH>
+                  <IDOC BEGIN="1">
+                     <EDI_DC40 SEGMENT="1">
+                        <IDOCTYP>ARBCIG_FIDCCH</IDOCTYP>
+                        <MESTYP>FIDCCH</MESTYP>
+                        <SNDPOR>SAPQOD</SNDPOR>
+                        <SNDPRT>LS</SNDPRT>
+                        <SNDPFC>LS</SNDPFC>
+                        <SNDPRN>QODCLNT002</SNDPRN>
+                        <RCVPRT>LS</RCVPRT>
+                        <RCVPFC>LS</RCVPFC>
+                        <RCVPRN>QODCLNT002</RCVPRN>
+                        <RCVPOR>SAPQOD</RCVPOR>
+                     </EDI_DC40>
+                     <E1FIREF SEGMENT="1">
+                        <AWSYS>QODCLNT002</AWSYS>
+                        <BUKRS>0001</BUKRS>
+                        <BELNR>1900000813</BELNR>
+                        <OBZEI>001</OBZEI>
+                        <BUKRS_SND>0001</BUKRS_SND>
+                        <GJAHR>2018</GJAHR>
+                        <E1ARBCIG_COMMENT SEGMENT="1"/>
+                        <E1ARBCIG_ADDITIONAL_DATA SEGMENT="1">
+                           <ANPAYLOAD_ID>1529645207270-1929235452443691593@10.163.3.224</ANPAYLOAD_ID>
+                           <ARIBANETWORKID>AN02004204493-T</ARIBANETWORKID>
+                           <ERPSYSTEMID>QODCLNT002</ERPSYSTEMID>
+                        </E1ARBCIG_ADDITIONAL_DATA>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>ZBD1T</FDNAME>
+                           <NEWVAL>20180627</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>ZBD1P</FDNAME>
+                           <NEWVAL>3.1530000000000005</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BKPF</TABNAME>
+                           <FDNAME>XREF1_HD</FDNAME>
+                           <NEWVAL>ARIBA_PMN</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>WSKTO</FDNAME>
+                           <NEWVAL>41.53</NEWVAL>
+                        </E1FICHD>
+                     </E1FIREF>
+                  </IDOC>
+               </ARBCIG_FIDCCH>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_AddOn_0000_PayMeNow.xspec">
+      <label>PayMeNowMMInv-LI</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/PayMeNow/PayMeNowMMInvLI.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ARBCIG_FIDCCH>
+               <IDOC BEGIN="1">
+                  <EDI_DC40 SEGMENT="1">
+                     <IDOCTYP>ARBCIG_FIDCCH</IDOCTYP>
+                     <MESTYP>FIDCCH</MESTYP>
+                     <SNDPOR>SAPQOD</SNDPOR>
+                     <SNDPRT>LI</SNDPRT>
+                     <SNDPFC>LI</SNDPFC>
+                     <SNDPRN/>
+                     <RCVPRT>LI</RCVPRT>
+                     <RCVPFC>LI</RCVPFC>
+                     <RCVPRN/>
+                     <RCVPOR>SAPQOD</RCVPOR>
+                  </EDI_DC40>
+                  <E1FIREF SEGMENT="1">
+                     <AWSYS>QODCLNT002</AWSYS>
+                     <BUKRS>1234</BUKRS>
+                     <BELNR>4567891324</BELNR>
+                     <OBZEI>8</OBZEI>
+                     <BUKRS_SND>1234</BUKRS_SND>
+                     <GJAHR>6798</GJAHR>
+                     <E1ARBCIG_ADDITIONAL_DATA SEGMENT="1">
+                        <ANPAYLOAD_ID>1587836994336-1474428851068750076@10.163.3.187</ANPAYLOAD_ID>
+                        <ARIBANETWORKID>AN02004204493-T</ARIBANETWORKID>
+                        <ERPSYSTEMID>QODCLNT002</ERPSYSTEMID>
+                     </E1ARBCIG_ADDITIONAL_DATA>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>ZBD1T</FDNAME>
+                        <NEWVAL>20200426</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>ZBD1P</FDNAME>
+                        <NEWVAL>0.00</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BKPF</TABNAME>
+                        <FDNAME>XREF1_HD</FDNAME>
+                        <NEWVAL>ARIBA_PMN</NEWVAL>
+                     </E1FICHD>
+                     <E1FICHD SEGMENT="1">
+                        <TABNAME>BSEG</TABNAME>
+                        <FDNAME>WSKTO</FDNAME>
+                        <NEWVAL>1500.00</NEWVAL>
+                     </E1FICHD>
+                  </E1FIREF>
+               </IDOC>
+            </ARBCIG_FIDCCH>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>PayMeNowMMInv-LI</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ARBCIG_FIDCCH>
+                  <IDOC BEGIN="1">
+                     <EDI_DC40 SEGMENT="1">
+                        <IDOCTYP>ARBCIG_FIDCCH</IDOCTYP>
+                        <MESTYP>FIDCCH</MESTYP>
+                        <SNDPOR>SAPQOD</SNDPOR>
+                        <SNDPRT>LI</SNDPRT>
+                        <SNDPFC>LI</SNDPFC>
+                        <SNDPRN/>
+                        <RCVPRT>LI</RCVPRT>
+                        <RCVPFC>LI</RCVPFC>
+                        <RCVPRN/>
+                        <RCVPOR>SAPQOD</RCVPOR>
+                     </EDI_DC40>
+                     <E1FIREF SEGMENT="1">
+                        <AWSYS>QODCLNT002</AWSYS>
+                        <BUKRS>1234</BUKRS>
+                        <BELNR>4567891324</BELNR>
+                        <OBZEI>8</OBZEI>
+                        <BUKRS_SND>1234</BUKRS_SND>
+                        <GJAHR>6798</GJAHR>
+                        <E1ARBCIG_ADDITIONAL_DATA SEGMENT="1">
+                           <ANPAYLOAD_ID>1587836994336-1474428851068750076@10.163.3.187</ANPAYLOAD_ID>
+                           <ARIBANETWORKID>AN02004204493-T</ARIBANETWORKID>
+                           <ERPSYSTEMID>QODCLNT002</ERPSYSTEMID>
+                        </E1ARBCIG_ADDITIONAL_DATA>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>ZBD1T</FDNAME>
+                           <NEWVAL>20200426</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>ZBD1P</FDNAME>
+                           <NEWVAL>0.00</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BKPF</TABNAME>
+                           <FDNAME>XREF1_HD</FDNAME>
+                           <NEWVAL>ARIBA_PMN</NEWVAL>
+                        </E1FICHD>
+                        <E1FICHD SEGMENT="1">
+                           <TABNAME>BSEG</TABNAME>
+                           <FDNAME>WSKTO</FDNAME>
+                           <NEWVAL>1500.00</NEWVAL>
+                        </E1FICHD>
+                     </E1FIREF>
+                  </IDOC>
+               </ARBCIG_FIDCCH>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

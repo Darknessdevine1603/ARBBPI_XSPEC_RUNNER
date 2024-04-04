@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_824.xsl">
+    <x:scenario label="Status Update Request">
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="aanReceiverID" select="'AN02004417464-T'"/>        
+        <x:param name="anSenderID" select="'AN02004417465-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:context href="../../payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_BM.xml"/>
+        <x:expect href="../../payloads/target/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_AM.xml"
+                  select="element()" label="Status Update Request" />
+    </x:scenario>
+    <x:scenario label="Status Update Request reject">
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="aanReceiverID" select="'AN02004417464-T'"/>        
+        <x:param name="anSenderID" select="'AN02004417465-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:context href="../../payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequestReject_BM.xml"/>
+        <x:expect href="../../payloads/target/outbound/X12/StatusUpdateRequest/StatusUpdateRequestReject_AM.xml"
+            select="element()" label="Status Update Request reject" />
+    </x:scenario>    
+</x:description>

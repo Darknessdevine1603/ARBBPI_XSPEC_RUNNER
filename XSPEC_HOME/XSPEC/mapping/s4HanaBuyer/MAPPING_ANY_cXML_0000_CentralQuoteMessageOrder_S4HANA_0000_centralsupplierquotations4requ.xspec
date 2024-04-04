@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_CentralQuoteMessageOrder_S4HANA_0000_centralsupplierquotations4requ.xsl">
+    <x:scenario label="CentralQuoteMessageOrder- Basic1">
+<!--        Parameter in main XSLT -->
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPName"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="cXMLAttachments"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:param name="anTargetDocumentType"/>
+        <x:param name="anSupplierANID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="exchange"/>
+        <x:param name="anProviderANID" />
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPSystemID" select="'0LOI36K'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="Document_type"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/CentralQuoteMessageOrder/CentralQuoteMessageOrder.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/CentralQuoteMessageOrder/CentralQuoteMessageOrder.dat"
+            select="*" label="CentralQuoteMessageOrder- Basic1"/>
+    </x:scenario>
+</x:description>

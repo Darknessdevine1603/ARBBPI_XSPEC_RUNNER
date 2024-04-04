@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_AddOnDocumentStatusUpdate.xsl">
+    <x:scenario label="Status Update Request Invoice">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted InvoiceRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'UnknownDocumentType'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'UnknownDocumentType'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-InvoiceStatusUpdate.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-InvoiceStatusUpdateUnknown.xml"
+            select="element()" label="Status Update Request Invoice"/>
+    </x:scenario>
+    
+    <x:scenario label="Status Update Request Invoice">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted InvoiceRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'InvoiceStatusUpdate'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-InvoiceStatusUpdate.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-InvoiceStatusUpdate.xml"
+            select="element()" label="Status Update Request Invoice"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request Invoice with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted InvoiceRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'InvoiceStatusUpdate'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'InvoiceStatusUpdate'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-InvoiceStatusUpdate.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-InvoiceStatusUpdateerpDocNumber.xml"
+            select="element()" label="Status Update Request Invoice with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request Order Enquiry">
+        <x:param name="anErrorCode" select="'202'"/>
+        <x:param name="anErrorDescription" select="'Accepted  Order Enquiry'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'EnquiryOrder'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-EnquiryOrder.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-EnquiryOrderID.xml"
+            select="element()" label="Status Update Request Order Enquiry"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request Order Enquiry with erpDocNumber">
+        <x:param name="anErrorCode" select="'202'"/>
+        <x:param name="anErrorDescription" select="'Accepted  Order Enquiry'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'EnquiryOrder'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'EnquiryOrder'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-EnquiryOrder.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-EnquiryOrder.xml"
+            select="element()" label="Status Update Request Order Enquiry with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    
+    <x:scenario label="Status Update Order Request">
+        <x:param name="anErrorCode" select="'400'"/>
+        <x:param name="anErrorDescription" select="'Rejected Order Request'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'Order'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-OrderRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-OrderRequest.xml"
+            select="element()" label="Status Update Order Request"/>
+    </x:scenario>
+    <x:scenario label="Status Update Order Request with erpDocNumber">
+        <x:param name="anErrorCode" select="'400'"/>
+        <x:param name="anErrorDescription" select="'Rejected Order Request'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'Order'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'Order'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-OrderRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-OrderRequest2.xml"
+            select="element()" label="Status Update Order Request with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    
+    <x:scenario label="Status Update PaymentProposal">
+        <x:param name="anErrorCode" select="'400'"/>
+        <x:param name="anErrorDescription" select="'Rejected PaymentProposal'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'PaymentProposal'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentProposal.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentProposal.xml"
+            select="element()" label="Status Update PaymentProposal"/>
+    </x:scenario>
+    <x:scenario label="Status Update PaymentProposal with erpDocNumber">
+        <x:param name="anErrorCode" select="'400'"/>
+        <x:param name="anErrorDescription" select="'Rejected PaymentProposal'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'PaymentProposal'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'PaymentProposal'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentProposal.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentProposal2.xml"
+            select="element()" label="Status Update PaymentProposal with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+       
+    <x:scenario label="Status Update PaymentRemittanceRequest">
+        <x:param name="anErrorCode" select="'400'"/>
+        <x:param name="anErrorDescription" select="'Rejected PaymentRemittanceRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'PaymentRemittanceRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentRemittanceRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentRemittanceRequest.xml"
+            select="element()" label="Status Update PaymentRemittanceRequest"/>
+    </x:scenario>
+    <x:scenario label="Status Update PaymentRemittanceRequest with erpDocNumber">
+        <x:param name="anErrorCode" select="'400'"/>
+        <x:param name="anErrorDescription" select="'Rejected PaymentRemittanceRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'PaymentRemittanceRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"  select="'PaymentRemittanceRequest'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentRemittanceRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update PaymentRemittanceRequest with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    
+    <x:scenario label="Status Update Receipt Request">
+        <x:param name="anErrorCode" select="'400'"/>
+        <x:param name="anErrorDescription" select="'Rejected Receipt Request'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'ReceiptRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ReceiptRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ReceiptRequest.xml"
+            select="element()" label="Status Update Receipt Request"/>
+    </x:scenario>
+    <x:scenario label="Status Update Receipt Request with erpDocNumber">
+        <x:param name="anErrorCode" select="'400'"/>
+        <x:param name="anErrorDescription" select="'Rejected Receipt Request'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'ReceiptRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'ReceiptRequest'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ReceiptRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Receipt Request with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    
+    <x:scenario label="Status Update ERPServiceEntrySheetRequest">
+        <x:param name="anErrorCode" select="'401'"/>
+        <x:param name="anErrorDescription" select="'Rejected ERPServiceEntrySheetRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'ERPServiceEntrySheetRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ERPServiceEntrySheetRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ERPServiceEntrySheetRequest.xml"
+            select="element()" label="Status Update ERPServiceEntrySheetRequest"/>
+    </x:scenario>
+    <x:scenario label="Status Update ERPServiceEntrySheetRequest with erpDocNumber">
+        <x:param name="anErrorCode" select="'401'"/>
+        <x:param name="anErrorDescription" select="'Rejected ERPServiceEntrySheetRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime" select="'2019-09-27'"/>
+        <x:param name="anSourceDocumentType" select="'ERPServiceEntrySheetRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'ERPServiceEntrySheetRequest'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ERPServiceEntrySheetRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update ERPServiceEntrySheetRequest with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request Requisition">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted Requisition'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'Requisition'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Requisition.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Requisition.xml"
+            select="element()" label="Status Update Request Requisition"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request Requisition with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted Requisition'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'Requisition'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'Requisition'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Requisition.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request Requisition with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request CCInvoice">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted CCInvoice'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'CCInvoice'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-CCInvoice.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-CCInvoice.xml"
+            select="element()" label="Status Update Request CCInvoice"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request CCInvoice with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted CCInvoice'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'CCInvoice'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'CCInvoice'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-CCInvoice.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request CCInvoice with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request MMInvoice">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted MMInvoice'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'MMInvoice'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-MMInvoice.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-MMInvoice.xml"
+            select="element()" label="Status Update Request MMInvoice"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request MMInvoice with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted MMInvoice'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'MMInvoice'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'MMInvoice'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-MMInvoice.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request MMInvoice with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request ScheduleAgreementRelease">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted ScheduleAgreementRelease'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'ScheduleAgreementRelease'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ScheduleAgreementRelease.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ScheduleAgreementRelease.xml"
+            select="element()" label="Status Update Request ScheduleAgreementRelease"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request ScheduleAgreementRelease with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted ScheduleAgreementRelease'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'ScheduleAgreementRelease'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'ScheduleAgreementRelease'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ScheduleAgreementRelease.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request ScheduleAgreementRelease with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request ServiceSheetResponse">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted ServiceSheetResponse'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'ServiceSheetResponse'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ServiceSheetResponse.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ServiceSheetResponse.xml"
+            select="element()" label="Status Update Request ServiceSheetResponse"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request ServiceSheetResponse with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted ServiceSheetResponse'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'ServiceSheetResponse'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'ServiceSheetResponse'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ServiceSheetResponse.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request ServiceSheetResponse with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request PaymentRemittanceCancelStatusUpdate">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted PaymentRemittanceCancelStatusUpdate'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'PaymentRemittanceCancelStatusUpdate'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentRemittanceCancelStatusUpdate.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentRemittanceCancelStatusUpdate.xml"
+            select="element()" label="Status Update Request PaymentRemittanceCancelStatusUpdate"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request PaymentRemittanceCancelStatusUpdate with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted PaymentRemittanceCancelStatusUpdate'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'PaymentRemittanceCancelStatusUpdate'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'PaymentRemittanceCancelStatusUpdate'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentRemittanceCancelStatusUpdate.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request PaymentRemittanceCancelStatusUpdate with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request QualityInspectionDecisionMsg">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted QualityInspectionDecisionMsg'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'QualityInspectionDecisionMsg'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityInspectionDecisionMsg.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityInspectionDecisionMsg.xml"
+            select="element()" label="Status Update Request QualityInspectionDecisionMsg"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request QualityInspectionDecisionMsg with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted QualityInspectionDecisionMsg'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'QualityInspectionDecisionMsg'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'QualityInspectionDecisionMsg'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityInspectionDecisionMsg.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request QualityInspectionDecisionMsg with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request QualityIssueNotificationMessage">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted QualityIssueNotificationMessage'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'QualityIssueNotificationMessage'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityIssueNotificationMessage.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityIssueNotificationMessage.xml"
+            select="element()" label="Status Update Request QualityIssueNotificationMessage"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request QualityIssueNotificationMessage with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted QualityIssueNotificationMessage'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'QualityIssueNotificationMessage'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'QualityIssueNotificationMessage'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityIssueNotificationMessage.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request QualityIssueNotificationMessage with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request PaymentBatchRequest">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted PaymentBatchRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'PaymentBatchRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentBatchRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentBatchRequest.xml"
+            select="element()" label="Status Update Request PaymentBatchRequest"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request PaymentBatchRequest with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted PaymentBatchRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'PaymentBatchRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'PaymentBatchRequest'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-PaymentBatchRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request QualityIssueNotificationMessage with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request ProductActivityMessage">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted ProductActivityMessage'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'ProductActivityMessage'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ProductActivityMessage.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ProductActivityMessage.xml"
+            select="element()" label="Status Update Request ProductActivityMessage"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request ProductActivityMessage with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted ProductActivityMessage'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'ProductActivityMessage'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'ProductActivityMessage'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ProductActivityMessage.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request ProductActivityMessage with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request ShipNoticeRequest">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted ShipNoticeRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'ShipNoticeRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ShipNoticeRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ShipNoticeRequest.xml"
+            select="element()" label="Status Update Request ShipNoticeRequest"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request ShipNoticeRequest with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted ShipNoticeRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'ShipNoticeRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'ShipNoticeRequest'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-ShipNoticeRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request ShipNoticeRequest with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    <x:scenario label="Status Update Request QualityInspectionRequest">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted QualityInspectionRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'QualityInspectionRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityInspectionRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityInspectionRequest.xml"
+            select="element()" label="Status Update Request QualityInspectionRequest"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request QualityInspectionRequest with erpDocNumber">
+        <x:param name="anErrorCode" select="'200'"/>
+        <x:param name="anErrorDescription" select="'Accepted QualityInspectionRequest'"/>
+        <x:param name="anAlternateSenderID"/>
+        <x:param name="anDateTime"/>
+        <x:param name="anSourceDocumentType" select="'QualityInspectionRequest'"/>
+        <x:param name="anERPDocumentType"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="erpDocNumber" select="'QualityInspectionRequest'"/> 
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-QualityInspectionRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/StatusUpdate/StatusUpdateRequest-Dummy.xml"
+            select="element()" label="Status Update Request QualityInspectionRequest with erpDocNumber"/>
+    </x:scenario>
+    <!-- ################################################################################################################################################### -->
+    
+</x:description>

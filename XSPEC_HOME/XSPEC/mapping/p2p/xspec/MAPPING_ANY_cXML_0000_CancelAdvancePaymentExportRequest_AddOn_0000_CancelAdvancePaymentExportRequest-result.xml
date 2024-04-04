@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_CancelAdvancePaymentExportRequest_AddOn_0000_CancelAdvancePaymentExportRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_CancelAdvancePaymentExportRequest_AddOn_0000_CancelAdvancePaymentExportRequest.xsl"
+        date="2023-04-27T15:33:41.493794+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_CancelAdvancePaymentExportRequest_AddOn_0000_CancelAdvancePaymentExportRequest.xspec">
+      <label>Scenario for Cancel Advance Payment Export Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/CancelAdvPayment/CancelAdvancePaymentExportRequest_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_ADV_PAYMENT_REV_POST xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_HDR>
+                  <ARIBA_ID>APMT45</ARIBA_ID>
+               </ARIBA_HDR>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <BUS_ACT>RFST</BUS_ACT>
+               <REVERSAL>
+                  <OBJ_TYPE>BKPFF</OBJ_TYPE>
+                  <OBJ_KEY>170000017200012017</OBJ_KEY>
+                  <OBJ_KEY_R>170000017200012017</OBJ_KEY_R>
+                  <PSTNG_DATE>2017-12-03</PSTNG_DATE>
+                  <COMP_CODE>0001</COMP_CODE>
+                  <REASON_REV>03</REASON_REV>
+               </REVERSAL>
+            </n0:ARBCIG_ADV_PAYMENT_REV_POST>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Cancel Advance Payment Export Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_ADV_PAYMENT_REV_POST xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ARIBA_HDR>
+                     <ARIBA_ID>APMT45</ARIBA_ID>
+                  </ARIBA_HDR>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <BUS_ACT>RFST</BUS_ACT>
+                  <REVERSAL>
+                     <OBJ_TYPE>BKPFF</OBJ_TYPE>
+                     <OBJ_KEY>170000017200012017</OBJ_KEY>
+                     <OBJ_KEY_R>170000017200012017</OBJ_KEY_R>
+                     <PSTNG_DATE>2017-12-03</PSTNG_DATE>
+                     <COMP_CODE>0001</COMP_CODE>
+                     <REASON_REV>03</REASON_REV>
+                  </REVERSAL>
+               </n0:ARBCIG_ADV_PAYMENT_REV_POST>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_CancelAdvancePaymentExportRequest_AddOn_0000_CancelAdvancePaymentExportRequest.xspec">
+      <label>Scenario for Cancel Advance Payment Export Request with Posting Date</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/CancelAdvPayment/CancelAdvancePaymentExportRequestPostDate_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_ADV_PAYMENT_REV_POST xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_HDR>
+                  <ARIBA_ID>APMT45</ARIBA_ID>
+               </ARIBA_HDR>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <BUS_ACT>RFST</BUS_ACT>
+               <POSTINGDATE>20171204</POSTINGDATE>
+               <REVERSAL>
+                  <OBJ_TYPE>BKPFF</OBJ_TYPE>
+                  <OBJ_KEY>170000017200012017</OBJ_KEY>
+                  <OBJ_KEY_R>170000017200012017</OBJ_KEY_R>
+                  <COMP_CODE>0001</COMP_CODE>
+                  <REASON_REV>03</REASON_REV>
+               </REVERSAL>
+            </n0:ARBCIG_ADV_PAYMENT_REV_POST>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Scenario for Cancel Advance Payment Export Request with Posting Date</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_ADV_PAYMENT_REV_POST xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ARIBA_HDR>
+                     <ARIBA_ID>APMT45</ARIBA_ID>
+                  </ARIBA_HDR>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <BUS_ACT>RFST</BUS_ACT>
+                  <POSTINGDATE>20171204</POSTINGDATE>
+                  <REVERSAL>
+                     <OBJ_TYPE>BKPFF</OBJ_TYPE>
+                     <OBJ_KEY>170000017200012017</OBJ_KEY>
+                     <OBJ_KEY_R>170000017200012017</OBJ_KEY_R>
+                     <COMP_CODE>0001</COMP_CODE>
+                     <REASON_REV>03</REASON_REV>
+                  </REVERSAL>
+               </n0:ARBCIG_ADV_PAYMENT_REV_POST>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

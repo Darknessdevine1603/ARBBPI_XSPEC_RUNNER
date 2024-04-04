@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+   stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_Order_cXML_0000_OrderRequest.xsl">
+   <x:scenario label="Single Line Purchase Order">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'M4ACLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID" select="'4FE57760245FDE61E10000000AEE0105'"/>
+      <x:param name="anEnvName" select="'PROD'"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/SingleLinePO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/SingleLinePO.dat"
+         select="element()" label="Single Line Purchase Order"/>
+   </x:scenario>
+   <x:scenario label="Purchase order with Multiple Line with Comments And Attachments">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/MultiLineWithCommentsAttach.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/MultiLineWithCommentsAttach.dat"
+         select="element()" label="Purchase order with Multiple Line with Comments And Attachments"/>
+   </x:scenario>
+   
+   <x:scenario label="Purchase Order with Service Map Key starting with 5">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'M4ACLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/ServiceMapKey5PO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/ServiceMapKey5PO.dat"
+         select="element()" label="Purchase Order with Service Map Key starting with 5"/>
+   </x:scenario>
+   <x:scenario label="Purchase Order with Service Map Key starting with 1">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'M4ACLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/ServiceMapKeyPO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/ServiceMapKeyPO.dat"
+         select="element()" label="Purchase Order with Service Map Key starting with 1"/>
+   </x:scenario>
+   
+   <x:scenario label="Purchase order with Comments Only">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/SingleLineWithComments.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/SingleLineWithComments.dat"
+         select="element()" label="Purchase order with Comments Only"/>
+   </x:scenario>
+   <x:scenario label="Purchase order with Services and Material along with comments and attachments">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/MixPOMultiLineWithCommentsAttach.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/MixPOMultiLineWithCommentsAttach.dat"
+         select="element()"
+         label="Purchase order with Services and Material along with comments and attachments"/>
+   </x:scenario>
+   <x:scenario label="Consignment Purchase Order">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/ConsignmentPO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/ConsignmentPO.dat"
+         select="element()" label="ConsignmentPO"/>
+   </x:scenario>
+   <x:scenario label="SubContracting Purchase Order">
+      <x:param name="anIsMultiERP" select="'TRUE'"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/SubContractingPO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/SubContractingPO.dat"
+         select="element()" label="SubContracting Purchase Order"/>
+   </x:scenario>
+   <x:scenario label="Stock Transfer Purchase Order">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/STO-PO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/STO-PO.dat" select="element()"
+         label="SubContracting Purchase Order"/>
+   </x:scenario>
+   <x:scenario label="Service Purchase Order">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/ServicePO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/ServicePO.dat"
+         select="element()" label="Service Purchase Order"/>
+   </x:scenario>
+   <x:scenario label="Blanket Purchase Order">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/BlanketPO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/BlanketPO.dat"
+         select="element()" label="Blanket Purchase Order"/>
+   </x:scenario>
+   <x:scenario label="Return Purchase Order">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/ReturnPO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/ReturnPO.dat"
+         select="element()" label="Return Purchase Order"/>
+   </x:scenario>
+   <x:scenario label="WorkOrder Purchase Order">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/WorkOrderPO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/WorkOrderPO.dat"
+         select="element()" label="WorkOrder Purchase Order"/>
+   </x:scenario>
+   <x:scenario label="Purchase Order with Item Shipto Address">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/DiffPlantAddressPO.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/DiffPlantAddressPO.dat"
+         select="element()" label="Purchase Order with Item Shipto Address"/>
+   </x:scenario>
+   
+   <x:scenario label="Service Purchase Order without PBQ">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/ServicePOWithoutPBQ.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/ServicePOWithoutPBQ.dat"
+         select="element()" label="Service Purchase Order without PBQ"/>
+   </x:scenario>
+   <x:scenario label="Service PO with more than 25 parent lines">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'M4ACLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/Multi_serv_po_bm.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/Orderrequest_multiservPO_am.xml"
+         select="element()" label="Service PO with more than 25 parent lines"/>
+   </x:scenario>
+   <x:scenario label="PO with AssetInfo">
+      <x:param name="anIsMultiERP"/>
+      <x:param name="anERPTimeZone" select="'+05:30'"/>
+      <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+      <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+      <x:param name="anTargetDocumentType" select="'OrderRequest'"/>
+      <x:param name="anSourceDocumentType" select="'Order'"/>
+      <x:param name="anProviderANID" select="'AN01000000087'"/>
+      <x:param name="anPayloadID"/>
+      <x:param name="anEnvName"/>
+      <!--        Headers in Parameter Cross Reference Files -->
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      
+      <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Order/POwithAssetInfo.xml"/>
+      <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Order/POwithAssetInfo.dat"
+         select="element()" label="PO with AssetInfo"/>
+   </x:scenario>
+</x:description>

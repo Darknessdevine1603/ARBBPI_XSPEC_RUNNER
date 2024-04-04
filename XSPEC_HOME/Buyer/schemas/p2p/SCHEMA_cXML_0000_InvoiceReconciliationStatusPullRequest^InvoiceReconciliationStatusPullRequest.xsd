@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="urn:Ariba:Buyer:vsap" xmlns:typens="urn:Ariba:Buyer:vsap">
+    <xsd:element name="Headers">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="InvoiceReconciliationStatusPullRequest">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0" name="IRStatusChangeInput_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="item"
+                                type="typens:IRStatusChangeInput"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="InvoiceReconciliationStatusPullReply">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0" name="IRStatusChangeOutput_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="item"
+                                type="typens:IRStatusChangeOutput"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="IRStatusChangeInput">
+        <xsd:all>
+            <xsd:element name="CommentsToSupplier" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Comments to Supplier</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InvoiceDate" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Invoice Date in format yyyy-MM-dd'T'hh:mm:ss. Example:
+                        2018-04-12T16:31:23-07:00. This is optional.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InvoiceNumber" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Invoice Number of the Invoice. Required if
+                        invoiceReconciliationId is not provided.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InvoiceReconciliationId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Unique Id of the Invoice Reconciliation document. Required if
+                        invoiceNumber is not provided.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="RejectionReasonCodes">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>Rejection Reason codes</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="RequestedAction" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Set the type of operation to be performed on the IR.
+                        Currently the only supported action is 'Reject'</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="SupplierLocationUniqueName" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Supplier Location Unique Id. Required if
+                        invoiceReconciliationId is not provided.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="IRStatusChangeOutput">
+        <xsd:all>
+            <xsd:element name="IrStatus">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item"
+                            type="typens:IRStatusChangeResult"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="IRStatusChangeResult">
+        <xsd:all>
+            <xsd:element name="InvoiceReconciliationId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Unique Id of the Invoice Reconciliation
+                        document</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Message" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The error message if any</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Status" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Status of the operation requested (Success or
+                        Error)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+</xsd:schema>

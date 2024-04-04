@@ -1,0 +1,2054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="urn:Ariba:Buyer:vsap" xmlns:typens="urn:Ariba:Buyer:vsap">
+    <xsd:element name="Headers">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="InvoiceReconciliationDeriveAccountingExportRequest">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0"
+                    name="InvoiceReconciliation_BudgetIRExportHeaderDetails_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:InvoiceReconciliation_BudgetIRExportHeaderDetails"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0"
+                    name="InvoiceReconciliation_BudgetIRExportLineDetails_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:InvoiceReconciliation_BudgetIRExportLineDetails"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0"
+                    name="InvoiceReconciliation_BudgetIRExportAcctDetails_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:InvoiceReconciliation_BudgetIRExportAcctDetails"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="InvoiceReconciliationDeriveAccountingExportReply">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0"
+                    name="InvoiceReconciliation_IRRealTimeBudgetResponseImport_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:InvoiceReconciliation_IRRealTimeBudgetResponseImport"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AccountingError_SplitAccountingErrorImport_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:AccountingError_SplitAccountingErrorImport"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="InvoiceReconciliation_BudgetIRExportHeaderDetails">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.invoicing.core.InvoiceReconciliation, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="AdjustedTotalCostInERPPrecision">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>It defines the gross amount of the payment in ERP
+                            Precision.</xsd:documentation>
+                        <xsd:documentation>Class name ariba.basic.core.Money, group name Reference,
+                            variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="Amount" nillable="true" type="xsd:decimal">
+                        <xsd:annotation>
+                                <xsd:documentation>Monetary amount.</xsd:documentation>
+                                <xsd:documentation>Class name java.math.BigDecimal, group name
+                                    Reference, variant vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="AmountInReportingCurrency" nillable="true"
+                            type="xsd:decimal">
+                        <xsd:annotation>
+                                <xsd:documentation>Amount converted to the reporting currency of the
+                                    system.</xsd:documentation>
+                                <xsd:documentation>Class name java.math.BigDecimal, group name
+                                    Reference, variant vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="ApproxAmountInBaseCurrency" nillable="true"
+                            type="xsd:decimal">
+                        <xsd:annotation>
+                                <xsd:documentation>Amount converted into the base currency of the
+                                    system.</xsd:documentation>
+                                <xsd:documentation>Class name java.math.BigDecimal, group name
+                                    Reference, variant vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="ConversionDate" nillable="true"
+                            type="xsd:dateTime">
+                        <xsd:annotation>
+                                <xsd:documentation>Conversion date when the amounts were computed in
+                                    the ApproxAmountInBaseCurrency and the AmountInReportingCurrency
+                                    fields.</xsd:documentation>
+                                <xsd:documentation>Class name ariba.util.core.Date, group name
+                                    Reference, variant vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="Currency">
+                            <xsd:complexType>
+                                <xsd:annotation>
+                                    <xsd:documentation>Transaction currency of the
+                                        amount.</xsd:documentation>
+                                    <xsd:documentation>Class name ariba.basic.core.Currency, group
+                                        name Reference, variant vrealm_40.</xsd:documentation>
+                                </xsd:annotation>
+                                <xsd:all>
+                                    <xsd:element minOccurs="0" name="UniqueName" nillable="true"
+                                        type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>Unique three-letter identifier for
+                                                the currency. For example, USD, DEM,
+                                                GBP.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="BaselineDateInRequesterTimeZone" nillable="true"
+                type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines the base line date of the payment. The format of
+                        the date is YYYYMMDD.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        BudgetIRExportHeaderDetails, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="BaselineDateString" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines the base line date of the
+                        payment.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        BudgetIRExportHeaderDetails, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CompanyCode">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name ariba.core.CompanyCode, group name Reference,
+                            variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="1" name="UniqueName" nillable="true"
+                            type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>It defines the company code of the payment it
+                                    belongs.</xsd:documentation>
+                                <xsd:documentation>Class name java.lang.String, group name
+                                    Reference, variant vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                    <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                        name="CustomBoolean" nillable="true">
+                                        <xsd:complexType>
+                                            <xsd:simpleContent>
+                                                <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                </xsd:extension>
+                                            </xsd:simpleContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                        name="CustomString" nillable="true">
+                                        <xsd:complexType>
+                                            <xsd:simpleContent>
+                                                <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                </xsd:extension>
+                                            </xsd:simpleContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="DirectActionURL" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>payment URL</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        BudgetIRExportHeaderDetails, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="Invoice">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name ariba.invoicing.core.Invoice, group name
+                            FullObject, variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="1" name="InvoiceNumber" nillable="true"
+                            type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>It defines the invoice number as refernce
+                                    document number. The maximum permissible length for this field
+                                    is 16 characters.</xsd:documentation>
+                                <xsd:documentation>Class name java.lang.String, group name
+                                    FullObject, variant vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                    <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                        name="CustomBoolean" nillable="true">
+                                        <xsd:complexType>
+                                            <xsd:simpleContent>
+                                                <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                </xsd:extension>
+                                            </xsd:simpleContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                        name="CustomDate" nillable="true">
+                                        <xsd:complexType>
+                                            <xsd:simpleContent>
+                                                <xsd:extension base="xsd:dateTime">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                </xsd:extension>
+                                            </xsd:simpleContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                        name="CustomInteger" nillable="true">
+                                        <xsd:complexType>
+                                            <xsd:simpleContent>
+                                                <xsd:extension base="xsd:integer">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                </xsd:extension>
+                                            </xsd:simpleContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                        name="CustomMoney" nillable="true">
+                                        <xsd:complexType>
+                                            <xsd:complexContent>
+                                                <xsd:extension base="typens:Money_Reference">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                </xsd:extension>
+                                            </xsd:complexContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                        name="CustomString" nillable="true">
+                                        <xsd:complexType>
+                                            <xsd:simpleContent>
+                                                <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                </xsd:extension>
+                                            </xsd:simpleContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="InvoiceDate" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>It defines the invoice date.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.util.core.Date, group name
+                        BudgetIRExportHeaderDetails, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="SAPInvoiceInd" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Indicates whether it is an invoice or a credit
+                        memo.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        BudgetIRExportHeaderDetails, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="UniqueName" nillable="true" type="xsd:string"/>
+            <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomBoolean"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:boolean">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomDate"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:dateTime">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomInteger"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:integer">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomMoney"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:complexContent>
+                                    <xsd:extension base="typens:Money_Reference">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:complexContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomString"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="InvoiceReconciliation_BudgetIRExportLineDetails">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.invoicing.core.InvoiceReconciliation, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="LineItems">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name
+                            ariba.invoicing.core.InvoiceReconciliationLineItem, group name
+                            Reference, variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="item">
+                            <xsd:complexType>
+                                <xsd:all>
+                                    <xsd:element minOccurs="0" name="AdjustedCostInERPPrecision">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.basic.core.Money, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="0" name="Amount"
+                                                  nillable="true" type="xsd:decimal">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines an amount of the
+                                                  line item in ERP Precision.</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  java.math.BigDecimal, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="Amount">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.basic.core.Money, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="1" name="Amount"
+                                                  nillable="true" type="xsd:decimal">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines an amount of the
+                                                  line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  java.math.BigDecimal, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="Description">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.procure.core.LineItemProductDescription,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="0" name="ConversionFactor"
+                                                  nillable="true" type="xsd:decimal">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>The quantity the price is
+                                                  quoted on.</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  java.math.BigDecimal, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                                <xsd:element minOccurs="1" name="Description"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>This is the Line item
+                                                  description.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                                <xsd:element minOccurs="0" name="PriceBasisQuantity"
+                                                  nillable="true" type="xsd:decimal">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>The quantity the price is
+                                                  quoted on.</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  java.math.BigDecimal, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                                <xsd:element minOccurs="0"
+                                                  name="PriceBasisQuantityDesc" nillable="true"
+                                                  type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the description that
+                                                  describes the Price basis quantity fields for each
+                                                  item in the requisition line
+                                                  items</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                                <xsd:element minOccurs="0"
+                                                  name="PriceBasisQuantityUOM">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.basic.core.UnitOfMeasure, group name
+                                                  Reference, variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="0" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>The quantity the price is
+                                                  quoted on.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element minOccurs="0" name="UnitOfMeasure">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.basic.core.UnitOfMeasure, group name
+                                                  Reference, variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines a unit of
+                                                  measure.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomInteger" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:integer">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomMoney" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:complexContent>
+                                                  <xsd:extension base="typens:Money_Reference">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:complexContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="1" name="ERPPONumber" nillable="true"
+                                        type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>It defines the unique ID of every
+                                                purchase order for the ERP it belongs
+                                                to.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="ExpectedTax">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.tax.core.TaxInfo, group name FullObject,
+                                                  variant vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="0" name="TaxCode">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.tax.core.TaxCode, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the unique code of
+                                                  the tax type.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="IsComposite" nillable="true"
+                                        type="xsd:boolean">
+                                        <xsd:annotation>
+                                            <xsd:documentation>Flag showing whether this line is
+                                                composite or not.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.Boolean, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="LineType">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.procure.core.ProcureLineType, group name
+                                                  FullObject, variant vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="1" name="Category"
+                                                  nillable="true" type="xsd:integer">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the category of
+                                                  every line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.Integer,
+                                                  group name FullObject, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="1" name="NumberInCollection"
+                                        nillable="true" type="xsd:integer">
+                                        <xsd:annotation>
+                                            <xsd:documentation>It defines the line number of every
+                                                line item.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.Integer, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="Order">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.purchasing.core.PurchaseOrder, group name
+                                                  Reference, variant vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="1" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines an ERP Purchase
+                                                  Order number.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                            <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomDate" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:dateTime">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomInteger" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:integer">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomMoney" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:complexContent>
+                                                  <xsd:extension base="typens:Money_Reference">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:complexContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="1" name="POLineNumber" nillable="true"
+                                        type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>It defines the line number of the
+                                                corresponding line item.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="1" name="POLineReceivingType"
+                                        nillable="true" type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>It defines the purchase order
+                                                receiving type.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="1" name="Quantity" nillable="true"
+                                        type="xsd:decimal">
+                                        <xsd:annotation>
+                                            <xsd:documentation>It defines the quantity for every
+                                                line item.</xsd:documentation>
+                                            <xsd:documentation>Class name java.math.BigDecimal,
+                                                group name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBigDecimal" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:decimal">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomDate" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:dateTime">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomInteger" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:integer">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomMoney" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:complexContent>
+                                                  <xsd:extension base="typens:Money_Reference">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:complexContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="UniqueName" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines the unique ID for every payment that has its
+                        status displayed.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        BudgetIRExportLineDetails, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomBoolean"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:boolean">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomDate"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:dateTime">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomInteger"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:integer">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomMoney"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:complexContent>
+                                    <xsd:extension base="typens:Money_Reference">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:complexContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomString"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="InvoiceReconciliation_BudgetIRExportAcctDetails">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.invoicing.core.InvoiceReconciliation, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="LineItems">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name
+                            ariba.invoicing.core.InvoiceReconciliationLineItem, group name
+                            Reference, variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="item">
+                            <xsd:complexType>
+                                <xsd:all>
+                                    <xsd:element minOccurs="0" name="Accountings">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.common.core.SplitAccountingCollection, group
+                                                  name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="0" name="SplitAccountings">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.common.core.SplitAccounting, group name
+                                                  BudgetIRExportAcctDetails, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="item">
+                                                  <xsd:complexType>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="0"
+                                                  name="AdjustedCostInERPPrecision">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.basic.core.Money, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="0" name="Amount"
+                                                  nillable="true" type="xsd:decimal">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the amount for every
+                                                  line item in ERP Precision.</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  java.math.BigDecimal, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="0" name="Amount">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.basic.core.Money, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1" name="Amount"
+                                                  nillable="true" type="xsd:decimal">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the amount for every
+                                                  line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  java.math.BigDecimal, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="0" name="Asset">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name ariba.core.Asset,
+                                                  group name FullObject, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="0" name="SubNumber"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the asset Subnumber
+                                                  for the asset account assignemnt category for each
+                                                  line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name FullObject, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="1" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the unique value of
+                                                  the Asset account assignment category for each
+                                                  line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name FullObject, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="0" name="CostCenter">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.core.CostCenter, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the unique value of
+                                                  the Cost center account assignment category for
+                                                  each line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="0"
+                                                  name="DerivedCompanyCode">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.core.CompanyCode, group name
+                                                  BudgetIRExportAcctDetails, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="0" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the unique value of
+                                                  the Company Code for the line item. This field
+                                                  will be populated for non-po invoices and
+                                                  AllowLegalEntityCodeAtSplitLevel parameter is set
+                                                  to 'true'</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name BudgetIRExportAcctDetails, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="0" name="GeneralLedger">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.core.GeneralLedger, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the unique value of
+                                                  the General ledger acounting type for each line
+                                                  item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="0" name="InternalOrder">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.core.InternalOrder, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the unique value of
+                                                  internal order account assignment category for
+                                                  that line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="0" name="LineItem">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.approvable.core.LineItem, group name
+                                                  BudgetIRExportAcctDetails, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1"
+                                                  name="NumberInCollection" nillable="true"
+                                                  type="xsd:integer">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Describes the serial number of
+                                                  the line item that has this
+                                                  accounting.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.Integer,
+                                                  group name BudgetIRExportAcctDetails, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="1"
+                                                  name="NumberInCollection" nillable="true"
+                                                  type="xsd:integer">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Describes the serial number of
+                                                  each line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.Integer,
+                                                  group name BudgetIRExportAcctDetails, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="1" name="Quantity"
+                                                  nillable="true" type="xsd:decimal">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the quantity for
+                                                  every line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  java.math.BigDecimal, group name
+                                                  BudgetIRExportAcctDetails, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="1" name="SAPSerialNumber"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the serial number of
+                                                  every line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name BudgetIRExportAcctDetails, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element minOccurs="0" name="WBSElement">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.core.WBSElement, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>It defines the unique code of
+                                                  the WBS Element account assignment category for
+                                                  that line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomDate" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:dateTime">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomInteger" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:integer">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomMoney" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:complexContent>
+                                                  <xsd:extension base="typens:Money_Reference">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:complexContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                    name="CustomBigDecimal" nillable="true">
+                                                    <xsd:complexType>
+                                                        <xsd:simpleContent>
+                                                            <xsd:extension base="xsd:decimal">
+                                                                <xsd:attribute name="name" type="xsd:string"/>
+                                                            </xsd:extension>
+                                                        </xsd:simpleContent>
+                                                    </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomDate" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:dateTime">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomInteger" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:integer">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomMoney" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:complexContent>
+                                                  <xsd:extension base="typens:Money_Reference">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:complexContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="UniqueName" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines the unique ID for every payment that has its
+                        status displayed.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        BudgetIRExportAcctDetails, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomBoolean"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:boolean">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomDate"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:dateTime">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomInteger"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:integer">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomMoney"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:complexContent>
+                                    <xsd:extension base="typens:Money_Reference">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:complexContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomString"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="InvoiceReconciliation_IRRealTimeBudgetResponseImport">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.invoicing.core.InvoiceReconciliation, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="LineItems">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name
+                            ariba.invoicing.core.InvoiceReconciliationLineItem, group name
+                            BudgetIRImportLineDetails, variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="item">
+                            <xsd:complexType>
+                                <xsd:all>
+                                    <xsd:element minOccurs="0" name="Accountings">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.common.core.SplitAccountingCollection, group
+                                                  name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="0" name="SplitAccountings">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.common.core.SplitAccounting, group name
+                                                  LineItemSplitAccountingBudgetResponse, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="item">
+                                                  <xsd:complexType>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="1"
+                                                  name="NumberInCollection" nillable="true"
+                                                  type="xsd:integer">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Line number for split
+                                                  accounting. The line number must be unique for
+                                                  each split per line item.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.Integer,
+                                                  group name LineItemSplitAccountingBudgetResponse,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="1" minOccurs="0"
+                                                  name="custom">
+                                                  <xsd:complexType>
+                                                  <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomDate" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:dateTime">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomInteger" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:integer">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomMoney" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:complexContent>
+                                                  <xsd:extension base="typens:Money_Reference">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:complexContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                  </xsd:element>
+                                                  </xsd:sequence>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="1" name="ERPLineItemNumber"
+                                        nillable="true" type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>Defines the line number of the
+                                                corresponding line item of ERP Invoice
+                                                Reconciliation.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name BudgetIRImportLineDetails, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="1" name="NumberInCollection"
+                                        nillable="true" type="xsd:integer">
+                                        <xsd:annotation>
+                                            <xsd:documentation>Defines the line number of an item in
+                                                the requisition.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.Integer, group
+                                                name BudgetIRImportLineDetails, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                    name="CustomBigDecimal" nillable="true">
+                                                    <xsd:complexType>
+                                                        <xsd:simpleContent>
+                                                            <xsd:extension base="xsd:decimal">
+                                                                <xsd:attribute name="name" type="xsd:string"/>
+                                                            </xsd:extension>
+                                                        </xsd:simpleContent>
+                                                    </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomBoolean" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:boolean">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomDate" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:dateTime">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomInteger" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:integer">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomMoney" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:complexContent>
+                                                  <xsd:extension base="typens:Money_Reference">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:complexContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element maxOccurs="unbounded" minOccurs="0"
+                                                  name="CustomString" nillable="true">
+                                                  <xsd:complexType>
+                                                  <xsd:simpleContent>
+                                                  <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="name" type="xsd:string"/>
+                                                  </xsd:extension>
+                                                  </xsd:simpleContent>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="RealTimeBudgetResponse">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name ariba.procure.core.RealTimeBudgetResponse,
+                            group name RealTimeBudgetResponseImport, variant
+                            vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="1" name="Approvable">
+                            <xsd:complexType>
+                                <xsd:annotation>
+                                    <xsd:documentation>Approvable against which the budget response
+                                        is received.</xsd:documentation>
+                                    <xsd:documentation>Class name ariba.approvable.core.Approvable,
+                                        group name Reference, variant vrealm_40.</xsd:documentation>
+                                </xsd:annotation>
+                                <xsd:all>
+                                    <xsd:element minOccurs="0" name="UniqueName" nillable="true"
+                                        type="xsd:string"/>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="BudgetRefID" nillable="true"
+                            type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>Budget reference ID in the external
+                                    system.</xsd:documentation>
+                                <xsd:documentation>Class name java.lang.String, group name
+                                    RealTimeBudgetResponseImport, variant
+                                    vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="LogMessages">
+                            <xsd:complexType>
+                                <xsd:annotation>
+                                    <xsd:documentation>Log message returned in the budget
+                                        response.</xsd:documentation>
+                                    <xsd:documentation>Class name
+                                        ariba.procure.core.RealTimeBudgetResponseLogMsg, group name
+                                        LogMessagesData, variant vrealm_40.</xsd:documentation>
+                                </xsd:annotation>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="item">
+                                        <xsd:complexType>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="1" name="Message"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Text in the real time budget
+                                                  check response log message.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name LogMessagesData, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                                <xsd:element minOccurs="1" name="Type"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Type of real time budget check
+                                                  response log message.</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name LogMessagesData, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element minOccurs="1" name="UniqueName" nillable="true"
+                            type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>Unique ID for each budget
+                                    response.</xsd:documentation>
+                                <xsd:documentation>Class name java.lang.String, group name
+                                    RealTimeBudgetResponseImport, variant
+                                    vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="UniqueName" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the unique ID of every requisition for which it shows
+                        a status. This value must match with a REQ_ID</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        IRRealTimeBudgetResponseImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="custom">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomBoolean"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:boolean">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomDate"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:dateTime">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomInteger"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:integer">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomMoney"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:complexContent>
+                                    <xsd:extension base="typens:Money_Reference">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:complexContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomString"
+                            nillable="true">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="name" type="xsd:string"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="AccountingError_SplitAccountingErrorImport">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.common.core.AccountingError, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="1" name="Date" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the timestamp of an error.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.util.core.Date, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorClient" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the client that corresponds to the
+                        error.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorMessage" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It provides a description of the error.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.base.core.MultiLingualString, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorNumber" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the error number for every error that
+                        occurs.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPField" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the field name that corresponds to the error that has
+                        occured in SAP.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPId" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the error ID that is defined in
+                        SAP.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPModule" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the SAP module of the error, which is the Dynapro
+                        name.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPScreen" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the Dynapro number of the error on the
+                        screen.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSystem" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the System ID of an error.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="Id" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Unique ID of the requisition.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="LineNumber" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the line number of the corresponding line
+                        item.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SplitAccNumber" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the split line number of the corresponding line
+                        item.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="Type" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines the SAP Message type.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        SplitAccountingErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="Money_Reference">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.basic.core.Money, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="Amount" nillable="true" type="xsd:decimal">
+                <xsd:annotation>
+                    <xsd:documentation>Monetary amount.</xsd:documentation>
+                    <xsd:documentation>Class name java.math.BigDecimal, group name Reference,
+                        variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="AmountInReportingCurrency" nillable="true"
+                type="xsd:decimal">
+                <xsd:annotation>
+                    <xsd:documentation>Amount converted to the reporting currency of the
+                        system.</xsd:documentation>
+                    <xsd:documentation>Class name java.math.BigDecimal, group name Reference,
+                        variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ApproxAmountInBaseCurrency" nillable="true"
+                type="xsd:decimal">
+                <xsd:annotation>
+                    <xsd:documentation>Amount converted into the base currency of the
+                        system.</xsd:documentation>
+                    <xsd:documentation>Class name java.math.BigDecimal, group name Reference,
+                        variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ConversionDate" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>Conversion date when the amounts were computed in the
+                        ApproxAmountInBaseCurrency and the AmountInReportingCurrency
+                        fields.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.util.core.Date, group name Reference,
+                        variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="Currency">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Transaction currency of the amount.</xsd:documentation>
+                        <xsd:documentation>Class name ariba.basic.core.Currency, group name
+                            Reference, variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="UniqueName" nillable="true"
+                            type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>Unique three-letter identifier for the currency.
+                                    For example, USD, DEM, GBP.</xsd:documentation>
+                                <xsd:documentation>Class name java.lang.String, group name
+                                    Reference, variant vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+</xsd:schema>

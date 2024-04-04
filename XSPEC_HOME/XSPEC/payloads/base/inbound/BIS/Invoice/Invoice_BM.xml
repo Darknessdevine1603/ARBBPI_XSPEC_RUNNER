@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>																
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.2.052/InvoiceDetail.dtd">																
+<cXML payloadID="1638810085580-8298795198407867589@10.162.97.163" timestamp="2021-12-06T09:01:25-08:00">																
+	<Header>															
+		<From>														
+			<Credential domain="NetworkID">													
+				<Identity>ANXXXXXXXXXXX-T</Identity>												
+			</Credential>													
+			<Credential domain="SystemID">													
+				<Identity>System ID</Identity>												
+			</Credential>													
+		</From>														
+		<To>														
+			<Credential domain="NetworkID">													
+				<Identity>ANXXXXXXXXXXX-T</Identity>												
+			</Credential>													
+			<Credential domain="SystemID">													
+				<Identity>System ID</Identity>												
+			</Credential>													
+		</To>														
+		<Sender>														
+			<Credential domain="NetworkID">													
+				<Identity>ANXXXXXXXXXXX-T</Identity>												
+			</Credential>													
+			<UserAgent>Ariba SN</UserAgent>													
+		</Sender>														
+	</Header>															
+	<Request deploymentMode="test">															
+		<InvoiceDetailRequest>														
+			<InvoiceDetailRequestHeader invoiceDate="2021-12-06T18:01:25+01:00" invoiceID="Invoice_ID" operation="new" purpose="standard">													
+				<InvoiceDetailHeaderIndicator/>												
+				<InvoiceDetailLineIndicator isTaxInLine="yes" isSpecialHandlingInLine="yes" isDiscountInLine="yes"/>												
+				<InvoicePartner>												
+					<Contact role="from" addressID="Supplier_Address_ID" addressIDDomain="EANID">											
+						<Name xml:lang="en-GB">Supplier_Name</Name>										
+						<PostalAddress>										
+							<Street>Street</Street>									
+							<Street>Street1</Street>									
+							<Street>Street2</Street>									
+							<City>City</City>									
+							<State isoStateCode="DE-BE">State</State>									
+							<PostalCode>12345</PostalCode>									
+							<Country isoCountryCode="DE">Country</Country>									
+						</PostalAddress>										
+						<Email name="supplierCorporate">Email@Email.com</Email>										
+						<Phone name="supplierCorporate">										
+							<TelephoneNumber>									
+								<CountryCode isoCountryCode="DE">49</CountryCode>								
+								<AreaOrCityCode>15</AreaOrCityCode>								
+								<Number>1234567</Number>								
+							</TelephoneNumber>									
+						</Phone>										
+					</Contact>											
+					<IdReference domain="DUNS" identifier="DUNS-1234567678"/>											
+					<IdReference domain="vatID" identifier="DE123456780"/>											
+					<IdReference domain="creditorRefID" identifier="CreditorRef_ID"/>											
+					<IdReference domain="supplierTaxID" identifier="SupplierTaxID"/>											
+					<IdReference domain="contactPerson" identifier="Contact_Person"/>											
+				</InvoicePartner>												
+				<InvoicePartner>												
+					<Contact role="soldTo" addressID="soldTo_Address_ID" addressIDDomain="EANID">											
+						<Name xml:lang="en-GB">Buyer_Name</Name>										
+						<PostalAddress>										
+							<Street>Street B</Street>									
+							<Street>Street B1</Street>									
+							<Street>Street B2</Street>									
+							<City>City</City>									
+							<State isoStateCode="DE-BE">State2</State>									
+							<PostalCode>80539</PostalCode>									
+							<Country isoCountryCode="DE">Country2</Country>									
+						</PostalAddress>										
+						<Email>Email@Email.com</Email>										
+						<Phone>										
+							<TelephoneNumber>									
+								<CountryCode isoCountryCode="DE">49</CountryCode>								
+								<AreaOrCityCode>15</AreaOrCityCode>								
+								<Number>1234567</Number>								
+							</TelephoneNumber>									
+						</Phone>										
+					</Contact>											
+					<IdReference domain="vatID" identifier="DE123456789"/>											
+					<IdReference domain="contactPerson" identifier="Contact_Person"/>											
+				</InvoicePartner>												
+				<InvoicePartner>												
+					<Contact role="payee">											
+						<Name xml:lang="en-GB">Payee_Name</Name>										
+					</Contact>											
+					<IdReference domain="companyRegistrationNumber" identifier="Payee_ID"/>											
+					<IdReference domain="0160" identifier="Payee_ID_Reference"/>											
+				</InvoicePartner>												
+				<InvoicePartner>												
+					<Contact role="taxRepresentative">											
+						<Name xml:lang="en-GB">taxRepresentative_Name</Name>										
+						<PostalAddress>										
+							<Street>Street TR</Street>									
+							<Street>Street TR1</Street>									
+							<Street>Street TR2</Street>									
+							<City>City</City>									
+							<State isoStateCode="DE-BE">State</State>									
+							<PostalCode>80539</PostalCode>									
+							<Country isoCountryCode="DE">Country</Country>									
+						</PostalAddress>										
+					</Contact>											
+					<IdReference domain="vatID" identifier="VAT_ID"/>											
+				</InvoicePartner>												
+				<InvoicePartner>												
+					<Contact role="wireReceivingBank">											
+						<Name xml:lang="en-GB">Bank_Name</Name>										
+					</Contact>											
+					<IdReference domain="accountName" identifier="AccountName"/>											
+					<IdReference domain="bankRoutingID" identifier="2323"/>											
+					<IdReference domain="accountID" identifier="DE75512108001245126199"/>											
+				</InvoicePartner>												
+				<InvoiceIDInfo invoiceID="Invoice_ID" invoiceDate="2021-12-05T18:01:25+01:00"/>												
+				<ShipNoticeIDInfo shipNoticeID="shipNoticeID"/>												
+				<PaymentTerm payInNumberOfDays="30">												
+					<Discount>											
+						<DiscountPercent percent="0"/>										
+					</Discount>											
+				</PaymentTerm>												
+				<PaymentTerm payInNumberOfDays="14">												
+					<Discount>											
+						<DiscountPercent percent="2.251"/>										
+					</Discount>											
+				</PaymentTerm>												
+				<PaymentTerm payInNumberOfDays="28">												
+					<Discount>											
+						<DiscountPercent percent="1.00"/>										
+					</Discount>											
+				</PaymentTerm>												
+				<PaymentTerm payInNumberOfDays="45">												
+					<Discount>											
+						<DiscountPercent percent="-1.000"/>										
+					</Discount>											
+				</PaymentTerm>												
+				<Period startDate="2021-12-06T18:01:25+01:00" endDate="2021-12-31T18:01:25+01:00"/>												
+				<Comments> Comments</Comments>												
+				<Extrinsic name="buyerVatID">DE123456789</Extrinsic>												
+				<Extrinsic name="supplierVatID">DE123456780</Extrinsic>												
+				<Extrinsic name="paymentMethod">wire</Extrinsic>												
+				<Extrinsic name="paymentReference">PAYREF00001</Extrinsic>												
+				<Extrinsic name="buyerLeitwegID">000000000000-00000-00</Extrinsic>												
+				<Extrinsic name="supplierCommercialIdentifier">Commercial_Identifier</Extrinsic>												
+				<Extrinsic name="LegalStatus">Legal_status</Extrinsic>												
+				<Extrinsic name="netTermInformation">30</Extrinsic>												
+				<Extrinsic name="discountInformation">5</Extrinsic>												
+			</InvoiceDetailRequestHeader>													
+			<InvoiceDetailOrder>													
+				<InvoiceDetailOrderInfo>												
+					<OrderReference orderID="OrderID">											
+						<DocumentReference payloadID=""/>										
+					</OrderReference>											
+					<MasterAgreementReference agreementID="AgreementID">											
+						<DocumentReference payloadID=""/>										
+					</MasterAgreementReference>											
+					<SupplierOrderInfo orderID="SupplierOrderID"/>											
+				</InvoiceDetailOrderInfo>												
+				<InvoiceDetailReceiptInfo>												
+					<ReceiptReference receiptID="ReceiptID">											
+						<DocumentReference payloadID=""/>										
+					</ReceiptReference>											
+				</InvoiceDetailReceiptInfo>												
+				<InvoiceDetailServiceItem invoiceLineNumber="1" quantity="10">												
+					<InvoiceDetailServiceItemReference lineNumber="10">											
+						<Classification domain="UNSPSC">UNSPSC ID</Classification>										
+						<ItemID>										
+							<SupplierPartID>Supplier Part ID</SupplierPartID>									
+							<BuyerPartID>Buyer Part ID</BuyerPartID>									
+						</ItemID>										
+						<Description xml:lang="en-GB">Description</Description>										
+					</InvoiceDetailServiceItemReference>											
+					<ServiceEntryItemReference serviceLineNumber="123" serviceEntryID="ABC123" serviceEntryDate="2021-12-15">											
+						<DocumentReference payloadID=""/>										
+					</ServiceEntryItemReference>											
+					<SubtotalAmount>											
+						<Money currency="EUR">4600.00</Money>										
+					</SubtotalAmount>											
+					<Period startDate="2021-12-06T18:01:25+01:00" endDate="2021-12-16T18:01:25+01:00"/>											
+					<UnitOfMeasure>E49</UnitOfMeasure>											
+					<UnitPrice>											
+						<Money currency="EUR">460.00</Money>										
+					</UnitPrice>											
+					<PriceBasisQuantity quantity="1" conversionFactor="">											
+						<UnitOfMeasure>E49</UnitOfMeasure>										
+					</PriceBasisQuantity>											
+					<Tax>											
+						<Money currency="EUR">874.00</Money>										
+						<Description xml:lang="en-GB"/>										
+						<TaxDetail category="VAT" percentageRate="19" taxPointDate="2021-12-06T00:00:00+01:00">										
+							<TaxableAmount>									
+								<Money currency="EUR">4600.00</Money>								
+							</TaxableAmount>									
+							<TaxAmount>									
+								<Money currency="EUR">874.00</Money>								
+							</TaxAmount>									
+						</TaxDetail>										
+					</Tax>											
+					<GrossAmount>											
+						<Money currency="EUR">5474.00</Money>										
+					</GrossAmount>											
+					<InvoiceDetailDiscount percentageRate="10">											
+						<Money currency="EUR">100</Money>										
+					</InvoiceDetailDiscount>											
+					<InvoiceItemModifications>											
+						<Modification>										
+							<OriginalPrice>									
+								<Money currency="EUR">460</Money>								
+							</OriginalPrice>									
+							<AdditionalDeduction>									
+								<DeductionAmount>								
+									<Money currency="EUR">100</Money>							
+								</DeductionAmount>								
+							<!--<DeductionPercent percent="10"/>--></AdditionalDeduction>									
+							<ModificationDetail name="Allowance"/>									
+						</Modification>										
+						<Modification>										
+							<OriginalPrice>									
+								<Money currency="EUR">460</Money>								
+							</OriginalPrice>									
+							<AdditionalCost>									
+								<Money currency="EUR">100</Money>								
+							</AdditionalCost>									
+							<ModificationDetail name="PackagingSurcharge"/>									
+						</Modification>										
+					</InvoiceItemModifications>											
+					<TotalAmountWithoutTax>											
+						<Money currency="EUR">4600.00</Money>										
+					</TotalAmountWithoutTax>											
+					<NetAmount>											
+						<Money currency="EUR">5474.00</Money>										
+					</NetAmount>											
+					<Comments>Comments</Comments>											
+				</InvoiceDetailServiceItem>												
+			</InvoiceDetailOrder>													
+			<InvoiceDetailSummary>													
+				<SubtotalAmount>												
+					<Money currency="EUR">4600.00</Money>											
+				</SubtotalAmount>												
+				<Tax>												
+					<Money alternateAmount="989.84" alternateCurrency="USD" currency="EUR">874.00</Money>											
+					<Description xml:lang="en-GB"/>											
+					<TaxDetail category="vat" percentageRate="19" taxPointDate="2021-12-06T00:00:00+01:00">											
+						<TaxableAmount>										
+							<Money currency="EUR">4600.00</Money>									
+						</TaxableAmount>										
+						<TaxAmount>										
+							<Money currency="EUR">874.00</Money>									
+						</TaxAmount>										
+					</TaxDetail>											
+				</Tax>												
+				<!-- Below Allowance charges are on standby, solution is not ready yet												
+				<SpecialHandlingAmount>												
+					<Money currency="EUR">50</Money>											
+				</SpecialHandlingAmount>												
+				<ShippingAmount>												
+					<Money currency="EUR">25</Money>											
+				</ShippingAmount>												
+				<InvoiceDetailDiscount percentageRate="1">												
+					<Money currency="EUR">50</Money>											
+				</InvoiceDetailDiscount>												
+				-->												
+				<GrossAmount>												
+					<Money currency="EUR">5474.00</Money>											
+				</GrossAmount>												
+				<InvoiceHeaderModifications>												
+					<Modification>											
+						<OriginalPrice>										
+							<Money currency="EUR">4600.00</Money>									
+						</OriginalPrice>										
+						<AdditionalDeduction>										
+							<DeductionAmount>									
+								<Money currency="EUR">100</Money>								
+							</DeductionAmount>									
+						</AdditionalDeduction>										
+						<Tax>										
+							<Money currency="EUR">100</Money>									
+							<Description xml:lang="en-GB"/>									
+							<TaxDetail category="Tax" percentageRate="1">									
+								<TaxAmount>								
+									<Money currency="EUR">1</Money>							
+								</TaxAmount>								
+							</TaxDetail>									
+						</Tax>										
+						<ModificationDetail name="Allowance"> </ModificationDetail>										
+					</Modification>											
+					<Modification>											
+						<OriginalPrice>										
+							<Money currency="EUR">4600.00</Money>									
+						</OriginalPrice>										
+						<AdditionalCost>										
+							<Money currency="EUR">100</Money>									
+						</AdditionalCost>										
+						<Tax>										
+							<Money currency="EUR">100</Money>									
+							<Description xml:lang="en-GB"/>									
+							<TaxDetail category="Tax" percentageRate="1">									
+								<TaxAmount>								
+									<Money currency="EUR">1</Money>							
+								</TaxAmount>								
+							</TaxDetail>									
+						</Tax>										
+						<ModificationDetail name="PackagingSurcharge"> </ModificationDetail>										
+					</Modification>											
+					<Modification>											
+						<OriginalPrice>										
+							<Money currency="EUR">4600.00</Money>									
+						</OriginalPrice>										
+						<AdditionalCost>										
+							<Money currency="EUR">0.00</Money>									
+						</AdditionalCost>										
+						<Tax>										
+							<Money currency="EUR">100</Money>									
+							<Description xml:lang="en-GB"/>									
+							<TaxDetail category="Tax" percentageRate="1">									
+								<TaxAmount>								
+									<Money currency="EUR">1</Money>							
+								</TaxAmount>								
+							</TaxDetail>									
+						</Tax>										
+						<ModificationDetail name="RoundingAmount"> </ModificationDetail>										
+					</Modification>											
+				</InvoiceHeaderModifications>												
+				<TotalCharges>												
+					<Money currency="EUR">100</Money>											
+				</TotalCharges>												
+				<TotalAllowances>												
+					<Money currency="EUR">100</Money>											
+				</TotalAllowances>												
+				<TotalAmountWithoutTax>												
+					<Money currency="EUR">4600.00</Money>											
+				</TotalAmountWithoutTax>												
+				<NetAmount>												
+					<Money currency="EUR">5474.00</Money>											
+				</NetAmount>												
+				<DepositAmount>												
+					<Money currency="EUR">100</Money>											
+				</DepositAmount>												
+				<DueAmount>												
+					<Money currency="EUR">5374.00</Money>											
+				</DueAmount>												
+			</InvoiceDetailSummary>													
+		</InvoiceDetailRequest>														
+	</Request>															
+</cXML>																

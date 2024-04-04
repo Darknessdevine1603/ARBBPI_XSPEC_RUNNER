@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_cXML_0000_OrderRequest_UN-EDIFACT_D96A_ORDERS.xsl">
+    <x:scenario label="Order Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName" select="'TEST'"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_AM.dat"
+            select="element()" label="Order Request"/>
+    </x:scenario>
+    <x:scenario label="Order Request with attachment">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT1_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT1_AM.dat"
+            select="element()" label="Order Request with attachment"/>
+    </x:scenario>
+    <x:scenario label="Order Request with multiline description">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT2_AM.dat"
+            select="element()" label="Order Request with multiline description"/>
+    </x:scenario>
+    <x:scenario label="Order Request with Tolerances">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT3_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT3_AM.dat"
+            select="element()" label="Order Request with Tolerances"/>
+    </x:scenario>
+    <x:scenario label="Order Request with multiple lineitems and extrinsic values">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT4_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT4_AM.dat"
+            select="element()" label="Order Request with multiple lineitems and extrinsic values"/>
+    </x:scenario>
+    <x:scenario label="Order Request with multiple line Comments">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT5_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT5_AM.dat"
+            select="element()" label="Order Request with multiple line Comments"/>
+    </x:scenario>
+    
+    <x:scenario label="Order Request - 6">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT6_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/OrderRequest_RIT6_AM.dat"
+            select="element()" label="Order Request - 6"/>
+    </x:scenario>
+</x:description>

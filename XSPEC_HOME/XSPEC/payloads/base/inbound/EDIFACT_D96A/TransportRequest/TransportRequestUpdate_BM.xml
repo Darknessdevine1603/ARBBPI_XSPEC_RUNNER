@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cXML payloadID="RIT-EDIFACT.IFTMIN" timestamp="2015-10-30T16:42:35-05:00">
+   <Header>
+      <From>
+         <Credential domain="NetworkID">
+            <Identity>AN02004579339-T</Identity>
+         </Credential>
+      </From>
+      <To>
+         <Credential domain="NetworkId">
+            <Identity>AN02004579340-T</Identity>
+         </Credential>
+      </To>
+      <Sender>
+         <Credential domain="NetworkId">
+            <Identity>AN02004579339-T</Identity>
+
+         </Credential>
+         <UserAgent>Ariba SN Buyer Adapter</UserAgent>
+      </Sender>
+   </Header>
+   <Request>
+      <TransportRequest>
+         <TransportRequestHeader operation="update" requestDate="2015-10-30T16:42:35-05:00" requestID="RIT-EDI.IFTMIN.01_QA">
+            <TransportPartner role="carrier">
+               <Contact role="carrierCorporate">
+                  <Name xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">My Logistics Partner</Name>
+                  <PostalAddress>
+                     <DeliverTo>12334</DeliverTo>
+                     <Street>1234 Logistic St.</Street>
+                     <City>Memphis</City>
+                     <Country isoCountryCode="US"/>
+                  </PostalAddress>
+               </Contact>
+            </TransportPartner>
+            <Comments type="T01" xml:lang="en" xmlns:xml="http://www.w3.org/XML/1998/namespace">Any comment</Comments>
+            <Extrinsic name="transportExtrinsic">transport Extrinsic</Extrinsic>
+         </TransportRequestHeader>
+         <Consignment consignmentID="1">
+            <ConsignmentHeader numberOfPackages="2">
+               <TransportPartner role="shipFrom">
+                  <Contact role="from">
+                     <Name xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">Originating Company</Name>
+                     <PostalAddress>
+                        <DeliverTo>123w34</DeliverTo>
+                        <Street>123 Demo Street</Street>
+                        <City>Demo City</City>
+                        <PostalCode>12346</PostalCode>
+                        <Country isoCountryCode="US"/>
+                        <Extrinsic name="extname">address123</Extrinsic>
+                     </PostalAddress>
+                     <Phone name="work">
+                        <TelephoneNumber>
+                           <CountryCode isoCountryCode="BE">32</CountryCode>
+                           <AreaOrCityCode>32</AreaOrCityCode>
+                           <Number>32020616</Number>
+                        </TelephoneNumber>
+                     </Phone>
+                     <Fax name="work">
+                        <TelephoneNumber>
+                           <CountryCode isoCountryCode="BE">32</CountryCode>
+                           <AreaOrCityCode>32</AreaOrCityCode>
+                           <Number>32020645</Number>
+                        </TelephoneNumber>
+                     </Fax>
+                     <IdReference domain="TaxID" identifier="US23408998"/>
+                  </Contact>
+               </TransportPartner>
+               <TransportPartner role="shipTo">
+                  <Contact role="to">
+                     <Name xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">Destination Company</Name>
+                     <PostalAddress>
+                        <Street>123 Second Demo Street8</Street>
+                        <City>Second Demo City</City>
+                        <Country isoCountryCode="US"/>
+                     </PostalAddress>
+                     <IdReference domain="TaxID" identifier="SU24902039"/>
+                  </Contact>
+               </TransportPartner>
+               <Dimension quantity="4" type="weight">
+                  <UnitOfMeasure>GRM</UnitOfMeasure>
+               </Dimension>
+               <Dimension quantity="4" type="grossWeight">
+                  <UnitOfMeasure>GRM</UnitOfMeasure>
+               </Dimension>
+               <Dimension quantity="4" type="volume">
+                  <UnitOfMeasure>L</UnitOfMeasure>
+               </Dimension>
+               <CommercialTerms incoterms="fob"/>
+               <NetAmount>
+                  <Money currency="USD">1235</Money>
+               </NetAmount>
+               <!--ReferenceDocumentInfo></ReferenceDocumentInfo-->
+               <ShipmentIdentifier domain="fedex" trackingNumberDate="" trackingURL="http://URl.com">745896</ShipmentIdentifier>
+               <TransportRequirements>
+                  <Hazard>
+                     <Description xml:lang="en" xmlns:xml="http://www.w3.org/XML/1998/namespace">urgent1</Description>
+                     <Classification code="dangerous" domain="clas01">654321</Classification>
+                  </Hazard>
+                  <TransportTemperature maximum="15" minimum="5" temperature="10">
+                     <UnitOfMeasure>CEL</UnitOfMeasure>
+                  </TransportTemperature>
+                  <Classification code="dangerous" domain="clas02">654321</Classification>
+               </TransportRequirements>
+               <Origin>
+                  <Address addressID="addressID" addressIDDomain="addressIDDomain">
+                     <Name xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">Originating Company</Name>
+                     <PostalAddress>
+                        <DeliverTo>12334</DeliverTo>
+                        <Street>123 Demo Street</Street>
+                        <City>Demo City</City>
+                        <State>CA</State>
+                        <Country isoCountryCode="US"/>
+                     </PostalAddress>
+                  </Address>
+                  <DateInfo date="2015-11-03T17:00:00-05:00" type="expectedShipmentDate" expectedDeliveryDate="2015-11-03T17:00:00-05:00" requestedDeliveryDate="2015-11-03T17:00:00-05:00"/>
+               </Origin>
+               <Destination>
+                  <Address>
+                     <Name xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">Destination Company</Name>
+                     <PostalAddress>
+                        <Street>123 Second Demo Street7</Street>
+                        <City>Second Demo City</City>
+                        <State>FL</State>
+                        <Country isoCountryCode="US"/>
+                     </PostalAddress>
+                  </Address>
+                  <DateInfo date="2015-11-10T17:00:00-05:00" type="requestedDeliveryDate"/>
+               </Destination>
+               <Route means="truck" method="motor"/>
+               <TransportCondition>
+                  <Priority level="1">
+                     <Description xml:lang="en" xmlns:xml="http://www.w3.org/XML/1998/namespace">urgent</Description>
+                  </Priority>
+               </TransportCondition>
+               <Comments type="line1" xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">First line of comments</Comments>
+               <Comments type="line2" xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">Second line of comments</Comments>
+               <Extrinsic name="name">extrinsicname</Extrinsic>
+            </ConsignmentHeader>
+            <ConsignmentLineDetail lineNumber="10" numberOfPackages="2">
+               <!-- This defines a root package, which is big box that will contain
+                            all the other packages -->
+               <TransportPackage>
+                  <Packaging>
+                     <PackagingCode xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">Box</PackagingCode>
+                     <Dimension quantity="5" type="volume">
+                        <UnitOfMeasure>NB</UnitOfMeasure>
+                     </Dimension>
+                     <Description xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">Standard Big Box</Description>
+                     <PackagingLevelCode>inner</PackagingLevelCode>
+                     <ShippingContainerSerialCode>0</ShippingContainerSerialCode>
+                  </Packaging>
+               </TransportPackage>
+               <!-- First line consists of:
+
+                        100 iPhone 6, packaged as follows:
+
+                        5 boxes, each of which contains 20 phones.
+
+                        This line is packed inside the big box at consignment level.
+                    -->
+               <TransportPackage>
+                  <Packaging>
+                     <PackagingCode xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">regularBox</PackagingCode>
+                     <Description xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">Standard box</Description>
+                     <PackagingLevelCode>inner</PackagingLevelCode>
+                     <ShippingContainerSerialCode>1</ShippingContainerSerialCode>
+                     <!-- Reference to root package (code 0) -->
+                     <ShippingContainerSerialCodeReference>0</ShippingContainerSerialCodeReference>
+                  </Packaging>
+                  <ItemInfo quantity="100">
+                     <ItemID>
+                        <SupplierPartID>SupplierPartID</SupplierPartID>
+                        <SupplierPartAuxiliaryID>SupplierPartAuxiliaryID</SupplierPartAuxiliaryID>
+                        <BuyerPartID>BuyerPartID</BuyerPartID>
+                     </ItemID>
+                     <Description xml:lang="en_US" xmlns:xml="http://www.w3.org/XML/1998/namespace">iPhone 6, 64GB, Space Black</Description>
+                     <Classification domain="UNSPSC">0001</Classification>
+                     <SupplierBatchID>SupplierBatchID</SupplierBatchID>
+                     <ReferenceDocumentInfo lineNumber="1">
+                        <DocumentInfo documentID="PO100" documentType="order"/>
+                     </ReferenceDocumentInfo>
+                     <ReferenceDocumentInfo lineNumber="1">
+                        <DocumentInfo documentID="INV-001" documentType="invoice"/>
+                     </ReferenceDocumentInfo>
+                     <!--<ReferenceDocumentInfo lineNumber="1">
+   <DocumentInfo documentID="asn102222" documentType="shipNotice"/>
+</ReferenceDocumentInfo>-->
+                     <UnitOfMeasure>CT</UnitOfMeasure>
+                  </ItemInfo>
+               </TransportPackage>
+               <TransportRequirements>
+                  <TransportTemperature maximum="15" minimum="5" temperature="10">
+                     <UnitOfMeasure>CEL</UnitOfMeasure>
+                  </TransportTemperature>
+               </TransportRequirements>
+               <TransportEquipment equipmentID="456987" providedBy="sender" status="full" type="tankContainer30ft">
+                  <VehicleRegistration>
+                     <RegistrationNumber>CR8-989</RegistrationNumber>
+                     <Country isoCountryCode="USA">USA</Country>
+                  </VehicleRegistration>
+                  <!--Extrinsic></Extrinsic-->
+               </TransportEquipment>
+               <TransportPlacement equipmentID="456987" numberOfPackages="3"/>
+               <ReferenceDocumentInfo lineNumber="1">
+                  <DocumentInfo documentID="INV-001" documentType="invoice"/>
+               </ReferenceDocumentInfo>
+               <Comments>comments1</Comments>
+            </ConsignmentLineDetail>
+            <TransportEquipment equipmentID="456987" providedBy="sender" status="full" type="trailer">
+               <VehicleRegistration>
+                  <RegistrationNumber>CR8-989</RegistrationNumber>
+                  <Country isoCountryCode="USA">USA</Country>
+               </VehicleRegistration>
+               <!--Extrinsic></Extrinsic-->
+            </TransportEquipment>
+         </Consignment>
+         <TransportSummary numberOfPackages="1">
+            <FreightChargesAmount>
+               <Money currency="USD">6</Money>
+            </FreightChargesAmount>
+            <SubtotalAmount>
+               <Money currency="USD">778</Money>
+            </SubtotalAmount>
+         </TransportSummary>
+      </TransportRequest>
+   </Request>
+</cXML>

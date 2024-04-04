@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_CentralSupplierQuotation_S4HANA_0000_centralsupplierquotations4requ.xsl">
+    <x:scenario label="CentralSupplierQuotation">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/CentralSupplierQuotation/CentralSupplierQuotation_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/CentralSupplierQuotation/CentralSupplierQuotation_AM.xml" 
+            select="element()" label="CentralSupplierQuotation"/>
+    </x:scenario> 
+    <x:scenario label="CentralSupplierQuotation with TextCollection">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/CentralSupplierQuotation/CentralSupplierQuotation_with_TC_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/CentralSupplierQuotation/CentralSupplierQuotation_with_TC_AM.xml" 
+            select="element()" label="CentralSupplierQuotation"/>
+    </x:scenario>
+    <x:scenario label="CentralSupplierQuotation with Header TextCollection">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/CentralSupplierQuotation/CentralSupplierQuotation_with_Text_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/CentralSupplierQuotation/CentralSupplierQuotation_with_Text_AM.xml" 
+            select="element()" label="CentralSupplierQuotation"/>
+    </x:scenario>
+</x:description>

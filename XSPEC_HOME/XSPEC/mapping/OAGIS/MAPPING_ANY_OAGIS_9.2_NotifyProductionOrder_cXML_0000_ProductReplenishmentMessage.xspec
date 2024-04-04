@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_OAGIS_9.2_NotifyProductionOrder_cXML_0000_ProductReplenishmentMessage.xsl">
+    <x:scenario label="Notify Production Order'/">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02003013907-T'"/>
+        <x:param name="anBuyerANID" select="'AN02003013906-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderDefaultTimeZone"/>        
+        <x:context href="../../payloads/base/outbound/OAGIS/ProductReplenishmentMessage/NotifyProductionOrder_ProductReplenishentMessage_BM.xml"/>
+        <x:expect  href="../../payloads/target/outbound/OAGIS/ProductReplenishmentMessage/NotifyProductionOrder_ProductionReplenishment_AM.xml"
+                   select="*" label="Notify Production Order"/>
+    </x:scenario>
+    <x:scenario label="Notify Production Order'/">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02003013907-T'"/>
+        <x:param name="anBuyerANID" select="'AN02003013906-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderDefaultTimeZone"/>        
+        <x:context href="../../payloads/base/outbound/OAGIS/ProductReplenishmentMessage/NotifyProductionOrder_ProductReplenishentMessage_BM1.xml"/>
+        <x:expect  href="../../payloads/target/outbound/OAGIS/ProductReplenishmentMessage/NotifyProductionOrder_ProductionReplenishment_AM1.xml"
+            select="*" label="Notify Production Order"/>
+    </x:scenario>    
+</x:description>

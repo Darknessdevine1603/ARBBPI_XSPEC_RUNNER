@@ -1,0 +1,3018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xsl"
+        date="2023-04-27T15:29:18.923808+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>ERP CC Invoice Request 1</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/Invoice/Invoice.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="2023-04-27T15:29:19928+05:30"
+                        timestamp="2023-04-27T15:29:19928+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                              </Contact>
+                           </Correspondent>
+                        </From>
+                        <To>
+                           <Credential domain="SystemID">
+                              <Identity>QKDCLNT521</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <InvoiceDetailRequest>
+                           <InvoiceDetailRequestHeader invoiceID="REF_109"
+                                                       purpose="standard"
+                                                       operation="new"
+                                                       invoiceDate="2021-07-13T04:48:26+05:30"
+                                                       invoiceOrigin="supplier">
+                              <InvoiceDetailHeaderIndicator/>
+                              <InvoiceDetailLineIndicator/>
+                              <InvoicePartner>
+                                 <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <Street>234</Street>
+                                       <City>Berlin</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="default">ariba@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>1111111111555</Number>
+                                          <Extension>32</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>455555</Number>
+                                          <Extension>5555</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </InvoicePartner>
+                              <PaymentTerm payInNumberOfDays="5">
+                                 <Discount>
+                                    <DiscountPercent percent="5.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentTerm payInNumberOfDays="10">
+                                 <Discount>
+                                    <DiscountPercent percent="3.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentTerm payInNumberOfDays="30"/>
+                              <PaymentInformation paymentNetDueDate="2021-08-12T12:00:00+05:30"/>
+                              <Extrinsic name="originalInvoiceNo">REF_109</Extrinsic>
+                              <Extrinsic name="fiscalYear">2021</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1900435423</Extrinsic>
+                              <Extrinsic name="CompanyCode">0001</Extrinsic>
+                              <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                              <Extrinsic name="buyerVatID">DE456789012</Extrinsic>
+                           </InvoiceDetailRequestHeader>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <SupplierOrderInfo orderID="1900435423"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="1">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="sales" percentageRate="0">
+                                       <TaxableAmount>
+                                          <Money currency="">100.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                    <TaxDetail category="Tax update" percentageRate="0">
+                                       <TaxableAmount>
+                                          <Money currency="">100.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailSummary>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">100.00</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">0.00</Money>
+                                 <Description xml:lang="EN">TotalTax</Description>
+                                 <TaxDetail category="sales" percentageRate="0">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                                 <TaxDetail category="Tax update" percentageRate="0">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">100.00</Money>
+                              </GrossAmount>
+                              <InvoiceDetailDiscount>
+                                 <Money currency="EUR">0.00</Money>
+                              </InvoiceDetailDiscount>
+                              <NetAmount>
+                                 <Money currency="EUR">100.00</Money>
+                              </NetAmount>
+                           </InvoiceDetailSummary>
+                        </InvoiceDetailRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="false">
+         <label>ERP CC Invoice Request 1</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                 </Contact>
+                              </Correspondent>
+                           </From>
+                           <To>
+                              <Credential domain="SystemID">
+                                 <Identity>QKDCLNT521</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <InvoiceDetailRequest>
+                              <InvoiceDetailRequestHeader invoiceID="REF_109"
+                                                          purpose="standard"
+                                                          operation="new"
+                                                          invoiceDate="2021-07-13T04:48:26+05:30"
+                                                          invoiceOrigin="supplier">
+                                 <InvoiceDetailHeaderIndicator/>
+                                 <InvoiceDetailLineIndicator/>
+                                 <InvoicePartner>
+                                    <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                       <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                       <PostalAddress>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>10243</PostalCode>
+                                          <Country isoCountryCode="DE"/>
+                                       </PostalAddress>
+                                       <Email name="default">ariba@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>1111111111555</Number>
+                                             <Extension>32</Extension>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>455555</Number>
+                                             <Extension>5555</Extension>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                 </InvoicePartner>
+                                 <PaymentTerm payInNumberOfDays="5">
+                                    <Discount>
+                                       <DiscountPercent percent="5.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentTerm payInNumberOfDays="10">
+                                    <Discount>
+                                       <DiscountPercent percent="3.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentTerm payInNumberOfDays="30"/>
+                                 <PaymentInformation paymentNetDueDate="2021-08-12T12:00:00+05:30"/>
+                                 <Extrinsic name="originalInvoiceNo">REF_109</Extrinsic>
+                                 <Extrinsic name="fiscalYear">2021</Extrinsic>
+                                 <Extrinsic name="buyerInvoiceID">1900435423</Extrinsic>
+                                 <Extrinsic name="CompanyCode">0001</Extrinsic>
+                                 <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                                 <Extrinsic name="buyerVatID">DE456789012</Extrinsic>
+                              </InvoiceDetailRequestHeader>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <SupplierOrderInfo orderID="1900435423"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">100.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="1">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailSummary>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">...</Description>
+                                    <TaxDetail category="sales" percentageRate="0">
+                                       <TaxableAmount>
+                                          <Money currency="EUR">100.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="EUR">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                    <TaxDetail category="Tax update" percentageRate="0">
+                                       <TaxableAmount>
+                                          <Money currency="EUR">100.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="EUR">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <InvoiceDetailDiscount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </InvoiceDetailDiscount>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                              </InvoiceDetailSummary>
+                           </InvoiceDetailRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>ERP CC Invoice Request 2</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/Invoice/Invoice2.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="714B305FA6DEE57AE10000000AEE03AA2023-04-27T15:29:19777+05:30"
+                        timestamp="2023-04-27T15:29:19777+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="DE">John Woodman</Name>
+                                 <Email name="routing">alt@lenovo.com</Email>
+                              </Contact>
+                           </Correspondent>
+                        </From>
+                        <To>
+                           <Credential domain="SystemID">
+                              <Identity>Q8JCLNT002</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="production">
+                        <InvoiceDetailRequest>
+                           <InvoiceDetailRequestHeader invoiceID="1900000348"
+                                                       purpose="standard"
+                                                       operation="new"
+                                                       invoiceDate="2020-08-18T07:33:10+05:30"
+                                                       invoiceOrigin="supplier">
+                              <InvoiceDetailHeaderIndicator/>
+                              <InvoiceDetailLineIndicator/>
+                              <InvoicePartner>
+                                 <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                    <Name xml:lang="DE">SAP Ariba Company</Name>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>03</State>
+                                       <PostalCode>69190</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="default">alt@lenovo.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>212-345-0983</Number>
+                                          <Extension>5000</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>212-345-5693</Number>
+                                          <Extension>6000</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </InvoicePartner>
+                              <PaymentTerm payInNumberOfDays="14">
+                                 <Discount>
+                                    <DiscountPercent percent="3.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentTerm payInNumberOfDays="30">
+                                 <Discount>
+                                    <DiscountPercent percent="2.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <Extrinsic name="originalInvoiceNo"/>
+                              <Extrinsic name="fiscalYear">2020</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1900000348</Extrinsic>
+                              <Extrinsic name="CompanyCode">0001</Extrinsic>
+                              <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                           </InvoiceDetailRequestHeader>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <SupplierOrderInfo orderID="1900000348"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">400.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="1">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">400.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">400.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="VST-I1" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="">400.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">400.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailSummary>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">400.00</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">0.00</Money>
+                                 <Description xml:lang="DE">TotalTax</Description>
+                                 <TaxDetail category="VST-I1" percentageRate="4">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">400.00</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">400.00</Money>
+                              </GrossAmount>
+                              <InvoiceDetailDiscount>
+                                 <Money currency="EUR">0.00</Money>
+                              </InvoiceDetailDiscount>
+                              <NetAmount>
+                                 <Money currency="EUR">400.00</Money>
+                              </NetAmount>
+                           </InvoiceDetailSummary>
+                        </InvoiceDetailRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="false">
+         <label>ERP CC Invoice Request 2</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="DE">John Woodman</Name>
+                                    <Email name="routing">alt@lenovo.com</Email>
+                                 </Contact>
+                              </Correspondent>
+                           </From>
+                           <To>
+                              <Credential domain="SystemID">
+                                 <Identity>Q8JCLNT002</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="production">
+                           <InvoiceDetailRequest>
+                              <InvoiceDetailRequestHeader invoiceID="1900000348"
+                                                          purpose="standard"
+                                                          operation="new"
+                                                          invoiceDate="2020-08-18T07:33:10+05:30"
+                                                          invoiceOrigin="supplier">
+                                 <InvoiceDetailHeaderIndicator/>
+                                 <InvoiceDetailLineIndicator/>
+                                 <InvoicePartner>
+                                    <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                       <Name xml:lang="DE">SAP Ariba Company</Name>
+                                       <PostalAddress>
+                                          <Street/>
+                                          <City>Walldorf</City>
+                                          <State>03</State>
+                                          <PostalCode>69190</PostalCode>
+                                          <Country isoCountryCode="DE"/>
+                                       </PostalAddress>
+                                       <Email name="default">alt@lenovo.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>212-345-0983</Number>
+                                             <Extension>5000</Extension>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>212-345-5693</Number>
+                                             <Extension>6000</Extension>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                 </InvoicePartner>
+                                 <PaymentTerm payInNumberOfDays="14">
+                                    <Discount>
+                                       <DiscountPercent percent="3.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentTerm payInNumberOfDays="30">
+                                    <Discount>
+                                       <DiscountPercent percent="2.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <Extrinsic name="originalInvoiceNo"/>
+                                 <Extrinsic name="fiscalYear">2020</Extrinsic>
+                                 <Extrinsic name="buyerInvoiceID">1900000348</Extrinsic>
+                                 <Extrinsic name="CompanyCode">0001</Extrinsic>
+                                 <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                              </InvoiceDetailRequestHeader>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <SupplierOrderInfo orderID="1900000348"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">400.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="1">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">400.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">400.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">400.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailSummary>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">400.00</Money>
+                                 </SubtotalAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="DE">...</Description>
+                                    <TaxDetail category="VST-I1" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="EUR">400.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="EUR">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <GrossAmount>
+                                    <Money currency="EUR">400.00</Money>
+                                 </GrossAmount>
+                                 <InvoiceDetailDiscount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </InvoiceDetailDiscount>
+                                 <NetAmount>
+                                    <Money currency="EUR">400.00</Money>
+                                 </NetAmount>
+                              </InvoiceDetailSummary>
+                           </InvoiceDetailRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>ERP CC Invoice Request 3</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/Invoice/Invoice3.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="42010AEE24F71EEAB8EF07937D63A8562023-04-27T15:29:19624+05:30"
+                        timestamp="2023-04-27T15:29:19624+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">OEM Intra Vendor</Name>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                              </Contact>
+                           </Correspondent>
+                        </From>
+                        <To>
+                           <Credential domain="SystemID">
+                              <Identity>Q8JCLNT002</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <InvoiceDetailRequest>
+                           <InvoiceDetailRequestHeader invoiceID="FCC202"
+                                                       purpose="standard"
+                                                       operation="new"
+                                                       invoiceDate="2020-08-21T08:33:32+05:30"
+                                                       invoiceOrigin="supplier">
+                              <InvoiceDetailHeaderIndicator/>
+                              <InvoiceDetailLineIndicator/>
+                              <InvoicePartner>
+                                 <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                    <Name xml:lang="EN">SAP ARIBA -1</Name>
+                                    <PostalAddress>
+                                       <Street>234</Street>
+                                       <City>Berlin</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="default">ariba@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>12345678</Number>
+                                          <Extension>1234</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>23344557788</Number>
+                                          <Extension>123456</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </InvoicePartner>
+                              <PaymentTerm payInNumberOfDays="5">
+                                 <Discount>
+                                    <DiscountPercent percent="5.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentTerm payInNumberOfDays="10">
+                                 <Discount>
+                                    <DiscountPercent percent="3.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentTerm payInNumberOfDays="30"/>
+                              <Extrinsic name="originalInvoiceNo">FCC202</Extrinsic>
+                              <Extrinsic name="fiscalYear">2020</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1900003534</Extrinsic>
+                              <Extrinsic name="CompanyCode">0001</Extrinsic>
+                              <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                           </InvoiceDetailRequestHeader>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <SupplierOrderInfo orderID="1900003534"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="1">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                              <InvoiceDetailItem invoiceLineNumber="2" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="2">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="" percentageRate="0">
+                                       <TaxableAmount>
+                                          <Money currency="">100.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailSummary>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">200.00</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">0.00</Money>
+                                 <Description xml:lang="EN">TotalTax</Description>
+                                 <TaxDetail category="" percentageRate="0">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">200.00</Money>
+                              </GrossAmount>
+                              <InvoiceDetailDiscount>
+                                 <Money currency="EUR">0.00</Money>
+                              </InvoiceDetailDiscount>
+                              <NetAmount>
+                                 <Money currency="EUR">200.00</Money>
+                              </NetAmount>
+                           </InvoiceDetailSummary>
+                        </InvoiceDetailRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="false">
+         <label>ERP CC Invoice Request 3</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">OEM Intra Vendor</Name>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                 </Contact>
+                              </Correspondent>
+                           </From>
+                           <To>
+                              <Credential domain="SystemID">
+                                 <Identity>Q8JCLNT002</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <InvoiceDetailRequest>
+                              <InvoiceDetailRequestHeader invoiceID="FCC202"
+                                                          purpose="standard"
+                                                          operation="new"
+                                                          invoiceDate="2020-08-21T08:33:32+05:30"
+                                                          invoiceOrigin="supplier">
+                                 <InvoiceDetailHeaderIndicator/>
+                                 <InvoiceDetailLineIndicator/>
+                                 <InvoicePartner>
+                                    <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                       <Name xml:lang="EN">SAP ARIBA -1</Name>
+                                       <PostalAddress>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>10243</PostalCode>
+                                          <Country isoCountryCode="DE"/>
+                                       </PostalAddress>
+                                       <Email name="default">ariba@sap.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>12345678</Number>
+                                             <Extension>1234</Extension>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>23344557788</Number>
+                                             <Extension>123456</Extension>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                 </InvoicePartner>
+                                 <PaymentTerm payInNumberOfDays="5">
+                                    <Discount>
+                                       <DiscountPercent percent="5.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentTerm payInNumberOfDays="10">
+                                    <Discount>
+                                       <DiscountPercent percent="3.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentTerm payInNumberOfDays="30"/>
+                                 <Extrinsic name="originalInvoiceNo">FCC202</Extrinsic>
+                                 <Extrinsic name="fiscalYear">2020</Extrinsic>
+                                 <Extrinsic name="buyerInvoiceID">1900003534</Extrinsic>
+                                 <Extrinsic name="CompanyCode">0001</Extrinsic>
+                                 <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                              </InvoiceDetailRequestHeader>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <SupplierOrderInfo orderID="1900003534"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">100.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="1">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                                 <InvoiceDetailItem invoiceLineNumber="2" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">100.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="2">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailSummary>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">200.00</Money>
+                                 </SubtotalAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">...</Description>
+                                    <TaxDetail category="" percentageRate="0">
+                                       <TaxableAmount>
+                                          <Money currency="EUR">100.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="EUR">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <GrossAmount>
+                                    <Money currency="EUR">200.00</Money>
+                                 </GrossAmount>
+                                 <InvoiceDetailDiscount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </InvoiceDetailDiscount>
+                                 <NetAmount>
+                                    <Money currency="EUR">200.00</Money>
+                                 </NetAmount>
+                              </InvoiceDetailSummary>
+                           </InvoiceDetailRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>ERP CC Invoice Request for PO</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/Invoice/InvoiceforPO.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="2023-04-27T15:29:19408+05:30"
+                        timestamp="2023-04-27T15:29:19408+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <Email name="routing">test@test.com</Email>
+                              </Contact>
+                           </Correspondent>
+                        </From>
+                        <To>
+                           <Credential domain="SystemID">
+                              <Identity>Q8JCLNT002</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <InvoiceDetailRequest>
+                           <InvoiceDetailRequestHeader invoiceID="3477"
+                                                       purpose="standard"
+                                                       operation="new"
+                                                       invoiceDate="2019-09-19T09:37:22+05:30"
+                                                       invoiceOrigin="supplier">
+                              <InvoiceDetailHeaderIndicator/>
+                              <InvoiceDetailLineIndicator/>
+                              <InvoicePartner>
+                                 <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <Street>234</Street>
+                                       <City>Berlin</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="default">test@test.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>080-12345678</Number>
+                                          <Extension>1234</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>080-223344557788</Number>
+                                          <Extension>123456</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </InvoicePartner>
+                              <PaymentTerm payInNumberOfDays="5">
+                                 <Discount>
+                                    <DiscountPercent percent="5.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentTerm payInNumberOfDays="10">
+                                 <Discount>
+                                    <DiscountPercent percent="3.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <Extrinsic name="originalInvoiceNo">3477</Extrinsic>
+                              <Extrinsic name="fiscalYear">2019</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1900001669</Extrinsic>
+                              <Extrinsic name="CompanyCode">0001</Extrinsic>
+                              <Extrinsic name="invoiceSourceDocument">PurchaseOrder</Extrinsic>
+                           </InvoiceDetailRequestHeader>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <OrderIDInfo orderID="4500002077"/>
+                                 <SupplierOrderInfo orderID="1900001669"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="1">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                              <InvoiceDetailItem invoiceLineNumber="2" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="2">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="vat" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="">200.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <MasterAgreementIDInfo agreementID="5500000171" agreementType="scheduling_agreement"/>
+                                 <SupplierOrderInfo orderID="1900001669"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="3" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="3">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="vat" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="">200.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailSummary>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">300.00</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">0.00</Money>
+                                 <Description xml:lang="EN">TotalTax</Description>
+                                 <TaxDetail category="vat" percentageRate="4">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">200.00</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">300.00</Money>
+                              </GrossAmount>
+                              <InvoiceDetailDiscount>
+                                 <Money currency="EUR">0.00</Money>
+                              </InvoiceDetailDiscount>
+                              <NetAmount>
+                                 <Money currency="EUR">300.00</Money>
+                              </NetAmount>
+                           </InvoiceDetailSummary>
+                        </InvoiceDetailRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="false">
+         <label>ERP CC Invoice Request for PO</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <Email name="routing">test@test.com</Email>
+                                 </Contact>
+                              </Correspondent>
+                           </From>
+                           <To>
+                              <Credential domain="SystemID">
+                                 <Identity>Q8JCLNT002</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <InvoiceDetailRequest>
+                              <InvoiceDetailRequestHeader invoiceID="3477"
+                                                          purpose="standard"
+                                                          operation="new"
+                                                          invoiceDate="2019-09-19T09:37:22+05:30"
+                                                          invoiceOrigin="supplier">
+                                 <InvoiceDetailHeaderIndicator/>
+                                 <InvoiceDetailLineIndicator/>
+                                 <InvoicePartner>
+                                    <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                       <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                       <PostalAddress>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>10243</PostalCode>
+                                          <Country isoCountryCode="DE"/>
+                                       </PostalAddress>
+                                       <Email name="default">test@test.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>080-12345678</Number>
+                                             <Extension>1234</Extension>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>080-223344557788</Number>
+                                             <Extension>123456</Extension>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                 </InvoicePartner>
+                                 <PaymentTerm payInNumberOfDays="5">
+                                    <Discount>
+                                       <DiscountPercent percent="5.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentTerm payInNumberOfDays="10">
+                                    <Discount>
+                                       <DiscountPercent percent="3.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <Extrinsic name="originalInvoiceNo">3477</Extrinsic>
+                                 <Extrinsic name="fiscalYear">2019</Extrinsic>
+                                 <Extrinsic name="buyerInvoiceID">1900001669</Extrinsic>
+                                 <Extrinsic name="CompanyCode">0001</Extrinsic>
+                                 <Extrinsic name="invoiceSourceDocument">PurchaseOrder</Extrinsic>
+                              </InvoiceDetailRequestHeader>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <OrderIDInfo orderID="4500002077"/>
+                                    <SupplierOrderInfo orderID="1900001669"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">100.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="1">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                                 <InvoiceDetailItem invoiceLineNumber="2" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">100.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="2">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <MasterAgreementIDInfo agreementID="5500000171" agreementType="scheduling_agreement"/>
+                                    <SupplierOrderInfo orderID="1900001669"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="3" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>...</UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="3">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailSummary>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">300.00</Money>
+                                 </SubtotalAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">...</Description>
+                                    <TaxDetail category="vat" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="EUR">200.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="EUR">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <GrossAmount>
+                                    <Money currency="EUR">300.00</Money>
+                                 </GrossAmount>
+                                 <InvoiceDetailDiscount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </InvoiceDetailDiscount>
+                                 <NetAmount>
+                                    <Money currency="EUR">300.00</Money>
+                                 </NetAmount>
+                              </InvoiceDetailSummary>
+                           </InvoiceDetailRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>ERP CC Invoice Request for SAR</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/Invoice/InvoiceforSAR.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="2023-04-27T15:29:19879+05:30"
+                        timestamp="2023-04-27T15:29:19879+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <Email name="routing">test@test.com</Email>
+                              </Contact>
+                           </Correspondent>
+                        </From>
+                        <To>
+                           <Credential domain="SystemID">
+                              <Identity>Q8JCLNT002</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <InvoiceDetailRequest>
+                           <InvoiceDetailRequestHeader invoiceID="3499"
+                                                       purpose="standard"
+                                                       operation="new"
+                                                       invoiceDate="2019-09-19T09:37:22+05:30"
+                                                       invoiceOrigin="supplier">
+                              <InvoiceDetailHeaderIndicator/>
+                              <InvoiceDetailLineIndicator/>
+                              <InvoicePartner>
+                                 <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <Street>234</Street>
+                                       <City>Berlin</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="default">test@test.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>080-12345678</Number>
+                                          <Extension>1234</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>080-223344557788</Number>
+                                          <Extension>123456</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </InvoicePartner>
+                              <PaymentTerm payInNumberOfDays="5">
+                                 <Discount>
+                                    <DiscountPercent percent="5.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentTerm payInNumberOfDays="10">
+                                 <Discount>
+                                    <DiscountPercent percent="3.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <Extrinsic name="originalInvoiceNo">3499</Extrinsic>
+                              <Extrinsic name="fiscalYear">2019</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1900001669</Extrinsic>
+                              <Extrinsic name="CompanyCode">0001</Extrinsic>
+                              <Extrinsic name="invoiceSourceDocument">PurchaseOrder</Extrinsic>
+                           </InvoiceDetailRequestHeader>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <OrderIDInfo orderID="4500002077"/>
+                                 <SupplierOrderInfo orderID="1900001669"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="1">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                              <InvoiceDetailItem invoiceLineNumber="2" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="2">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="vat" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="">200.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <MasterAgreementIDInfo agreementID="5500000171" agreementType="scheduling_agreement"/>
+                                 <SupplierOrderInfo orderID="1900001669"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="3" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">100.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="3">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="vat" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="">200.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">100.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailSummary>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">300.00</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">0.00</Money>
+                                 <Description xml:lang="EN">TotalTax</Description>
+                                 <TaxDetail category="vat" percentageRate="4">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">200.00</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">300.00</Money>
+                              </GrossAmount>
+                              <InvoiceDetailDiscount>
+                                 <Money currency="EUR">0.00</Money>
+                              </InvoiceDetailDiscount>
+                              <NetAmount>
+                                 <Money currency="EUR">300.00</Money>
+                              </NetAmount>
+                           </InvoiceDetailSummary>
+                        </InvoiceDetailRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="false">
+         <label>ERP CC Invoice Request for SAR</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <Email name="routing">test@test.com</Email>
+                                 </Contact>
+                              </Correspondent>
+                           </From>
+                           <To>
+                              <Credential domain="SystemID">
+                                 <Identity>Q8JCLNT002</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <InvoiceDetailRequest>
+                              <InvoiceDetailRequestHeader invoiceID="3499"
+                                                          purpose="standard"
+                                                          operation="new"
+                                                          invoiceDate="2019-09-19T09:37:22+05:30"
+                                                          invoiceOrigin="supplier">
+                                 <InvoiceDetailHeaderIndicator/>
+                                 <InvoiceDetailLineIndicator/>
+                                 <InvoicePartner>
+                                    <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                       <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                       <PostalAddress>
+                                          <Street>234</Street>
+                                          <City>Berlin</City>
+                                          <State>11</State>
+                                          <PostalCode>10243</PostalCode>
+                                          <Country isoCountryCode="DE"/>
+                                       </PostalAddress>
+                                       <Email name="default">test@test.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>080-12345678</Number>
+                                             <Extension>1234</Extension>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>080-223344557788</Number>
+                                             <Extension>123456</Extension>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                 </InvoicePartner>
+                                 <PaymentTerm payInNumberOfDays="5">
+                                    <Discount>
+                                       <DiscountPercent percent="5.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentTerm payInNumberOfDays="10">
+                                    <Discount>
+                                       <DiscountPercent percent="3.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <Extrinsic name="originalInvoiceNo">3499</Extrinsic>
+                                 <Extrinsic name="fiscalYear">2019</Extrinsic>
+                                 <Extrinsic name="buyerInvoiceID">1900001669</Extrinsic>
+                                 <Extrinsic name="CompanyCode">0001</Extrinsic>
+                                 <Extrinsic name="invoiceSourceDocument">PurchaseOrder</Extrinsic>
+                              </InvoiceDetailRequestHeader>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <OrderIDInfo orderID="4500002077"/>
+                                    <SupplierOrderInfo orderID="1900001669"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">100.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="1">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                                 <InvoiceDetailItem invoiceLineNumber="2" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">100.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="2">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <MasterAgreementIDInfo agreementID="5500000171" agreementType="scheduling_agreement"/>
+                                    <SupplierOrderInfo orderID="1900001669"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="3" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">100.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="3">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">100.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailSummary>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">300.00</Money>
+                                 </SubtotalAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="vat" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="EUR">200.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="EUR">0.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <GrossAmount>
+                                    <Money currency="EUR">300.00</Money>
+                                 </GrossAmount>
+                                 <InvoiceDetailDiscount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </InvoiceDetailDiscount>
+                                 <NetAmount>
+                                    <Money currency="EUR">300.00</Money>
+                                 </NetAmount>
+                              </InvoiceDetailSummary>
+                           </InvoiceDetailRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>ERP CC Invoice Request with Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/Invoice/InvoicewithComments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="0F35545F3DC1C242E10000000AEE02B12023-04-27T15:29:19851+05:30"
+                        timestamp="2023-04-27T15:29:19851+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="DE">JOHN WOODMAN</Name>
+                                 <Email name="routing">ALT@LENOVO.COM</Email>
+                              </Contact>
+                           </Correspondent>
+                        </From>
+                        <To>
+                           <Credential domain="SystemID">
+                              <Identity>Q8JCLNT002</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <InvoiceDetailRequest>
+                           <InvoiceDetailRequestHeader invoiceID="000119000004312020001"
+                                                       purpose="standard"
+                                                       operation="new"
+                                                       invoiceDate="2020-09-13T09:39:41+05:30"
+                                                       invoiceOrigin="supplier">
+                              <InvoiceDetailHeaderIndicator/>
+                              <InvoiceDetailLineIndicator/>
+                              <InvoicePartner>
+                                 <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                    <Name xml:lang="DE">SAP ARIBA COMPANY</Name>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <City>WALLDORF</City>
+                                       <State>03</State>
+                                       <PostalCode>69190</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="default">ALT@LENOVO.COM</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>212-345-0983</Number>
+                                          <Extension>5000</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>212-345-5693</Number>
+                                          <Extension>6000</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </InvoicePartner>
+                              <PaymentTerm payInNumberOfDays="14">
+                                 <Discount>
+                                    <DiscountPercent percent="3.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentTerm payInNumberOfDays="30">
+                                 <Discount>
+                                    <DiscountPercent percent="2.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <Comments xml:lang="DE">Test Comments for Code Coverage</Comments>
+                              <Extrinsic name="originalInvoiceNo">TEST13SEPA</Extrinsic>
+                              <Extrinsic name="fiscalYear">2020</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1900000431</Extrinsic>
+                              <Extrinsic name="CompanyCode">0001</Extrinsic>
+                              <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                           </InvoiceDetailRequestHeader>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <SupplierOrderInfo orderID="1900000431"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">384615.38</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="1">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                    <Description xml:lang="EN">Test Comments for Code Coverage</Description>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">384615.38</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">384615.38</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">15384.62</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="VST-I1" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="">384615.38</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">15384.62</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">384615.38</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN">Test Comments for Code Coverage</Comments>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailSummary>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">384615.38</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">15384.62</Money>
+                                 <Description xml:lang="DE">TotalTax</Description>
+                                 <TaxDetail category="VST-I1" percentageRate="4">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">384615.38</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">15384.62</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">400000.00</Money>
+                              </GrossAmount>
+                              <InvoiceDetailDiscount>
+                                 <Money currency="EUR">0.00</Money>
+                              </InvoiceDetailDiscount>
+                              <NetAmount>
+                                 <Money currency="EUR">384615.38</Money>
+                              </NetAmount>
+                           </InvoiceDetailSummary>
+                        </InvoiceDetailRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="false">
+         <label>ERP CC Invoice Request with Comments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="DE">JOHN WOODMAN</Name>
+                                    <Email name="routing">ALT@LENOVO.COM</Email>
+                                 </Contact>
+                              </Correspondent>
+                           </From>
+                           <To>
+                              <Credential domain="SystemID">
+                                 <Identity>Q8JCLNT002</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <InvoiceDetailRequest>
+                              <InvoiceDetailRequestHeader invoiceID="000119000004312020001"
+                                                          purpose="standard"
+                                                          operation="new"
+                                                          invoiceDate="2020-09-13T09:39:41+05:30"
+                                                          invoiceOrigin="supplier">
+                                 <InvoiceDetailHeaderIndicator/>
+                                 <InvoiceDetailLineIndicator/>
+                                 <InvoicePartner>
+                                    <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                       <Name xml:lang="DE">SAP ARIBA COMPANY</Name>
+                                       <PostalAddress>
+                                          <Street/>
+                                          <City>WALLDORF</City>
+                                          <State>03</State>
+                                          <PostalCode>69190</PostalCode>
+                                          <Country isoCountryCode="DE"/>
+                                       </PostalAddress>
+                                       <Email name="default">ALT@LENOVO.COM</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>212-345-0983</Number>
+                                             <Extension>5000</Extension>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>212-345-5693</Number>
+                                             <Extension>6000</Extension>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                 </InvoicePartner>
+                                 <PaymentTerm payInNumberOfDays="14">
+                                    <Discount>
+                                       <DiscountPercent percent="3.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentTerm payInNumberOfDays="30">
+                                    <Discount>
+                                       <DiscountPercent percent="2.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <Comments xml:lang="DE">Test Comments for Code Coverage</Comments>
+                                 <Extrinsic name="originalInvoiceNo">TEST13SEPA</Extrinsic>
+                                 <Extrinsic name="fiscalYear">2020</Extrinsic>
+                                 <Extrinsic name="buyerInvoiceID">1900000431</Extrinsic>
+                                 <Extrinsic name="CompanyCode">0001</Extrinsic>
+                                 <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                              </InvoiceDetailRequestHeader>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <SupplierOrderInfo orderID="1900000431"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">384615.38</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="1">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                       <Description xml:lang="EN">Test Comments for Code Coverage</Description>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">384615.38</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">384615.38</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">384615.38</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN">Test Comments for Code Coverage</Comments>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailSummary>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">384615.38</Money>
+                                 </SubtotalAmount>
+                                 <Tax>
+                                    <Money currency="EUR">15384.62</Money>
+                                    <Description xml:lang="DE">...</Description>
+                                    <TaxDetail category="VST-I1" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="EUR">384615.38</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="EUR">15384.62</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <GrossAmount>
+                                    <Money currency="EUR">400000.00</Money>
+                                 </GrossAmount>
+                                 <InvoiceDetailDiscount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </InvoiceDetailDiscount>
+                                 <NetAmount>
+                                    <Money currency="EUR">384615.38</Money>
+                                 </NetAmount>
+                              </InvoiceDetailSummary>
+                           </InvoiceDetailRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>ERP Credit Memo</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/Invoice/CreditMemo.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="A575545F47C10E6CE10000000AEE02B12023-04-27T15:29:19167+05:30"
+                        timestamp="2023-04-27T15:29:19167+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="DE">John Woodman</Name>
+                                 <Email name="routing">alt@lenovo.com</Email>
+                              </Contact>
+                           </Correspondent>
+                        </From>
+                        <To>
+                           <Credential domain="SystemID">
+                              <Identity>Q8JCLNT002</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004404205-T</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <InvoiceDetailRequest>
+                           <InvoiceDetailRequestHeader invoiceID="000117000001392020001_CM"
+                                                       purpose="creditMemo"
+                                                       operation="new"
+                                                       invoiceDate="2020-09-13T09:41:42+05:30"
+                                                       invoiceOrigin="supplier">
+                              <InvoiceDetailHeaderIndicator/>
+                              <InvoiceDetailLineIndicator/>
+                              <InvoicePartner>
+                                 <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                    <Name xml:lang="DE">SAP Ariba Company</Name>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>03</State>
+                                       <PostalCode>69190</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="default">alt@lenovo.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>212-345-0983</Number>
+                                          <Extension>5000</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE"/>
+                                          <AreaOrCityCode/>
+                                          <Number>212-345-5693</Number>
+                                          <Extension>6000</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </InvoicePartner>
+                              <Extrinsic name="originalInvoiceNo"/>
+                              <Extrinsic name="fiscalYear">2020</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1700000139</Extrinsic>
+                              <Extrinsic name="CompanyCode">0001</Extrinsic>
+                              <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                           </InvoiceDetailRequestHeader>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <SupplierOrderInfo orderID="1700000139"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                 <UnitOfMeasure/>
+                                 <UnitPrice>
+                                    <Money currency="EUR">-5005.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="1">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">-5005.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="EUR">-5005.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="VST-I1" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="">-5005</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">0</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="EUR">-5005.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailSummary>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">-5005.00</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">0.00</Money>
+                                 <Description xml:lang="DE">TotalTax</Description>
+                                 <TaxDetail category="VST-I1" percentageRate="4">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">-5005</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">0</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">-5005.00</Money>
+                              </GrossAmount>
+                              <InvoiceDetailDiscount>
+                                 <Money currency="EUR">0.00</Money>
+                              </InvoiceDetailDiscount>
+                              <NetAmount>
+                                 <Money currency="EUR">-5005.00</Money>
+                              </NetAmount>
+                           </InvoiceDetailSummary>
+                        </InvoiceDetailRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="false">
+         <label>ERP Credit Memo</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="DE">John Woodman</Name>
+                                    <Email name="routing">alt@lenovo.com</Email>
+                                 </Contact>
+                              </Correspondent>
+                           </From>
+                           <To>
+                              <Credential domain="SystemID">
+                                 <Identity>Q8JCLNT002</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004404205-T</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <InvoiceDetailRequest>
+                              <InvoiceDetailRequestHeader invoiceID="000117000001392020001_CM"
+                                                          purpose="creditMemo"
+                                                          operation="new"
+                                                          invoiceDate="2020-09-13T09:41:42+05:30"
+                                                          invoiceOrigin="supplier">
+                                 <InvoiceDetailHeaderIndicator/>
+                                 <InvoiceDetailLineIndicator/>
+                                 <InvoicePartner>
+                                    <Contact role="billTo" addressID="0001" addressIDDomain="billTo">
+                                       <Name xml:lang="DE">SAP Ariba Company</Name>
+                                       <PostalAddress>
+                                          <Street/>
+                                          <City>Walldorf</City>
+                                          <State>03</State>
+                                          <PostalCode>69190</PostalCode>
+                                          <Country isoCountryCode="DE"/>
+                                       </PostalAddress>
+                                       <Email name="default">alt@lenovo.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>212-345-0983</Number>
+                                             <Extension>5000</Extension>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="DE"/>
+                                             <AreaOrCityCode/>
+                                             <Number>212-345-5693</Number>
+                                             <Extension>6000</Extension>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                 </InvoicePartner>
+                                 <Extrinsic name="originalInvoiceNo"/>
+                                 <Extrinsic name="fiscalYear">2020</Extrinsic>
+                                 <Extrinsic name="buyerInvoiceID">1700000139</Extrinsic>
+                                 <Extrinsic name="CompanyCode">0001</Extrinsic>
+                                 <Extrinsic name="invoiceSourceDocument">NoOrderInformation</Extrinsic>
+                              </InvoiceDetailRequestHeader>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <SupplierOrderInfo orderID="1700000139"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="1" quantity="0.000">
+                                    <UnitOfMeasure/>
+                                    <UnitPrice>
+                                       <Money currency="EUR">-5005.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="1">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="EUR">-5005.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="EUR">-5005.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="EUR">-5005.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailSummary>
+                                 <SubtotalAmount>
+                                    <Money currency="EUR">-5005.00</Money>
+                                 </SubtotalAmount>
+                                 <Tax>
+                                    <Money currency="EUR">0.00</Money>
+                                    <Description xml:lang="DE">...</Description>
+                                    <TaxDetail category="VST-I1" percentageRate="4">
+                                       <TaxableAmount>
+                                          <Money currency="EUR">-5005</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="EUR">0</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <GrossAmount>
+                                    <Money currency="EUR">-5005.00</Money>
+                                 </GrossAmount>
+                                 <InvoiceDetailDiscount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </InvoiceDetailDiscount>
+                                 <NetAmount>
+                                    <Money currency="EUR">-5005.00</Money>
+                                 </NetAmount>
+                              </InvoiceDetailSummary>
+                           </InvoiceDetailRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario8"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_CCInvoice_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>ERP CC FI Invoice with respect to multi line PO</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/Invoice/CCinvoice_IG_37113_NonPO_to_Multiline_PO_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="2023-04-27T15:29:19094+05:30"
+                        timestamp="2023-04-27T15:29:19094+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="VendorID">
+                              <Identity>1000181059</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="ES">SEGACORP S.A. DE C.V. Test</Name>
+                                 <Email name="routing">claudiaa@segacorp.com</Email>
+                              </Contact>
+                           </Correspondent>
+                        </From>
+                        <To>
+                           <Credential domain="SystemID">
+                              <Identity>QKDCLNT521</Identity>
+                           </Credential>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <InvoiceDetailRequest>
+                           <InvoiceDetailRequestHeader invoiceID="620000358701"
+                                                       purpose="standard"
+                                                       operation="new"
+                                                       invoiceDate="2022-01-20T10:38:58+05:30"
+                                                       invoiceOrigin="supplier">
+                              <InvoiceDetailHeaderIndicator/>
+                              <InvoiceDetailLineIndicator/>
+                              <InvoicePartner>
+                                 <Contact role="billTo" addressID="UP04" addressIDDomain="billTo">
+                                    <Name xml:lang="ES">Operadora del Sur, S.A. de C.V</Name>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <City>San Salvador</City>
+                                       <State>SS</State>
+                                       <PostalCode>0</PostalCode>
+                                       <Country isoCountryCode="SV"/>
+                                    </PostalAddress>
+                                    <Email name="default">claudiaa@segacorp.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="SV"/>
+                                          <AreaOrCityCode/>
+                                          <Number>(503) 2523-6800</Number>
+                                          <Extension/>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="SV"/>
+                                          <AreaOrCityCode/>
+                                          <Number>(503)2523-6889</Number>
+                                          <Extension/>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </InvoicePartner>
+                              <PaymentTerm payInNumberOfDays="45">
+                                 <Discount>
+                                    <DiscountPercent percent="0.000"/>
+                                 </Discount>
+                              </PaymentTerm>
+                              <PaymentInformation paymentNetDueDate="2022-03-06T12:00:00+05:30"/>
+                              <Extrinsic name="originalInvoiceNo">620000358701</Extrinsic>
+                              <Extrinsic name="fiscalYear">2022</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">3000000007</Extrinsic>
+                              <Extrinsic name="CompanyCode">UP04</Extrinsic>
+                              <Extrinsic name="invoiceSourceDocument">PurchaseOrder</Extrinsic>
+                           </InvoiceDetailRequestHeader>
+                           <InvoiceDetailOrder>
+                              <InvoiceDetailOrderInfo>
+                                 <OrderIDInfo orderID="6200003587"/>
+                                 <SupplierOrderInfo orderID="3000000007"/>
+                              </InvoiceDetailOrderInfo>
+                              <InvoiceDetailItem invoiceLineNumber="1" quantity="2.000">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <UnitPrice>
+                                    <Money currency="USD">2000.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="1">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="USD">520.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="VAT" percentageRate="13">
+                                       <TaxableAmount>
+                                          <Money currency="">4000.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">520.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                              <InvoiceDetailItem invoiceLineNumber="2" quantity="2.000">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <UnitPrice>
+                                    <Money currency="USD">2000.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="2">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="USD">1040.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="VAT" percentageRate="13">
+                                       <TaxableAmount>
+                                          <Money currency="">8000.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">1040.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                              <InvoiceDetailItem invoiceLineNumber="3" quantity="2.000">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <UnitPrice>
+                                    <Money currency="USD">2000.00</Money>
+                                 </UnitPrice>
+                                 <InvoiceDetailItemReference lineNumber="3">
+                                    <ItemID>
+                                       <SupplierPartID/>
+                                       <BuyerPartID/>
+                                    </ItemID>
+                                 </InvoiceDetailItemReference>
+                                 <SubtotalAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </SubtotalAmount>
+                                 <GrossAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </GrossAmount>
+                                 <Tax>
+                                    <Money currency="USD">1040.00</Money>
+                                    <Description xml:lang="EN">TotalTax</Description>
+                                    <TaxDetail category="VAT" percentageRate="13">
+                                       <TaxableAmount>
+                                          <Money currency="">8000.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="">1040.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <NetAmount>
+                                    <Money currency="USD">4000.00</Money>
+                                 </NetAmount>
+                                 <Comments xml:lang="EN"/>
+                              </InvoiceDetailItem>
+                           </InvoiceDetailOrder>
+                           <InvoiceDetailSummary>
+                              <SubtotalAmount>
+                                 <Money currency="SVC">12000.00</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="SVC">1440.00</Money>
+                                 <Description xml:lang="ES">TotalTax</Description>
+                                 <TaxDetail category="VAT" percentageRate="13">
+                                    <TaxableAmount>
+                                       <Money currency="SVC">4000.00</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="SVC">520.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                                 <TaxDetail category="VAT" percentageRate="13">
+                                    <TaxableAmount>
+                                       <Money currency="SVC">8000.00</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="SVC">1040.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                                 <TaxDetail category="WHT" percentageRate="-1">
+                                    <TaxableAmount>
+                                       <Money currency="SVC">12000</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="SVC">-120.00</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="SVC">13440.00</Money>
+                              </GrossAmount>
+                              <InvoiceDetailDiscount>
+                                 <Money currency="SVC">0.00</Money>
+                              </InvoiceDetailDiscount>
+                              <NetAmount>
+                                 <Money currency="SVC">12000.00</Money>
+                              </NetAmount>
+                           </InvoiceDetailSummary>
+                        </InvoiceDetailRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario8-expect1" successful="false">
+         <label>IG-37113:Invoice NON-PO to multiple line PO</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="VendorID">
+                                 <Identity>1000181059</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="ES">SEGACORP S.A. DE C.V. Test</Name>
+                                    <Email name="routing">claudiaa@segacorp.com</Email>
+                                 </Contact>
+                              </Correspondent>
+                           </From>
+                           <To>
+                              <Credential domain="SystemID">
+                                 <Identity>QKDCLNT521</Identity>
+                              </Credential>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <InvoiceDetailRequest>
+                              <InvoiceDetailRequestHeader invoiceID="620000358701"
+                                                          purpose="standard"
+                                                          operation="new"
+                                                          invoiceDate="2022-01-20T10:38:58+05:30"
+                                                          invoiceOrigin="supplier">
+                                 <InvoiceDetailHeaderIndicator/>
+                                 <InvoiceDetailLineIndicator/>
+                                 <InvoicePartner>
+                                    <Contact role="billTo" addressID="UP04" addressIDDomain="billTo">
+                                       <Name xml:lang="ES">Operadora del Sur, S.A. de C.V</Name>
+                                       <PostalAddress>
+                                          <Street/>
+                                          <City>San Salvador</City>
+                                          <State>SS</State>
+                                          <PostalCode>0</PostalCode>
+                                          <Country isoCountryCode="SV"/>
+                                       </PostalAddress>
+                                       <Email name="default">claudiaa@segacorp.com</Email>
+                                       <Phone>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="SV"/>
+                                             <AreaOrCityCode/>
+                                             <Number>(503) 2523-6800</Number>
+                                             <Extension/>
+                                          </TelephoneNumber>
+                                       </Phone>
+                                       <Fax>
+                                          <TelephoneNumber>
+                                             <CountryCode isoCountryCode="SV"/>
+                                             <AreaOrCityCode/>
+                                             <Number>(503)2523-6889</Number>
+                                             <Extension/>
+                                          </TelephoneNumber>
+                                       </Fax>
+                                    </Contact>
+                                 </InvoicePartner>
+                                 <PaymentTerm payInNumberOfDays="45">
+                                    <Discount>
+                                       <DiscountPercent percent="0.000"/>
+                                    </Discount>
+                                 </PaymentTerm>
+                                 <PaymentInformation paymentNetDueDate="2022-03-06T12:00:00+05:30"/>
+                                 <Extrinsic name="originalInvoiceNo">620000358701</Extrinsic>
+                                 <Extrinsic name="fiscalYear">2022</Extrinsic>
+                                 <Extrinsic name="buyerInvoiceID">3000000007</Extrinsic>
+                                 <Extrinsic name="CompanyCode">UP04</Extrinsic>
+                                 <Extrinsic name="invoiceSourceDocument">PurchaseOrder</Extrinsic>
+                              </InvoiceDetailRequestHeader>
+                              <InvoiceDetailOrder>
+                                 <InvoiceDetailOrderInfo>
+                                    <OrderIDInfo orderID="6200003587"/>
+                                    <SupplierOrderInfo orderID="3000000007"/>
+                                 </InvoiceDetailOrderInfo>
+                                 <InvoiceDetailItem invoiceLineNumber="1" quantity="2.000">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <UnitPrice>
+                                       <Money currency="USD">2000.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="1">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                                 <InvoiceDetailItem invoiceLineNumber="2" quantity="2.000">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <UnitPrice>
+                                       <Money currency="USD">2000.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="2">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                                 <InvoiceDetailItem invoiceLineNumber="3" quantity="2.000">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <UnitPrice>
+                                       <Money currency="USD">2000.00</Money>
+                                    </UnitPrice>
+                                    <InvoiceDetailItemReference lineNumber="3">
+                                       <ItemID>
+                                          <SupplierPartID/>
+                                          <BuyerPartID/>
+                                       </ItemID>
+                                    </InvoiceDetailItemReference>
+                                    <SubtotalAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </SubtotalAmount>
+                                    <GrossAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </GrossAmount>
+                                    <NetAmount>
+                                       <Money currency="USD">4000.00</Money>
+                                    </NetAmount>
+                                    <Comments xml:lang="EN"/>
+                                 </InvoiceDetailItem>
+                              </InvoiceDetailOrder>
+                              <InvoiceDetailSummary>
+                                 <SubtotalAmount>
+                                    <Money currency="SVC">12000.00</Money>
+                                 </SubtotalAmount>
+                                 <Tax>
+                                    <Money currency="SVC">1440.00</Money>
+                                    <Description xml:lang="ES">TotalTax</Description>
+                                    <TaxDetail category="VAT" percentageRate="13">
+                                       <TaxableAmount>
+                                          <Money currency="SVC">4000.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="SVC">520.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                    <TaxDetail category="VAT" percentageRate="13">
+                                       <TaxableAmount>
+                                          <Money currency="SVC">8000.00</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="SVC">1040.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                    <TaxDetail category="WHT" percentageRate="-1">
+                                       <TaxableAmount>
+                                          <Money currency="SVC">12000</Money>
+                                       </TaxableAmount>
+                                       <TaxAmount>
+                                          <Money currency="SVC">-120.00</Money>
+                                       </TaxAmount>
+                                    </TaxDetail>
+                                 </Tax>
+                                 <GrossAmount>
+                                    <Money currency="SVC">13440.00</Money>
+                                 </GrossAmount>
+                                 <InvoiceDetailDiscount>
+                                    <Money currency="SVC">0.00</Money>
+                                 </InvoiceDetailDiscount>
+                                 <NetAmount>
+                                    <Money currency="SVC">12000.00</Money>
+                                 </NetAmount>
+                              </InvoiceDetailSummary>
+                           </InvoiceDetailRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

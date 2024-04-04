@@ -1,0 +1,2806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_SchedulingAgreement_AddOn_0000_SchedulingAgreement.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4/MAPPING_ANY_cXML_0000_SchedulingAgreement_AddOn_0000_SchedulingAgreement.xsl"
+        date="2023-04-27T15:42:21.109189+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_SchedulingAgreement_AddOn_0000_SchedulingAgreement.xspec">
+      <label>Scenario for SchedulingAgreement</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4/SchedulingAgreement/SchedulingAgreement_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <AribaNetworkPayloadID>1570586083106.1602234391.000002395@TTtp2fPmyjmD280uyvMPwqTYZZY=</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02006981606</AribaNetworkID>
+                  <CreationDateTime>2020-01-24T12:41:13+05:30</CreationDateTime>
+                  <SenderBusinessSystemID/>
+                  <SenderParty>
+                     <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">AN02003228572-T</InternalID>
+                  </SenderParty>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <SchedulingAgreement actionCode="01">
+                  <ID/>
+                  <AribaContractID>CW7077</AribaContractID>
+                  <CompanyID>0001</CompanyID>
+                  <ProcessingTypeCode>LP</ProcessingTypeCode>
+                  <ValidityPeriod>
+                     <StartDate>2023-03-17</StartDate>
+                     <EndDate>2024-03-17</EndDate>
+                  </ValidityPeriod>
+                  <TargetAmount currencyCode="USD">1000.00</TargetAmount>
+                  <SellerParty>
+                     <InternalID>0000100000</InternalID>
+                     <BuyerID>0000100000</BuyerID>
+                  </SellerParty>
+                  <ResponsiblePurchasingOrganisationParty>
+                     <InternalID>0001</InternalID>
+                  </ResponsiblePurchasingOrganisationParty>
+                  <ResponsiblePurchasingGroupParty>
+                     <InternalID>001</InternalID>
+                  </ResponsiblePurchasingGroupParty>
+                  <DeliveryTerms>
+                     <Incoterms>
+                        <ClassificationCode>CIF</ClassificationCode>
+                        <TransferLocationName>Costs, insurance &amp; freight</TransferLocationName>
+                     </Incoterms>
+                  </DeliveryTerms>
+                  <CashDiscountTerms>
+                     <Code>0001</Code>
+                  </CashDiscountTerms>
+                  <Item actionCode="01">
+                     <ID>1</ID>
+                     <AribaContractItemID>1</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">item01</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">100.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">100.00</Amount>
+                           <BaseQuantity>5</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">39.000</TargetQuantity>
+                     <Product>
+                        <InternalID>TEST01</InternalID>
+                        <SellerID>TEST01</SellerID>
+                        <ManufacturerID>0001</ManufacturerID>
+                        <ProductCategoryInternalID>01</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-01-24</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>100.00</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <BaseDecimalValue>5 TEST001 HAWA 5.00 6040845</BaseDecimalValue>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                     </PriceSpecification>
+                     <DeliveryTerms>
+                        <Incoterms>
+                           <ClassificationCode>CIF</ClassificationCode>
+                           <TransferLocationName>Costs, insurance &amp; freight</TransferLocationName>
+                        </Incoterms>
+                     </DeliveryTerms>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+               </SchedulingAgreement>
+            </n0:SchedulingAgreementERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for SchedulingAgreement</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <AribaNetworkPayloadID>1570586083106.1602234391.000002395@TTtp2fPmyjmD280uyvMPwqTYZZY=</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02006981606</AribaNetworkID>
+                     <CreationDateTime>2020-01-24T12:41:13+05:30</CreationDateTime>
+                     <SenderBusinessSystemID/>
+                     <SenderParty>
+                        <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">AN02003228572-T</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <SchedulingAgreement actionCode="01">
+                     <ID/>
+                     <AribaContractID>CW7077</AribaContractID>
+                     <CompanyID>0001</CompanyID>
+                     <ProcessingTypeCode>LP</ProcessingTypeCode>
+                     <ValidityPeriod>
+                        <StartDate>2023-03-17</StartDate>
+                        <EndDate>2024-03-17</EndDate>
+                     </ValidityPeriod>
+                     <TargetAmount currencyCode="USD">1000.00</TargetAmount>
+                     <SellerParty>
+                        <InternalID>0000100000</InternalID>
+                        <BuyerID>0000100000</BuyerID>
+                     </SellerParty>
+                     <ResponsiblePurchasingOrganisationParty>
+                        <InternalID>0001</InternalID>
+                     </ResponsiblePurchasingOrganisationParty>
+                     <ResponsiblePurchasingGroupParty>
+                        <InternalID>001</InternalID>
+                     </ResponsiblePurchasingGroupParty>
+                     <DeliveryTerms>
+                        <Incoterms>
+                           <ClassificationCode>CIF</ClassificationCode>
+                           <TransferLocationName>Costs, insurance &amp; freight</TransferLocationName>
+                        </Incoterms>
+                     </DeliveryTerms>
+                     <CashDiscountTerms>
+                        <Code>0001</Code>
+                     </CashDiscountTerms>
+                     <Item actionCode="01">
+                        <ID>1</ID>
+                        <AribaContractItemID>1</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">item01</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">100.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">100.00</Amount>
+                              <BaseQuantity>5</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">39.000</TargetQuantity>
+                        <Product>
+                           <InternalID>TEST01</InternalID>
+                           <SellerID>TEST01</SellerID>
+                           <ManufacturerID>0001</ManufacturerID>
+                           <ProductCategoryInternalID>01</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-01-24</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>100.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <BaseDecimalValue>5 TEST001 HAWA 5.00 6040845</BaseDecimalValue>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                        </PriceSpecification>
+                        <DeliveryTerms>
+                           <Incoterms>
+                              <ClassificationCode>CIF</ClassificationCode>
+                              <TransferLocationName>Costs, insurance &amp; freight</TransferLocationName>
+                           </Incoterms>
+                        </DeliveryTerms>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                  </SchedulingAgreement>
+               </n0:SchedulingAgreementERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_SchedulingAgreement_AddOn_0000_SchedulingAgreement.xspec">
+      <label>Scenario for SchedulingAgreementAdvPrice</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4/SchedulingAgreement/SchedulingAgreementAdvPrice_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <AribaNetworkPayloadID>1525758404517.1657191722.000001185@h8/qgmxMIxEqUXhYV2sRlNcIlxg=</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN887330622</AribaNetworkID>
+                  <CreationDateTime>2020-05-19T08:39:34+05:30</CreationDateTime>
+                  <SenderBusinessSystemID/>
+                  <SenderParty>
+                     <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">AN02004576176-T</InternalID>
+                  </SenderParty>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <SchedulingAgreement actionCode="01">
+                  <ID/>
+                  <AribaContractID>CW8489</AribaContractID>
+                  <CompanyID>0001</CompanyID>
+                  <ProcessingTypeCode>LPA</ProcessingTypeCode>
+                  <ValidityPeriod>
+                     <StartDate>2020-05-19</StartDate>
+                     <EndDate>9999-12-31</EndDate>
+                  </ValidityPeriod>
+                  <SellerParty>
+                     <InternalID>sid518</InternalID>
+                     <BuyerID>sid518</BuyerID>
+                  </SellerParty>
+                  <ResponsiblePurchasingOrganisationParty>
+                     <InternalID>0001</InternalID>
+                  </ResponsiblePurchasingOrganisationParty>
+                  <ResponsiblePurchasingGroupParty>
+                     <InternalID>001</InternalID>
+                  </ResponsiblePurchasingGroupParty>
+                  <DeliveryTerms>
+                     <Incoterms>
+                        <ClassificationCode>CFR</ClassificationCode>
+                        <TransferLocationName>Costs and freight</TransferLocationName>
+                     </Incoterms>
+                  </DeliveryTerms>
+                  <CashDiscountTerms>
+                     <Code>0001</Code>
+                  </CashDiscountTerms>
+                  <Item actionCode="01">
+                     <ID>1</ID>
+                     <AribaContractItemID>1</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">mandatory check</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">109.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">109.00</Amount>
+                           <BaseQuantity>2</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="BOX">100.000</TargetQuantity>
+                     <Product>
+                        <InternalID>19787</InternalID>
+                        <ProductCategoryInternalID>1</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-02-01</StartDate>
+                           <EndDate>2020-04-30</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>109.00</DecimalValue>
+                           <MeasureUnitCode>BOX</MeasureUnitCode>
+                           <BaseDecimalValue>2</BaseDecimalValue>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">0</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>109.00</DecimalValue>
+                              <MeasureUnitCode>BOX</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                              <BaseDecimalValue>2</BaseDecimalValue>
+                              <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                              <BaseCurrencyCode>USD</BaseCurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">500</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>120.00</DecimalValue>
+                              <MeasureUnitCode>BOX</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                              <BaseDecimalValue>2</BaseDecimalValue>
+                              <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                              <BaseCurrencyCode>USD</BaseCurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">1000</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>124.00</DecimalValue>
+                              <MeasureUnitCode>BOX</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                              <BaseDecimalValue>2</BaseDecimalValue>
+                              <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                              <BaseCurrencyCode>USD</BaseCurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-02-01</StartDate>
+                           <EndDate>2020-04-30</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">-3</FixedAmount>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">0</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">-3</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">500</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">-4.6</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">1000</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">-2</FixedAmount>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-02-01</StartDate>
+                           <EndDate>2020-04-30</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">50.00</FixedAmount>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">0</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">50.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">500</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">43.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">1000</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">25.00</FixedAmount>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-05-01</StartDate>
+                           <EndDate>2020-07-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>109.00</DecimalValue>
+                           <MeasureUnitCode>BOX</MeasureUnitCode>
+                           <BaseDecimalValue>2</BaseDecimalValue>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">0</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>109.00</DecimalValue>
+                              <MeasureUnitCode>BOX</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                              <BaseDecimalValue>2</BaseDecimalValue>
+                              <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                              <BaseCurrencyCode>USD</BaseCurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">500</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>120.00</DecimalValue>
+                              <MeasureUnitCode>BOX</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                              <BaseDecimalValue>2</BaseDecimalValue>
+                              <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                              <BaseCurrencyCode>USD</BaseCurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">1000</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>124.00</DecimalValue>
+                              <MeasureUnitCode>BOX</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                              <BaseDecimalValue>2</BaseDecimalValue>
+                              <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                              <BaseCurrencyCode>USD</BaseCurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-05-01</StartDate>
+                           <EndDate>2020-07-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">-3</FixedAmount>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">0</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">-3</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">500</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">-4.6</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">1000</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">-2</FixedAmount>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-05-01</StartDate>
+                           <EndDate>2020-07-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">50.00</FixedAmount>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">0</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">50.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">500</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">43.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="BOX">1000</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="USD">25.00</FixedAmount>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <DeliveryTerms>
+                        <Incoterms>
+                           <ClassificationCode>CFR</ClassificationCode>
+                           <TransferLocationName>Costs and freight</TransferLocationName>
+                        </Incoterms>
+                     </DeliveryTerms>
+                     <QuoteReference>
+                        <ID>RFQID</ID>
+                        <ItemID>RFQNO</ItemID>
+                     </QuoteReference>
+                     <PurchaseRequestReference>
+                        <ID>REQID</ID>
+                        <ItemID>REQNO</ItemID>
+                     </PurchaseRequestReference>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+               </SchedulingAgreement>
+            </n0:SchedulingAgreementERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Scenario for SchedulingAgreementAdvPrice</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <AribaNetworkPayloadID>1525758404517.1657191722.000001185@h8/qgmxMIxEqUXhYV2sRlNcIlxg=</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN887330622</AribaNetworkID>
+                     <CreationDateTime>2020-05-19T08:39:34+05:30</CreationDateTime>
+                     <SenderBusinessSystemID/>
+                     <SenderParty>
+                        <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">AN02004576176-T</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <SchedulingAgreement actionCode="01">
+                     <ID/>
+                     <AribaContractID>CW8489</AribaContractID>
+                     <CompanyID>0001</CompanyID>
+                     <ProcessingTypeCode>LPA</ProcessingTypeCode>
+                     <ValidityPeriod>
+                        <StartDate>2020-05-19</StartDate>
+                        <EndDate>9999-12-31</EndDate>
+                     </ValidityPeriod>
+                     <SellerParty>
+                        <InternalID>sid518</InternalID>
+                        <BuyerID>sid518</BuyerID>
+                     </SellerParty>
+                     <ResponsiblePurchasingOrganisationParty>
+                        <InternalID>0001</InternalID>
+                     </ResponsiblePurchasingOrganisationParty>
+                     <ResponsiblePurchasingGroupParty>
+                        <InternalID>001</InternalID>
+                     </ResponsiblePurchasingGroupParty>
+                     <DeliveryTerms>
+                        <Incoterms>
+                           <ClassificationCode>CFR</ClassificationCode>
+                           <TransferLocationName>Costs and freight</TransferLocationName>
+                        </Incoterms>
+                     </DeliveryTerms>
+                     <CashDiscountTerms>
+                        <Code>0001</Code>
+                     </CashDiscountTerms>
+                     <Item actionCode="01">
+                        <ID>1</ID>
+                        <AribaContractItemID>1</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">mandatory check</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">109.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">109.00</Amount>
+                              <BaseQuantity>2</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="BOX">100.000</TargetQuantity>
+                        <Product>
+                           <InternalID>19787</InternalID>
+                           <ProductCategoryInternalID>1</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-02-01</StartDate>
+                              <EndDate>2020-04-30</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>109.00</DecimalValue>
+                              <MeasureUnitCode>BOX</MeasureUnitCode>
+                              <BaseDecimalValue>2</BaseDecimalValue>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">0</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>109.00</DecimalValue>
+                                 <MeasureUnitCode>BOX</MeasureUnitCode>
+                                 <CurrencyCode>USD</CurrencyCode>
+                                 <BaseDecimalValue>2</BaseDecimalValue>
+                                 <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                                 <BaseCurrencyCode>USD</BaseCurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">500</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>120.00</DecimalValue>
+                                 <MeasureUnitCode>BOX</MeasureUnitCode>
+                                 <CurrencyCode>USD</CurrencyCode>
+                                 <BaseDecimalValue>2</BaseDecimalValue>
+                                 <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                                 <BaseCurrencyCode>USD</BaseCurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">1000</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>124.00</DecimalValue>
+                                 <MeasureUnitCode>BOX</MeasureUnitCode>
+                                 <CurrencyCode>USD</CurrencyCode>
+                                 <BaseDecimalValue>2</BaseDecimalValue>
+                                 <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                                 <BaseCurrencyCode>USD</BaseCurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-02-01</StartDate>
+                              <EndDate>2020-04-30</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">-3</FixedAmount>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">0</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">-3</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">500</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">-4.6</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">1000</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">-2</FixedAmount>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-02-01</StartDate>
+                              <EndDate>2020-04-30</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">50.00</FixedAmount>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">0</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">50.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">500</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">43.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">1000</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">25.00</FixedAmount>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-05-01</StartDate>
+                              <EndDate>2020-07-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>109.00</DecimalValue>
+                              <MeasureUnitCode>BOX</MeasureUnitCode>
+                              <BaseDecimalValue>2</BaseDecimalValue>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">0</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>109.00</DecimalValue>
+                                 <MeasureUnitCode>BOX</MeasureUnitCode>
+                                 <CurrencyCode>USD</CurrencyCode>
+                                 <BaseDecimalValue>2</BaseDecimalValue>
+                                 <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                                 <BaseCurrencyCode>USD</BaseCurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">500</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>120.00</DecimalValue>
+                                 <MeasureUnitCode>BOX</MeasureUnitCode>
+                                 <CurrencyCode>USD</CurrencyCode>
+                                 <BaseDecimalValue>2</BaseDecimalValue>
+                                 <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                                 <BaseCurrencyCode>USD</BaseCurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">1000</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>124.00</DecimalValue>
+                                 <MeasureUnitCode>BOX</MeasureUnitCode>
+                                 <CurrencyCode>USD</CurrencyCode>
+                                 <BaseDecimalValue>2</BaseDecimalValue>
+                                 <BaseMeasureUnitCode>BOX</BaseMeasureUnitCode>
+                                 <BaseCurrencyCode>USD</BaseCurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-05-01</StartDate>
+                              <EndDate>2020-07-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">-3</FixedAmount>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">0</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">-3</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">500</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">-4.6</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">1000</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">-2</FixedAmount>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-05-01</StartDate>
+                              <EndDate>2020-07-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">50.00</FixedAmount>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">0</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">50.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">500</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">43.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="BOX">1000</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="USD">25.00</FixedAmount>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <DeliveryTerms>
+                           <Incoterms>
+                              <ClassificationCode>CFR</ClassificationCode>
+                              <TransferLocationName>Costs and freight</TransferLocationName>
+                           </Incoterms>
+                        </DeliveryTerms>
+                        <QuoteReference>
+                           <ID>RFQID</ID>
+                           <ItemID>RFQNO</ItemID>
+                        </QuoteReference>
+                        <PurchaseRequestReference>
+                           <ID>REQID</ID>
+                           <ItemID>REQNO</ItemID>
+                        </PurchaseRequestReference>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                  </SchedulingAgreement>
+               </n0:SchedulingAgreementERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_SchedulingAgreement_AddOn_0000_SchedulingAgreement.xspec">
+      <label>Scenario for SchedulingAgreementChange</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4/SchedulingAgreement/SchedulingAgreementChange_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <AribaNetworkPayloadID>1591242115630.1910278497.000000484@wbA5Hj8fG11Irhh3joKhpIYRcx8=</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN887330622</AribaNetworkID>
+                  <CreationDateTime>2020-06-04T09:11:43+05:30</CreationDateTime>
+                  <SenderBusinessSystemID/>
+                  <SenderParty>
+                     <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">AN02006948673-T</InternalID>
+                  </SenderParty>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <SchedulingAgreement actionCode="02">
+                  <ID>5500002445</ID>
+                  <AribaContractID>CW8733</AribaContractID>
+                  <CompanyID>0001</CompanyID>
+                  <ProcessingTypeCode>LP</ProcessingTypeCode>
+                  <ValidityPeriod>
+                     <StartDate>2020-05-28</StartDate>
+                     <EndDate>9999-12-31</EndDate>
+                  </ValidityPeriod>
+                  <TargetAmount currencyCode="EUR">13277.86</TargetAmount>
+                  <SellerParty>
+                     <InternalID>0000100000</InternalID>
+                     <BuyerID>0000100000</BuyerID>
+                  </SellerParty>
+                  <ResponsiblePurchasingOrganisationParty>
+                     <InternalID>0001</InternalID>
+                  </ResponsiblePurchasingOrganisationParty>
+                  <ResponsiblePurchasingGroupParty>
+                     <InternalID>001</InternalID>
+                  </ResponsiblePurchasingGroupParty>
+                  <CashDiscountTerms>
+                     <Code>0001</Code>
+                  </CashDiscountTerms>
+                  <Item actionCode="02">
+                     <ID>00010</ID>
+                     <AribaContractItemID>1</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en"> Annual validity period, multiple scale</Description>
+                     <Price>
+                        <NetAmount currencyCode="EUR">125.88</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="EUR">125.88</Amount>
+                           <BaseQuantity>1</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">178422.000</TargetQuantity>
+                     <Product>
+                        <ProductCategoryInternalID>01</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-05-01</StartDate>
+                           <EndDate>2021-04-30</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>125.88</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <CurrencyCode>EUR</CurrencyCode>
+                        </Rate>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">0</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>125.88</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">1</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>321.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">5</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>322.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">11</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>324.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">57</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>325.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">65</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>327.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">76</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>329.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">77</Quantity>
+                           </ScaleAxisStep>
+                           <Rate>
+                              <DecimalValue>330.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-05-01</StartDate>
+                           <EndDate>2021-04-30</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="EUR">-100</FixedAmount>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">0</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">-100</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">1</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">-90</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">5</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">-70</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">11</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">-60</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">57</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">-50</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">65</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">-30</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">76</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">-20</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">77</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">-10</FixedAmount>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2020-05-01</StartDate>
+                           <EndDate>2021-04-30</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">0</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">1</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">5</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">11</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">57</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">65</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">76</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        </ScaleLine>
+                        <ScaleLine>
+                           <ScaleAxisStep>
+                              <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                              <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                              <Quantity unitCode="EA">77</Quantity>
+                           </ScaleAxisStep>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                        </ScaleLine>
+                     </PriceSpecification>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+               </SchedulingAgreement>
+            </n0:SchedulingAgreementERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Scenario for SchedulingAgreementChange</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <AribaNetworkPayloadID>1591242115630.1910278497.000000484@wbA5Hj8fG11Irhh3joKhpIYRcx8=</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN887330622</AribaNetworkID>
+                     <CreationDateTime>2020-06-04T09:11:43+05:30</CreationDateTime>
+                     <SenderBusinessSystemID/>
+                     <SenderParty>
+                        <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">AN02006948673-T</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <SchedulingAgreement actionCode="02">
+                     <ID>5500002445</ID>
+                     <AribaContractID>CW8733</AribaContractID>
+                     <CompanyID>0001</CompanyID>
+                     <ProcessingTypeCode>LP</ProcessingTypeCode>
+                     <ValidityPeriod>
+                        <StartDate>2020-05-28</StartDate>
+                        <EndDate>9999-12-31</EndDate>
+                     </ValidityPeriod>
+                     <TargetAmount currencyCode="EUR">13277.86</TargetAmount>
+                     <SellerParty>
+                        <InternalID>0000100000</InternalID>
+                        <BuyerID>0000100000</BuyerID>
+                     </SellerParty>
+                     <ResponsiblePurchasingOrganisationParty>
+                        <InternalID>0001</InternalID>
+                     </ResponsiblePurchasingOrganisationParty>
+                     <ResponsiblePurchasingGroupParty>
+                        <InternalID>001</InternalID>
+                     </ResponsiblePurchasingGroupParty>
+                     <CashDiscountTerms>
+                        <Code>0001</Code>
+                     </CashDiscountTerms>
+                     <Item actionCode="02">
+                        <ID>00010</ID>
+                        <AribaContractItemID>1</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en"> Annual validity period, multiple scale</Description>
+                        <Price>
+                           <NetAmount currencyCode="EUR">125.88</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="EUR">125.88</Amount>
+                              <BaseQuantity>1</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">178422.000</TargetQuantity>
+                        <Product>
+                           <ProductCategoryInternalID>01</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-05-01</StartDate>
+                              <EndDate>2021-04-30</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>125.88</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>EUR</CurrencyCode>
+                           </Rate>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">0</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>125.88</DecimalValue>
+                                 <MeasureUnitCode>EA</MeasureUnitCode>
+                                 <CurrencyCode>EUR</CurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">1</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>321.00</DecimalValue>
+                                 <MeasureUnitCode>EA</MeasureUnitCode>
+                                 <CurrencyCode>EUR</CurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">5</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>322.00</DecimalValue>
+                                 <MeasureUnitCode>EA</MeasureUnitCode>
+                                 <CurrencyCode>EUR</CurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">11</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>324.00</DecimalValue>
+                                 <MeasureUnitCode>EA</MeasureUnitCode>
+                                 <CurrencyCode>EUR</CurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">57</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>325.00</DecimalValue>
+                                 <MeasureUnitCode>EA</MeasureUnitCode>
+                                 <CurrencyCode>EUR</CurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">65</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>327.00</DecimalValue>
+                                 <MeasureUnitCode>EA</MeasureUnitCode>
+                                 <CurrencyCode>EUR</CurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">76</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>329.00</DecimalValue>
+                                 <MeasureUnitCode>EA</MeasureUnitCode>
+                                 <CurrencyCode>EUR</CurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">77</Quantity>
+                              </ScaleAxisStep>
+                              <Rate>
+                                 <DecimalValue>330.00</DecimalValue>
+                                 <MeasureUnitCode>EA</MeasureUnitCode>
+                                 <CurrencyCode>EUR</CurrencyCode>
+                              </Rate>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-05-01</StartDate>
+                              <EndDate>2021-04-30</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="EUR">-100</FixedAmount>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">0</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">-100</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">1</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">-90</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">5</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">-70</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">11</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">-60</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">57</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">-50</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">65</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">-30</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">76</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">-20</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">77</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">-10</FixedAmount>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2020-05-01</StartDate>
+                              <EndDate>2021-04-30</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">0</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">1</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">5</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">11</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">57</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">65</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">76</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           </ScaleLine>
+                           <ScaleLine>
+                              <ScaleAxisStep>
+                                 <ScaleAxisBaseCode>C</ScaleAxisBaseCode>
+                                 <IntervalBoundaryTypeCode>A</IntervalBoundaryTypeCode>
+                                 <Quantity unitCode="EA">77</Quantity>
+                              </ScaleAxisStep>
+                              <FixedAmount currencyCode="EUR">100.00</FixedAmount>
+                           </ScaleLine>
+                        </PriceSpecification>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                  </SchedulingAgreement>
+               </n0:SchedulingAgreementERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_SchedulingAgreement_AddOn_0000_SchedulingAgreement.xspec">
+      <label>Scenario SchedulingAgreementDelete</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4/SchedulingAgreement/SchedulingAgreementDelete_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <AribaNetworkPayloadID>1525758404517.1657191722.000001185@h8/qgmxMIxEqUXhYV2sRlNcIlxg=</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02006849403</AribaNetworkID>
+                  <CreationDateTime>2019-03-12T11:44:12+05:30</CreationDateTime>
+                  <SenderBusinessSystemID/>
+                  <SenderParty>
+                     <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">%%BUYER%%</InternalID>
+                  </SenderParty>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <SchedulingAgreement actionCode="03">
+                  <ID>5500000848</ID>
+                  <AribaContractID>CW23019</AribaContractID>
+                  <CompanyID>0001</CompanyID>
+                  <ProcessingTypeCode/>
+                  <ValidityPeriod>
+                     <StartDate>2019-03-13</StartDate>
+                     <EndDate>2019-03-31</EndDate>
+                  </ValidityPeriod>
+                  <TargetAmount currencyCode="USD">44444.00</TargetAmount>
+                  <SellerParty>
+                     <InternalID>0000100000</InternalID>
+                     <BuyerID>0000100000</BuyerID>
+                  </SellerParty>
+                  <ResponsiblePurchasingOrganisationParty>
+                     <InternalID>0001</InternalID>
+                  </ResponsiblePurchasingOrganisationParty>
+                  <ResponsiblePurchasingGroupParty>
+                     <InternalID>001</InternalID>
+                  </ResponsiblePurchasingGroupParty>
+                  <CashDiscountTerms>
+                     <Code>0002</Code>
+                  </CashDiscountTerms>
+                  <Item actionCode="03">
+                     <ID>00010</ID>
+                     <AribaContractItemID>1</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">with plant</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">123.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">123.00</Amount>
+                           <BaseQuantity>1</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">30.000</TargetQuantity>
+                     <Product>
+                        <InternalID>2372</InternalID>
+                        <ProductCategoryInternalID>002</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>123.00</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">0.2</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>0.3</Percent>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">0.5</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>0.3</Percent>
+                     </PriceSpecification>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item actionCode="03">
+                     <ID>00020</ID>
+                     <AribaContractItemID>2</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">Line2</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">255.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">255.00</Amount>
+                           <BaseQuantity>1</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">10.000</TargetQuantity>
+                     <Product>
+                        <SellerID>SP002</SellerID>
+                        <ProductCategoryInternalID>001</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>255.00</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">2.00</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>1.00</Percent>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">1.00</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>2.00</Percent>
+                     </PriceSpecification>
+                     <DeliveryTerms>
+                        <Incoterms>
+                           <ClassificationCode>CPT</ClassificationCode>
+                           <TransferLocationName>Freight-free</TransferLocationName>
+                        </Incoterms>
+                     </DeliveryTerms>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item actionCode="03">
+                     <ID>00030</ID>
+                     <AribaContractItemID>3</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">Line3</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">500.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">500.00</Amount>
+                           <BaseQuantity>1</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">40.000</TargetQuantity>
+                     <Product>
+                        <SellerID>SP002</SellerID>
+                        <ProductCategoryInternalID>001</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>500.00</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">3.00</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>4.00</Percent>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">5.00</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>6.00</Percent>
+                     </PriceSpecification>
+                     <DeliveryTerms>
+                        <Incoterms>
+                           <ClassificationCode>CPT</ClassificationCode>
+                           <TransferLocationName>Freight-free</TransferLocationName>
+                        </Incoterms>
+                     </DeliveryTerms>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item actionCode="03">
+                     <ID>00040</ID>
+                     <AribaContractItemID>4</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">with plant</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">1234.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">1234.00</Amount>
+                           <BaseQuantity>1</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">20.000</TargetQuantity>
+                     <Product>
+                        <InternalID>000000000000000221</InternalID>
+                        <ProductCategoryInternalID>002</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>1234.00</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">0</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>0</Percent>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">0</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>0</Percent>
+                     </PriceSpecification>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+               </SchedulingAgreement>
+            </n0:SchedulingAgreementERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>Scenario for SchedulingAgreementDelete</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <AribaNetworkPayloadID>1525758404517.1657191722.000001185@h8/qgmxMIxEqUXhYV2sRlNcIlxg=</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02006849403</AribaNetworkID>
+                     <CreationDateTime>2019-03-12T11:44:12+05:30</CreationDateTime>
+                     <SenderBusinessSystemID/>
+                     <SenderParty>
+                        <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">%%BUYER%%</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <SchedulingAgreement actionCode="03">
+                     <ID>5500000848</ID>
+                     <AribaContractID>CW23019</AribaContractID>
+                     <CompanyID>0001</CompanyID>
+                     <ProcessingTypeCode/>
+                     <ValidityPeriod>
+                        <StartDate>2019-03-13</StartDate>
+                        <EndDate>2019-03-31</EndDate>
+                     </ValidityPeriod>
+                     <TargetAmount currencyCode="USD">44444.00</TargetAmount>
+                     <SellerParty>
+                        <InternalID>0000100000</InternalID>
+                        <BuyerID>0000100000</BuyerID>
+                     </SellerParty>
+                     <ResponsiblePurchasingOrganisationParty>
+                        <InternalID>0001</InternalID>
+                     </ResponsiblePurchasingOrganisationParty>
+                     <ResponsiblePurchasingGroupParty>
+                        <InternalID>001</InternalID>
+                     </ResponsiblePurchasingGroupParty>
+                     <CashDiscountTerms>
+                        <Code>0002</Code>
+                     </CashDiscountTerms>
+                     <Item actionCode="03">
+                        <ID>00010</ID>
+                        <AribaContractItemID>1</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">with plant</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">123.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">123.00</Amount>
+                              <BaseQuantity>1</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">30.000</TargetQuantity>
+                        <Product>
+                           <InternalID>2372</InternalID>
+                           <ProductCategoryInternalID>002</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>123.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">0.2</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>0.3</Percent>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">0.5</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>0.3</Percent>
+                        </PriceSpecification>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item actionCode="03">
+                        <ID>00020</ID>
+                        <AribaContractItemID>2</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">Line2</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">255.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">255.00</Amount>
+                              <BaseQuantity>1</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">10.000</TargetQuantity>
+                        <Product>
+                           <SellerID>SP002</SellerID>
+                           <ProductCategoryInternalID>001</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>255.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">2.00</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>1.00</Percent>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">1.00</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>2.00</Percent>
+                        </PriceSpecification>
+                        <DeliveryTerms>
+                           <Incoterms>
+                              <ClassificationCode>CPT</ClassificationCode>
+                              <TransferLocationName>Freight-free</TransferLocationName>
+                           </Incoterms>
+                        </DeliveryTerms>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item actionCode="03">
+                        <ID>00030</ID>
+                        <AribaContractItemID>3</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">Line3</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">500.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">500.00</Amount>
+                              <BaseQuantity>1</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">40.000</TargetQuantity>
+                        <Product>
+                           <SellerID>SP002</SellerID>
+                           <ProductCategoryInternalID>001</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>500.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">3.00</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>4.00</Percent>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">5.00</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>6.00</Percent>
+                        </PriceSpecification>
+                        <DeliveryTerms>
+                           <Incoterms>
+                              <ClassificationCode>CPT</ClassificationCode>
+                              <TransferLocationName>Freight-free</TransferLocationName>
+                           </Incoterms>
+                        </DeliveryTerms>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item actionCode="03">
+                        <ID>00040</ID>
+                        <AribaContractItemID>4</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">with plant</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">1234.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">1234.00</Amount>
+                              <BaseQuantity>1</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">20.000</TargetQuantity>
+                        <Product>
+                           <InternalID>000000000000000221</InternalID>
+                           <ProductCategoryInternalID>002</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>1234.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">0</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>0</Percent>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">0</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>0</Percent>
+                        </PriceSpecification>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                  </SchedulingAgreement>
+               </n0:SchedulingAgreementERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_SchedulingAgreement_AddOn_0000_SchedulingAgreement.xspec">
+      <label>Scenario for SchedulingAgreementComments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4/SchedulingAgreement/SchedulingAgreementComments_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <AribaNetworkPayloadID>1525758404517.1657191722.000001185@h8/qgmxMIxEqUXhYV2sRlNcIlxg=</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02006849403</AribaNetworkID>
+                  <CreationDateTime>2019-03-12T11:44:12+05:30</CreationDateTime>
+                  <SenderBusinessSystemID/>
+                  <SenderParty>
+                     <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">AN02004576176-T</InternalID>
+                  </SenderParty>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <SchedulingAgreement actionCode="01">
+                  <ID/>
+                  <AribaContractID>CW23026</AribaContractID>
+                  <CompanyID>0001</CompanyID>
+                  <ProcessingTypeCode/>
+                  <ValidityPeriod>
+                     <StartDate>2019-03-13</StartDate>
+                     <EndDate>2019-03-31</EndDate>
+                  </ValidityPeriod>
+                  <TargetAmount currencyCode="USD">44444.00</TargetAmount>
+                  <SellerParty>
+                     <InternalID>0000100000</InternalID>
+                     <BuyerID>0000100000</BuyerID>
+                  </SellerParty>
+                  <ResponsiblePurchasingOrganisationParty>
+                     <InternalID>0001</InternalID>
+                  </ResponsiblePurchasingOrganisationParty>
+                  <ResponsiblePurchasingGroupParty>
+                     <InternalID>001</InternalID>
+                  </ResponsiblePurchasingGroupParty>
+                  <CashDiscountTerms>
+                     <Code>0002</Code>
+                  </CashDiscountTerms>
+                  <TextCollection>
+                     <Text>
+                        <TypeCode>L01</TypeCode>
+                        <ContentText languageCode="EN">HeaderText</ContentText>
+                     </Text>
+                  </TextCollection>
+                  <Item actionCode="01">
+                     <ID>1</ID>
+                     <AribaContractItemID>1</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">with plant</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">123.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">123.00</Amount>
+                           <BaseQuantity>1</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">20.000</TargetQuantity>
+                     <Product>
+                        <InternalID>2372</InternalID>
+                        <ProductCategoryInternalID>002</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>123.00</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">0.2</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>0.3</Percent>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">0.5</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>0.3</Percent>
+                     </PriceSpecification>
+                     <TextCollection>
+                        <Text actionCode="01">
+                           <TypeCode>L01</TypeCode>
+                           <ContentText languageCode="EN">ItemText</ContentText>
+                        </Text>
+                     </TextCollection>
+                     <PurchaseRequestReference>
+                        <ID>10013544</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseRequestReference>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item actionCode="01">
+                     <ID>2</ID>
+                     <AribaContractItemID>2</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">with plant</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">1234.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">1234.00</Amount>
+                           <BaseQuantity>1</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">20.000</TargetQuantity>
+                     <Product>
+                        <InternalID>000000000000000221</InternalID>
+                        <ProductCategoryInternalID>002</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>1234.00</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">0</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>0</Percent>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">0</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>0</Percent>
+                     </PriceSpecification>
+                     <PurchaseRequestReference>
+                        <ID>10013544</ID>
+                        <ItemID>20</ItemID>
+                     </PurchaseRequestReference>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+                  <Item actionCode="01">
+                     <ID>3</ID>
+                     <AribaContractItemID>3</AribaContractItemID>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <ProcessingTypeCode>0</ProcessingTypeCode>
+                     <Description languageCode="en">Line3</Description>
+                     <Price>
+                        <NetAmount currencyCode="USD">255.00</NetAmount>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">255.00</Amount>
+                           <BaseQuantity>1</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <TargetQuantity unitCode="EA">10.000</TargetQuantity>
+                     <Product>
+                        <ProductCategoryInternalID>007</ProductCategoryInternalID>
+                     </Product>
+                     <PriceSpecification>
+                        <TypeCode>PB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Rate>
+                           <DecimalValue>255.00</DecimalValue>
+                           <MeasureUnitCode>EA</MeasureUnitCode>
+                           <CurrencyCode>USD</CurrencyCode>
+                        </Rate>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">2.00</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>RA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>1.00</Percent>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZB00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <FixedAmount currencyCode="USD">1.00</FixedAmount>
+                     </PriceSpecification>
+                     <PriceSpecification>
+                        <TypeCode>ZA00</TypeCode>
+                        <ValidityPeriod>
+                           <StartDate>2019-03-12</StartDate>
+                           <EndDate>9999-12-31</EndDate>
+                        </ValidityPeriod>
+                        <Percent>2.00</Percent>
+                     </PriceSpecification>
+                     <DeliveryTerms>
+                        <Incoterms>
+                           <ClassificationCode>CPT</ClassificationCode>
+                           <TransferLocationName>Freight-free</TransferLocationName>
+                        </Incoterms>
+                     </DeliveryTerms>
+                     <AccountingCodingBlockDistribution>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                           <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                           <InternalOrderID>TESTOrder</InternalOrderID>
+                        </AccountingCodingBlockAssignment>
+                     </AccountingCodingBlockDistribution>
+                  </Item>
+               </SchedulingAgreement>
+            </n0:SchedulingAgreementERPRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>Scenario for SchedulingAgreementComments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:SchedulingAgreementERPRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <AribaNetworkPayloadID>1525758404517.1657191722.000001185@h8/qgmxMIxEqUXhYV2sRlNcIlxg=</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02006849403</AribaNetworkID>
+                     <CreationDateTime>2019-03-12T11:44:12+05:30</CreationDateTime>
+                     <SenderBusinessSystemID/>
+                     <SenderParty>
+                        <InternalID schemeID="NetworkID" schemeAgencyID="www.ariba.com">AN02004576176-T</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <SchedulingAgreement actionCode="01">
+                     <ID/>
+                     <AribaContractID>CW23026</AribaContractID>
+                     <CompanyID>0001</CompanyID>
+                     <ProcessingTypeCode/>
+                     <ValidityPeriod>
+                        <StartDate>2019-03-13</StartDate>
+                        <EndDate>2019-03-31</EndDate>
+                     </ValidityPeriod>
+                     <TargetAmount currencyCode="USD">44444.00</TargetAmount>
+                     <SellerParty>
+                        <InternalID>0000100000</InternalID>
+                        <BuyerID>0000100000</BuyerID>
+                     </SellerParty>
+                     <ResponsiblePurchasingOrganisationParty>
+                        <InternalID>0001</InternalID>
+                     </ResponsiblePurchasingOrganisationParty>
+                     <ResponsiblePurchasingGroupParty>
+                        <InternalID>001</InternalID>
+                     </ResponsiblePurchasingGroupParty>
+                     <CashDiscountTerms>
+                        <Code>0002</Code>
+                     </CashDiscountTerms>
+                     <TextCollection>
+                        <Text>
+                           <TypeCode>L01</TypeCode>
+                           <ContentText languageCode="EN">HeaderText</ContentText>
+                        </Text>
+                     </TextCollection>
+                     <Item actionCode="01">
+                        <ID>1</ID>
+                        <AribaContractItemID>1</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">with plant</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">123.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">123.00</Amount>
+                              <BaseQuantity>1</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">20.000</TargetQuantity>
+                        <Product>
+                           <InternalID>2372</InternalID>
+                           <ProductCategoryInternalID>002</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>123.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">0.2</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>0.3</Percent>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">0.5</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>0.3</Percent>
+                        </PriceSpecification>
+                        <TextCollection>
+                           <Text actionCode="01">
+                              <TypeCode>L01</TypeCode>
+                              <ContentText languageCode="EN">ItemText</ContentText>
+                           </Text>
+                        </TextCollection>
+                        <PurchaseRequestReference>
+                           <ID>10013544</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseRequestReference>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item actionCode="01">
+                        <ID>2</ID>
+                        <AribaContractItemID>2</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">with plant</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">1234.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">1234.00</Amount>
+                              <BaseQuantity>1</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">20.000</TargetQuantity>
+                        <Product>
+                           <InternalID>000000000000000221</InternalID>
+                           <ProductCategoryInternalID>002</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>1234.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">0</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>0</Percent>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">0</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>0</Percent>
+                        </PriceSpecification>
+                        <PurchaseRequestReference>
+                           <ID>10013544</ID>
+                           <ItemID>20</ItemID>
+                        </PurchaseRequestReference>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                     <Item actionCode="01">
+                        <ID>3</ID>
+                        <AribaContractItemID>3</AribaContractItemID>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <ProcessingTypeCode>0</ProcessingTypeCode>
+                        <Description languageCode="en">Line3</Description>
+                        <Price>
+                           <NetAmount currencyCode="USD">255.00</NetAmount>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">255.00</Amount>
+                              <BaseQuantity>1</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <TargetQuantity unitCode="EA">10.000</TargetQuantity>
+                        <Product>
+                           <ProductCategoryInternalID>007</ProductCategoryInternalID>
+                        </Product>
+                        <PriceSpecification>
+                           <TypeCode>PB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Rate>
+                              <DecimalValue>255.00</DecimalValue>
+                              <MeasureUnitCode>EA</MeasureUnitCode>
+                              <CurrencyCode>USD</CurrencyCode>
+                           </Rate>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">2.00</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>RA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>1.00</Percent>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZB00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <FixedAmount currencyCode="USD">1.00</FixedAmount>
+                        </PriceSpecification>
+                        <PriceSpecification>
+                           <TypeCode>ZA00</TypeCode>
+                           <ValidityPeriod>
+                              <StartDate>2019-03-12</StartDate>
+                              <EndDate>9999-12-31</EndDate>
+                           </ValidityPeriod>
+                           <Percent>2.00</Percent>
+                        </PriceSpecification>
+                        <DeliveryTerms>
+                           <Incoterms>
+                              <ClassificationCode>CPT</ClassificationCode>
+                              <TransferLocationName>Freight-free</TransferLocationName>
+                           </Incoterms>
+                        </DeliveryTerms>
+                        <AccountingCodingBlockDistribution>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <AccountingCodingBlockTypeCode>F</AccountingCodingBlockTypeCode>
+                              <AccountDeterminationExpenseGroupCode>0000400000 000040000</AccountDeterminationExpenseGroupCode>
+                              <InternalOrderID>TESTOrder</InternalOrderID>
+                           </AccountingCodingBlockAssignment>
+                        </AccountingCodingBlockDistribution>
+                     </Item>
+                  </SchedulingAgreement>
+               </n0:SchedulingAgreementERPRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_SchedulingAgreement_AddOn_0000_SchedulingAgreement.xspec">
+      <label>Scenario for SchedulingAgreement Mixed Line</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4/SchedulingAgreement/SchedulingAgreementMixed_BM.xml"/>
+      </input-wrap>
+      <result href="result-d193e0.xml"/>
+      <test id="scenario6-expect1" successful="true">
+         <label>Scenario for SchedulingAgreement Mixed Line</label>
+         <expect href="result-d196e0.xml"/>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/fieldglass/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_FieldGlass_0000_ServiceEntrySheetStsNotifMsg.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/fieldglass/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_FieldGlass_0000_ServiceEntrySheetStsNotifMsg.xsl"
+        date="2023-04-27T15:32:31.699894+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/fieldglass/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_FieldGlass_0000_ServiceEntrySheetStsNotifMsg.xspec">
+      <label>Service Entry Sheet - Status Update Request processing</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/fieldglass/SES/SES_SUR.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetStsNotifMsg xmlns:n0="http://sap.com/xi/SAPGlobal20/Global"
+                                             xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+               <MessageHeader>
+                  <ID>d929fde6-6d11-91c9-8318-1a62f150b688</ID>
+                  <ReferenceID>DLABTU00000609</ReferenceID>
+               </MessageHeader>
+               <ServiceEntrySheetStatusEntity>
+                  <ServiceEntrySheet>1583</ServiceEntrySheet>
+                  <PurgDocExternalReference>DLABTU00000609</PurgDocExternalReference>
+                  <PurchaseOrder/>
+                  <Supplier/>
+                  <ApprovalStatus>20</ApprovalStatus>
+                  <ExternalRevisionDateTime>2021-07-06T12:00:00</ExternalRevisionDateTime>
+                  <IsDeleted>false</IsDeleted>
+                  <MessageCreationDateTime>2021-07-06T07:36:31.0726540 </MessageCreationDateTime>
+               </ServiceEntrySheetStatusEntity>
+            </n0:ServiceEntrySheetStsNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Service Entry Sheet - Status Update Request processing</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetStsNotifMsg xmlns:n0="http://sap.com/xi/SAPGlobal20/Global"
+                                                xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+                  <MessageHeader>
+                     <ID>d929fde6-6d11-91c9-8318-1a62f150b688</ID>
+                     <ReferenceID>DLABTU00000609</ReferenceID>
+                  </MessageHeader>
+                  <ServiceEntrySheetStatusEntity>
+                     <ServiceEntrySheet>1583</ServiceEntrySheet>
+                     <PurgDocExternalReference>DLABTU00000609</PurgDocExternalReference>
+                     <PurchaseOrder/>
+                     <Supplier/>
+                     <ApprovalStatus>20</ApprovalStatus>
+                     <ExternalRevisionDateTime>2021-07-06T12:00:00</ExternalRevisionDateTime>
+                     <IsDeleted>false</IsDeleted>
+                     <MessageCreationDateTime>2021-07-06T07:36:31.0726540 </MessageCreationDateTime>
+                  </ServiceEntrySheetStatusEntity>
+               </n0:ServiceEntrySheetStsNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/fieldglass/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_FieldGlass_0000_ServiceEntrySheetStsNotifMsg.xspec">
+      <label>Service Entry Sheet - Status Update Request approved</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/fieldglass/SES/SES_SURApproved.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetStsNotifMsg xmlns:n0="http://sap.com/xi/SAPGlobal20/Global"
+                                             xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+               <MessageHeader>
+                  <ID>d929fde6-6d11-91c9-8318-1a62f150b688</ID>
+                  <ReferenceID>DLABTU00000609</ReferenceID>
+               </MessageHeader>
+               <ServiceEntrySheetStatusEntity>
+                  <ServiceEntrySheet>1583</ServiceEntrySheet>
+                  <PurgDocExternalReference>DLABTU00000609</PurgDocExternalReference>
+                  <PurchaseOrder/>
+                  <Supplier/>
+                  <ApprovalStatus>30</ApprovalStatus>
+                  <ExternalRevisionDateTime>2021-07-06T12:00:00</ExternalRevisionDateTime>
+                  <IsDeleted>false</IsDeleted>
+                  <MessageCreationDateTime>2021-07-06T07:36:31.0726540 </MessageCreationDateTime>
+               </ServiceEntrySheetStatusEntity>
+            </n0:ServiceEntrySheetStsNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Service Entry Sheet - Status Update Request approved</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetStsNotifMsg xmlns:n0="http://sap.com/xi/SAPGlobal20/Global"
+                                                xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+                  <MessageHeader>
+                     <ID>d929fde6-6d11-91c9-8318-1a62f150b688</ID>
+                     <ReferenceID>DLABTU00000609</ReferenceID>
+                  </MessageHeader>
+                  <ServiceEntrySheetStatusEntity>
+                     <ServiceEntrySheet>1583</ServiceEntrySheet>
+                     <PurgDocExternalReference>DLABTU00000609</PurgDocExternalReference>
+                     <PurchaseOrder/>
+                     <Supplier/>
+                     <ApprovalStatus>30</ApprovalStatus>
+                     <ExternalRevisionDateTime>2021-07-06T12:00:00</ExternalRevisionDateTime>
+                     <IsDeleted>false</IsDeleted>
+                     <MessageCreationDateTime>2021-07-06T07:36:31.0726540 </MessageCreationDateTime>
+                  </ServiceEntrySheetStatusEntity>
+               </n0:ServiceEntrySheetStsNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/fieldglass/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_FieldGlass_0000_ServiceEntrySheetStsNotifMsg.xspec">
+      <label>Service Entry Sheet - Status Update Request rejected</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/fieldglass/SES/SES_SURRejected.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetStsNotifMsg xmlns:n0="http://sap.com/xi/SAPGlobal20/Global"
+                                             xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+               <MessageHeader>
+                  <ID>d929fde6-6d11-91c9-8318-1a62f150b688</ID>
+                  <ReferenceID>DLABTU00000609</ReferenceID>
+               </MessageHeader>
+               <ServiceEntrySheetStatusEntity>
+                  <ServiceEntrySheet>1583</ServiceEntrySheet>
+                  <PurgDocExternalReference>DLABTU00000609</PurgDocExternalReference>
+                  <PurchaseOrder/>
+                  <Supplier/>
+                  <ApprovalStatus>40</ApprovalStatus>
+                  <HasError>Yes</HasError>
+                  <LogMessage>
+                     <LogMessageCode>404</LogMessageCode>
+                     <LogMessageText/>
+                  </LogMessage>
+                  <ExternalRevisionDateTime>2021-07-06T12:00:00</ExternalRevisionDateTime>
+                  <IsDeleted>false</IsDeleted>
+                  <MessageCreationDateTime>2021-07-06T07:36:31.0726540 </MessageCreationDateTime>
+               </ServiceEntrySheetStatusEntity>
+            </n0:ServiceEntrySheetStsNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Service Entry Sheet - Status Update Request rejected</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetStsNotifMsg xmlns:n0="http://sap.com/xi/SAPGlobal20/Global"
+                                                xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+                  <MessageHeader>
+                     <ID>d929fde6-6d11-91c9-8318-1a62f150b688</ID>
+                     <ReferenceID>DLABTU00000609</ReferenceID>
+                  </MessageHeader>
+                  <ServiceEntrySheetStatusEntity>
+                     <ServiceEntrySheet>1583</ServiceEntrySheet>
+                     <PurgDocExternalReference>DLABTU00000609</PurgDocExternalReference>
+                     <PurchaseOrder/>
+                     <Supplier/>
+                     <ApprovalStatus>40</ApprovalStatus>
+                     <HasError>Yes</HasError>
+                     <LogMessage>
+                        <LogMessageCode>404</LogMessageCode>
+                        <LogMessageText/>
+                     </LogMessage>
+                     <ExternalRevisionDateTime>2021-07-06T12:00:00</ExternalRevisionDateTime>
+                     <IsDeleted>false</IsDeleted>
+                     <MessageCreationDateTime>2021-07-06T07:36:31.0726540 </MessageCreationDateTime>
+                  </ServiceEntrySheetStatusEntity>
+               </n0:ServiceEntrySheetStsNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/fieldglass/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_FieldGlass_0000_ServiceEntrySheetStsNotifMsg.xspec">
+      <label>Service Entry Sheet - Status Update Request failed</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/fieldglass/SES/SES_SURFailed.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetStsNotifMsg xmlns:n0="http://sap.com/xi/SAPGlobal20/Global"
+                                             xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+               <MessageHeader>
+                  <ID>d929fde6-6d11-91c9-8318-1a62f150b688</ID>
+                  <ReferenceID>DLABTU00000609</ReferenceID>
+               </MessageHeader>
+               <ServiceEntrySheetStatusEntity>
+                  <ServiceEntrySheet>1583</ServiceEntrySheet>
+                  <PurgDocExternalReference>DLABTU00000609</PurgDocExternalReference>
+                  <PurchaseOrder/>
+                  <Supplier/>
+                  <ApprovalStatus>20</ApprovalStatus>
+                  <HasError>Yes</HasError>
+                  <LogMessage>
+                     <LogMessageCode>401</LogMessageCode>
+                     <LogMessageText>OK</LogMessageText>
+                  </LogMessage>
+                  <ExternalRevisionDateTime>2021-07-06T12:00:00</ExternalRevisionDateTime>
+                  <IsDeleted>true</IsDeleted>
+                  <MessageCreationDateTime>2021-07-06T07:36:31.0726540 </MessageCreationDateTime>
+               </ServiceEntrySheetStatusEntity>
+            </n0:ServiceEntrySheetStsNotifMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>Service Entry Sheet - Status Update Request failed</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetStsNotifMsg xmlns:n0="http://sap.com/xi/SAPGlobal20/Global"
+                                                xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+                  <MessageHeader>
+                     <ID>d929fde6-6d11-91c9-8318-1a62f150b688</ID>
+                     <ReferenceID>DLABTU00000609</ReferenceID>
+                  </MessageHeader>
+                  <ServiceEntrySheetStatusEntity>
+                     <ServiceEntrySheet>1583</ServiceEntrySheet>
+                     <PurgDocExternalReference>DLABTU00000609</PurgDocExternalReference>
+                     <PurchaseOrder/>
+                     <Supplier/>
+                     <ApprovalStatus>20</ApprovalStatus>
+                     <HasError>Yes</HasError>
+                     <LogMessage>
+                        <LogMessageCode>401</LogMessageCode>
+                        <LogMessageText>OK</LogMessageText>
+                     </LogMessage>
+                     <ExternalRevisionDateTime>2021-07-06T12:00:00</ExternalRevisionDateTime>
+                     <IsDeleted>true</IsDeleted>
+                     <MessageCreationDateTime>2021-07-06T07:36:31.0726540 </MessageCreationDateTime>
+                  </ServiceEntrySheetStatusEntity>
+               </n0:ServiceEntrySheetStsNotifMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

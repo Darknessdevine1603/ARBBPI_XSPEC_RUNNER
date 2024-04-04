@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_RequisitionStatusResponse_cXML_0000_RequisitionStatusResponse.xsl">
+    
+    <x:scenario label="RequisitionRealTimeBudgetExportRequest">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/RequisitionResponse/RequisitionResponse_BM.xml"/>
+        <x:expect label="RequisitionRealTimeBudgetExportRequest" href="../../../XSPEC/payloads/target/outbound/p2p/RequisitionResponse/RequisitionResponse_AM.xml" select="element()" />        
+    </x:scenario>
+
+    <x:scenario label="RequisitionBudgetCheckExportRequest">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/RequisitionResponse/RequisitionRealTime_BM.xml"/>
+        <x:expect label="RequisitionBudgetCheckExportRequest" href="../../../XSPEC/payloads/target/outbound/p2p/RequisitionResponse/RequisitionRealmTime_AM.xml" select="element()" />        
+    </x:scenario>
+    
+    <x:scenario label="RequisitionRevertBudgetToEarlierVersionExportRequest">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/RequisitionResponse/RequisitionRevert_BM.xml"/>
+        <x:expect label="RequisitionRevertBudgetToEarlierVersionExportRequest" href="../../../XSPEC/payloads/target/outbound/p2p/RequisitionResponse/RequisitionRevert_AM.xml" select="element()" />        
+    </x:scenario>
+    
+    <x:scenario label="RequisitionErrorCase">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/RequisitionResponse/RequisitionResponseError_BM.xml"/>
+        <x:expect label="RequisitionErrorCase" href="../../../XSPEC/payloads/target/outbound/p2p/RequisitionResponse/RequisitionResponseError_AM.xml" select="element()" />        
+    </x:scenario>
+    
+    <x:scenario label="RequisitionRevertBudgetErrorcase">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/RequisitionResponse/RequisitionRevertError_BM.xml"/>
+        <x:expect label="RequisitionRevertBudgetErrorcase" href="../../../XSPEC/payloads/target/outbound/p2p/RequisitionResponse/RequisitionRevertError_AM.xml" select="element()" />        
+    </x:scenario>
+    
+</x:description>

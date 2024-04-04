@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_OAGIS_9.2_ConfirmBOD.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/OAGIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_OAGIS_9.2_ConfirmBOD.xsl"
+        date="2023-04-27T15:58:36.007069+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_OAGIS_9.2_ConfirmBOD.xspec">
+      <label>ConfirmBOD Accepted</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/OAGIS/StatusUpdateRequest/ConfirmBOD_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ConfirmBOD>
+               <ApplicationArea>
+                  <Sender>
+                     <LogicalID/>
+                     <ComponentID>StatusUpdateRequest</ComponentID>
+                  </Sender>
+                  <CreationDateTime>2021-05-08T17:12:47Z</CreationDateTime>
+                  <BODID>a4947064-6e20-9f43-a7d3-b476bec8beab</BODID>
+                  <UserArea>
+                     <DUNSID schemeID="ReceiverKey"/>
+                  </UserArea>
+               </ApplicationArea>
+               <DataArea>
+                  <Confirm>
+                     <OriginalApplicationArea>
+                        <Sender>
+                           <LogicalID/>
+                        </Sender>
+                        <CreationDateTime>2021-05-08T17:12:47Z</CreationDateTime>
+                        <BODID/>
+                        <UserArea>
+                           <DUNSID/>
+                        </UserArea>
+                     </OriginalApplicationArea>
+                     <ResponseCriteria>
+                        <ResponseExpression actionCode="Accepted"/>
+                     </ResponseCriteria>
+                  </Confirm>
+                  <BOD>
+                     <BODSuccessMessage>
+                        <NounSuccessMessage>
+                           <ProcessMessage>
+                              <Description/>
+                           </ProcessMessage>
+                        </NounSuccessMessage>
+                     </BODSuccessMessage>
+                  </BOD>
+               </DataArea>
+            </ConfirmBOD>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ConfirmBOD Accepted</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ConfirmBOD>
+                  <ApplicationArea>
+                     <Sender>
+                        <LogicalID/>
+                        <ComponentID>StatusUpdateRequest</ComponentID>
+                     </Sender>
+                     <CreationDateTime>2021-05-08T17:12:47Z</CreationDateTime>
+                     <BODID>a4947064-6e20-9f43-a7d3-b476bec8beab</BODID>
+                     <UserArea>
+                        <DUNSID schemeID="ReceiverKey"/>
+                     </UserArea>
+                  </ApplicationArea>
+                  <DataArea>
+                     <Confirm>
+                        <OriginalApplicationArea>
+                           <Sender>
+                              <LogicalID/>
+                           </Sender>
+                           <CreationDateTime>2021-05-08T17:12:47Z</CreationDateTime>
+                           <BODID/>
+                           <UserArea>
+                              <DUNSID/>
+                           </UserArea>
+                        </OriginalApplicationArea>
+                        <ResponseCriteria>
+                           <ResponseExpression actionCode="Accepted"/>
+                        </ResponseCriteria>
+                     </Confirm>
+                     <BOD>
+                        <BODSuccessMessage>
+                           <NounSuccessMessage>
+                              <ProcessMessage>
+                                 <Description/>
+                              </ProcessMessage>
+                           </NounSuccessMessage>
+                        </BODSuccessMessage>
+                     </BOD>
+                  </DataArea>
+               </ConfirmBOD>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_cXML_0000_StatusUpdateRequest_OAGIS_9.2_ConfirmBOD.xspec">
+      <label>ConfirmBOD Rejected</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/OAGIS/StatusUpdateRequest/ConfirmBODRejected_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ConfirmBOD>
+               <ApplicationArea>
+                  <Sender>
+                     <LogicalID/>
+                     <ComponentID>StatusUpdateRequest</ComponentID>
+                  </Sender>
+                  <CreationDateTime>2021-05-08T17:12:47Z</CreationDateTime>
+                  <BODID>a4947064-6e20-9f43-a7d3-b476bec8beab</BODID>
+                  <UserArea>
+                     <DUNSID schemeID="ReceiverKey"/>
+                  </UserArea>
+               </ApplicationArea>
+               <DataArea>
+                  <Confirm>
+                     <OriginalApplicationArea>
+                        <Sender>
+                           <LogicalID/>
+                        </Sender>
+                        <CreationDateTime>2021-05-08T17:12:47Z</CreationDateTime>
+                        <BODID/>
+                        <UserArea>
+                           <DUNSID/>
+                        </UserArea>
+                     </OriginalApplicationArea>
+                     <ResponseCriteria>
+                        <ResponseExpression actionCode="Rejected"/>
+                     </ResponseCriteria>
+                  </Confirm>
+                  <BOD>
+                     <BODFailureMessage>
+                        <ErrorProcessMessage>
+                           <Description/>
+                        </ErrorProcessMessage>
+                     </BODFailureMessage>
+                  </BOD>
+               </DataArea>
+            </ConfirmBOD>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>ConfirmBOD Rejected</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ConfirmBOD>
+                  <ApplicationArea>
+                     <Sender>
+                        <LogicalID/>
+                        <ComponentID>StatusUpdateRequest</ComponentID>
+                     </Sender>
+                     <CreationDateTime>2021-05-08T17:12:47Z</CreationDateTime>
+                     <BODID>a4947064-6e20-9f43-a7d3-b476bec8beab</BODID>
+                     <UserArea>
+                        <DUNSID schemeID="ReceiverKey"/>
+                     </UserArea>
+                  </ApplicationArea>
+                  <DataArea>
+                     <Confirm>
+                        <OriginalApplicationArea>
+                           <Sender>
+                              <LogicalID/>
+                           </Sender>
+                           <CreationDateTime>2021-05-08T17:12:47Z</CreationDateTime>
+                           <BODID/>
+                           <UserArea>
+                              <DUNSID/>
+                           </UserArea>
+                        </OriginalApplicationArea>
+                        <ResponseCriteria>
+                           <ResponseExpression actionCode="Rejected"/>
+                        </ResponseCriteria>
+                     </Confirm>
+                     <BOD>
+                        <BODFailureMessage>
+                           <ErrorProcessMessage>
+                              <Description/>
+                           </ErrorProcessMessage>
+                        </BODFailureMessage>
+                     </BOD>
+                  </DataArea>
+               </ConfirmBOD>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

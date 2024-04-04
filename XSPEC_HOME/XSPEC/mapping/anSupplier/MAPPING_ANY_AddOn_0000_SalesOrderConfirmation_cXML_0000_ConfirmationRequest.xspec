@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anSupplier/MAPPING_ANY_AddOn_0000_SalesOrderConfirmation_cXML_0000_ConfirmationRequest.xsl">
+    <x:scenario label="Sales Order Confirmation">
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anAllDetailOCFlag"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/OrderConfirmation/ConfirmationRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/OrderConfirmation/ConfirmationRequest.dat"
+            select="element()" label="Sales Order Confirmation"/>
+    </x:scenario>
+    <x:scenario label="Sales Order Confirmation type All Detail">
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anAllDetailOCFlag" select="'YES'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/OrderConfirmation/ConfirmationRequestAllDetail.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/OrderConfirmation/ConfirmationRequestAllDetail.dat"
+            select="element()" label="Sales Order Confirmation type All Detail"/>
+    </x:scenario>
+    <x:scenario label="Sales Order Confirmation with Comments">
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anAllDetailOCFlag" select="'YES'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/OrderConfirmation/ConfirmationRequestComments.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/OrderConfirmation/ConfirmationRequestComments.dat"
+            select="element()" label="Sales Order Confirmation with Comments"/>
+    </x:scenario>
+</x:description>

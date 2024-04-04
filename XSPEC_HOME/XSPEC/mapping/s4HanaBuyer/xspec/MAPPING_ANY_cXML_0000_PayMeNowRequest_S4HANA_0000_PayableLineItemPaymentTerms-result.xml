@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_S4HANA_0000_PayableLineItemPaymentTerms.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_S4HANA_0000_PayableLineItemPaymentTerms.xsl"
+        date="2023-04-27T15:49:42.980957+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_S4HANA_0000_PayableLineItemPaymentTerms.xspec">
+      <label>Scenario 1 for PayMeNow</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/PaymeNow/cXML_PayMeNow5100002121.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:PayableLineItemPaymentTerms xmlns:n0="http://sap.com/xi/EDI/Creditor">
+               <MessageHeader>
+                  <ID>1470754440556-5950710539162960859</ID>
+                  <ReferenceID>171051000021212016001</ReferenceID>
+                  <CreationDateTime>2016-08-09T07:54:00-07:00</CreationDateTime>
+                  <ReconciliationIndicator>false</ReconciliationIndicator>
+                  <SenderBusinessSystemID>Ariba_Network</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>AN01024224934-T</RecipientBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>CCFCLNT715</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID=""/>
+                  </BusinessScope>
+                  <RecipientParty>
+                     <InternalID>AN01024224934-T</InternalID>
+                  </RecipientParty>
+                  <BusinessScope>
+                     <InstanceID schemeID=""/>
+                  </BusinessScope>
+               </MessageHeader>
+               <PayableLineItemPaymentTerms>
+                  <DiscountInformationId>171051000021212016001</DiscountInformationId>
+                  <PaymentDate>2016-08-18</PaymentDate>
+                  <GrossAmount currencyCode="USD">155.0</GrossAmount>
+                  <DiscountAmount currencyCode="USD">0.09</DiscountAmount>
+                  <NetAmount currencyCode="USD">154.91</NetAmount>
+               </PayableLineItemPaymentTerms>
+            </n0:PayableLineItemPaymentTerms>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="false">
+         <label>PaymeNow</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:PayableLineItemPaymentTerms xmlns:n0="http://sap.com/xi/EDI/Creditor">
+                  <MessageHeader>
+                     <ID>1470754440556-5950710539162960859</ID>
+                     <ReferenceID>171051000021212016001</ReferenceID>
+                     <CreationDateTime>2016-08-09T07:54:00-07:00</CreationDateTime>
+                     <ReconciliationIndicator>false</ReconciliationIndicator>
+                     <SenderBusinessSystemID>Ariba_Network</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>AN01024224934-T</RecipientBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>CCFCLNT715</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>AN01024224934-T</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <PayableLineItemPaymentTerms>
+                     <DiscountInformationId>171051000021212016001</DiscountInformationId>
+                     <PaymentDate>2016-08-18</PaymentDate>
+                     <GrossAmount currencyCode="USD">155.0</GrossAmount>
+                     <DiscountAmount currencyCode="USD">0.09</DiscountAmount>
+                     <NetAmount currencyCode="USD">154.91</NetAmount>
+                  </PayableLineItemPaymentTerms>
+               </n0:PayableLineItemPaymentTerms>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

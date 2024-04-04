@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_QuotationConfirmation_cXML_0000_QuotationConfirmation.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_QuotationConfirmation_cXML_0000_QuotationConfirmation.xsl"
+        date="2023-04-27T15:48:45.250164+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_QuotationConfirmation_cXML_0000_QuotationConfirmation.xspec">
+      <label>QuotationConfirmation- Basic1</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/QuotationConfirmation/QuotatiomConfirmation.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:QTNConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <ID>FA163E9771F91EDBBAA559D149A688E5</ID>
+                  <UUID/>
+                  <ReferenceID/>
+                  <ReferenceUUID/>
+                  <CreationDateTime>2021-07-20T07:19:22Z</CreationDateTime>
+                  <TestDataIndicator/>
+                  <ReconciliationIndicator/>
+                  <SenderBusinessSystemID>0LOI36K</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+               </MessageHeader>
+               <QTNConfirmation>
+                  <SupplierQuotationExternalId>432673-1001107</SupplierQuotationExternalId>
+                  <SupplierQuotation>8000001149</SupplierQuotation>
+                  <LogMessage>
+                     <LogMessageCode/>
+                     <LogMessageClass/>
+                     <LogMessageSeverityCode>S</LogMessageSeverityCode>
+                     <LogMessageText>Supplier quotation has been succesfully created.</LogMessageText>
+                  </LogMessage>
+               </QTNConfirmation>
+            </n0:QTNConfirmationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>QuotationConfirmation- Basic1</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:QTNConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <ID>FA163E9771F91EDBBAA559D149A688E5</ID>
+                     <UUID/>
+                     <ReferenceID/>
+                     <ReferenceUUID/>
+                     <CreationDateTime>2021-07-20T07:19:22Z</CreationDateTime>
+                     <TestDataIndicator/>
+                     <ReconciliationIndicator/>
+                     <SenderBusinessSystemID>0LOI36K</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                  </MessageHeader>
+                  <QTNConfirmation>
+                     <SupplierQuotationExternalId>432673-1001107</SupplierQuotationExternalId>
+                     <SupplierQuotation>8000001149</SupplierQuotation>
+                     <LogMessage>
+                        <LogMessageCode/>
+                        <LogMessageClass/>
+                        <LogMessageSeverityCode>S</LogMessageSeverityCode>
+                        <LogMessageText>Supplier quotation has been succesfully created.</LogMessageText>
+                     </LogMessage>
+                  </QTNConfirmation>
+               </n0:QTNConfirmationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_QuotationConfirmation_cXML_0000_QuotationConfirmation.xspec">
+      <label>QuotationConfirmation- LogMessage</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/QuotationConfirmation/QuotatiomConfirmation1.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:QTNConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <ID>FA163E9771F91EEB9FA09ACBB9A16BD5</ID>
+                  <UUID/>
+                  <ReferenceID/>
+                  <ReferenceUUID/>
+                  <CreationDateTime>2021-03-04T15:15:29Z</CreationDateTime>
+                  <TestDataIndicator/>
+                  <ReconciliationIndicator/>
+                  <SenderBusinessSystemID>0LOI36K</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+               </MessageHeader>
+               <QTNConfirmation>
+                  <SupplierQuotationExternalId>ID326810-1001107</SupplierQuotationExternalId>
+                  <SupplierQuotation/>
+                  <LogMessage>
+                     <LogMessageCode>022</LogMessageCode>
+                     <LogMessageClass>MM_PUR_RFQ</LogMessageClass>
+                     <LogMessageSeverityCode>E</LogMessageSeverityCode>
+                     <LogMessageText>Bidder abc does not exist for purchasing organization 1010.</LogMessageText>
+                  </LogMessage>
+               </QTNConfirmation>
+            </n0:QTNConfirmationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>QuotationConfirmation - LogMessage</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:QTNConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <ID>FA163E9771F91EEB9FA09ACBB9A16BD5</ID>
+                     <UUID/>
+                     <ReferenceID/>
+                     <ReferenceUUID/>
+                     <CreationDateTime>2021-03-04T15:15:29Z</CreationDateTime>
+                     <TestDataIndicator/>
+                     <ReconciliationIndicator/>
+                     <SenderBusinessSystemID>0LOI36K</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                  </MessageHeader>
+                  <QTNConfirmation>
+                     <SupplierQuotationExternalId>ID326810-1001107</SupplierQuotationExternalId>
+                     <SupplierQuotation/>
+                     <LogMessage>
+                        <LogMessageCode>022</LogMessageCode>
+                        <LogMessageClass>MM_PUR_RFQ</LogMessageClass>
+                        <LogMessageSeverityCode>E</LogMessageSeverityCode>
+                        <LogMessageText>Bidder abc does not exist for purchasing organization 1010.</LogMessageText>
+                     </LogMessage>
+                  </QTNConfirmation>
+               </n0:QTNConfirmationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

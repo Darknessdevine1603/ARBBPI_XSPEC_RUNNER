@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EANCOM_D01B/MAPPING_ANY_EANCOM_D3_CONTRL_cXML_0000_TechACKStatusUpdateRequest.xsl">
+    <x:scenario label="Status Update Request Success">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anPayloadID" select="'IG10213.PO.924_EDI4'"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderID" select="'AN02004578867-T'"/>
+        <x:param name="anReceiverID" select="'AN02004835624-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anOrginalPayloadID"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/StatusUpdateRequest/StatusUpdateRequestCONTRL_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/StatusUpdateRequest/StatusUpdateRequestCONTRL_AM.dat"
+            select="element()" label="Status Update Request Sucess"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request Success - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anPayloadID" select="'IG10213.PO.924_EDI4'"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderID" select="'AN02004578867-T'"/>
+        <x:param name="anReceiverID" select="'AN02004835624-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anOrginalPayloadID"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/StatusUpdateRequest/StatusUpdateRequestCONTRL_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/StatusUpdateRequest/StatusUpdateRequestCONTRL_AM2.dat"
+            select="element()" label="Status Update Request Success - 2"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request Negative">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anPayloadID" select="'92419.PO.EANCOMNFL3'"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderID" select="'AN02004383878-T'"/>
+        <x:param name="anReceiverID" select="'AN02004383879-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anOrginalPayloadID"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/StatusUpdateRequest/StatusUpdateRequestNegCONTRL_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/StatusUpdateRequest/StatusUpdateRequestNegCONTRL_AM.dat"
+            select="element()" label="Status Update Request Negative"/>
+    </x:scenario>
+</x:description>

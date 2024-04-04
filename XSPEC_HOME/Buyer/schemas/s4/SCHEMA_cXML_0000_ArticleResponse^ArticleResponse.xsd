@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:ns="artRes" targetNamespace="artRes">
+    <xs:element name="ArticleResponse" type="ns:ArticleResponse"/>
+    <xs:complexType name="ArticleResponse">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+            <xs:element ref="ns:Article" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="MessageHeader" type="ns:MessageHeader"/>
+    <xs:complexType name="MessageHeader">
+        <xs:sequence>
+            <xs:element ref="ns:MessageID"/>
+            <xs:element ref="ns:CreationDateTime"/>
+            <xs:element ref="ns:SenderBusinessSystemID"/>
+            <xs:element ref="ns:RecipientBusinessSystemID"/>
+            <xs:element ref="ns:ExternalID" minOccurs="0"/>
+            <xs:element ref="ns:RealmId" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="MessageID" type="xs:integer"/>
+    <xs:element name="CreationDateTime" type="xs:dateTime"/>
+    <xs:element name="SenderBusinessSystemID" type="xs:string"/>
+    <xs:element name="RecipientBusinessSystemID" type="xs:string"/>
+    <xs:element name="RealmId" type="xs:string"/>
+    <xs:element name="ExternalID" type="xs:string"/>
+
+    <xs:element name="Article" type="ns:Article"/>
+    <xs:complexType name="Article">
+        <xs:sequence>
+            <xs:element ref="ns:MessageType" minOccurs="1"/>
+            <xs:element ref="ns:SourcingArticleID" minOccurs="1"/>
+            <xs:element ref="ns:SAPArticleID" minOccurs="0"/>
+            <xs:element ref="ns:Message" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="MessageType" type="xs:string"/>
+    <xs:element name="SourcingArticleID" type="xs:string"/>
+    <xs:element name="SAPArticleID" type="xs:string"/>
+    <xs:element name="Message" type="xs:string"/>
+
+    <xs:element name="RetailMSResponse" type="ns:RetailMSResponse"/>
+    <xs:complexType name="RetailMSResponse">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+        </xs:sequence>
+        <xs:attribute name="jobId" type="xs:string"/>
+        <xs:attribute name="status" type="xs:string"/>
+        <xs:attribute name="errorCode" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

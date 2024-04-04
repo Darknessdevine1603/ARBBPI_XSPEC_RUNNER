@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/PIDX/MAPPING_ANY_PIDX_1.61_Invoice_cXML_0000_InvoiceDetailRequest.xsl">
+    <x:scenario label="Invoice">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/Invoice_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/Invoice_AM.dat"
+            select="element()" label="Invoice"/>
+    </x:scenario>
+    <x:scenario label="Invoice with Tax Point Date">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceTaxpointDate_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceTaxpointDate_AM.dat"
+            select="element()" label="Invoice with Tax Point Date"/>
+    </x:scenario>
+    <x:scenario label="InvoiceDetailRequest type Creditmemo">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceDetail_RIT1_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceDetail_RIT1_AM.dat"
+            select="*" label="InvoiceDetailRequest type Creditmemo"/>
+    </x:scenario>
+    <x:scenario label="InvoiceDetailRequest with Tax Information">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceDetail_RIT2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceDetail_RIT2_AM.dat"
+            select="*" label="InvoiceDetailRequest with Tax Information"/>
+    </x:scenario>
+    <x:scenario label="InvoiceDetailRequest type Credit memo">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceDetail_RIT3_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceDetail_RIT3_AM.dat"
+            select="*" label="InvoiceDetailRequest type Credit memo"/>
+    </x:scenario>
+    <x:scenario label="InvoiceDetailRequest - 5">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceDetail_RIT4_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceDetail_RIT4_AM.dat"
+            select="*" label="InvoiceDetailRequest - 5"/>
+    </x:scenario>
+    <x:scenario label="InvoiceDetailRequest - 6">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceDetail_BM6.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceDetail_RIT4_AM.dat"
+            select="*" label="InvoiceDetailRequest - 6"/>
+    </x:scenario>
+    <x:scenario label="InvoiceDetailRequest - 7">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceDetail_BM7.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceDetail_RIT4_AM.dat"
+            select="*" label="InvoiceDetailRequest - 7"/>
+    </x:scenario>
+    <x:scenario label="InvoiceDetailRequest - 8">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceDetail_BM8.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceDetail_RIT4_AM.dat"
+            select="*" label="InvoiceDetailRequest - 8"/>
+    </x:scenario>
+    <x:scenario label="InvoiceDetailRequest - 9">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Invoice/InvoiceDetail_BM9.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Invoice/InvoiceDetail_RIT4_AM.dat"
+            select="*" label="InvoiceDetailRequest - 9"/>
+    </x:scenario>
+</x:description>

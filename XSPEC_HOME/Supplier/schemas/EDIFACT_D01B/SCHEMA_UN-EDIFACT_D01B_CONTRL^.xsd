@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:hci="http://sap.com/hci"
+            xmlns="urn:sap.com:typesystem:b2b:6:un-edifact"
+            targetNamespace="urn:sap.com:typesystem:b2b:6:un-edifact">
+   <xsd:annotation>
+      <xsd:appinfo>
+         <hci:resourceinfo>
+            <hci:info key="typeSystem" value="UN-EDIFACT"/>
+            <hci:info key="typeSystemVersion" value="D.01B"/>
+            <hci:info key="category" value="Template"/>
+            <hci:info key="rootNode" value="M_CONTRL"/>
+            <hci:info key="responsibleAgencyName"
+                      value="UN/ECE (United Nations - Economic Commission for Europe)"/>
+            <hci:info key="responsibleAgencyCode" value="6"/>
+            <hci:info key="messageType" value="CONTRL"/>
+            <hci:info key="messageName" value="Syntax and service report message"/>
+            <hci:info key="targetNamespace" value="urn:sap.com:typesystem:b2b:6:un-edifact"/>
+            <hci:info key="documentNumber" value="/M_CONTRL/S_BGM/C_C106/D_1004"/>
+         </hci:resourceinfo>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:element name="M_CONTRL">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element name="S_UNH" type="S_UNH"/>
+            <xsd:element name="S_UCI" type="S_UCI"/>
+            <xsd:element name="G_SG1" minOccurs="0" maxOccurs="999999">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="S_UCM" type="S_UCM"/>
+                     <xsd:element name="G_SG2" minOccurs="0" maxOccurs="999">
+                        <xsd:complexType>
+                           <xsd:sequence>
+                              <xsd:element name="S_UCS" type="S_UCS"/>
+                              <xsd:element name="S_UCD" type="S_UCD" minOccurs="0" maxOccurs="99"/>
+                           </xsd:sequence>
+                        </xsd:complexType>
+                     </xsd:element>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="G_SG3" minOccurs="0" maxOccurs="999999">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="S_UCF" type="S_UCF"/>
+                     <xsd:element name="G_SG4" minOccurs="0" maxOccurs="999999">
+                        <xsd:complexType>
+                           <xsd:sequence>
+                              <xsd:element name="S_UCM" type="S_UCM"/>
+                              <xsd:element name="G_SG5" minOccurs="0" maxOccurs="999">
+                                 <xsd:complexType>
+                                    <xsd:sequence>
+                                       <xsd:element name="S_UCS" type="S_UCS"/>
+                                       <xsd:element name="S_UCD" type="S_UCD" minOccurs="0" maxOccurs="99"/>
+                                    </xsd:sequence>
+                                 </xsd:complexType>
+                              </xsd:element>
+                           </xsd:sequence>
+                        </xsd:complexType>
+                     </xsd:element>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="S_UNT" type="S_UNT"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:complexType name="S_UNH">
+      <xsd:sequence>
+         <xsd:element name="D_0062" type="D_0062"/>
+         <xsd:element name="C_S009" type="C_S009"/>
+         <xsd:element name="D_0068" type="D_0068" minOccurs="0"/>
+         <xsd:element name="C_S010" type="C_S010" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="S_UCI">
+      <xsd:sequence>
+         <xsd:element name="D_0020" type="D_0020"/>
+         <xsd:element name="C_S002" type="C_S002"/>
+         <xsd:element name="C_S003" type="C_S003"/>
+         <xsd:element name="D_0083" type="D_0083"/>
+         <xsd:element name="D_0085" type="D_0085" minOccurs="0"/>
+         <xsd:element name="D_0013" type="D_0013" minOccurs="0"/>
+         <xsd:element name="C_S011" type="C_S011" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="S_UNT">
+      <xsd:sequence>
+         <xsd:element name="D_0074" type="D_0074"/>
+         <xsd:element name="D_0062" type="D_0062"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="C_S009">
+      <xsd:sequence>
+         <xsd:element name="D_0065" type="D_0065"/>
+         <xsd:element name="D_0052" type="D_0052"/>
+         <xsd:element name="D_0054" type="D_0054"/>
+         <xsd:element name="D_0051" type="D_0051"/>
+         <xsd:element name="D_0057" type="D_0057" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="C_S010">
+      <xsd:sequence>
+         <xsd:element name="D_0070" type="D_0070"/>
+         <xsd:element name="D_0073" type="D_0073" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="C_S002">
+      <xsd:sequence>
+         <xsd:element name="D_0004" type="D_0004"/>
+         <xsd:element name="D_0007" type="D_0007" minOccurs="0"/>
+         <xsd:element name="D_0008" type="D_0008" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="C_S003">
+      <xsd:sequence>
+         <xsd:element name="D_0010" type="D_0010"/>
+         <xsd:element name="D_0007" type="D_0007" minOccurs="0"/>
+         <xsd:element name="D_0014" type="D_0014" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="C_S011">
+      <xsd:sequence>
+         <xsd:element name="D_0098" type="D_0098"/>
+         <xsd:element name="D_0104" type="D_0104" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="S_UCM">
+      <xsd:sequence>
+         <xsd:element name="D_0062" type="D_0062"/>
+         <xsd:element name="C_S009" type="C_S009"/>
+         <xsd:element name="D_0083" type="D_0083"/>
+         <xsd:element name="D_0085" type="D_0085" minOccurs="0"/>
+         <xsd:element name="D_0013" type="D_0013" minOccurs="0"/>
+         <xsd:element name="C_S011" type="C_S011" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="S_UCS">
+      <xsd:sequence>
+         <xsd:element name="D_0096" type="D_0096"/>
+         <xsd:element name="D_0085" type="D_0085" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="S_UCD">
+      <xsd:sequence>
+         <xsd:element name="D_0085" type="D_0085"/>
+         <xsd:element name="C_S011" type="C_S011"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="S_UCF">
+      <xsd:sequence>
+         <xsd:element name="D_0048" type="D_0048"/>
+         <xsd:element name="C_S006" type="C_S006"/>
+         <xsd:element name="C_S007" type="C_S007"/>
+         <xsd:element name="D_0083" type="D_0083"/>
+         <xsd:element name="D_0085" type="D_0085" minOccurs="0"/>
+         <xsd:element name="D_0013" type="D_0013" minOccurs="0"/>
+         <xsd:element name="C_S011" type="C_S011" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="C_S006">
+      <xsd:sequence>
+         <xsd:element name="D_0040" type="D_0040"/>
+         <xsd:element name="D_0007" type="D_0007" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="C_S007">
+      <xsd:sequence>
+         <xsd:element name="D_0044" type="D_0044"/>
+         <xsd:element name="D_0007" type="D_0007" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:simpleType name="D_0062">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="14"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0068">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="35"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0065">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="6"/>
+         <xsd:enumeration value="APERAK"/>
+         <xsd:enumeration value="AUTHOR"/>
+         <xsd:enumeration value="BALANC"/>
+         <xsd:enumeration value="BANSTA"/>
+         <xsd:enumeration value="BAPLIE"/>
+         <xsd:enumeration value="BAPLTE"/>
+         <xsd:enumeration value="BERMAN"/>
+         <xsd:enumeration value="BMISRM"/>
+         <xsd:enumeration value="BOPBNK"/>
+         <xsd:enumeration value="BOPCUS"/>
+         <xsd:enumeration value="BOPDIR"/>
+         <xsd:enumeration value="BOPINF"/>
+         <xsd:enumeration value="BUSCRD"/>
+         <xsd:enumeration value="CALINF"/>
+         <xsd:enumeration value="CASINT"/>
+         <xsd:enumeration value="CASRES"/>
+         <xsd:enumeration value="CHACCO"/>
+         <xsd:enumeration value="CLASET"/>
+         <xsd:enumeration value="CNTCND"/>
+         <xsd:enumeration value="COACSU"/>
+         <xsd:enumeration value="COARRI"/>
+         <xsd:enumeration value="CODECO"/>
+         <xsd:enumeration value="CODENO"/>
+         <xsd:enumeration value="COEDOR"/>
+         <xsd:enumeration value="COHAOR"/>
+         <xsd:enumeration value="COLREQ"/>
+         <xsd:enumeration value="COMDIS"/>
+         <xsd:enumeration value="CONAPW"/>
+         <xsd:enumeration value="CONDPV"/>
+         <xsd:enumeration value="CONDRA"/>
+         <xsd:enumeration value="CONDRO"/>
+         <xsd:enumeration value="CONEST"/>
+         <xsd:enumeration value="CONITT"/>
+         <xsd:enumeration value="CONPVA"/>
+         <xsd:enumeration value="CONQVA"/>
+         <xsd:enumeration value="CONRPW"/>
+         <xsd:enumeration value="CONTEN"/>
+         <xsd:enumeration value="CONTRL"/>
+         <xsd:enumeration value="CONWQD"/>
+         <xsd:enumeration value="COPARN"/>
+         <xsd:enumeration value="COPAYM"/>
+         <xsd:enumeration value="COPINO"/>
+         <xsd:enumeration value="COPRAR"/>
+         <xsd:enumeration value="COREOR"/>
+         <xsd:enumeration value="COSTCO"/>
+         <xsd:enumeration value="COSTOR"/>
+         <xsd:enumeration value="CREADV"/>
+         <xsd:enumeration value="CREEXT"/>
+         <xsd:enumeration value="CREMUL"/>
+         <xsd:enumeration value="CUSCAR"/>
+         <xsd:enumeration value="CUSDEC"/>
+         <xsd:enumeration value="CUSEXP"/>
+         <xsd:enumeration value="CUSPED"/>
+         <xsd:enumeration value="CUSREP"/>
+         <xsd:enumeration value="CUSRES"/>
+         <xsd:enumeration value="DEBADV"/>
+         <xsd:enumeration value="DEBMUL"/>
+         <xsd:enumeration value="DEBREC"/>
+         <xsd:enumeration value="DELFOR"/>
+         <xsd:enumeration value="DELJIT"/>
+         <xsd:enumeration value="DESADV"/>
+         <xsd:enumeration value="DESTIM"/>
+         <xsd:enumeration value="DGRECA"/>
+         <xsd:enumeration value="DIRDEB"/>
+         <xsd:enumeration value="DIRDEF"/>
+         <xsd:enumeration value="DMRDEF"/>
+         <xsd:enumeration value="DMSTAT"/>
+         <xsd:enumeration value="DOCADV"/>
+         <xsd:enumeration value="DOCAMA"/>
+         <xsd:enumeration value="DOCAMI"/>
+         <xsd:enumeration value="DOCAMR"/>
+         <xsd:enumeration value="DOCAPP"/>
+         <xsd:enumeration value="DOCARE"/>
+         <xsd:enumeration value="DOCINF"/>
+         <xsd:enumeration value="ENTREC"/>
+         <xsd:enumeration value="FINCAN"/>
+         <xsd:enumeration value="FINPAY"/>
+         <xsd:enumeration value="FINSTA"/>
+         <xsd:enumeration value="GENRAL"/>
+         <xsd:enumeration value="GESMES"/>
+         <xsd:enumeration value="HANMOV"/>
+         <xsd:enumeration value="ICASRP"/>
+         <xsd:enumeration value="ICSOLI"/>
+         <xsd:enumeration value="IFCSUM"/>
+         <xsd:enumeration value="IFTCCA"/>
+         <xsd:enumeration value="IFTDGN"/>
+         <xsd:enumeration value="IFTFCC"/>
+         <xsd:enumeration value="IFTIAG"/>
+         <xsd:enumeration value="IFTICL"/>
+         <xsd:enumeration value="IFTMAN"/>
+         <xsd:enumeration value="IFTMBC"/>
+         <xsd:enumeration value="IFTMBF"/>
+         <xsd:enumeration value="IFTMBP"/>
+         <xsd:enumeration value="IFTMCA"/>
+         <xsd:enumeration value="IFTMCS"/>
+         <xsd:enumeration value="IFTMIN"/>
+         <xsd:enumeration value="IFTRIN"/>
+         <xsd:enumeration value="IFTSAI"/>
+         <xsd:enumeration value="IFTSTA"/>
+         <xsd:enumeration value="IFTSTQ"/>
+         <xsd:enumeration value="IMPDEF"/>
+         <xsd:enumeration value="INFCON"/>
+         <xsd:enumeration value="INFENT"/>
+         <xsd:enumeration value="INSDES"/>
+         <xsd:enumeration value="INSPRE"/>
+         <xsd:enumeration value="INSREQ"/>
+         <xsd:enumeration value="INSRPT"/>
+         <xsd:enumeration value="INVOIC"/>
+         <xsd:enumeration value="INVRPT"/>
+         <xsd:enumeration value="IPPOAD"/>
+         <xsd:enumeration value="IPPOMO"/>
+         <xsd:enumeration value="ISENDS"/>
+         <xsd:enumeration value="ITRRPT"/>
+         <xsd:enumeration value="JAPRES"/>
+         <xsd:enumeration value="JINFDE"/>
+         <xsd:enumeration value="JOBAPP"/>
+         <xsd:enumeration value="JOBCON"/>
+         <xsd:enumeration value="JOBMOD"/>
+         <xsd:enumeration value="JOBOFF"/>
+         <xsd:enumeration value="JUPREQ"/>
+         <xsd:enumeration value="LEDGER"/>
+         <xsd:enumeration value="LREACT"/>
+         <xsd:enumeration value="LRECLM"/>
+         <xsd:enumeration value="MEDPID"/>
+         <xsd:enumeration value="MEDPRE"/>
+         <xsd:enumeration value="MEDREQ"/>
+         <xsd:enumeration value="MEDRPT"/>
+         <xsd:enumeration value="MEDRUC"/>
+         <xsd:enumeration value="MEQPOS"/>
+         <xsd:enumeration value="MOVINS"/>
+         <xsd:enumeration value="MSCONS"/>
+         <xsd:enumeration value="ORDCHG"/>
+         <xsd:enumeration value="ORDERS"/>
+         <xsd:enumeration value="ORDRSP"/>
+         <xsd:enumeration value="OSTENQ"/>
+         <xsd:enumeration value="OSTRPT"/>
+         <xsd:enumeration value="PARTIN"/>
+         <xsd:enumeration value="PAXLST"/>
+         <xsd:enumeration value="PAYDUC"/>
+         <xsd:enumeration value="PAYEXT"/>
+         <xsd:enumeration value="PAYMUL"/>
+         <xsd:enumeration value="PAYORD"/>
+         <xsd:enumeration value="PRICAT"/>
+         <xsd:enumeration value="PRIHIS"/>
+         <xsd:enumeration value="PROCST"/>
+         <xsd:enumeration value="PRODAT"/>
+         <xsd:enumeration value="PRODEX"/>
+         <xsd:enumeration value="PROINQ"/>
+         <xsd:enumeration value="PROSRV"/>
+         <xsd:enumeration value="PROTAP"/>
+         <xsd:enumeration value="PRPAID"/>
+         <xsd:enumeration value="QALITY"/>
+         <xsd:enumeration value="QUOTES"/>
+         <xsd:enumeration value="RDRMES"/>
+         <xsd:enumeration value="REBORD"/>
+         <xsd:enumeration value="RECADV"/>
+         <xsd:enumeration value="RECALC"/>
+         <xsd:enumeration value="RECECO"/>
+         <xsd:enumeration value="RECLAM"/>
+         <xsd:enumeration value="RECORD"/>
+         <xsd:enumeration value="REGENT"/>
+         <xsd:enumeration value="RELIST"/>
+         <xsd:enumeration value="REMADV"/>
+         <xsd:enumeration value="REPREM"/>
+         <xsd:enumeration value="REQDOC"/>
+         <xsd:enumeration value="REQOTE"/>
+         <xsd:enumeration value="RESETT"/>
+         <xsd:enumeration value="RESMSG"/>
+         <xsd:enumeration value="RETACC"/>
+         <xsd:enumeration value="RETANN"/>
+         <xsd:enumeration value="RETINS"/>
+         <xsd:enumeration value="RPCALL"/>
+         <xsd:enumeration value="SAFHAZ"/>
+         <xsd:enumeration value="SANCRT"/>
+         <xsd:enumeration value="SLSFCT"/>
+         <xsd:enumeration value="SLSRPT"/>
+         <xsd:enumeration value="SOCADE"/>
+         <xsd:enumeration value="SSIMOD"/>
+         <xsd:enumeration value="SSRECH"/>
+         <xsd:enumeration value="SSREGW"/>
+         <xsd:enumeration value="STATAC"/>
+         <xsd:enumeration value="STLRPT"/>
+         <xsd:enumeration value="SUPCOT"/>
+         <xsd:enumeration value="SUPMAN"/>
+         <xsd:enumeration value="SUPRES"/>
+         <xsd:enumeration value="TANSTA"/>
+         <xsd:enumeration value="TAXCON"/>
+         <xsd:enumeration value="TPFREP"/>
+         <xsd:enumeration value="UTILMD"/>
+         <xsd:enumeration value="UTILTS"/>
+         <xsd:enumeration value="VATDEC"/>
+         <xsd:enumeration value="VESDEP"/>
+         <xsd:enumeration value="WASDIS"/>
+         <xsd:enumeration value="WKGRDC"/>
+         <xsd:enumeration value="WKGRRE"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0052">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="3"/>
+         <xsd:enumeration value="1"/>
+         <xsd:enumeration value="2"/>
+         <xsd:enumeration value="88"/>
+         <xsd:enumeration value="89"/>
+         <xsd:enumeration value="90"/>
+         <xsd:enumeration value="D"/>
+         <xsd:enumeration value="S"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0054">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="3"/>
+         <xsd:enumeration value="1"/>
+         <xsd:enumeration value="2"/>
+         <xsd:enumeration value="3"/>
+         <xsd:enumeration value="902"/>
+         <xsd:enumeration value="911"/>
+         <xsd:enumeration value="912"/>
+         <xsd:enumeration value="921"/>
+         <xsd:enumeration value="932"/>
+         <xsd:enumeration value="00A"/>
+         <xsd:enumeration value="00B"/>
+         <xsd:enumeration value="01A"/>
+         <xsd:enumeration value="01B"/>
+         <xsd:enumeration value="93A"/>
+         <xsd:enumeration value="94A"/>
+         <xsd:enumeration value="94B"/>
+         <xsd:enumeration value="95A"/>
+         <xsd:enumeration value="95B"/>
+         <xsd:enumeration value="96A"/>
+         <xsd:enumeration value="96B"/>
+         <xsd:enumeration value="97A"/>
+         <xsd:enumeration value="97B"/>
+         <xsd:enumeration value="98A"/>
+         <xsd:enumeration value="98B"/>
+         <xsd:enumeration value="99A"/>
+         <xsd:enumeration value="99B"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0051">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="2"/>
+         <xsd:enumeration value="AA"/>
+         <xsd:enumeration value="AB"/>
+         <xsd:enumeration value="AC"/>
+         <xsd:enumeration value="AD"/>
+         <xsd:enumeration value="AE"/>
+         <xsd:enumeration value="AF"/>
+         <xsd:enumeration value="AG"/>
+         <xsd:enumeration value="AH"/>
+         <xsd:enumeration value="AI"/>
+         <xsd:enumeration value="CC"/>
+         <xsd:enumeration value="CE"/>
+         <xsd:enumeration value="EC"/>
+         <xsd:enumeration value="ED"/>
+         <xsd:enumeration value="EE"/>
+         <xsd:enumeration value="EN"/>
+         <xsd:enumeration value="ER"/>
+         <xsd:enumeration value="EU"/>
+         <xsd:enumeration value="EW"/>
+         <xsd:enumeration value="EX"/>
+         <xsd:enumeration value="IA"/>
+         <xsd:enumeration value="KE"/>
+         <xsd:enumeration value="LI"/>
+         <xsd:enumeration value="OD"/>
+         <xsd:enumeration value="RI"/>
+         <xsd:enumeration value="RT"/>
+         <xsd:enumeration value="UN"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0057">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="6"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0070">
+      <xsd:restriction base="xsd:decimal">
+         <xsd:totalDigits value="2"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0073">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="1"/>
+         <xsd:enumeration value="C"/>
+         <xsd:enumeration value="F"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0020">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="14"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0083">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="3"/>
+         <xsd:enumeration value="4"/>
+         <xsd:enumeration value="7"/>
+         <xsd:enumeration value="8"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0085">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="3"/>
+         <xsd:enumeration value="2"/>
+         <xsd:enumeration value="7"/>
+         <xsd:enumeration value="12"/>
+         <xsd:enumeration value="13"/>
+         <xsd:enumeration value="14"/>
+         <xsd:enumeration value="15"/>
+         <xsd:enumeration value="16"/>
+         <xsd:enumeration value="17"/>
+         <xsd:enumeration value="18"/>
+         <xsd:enumeration value="19"/>
+         <xsd:enumeration value="20"/>
+         <xsd:enumeration value="21"/>
+         <xsd:enumeration value="22"/>
+         <xsd:enumeration value="23"/>
+         <xsd:enumeration value="24"/>
+         <xsd:enumeration value="25"/>
+         <xsd:enumeration value="26"/>
+         <xsd:enumeration value="27"/>
+         <xsd:enumeration value="28"/>
+         <xsd:enumeration value="29"/>
+         <xsd:enumeration value="30"/>
+         <xsd:enumeration value="31"/>
+         <xsd:enumeration value="32"/>
+         <xsd:enumeration value="33"/>
+         <xsd:enumeration value="34"/>
+         <xsd:enumeration value="35"/>
+         <xsd:enumeration value="36"/>
+         <xsd:enumeration value="37"/>
+         <xsd:enumeration value="38"/>
+         <xsd:enumeration value="39"/>
+         <xsd:enumeration value="40"/>
+         <xsd:enumeration value="41"/>
+         <xsd:enumeration value="42"/>
+         <xsd:enumeration value="43"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0013">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="3"/>
+         <xsd:maxLength value="3"/>
+         <xsd:enumeration value="UCD"/>
+         <xsd:enumeration value="UCF"/>
+         <xsd:enumeration value="UCI"/>
+         <xsd:enumeration value="UCM"/>
+         <xsd:enumeration value="UCS"/>
+         <xsd:enumeration value="UNA"/>
+         <xsd:enumeration value="UNB"/>
+         <xsd:enumeration value="UNE"/>
+         <xsd:enumeration value="UNG"/>
+         <xsd:enumeration value="UNH"/>
+         <xsd:enumeration value="UNS"/>
+         <xsd:enumeration value="UNT"/>
+         <xsd:enumeration value="UNZ"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0004">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="35"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0007">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="4"/>
+         <xsd:enumeration value="1"/>
+         <xsd:enumeration value="4"/>
+         <xsd:enumeration value="5"/>
+         <xsd:enumeration value="8"/>
+         <xsd:enumeration value="9"/>
+         <xsd:enumeration value="12"/>
+         <xsd:enumeration value="14"/>
+         <xsd:enumeration value="18"/>
+         <xsd:enumeration value="22"/>
+         <xsd:enumeration value="30"/>
+         <xsd:enumeration value="31"/>
+         <xsd:enumeration value="33"/>
+         <xsd:enumeration value="34"/>
+         <xsd:enumeration value="51"/>
+         <xsd:enumeration value="52"/>
+         <xsd:enumeration value="53"/>
+         <xsd:enumeration value="54"/>
+         <xsd:enumeration value="55"/>
+         <xsd:enumeration value="57"/>
+         <xsd:enumeration value="58"/>
+         <xsd:enumeration value="59"/>
+         <xsd:enumeration value="61"/>
+         <xsd:enumeration value="63"/>
+         <xsd:enumeration value="65"/>
+         <xsd:enumeration value="80"/>
+         <xsd:enumeration value="82"/>
+         <xsd:enumeration value="84"/>
+         <xsd:enumeration value="85"/>
+         <xsd:enumeration value="86"/>
+         <xsd:enumeration value="87"/>
+         <xsd:enumeration value="89"/>
+         <xsd:enumeration value="90"/>
+         <xsd:enumeration value="91"/>
+         <xsd:enumeration value="92"/>
+         <xsd:enumeration value="103"/>
+         <xsd:enumeration value="128"/>
+         <xsd:enumeration value="129"/>
+         <xsd:enumeration value="144"/>
+         <xsd:enumeration value="145"/>
+         <xsd:enumeration value="146"/>
+         <xsd:enumeration value="147"/>
+         <xsd:enumeration value="148"/>
+         <xsd:enumeration value="ZZZ"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0008">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="14"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0010">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="35"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0014">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="14"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0098">
+      <xsd:restriction base="xsd:decimal">
+         <xsd:totalDigits value="3"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0104">
+      <xsd:restriction base="xsd:decimal">
+         <xsd:totalDigits value="3"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0096">
+      <xsd:restriction base="xsd:decimal">
+         <xsd:totalDigits value="6"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0048">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="14"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0040">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="35"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0044">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="35"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="D_0074">
+      <xsd:restriction base="xsd:decimal">
+         <xsd:totalDigits value="6"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:schema>

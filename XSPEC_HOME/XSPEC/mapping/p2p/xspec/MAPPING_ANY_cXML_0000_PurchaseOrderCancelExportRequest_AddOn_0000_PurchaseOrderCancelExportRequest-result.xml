@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderCancelExportRequest_AddOn_0000_PurchaseOrderCancelExportRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderCancelExportRequest_AddOn_0000_PurchaseOrderCancelExportRequest.xsl"
+        date="2023-04-27T15:38:06.839783+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderCancelExportRequest_AddOn_0000_PurchaseOrderCancelExportRequest.xspec">
+      <label>Scenario for Purchase Order Cancel Export Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/CancelPO/PurchaseOrderCancelExportRequest_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_BAPI_PO_CANCEL xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <PARTITION>vrealm_RIT</PARTITION>
+               <PO_HEADER>
+                  <PO_NUMBER>4500018632</PO_NUMBER>
+                  <ARIBAORDERID>EP408</ARIBAORDERID>
+                  <VERSION>1</VERSION>
+               </PO_HEADER>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <PO_ITEMS>
+                  <item>
+                     <PO_ITEM>00010</PO_ITEM>
+                     <DELETE_IND>L</DELETE_IND>
+                     <REQ_ID>0010017730</REQ_ID>
+                  </item>
+               </PO_ITEMS>
+            </n0:ARBCIG_BAPI_PO_CANCEL>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Purchase Order Cancel Export Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_BAPI_PO_CANCEL xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <PO_HEADER>
+                     <PO_NUMBER>4500018632</PO_NUMBER>
+                     <ARIBAORDERID>EP408</ARIBAORDERID>
+                     <VERSION>1</VERSION>
+                  </PO_HEADER>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <PO_ITEMS>
+                     <item>
+                        <PO_ITEM>00010</PO_ITEM>
+                        <DELETE_IND>L</DELETE_IND>
+                        <REQ_ID>0010017730</REQ_ID>
+                     </item>
+                  </PO_ITEMS>
+               </n0:ARBCIG_BAPI_PO_CANCEL>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

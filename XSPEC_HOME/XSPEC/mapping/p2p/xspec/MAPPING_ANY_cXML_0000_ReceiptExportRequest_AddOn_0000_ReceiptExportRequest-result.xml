@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_ReceiptExportRequest_AddOn_0000_ReceiptExportRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_ReceiptExportRequest_AddOn_0000_ReceiptExportRequest.xsl"
+        date="2023-04-27T15:38:27.538622+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_ReceiptExportRequest_AddOn_0000_ReceiptExportRequest.xspec">
+      <label>Scenario for Receipt Export Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/Receipt/ReceiptExportRequest_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_GOODS_RECEIPT_CREATE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <GR_CODE>
+                  <GM_CODE>01</GM_CODE>
+               </GR_CODE>
+               <GR_HEADER>
+                  <ERP_ORDER_ID>4500056399</ERP_ORDER_ID>
+                  <MVMNT_TYPE>101</MVMNT_TYPE>
+                  <ARIBA_GRNO>VRRC70</ARIBA_GRNO>
+                  <PSTNG_DATE>2020-12-02</PSTNG_DATE>
+                  <DOC_DATE>2020-12-03</DOC_DATE>
+                  <HEADER_TXT>Ariba-VRRC70</HEADER_TXT>
+               </GR_HEADER>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <GR_ITEMS>
+                  <item>
+                     <LINE_NO>1</LINE_NO>
+                     <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                     <ARIBA_GR_NO>VRRC70</ARIBA_GR_NO>
+                     <MOVE_TYPE>101</MOVE_TYPE>
+                     <ENTRY_QNT>100.000</ENTRY_QNT>
+                     <ENTRY_UOM>EA</ENTRY_UOM>
+                     <PO_NUMBER>4500056399</PO_NUMBER>
+                     <PO_ITEM>00010</PO_ITEM>
+                     <SUB_NUMBER>123456</SUB_NUMBER>
+                     <ASSET_NO>100000045</ASSET_NO>
+                     <MVT_IND>B</MVT_IND>
+                  </item>
+               </GR_ITEMS>
+               <GR_SERIALNUMBER>
+                  <item>
+                     <MATDOC_ITM>1</MATDOC_ITM>
+                     <SERIALNO>78456621</SERIALNO>
+                  </item>
+               </GR_SERIALNUMBER>
+            </n0:ARBCIG_GOODS_RECEIPT_CREATE>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Receipt Export Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_GOODS_RECEIPT_CREATE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <GR_CODE>
+                     <GM_CODE>01</GM_CODE>
+                  </GR_CODE>
+                  <GR_HEADER>
+                     <ERP_ORDER_ID>4500056399</ERP_ORDER_ID>
+                     <MVMNT_TYPE>101</MVMNT_TYPE>
+                     <ARIBA_GRNO>VRRC70</ARIBA_GRNO>
+                     <PSTNG_DATE>2020-12-02</PSTNG_DATE>
+                     <DOC_DATE>2020-12-03</DOC_DATE>
+                     <HEADER_TXT>Ariba-VRRC70</HEADER_TXT>
+                  </GR_HEADER>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <GR_ITEMS>
+                     <item>
+                        <LINE_NO>1</LINE_NO>
+                        <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                        <ARIBA_GR_NO>VRRC70</ARIBA_GR_NO>
+                        <MOVE_TYPE>101</MOVE_TYPE>
+                        <ENTRY_QNT>100.000</ENTRY_QNT>
+                        <ENTRY_UOM>EA</ENTRY_UOM>
+                        <PO_NUMBER>4500056399</PO_NUMBER>
+                        <PO_ITEM>00010</PO_ITEM>
+                        <SUB_NUMBER>123456</SUB_NUMBER>
+                        <ASSET_NO>100000045</ASSET_NO>
+                        <MVT_IND>B</MVT_IND>
+                     </item>
+                  </GR_ITEMS>
+                  <GR_SERIALNUMBER>
+                     <item>
+                        <MATDOC_ITM>1</MATDOC_ITM>
+                        <SERIALNO>78456621</SERIALNO>
+                     </item>
+                  </GR_SERIALNUMBER>
+               </n0:ARBCIG_GOODS_RECEIPT_CREATE>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_ReceiptExportRequest_AddOn_0000_ReceiptExportRequest.xspec">
+      <label>Scenario for Receipt Export Request Partial</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/Receipt/ReceiptExportRequestPartial_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_GOODS_RECEIPT_CREATE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <GR_CODE>
+                  <GM_CODE>01</GM_CODE>
+               </GR_CODE>
+               <GR_HEADER>
+                  <ERP_ORDER_ID>4500056399</ERP_ORDER_ID>
+                  <MVMNT_TYPE>101</MVMNT_TYPE>
+                  <ARIBA_GRNO>VRRC70</ARIBA_GRNO>
+                  <PSTNG_DATE>2020-12-02</PSTNG_DATE>
+                  <DOC_DATE>2020-12-03</DOC_DATE>
+                  <HEADER_TXT>Ariba-VRRC70</HEADER_TXT>
+               </GR_HEADER>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <GR_ITEMS>
+                  <item>
+                     <LINE_NO>1</LINE_NO>
+                     <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                     <ARIBA_GR_NO>VRRC70</ARIBA_GR_NO>
+                     <MOVE_TYPE>101</MOVE_TYPE>
+                     <ENTRY_QNT>1000.000</ENTRY_QNT>
+                     <ENTRY_UOM>EA</ENTRY_UOM>
+                     <PO_NUMBER>4500056399</PO_NUMBER>
+                     <PO_ITEM>00010</PO_ITEM>
+                     <SUB_NUMBER>123456</SUB_NUMBER>
+                     <ASSET_NO>100000045</ASSET_NO>
+                     <MVT_IND>B</MVT_IND>
+                  </item>
+               </GR_ITEMS>
+               <GR_SERIALNUMBER>
+                  <item>
+                     <MATDOC_ITM>1</MATDOC_ITM>
+                     <SERIALNO>78456621</SERIALNO>
+                  </item>
+               </GR_SERIALNUMBER>
+            </n0:ARBCIG_GOODS_RECEIPT_CREATE>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Scenario for Receipt Export Request Partial</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_GOODS_RECEIPT_CREATE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <GR_CODE>
+                     <GM_CODE>01</GM_CODE>
+                  </GR_CODE>
+                  <GR_HEADER>
+                     <ERP_ORDER_ID>4500056399</ERP_ORDER_ID>
+                     <MVMNT_TYPE>101</MVMNT_TYPE>
+                     <ARIBA_GRNO>VRRC70</ARIBA_GRNO>
+                     <PSTNG_DATE>2020-12-02</PSTNG_DATE>
+                     <DOC_DATE>2020-12-03</DOC_DATE>
+                     <HEADER_TXT>Ariba-VRRC70</HEADER_TXT>
+                  </GR_HEADER>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <GR_ITEMS>
+                     <item>
+                        <LINE_NO>1</LINE_NO>
+                        <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                        <ARIBA_GR_NO>VRRC70</ARIBA_GR_NO>
+                        <MOVE_TYPE>101</MOVE_TYPE>
+                        <ENTRY_QNT>1000.000</ENTRY_QNT>
+                        <ENTRY_UOM>EA</ENTRY_UOM>
+                        <PO_NUMBER>4500056399</PO_NUMBER>
+                        <PO_ITEM>00010</PO_ITEM>
+                        <SUB_NUMBER>123456</SUB_NUMBER>
+                        <ASSET_NO>100000045</ASSET_NO>
+                        <MVT_IND>B</MVT_IND>
+                     </item>
+                  </GR_ITEMS>
+                  <GR_SERIALNUMBER>
+                     <item>
+                        <MATDOC_ITM>1</MATDOC_ITM>
+                        <SERIALNO>78456621</SERIALNO>
+                     </item>
+                  </GR_SERIALNUMBER>
+               </n0:ARBCIG_GOODS_RECEIPT_CREATE>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/BIS/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_BIS_3.0_Invoice.xsl">
+    <x:scenario label="InvoiceDetailRequest">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/BIS/Invoice/Invoice_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/BIS/Invoice/Invoice_AM.dat"
+            select="element()" label="InvoiceDetailRequest"/>
+    </x:scenario>  
+    
+    <x:scenario label="InvoiceDetailRequest - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/BIS/Invoice/Invoice_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/BIS/Invoice/Invoice_AM2.dat"
+            select="element()" label="InvoiceDetailRequest - 2"/>
+    </x:scenario>   
+    
+    <x:scenario label="InvoiceDetailRequest - 3">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSenderID"/>
+        <x:param name="anReceiverID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/BIS/Invoice/Invoice_BM3.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/BIS/Invoice/Invoice_AM3.dat"
+            select="element()" label="InvoiceDetailRequest - 3"/>
+    </x:scenario>  
+</x:description>

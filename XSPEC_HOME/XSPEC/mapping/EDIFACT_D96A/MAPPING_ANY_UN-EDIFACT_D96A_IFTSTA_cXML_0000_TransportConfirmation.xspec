@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_UN-EDIFACT_D96A_IFTSTA_cXML_0000_TransportConfirmation.xsl">
+    <x:scenario label="Transport Confirmation Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004579339-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/Confirmation/TransportConfirmation_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/Confirmation/TransportConfirmation_AM.xml"
+            select="element()" label="Transport Confirmation Request"/>
+    </x:scenario>
+    
+    <x:scenario label="Transport Confirmation Request - Accepted">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004579339-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/Confirmation/TransportConfirmation_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/Confirmation/TransportConfirmation_AM1.xml"
+            select="element()" label="Transport Confirmation Request - Accepted"/>
+    </x:scenario>
+</x:description>

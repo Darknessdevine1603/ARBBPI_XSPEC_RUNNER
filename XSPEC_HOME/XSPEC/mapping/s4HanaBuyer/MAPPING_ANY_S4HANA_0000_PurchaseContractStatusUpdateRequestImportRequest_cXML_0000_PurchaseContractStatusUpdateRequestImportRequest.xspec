@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_PurchaseContractStatusUpdateRequestImportRequest_cXML_0000_PurchaseContractStatusUpdateRequestImportRequest.xsl">
+    <x:scenario label="PurchaseContractUpdateNotification ERROR">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification_AM.xml" 
+            select="element()" label="InvoiceStatusUpdate"/>
+    </x:scenario>
+    
+    <x:scenario label="PurchaseContractUpdateNotification with Item">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+       
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification1_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification1_AM.xml" 
+            select="element()" label="InvoiceStatusUpdate"/>
+    </x:scenario>
+    
+    <x:scenario label="PurchaseContractUpdateNotification">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification2_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification2_AM.xml" 
+            select="element()" label="InvoiceStatusUpdate"/>
+    </x:scenario>
+  
+</x:description>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_MMInvoice_cXML_0000_InvoiceDetailRequest.xsl">
+    <x:scenario label="ERP MM Invoice Request 1">
+        <x:param name="exchange"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>        
+        <x:param name="anEnvName"/>
+        <x:param name="anContentID"/>        
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>        
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMInvoice1.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMInvoice1.dat"
+            select="element()" label="ERP MM Invoice Request 1"/>
+    </x:scenario>
+   <x:scenario label="ERP MM Credit Memo">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+       <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMCreditMemo.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMCreditMemo.dat"
+            select="element()" label="ERP MM Credit Memo"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Line Level Credit Memo">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMLineLevelCreditMemo.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMLineLevelCreditMemo.dat"
+            select="element()" label="ERP MM Line Level Credit Memo"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Invoice Request for Consignment">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/> 
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMConsignmentInvoice.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMConsignmentInvoice.dat"
+            select="element()" label="ERP MM Invoice Request for Consignment"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Invoice Request for Service Items">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMInvoiceServiceItem.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMInvoiceServiceItem.dat"
+            select="element()" label="ERP MM Invoice Request for Service Items"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Invoice Request for Service Items 2">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMInvoiceServiceItem2.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMInvoiceServiceItem2.dat"
+            select="element()" label="ERP MM Invoice Request for Service Items 2"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Invoice Request with Comment">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMInvoicewithComment.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMInvoicewithComment.dat"
+            select="element()" label="ERP MM Invoice Request with Comment"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Invoice Request Subsequent Debit Memo">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMInvoiceSubsequentDebit.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMInvoiceSubsequentDebit.dat"
+            select="element()" label="ERP MM Invoice Request Subsequent Debit Memo"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Invoice Request ERS">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/Invoice/MMInvoicewithERS.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/Invoice/MMInvoicewithERS.dat"
+            select="element()" label="ERP MM Invoice Request ERS"/>
+    </x:scenario>
+</x:description>

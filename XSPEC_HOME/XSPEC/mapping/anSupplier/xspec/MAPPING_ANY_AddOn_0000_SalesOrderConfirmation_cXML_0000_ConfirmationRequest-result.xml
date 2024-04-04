@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_AddOn_0000_SalesOrderConfirmation_cXML_0000_ConfirmationRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anSupplier/MAPPING_ANY_AddOn_0000_SalesOrderConfirmation_cXML_0000_ConfirmationRequest.xsl"
+        date="2023-04-27T15:32:01.979518+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_AddOn_0000_SalesOrderConfirmation_cXML_0000_ConfirmationRequest.xspec">
+      <label>Sales Order Confirmation</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anSupplier/OrderConfirmation/ConfirmationRequest.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="42010aee-2528-1edb-9e83-0ee6c946f35"
+                        timestamp="2021-02-26T05:23:23Z">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>%%SUPPLIER%%</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>%%BUYER%%</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <ConfirmationRequest>
+                           <ConfirmationHeader version="1"
+                                               confirmID="2065"
+                                               operation="new"
+                                               type="detail"
+                                               noticeDate="2021-03-02T05:31:54+00:00">
+                              <Comments xml:lang="en"/>
+                           </ConfirmationHeader>
+                           <OrderReference orderID="4500058650">
+                              <DocumentReference payloadID="42010AEE25251EEB9EE310FADC3060E2"/>
+                           </OrderReference>
+                           <ConfirmationItem quantity="10.0" lineNumber="10">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0" type="unknown">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="10" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>61</SupplierPartID>
+                                       <BuyerPartID>61</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">100.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">Manufacturing Part 2</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="20">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="30">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="40">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                        </ConfirmationRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Sales Order Confirmation</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="42010aee-2528-1edb-9e83-0ee6c946f35"
+                           timestamp="2021-02-26T05:23:23Z">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%SUPPLIER%%</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%BUYER%%</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <ConfirmationRequest>
+                              <ConfirmationHeader version="1"
+                                                  confirmID="2065"
+                                                  operation="new"
+                                                  type="detail"
+                                                  noticeDate="2021-03-02T05:31:54+00:00">
+                                 <Comments xml:lang="en"/>
+                              </ConfirmationHeader>
+                              <OrderReference orderID="4500058650">
+                                 <DocumentReference payloadID="42010AEE25251EEB9EE310FADC3060E2"/>
+                              </OrderReference>
+                              <ConfirmationItem quantity="10.0" lineNumber="10">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0" type="unknown">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="10" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>61</SupplierPartID>
+                                          <BuyerPartID>61</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">100.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">Manufacturing Part 2</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="20">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="30">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="40">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                           </ConfirmationRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_AddOn_0000_SalesOrderConfirmation_cXML_0000_ConfirmationRequest.xspec">
+      <label>Sales Order Confirmation type All Detail</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anSupplier/OrderConfirmation/ConfirmationRequestAllDetail.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="42010aee-2528-1edb-9e83-0ee6c946f35"
+                        timestamp="2021-02-26T05:23:23Z">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>%%SUPPLIER%%</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>%%BUYER%%</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="production">
+                        <ConfirmationRequest>
+                           <ConfirmationHeader version="1"
+                                               confirmID="2065"
+                                               operation="update"
+                                               type="allDetail"
+                                               noticeDate="2021-03-02T05:31:54+00:00">
+                              <Comments xml:lang="en">This is a tets for Code Coverage</Comments>
+                           </ConfirmationHeader>
+                           <OrderReference orderID="4500058113">
+                              <DocumentReference payloadID="42010AEE25251EEB9EE310FADC3060E2"/>
+                           </OrderReference>
+                           <ConfirmationItem quantity="10.0" lineNumber="10">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0" type="unknown">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="10" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>61</SupplierPartID>
+                                       <BuyerPartID>61</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">100.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">Manufacturing Part 2</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="20">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="20" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">12.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="30">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="30" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">12.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="40">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="40" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">12.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                        </ConfirmationRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Sales Order Confirmation type All Detail</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="42010aee-2528-1edb-9e83-0ee6c946f35"
+                           timestamp="2021-02-26T05:23:23Z">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%SUPPLIER%%</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%BUYER%%</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="production">
+                           <ConfirmationRequest>
+                              <ConfirmationHeader version="1"
+                                                  confirmID="2065"
+                                                  operation="update"
+                                                  type="allDetail"
+                                                  noticeDate="2021-03-02T05:31:54+00:00">
+                                 <Comments xml:lang="en">This is a tets for Code Coverage</Comments>
+                              </ConfirmationHeader>
+                              <OrderReference orderID="4500058113">
+                                 <DocumentReference payloadID="42010AEE25251EEB9EE310FADC3060E2"/>
+                              </OrderReference>
+                              <ConfirmationItem quantity="10.0" lineNumber="10">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0" type="unknown">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="10" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>61</SupplierPartID>
+                                          <BuyerPartID>61</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">100.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">Manufacturing Part 2</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="20">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="20" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>70039-A1</SupplierPartID>
+                                          <BuyerPartID>70039</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">12.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="30">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="30" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>70039-A1</SupplierPartID>
+                                          <BuyerPartID>70039</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">12.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="40">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="40" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>70039-A1</SupplierPartID>
+                                          <BuyerPartID>70039</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">12.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                           </ConfirmationRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_AddOn_0000_SalesOrderConfirmation_cXML_0000_ConfirmationRequest.xspec">
+      <label>Sales Order Confirmation with Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anSupplier/OrderConfirmation/ConfirmationRequestComments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="42010aee-2528-1edb-9e83-0ee6c946f35"
+                        timestamp="2021-02-26T05:23:23Z">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>%%SUPPLIER%%</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>%%BUYER%%</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <ConfirmationRequest>
+                           <ConfirmationHeader version="1"
+                                               confirmID="2065"
+                                               operation="new"
+                                               type="allDetail"
+                                               noticeDate="2021-03-02T05:31:54+00:00">
+                              <DocumentReference payloadID="DocumentReference for Code Coverage"/>
+                              <Comments xml:lang="en" type="HEADER">Comment for Code Coverage</Comments>
+                           </ConfirmationHeader>
+                           <OrderReference orderID="4500058113">
+                              <DocumentReference payloadID="42010AEE25251EEB9EE310FADC3060E2"/>
+                           </OrderReference>
+                           <ConfirmationItem quantity="10.0" lineNumber="10">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0" type="unknown">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="10" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>61</SupplierPartID>
+                                       <BuyerPartID>61</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">100.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">Manufacturing Part 2</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="20">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="20" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">12.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                                 <Comments xml:lang="en">:test for Code Coverage</Comments>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="30">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="30" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">12.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                           <ConfirmationItem quantity="10.0" lineNumber="40">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <ConfirmationStatus quantity="10.0"
+                                                  type="accept"
+                                                  deliveryDate="2021-03-12T05:31:54+00:00"
+                                                  shipmentDate="2021-03-11T17:00:00+00:00">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ItemIn lineNumber="40" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                    </ItemID>
+                                    <ItemDetail>
+                                       <UnitPrice>
+                                          <Money currency="EUR">12.0</Money>
+                                       </UnitPrice>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <UnitOfMeasure>EA</UnitOfMeasure>
+                                       <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                       </PriceBasisQuantity>
+                                       <Classification domain="NotAvailable">001</Classification>
+                                    </ItemDetail>
+                                 </ItemIn>
+                                 <Comments xml:lang="en">Rejection Reason : Package Damaged.</Comments>
+                              </ConfirmationStatus>
+                           </ConfirmationItem>
+                        </ConfirmationRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Sales Order Confirmation with Comments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="42010aee-2528-1edb-9e83-0ee6c946f35"
+                           timestamp="2021-02-26T05:23:23Z">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%SUPPLIER%%</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%BUYER%%</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <ConfirmationRequest>
+                              <ConfirmationHeader version="1"
+                                                  confirmID="2065"
+                                                  operation="new"
+                                                  type="allDetail"
+                                                  noticeDate="2021-03-02T05:31:54+00:00">
+                                 <DocumentReference payloadID="DocumentReference for Code Coverage"/>
+                                 <Comments xml:lang="en" type="HEADER">Comment for Code Coverage</Comments>
+                              </ConfirmationHeader>
+                              <OrderReference orderID="4500058113">
+                                 <DocumentReference payloadID="42010AEE25251EEB9EE310FADC3060E2"/>
+                              </OrderReference>
+                              <ConfirmationItem quantity="10.0" lineNumber="10">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0" type="unknown">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="10" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>61</SupplierPartID>
+                                          <BuyerPartID>61</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">100.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">Manufacturing Part 2</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="20">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="20" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>70039-A1</SupplierPartID>
+                                          <BuyerPartID>70039</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">12.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                    <Comments xml:lang="en">...</Comments>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="30">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="30" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>70039-A1</SupplierPartID>
+                                          <BuyerPartID>70039</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">12.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                              <ConfirmationItem quantity="10.0" lineNumber="40">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <ConfirmationStatus quantity="10.0"
+                                                     type="accept"
+                                                     deliveryDate="2021-03-12T05:31:54+00:00"
+                                                     shipmentDate="2021-03-11T17:00:00+00:00">
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <ItemIn lineNumber="40" quantity="10.0">
+                                       <ItemID>
+                                          <SupplierPartID>70039-A1</SupplierPartID>
+                                          <BuyerPartID>70039</BuyerPartID>
+                                       </ItemID>
+                                       <ItemDetail>
+                                          <UnitPrice>
+                                             <Money currency="EUR">12.0</Money>
+                                          </UnitPrice>
+                                          <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                          <UnitOfMeasure>EA</UnitOfMeasure>
+                                          <PriceBasisQuantity conversionFactor="1" quantity="1.0">
+                                             <UnitOfMeasure>EA</UnitOfMeasure>
+                                          </PriceBasisQuantity>
+                                          <Classification domain="NotAvailable">001</Classification>
+                                       </ItemDetail>
+                                    </ItemIn>
+                                    <Comments xml:lang="en">Rejection Reason : Package Damaged.</Comments>
+                                 </ConfirmationStatus>
+                              </ConfirmationItem>
+                           </ConfirmationRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

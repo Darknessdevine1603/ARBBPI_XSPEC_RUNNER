@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="urn:Ariba:Buyer:vsap" xmlns:typens="urn:Ariba:Buyer:vsap">
+    <xsd:element name="Headers">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ReservationDeleteAsyncImportPullRequest">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0" name="Reservation_ReservationSuccessImport_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:Reservation_ReservationSuccessImport"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ReservationError_ReservationErrorImport_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:ReservationError_ReservationErrorImport"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ReservationDeleteAsyncImportPullReply">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="1" name="status" type="xsd:string"/>
+            </xsd:all>
+            <xsd:anyAttribute namespace="##local" processContents="lax"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="Reservation_ReservationSuccessImport">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.purchasing.core.Reservation, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="ErpReservationNumber" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Specifies the unique reservation Id assigned to a reservation
+                        document in the ERP system.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationSuccessImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="LineItems">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name ariba.purchasing.core.ReservationLineItem,
+                            group name Reference, variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="item">
+                            <xsd:complexType>
+                                <xsd:all>
+                                    <xsd:element minOccurs="1" name="ErpLineNumber" nillable="true"
+                                        type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>Defines the line number of an item in
+                                                ERP.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="1" name="NumberInCollection"
+                                        nillable="true" type="xsd:integer">
+                                        <xsd:annotation>
+                                            <xsd:documentation>Defines the line number of an item in
+                                                the reservation document.</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.Integer, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="UniqueName" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the unique ID of a reservation document in SAP Ariba
+                        Solution.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationSuccessImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ReservationError_ReservationErrorImport">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.integration.core.ReservationError, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="1" name="Date" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>The date in ERP system.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.util.core.Date, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorClient" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the client that corresponds to the
+                        error.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorMessage" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Provides a description of the error.</xsd:documentation>
+                    <xsd:documentation>Class name ariba.base.core.MultiLingualString, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorNumber" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the error number for every error that
+                        occurs.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPField" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the field name that corresponds to the error that has
+                        occured in SAP.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPId" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the error ID that is defined in
+                        SAP.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPModule" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the SAP module of the error, which is the Dynapro
+                        name.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSAPScreen" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the Dynapro number of the error on the
+                        screen.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="ErrorSystem" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the System ID of an error.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="Id" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the unique ID of a reservation document in SAP Ariba
+                        Solution.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="NumInSet" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Defines the line number of the corresponding line
+                        item.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="Type" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>It defines the SAP Message type.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        ReservationErrorImport, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+</xsd:schema>

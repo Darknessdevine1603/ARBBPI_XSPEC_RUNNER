@@ -1,0 +1,101 @@
+        <xsd:schema xmlns:typens="urn:Ariba:Sourcing:vsap" elementFormDefault="qualified"
+    targetNamespace="urn:Ariba:Sourcing:vsap" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Headers">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="PurchaseContractStatusUpdateRequestImportRequest">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0"
+                    name="WSPurchaseContractStatusUpdateRequestImportInputBean_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="item"
+                                type="typens:WSPurchaseContractStatusUpdateRequestImportInputBean"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="PurchaseContractStatusUpdateRequestImportReply">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0" name="WSPurchaseContractRequestExportInputBean_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="item"
+                                type="typens:WSPurchaseContractRequestExportInputBean"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="WSPurchaseContractStatusUpdateRequestImportInputBean">
+        <xsd:all>
+            <xsd:element name="ContractStatusUpdateRequest"
+                type="typens:ContractStatusUpdateRequest"/>
+            <xsd:element name="MessageHeader" type="typens:MessageHeader"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="WSPurchaseContractRequestExportInputBean">
+        <xsd:all>
+            <xsd:element name="Message" type="xsd:string"/>
+            <xsd:element name="Status" type="xsd:integer"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ContractStatusUpdateRequest">
+        <xsd:all>
+            <xsd:element name="ContractItemStatus">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item"
+                            type="typens:ContractItemStatus"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ContractStatus" type="typens:ContractHeaderStatus"/>
+            <xsd:element name="Status" type="typens:WSPurchaseContractRequestExportInputBean"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="MessageHeader">
+        <xsd:all>
+            <xsd:element name="ANID" type="xsd:string"/>
+            <xsd:element name="BusinessSystemID" type="xsd:string"/>
+            <xsd:element name="PayloadID" type="xsd:string"/>
+            <xsd:element name="RealmID" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ContractItemStatus">
+        <xsd:all>
+            <xsd:element name="Operation" type="xsd:string"/>
+            <xsd:element name="Reference" type="typens:Reference"/>
+            <xsd:element name="ReferenceDocInfoLineNumber" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ContractHeaderStatus">
+        <xsd:all>
+            <xsd:element name="ContractDate" type="xsd:string"/>
+            <xsd:element name="ContractID" type="xsd:string"/>
+            <xsd:element name="ExternalApprovalStatus" type="xsd:string"/>
+            <xsd:element name="Operation" type="xsd:string"/>
+            <xsd:element name="Reference" type="typens:Reference"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="Reference">
+        <xsd:all>
+            <xsd:element name="Domain" type="xsd:string"/>
+            <xsd:element name="Identifier" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+</xsd:schema>

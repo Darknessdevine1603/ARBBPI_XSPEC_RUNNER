@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_OrderConfirmationApprovalRequest_AddOn_0000_OrderConfirmationApprovalRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_OrderConfirmationApprovalRequest_AddOn_0000_OrderConfirmationApprovalRequest.xsl"
+        date="2023-04-27T15:28:08.673967+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_OrderConfirmationApprovalRequest_AddOn_0000_OrderConfirmationApprovalRequest.xspec">
+      <label>OCA for Purchase Order</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/OCA/OCA-PO.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-07-09T03:13:21-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1625825600856-4946548043916972619@10.163.3.194</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <OrderConfirmationApproval>
+                  <ID>4500060308</ID>
+                  <ConfirmationID>OC4500060308</ConfirmationID>
+                  <PurchOrdDate>2021-07-09T12:00:00+05:30</PurchOrdDate>
+                  <BuyerPostingDate>2021-07-09T15:43:21+05:30</BuyerPostingDate>
+                  <VendorParty>
+                     <InternalID>501</InternalID>
+                  </VendorParty>
+                  <Item>
+                     <ID>10</ID>
+                     <ActionCode>01</ActionCode>
+                     <UnitPrice>
+                        <Amount currencyCode="EUR">10.00</Amount>
+                        <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                     </UnitPrice>
+                     <ScheduleLine>
+                        <ID>1</ID>
+                        <ConfirmationStatus>002</ConfirmationStatus>
+                        <Quantity unitCode="EA">8.000</Quantity>
+                        <StartDate>2021-07-19T22:30:00+05:30</StartDate>
+                     </ScheduleLine>
+                     <Comments/>
+                  </Item>
+                  <OrderID>4500060308</OrderID>
+               </OrderConfirmationApproval>
+               <HeaderComments/>
+            </n0:OrdConfAppReqMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>OCA for Purchase Order</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2021-07-09T03:13:21-07:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1625825600856-4946548043916972619@10.163.3.194</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <OrderConfirmationApproval>
+                     <ID>4500060308</ID>
+                     <ConfirmationID>OC4500060308</ConfirmationID>
+                     <PurchOrdDate>2021-07-09T12:00:00+05:30</PurchOrdDate>
+                     <BuyerPostingDate>2021-07-09T15:43:21+05:30</BuyerPostingDate>
+                     <VendorParty>
+                        <InternalID>501</InternalID>
+                     </VendorParty>
+                     <Item>
+                        <ID>10</ID>
+                        <ActionCode>01</ActionCode>
+                        <UnitPrice>
+                           <Amount currencyCode="EUR">10.00</Amount>
+                           <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                        </UnitPrice>
+                        <ScheduleLine>
+                           <ID>1</ID>
+                           <ConfirmationStatus>002</ConfirmationStatus>
+                           <Quantity unitCode="EA">8.000</Quantity>
+                           <StartDate>2021-07-19T22:30:00+05:30</StartDate>
+                        </ScheduleLine>
+                        <Comments/>
+                     </Item>
+                     <OrderID>4500060308</OrderID>
+                  </OrderConfirmationApproval>
+                  <HeaderComments/>
+               </n0:OrdConfAppReqMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_OrderConfirmationApprovalRequest_AddOn_0000_OrderConfirmationApprovalRequest.xspec">
+      <label>OCA for Scheduling Agreement</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/OCA/OCA-SAR.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-07-08T23:41:19-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1625812879636-298211034380728633@10.163.3.186</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <OrderConfirmationApproval>
+                  <ID>5500003095</ID>
+                  <ConfirmationID>OCA_5500003095</ConfirmationID>
+                  <PurchOrdDate>2021-07-09T12:00:00+05:30</PurchOrdDate>
+                  <BuyerPostingDate>2021-07-09T12:08:52+05:30</BuyerPostingDate>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <Item>
+                     <ID>10</ID>
+                     <ActionCode>04</ActionCode>
+                     <UnitPrice>
+                        <Amount currencyCode="EUR">50.00</Amount>
+                        <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                     </UnitPrice>
+                     <Deviations>
+                        <DeviationReason>quantityDeviation</DeviationReason>
+                     </Deviations>
+                     <SupplierPartID>285</SupplierPartID>
+                     <ScheduleLine>
+                        <ID>1</ID>
+                        <ConfirmationStatus>002</ConfirmationStatus>
+                        <Quantity unitCode="EA">180.000</Quantity>
+                        <StartDate>2021-07-12T12:00:00+05:30</StartDate>
+                     </ScheduleLine>
+                     <ScheduleLine>
+                        <ID>2</ID>
+                        <ConfirmationStatus>003</ConfirmationStatus>
+                        <Quantity unitCode="EA">20.000</Quantity>
+                        <StartDate/>
+                     </ScheduleLine>
+                     <Comments/>
+                  </Item>
+                  <Item>
+                     <ID>20</ID>
+                     <ActionCode>02</ActionCode>
+                     <UnitPrice>
+                        <Amount currencyCode="EUR">150.00</Amount>
+                        <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                     </UnitPrice>
+                     <Deviations>
+                        <DeviationReason>quantityDeviation</DeviationReason>
+                     </Deviations>
+                     <SupplierPartID>SAPARIBA</SupplierPartID>
+                     <ScheduleLine>
+                        <ID>1</ID>
+                        <ConfirmationStatus>002</ConfirmationStatus>
+                        <Quantity unitCode="EA">130.000</Quantity>
+                        <StartDate>2021-07-13T12:00:00+05:30</StartDate>
+                     </ScheduleLine>
+                     <ScheduleLine>
+                        <ID>2</ID>
+                        <ConfirmationStatus>003</ConfirmationStatus>
+                        <Quantity unitCode="EA">20.000</Quantity>
+                        <StartDate/>
+                     </ScheduleLine>
+                     <Comments/>
+                  </Item>
+                  <OrderID>5500003095</OrderID>
+               </OrderConfirmationApproval>
+               <HeaderComments/>
+            </n0:OrdConfAppReqMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>OCA for Scheduling Agreement</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>...</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <OrderConfirmationApproval>
+                     <ID>5500003095</ID>
+                     <ConfirmationID>OCA_5500003095</ConfirmationID>
+                     <PurchOrdDate>2021-07-09T12:00:00+05:30</PurchOrdDate>
+                     <BuyerPostingDate>2021-07-09T12:08:52+05:30</BuyerPostingDate>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <Item>
+                        <ID>10</ID>
+                        <ActionCode>04</ActionCode>
+                        <UnitPrice>
+                           <Amount currencyCode="EUR">50.00</Amount>
+                           <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                        </UnitPrice>
+                        <Deviations>
+                           <DeviationReason>quantityDeviation</DeviationReason>
+                        </Deviations>
+                        <SupplierPartID>285</SupplierPartID>
+                        <ScheduleLine>
+                           <ID>1</ID>
+                           <ConfirmationStatus>002</ConfirmationStatus>
+                           <Quantity unitCode="EA">180.000</Quantity>
+                           <StartDate>2021-07-12T12:00:00+05:30</StartDate>
+                        </ScheduleLine>
+                        <ScheduleLine>
+                           <ID>2</ID>
+                           <ConfirmationStatus>003</ConfirmationStatus>
+                           <Quantity unitCode="EA">20.000</Quantity>
+                           <StartDate/>
+                        </ScheduleLine>
+                        <Comments/>
+                     </Item>
+                     <Item>
+                        <ID>20</ID>
+                        <ActionCode>02</ActionCode>
+                        <UnitPrice>
+                           <Amount currencyCode="EUR">150.00</Amount>
+                           <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                        </UnitPrice>
+                        <Deviations>
+                           <DeviationReason>quantityDeviation</DeviationReason>
+                        </Deviations>
+                        <SupplierPartID>SAPARIBA</SupplierPartID>
+                        <ScheduleLine>
+                           <ID>1</ID>
+                           <ConfirmationStatus>002</ConfirmationStatus>
+                           <Quantity unitCode="EA">130.000</Quantity>
+                           <StartDate>2021-07-13T12:00:00+05:30</StartDate>
+                        </ScheduleLine>
+                        <ScheduleLine>
+                           <ID>2</ID>
+                           <ConfirmationStatus>003</ConfirmationStatus>
+                           <Quantity unitCode="EA">20.000</Quantity>
+                           <StartDate/>
+                        </ScheduleLine>
+                        <Comments/>
+                     </Item>
+                     <OrderID>5500003095</OrderID>
+                  </OrderConfirmationApproval>
+                  <HeaderComments/>
+               </n0:OrdConfAppReqMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_OrderConfirmationApprovalRequest_AddOn_0000_OrderConfirmationApprovalRequest.xspec">
+      <label>OCA with AcceptItem</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/OCA/OCA-AcceptItemDetail.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-07-08T23:41:19-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1625812879636-298211034380728633@10.163.3.186</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <OrderConfirmationApproval>
+                  <ID>5500003095</ID>
+                  <ConfirmationID>OCA_5500003095</ConfirmationID>
+                  <PurchOrdDate>2021-07-09T12:00:00+05:30</PurchOrdDate>
+                  <BuyerPostingDate>2021-07-09T12:08:52+05:30</BuyerPostingDate>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <Item>
+                     <ID>10</ID>
+                     <ActionCode>03</ActionCode>
+                     <PriceDeviation>1</PriceDeviation>
+                     <UnitPrice>
+                        <Amount currencyCode="EUR">0.01</Amount>
+                        <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                     </UnitPrice>
+                     <Deviations>
+                        <DeviationReason>priceDeviation</DeviationReason>
+                     </Deviations>
+                     <SupplierPartID>285</SupplierPartID>
+                     <ItemDetailApprovedAction>002</ItemDetailApprovedAction>
+                     <ScheduleLine>
+                        <ID>0</ID>
+                        <ConfirmationStatus>003</ConfirmationStatus>
+                        <SchdLineApprovedAction>001</SchdLineApprovedAction>
+                        <Quantity>NaN</Quantity>
+                        <StartDate/>
+                     </ScheduleLine>
+                  </Item>
+                  <Item>
+                     <ID>20</ID>
+                     <ActionCode>04</ActionCode>
+                     <Deviations>
+                        <DeviationReason>quantityDeviation</DeviationReason>
+                     </Deviations>
+                     <SupplierPartID>SAPARIBA</SupplierPartID>
+                     <ItemDetailApprovedAction>002</ItemDetailApprovedAction>
+                     <ScheduleLine>
+                        <ID>10</ID>
+                        <ConfirmationStatus>002</ConfirmationStatus>
+                        <SchdLineApprovedAction>003</SchdLineApprovedAction>
+                        <Quantity>NaN</Quantity>
+                        <StartDate>2021-07-09T12:08:52+05:30</StartDate>
+                     </ScheduleLine>
+                  </Item>
+                  <OrderID>55000030955500003095</OrderID>
+               </OrderConfirmationApproval>
+               <HeaderComments/>
+            </n0:OrdConfAppReqMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>OCA with AcceptItem</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>...</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <OrderConfirmationApproval>
+                     <ID>5500003095</ID>
+                     <ConfirmationID>OCA_5500003095</ConfirmationID>
+                     <PurchOrdDate>2021-07-09T12:00:00+05:30</PurchOrdDate>
+                     <BuyerPostingDate>2021-07-09T12:08:52+05:30</BuyerPostingDate>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <Item>
+                        <ID>10</ID>
+                        <ActionCode>03</ActionCode>
+                        <PriceDeviation>1</PriceDeviation>
+                        <UnitPrice>
+                           <Amount currencyCode="EUR">0.01</Amount>
+                           <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                        </UnitPrice>
+                        <Deviations>
+                           <DeviationReason>priceDeviation</DeviationReason>
+                        </Deviations>
+                        <SupplierPartID>285</SupplierPartID>
+                        <ItemDetailApprovedAction>002</ItemDetailApprovedAction>
+                        <ScheduleLine>
+                           <ID>0</ID>
+                           <ConfirmationStatus>003</ConfirmationStatus>
+                           <SchdLineApprovedAction>001</SchdLineApprovedAction>
+                           <Quantity>NaN</Quantity>
+                           <StartDate/>
+                        </ScheduleLine>
+                     </Item>
+                     <Item>
+                        <ID>20</ID>
+                        <ActionCode>04</ActionCode>
+                        <Deviations>
+                           <DeviationReason>quantityDeviation</DeviationReason>
+                        </Deviations>
+                        <SupplierPartID>SAPARIBA</SupplierPartID>
+                        <ItemDetailApprovedAction>002</ItemDetailApprovedAction>
+                        <ScheduleLine>
+                           <ID>10</ID>
+                           <ConfirmationStatus>002</ConfirmationStatus>
+                           <SchdLineApprovedAction>003</SchdLineApprovedAction>
+                           <Quantity>NaN</Quantity>
+                           <StartDate>2021-07-09T12:08:52+05:30</StartDate>
+                        </ScheduleLine>
+                     </Item>
+                     <OrderID>55000030955500003095</OrderID>
+                  </OrderConfirmationApproval>
+                  <HeaderComments/>
+               </n0:OrdConfAppReqMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_OrderConfirmationApprovalRequest_AddOn_0000_OrderConfirmationApprovalRequest.xspec">
+      <label>OCA with AcceptItem with Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/OCA/OCA-AcceptItemDetailComments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-07-08T23:41:19-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1625812879636-298211034380728633@10.163.3.186</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <OrderConfirmationApproval>
+                  <ID>5500003095</ID>
+                  <ConfirmationID>OCA_5500003095</ConfirmationID>
+                  <PurchOrdDate>2021-07-09T12:00:00+05:30</PurchOrdDate>
+                  <BuyerPostingDate>2021-07-09T12:08:52+05:30</BuyerPostingDate>
+                  <VendorParty>
+                     <InternalID>100000</InternalID>
+                  </VendorParty>
+                  <Item>
+                     <ID>10</ID>
+                     <ActionCode>03</ActionCode>
+                     <PriceDeviation>1</PriceDeviation>
+                     <UnitPrice>
+                        <Amount currencyCode="EUR">0.01</Amount>
+                        <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                     </UnitPrice>
+                     <Deviations>
+                        <DeviationReason>priceDeviation</DeviationReason>
+                        <Comments languageCode="FR">Comments</Comments>
+                     </Deviations>
+                     <SupplierPartID>285</SupplierPartID>
+                     <ItemDetailApprovedAction>001</ItemDetailApprovedAction>
+                     <ScheduleLine>
+                        <ID>0</ID>
+                        <ConfirmationStatus>003</ConfirmationStatus>
+                        <SchdLineApprovedAction>002</SchdLineApprovedAction>
+                        <Quantity>NaN</Quantity>
+                        <StartDate/>
+                     </ScheduleLine>
+                     <Comments>
+                        <Item>
+                           <TextID>AN00</TextID>
+                           <TextLang>FR</TextLang>
+                           <ItemNumber>10</ItemNumber>
+                           <AribaLine>
+                              <TextLine>Leighton Durham Reynolds (1930–1999) was a British Latinist who is best known for his work on textual criticism. He spent his teachi</TextLine>
+                           </AribaLine>
+                           <AribaLine>
+                              <TextLine>ng career at Brasenose College, Oxford (pictured), where he published the most commonly cited edition of Seneca the Younger's Letter</TextLine>
+                           </AribaLine>
+                           <AribaLine>
+                              <TextLine>s. The central academic achievement of his career was his monograph The Medieval Tradition of Seneca's Letters (1965), in which he r</TextLine>
+                           </AribaLine>
+                           <AribaLine>
+                              <TextLine>econstructed how the text was transmitted through the Middle Ages. He also wrote critical editions of Seneca's Dialogues, the works </TextLine>
+                           </AribaLine>
+                           <AribaLine>
+                              <TextLine>of the historian Sallust, and Cicero's De finibus bonorum et malorum. In 1968, Reynolds and his Oxford colleague Nigel Wilson co-aut</TextLine>
+                           </AribaLine>
+                           <AribaLine>
+                              <TextLine>hored a well-received introduction to textual criticism. Writing about the set of critical editions authored by Reynolds, the Latini</TextLine>
+                           </AribaLine>
+                           <AribaLine>
+                              <TextLine>st Michael Reeve stated that Reynolds's scholarship "cut through dozens of manuscripts to the serviceable core". 
+              
+   </TextLine>
+                           </AribaLine>
+                           <AribaLine>
+                              <TextLine>           When published, his work on Seneca was considered by some commentators to be difficult to surpass. (Full article...)</TextLine>
+                           </AribaLine>
+                        </Item>
+                     </Comments>
+                  </Item>
+                  <Item>
+                     <ID>20</ID>
+                     <ActionCode>04</ActionCode>
+                     <Deviations>
+                        <DeviationReason>quantityDeviation</DeviationReason>
+                        <Comments languageCode="FR">Leighton Durham Reynolds (1930–1999) was a British Latinist who is best known for his work on textual criticism. He spent his teaching career at Brasenose College, Oxford (pictured), where he published the most commonly cited edition of Seneca the Younger's Letters. The central academic achievement of his career was his monograph The Medieval Tradition of Seneca's Letters (1965), in which he reconstructed how the text was transmitted through the Middle Ages. He also wrote critical editions of Seneca's Dialogues, the works of the historian Sallust, and Cicero's De finibus bonorum et malorum. In 1968, Reynolds and his Oxford colleague Nigel Wilson co-authored a well-received introduction to textual criticism. Writing about the set of critical editions authored by Reynolds, the Latinist Michael Reeve stated that Reynolds's scholarship "cut through dozens of manuscripts to the serviceable core". 
+                
+                When published, his work on Seneca was considered by some commentators to be difficult to surpass. (Full article...)</Comments>
+                     </Deviations>
+                     <SupplierPartID>SAPARIBA</SupplierPartID>
+                     <ItemDetailApprovedAction>001</ItemDetailApprovedAction>
+                     <ScheduleLine>
+                        <ID>10</ID>
+                        <ConfirmationStatus>002</ConfirmationStatus>
+                        <SchdLineApprovedAction>003</SchdLineApprovedAction>
+                        <Quantity>NaN</Quantity>
+                        <StartDate>2021-07-09T12:08:52+05:30</StartDate>
+                     </ScheduleLine>
+                  </Item>
+                  <Item>
+                     <ID>30</ID>
+                     <ActionCode>04</ActionCode>
+                     <UnitPrice>
+                        <Amount currencyCode="EUR">150.00</Amount>
+                        <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                     </UnitPrice>
+                     <Deviations>
+                        <DeviationReason>quantityDeviation</DeviationReason>
+                        <Comments languageCode="FR">Leighton Durham Reynolds (1930–1999) was a British Latinist who is best known for his work on textual criticism. He spent his teaching career at Brasenose College, Oxford (pictured), where he published the most commonly cited edition of Seneca the Younger's Letters. The central academic achievement of his career was his monograph The Medieval Tradition of Seneca's Letters (1965), in which he reconstructed how the text was transmitted through the Middle Ages. He also wrote critical editions of Seneca's Dialogues, the works of the historian Sallust, and Cicero's De finibus bonorum et malorum. In 1968, Reynolds and his Oxford colleague Nigel Wilson co-authored a well-received introduction to textual criticism. Writing about the set of critical editions authored by Reynolds, the Latinist Michael Reeve stated that Reynolds's scholarship "cut through dozens of manuscripts to the serviceable core". 
+                
+                When published, his work on Seneca was considered by some commentators to be difficult to surpass. (Full article...)</Comments>
+                     </Deviations>
+                     <SupplierPartID>SAPARIBA</SupplierPartID>
+                     <ScheduleLine>
+                        <ID>1</ID>
+                        <ConfirmationStatus>002</ConfirmationStatus>
+                        <Quantity unitCode="EA">130.000</Quantity>
+                        <StartDate>2021-07-13T12:00:00+05:30</StartDate>
+                     </ScheduleLine>
+                     <ScheduleLine>
+                        <ID>2</ID>
+                        <ConfirmationStatus>003</ConfirmationStatus>
+                        <Quantity unitCode="EA">20.000</Quantity>
+                        <StartDate/>
+                     </ScheduleLine>
+                     <Comments/>
+                  </Item>
+                  <OrderID>55000030955500003095</OrderID>
+               </OrderConfirmationApproval>
+               <HeaderComments/>
+               <Attachment>
+                  <Item>
+                     <FileName>Header Attachment.pdf</FileName>
+                     <ContentType>application/pdf; name="Header Attachment.pdf"</ContentType>
+                     <ContentId>1234Head</ContentId>
+                     <Content>header1</Content>
+                  </Item>
+                  <Item>
+                     <FileName>Header Attachment.txt</FileName>
+                     <ContentType>text/plain; name="Header Attachment.txt"</ContentType>
+                     <ContentId>1234Line</ContentId>
+                     <Content>header2</Content>
+                     <LineNumber>10</LineNumber>
+                  </Item>
+               </Attachment>
+            </n0:OrdConfAppReqMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>OCA with AcceptItem with Comments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>...</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <OrderConfirmationApproval>
+                     <ID>5500003095</ID>
+                     <ConfirmationID>OCA_5500003095</ConfirmationID>
+                     <PurchOrdDate>2021-07-09T12:00:00+05:30</PurchOrdDate>
+                     <BuyerPostingDate>2021-07-09T12:08:52+05:30</BuyerPostingDate>
+                     <VendorParty>
+                        <InternalID>100000</InternalID>
+                     </VendorParty>
+                     <Item>
+                        <ID>10</ID>
+                        <ActionCode>03</ActionCode>
+                        <PriceDeviation>1</PriceDeviation>
+                        <UnitPrice>
+                           <Amount currencyCode="EUR">0.01</Amount>
+                           <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                        </UnitPrice>
+                        <Deviations>
+                           <DeviationReason>priceDeviation</DeviationReason>
+                           <Comments languageCode="FR">Comments</Comments>
+                        </Deviations>
+                        <SupplierPartID>285</SupplierPartID>
+                        <ItemDetailApprovedAction>001</ItemDetailApprovedAction>
+                        <ScheduleLine>
+                           <ID>0</ID>
+                           <ConfirmationStatus>003</ConfirmationStatus>
+                           <SchdLineApprovedAction>002</SchdLineApprovedAction>
+                           <Quantity>NaN</Quantity>
+                           <StartDate/>
+                        </ScheduleLine>
+                        <Comments>
+                           <Item>
+                              <TextID>AN00</TextID>
+                              <TextLang>FR</TextLang>
+                              <ItemNumber>10</ItemNumber>
+                              <AribaLine>
+                                 <TextLine>Leighton Durham Reynolds (1930–1999) was a British Latinist who is best known for his work on textual criticism. He spent his teachi</TextLine>
+                              </AribaLine>
+                              <AribaLine>
+                                 <TextLine>ng career at Brasenose College, Oxford (pictured), where he published the most commonly cited edition of Seneca the Younger's Letter</TextLine>
+                              </AribaLine>
+                              <AribaLine>
+                                 <TextLine>s. The central academic achievement of his career was his monograph The Medieval Tradition of Seneca's Letters (1965), in which he r</TextLine>
+                              </AribaLine>
+                              <AribaLine>
+                                 <TextLine>econstructed how the text was transmitted through the Middle Ages. He also wrote critical editions of Seneca's Dialogues, the works </TextLine>
+                              </AribaLine>
+                              <AribaLine>
+                                 <TextLine>of the historian Sallust, and Cicero's De finibus bonorum et malorum. In 1968, Reynolds and his Oxford colleague Nigel Wilson co-aut</TextLine>
+                              </AribaLine>
+                              <AribaLine>
+                                 <TextLine>hored a well-received introduction to textual criticism. Writing about the set of critical editions authored by Reynolds, the Latini</TextLine>
+                              </AribaLine>
+                              <AribaLine>
+                                 <TextLine>...</TextLine>
+                              </AribaLine>
+                              <AribaLine>
+                                 <TextLine>...</TextLine>
+                              </AribaLine>
+                           </Item>
+                        </Comments>
+                     </Item>
+                     <Item>
+                        <ID>20</ID>
+                        <ActionCode>04</ActionCode>
+                        <Deviations>
+                           <DeviationReason>quantityDeviation</DeviationReason>
+                           <Comments languageCode="FR">...</Comments>
+                        </Deviations>
+                        <SupplierPartID>SAPARIBA</SupplierPartID>
+                        <ItemDetailApprovedAction>001</ItemDetailApprovedAction>
+                        <ScheduleLine>
+                           <ID>10</ID>
+                           <ConfirmationStatus>002</ConfirmationStatus>
+                           <SchdLineApprovedAction>003</SchdLineApprovedAction>
+                           <Quantity>NaN</Quantity>
+                           <StartDate>2021-07-09T12:08:52+05:30</StartDate>
+                        </ScheduleLine>
+                     </Item>
+                     <Item>
+                        <ID>30</ID>
+                        <ActionCode>04</ActionCode>
+                        <UnitPrice>
+                           <Amount currencyCode="EUR">150.00</Amount>
+                           <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                        </UnitPrice>
+                        <Deviations>
+                           <DeviationReason>quantityDeviation</DeviationReason>
+                           <Comments languageCode="FR">...</Comments>
+                        </Deviations>
+                        <SupplierPartID>SAPARIBA</SupplierPartID>
+                        <ScheduleLine>
+                           <ID>1</ID>
+                           <ConfirmationStatus>002</ConfirmationStatus>
+                           <Quantity unitCode="EA">130.000</Quantity>
+                           <StartDate>2021-07-13T12:00:00+05:30</StartDate>
+                        </ScheduleLine>
+                        <ScheduleLine>
+                           <ID>2</ID>
+                           <ConfirmationStatus>003</ConfirmationStatus>
+                           <Quantity unitCode="EA">20.000</Quantity>
+                           <StartDate/>
+                        </ScheduleLine>
+                        <Comments/>
+                     </Item>
+                     <OrderID>55000030955500003095</OrderID>
+                  </OrderConfirmationApproval>
+                  <HeaderComments/>
+                  <Attachment>
+                     <Item>
+                        <FileName>Header Attachment.pdf</FileName>
+                        <ContentType>application/pdf; name="Header Attachment.pdf"</ContentType>
+                        <ContentId>1234Head</ContentId>
+                        <Content>header1</Content>
+                     </Item>
+                     <Item>
+                        <FileName>Header Attachment.txt</FileName>
+                        <ContentType>text/plain; name="Header Attachment.txt"</ContentType>
+                        <ContentId>1234Line</ContentId>
+                        <Content>header2</Content>
+                        <LineNumber>10</LineNumber>
+                     </Item>
+                  </Attachment>
+               </n0:OrdConfAppReqMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_OrderConfirmationApprovalRequest_AddOn_0000_OrderConfirmationApprovalRequest.xspec">
+      <label>OCA with line item texts</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/OCA/OCA_Line_Text.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2022-03-28T05:38:06-07:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1648471086294-5684158732190529179@10.162.97.167</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <OrderConfirmationApproval>
+                  <ID>4500027132</ID>
+                  <ConfirmationID>CONF1221</ConfirmationID>
+                  <PurchOrdDate>2022-03-29T00:30:00+05:30</PurchOrdDate>
+                  <BuyerPostingDate>2022-03-28T18:08:06+05:30</BuyerPostingDate>
+                  <VendorParty>
+                     <InternalID>1000</InternalID>
+                  </VendorParty>
+                  <Item>
+                     <ID>10</ID>
+                     <ActionCode>02</ActionCode>
+                     <PriceDeviation>1</PriceDeviation>
+                     <UnitPrice>
+                        <Amount currencyCode="USD">200</Amount>
+                        <BaseQuantity unitCode="PCE">1.000</BaseQuantity>
+                     </UnitPrice>
+                     <Deviations>
+                        <DeviationReason>priceDeviation</DeviationReason>
+                        <Comments languageCode="en">APPR and update</Comments>
+                     </Deviations>
+                     <SupplierPartID>SUP_MAT1</SupplierPartID>
+                     <ItemDetailApprovedAction>002</ItemDetailApprovedAction>
+                     <ScheduleLine>
+                        <ID>0</ID>
+                        <ConfirmationStatus>002</ConfirmationStatus>
+                        <SchdLineApprovedAction>002</SchdLineApprovedAction>
+                        <Quantity>1.000</Quantity>
+                        <StartDate>2022-03-30T12:00:00+05:30</StartDate>
+                     </ScheduleLine>
+                     <Comments>
+                        <Item>
+                           <TextID>AN00</TextID>
+                           <TextLang>en-US</TextLang>
+                           <ItemNumber>10</ItemNumber>
+                        </Item>
+                     </Comments>
+                  </Item>
+                  <OrderID>4500027132</OrderID>
+               </OrderConfirmationApproval>
+               <HeaderComments/>
+            </n0:OrdConfAppReqMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>OCA with line item texts</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:OrdConfAppReqMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>...</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005543705-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <OrderConfirmationApproval>
+                     <ID>4500027132</ID>
+                     <ConfirmationID>CONF1221</ConfirmationID>
+                     <PurchOrdDate>2022-03-29T00:30:00+05:30</PurchOrdDate>
+                     <BuyerPostingDate>2022-03-28T18:08:06+05:30</BuyerPostingDate>
+                     <VendorParty>
+                        <InternalID>1000</InternalID>
+                     </VendorParty>
+                     <Item>
+                        <ID>10</ID>
+                        <ActionCode>02</ActionCode>
+                        <PriceDeviation>1</PriceDeviation>
+                        <UnitPrice>
+                           <Amount currencyCode="USD">200</Amount>
+                           <BaseQuantity unitCode="PCE">1.000</BaseQuantity>
+                        </UnitPrice>
+                        <Deviations>
+                           <DeviationReason>priceDeviation</DeviationReason>
+                           <Comments languageCode="en">APPR and update</Comments>
+                        </Deviations>
+                        <SupplierPartID>SUP_MAT1</SupplierPartID>
+                        <ItemDetailApprovedAction>002</ItemDetailApprovedAction>
+                        <ScheduleLine>
+                           <ID>0</ID>
+                           <ConfirmationStatus>002</ConfirmationStatus>
+                           <SchdLineApprovedAction>002</SchdLineApprovedAction>
+                           <Quantity>1.000</Quantity>
+                           <StartDate>2022-03-30T12:00:00+05:30</StartDate>
+                        </ScheduleLine>
+                        <Comments>
+                           <Item>
+                              <TextID>AN00</TextID>
+                              <TextLang>en-US</TextLang>
+                              <ItemNumber>10</ItemNumber>
+                           </Item>
+                        </Comments>
+                     </Item>
+                     <OrderID>4500027132</OrderID>
+                  </OrderConfirmationApproval>
+                  <HeaderComments/>
+               </n0:OrdConfAppReqMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_PurchaseOrderCloseStatusResponse_cXML_0000_PurchaseOrderCloseStatusResponse.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_PurchaseOrderCloseStatusResponse_cXML_0000_PurchaseOrderCloseStatusResponse.xsl"
+        date="2023-04-27T15:38:14.203618+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_PurchaseOrderCloseStatusResponse_cXML_0000_PurchaseOrderCloseStatusResponse.xspec">
+      <label>PurchaseOrderCloseStatusSuccessResponse</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/POCloseStatus/PurchaseOrderCloseStatusResponse_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <PurchaseOrderCloseStatusExportReply>
+               <partition>prealm_2</partition>
+               <variant>vrealm_2</variant>
+               <ERPOrder_ClosePurchaseOrderNumberImport_Item>
+                  <item>
+                     <LineItems>
+                        <item>
+                           <NumberInCollection>1</NumberInCollection>
+                        </item>
+                     </LineItems>
+                     <UniqueName>TC_BCK123</UniqueName>
+                  </item>
+               </ERPOrder_ClosePurchaseOrderNumberImport_Item>
+            </PurchaseOrderCloseStatusExportReply>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>PurchaseOrderCloseStatusSuccessResponse</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <PurchaseOrderCloseStatusExportReply>
+                  <partition>prealm_2</partition>
+                  <variant>vrealm_2</variant>
+                  <ERPOrder_ClosePurchaseOrderNumberImport_Item>
+                     <item>
+                        <LineItems>
+                           <item>
+                              <NumberInCollection>1</NumberInCollection>
+                           </item>
+                        </LineItems>
+                        <UniqueName>TC_BCK123</UniqueName>
+                     </item>
+                  </ERPOrder_ClosePurchaseOrderNumberImport_Item>
+               </PurchaseOrderCloseStatusExportReply>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_PurchaseOrderCloseStatusResponse_cXML_0000_PurchaseOrderCloseStatusResponse.xspec">
+      <label>PurchaseOrderCloseStatusErrorResponse</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/POCloseStatus/PurchaseOrderCloseStatusResponseError_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <PurchaseOrderCloseStatusExportReply>
+               <partition>prealm_2</partition>
+               <variant>vrealm_2</variant>
+               <PurchaseOrderError_ClosePurchOrdErrorImport_Item>
+                  <item>
+                     <Date>2023-04-27T15:38:14.203618+05:30</Date>
+                     <ErrorClient>Q8JCLNT002</ErrorClient>
+                     <ErrorMessage>Document 450000A688 does not exist</ErrorMessage>
+                     <ErrorNumber>019</ErrorNumber>
+                     <ErrorSAPField/>
+                     <ErrorSAPId>06</ErrorSAPId>
+                     <ErrorSAPModule>ARBCIG_BAPI_PO_CLOSE</ErrorSAPModule>
+                     <ErrorSAPScreen>ARBCIG_BAPI_PO_CLOSE</ErrorSAPScreen>
+                     <Id>TC_BCK123</Id>
+                     <NumInSet>1</NumInSet>
+                     <Type>E</Type>
+                  </item>
+               </PurchaseOrderError_ClosePurchOrdErrorImport_Item>
+            </PurchaseOrderCloseStatusExportReply>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>PurchaseOrderCloseStatusErrorResponse</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <PurchaseOrderCloseStatusExportReply>
+                  <partition>prealm_2</partition>
+                  <variant>vrealm_2</variant>
+                  <PurchaseOrderError_ClosePurchOrdErrorImport_Item>
+                     <item>
+                        <Date>...</Date>
+                        <ErrorClient>Q8JCLNT002</ErrorClient>
+                        <ErrorMessage>Document 450000A688 does not exist</ErrorMessage>
+                        <ErrorNumber>019</ErrorNumber>
+                        <ErrorSAPField/>
+                        <ErrorSAPId>06</ErrorSAPId>
+                        <ErrorSAPModule>ARBCIG_BAPI_PO_CLOSE</ErrorSAPModule>
+                        <ErrorSAPScreen>ARBCIG_BAPI_PO_CLOSE</ErrorSAPScreen>
+                        <Id>TC_BCK123</Id>
+                        <NumInSet>1</NumInSet>
+                        <Type>E</Type>
+                     </item>
+                  </PurchaseOrderError_ClosePurchOrdErrorImport_Item>
+               </PurchaseOrderCloseStatusExportReply>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

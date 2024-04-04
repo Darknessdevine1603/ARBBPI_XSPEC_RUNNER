@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anSupplier/MAPPING_ANY_AddOn_0000_StatusUpdateRequest_cXML_0000_StatusUpdateRequest.xsl">
+    <x:scenario label="Status Update Request">
+        <x:param name="anSupplierANID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anEnvName"/>
+            
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/StatusUpdate/StatusUpdateRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/StatusUpdate/StatusUpdateRequest.dat"
+            select="element()" label="Status Update Request"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request Accepted">
+        <x:param name="anSupplierANID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/StatusUpdate/StatusUpdateRequestAccepted.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/StatusUpdate/StatusUpdateRequestAccepted.dat"
+            select="element()" label="Status Update Request Accepted"/>
+    </x:scenario>
+    <x:scenario label="Status Update Request Rejected">
+        <x:param name="anSupplierANID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anSupplier/StatusUpdate/StatusUpdateRequestRejected.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anSupplier/StatusUpdate/StatusUpdateRequestRejected.dat"
+            select="element()" label="Status Update Request Accepted"/>
+    </x:scenario>
+</x:description>

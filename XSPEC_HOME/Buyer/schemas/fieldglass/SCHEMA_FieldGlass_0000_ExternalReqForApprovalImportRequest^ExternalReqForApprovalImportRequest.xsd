@@ -1,0 +1,110 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:Ariba:Buyer:vsap" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ExternalReqForApprovalImportRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ExternalReqForApprovalInput_Item">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="item">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Name"/>
+                    <xs:element type="xs:string" name="Operation"/>
+                    <xs:element type="xs:string" name="ExternalReqId"/>
+                    <xs:element type="xs:string" name="PreparerUniqueName"/>
+                    <xs:element type="xs:string" name="RequesterUniqueName"/>
+                    <xs:element type="xs:string" name="ExternalReqUrl"/>
+                    <xs:element type="xs:string" name="HeaderComments"/>
+                    <xs:element name="HeaderExtrinsics">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="HeaderExtrinsic">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:short" name="CompanyCode"/>
+                                  <xs:attribute type="xs:string" name="OriginatingSystem"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ExternalReqLineItems">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:int" name="CommodityCodeUniqueName"/>
+                                <xs:element type="xs:string" name="Currency"/>
+                                <xs:element type="xs:byte" name="ExternalLineNumber"/>
+                                <xs:element type="xs:string" name="ItemComments"/>
+                                <xs:element type="xs:string" name="ItemDescription"/>
+                                <xs:element type="xs:float" name="Quantity"/>
+                                <xs:element type="xs:float" name="UnitPrice"/>
+                                <xs:element name="SplitAccounting">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="SplitAccount">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:byte" name="Percentage" use="optional"/>
+                                              <xs:attribute type="xs:string" name="CC_Code" use="optional"/>
+                                              <xs:attribute type="xs:string" name="CC_CompanyCode" use="optional"/>
+                                              <xs:attribute type="xs:string" name="GL_Code" use="optional"/>
+                                              <xs:attribute type="xs:string" name="GL_CompanyCode" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="SupplierANId"/>
+                                <xs:element type="xs:string" name="UnitOfMeasure"/>
+                                <xs:element type="xs:string" name="UpdateAction"/>
+                                <xs:element name="LineExtrinsics">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="LineExtrinsic">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="AccountCategory" use="optional"/>
+                                              <xs:attribute type="xs:short" name="BillingAddress" use="optional"/>
+                                              <xs:attribute type="xs:date" name="NeedBy" use="optional"/>
+                                              <xs:attribute type="xs:byte" name="PurchaseGroup" use="optional"/>
+                                              <xs:attribute type="xs:short" name="PurchaseOrg" use="optional"/>
+                                              <xs:attribute type="xs:short" name="ShipTo" use="optional"/>
+                                              <xs:attribute type="xs:string" name="DeliverTo" use="optional"/>
+                                              <xs:attribute type="xs:string" name="VendorId" use="optional"/>
+                                              <xs:attribute type="xs:string" name="ServiceStartDate" use="optional"/>
+                                              <xs:attribute type="xs:string" name="ServiceEndDate" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="partition"/>
+      <xs:attribute type="xs:string" name="variant"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as='external' xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4/MAPPING_ANY_cXML_0000_QuoteMessageContract_AddOn_0000_QuoteMessageContract.xsl">
+    <x:scenario label="Scenario for QuoteMessageContractProductionFacility">
+        <x:param name="anReceiverID" select="'AN02005458708-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'QuoteMessageContract'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4/QuoteMessageContract/QuoteMessageContract_PF_BM.xml"/>
+        <x:expect label="QuoteMessageContractProductionFacility" href="../../../XSPEC/payloads/target/inbound/s4/QuoteMessageContract/QuoteMessageContract_PF_AM.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for MaterialQuoteMessageContract">
+        <x:param name="anReceiverID" select="'AN02005458708-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'QuoteMessageContract'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4/QuoteMessageContract/QuoteMessageContract_BM.xml"/>
+        <x:expect label="MaterialQuoteMessageContract" href="../../../XSPEC/payloads/target/inbound/s4/QuoteMessageContract/QuoteMessageContract_AM.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for QuoteMessageContractValidity">
+        <x:param name="anReceiverID" select="'AN02005458708-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'QuoteMessageContract'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4/QuoteMessageContract/QuoteMessageContractValidity_BM.xml"/>
+        <x:expect label="QuoteMessageContractValidity" href="../../../XSPEC/payloads/target/inbound/s4/QuoteMessageContract/QuoteMessageContractValidity_AM.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="Scenario for QuoteMessageContractIncoterms_AM.xml">
+        <x:param name="anReceiverID" select="'AN02005458708-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'QuoteMessageContract'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4/QuoteMessageContract/QuoteMessageContractIncoterms_BM.xml"/>
+        <x:expect label="QuoteMessageContract" href="../../../XSPEC/payloads/target/inbound/s4/QuoteMessageContract/QuoteMessageContractIncoterms_AM.xml" select="element()"/>
+    </x:scenario>
+</x:description>

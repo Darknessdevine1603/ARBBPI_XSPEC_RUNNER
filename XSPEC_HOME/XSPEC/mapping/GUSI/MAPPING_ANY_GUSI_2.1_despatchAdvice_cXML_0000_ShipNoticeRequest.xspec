@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/GUSI/MAPPING_ANY_GUSI_2.1_despatchAdvice_cXML_0000_ShipNoticeRequest.xsl">
+    <x:scenario label="Ship Notice Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004512490-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004726280-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/GUSI/ShipNotice/ShipNotice_BM_1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/GUSI/ShipNotice/ShipNotice_AM_1.xml"
+            select="element()" label="Ship Notice Request"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request with identifier information">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004512490-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004726280-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/GUSI/ShipNotice/ShipNotice_BM_2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/GUSI/ShipNotice/ShipNotice_AM_2.xml"
+            select="element()" label="Ship Notice Request with identifier information"/>
+    </x:scenario>  
+    <x:scenario label="Ship Notice Request with route as ship">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004512490-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004726280-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/GUSI/ShipNotice/ShipNotice_BM_3.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/GUSI/ShipNotice/ShipNotice_AM_3.xml"
+            select="element()" label="Ship Notice Request with route as ship"/>
+    </x:scenario> 
+    <x:scenario label="Ship Notice Request with route as air">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004512490-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004726280-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/GUSI/ShipNotice/ShipNotice_BM_4.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/GUSI/ShipNotice/ShipNotice_AM_4.xml"
+            select="element()" label="Ship Notice Request with route as air"/>
+    </x:scenario> 
+    <x:scenario label="Ship Notice Request with route as motor and batch information">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004512490-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004726280-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/GUSI/ShipNotice/ShipNotice_BM_5.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/GUSI/ShipNotice/ShipNotice_AM_5.xml"
+            select="element()" label="Ship Notice Request with route as motor and batch information"/>
+    </x:scenario>      
+</x:description>

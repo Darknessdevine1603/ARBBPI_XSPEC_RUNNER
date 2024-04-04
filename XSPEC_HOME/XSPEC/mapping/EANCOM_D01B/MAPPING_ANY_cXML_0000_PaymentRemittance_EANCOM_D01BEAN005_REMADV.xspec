@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EANCOM_D01B/MAPPING_ANY_cXML_0000_PaymentRemittance_EANCOM_D01BEAN005_REMADV.xsl">
+    <x:scenario label="Payment Remittance">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID" select="'0860299001917'"/>
+        <x:param name="anReceiverGroupID" select="'EAN0000000032'"/>
+        <x:param name="anGLNFlip"/>
+        <x:param name="exchange"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EANCOM_D01B/PaymentRemittance/PaymentRemittance_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EANCOM_D01B/PaymentRemittance/PaymentRemittance_AM.dat"
+            select="element()" label="Payment Remittance"/>
+    </x:scenario>
+    <x:scenario label="Payment Remittance">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'anISASender'"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver" select="'anISAReceiver'"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID" select="'0860299001917'"/>
+        <x:param name="anReceiverGroupID" select="'EAN0000000032'"/>
+        <x:param name="anGLNFlip" select="'true'"/>
+        <x:param name="exchange"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EANCOM_D01B/PaymentRemittance/PaymentRemittanceComments_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EANCOM_D01B/PaymentRemittance/PaymentRemittanceComments_AM.dat"
+            select="element()" label="Payment Remittance"/>
+    </x:scenario>
+</x:description>

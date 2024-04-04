@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_856_cXML_0000_ShipNoticeRequest.xsl">
+    <x:scenario label="Ship Notice Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments" select="'attachment'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ShipNotice/ShipNoticeRequest_856_complete_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ShipNotice/ShipNoticeRequest_856_complete_AM.dat"
+            select="element()" label="Ship Notice Request"/>
+    </x:scenario>
+    
+    <x:scenario label="Ship Notice Request with multiple PO">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ShipNotice/ShipNoticeRequest_856_mPO_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ShipNotice/ShipNoticeRequest_856_mPO_AM.dat"
+            select="element()" label="Ship Notice Request with multiple PO"/>
+    </x:scenario>
+    
+    <x:scenario label="Ship Notice Request with single PO - Delete">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ShipNotice/ShipNoticeRequest_856_sPO_delete_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ShipNotice/ShipNoticeRequest_856_sPO_delete_AM.dat"
+            select="element()" label="Ship Notice Request with single PO - Delete"/>
+    </x:scenario>
+    
+    <x:scenario label="Ship Notice Request with SOITP">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ShipNotice/ShipNoticeRequest_856_SOITP_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ShipNotice/ShipNoticeRequest_856_SOITP_AM.dat"
+            select="element()" label="Ship Notice Request with SOITP"/>
+    </x:scenario>
+    
+    <x:scenario label="Ship Notice Request with SOTPI">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ShipNotice/ShipNoticeRequest_856_SOTPI_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ShipNotice/ShipNoticeRequest_856_SOTPI_AM.dat"
+            select="element()" label="Ship Notice Request with SOTPI"/>
+    </x:scenario>
+</x:description>

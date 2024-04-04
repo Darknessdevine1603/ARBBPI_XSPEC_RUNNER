@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_AddOn_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anSupplier/MAPPING_ANY_AddOn_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xsl"
+        date="2023-04-27T15:31:41.525933+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_AddOn_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xspec">
+      <label>Outbound Delivery</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anSupplier/OutboundDelivery/OutboundDelivery.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML timestamp="2021-03-17T23:51:55Z"
+                        payloadID="42010aee-2527-1edb-a1f4-2f705732f4b">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>%%SUPPLIER%%</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>%%BUYER%%</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <ShipNoticeRequest>
+                           <ShipNoticeHeader deliveryDate="2021-03-28T23:51:59+00:00"
+                                             shipmentDate="2021-03-17T23:51:59+00:00"
+                                             noticeDate="2021-03-18T23:59:59+00:00"
+                                             operation="new"
+                                             shipmentType="actual"
+                                             shipmentID="80002539">
+                              <ServiceLevel xml:lang="">H</ServiceLevel>
+                              <Contact role="shipFrom">
+                                 <Name xml:lang="en">Ship Point</Name>
+                                 <PostalAddress>
+                                    <Street>123/456 786</Street>
+                                    <City>Berlin</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <Contact role="shipTo">
+                                 <Name xml:lang="en">Werk 0001</Name>
+                                 <PostalAddress>
+                                    <Street>123-321 456-654</Street>
+                                    <City>Berlin</City>
+                                    <PostalCode>12345</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="49">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>DE001-9999-66666-321</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="49">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>DE001-8888-33333-654</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <Contact role="soldTo">
+                                 <Name xml:lang="en">Ship to or Sold to for Customer
+                    1</Name>
+                                 <PostalAddress>
+                                    <Street>123</Street>
+                                    <City>11</City>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <Comments xml:lang="en">Header text:header text added</Comments>
+                           </ShipNoticeHeader>
+                           <ShipControl>
+                              <CarrierIdentifier domain="companyName"/>
+                              <ShipmentIdentifier/>
+                           </ShipControl>
+                           <ShipNoticePortion>
+                              <OrderReference orderID="4500058539">
+                                 <DocumentReference payloadID="42010AEE24F71EEBA1F408D8F56FFDD7"/>
+                              </OrderReference>
+                              <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="10.0">
+                                 <ItemID>
+                                    <SupplierPartID>70039-A1</SupplierPartID>
+                                    <BuyerPartID>70039</BuyerPartID>
+                                    <IdReference domain="EAN-13" identifier=""/>
+                                 </ItemID>
+                                 <ShipNoticeItemDetail>
+                                    <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                    <Dimension quantity="200.0" type="grossWeight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="150.0" type="weight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="" type="volume">
+                                       <UnitOfMeasure/>
+                                    </Dimension>
+                                 </ShipNoticeItemDetail>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Batch>
+                                    <SupplierBatchID/>
+                                 </Batch>
+                                 <ShipNoticeItemIndustry>
+                                    <ShipNoticeItemRetail>
+                                       <BestBeforeDate date=""/>
+                                       <ExpiryDate date=""/>
+                                    </ShipNoticeItemRetail>
+                                 </ShipNoticeItemIndustry>
+                                 <Comments xml:lang="en">Item text:line item text</Comments>
+                              </ShipNoticeItem>
+                              <ShipNoticeItem shipNoticeLineNumber="20" lineNumber="20" quantity="10.0">
+                                 <ItemID>
+                                    <SupplierPartID>70039-A1</SupplierPartID>
+                                    <BuyerPartID>70039</BuyerPartID>
+                                    <IdReference domain="EAN-13" identifier=""/>
+                                 </ItemID>
+                                 <ShipNoticeItemDetail>
+                                    <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                    <Dimension quantity="200.0" type="grossWeight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="150.0" type="weight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="" type="volume">
+                                       <UnitOfMeasure/>
+                                    </Dimension>
+                                 </ShipNoticeItemDetail>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Batch>
+                                    <SupplierBatchID/>
+                                 </Batch>
+                                 <ShipNoticeItemIndustry>
+                                    <ShipNoticeItemRetail>
+                                       <BestBeforeDate date=""/>
+                                       <ExpiryDate date=""/>
+                                    </ShipNoticeItemRetail>
+                                 </ShipNoticeItemIndustry>
+                                 <Comments xml:lang="en"/>
+                              </ShipNoticeItem>
+                              <ShipNoticeItem shipNoticeLineNumber="30" lineNumber="30" quantity="10.0">
+                                 <ItemID>
+                                    <SupplierPartID>70039-A1</SupplierPartID>
+                                    <BuyerPartID>70039</BuyerPartID>
+                                    <IdReference domain="EAN-13" identifier=""/>
+                                 </ItemID>
+                                 <ShipNoticeItemDetail>
+                                    <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                    <Dimension quantity="200.0" type="grossWeight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="150.0" type="weight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="" type="volume">
+                                       <UnitOfMeasure/>
+                                    </Dimension>
+                                 </ShipNoticeItemDetail>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Batch>
+                                    <SupplierBatchID/>
+                                 </Batch>
+                                 <ShipNoticeItemIndustry>
+                                    <ShipNoticeItemRetail>
+                                       <BestBeforeDate date=""/>
+                                       <ExpiryDate date=""/>
+                                    </ShipNoticeItemRetail>
+                                 </ShipNoticeItemIndustry>
+                                 <Comments xml:lang="en">Item text:line item text</Comments>
+                              </ShipNoticeItem>
+                              <ShipNoticeItem shipNoticeLineNumber="40" lineNumber="40" quantity="10.0">
+                                 <ItemID>
+                                    <SupplierPartID>70039-A1</SupplierPartID>
+                                    <BuyerPartID>70039</BuyerPartID>
+                                    <IdReference domain="EAN-13" identifier=""/>
+                                 </ItemID>
+                                 <ShipNoticeItemDetail>
+                                    <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                    <Dimension quantity="200.0" type="grossWeight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="150.0" type="weight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="" type="volume">
+                                       <UnitOfMeasure/>
+                                    </Dimension>
+                                 </ShipNoticeItemDetail>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Batch>
+                                    <SupplierBatchID/>
+                                 </Batch>
+                                 <ShipNoticeItemIndustry>
+                                    <ShipNoticeItemRetail>
+                                       <BestBeforeDate date=""/>
+                                       <ExpiryDate date=""/>
+                                    </ShipNoticeItemRetail>
+                                 </ShipNoticeItemIndustry>
+                                 <Comments xml:lang="en"/>
+                              </ShipNoticeItem>
+                           </ShipNoticePortion>
+                        </ShipNoticeRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Outbound Delivery</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML timestamp="2021-03-17T23:51:55Z"
+                           payloadID="42010aee-2527-1edb-a1f4-2f705732f4b">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%SUPPLIER%%</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%BUYER%%</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <ShipNoticeRequest>
+                              <ShipNoticeHeader deliveryDate="2021-03-28T23:51:59+00:00"
+                                                shipmentDate="2021-03-17T23:51:59+00:00"
+                                                noticeDate="2021-03-18T23:59:59+00:00"
+                                                operation="new"
+                                                shipmentType="actual"
+                                                shipmentID="80002539">
+                                 <ServiceLevel xml:lang="">H</ServiceLevel>
+                                 <Contact role="shipFrom">
+                                    <Name xml:lang="en">Ship Point</Name>
+                                    <PostalAddress>
+                                       <Street>123/456 786</Street>
+                                       <City>Berlin</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <Contact role="shipTo">
+                                    <Name xml:lang="en">Werk 0001</Name>
+                                    <PostalAddress>
+                                       <Street>123-321 456-654</Street>
+                                       <City>Berlin</City>
+                                       <PostalCode>12345</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="49">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>DE001-9999-66666-321</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="49">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>DE001-8888-33333-654</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <Contact role="soldTo">
+                                    <Name xml:lang="en">Ship to or Sold to for Customer
+                    1</Name>
+                                    <PostalAddress>
+                                       <Street>123</Street>
+                                       <City>11</City>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <Comments xml:lang="en">Header text:header text added</Comments>
+                              </ShipNoticeHeader>
+                              <ShipControl>
+                                 <CarrierIdentifier domain="companyName"/>
+                                 <ShipmentIdentifier/>
+                              </ShipControl>
+                              <ShipNoticePortion>
+                                 <OrderReference orderID="4500058539">
+                                    <DocumentReference payloadID="42010AEE24F71EEBA1F408D8F56FFDD7"/>
+                                 </OrderReference>
+                                 <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                       <IdReference domain="EAN-13" identifier=""/>
+                                    </ItemID>
+                                    <ShipNoticeItemDetail>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <Dimension quantity="200.0" type="grossWeight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="150.0" type="weight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="" type="volume">
+                                          <UnitOfMeasure/>
+                                       </Dimension>
+                                    </ShipNoticeItemDetail>
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <Batch>
+                                       <SupplierBatchID/>
+                                    </Batch>
+                                    <ShipNoticeItemIndustry>
+                                       <ShipNoticeItemRetail>
+                                          <BestBeforeDate date=""/>
+                                          <ExpiryDate date=""/>
+                                       </ShipNoticeItemRetail>
+                                    </ShipNoticeItemIndustry>
+                                    <Comments xml:lang="en">Item text:line item text</Comments>
+                                 </ShipNoticeItem>
+                                 <ShipNoticeItem shipNoticeLineNumber="20" lineNumber="20" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                       <IdReference domain="EAN-13" identifier=""/>
+                                    </ItemID>
+                                    <ShipNoticeItemDetail>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <Dimension quantity="200.0" type="grossWeight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="150.0" type="weight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="" type="volume">
+                                          <UnitOfMeasure/>
+                                       </Dimension>
+                                    </ShipNoticeItemDetail>
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <Batch>
+                                       <SupplierBatchID/>
+                                    </Batch>
+                                    <ShipNoticeItemIndustry>
+                                       <ShipNoticeItemRetail>
+                                          <BestBeforeDate date=""/>
+                                          <ExpiryDate date=""/>
+                                       </ShipNoticeItemRetail>
+                                    </ShipNoticeItemIndustry>
+                                    <Comments xml:lang="en"/>
+                                 </ShipNoticeItem>
+                                 <ShipNoticeItem shipNoticeLineNumber="30" lineNumber="30" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                       <IdReference domain="EAN-13" identifier=""/>
+                                    </ItemID>
+                                    <ShipNoticeItemDetail>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <Dimension quantity="200.0" type="grossWeight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="150.0" type="weight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="" type="volume">
+                                          <UnitOfMeasure/>
+                                       </Dimension>
+                                    </ShipNoticeItemDetail>
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <Batch>
+                                       <SupplierBatchID/>
+                                    </Batch>
+                                    <ShipNoticeItemIndustry>
+                                       <ShipNoticeItemRetail>
+                                          <BestBeforeDate date=""/>
+                                          <ExpiryDate date=""/>
+                                       </ShipNoticeItemRetail>
+                                    </ShipNoticeItemIndustry>
+                                    <Comments xml:lang="en">Item text:line item text</Comments>
+                                 </ShipNoticeItem>
+                                 <ShipNoticeItem shipNoticeLineNumber="40" lineNumber="40" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                       <IdReference domain="EAN-13" identifier=""/>
+                                    </ItemID>
+                                    <ShipNoticeItemDetail>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <Dimension quantity="200.0" type="grossWeight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="150.0" type="weight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="" type="volume">
+                                          <UnitOfMeasure/>
+                                       </Dimension>
+                                    </ShipNoticeItemDetail>
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <Batch>
+                                       <SupplierBatchID/>
+                                    </Batch>
+                                    <ShipNoticeItemIndustry>
+                                       <ShipNoticeItemRetail>
+                                          <BestBeforeDate date=""/>
+                                          <ExpiryDate date=""/>
+                                       </ShipNoticeItemRetail>
+                                    </ShipNoticeItemIndustry>
+                                    <Comments xml:lang="en"/>
+                                 </ShipNoticeItem>
+                              </ShipNoticePortion>
+                           </ShipNoticeRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_AddOn_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xspec">
+      <label>Outbound Delivery with Email ID</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anSupplier/OutboundDelivery/OutboundDeliverywithEmail.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML timestamp="2021-03-17T23:51:55Z"
+                        payloadID="42010aee-2527-1edb-a1f4-2f705732f4b">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>%%SUPPLIER%%</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>%%BUYER%%</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="production">
+                        <ShipNoticeRequest>
+                           <ShipNoticeHeader deliveryDate="2021-03-28T23:51:59+00:00"
+                                             shipmentDate="2021-03-17T23:51:59+00:00"
+                                             noticeDate="2021-03-18T23:59:59+00:00"
+                                             operation="new"
+                                             shipmentType="actual"
+                                             shipmentID="80002539">
+                              <ServiceLevel xml:lang="">H</ServiceLevel>
+                              <Contact role="shipFrom">
+                                 <Name xml:lang="en">Ship Point</Name>
+                                 <PostalAddress>
+                                    <Street>123/456 786</Street>
+                                    <City>Berlin</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <Contact role="shipTo">
+                                 <Name xml:lang="en">Werk 0001</Name>
+                                 <PostalAddress>
+                                    <Street>123-321 456-654</Street>
+                                    <City>Berlin</City>
+                                    <PostalCode>12345</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="49">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>DE001-9999-66666-321</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="49">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>DE001-8888-33333-654</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <Contact role="soldTo">
+                                 <Name xml:lang="en">Ship to or Sold to for Customer
+                    1</Name>
+                                 <PostalAddress>
+                                    <Street>123</Street>
+                                    <City>11</City>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Email>test.code.coverage@ariba.com</Email>
+                              </Contact>
+                              <Comments xml:lang="" type="HEADER">Header text:header text added</Comments>
+                           </ShipNoticeHeader>
+                           <ShipControl>
+                              <CarrierIdentifier domain="companyName"/>
+                              <ShipmentIdentifier/>
+                           </ShipControl>
+                           <ShipNoticePortion>
+                              <OrderReference orderID="4500058539">
+                                 <DocumentReference payloadID="42010AEE24F71EEBA1F408D8F56FFDD7"/>
+                              </OrderReference>
+                              <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="10.0">
+                                 <ItemID>
+                                    <SupplierPartID>70039-A1</SupplierPartID>
+                                    <BuyerPartID>70039</BuyerPartID>
+                                    <IdReference domain="EAN-13" identifier=""/>
+                                 </ItemID>
+                                 <ShipNoticeItemDetail>
+                                    <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                    <Dimension quantity="200.0" type="grossWeight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="150.0" type="weight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="" type="volume">
+                                       <UnitOfMeasure/>
+                                    </Dimension>
+                                 </ShipNoticeItemDetail>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Batch>
+                                    <SupplierBatchID/>
+                                 </Batch>
+                                 <ShipNoticeItemIndustry>
+                                    <ShipNoticeItemRetail>
+                                       <BestBeforeDate date=""/>
+                                       <ExpiryDate date=""/>
+                                    </ShipNoticeItemRetail>
+                                 </ShipNoticeItemIndustry>
+                                 <Comments xml:lang="en">Item text:line item text</Comments>
+                              </ShipNoticeItem>
+                              <ShipNoticeItem shipNoticeLineNumber="20" lineNumber="20" quantity="10.0">
+                                 <ItemID>
+                                    <SupplierPartID>70039-A1</SupplierPartID>
+                                    <BuyerPartID>70039</BuyerPartID>
+                                    <IdReference domain="EAN-13" identifier=""/>
+                                 </ItemID>
+                                 <ShipNoticeItemDetail>
+                                    <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                    <Dimension quantity="200.0" type="grossWeight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="150.0" type="weight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="" type="volume">
+                                       <UnitOfMeasure/>
+                                    </Dimension>
+                                 </ShipNoticeItemDetail>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Batch>
+                                    <SupplierBatchID/>
+                                 </Batch>
+                                 <ShipNoticeItemIndustry>
+                                    <ShipNoticeItemRetail>
+                                       <BestBeforeDate date=""/>
+                                       <ExpiryDate date=""/>
+                                    </ShipNoticeItemRetail>
+                                 </ShipNoticeItemIndustry>
+                                 <Comments xml:lang="en"/>
+                              </ShipNoticeItem>
+                              <ShipNoticeItem shipNoticeLineNumber="30" lineNumber="30" quantity="10.0">
+                                 <ItemID>
+                                    <SupplierPartID>70039-A1</SupplierPartID>
+                                    <BuyerPartID>70039</BuyerPartID>
+                                    <IdReference domain="EAN-13" identifier=""/>
+                                 </ItemID>
+                                 <ShipNoticeItemDetail>
+                                    <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                    <Dimension quantity="200.0" type="grossWeight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="150.0" type="weight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="" type="volume">
+                                       <UnitOfMeasure/>
+                                    </Dimension>
+                                 </ShipNoticeItemDetail>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Batch>
+                                    <SupplierBatchID/>
+                                 </Batch>
+                                 <ShipNoticeItemIndustry>
+                                    <ShipNoticeItemRetail>
+                                       <BestBeforeDate date=""/>
+                                       <ExpiryDate date=""/>
+                                    </ShipNoticeItemRetail>
+                                 </ShipNoticeItemIndustry>
+                                 <Comments xml:lang="en">Item text:line item text</Comments>
+                              </ShipNoticeItem>
+                              <ShipNoticeItem shipNoticeLineNumber="40" lineNumber="40" quantity="10.0">
+                                 <ItemID>
+                                    <SupplierPartID>70039-A1</SupplierPartID>
+                                    <BuyerPartID>70039</BuyerPartID>
+                                    <IdReference domain="EAN-13" identifier=""/>
+                                 </ItemID>
+                                 <ShipNoticeItemDetail>
+                                    <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                    <Dimension quantity="200.0" type="grossWeight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="150.0" type="weight">
+                                       <UnitOfMeasure>KG</UnitOfMeasure>
+                                    </Dimension>
+                                    <Dimension quantity="" type="volume">
+                                       <UnitOfMeasure/>
+                                    </Dimension>
+                                 </ShipNoticeItemDetail>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Batch>
+                                    <SupplierBatchID/>
+                                 </Batch>
+                                 <ShipNoticeItemIndustry>
+                                    <ShipNoticeItemRetail>
+                                       <BestBeforeDate date=""/>
+                                       <ExpiryDate date=""/>
+                                    </ShipNoticeItemRetail>
+                                 </ShipNoticeItemIndustry>
+                                 <Comments xml:lang="en"/>
+                              </ShipNoticeItem>
+                           </ShipNoticePortion>
+                        </ShipNoticeRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Outbound Delivery with Email ID</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML timestamp="2021-03-17T23:51:55Z"
+                           payloadID="42010aee-2527-1edb-a1f4-2f705732f4b">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%SUPPLIER%%</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>%%BUYER%%</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="production">
+                           <ShipNoticeRequest>
+                              <ShipNoticeHeader deliveryDate="2021-03-28T23:51:59+00:00"
+                                                shipmentDate="2021-03-17T23:51:59+00:00"
+                                                noticeDate="2021-03-18T23:59:59+00:00"
+                                                operation="new"
+                                                shipmentType="actual"
+                                                shipmentID="80002539">
+                                 <ServiceLevel xml:lang="">H</ServiceLevel>
+                                 <Contact role="shipFrom">
+                                    <Name xml:lang="en">Ship Point</Name>
+                                    <PostalAddress>
+                                       <Street>123/456 786</Street>
+                                       <City>Berlin</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <Contact role="shipTo">
+                                    <Name xml:lang="en">Werk 0001</Name>
+                                    <PostalAddress>
+                                       <Street>123-321 456-654</Street>
+                                       <City>Berlin</City>
+                                       <PostalCode>12345</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="49">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>DE001-9999-66666-321</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="49">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>DE001-8888-33333-654</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <Contact role="soldTo">
+                                    <Name xml:lang="en">Ship to or Sold to for Customer
+                    1</Name>
+                                    <PostalAddress>
+                                       <Street>123</Street>
+                                       <City>11</City>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email>test.code.coverage@ariba.com</Email>
+                                 </Contact>
+                                 <Comments xml:lang="" type="HEADER">Header text:header text added</Comments>
+                              </ShipNoticeHeader>
+                              <ShipControl>
+                                 <CarrierIdentifier domain="companyName"/>
+                                 <ShipmentIdentifier/>
+                              </ShipControl>
+                              <ShipNoticePortion>
+                                 <OrderReference orderID="4500058539">
+                                    <DocumentReference payloadID="42010AEE24F71EEBA1F408D8F56FFDD7"/>
+                                 </OrderReference>
+                                 <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                       <IdReference domain="EAN-13" identifier=""/>
+                                    </ItemID>
+                                    <ShipNoticeItemDetail>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <Dimension quantity="200.0" type="grossWeight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="150.0" type="weight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="" type="volume">
+                                          <UnitOfMeasure/>
+                                       </Dimension>
+                                    </ShipNoticeItemDetail>
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <Batch>
+                                       <SupplierBatchID/>
+                                    </Batch>
+                                    <ShipNoticeItemIndustry>
+                                       <ShipNoticeItemRetail>
+                                          <BestBeforeDate date=""/>
+                                          <ExpiryDate date=""/>
+                                       </ShipNoticeItemRetail>
+                                    </ShipNoticeItemIndustry>
+                                    <Comments xml:lang="en">Item text:line item text</Comments>
+                                 </ShipNoticeItem>
+                                 <ShipNoticeItem shipNoticeLineNumber="20" lineNumber="20" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                       <IdReference domain="EAN-13" identifier=""/>
+                                    </ItemID>
+                                    <ShipNoticeItemDetail>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <Dimension quantity="200.0" type="grossWeight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="150.0" type="weight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="" type="volume">
+                                          <UnitOfMeasure/>
+                                       </Dimension>
+                                    </ShipNoticeItemDetail>
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <Batch>
+                                       <SupplierBatchID/>
+                                    </Batch>
+                                    <ShipNoticeItemIndustry>
+                                       <ShipNoticeItemRetail>
+                                          <BestBeforeDate date=""/>
+                                          <ExpiryDate date=""/>
+                                       </ShipNoticeItemRetail>
+                                    </ShipNoticeItemIndustry>
+                                    <Comments xml:lang="en"/>
+                                 </ShipNoticeItem>
+                                 <ShipNoticeItem shipNoticeLineNumber="30" lineNumber="30" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                       <IdReference domain="EAN-13" identifier=""/>
+                                    </ItemID>
+                                    <ShipNoticeItemDetail>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <Dimension quantity="200.0" type="grossWeight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="150.0" type="weight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="" type="volume">
+                                          <UnitOfMeasure/>
+                                       </Dimension>
+                                    </ShipNoticeItemDetail>
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <Batch>
+                                       <SupplierBatchID/>
+                                    </Batch>
+                                    <ShipNoticeItemIndustry>
+                                       <ShipNoticeItemRetail>
+                                          <BestBeforeDate date=""/>
+                                          <ExpiryDate date=""/>
+                                       </ShipNoticeItemRetail>
+                                    </ShipNoticeItemIndustry>
+                                    <Comments xml:lang="en">Item text:line item text</Comments>
+                                 </ShipNoticeItem>
+                                 <ShipNoticeItem shipNoticeLineNumber="40" lineNumber="40" quantity="10.0">
+                                    <ItemID>
+                                       <SupplierPartID>70039-A1</SupplierPartID>
+                                       <BuyerPartID>70039</BuyerPartID>
+                                       <IdReference domain="EAN-13" identifier=""/>
+                                    </ItemID>
+                                    <ShipNoticeItemDetail>
+                                       <Description xml:lang="en">3rd SALES MATERIAL- by Ranjan</Description>
+                                       <Dimension quantity="200.0" type="grossWeight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="150.0" type="weight">
+                                          <UnitOfMeasure>KG</UnitOfMeasure>
+                                       </Dimension>
+                                       <Dimension quantity="" type="volume">
+                                          <UnitOfMeasure/>
+                                       </Dimension>
+                                    </ShipNoticeItemDetail>
+                                    <UnitOfMeasure>EA</UnitOfMeasure>
+                                    <Batch>
+                                       <SupplierBatchID/>
+                                    </Batch>
+                                    <ShipNoticeItemIndustry>
+                                       <ShipNoticeItemRetail>
+                                          <BestBeforeDate date=""/>
+                                          <ExpiryDate date=""/>
+                                       </ShipNoticeItemRetail>
+                                    </ShipNoticeItemIndustry>
+                                    <Comments xml:lang="en"/>
+                                 </ShipNoticeItem>
+                              </ShipNoticePortion>
+                           </ShipNoticeRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE cXML SYSTEM "http://svcsc1man05.lab-us.ariba.com/schemas/cXML/1.2.047/InvoiceDetail.dtd">-->
+<Combined>
+    <Payload>
+<cXML payloadID="69d2ac1b-bdbd-9a6d-b725-adf7228daf1b" signatureVersion="1.0"
+    timestamp="2020-09-21T09:01:43-11:00" version="1.2.046">
+    <Header>
+        <From>
+            <Credential domain="NetworkID">
+                <Identity>AN02005082262-T</Identity>
+            </Credential>
+            <Credential domain="VendorID">
+                <Identity>S1000</Identity>
+            </Credential>
+            <Credential domain="PrivateID">
+                <Identity>S1000</Identity>
+            </Credential>
+        </From>
+        <To>
+            <Credential domain="NetworkID">
+                <Identity>AN02005082260-T</Identity>
+            </Credential>
+        </To>
+        <Sender>
+            <Credential domain="NetworkID">
+                <Identity>AN01000000001</Identity>
+            </Credential>
+            <UserAgent>Ariba_Supplier</UserAgent>
+        </Sender>
+    </Header>
+    <Request Id="cXMLData" deploymentMode="test">
+        <InvoiceDetailRequest>
+            <InvoiceDetailRequestHeader invoiceDate="2020-09-20T22:01:40-11:00"
+                invoiceID="INV_90000193" invoiceOrigin="supplier" operation="new" purpose="standard">
+                <InvoiceDetailHeaderIndicator/>
+                <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                <InvoicePartner>
+                    <Contact role="remitTo">
+                        <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                        <PostalAddress>
+                            <Street>Dietmar-Hopp-Allee 16</Street>
+                            <City>Walldorf</City>
+                            <PostalCode>69190</PostalCode>
+                            <Country isoCountryCode="DE"/>
+                        </PostalAddress>
+                    </Contact>
+                </InvoicePartner>
+                <InvoicePartner>
+                    <Contact role="from">
+                        <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                        <PostalAddress>
+                            <Street>Dietmar-Hopp-Allee 16</Street>
+                            <City>Walldorf</City>
+                            <PostalCode>69190</PostalCode>
+                            <Country isoCountryCode="DE"/>
+                        </PostalAddress>
+                    </Contact>
+                    <IdReference domain="vatID" identifier="DE123456789"/>
+                </InvoicePartner>
+                <InvoicePartner>
+                    <Contact role="billTo">
+                        <Name xml:lang="de">Company Code 1010</Name>
+                        <PostalAddress>
+                            <Street>Dietmar-Hopp-Allee 16</Street>
+                            <City>Walldorf</City>
+                            <PostalCode>69190</PostalCode>
+                            <Country isoCountryCode="DE"/>
+                        </PostalAddress>
+                    </Contact>
+                    <IdReference domain="vatID" identifier="DE192455033"/>
+                </InvoicePartner>
+                <InvoicePartner>
+                    <Contact role="soldTo">
+                        <Name xml:lang="de">Buying Company (4A1 to 42K)</Name>
+                        <PostalAddress>
+                            <Street>Buchenstraße 5</Street>
+                            <City>Karlsruhe</City>
+                            <PostalCode>76133</PostalCode>
+                            <Country isoCountryCode="DE"/>
+                        </PostalAddress>
+                    </Contact>
+                </InvoicePartner>
+                <InvoiceDetailShipping>
+                    <Contact role="shipFrom">
+                        <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                        <PostalAddress>
+                            <Street>Dietmar-Hopp-Allee 16</Street>
+                            <City>Walldorf</City>
+                            <PostalCode>69190</PostalCode>
+                            <Country isoCountryCode="DE"/>
+                        </PostalAddress>
+                    </Contact>
+                    <Contact role="shipTo">
+                        <Name xml:lang="de">Plant 1010 Test 12</Name>
+                        <PostalAddress>
+                            <Street>Dietmar-Hopp-Allee 16</Street>
+                            <City>Walldorf</City>
+                            <PostalCode>69190</PostalCode>
+                            <Country isoCountryCode="DE"/>
+                        </PostalAddress>
+                    </Contact>
+                </InvoiceDetailShipping>
+                <PaymentTerm payInNumberOfDays="14">
+                    <Discount>
+                        <DiscountPercent percent="3.0"/>
+                    </Discount>
+                </PaymentTerm>
+                <PaymentTerm payInNumberOfDays="20">
+                    <Discount>
+                        <DiscountPercent percent="2.0"/>
+                    </Discount>
+                </PaymentTerm>
+                <PaymentTerm payInNumberOfDays="30"/>
+                <Comments>Header text</Comments>
+                <Extrinsic name="BuyerVATID">DE192455033</Extrinsic>
+                <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+            </InvoiceDetailRequestHeader>
+            <InvoiceDetailOrder>
+                <InvoiceDetailOrderInfo>
+                    <OrderReference orderID="4500011381">
+                        <DocumentReference payloadID=""/>
+                    </OrderReference>
+                </InvoiceDetailOrderInfo>
+                <InvoiceDetailItem invoiceLineNumber="10" quantity="2">
+                    <UnitOfMeasure>PCE</UnitOfMeasure>
+                    <UnitPrice>
+                        <Money currency="EUR">17.55</Money>
+                    </UnitPrice>
+                    <InvoiceDetailItemReference lineNumber="000010">
+                        <ItemID>
+                            <SupplierPartID>TG12</SupplierPartID>
+                            <BuyerPartID>SP001</BuyerPartID>
+                        </ItemID>
+                        <Classification domain="NotAvailable"/>
+                    </InvoiceDetailItemReference>
+                    <SubtotalAmount>
+                        <Money currency="EUR">35.1</Money>
+                    </SubtotalAmount>
+                    <Tax>
+                        <Money currency="EUR">6.67</Money>
+                        <Description xml:lang="de"/>
+                        <TaxDetail category="A1" percentageRate="19.0">
+                            <TaxableAmount>
+                                <Money currency="EUR">35.1</Money>
+                            </TaxableAmount>
+                            <TaxAmount>
+                                <Money currency="EUR">6.67</Money>
+                            </TaxAmount>
+                        </TaxDetail>
+                    </Tax>
+                    <GrossAmount>
+                        <Money currency="EUR">41.77</Money>
+                    </GrossAmount>
+                    <NetAmount>
+                        <Money currency="EUR">35.1</Money>
+                    </NetAmount>
+                    <Comments xml:lang="de">Item_1 text</Comments>
+                </InvoiceDetailItem>
+                <InvoiceDetailItem invoiceLineNumber="20" quantity="1">
+                    <UnitOfMeasure>PCE</UnitOfMeasure>
+                    <UnitPrice>
+                        <Money currency="EUR">130</Money>
+                    </UnitPrice>
+                    <InvoiceDetailItemReference lineNumber="000020">
+                        <ItemID>
+                            <SupplierPartID>ARB_12</SupplierPartID>
+                            <BuyerPartID>SP002</BuyerPartID>
+                        </ItemID>
+                        <Classification domain="NotAvailable"/>
+                    </InvoiceDetailItemReference>
+                    <SubtotalAmount>
+                        <Money currency="EUR">130</Money>
+                    </SubtotalAmount>
+                    <Tax>
+                        <Money currency="EUR">9.1</Money>
+                        <Description xml:lang="de"/>
+                        <TaxDetail category="A2" percentageRate="7.0">
+                            <TaxableAmount>
+                                <Money currency="EUR">130</Money>
+                            </TaxableAmount>
+                            <TaxAmount>
+                                <Money currency="EUR">9.1</Money>
+                            </TaxAmount>
+                        </TaxDetail>
+                    </Tax>
+                    <GrossAmount>
+                        <Money currency="EUR">139.1</Money>
+                    </GrossAmount>
+                    <NetAmount>
+                        <Money currency="EUR">130</Money>
+                    </NetAmount>
+                    <Comments xml:lang="de">Item_2 text</Comments>
+                </InvoiceDetailItem>
+            </InvoiceDetailOrder>
+            <InvoiceDetailSummary>
+                <SubtotalAmount>
+                    <Money currency="EUR">165.1</Money>
+                </SubtotalAmount>
+                <Tax>
+                    <Money currency="EUR">15.77</Money>
+                    <Description xml:lang="de"/>
+                    <TaxDetail category="A1" percentageRate="19.0">
+                        <TaxAmount>
+                            <Money currency="EUR">6.67</Money>
+                        </TaxAmount>
+                        <Description xml:lang="de"/>
+                    </TaxDetail>
+                    <TaxDetail category="A2" percentageRate="7.0">
+                        <TaxAmount>
+                            <Money currency="EUR">9.1</Money>
+                        </TaxAmount>
+                        <Description xml:lang="de"/>
+                    </TaxDetail>
+                </Tax>
+                <GrossAmount>
+                    <Money currency="EUR">180.87</Money>
+                </GrossAmount>
+                <NetAmount>
+                    <Money currency="EUR">165.1</Money>
+                </NetAmount>
+                <DueAmount>
+                    <Money currency="EUR">180.87</Money>
+                </DueAmount>
+            </InvoiceDetailSummary>
+        </InvoiceDetailRequest>
+    </Request>
+</cXML>
+    </Payload>
+</Combined>

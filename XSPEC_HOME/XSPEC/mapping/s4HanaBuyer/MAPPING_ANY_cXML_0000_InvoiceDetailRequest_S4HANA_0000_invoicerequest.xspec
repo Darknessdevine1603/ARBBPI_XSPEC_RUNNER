@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xsl">
+    
+    <x:scenario label="Invoice Request - Invoice with Goods receipt">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_B_GR_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/INV_B_GR_AM.dat"
+            select="element()" label="Invoice Request - Invoice with Goods receipt"/>
+    </x:scenario>
+
+    <x:scenario label="Invoice Request - Invoice Lean Service">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_4500040220_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/INV_4500040220_AM.dat"
+            select="element()" label="Invoice Request - Invoice Lean Service"/>
+    </x:scenario>
+
+    <x:scenario label="Invoice Request - Header+Item text (Multi Material/Service with/without language code)">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'-08:00'"/>    
+        <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'12345'"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_header_item_text_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/INV_header_item_text_AM.dat"
+            select="element()" label="Invoice Request - Header+Item text (Multi Material/Service with/without language code)"/>
+    </x:scenario>
+
+    <x:scenario label="Invoice Request - Header text without language code">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/Invoice_header_text_wo_lang_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/Invoice_header_text_wo_lang_AM.dat"
+            select="element()" label="Invoice Request - Header text without language code"/>
+    </x:scenario>
+
+    <x:scenario label="Invoice Request - Pricing elements">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/Invoice_pricing_elements_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/Invoice_pricing_elements_AM.dat"
+            select="element()" label="Invoice Request - Pricing elements"/>
+    </x:scenario>
+
+    <x:scenario label="Invoice Request - Multiple IBD">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_3232_multiple_IBD_BM.xml"/>
+            <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/INV_3232_multiple_IBD_AM.dat"
+                select="element()" label="Invoice Request - Multiple IBD"/>
+    </x:scenario>
+
+    <x:scenario label="Invoice Request - Credit Memo">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'12345'"/>
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/CreditMemo_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/CreditMemo_AM.dat"
+            select="element()" label="Invoice Request - Credit Memo"/>
+    </x:scenario>
+
+    <x:scenario label="Invoice Request - Service Tax">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'12345'"/>
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_Service_Tax_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/INV_Service_Tax_AM.dat"
+            select="element()" label="Invoice Request - Service Tax"/>
+    </x:scenario>
+    
+    <x:scenario label="Invoice Request - SoldTo">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'12345'"/>
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_SoldTo_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/INV_SoldTo_AM.dat"
+            select="element()" label="Invoice Request - SoldTo"/>
+    </x:scenario>
+    
+    <x:scenario label="Invoice Request - Cancellation of Supplier Invoice">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anERPTimeZone" select="'+05:30'"/>    
+        <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'12345'"/>
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_Cancel_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/InvoiceRequest/INV_Cancel_AM.dat"
+            select="element()" label="Invoice Request - Cancellation of Supplier Invoice"/>
+    </x:scenario>
+
+</x:description>

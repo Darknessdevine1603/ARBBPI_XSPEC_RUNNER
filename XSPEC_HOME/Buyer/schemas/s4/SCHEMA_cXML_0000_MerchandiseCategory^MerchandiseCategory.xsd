@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="mc" targetNamespace="mc">
+    <xs:element name="MerchandiseCategory" type="ns:MerchandiseCategory"/>
+    <xs:complexType name="MerchandiseCategory">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+            <xs:element ref="ns:ID"/>
+            <xs:element minOccurs="0" ref="ns:ReferenceArticle"/>
+            <xs:element maxOccurs="unbounded" ref="ns:Description"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Characteristic"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:CharacteristicProfile"/>
+            <xs:element minOccurs="0" ref="ns:MerchandisingHierarchy"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Extensions"/>
+        </xs:sequence>
+        <!--MCH will be true only for MCH and will be false for MC-->
+        <xs:attribute name="MCH" type="xs:boolean" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="MessageHeader" type="ns:MessageHeader"/>
+    <xs:complexType name="MessageHeader">
+        <xs:sequence>
+            <xs:element ref="ns:MessageID"/>
+            <xs:element ref="ns:CreationDateTime"/>
+            <xs:element ref="ns:SenderBusinessSystemID"/>
+            <xs:element ref="ns:RecipientBusinessSystemID"/>
+            <xs:element minOccurs="0" ref="ns:ExternalID"/>
+            <xs:element minOccurs="0" ref="ns:RealmId"/>
+            <xs:element minOccurs="0" ref="ns:SolutionName"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="RealmId" type="xs:string"/>
+    <xs:element name="SolutionName" type="xs:string"/>
+    <xs:element name="MessageID" type="xs:string"/>
+    <!--xs:complexType>
+      <xs:attribute name="schemeAgencyID" use="required" type="xs:string"/>
+      <xs:attribute name="schemeAgencySchemeAgencyID" use="required" type="xs:string"/>
+      <xs:attribute name="schemeID" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element-->
+    <xs:element name="CreationDateTime" type="xs:dateTime"/>
+    <xs:element name="SenderBusinessSystemID" type="xs:string"/>
+    <xs:element name="RecipientBusinessSystemID" type="xs:string"/>
+    <xs:element name="ExternalID" type="xs:string"/>
+    <xs:element name="ID" type="xs:string"/>
+    <xs:element name="ReferenceArticle" type="xs:string"/>
+    <!-- not sure whether Merchandise Category Description is really limited to 40 chars-->
+    <xs:element name="Description">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="languageCode"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Characteristic">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ns:CharacteristicId"/>
+                <xs:element minOccurs="0" ref="ns:RelevancyIndicator"/>
+                <xs:element minOccurs="0" ref="ns:Values"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="RelevancyIndicator" type="xs:integer"/>
+    <xs:element name="CharacteristicProfile">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ns:CharacteristicProfileId"/>
+                <!-- xs:element ref="Characteristic"/ -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MerchandisingHierarchy">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="ns:Category"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Category" type="ns:Category"/>
+    <xs:complexType name="Category">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="parent" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="CharacteristicProfileId" type="xs:string"/>
+
+    <xs:element name="Values" type="ns:Values"/>
+    <xs:complexType name="Values">
+        <xs:sequence>
+            <!--xs:element ref="Value" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element ref="Description" maxOccurs="unbounded"/>
+      <xs:element ref="Default" minOccurs="0"/-->
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:PossibleValue"/>
+        </xs:sequence>
+        <!--xs:attribute name="actionCode" use="required" type="xs:integer"/-->
+    </xs:complexType>
+
+    <xs:element name="PossibleValue" type="ns:PossibleValue"/>
+    <xs:complexType name="PossibleValue">
+        <xs:sequence>
+            <xs:element minOccurs="0" ref="ns:Value"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Description"/>
+            <xs:element ref="ns:FloatingPointFrom"/>
+            <xs:element ref="ns:FloatingPointTo"/>
+        </xs:sequence>
+        <xs:attribute name="Default" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:element name="FloatingPointFrom" type="xs:string"/>
+    <xs:element name="FloatingPointTo" type="xs:string"/>
+    <xs:element name="Value" type="xs:string"/>
+
+    <xs:element name="CharacteristicId" type="xs:string"/>
+
+    <xs:element name="Extensions" type="ns:Extensions"/>
+    <xs:complexType name="Extensions">
+        <xs:sequence>
+            <xs:element ref="ns:OBJNAME"/>
+            <xs:element ref="ns:OBJKEY"/>
+            <xs:element ref="ns:FIELDNAME"/>
+            <xs:element ref="ns:FIELDVALUE"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="OBJNAME" type="xs:string"/>
+    <xs:element name="OBJKEY" type="xs:string"/>
+    <xs:element name="FIELDNAME" type="xs:string"/>
+    <xs:element name="FIELDVALUE" type="xs:string"/>
+
+    <xs:element name="RetailMSResponse" type="ns:RetailMSResponse"/>
+    <xs:complexType name="RetailMSResponse">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+        </xs:sequence>
+        <xs:attribute name="jobId" type="xs:string"/>
+        <xs:attribute name="status" type="xs:string"/>
+        <xs:attribute name="errorCode" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

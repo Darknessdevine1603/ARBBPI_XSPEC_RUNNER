@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_CentralRFQConfirmation_S4HANA_0000_CRFQConfirmationS4Request.xsl">
+    <x:scenario label="CRFQConfirmation_Acknowledged">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/CRFQConfirmation/CRFQ_Acknowledged_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/CRFQConfirmation/CRFQ_Acknowledged_AM.xml" 
+            select="element()" label="CRFQConfirmation_Acknowledged"/>
+    </x:scenario>    
+    <x:scenario label="CRFQConfirmation_No_SR_ID">
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <!--        <x:call function="function-name"/>-->
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/CRFQConfirmation/CRFQ_NO_SI_ID_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/CRFQConfirmation/CRFQ_NO_SI_ID_AM.xml" 
+            select="element()" label="CRFQConfirmation_No_SR_ID"/>
+    </x:scenario>
+</x:description>

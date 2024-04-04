@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_cXML_0000_SMIProductActivityMessage_ASC-X12_004010_846.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/X12/MAPPING_ANY_cXML_0000_SMIProductActivityMessage_ASC-X12_004010_846.xsl"
+        date="2023-04-27T16:05:04.576231+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_cXML_0000_SMIProductActivityMessage_ASC-X12_004010_846.xspec">
+      <label>ShipNotice Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/X12/ProductActivity/SMIProductActivityMessage_BM.xml"/>
+      </input-wrap>
+      <result href="result-d25e0.xml"/>
+      <test id="scenario1-expect1" successful="true">
+         <label>ShipNotice Request</label>
+         <expect href="result-d28e0.xml"/>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_cXML_0000_SMIProductActivityMessage_ASC-X12_004010_846.xspec">
+      <label>ShipNotice Request with Maximum and Minimum days</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/X12/ProductActivity/SMIProductActivityMessageDays_BM.xml"/>
+      </input-wrap>
+      <result href="result-d43e0.xml"/>
+      <test id="scenario2-expect1" successful="true">
+         <label>ShipNotice Request with Maximum and Minimum days</label>
+         <expect href="result-d46e0.xml"/>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_PayMeNowRequest_AddOn_0000_PayMeNow.xsl">
+    <x:scenario label="PayMeNowMMInv">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'PayMeNowRequest'"/>
+        <x:param name="anAddOnCIVersion" select ="'ARBCI10012'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/PayMeNow/PayMeNowMMInv.xml"/>
+        <x:expect label="PayMeNowMMInv" href="../../../XSPEC/payloads/target/inbound/anBuyer/PayMeNow/PayMeNowMMInv.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PayMeNowFIInv">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'PayMeNowRequest'"/>
+        <x:param name="anAddOnCIVersion" select ="'ARBCI10005'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/PayMeNow/PayMeNowFIInv.xml"/>
+        <x:expect label="PayMeNowFIInv" href="../../../XSPEC/payloads/target/inbound/anBuyer/PayMeNow/PayMeNowFIInv.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PayMeNowFIInvMissedfields">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'PayMeNowRequest'"/>
+        <x:param name="anAddOnCIVersion" select ="'ARBCI10012'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/PayMeNow/PayMeNowFIInvMissedfields.xml"/>
+        <x:expect label="PayMeNowFIInvMissedfields" href="../../../XSPEC/payloads/target/inbound/anBuyer/PayMeNow/PayMeNowFIInvMissedfields.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PayMeNowMMInv-LI">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'PayMeNowRequestLI'"/>
+        <x:param name="anAddOnCIVersion" select ="'ARBCI10012'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/PayMeNow/PayMeNowMMInvLI.xml"/>
+        <x:expect label="PayMeNowMMInv-LI" href="../../../XSPEC/payloads/target/inbound/anBuyer/PayMeNow/PayMeNowMMInvLI.xml" select="element()"/>
+    </x:scenario>
+</x:description>

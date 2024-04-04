@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_ShipNoticeRequest_cXML_0000_ShipNoticeRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_ShipNoticeRequest_cXML_0000_ShipNoticeRequest.xsl"
+        date="2023-04-27T15:50:46.458779+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_ShipNoticeRequest_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest- Basic</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/ShipNoticeRequest/ShipNoticeRequest.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:50:46+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <ShipNoticeRequest>
+                     <ShipNoticeHeader deliveryDate="2021-08-17T05:00:00+05:30"
+                                       shipmentDate="2021-08-17T07:00:00+05:30"
+                                       noticeDate="2021-08-12T12:29:46+05:30"
+                                       operation="new"
+                                       shipmentID="ASN_80000688">
+                        <Contact addressID="1710" role="shipTo">
+                           <Name xml:lang="">Domestic Customer US 3</Name>
+                           <PostalAddress>
+                              <Street>99 Wilhelmstrasse123</Street>
+                              <City>Heilbronn</City>
+                              <PostalCode>70363-5455</PostalCode>
+                              <Country isoCountryCode="">US</Country>
+                           </PostalAddress>
+                        </Contact>
+                     </ShipNoticeHeader>
+                     <ShipNoticePortion>
+                        <OrderReference orderID="121212">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="" quantity="1.0">
+                           <ItemID>
+                              <SupplierPartID>TG11</SupplierPartID>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Trad.Good 11,PD,Reg. Trading for 2TY</Description>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                        </ShipNoticeItem>
+                     </ShipNoticePortion>
+                  </ShipNoticeRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ShipNoticeRequest Basic</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <ShipNoticeRequest>
+                        <ShipNoticeHeader deliveryDate="2021-08-17T05:00:00+05:30"
+                                          shipmentDate="2021-08-17T07:00:00+05:30"
+                                          noticeDate="2021-08-12T12:29:46+05:30"
+                                          operation="new"
+                                          shipmentID="ASN_80000688">
+                           <Contact addressID="1710" role="shipTo">
+                              <Name xml:lang="">Domestic Customer US 3</Name>
+                              <PostalAddress>
+                                 <Street>99 Wilhelmstrasse123</Street>
+                                 <City>Heilbronn</City>
+                                 <PostalCode>70363-5455</PostalCode>
+                                 <Country isoCountryCode="">US</Country>
+                              </PostalAddress>
+                           </Contact>
+                        </ShipNoticeHeader>
+                        <ShipNoticePortion>
+                           <OrderReference orderID="121212">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="" quantity="1.0">
+                              <ItemID>
+                                 <SupplierPartID>TG11</SupplierPartID>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Trad.Good 11,PD,Reg. Trading for 2TY</Description>
+                                 <UnitOfMeasure>PCE</UnitOfMeasure>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                           </ShipNoticeItem>
+                        </ShipNoticePortion>
+                     </ShipNoticeRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_ShipNoticeRequest_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest- Address</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/ShipNoticeRequest/ShipNoticeRequest1.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:50:46+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <ShipNoticeRequest>
+                     <ShipNoticeHeader deliveryDate="2021-06-09T10:00:00+05:30"
+                                       shipmentDate="2021-06-08T22:00:00+05:30"
+                                       noticeDate="2021-05-31T16:44:54+05:30"
+                                       operation="new"
+                                       shipmentID="ASN_80000635">
+                        <Contact role="shipFrom">
+                           <Name xml:lang="de">Shipping Point 1010 - Address Name</Name>
+                           <PostalAddress>
+                              <Street>Dietmar-Hopp-Allee 16</Street>
+                              <City>Walldorf</City>
+                              <PostalCode>69190</PostalCode>
+                              <Country isoCountryCode="DE">DE</Country>
+                           </PostalAddress>
+                        </Contact>
+                        <Contact addressID="1010" role="shipTo">
+                           <Name xml:lang="">Plant 1010 - Address Name 1</Name>
+                           <PostalAddress>
+                              <Street>Dietmar-Hopp-Allee 16</Street>
+                              <City>Walldorf</City>
+                              <PostalCode>69190</PostalCode>
+                              <Country isoCountryCode="">DE</Country>
+                           </PostalAddress>
+                        </Contact>
+                     </ShipNoticeHeader>
+                     <ShipNoticePortion>
+                        <OrderReference orderID="4500005735">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="7.0">
+                           <ItemID>
+                              <SupplierPartID>TG12</SupplierPartID>
+                              <BuyerPartID>SP001</BuyerPartID>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">MacBook - Laptop</Description>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                        </ShipNoticeItem>
+                     </ShipNoticePortion>
+                  </ShipNoticeRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>ShipNoticeRequest Address</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <ShipNoticeRequest>
+                        <ShipNoticeHeader deliveryDate="2021-06-09T10:00:00+05:30"
+                                          shipmentDate="2021-06-08T22:00:00+05:30"
+                                          noticeDate="2021-05-31T16:44:54+05:30"
+                                          operation="new"
+                                          shipmentID="ASN_80000635">
+                           <Contact role="shipFrom">
+                              <Name xml:lang="de">Shipping Point 1010 - Address Name</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE">DE</Country>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact addressID="1010" role="shipTo">
+                              <Name xml:lang="">Plant 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="">DE</Country>
+                              </PostalAddress>
+                           </Contact>
+                        </ShipNoticeHeader>
+                        <ShipNoticePortion>
+                           <OrderReference orderID="4500005735">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="7.0">
+                              <ItemID>
+                                 <SupplierPartID>TG12</SupplierPartID>
+                                 <BuyerPartID>SP001</BuyerPartID>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">MacBook - Laptop</Description>
+                                 <UnitOfMeasure>PCE</UnitOfMeasure>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                           </ShipNoticeItem>
+                        </ShipNoticePortion>
+                     </ShipNoticeRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_ShipNoticeRequest_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest- Batch</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/ShipNoticeRequest/ShipNoticeRequestBatch.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:50:47+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <ShipNoticeRequest>
+                     <ShipNoticeHeader deliveryDate="2021-06-09T10:00:00+05:30"
+                                       shipmentDate="2021-06-08T22:00:00+05:30"
+                                       noticeDate="2021-05-31T16:44:54+05:30"
+                                       operation="new"
+                                       shipmentID="ASN_80000635">
+                        <Contact role="shipFrom">
+                           <Name xml:lang="de">Shipping Point 1010 - Address Name</Name>
+                           <PostalAddress>
+                              <Street>Dietmar-Hopp-Allee 16</Street>
+                              <City>Walldorf</City>
+                              <PostalCode>69190</PostalCode>
+                              <Country isoCountryCode="DE">DE</Country>
+                           </PostalAddress>
+                        </Contact>
+                        <Contact addressID="1010" role="shipTo">
+                           <Name xml:lang="">Plant 1010 - Address Name 1</Name>
+                           <PostalAddress>
+                              <Street>Dietmar-Hopp-Allee 16</Street>
+                              <City>Walldorf</City>
+                              <PostalCode>69190</PostalCode>
+                              <Country isoCountryCode="">DE</Country>
+                           </PostalAddress>
+                        </Contact>
+                     </ShipNoticeHeader>
+                     <ShipNoticePortion>
+                        <OrderReference orderID="4500005735">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="7.0">
+                           <ItemID>
+                              <SupplierPartID>TG12</SupplierPartID>
+                              <BuyerPartID>SP001</BuyerPartID>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">MacBook - Laptop</Description>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                           <Batch productionDate="2021-05-31" expirationDate="2022-05-31">
+                              <SupplierBatchID>Batch</SupplierBatchID>
+                           </Batch>
+                        </ShipNoticeItem>
+                     </ShipNoticePortion>
+                  </ShipNoticeRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>ShipNoticeRequest Batch</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <ShipNoticeRequest>
+                        <ShipNoticeHeader deliveryDate="2021-06-09T10:00:00+05:30"
+                                          shipmentDate="2021-06-08T22:00:00+05:30"
+                                          noticeDate="2021-05-31T16:44:54+05:30"
+                                          operation="new"
+                                          shipmentID="ASN_80000635">
+                           <Contact role="shipFrom">
+                              <Name xml:lang="de">Shipping Point 1010 - Address Name</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE">DE</Country>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact addressID="1010" role="shipTo">
+                              <Name xml:lang="">Plant 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="">DE</Country>
+                              </PostalAddress>
+                           </Contact>
+                        </ShipNoticeHeader>
+                        <ShipNoticePortion>
+                           <OrderReference orderID="4500005735">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="7.0">
+                              <ItemID>
+                                 <SupplierPartID>TG12</SupplierPartID>
+                                 <BuyerPartID>SP001</BuyerPartID>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">MacBook - Laptop</Description>
+                                 <UnitOfMeasure>PCE</UnitOfMeasure>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <Batch productionDate="2021-05-31" expirationDate="2022-05-31">
+                                 <SupplierBatchID>Batch</SupplierBatchID>
+                              </Batch>
+                           </ShipNoticeItem>
+                        </ShipNoticePortion>
+                     </ShipNoticeRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_ShipNoticeRequest_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest- HeaderAttachment</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/ShipNoticeRequest/ShipNoticeRequestHeaderAttachment.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:50:47+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <ShipNoticeRequest>
+                     <ShipNoticeHeader deliveryDate="2022-07-14T22:00:00+05:30"
+                                       shipmentDate="2022-07-14T22:00:00+05:30"
+                                       noticeDate="2022-08-18T19:27:05+05:30"
+                                       operation="new"
+                                       shipmentID="ASN_80001126">
+                        <Contact addressID="1010" role="shipTo">
+                           <Name xml:lang="">Storage Location 101A - Address Nam</Name>
+                           <PostalAddress>
+                              <Street>Dietmar-Hopp-Allee 16</Street>
+                              <City>Walldorf</City>
+                              <PostalCode>69190</PostalCode>
+                              <Country isoCountryCode="">DE</Country>
+                           </PostalAddress>
+                        </Contact>
+                        <Comments>
+                           <Attachment>
+                              <URL>cid:FA163E9771F91EED87DFB4D6E1675ED3@sap.com</URL>
+                           </Attachment>
+                           <Attachment>
+                              <URL>cid:FA163E9771F91EED87DFB4D6E1677ED3@sap.com</URL>
+                           </Attachment>
+                        </Comments>
+                     </ShipNoticeHeader>
+                     <ShipNoticePortion>
+                        <OrderReference orderID="TestPO">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="" quantity="14.0">
+                           <ItemID>
+                              <SupplierPartID>TG0011</SupplierPartID>
+                              <BuyerPartID>SP001</BuyerPartID>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Handelsware 0011, PD, Reguläre
+                Beschaff.</Description>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                        </ShipNoticeItem>
+                     </ShipNoticePortion>
+                  </ShipNoticeRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>ShipNoticeRequest HeaderAttachment</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <ShipNoticeRequest>
+                        <ShipNoticeHeader deliveryDate="2022-07-14T22:00:00+05:30"
+                                          shipmentDate="2022-07-14T22:00:00+05:30"
+                                          noticeDate="2022-08-18T19:27:05+05:30"
+                                          operation="new"
+                                          shipmentID="ASN_80001126">
+                           <Contact addressID="1010" role="shipTo">
+                              <Name xml:lang="">Storage Location 101A - Address Nam</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="">DE</Country>
+                              </PostalAddress>
+                           </Contact>
+                           <Comments>
+                              <Attachment>
+                                 <URL>cid:FA163E9771F91EED87DFB4D6E1675ED3@sap.com</URL>
+                              </Attachment>
+                              <Attachment>
+                                 <URL>cid:FA163E9771F91EED87DFB4D6E1677ED3@sap.com</URL>
+                              </Attachment>
+                           </Comments>
+                        </ShipNoticeHeader>
+                        <ShipNoticePortion>
+                           <OrderReference orderID="TestPO">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="" quantity="14.0">
+                              <ItemID>
+                                 <SupplierPartID>TG0011</SupplierPartID>
+                                 <BuyerPartID>SP001</BuyerPartID>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Handelsware 0011, PD, Reguläre
+                Beschaff.</Description>
+                                 <UnitOfMeasure>PCE</UnitOfMeasure>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                           </ShipNoticeItem>
+                        </ShipNoticePortion>
+                     </ShipNoticeRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_ShipNoticeRequest_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest-ANID</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/ShipNoticeRequest/ShipNoticeRequestANID.xml"/>
+      </input-wrap>

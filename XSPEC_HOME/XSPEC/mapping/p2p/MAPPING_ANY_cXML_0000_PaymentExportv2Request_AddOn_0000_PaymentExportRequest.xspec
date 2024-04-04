@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_PaymentExportv2Request_AddOn_0000_PaymentExportRequest.xsl">
+    <x:scenario
+        label="PaymentExportv2Request">
+        <x:param name="anSourceDocumentType" select= "'PaymentExportv2Request'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Payment/PaymentExportRequestV2_BM.xml"/>
+        <x:expect label="PaymentExportv2Request" href="../../../XSPEC/payloads/target/inbound/p2p/Payment/PaymentExportRequestV2_AM.xml" select="element()" />       
+    </x:scenario>
+    <x:scenario
+        label="PaymentExportv2Request with Attachment">
+        <x:param name="anSourceDocumentType" select= "'PaymentExportv2Request'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Payment/PaymentExportRequestV2Attach_BM.xml"/>
+        <x:expect label="PaymentExportv2Request with Attachment" href="../../../XSPEC/payloads/target/inbound/p2p/Payment/PaymentExportRequestV2Attach_AM.xml" select="element()" />       
+    </x:scenario>
+    <x:scenario
+        label="PaymentExportv2Request One Time Vendor">
+        <x:param name="anSourceDocumentType" select= "'PaymentExportv2Request'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Payment/PaymentExportRequestV2OneTimeVendor_BM.xml"/>
+        <x:expect label="PaymentExportv2Request One Time Vendor" href="../../../XSPEC/payloads/target/inbound/p2p/Payment/PaymentExportRequestV2OneTimeVendor_AM.xml" select="element()" />       
+    </x:scenario>
+    <x:scenario
+        label="PaymentExportv2Request SES">
+        <x:param name="anSourceDocumentType" select= "'PaymentExportv2Request'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Payment/PaymentExportRequestV2SES_BM.xml"/>
+        <x:expect label="PaymentExportv2Request SES" href="../../../XSPEC/payloads/target/inbound/p2p/Payment/PaymentExportRequestV2SES_AM.xml" select="element()" />       
+    </x:scenario>
+    <!--IG-39684 : Payment Request ITEM_TEXT not Truncating to 50 Char-->    
+    <x:scenario
+        label="PaymentExportv2Request Description with space for PO invoice">
+        <x:param name="anSourceDocumentType" select= "'PaymentExportv2Request'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Payment/PaymentExportRequest_V2_DescWithSpacePO_BM.dat"/>
+        <x:expect label="PaymentExportv2Request Description with space for PO invoice" href="../../../XSPEC/payloads/target/inbound/p2p/Payment/PaymentExportRequest_V2_DescWithSpace_PO_AM.xml" select="element()" />       
+    </x:scenario>   
+    <x:scenario
+        label="PaymentExportv2Request Description with space for non PO invoice">
+        <x:param name="anSourceDocumentType" select= "'PaymentExportv2Request'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Payment/PaymentExportRequest_V2_DescWithSpace_NonPO_BM.dat"/>
+        <x:expect label="PaymentExportv2Request Description with space for non PO invoice" href="../../../XSPEC/payloads/target/inbound/p2p/Payment/PaymentExportRequest_V2_DescWithSpace_NonPO_AM.xml" select="element()" />       
+    </x:scenario>     
+    <!--IG-39684 : Payment Request ITEM_TEXT not Truncating to 50 Char-->    
+</x:description>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://sap.com/xi/ARBCIG1" xmlns="http://sap.com/xi/ARBCIG1"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="ERPRespToAribaBuyerMsg" type="ERPResponseToP2P"/>
+    <xsd:simpleType name="ErrorSAPScreen">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Variant">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">Ariba Variant</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:token">
+            <xsd:maxLength value="255"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MessageNumber">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ParameterLine">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MessageType">
+        <xsd:restriction base="xsd:token">
+            <xsd:length value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MessageVariable">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="NOSC_BusinessTransactionDocumentID">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="35"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MessageClass">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ErrorSAPModule">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="40"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ParameterField">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="30"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="OrganisationalCentreID">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="20"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="BusinessTransactionDocumentItemID">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="BusinessSystemID">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="60"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="AribaDocumentVersion">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">Ariba Document Version</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:token">
+            <xsd:maxLength value="255"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="BusinessTransactionDocumentType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="RealmName">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="100"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="FiscalYearID">
+        <xsd:restriction base="xsd:token">
+            <xsd:length value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="System">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ClientID">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DateTime2">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Partition">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">Ariba Partition</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:token">
+            <xsd:maxLength value="255"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="AribaDocumentID">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">Ariba Document ID</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:token">
+            <xsd:maxLength value="255"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ApplicationLogMsgNo">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="6"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Message">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="220"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DocumentStatus">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">DT</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackageInfo">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ParameterName">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="32"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ApplicationLogNumber">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="ERPRespToP2PItm">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">ERP Response to P2P Header</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="SAPItemID" type="BusinessTransactionDocumentItemID" minOccurs="0"/>
+            <xsd:element name="AribaItemID" type="AribaDocumentID" minOccurs="0"/>
+            <xsd:element name="PackageInfo" type="PackageInfo" minOccurs="0"/>
+            <xsd:element name="ServiceMapKey" type="BusinessTransactionDocumentItemID" minOccurs="0"/>
+            <xsd:element name="ItemSpecificFields" type="AribaExtension" minOccurs="0"
+                maxOccurs="unbounded"/>
+            <xsd:element name="ItemCustomExtension" type="AribaExtension" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="NOSC_BapiLog">
+        <xsd:sequence>
+            <xsd:element name="MessageType" type="MessageType" minOccurs="0"/>
+            <xsd:element name="MessageClass" type="MessageClass" minOccurs="0"/>
+            <xsd:element name="MessageNumber" type="MessageNumber" minOccurs="0"/>
+            <xsd:element name="MessageText" type="Message" minOccurs="0"/>
+            <xsd:element name="ApplicationLog" type="ApplicationLogNumber" minOccurs="0"/>
+            <xsd:element name="ApplicationLogMsgNumber" type="ApplicationLogMsgNo" minOccurs="0"/>
+            <xsd:element name="MessageV1" type="MessageVariable" minOccurs="0"/>
+            <xsd:element name="MessageV2" type="MessageVariable" minOccurs="0"/>
+            <xsd:element name="MessageV3" type="MessageVariable" minOccurs="0"/>
+            <xsd:element name="MessageV4" type="MessageVariable" minOccurs="0"/>
+            <xsd:element name="ParameterName" type="ParameterName" minOccurs="0"/>
+            <xsd:element name="ParameterRow" type="ParameterLine" minOccurs="0"/>
+            <xsd:element name="ParameterField" type="ParameterField" minOccurs="0"/>
+            <xsd:element name="LogicalSystem" type="System" minOccurs="0"/>
+            <xsd:element name="Mandt" type="ClientID"/>
+            <xsd:element name="DateTime" type="DateTime2"/>
+            <xsd:element name="ErrorSAPScreen" type="ErrorSAPScreen"/>
+            <xsd:element name="ErrorSAPModule" type="ErrorSAPModule"/>
+            <xsd:element name="AribaItemID" type="AribaDocumentID" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ERPResponseToP2P">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">ERP Response To P2P</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="TransactionType" type="BusinessTransactionDocumentType"/>
+            <xsd:element name="TransactionTypeShort" type="BusinessTransactionDocumentType"
+                minOccurs="0"/>
+            <xsd:element name="RealmName" type="RealmName" minOccurs="0"/>
+            <xsd:element name="SystemID" type="BusinessSystemID" minOccurs="0"/>
+            <xsd:element name="AribaDocumentID" type="AribaDocumentID"/>
+            <xsd:element name="Header" type="ERPRespToP2PHdr"/>
+            <xsd:element name="Item" type="ERPRespToP2PItm" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="LogMessage" type="NOSC_BapiLog" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="MultiHeader" type="ERPRespToP2PMultiHdr" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AribaExtension">
+        <xsd:attribute name="objectName" type="xsd:string"/>
+        <xsd:attribute name="objectKey" type="xsd:string"/>
+        <xsd:attribute name="fieldName" type="xsd:string"/>
+        <xsd:attribute name="fieldValue" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ERPRespToP2PMultiHdr">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">ERP Response to P2P Header</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Partition" type="Partition" minOccurs="0"/>
+            <xsd:element name="Variant" type="Variant" minOccurs="0"/>
+            <xsd:element name="HeaderSpecificFields" type="AribaExtension" minOccurs="0"
+                maxOccurs="unbounded"/>
+            <xsd:element name="HeaderCustomExtension" type="AribaExtension" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ERPRespToP2PHdr">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">ERP Response to P2P Header</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Partition" type="Partition" minOccurs="0"/>
+            <xsd:element name="Variant" type="Variant" minOccurs="0"/>
+            <xsd:element name="SAPDocumentID" type="NOSC_BusinessTransactionDocumentID"
+                minOccurs="0"/>
+            <xsd:element name="TrackerID" type="NOSC_BusinessTransactionDocumentID" minOccurs="0"/>
+            <xsd:element name="CompanyCode" type="OrganisationalCentreID" minOccurs="0"/>
+            <xsd:element name="FiscalYear" type="FiscalYearID" minOccurs="0"/>
+            <xsd:element name="AribaDocumentID" type="AribaDocumentID" minOccurs="0"/>
+            <xsd:element name="Version" type="AribaDocumentVersion" minOccurs="0"/>
+            <xsd:element name="Status" type="DocumentStatus" minOccurs="0"/>
+            <xsd:element name="HeaderSpecificFields" type="AribaExtension" minOccurs="0"
+                maxOccurs="unbounded"/>
+            <xsd:element name="HeaderCustomExtension" type="AribaExtension" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_AddOn_0000_OrderConfirmation.xsl">
+    <x:scenario label="Order Confirmation Request">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPName"/>
+        <x:param name="anSourceDocumentType" select="'ConfirmationRequest'"/> 
+        <x:param name="anERPTimeZone" select="'+05:30'"/>        
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/OrderConfirm/OrderConfirmation.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/OrderConfirm/OrderConfirmation.dat"
+            select="element()" label="Order Confirmation Request"/>
+    </x:scenario>
+    <x:scenario label="Order Confirmation Scheduling Agreement Release Request">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPName" select="'S4CORE'"/>
+        <x:param name="anSourceDocumentType" select="'ConfirmationRequest'"/> 
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/OrderConfirm/OrderConfirmationSAR.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/OrderConfirm/OrderConfirmationSAR.dat"
+            select="element()" label="Order Confirmation Scheduling Agreement Release Request"/>
+    </x:scenario>
+    <x:scenario label="Order Confirmation Multi Line Request">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPName"/>
+        <x:param name="anSourceDocumentType" select="'ConfirmationRequest'"/> 
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/OrderConfirm/OrderConfirmationMultiLine.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/OrderConfirm/OrderConfirmationMultiLine.dat"
+            select="element()" label="Order Confirmation Multi Line Request"/>
+    </x:scenario>
+    <x:scenario label="Order Confirmation Request LI">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPName"/>
+        <x:param name="anSourceDocumentType" select="'ConfirmationRequestLI'"/> 
+        <x:param name="anERPTimeZone" select="'+05:30'"/>        
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/OrderConfirm/OrderConfirmationLI.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/OrderConfirm/OrderConfirmationLI.dat"
+            select="element()" label="Order Confirmation Request LI"/>
+    </x:scenario>
+    <!--  IG-40065 :sending multiple comments in same confirmation.-->
+    <x:scenario label="Order Confirmation with Multiple comments">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPName"/>
+        <x:param name="anSourceDocumentType" select="'ConfirmationRequest'"/> 
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/OrderConfirm/OrderConfirmationMultipleComments.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/OrderConfirm/OrderConfirmationMultiplecomments.dat"
+            select="element()" label="Order Confirmation with Multiple comments"/>
+    </x:scenario>      
+</x:description>

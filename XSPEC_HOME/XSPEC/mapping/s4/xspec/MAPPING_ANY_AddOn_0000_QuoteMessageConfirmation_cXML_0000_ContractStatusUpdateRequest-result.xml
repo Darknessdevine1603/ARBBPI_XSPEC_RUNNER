@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_QuoteMessageConfirmation_cXML_0000_ContractStatusUpdateRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4/MAPPING_ANY_AddOn_0000_QuoteMessageConfirmation_cXML_0000_ContractStatusUpdateRequest.xsl"
+        date="2023-04-27T15:40:41.392405+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_QuoteMessageConfirmation_cXML_0000_ContractStatusUpdateRequest.xspec">
+      <label>Scenario for QuoteMsgConfirmation of PurchasingContractCreate</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4/QuoteMessageConfirmation/QuoteMessageConfirmation_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:40:42436+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004204493-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004204493-T</Identity>
+                           </Credential>
+                           <Credential domain="PrivateID">
+                              <Identity>R100</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret>Ariba Sourcing</SharedSecret>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request>
+                        <ContractStatusUpdateRequest>
+                           <Status code="200"
+                                   text="[INFO] PurchasingContract 4600000379 has been created. External reference: [WARNING] Start of validity period is in the past [WARNING] Error in net price calculation, item 00010 (Please correct) [WARNING] Following mandatory roles missing in partner maintenance: VN [INFO] Quantity Contract created under the number 4600000379 [WARNING] Please check the price [WARNING] No quotation yet exists for RFQ item 7010000246 00010"/>
+                           <ContractStatus type="created">
+                              <ContractIDInfo contractID="ID145230" contractDate="2018-05-07">
+                                 <IdReference identifier="4600000379" domain="SAPAgreementId"/>
+                              </ContractIDInfo>
+                              <ContractItemStatus>
+                                 <ItemStatus type="created">
+                                    <ReferenceDocumentInfo lineNumber="1"/>
+                                 </ItemStatus>
+                                 <IdReference identifier="00010" domain="SAPLineNumber"/>
+                              </ContractItemStatus>
+                           </ContractStatus>
+                           <Extrinsic name="SourcingEventId"/>
+                           <Extrinsic name="VendorId">R100</Extrinsic>
+                        </ContractStatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>PurchasingContractCreate</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="" timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004204493-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004204493-T</Identity>
+                              </Credential>
+                              <Credential domain="PrivateID">
+                                 <Identity>R100</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret>Ariba Sourcing</SharedSecret>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request>
+                           <ContractStatusUpdateRequest>
+                              <Status code="200"
+                                      text="[INFO] PurchasingContract 4600000379 has been created. External reference: [WARNING] Start of validity period is in the past [WARNING] Error in net price calculation, item 00010 (Please correct) [WARNING] Following mandatory roles missing in partner maintenance: VN [INFO] Quantity Contract created under the number 4600000379 [WARNING] Please check the price [WARNING] No quotation yet exists for RFQ item 7010000246 00010"/>
+                              <ContractStatus type="created">
+                                 <ContractIDInfo contractID="ID145230" contractDate="2018-05-07">
+                                    <IdReference identifier="4600000379" domain="SAPAgreementId"/>
+                                 </ContractIDInfo>
+                                 <ContractItemStatus>
+                                    <ItemStatus type="created">
+                                       <ReferenceDocumentInfo lineNumber="1"/>
+                                    </ItemStatus>
+                                    <IdReference identifier="00010" domain="SAPLineNumber"/>
+                                 </ContractItemStatus>
+                              </ContractStatus>
+                              <Extrinsic name="SourcingEventId"/>
+                              <Extrinsic name="VendorId">R100</Extrinsic>
+                           </ContractStatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_QuoteMessageConfirmation_cXML_0000_ContractStatusUpdateRequest.xspec">
+      <label>Scenario for QuoteMessageConfirmationDelete</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4/QuoteMessageConfirmation/QuoteMessageConfirmationDelete_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:40:42375+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004204493-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004204493-T</Identity>
+                           </Credential>
+                           <Credential domain="PrivateID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret>Ariba Sourcing</SharedSecret>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request>
+                        <ContractStatusUpdateRequest>
+                           <Status code="200"
+                                   text="[INFO] Creating PO for Ariba quotation number ID197285 RFQ number 6000000629 [ERROR] No instance of object type PurchaseOrder has been created. External&#xA;            reference: [WARNING] Outlines without service lines are not supported in the external&#xA;            system [WARNING] Outlines without service lines are not supported in the external&#xA;            system [ERROR] Purchase order still contains faulty items [WARNING] Purchase order date is in the past [WARNING] Start of validity period is in the past [WARNING] Materials of requisition 10032188 item 00020 alr. ordered in full [WARNING] Materials of requisition 10032188 item 00010 alr. ordered in full [ERROR] In case of evaluated receipt settlement, please enter tax code [ERROR] In case of evaluated receipt settlement, please enter tax code [WARNING] Centrally agreed contract exists for this material group [WARNING] Scheduling agreement exists for this material group [WARNING] Contract exists for this material group [WARNING] Delivery date is in the past [WARNING] Statistical delivery date in the past [WARNING] Centrally agreed contract exists for this material group [WARNING] Scheduling agreement exists for this material group [WARNING] Contract exists for this material group [WARNING] Delivery date is in the past [WARNING] Statistical delivery date in the past"/>
+                           <ContractStatus type="deleted">
+                              <ContractIDInfo contractID="ID197285" contractDate="2020-11-18">
+                                 <IdReference identifier="ID197285" domain="SAPAgreementId"/>
+                              </ContractIDInfo>
+                              <ContractItemStatus>
+                                 <ItemStatus type="deleted">
+                                    <ReferenceDocumentInfo lineNumber=""/>
+                                 </ItemStatus>
+                                 <IdReference identifier="" domain="SAPLineNumber"/>
+                              </ContractItemStatus>
+                           </ContractStatus>
+                           <Extrinsic name="SourcingEventId">Doc1366915</Extrinsic>
+                           <Extrinsic name="VendorId">100000</Extrinsic>
+                        </ContractStatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>QuoteMessageConfirmationDelete</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="" timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004204493-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004204493-T</Identity>
+                              </Credential>
+                              <Credential domain="PrivateID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret>Ariba Sourcing</SharedSecret>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request>
+                           <ContractStatusUpdateRequest>
+                              <Status code="200"
+                                      text="[INFO] Creating PO for Ariba quotation number ID197285 RFQ number 6000000629 [ERROR] No instance of object type PurchaseOrder has been created. External&#xA;            reference: [WARNING] Outlines without service lines are not supported in the external&#xA;            system [WARNING] Outlines without service lines are not supported in the external&#xA;            system [ERROR] Purchase order still contains faulty items [WARNING] Purchase order date is in the past [WARNING] Start of validity period is in the past [WARNING] Materials of requisition 10032188 item 00020 alr. ordered in full [WARNING] Materials of requisition 10032188 item 00010 alr. ordered in full [ERROR] In case of evaluated receipt settlement, please enter tax code [ERROR] In case of evaluated receipt settlement, please enter tax code [WARNING] Centrally agreed contract exists for this material group [WARNING] Scheduling agreement exists for this material group [WARNING] Contract exists for this material group [WARNING] Delivery date is in the past [WARNING] Statistical delivery date in the past [WARNING] Centrally agreed contract exists for this material group [WARNING] Scheduling agreement exists for this material group [WARNING] Contract exists for this material group [WARNING] Delivery date is in the past [WARNING] Statistical delivery date in the past"/>
+                              <ContractStatus type="deleted">
+                                 <ContractIDInfo contractID="ID197285" contractDate="2020-11-18">
+                                    <IdReference identifier="ID197285" domain="SAPAgreementId"/>
+                                 </ContractIDInfo>
+                                 <ContractItemStatus>
+                                    <ItemStatus type="deleted">
+                                       <ReferenceDocumentInfo lineNumber=""/>
+                                    </ItemStatus>
+                                    <IdReference identifier="" domain="SAPLineNumber"/>
+                                 </ContractItemStatus>
+                              </ContractStatus>
+                              <Extrinsic name="SourcingEventId">Doc1366915</Extrinsic>
+                              <Extrinsic name="VendorId">100000</Extrinsic>
+                           </ContractStatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_QuoteMessageConfirmation_cXML_0000_ContractStatusUpdateRequest.xspec">
+      <label>Scenario for QuoteMessageConfirmationDelete</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4/QuoteMessageConfirmation/QuoteMessageConfirmationUpdate_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:40:4271+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004204493-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004204493-T</Identity>
+                           </Credential>
+                           <Credential domain="PrivateID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret>Ariba Sourcing</SharedSecret>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request>
+                        <ContractStatusUpdateRequest>
+                           <Status code="500"
+                                   text="[INFO] Creating PO for Ariba quotation number ID197285 RFQ number 6000000629 [ERROR] No instance of object type PurchaseOrder has been created. External&#xA;            reference: [WARNING] Outlines without service lines are not supported in the external&#xA;            system [WARNING] Outlines without service lines are not supported in the external&#xA;            system [ERROR] Purchase order still contains faulty items [WARNING] Purchase order date is in the past [WARNING] Start of validity period is in the past [WARNING] Materials of requisition 10032188 item 00020 alr. ordered in full [WARNING] Materials of requisition 10032188 item 00010 alr. ordered in full [ERROR] In case of evaluated receipt settlement, please enter tax code [ERROR] In case of evaluated receipt settlement, please enter tax code [WARNING] Centrally agreed contract exists for this material group [WARNING] Scheduling agreement exists for this material group [WARNING] Contract exists for this material group [WARNING] Delivery date is in the past [WARNING] Statistical delivery date in the past [WARNING] Centrally agreed contract exists for this material group [WARNING] Scheduling agreement exists for this material group [WARNING] Contract exists for this material group [WARNING] Delivery date is in the past [WARNING] Statistical delivery date in the past"/>
+                           <ContractStatus type="updated">
+                              <ContractIDInfo contractID="ID197285" contractDate="2020-11-18">
+                                 <IdReference identifier="ID197285" domain="SAPPurchaseOrderId"/>
+                              </ContractIDInfo>
+                              <ContractItemStatus>
+                                 <ItemStatus type="updated">
+                                    <ReferenceDocumentInfo lineNumber=""/>
+                                 </ItemStatus>
+                                 <IdReference identifier="" domain="SAPLineNumber"/>
+                              </ContractItemStatus>
+                           </ContractStatus>
+                           <Extrinsic name="SourcingEventId">Doc1366915</Extrinsic>
+                           <Extrinsic name="VendorId">100000</Extrinsic>
+                        </ContractStatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>QuoteMessageConfirmationUpdate</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="" timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004204493-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004204493-T</Identity>
+                              </Credential>
+                              <Credential domain="PrivateID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret>Ariba Sourcing</SharedSecret>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request>
+                           <ContractStatusUpdateRequest>
+                              <Status code="500"
+                                      text="[INFO] Creating PO for Ariba quotation number ID197285 RFQ number 6000000629 [ERROR] No instance of object type PurchaseOrder has been created. External&#xA;            reference: [WARNING] Outlines without service lines are not supported in the external&#xA;            system [WARNING] Outlines without service lines are not supported in the external&#xA;            system [ERROR] Purchase order still contains faulty items [WARNING] Purchase order date is in the past [WARNING] Start of validity period is in the past [WARNING] Materials of requisition 10032188 item 00020 alr. ordered in full [WARNING] Materials of requisition 10032188 item 00010 alr. ordered in full [ERROR] In case of evaluated receipt settlement, please enter tax code [ERROR] In case of evaluated receipt settlement, please enter tax code [WARNING] Centrally agreed contract exists for this material group [WARNING] Scheduling agreement exists for this material group [WARNING] Contract exists for this material group [WARNING] Delivery date is in the past [WARNING] Statistical delivery date in the past [WARNING] Centrally agreed contract exists for this material group [WARNING] Scheduling agreement exists for this material group [WARNING] Contract exists for this material group [WARNING] Delivery date is in the past [WARNING] Statistical delivery date in the past"/>
+                              <ContractStatus type="updated">
+                                 <ContractIDInfo contractID="ID197285" contractDate="2020-11-18">
+                                    <IdReference identifier="ID197285" domain="SAPPurchaseOrderId"/>
+                                 </ContractIDInfo>
+                                 <ContractItemStatus>
+                                    <ItemStatus type="updated">
+                                       <ReferenceDocumentInfo lineNumber=""/>
+                                    </ItemStatus>
+                                    <IdReference identifier="" domain="SAPLineNumber"/>
+                                 </ContractItemStatus>
+                              </ContractStatus>
+                              <Extrinsic name="SourcingEventId">Doc1366915</Extrinsic>
+                              <Extrinsic name="VendorId">100000</Extrinsic>
+                           </ContractStatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_QuoteMessageConfirmation_cXML_0000_ContractStatusUpdateRequest.xspec">
+      <label>Scenario for QuoteMessageConfirmationNoStatus</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4/QuoteMessageConfirmation/QuoteMessageConfirmationNoStatus_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:40:42473+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004204493-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02004204493-T</Identity>
+                           </Credential>
+                           <Credential domain="PrivateID">
+                              <Identity>R100</Identity>
+                           </Credential>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret>Ariba Sourcing</SharedSecret>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request>
+                        <ContractStatusUpdateRequest>
+                           <Status code="200"
+                                   text="[INFO] PurchasingContract 4600000379 has been created. External reference: [WARNING] Start of validity period is in the past [WARNING] Error in net price calculation, item 00010 (Please correct) [WARNING] Following mandatory roles missing in partner maintenance: VN [INFO] Quantity Contract created under the number 4600000379 [WARNING] Please check the price [WARNING] No quotation yet exists for RFQ item 7010000246 00010"/>
+                           <ContractStatus type="created">
+                              <ContractIDInfo contractID="ID145230" contractDate="2018-05-07">
+                                 <IdReference identifier="4600000379" domain="SAPAgreementId"/>
+                              </ContractIDInfo>
+                              <ContractItemStatus>
+                                 <ItemStatus type="created">
+                                    <ReferenceDocumentInfo lineNumber="1"/>
+                                 </ItemStatus>
+                                 <IdReference identifier="00010" domain="SAPLineNumber"/>
+                              </ContractItemStatus>
+                           </ContractStatus>
+                           <Extrinsic name="SourcingEventId"/>
+                           <Extrinsic name="VendorId">R100</Extrinsic>
+                        </ContractStatusUpdateRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>QuoteMessageConfirmationNoStatus</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="" timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004204493-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02004204493-T</Identity>
+                              </Credential>
+                              <Credential domain="PrivateID">
+                                 <Identity>R100</Identity>
+                              </Credential>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret>Ariba Sourcing</SharedSecret>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request>
+                           <ContractStatusUpdateRequest>
+                              <Status code="200"
+                                      text="[INFO] PurchasingContract 4600000379 has been created. External reference: [WARNING] Start of validity period is in the past [WARNING] Error in net price calculation, item 00010 (Please correct) [WARNING] Following mandatory roles missing in partner maintenance: VN [INFO] Quantity Contract created under the number 4600000379 [WARNING] Please check the price [WARNING] No quotation yet exists for RFQ item 7010000246 00010"/>
+                              <ContractStatus type="created">
+                                 <ContractIDInfo contractID="ID145230" contractDate="2018-05-07">
+                                    <IdReference identifier="4600000379" domain="SAPAgreementId"/>
+                                 </ContractIDInfo>
+                                 <ContractItemStatus>
+                                    <ItemStatus type="created">
+                                       <ReferenceDocumentInfo lineNumber="1"/>
+                                    </ItemStatus>
+                                    <IdReference identifier="00010" domain="SAPLineNumber"/>
+                                 </ContractItemStatus>
+                              </ContractStatus>
+                              <Extrinsic name="SourcingEventId"/>
+                              <Extrinsic name="VendorId">R100</Extrinsic>
+                           </ContractStatusUpdateRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

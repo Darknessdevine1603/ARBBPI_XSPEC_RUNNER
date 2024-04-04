@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_RetailItemDeleteRequest_cXML_0000_RetailItemDeleteRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4/MAPPING_ANY_AddOn_0000_RetailItemDeleteRequest_cXML_0000_RetailItemDeleteRequest.xsl"
+        date="2023-04-27T15:42:02.992741+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_RetailItemDeleteRequest_cXML_0000_RetailItemDeleteRequest.xspec">
+      <label>Scenario for RetailItemDelete</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4/RetailItemDelete/RetailItemDelete_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <MasterDataDelete xmlns="deleteItem">
+               <MessageHeader>
+                  <MessageID>6c0b84b7-57a3-1ee8-959e-86d963bce0e5</MessageID>
+                  <CreationDateTime>2023-04-27T15:42:02.992741+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>QODCLNT002</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QODCLNT521</RecipientBusinessSystemID>
+                  <ExternalID>QODCLNT521</ExternalID>
+               </MessageHeader>
+               <Item>
+                  <ObjectType>01</ObjectType>
+                  <ObjectID>TESTDELETECHAR</ObjectID>
+               </Item>
+            </MasterDataDelete>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>RetailItemDelete</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <MasterDataDelete xmlns="deleteItem">
+                  <MessageHeader>
+                     <MessageID>6c0b84b7-57a3-1ee8-959e-86d963bce0e5</MessageID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>QODCLNT002</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QODCLNT521</RecipientBusinessSystemID>
+                     <ExternalID>QODCLNT521</ExternalID>
+                  </MessageHeader>
+                  <Item>
+                     <ObjectType>01</ObjectType>
+                     <ObjectID>TESTDELETECHAR</ObjectID>
+                  </Item>
+               </MasterDataDelete>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

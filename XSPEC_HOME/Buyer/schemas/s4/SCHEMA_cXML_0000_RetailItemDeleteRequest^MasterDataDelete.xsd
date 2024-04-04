@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="deleteItem" xmlns:ns="deleteItem">
+    <xs:element name="MasterDataDelete" type="ns:MasterDataDelete"/>
+    <xs:complexType name="MasterDataDelete">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+            <xs:element maxOccurs="unbounded" ref="ns:Item" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="MessageHeader" type="ns:MessageHeader"/>
+    <xs:complexType name="MessageHeader">
+        <xs:sequence>
+            <xs:element ref="ns:MessageID"/>
+            <xs:element ref="ns:CreationDateTime"/>
+            <xs:element ref="ns:SenderBusinessSystemID"/>
+            <xs:element ref="ns:RecipientBusinessSystemID"/>
+            <xs:element ref="ns:ExternalID" minOccurs="0"/>
+            <xs:element ref="ns:RealmId" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="MessageID" type="xs:integer"/>
+    <xs:element name="CreationDateTime" type="xs:dateTime"/>
+    <xs:element name="SenderBusinessSystemID" type="xs:string"/>
+    <xs:element name="RecipientBusinessSystemID" type="xs:string"/>
+    <xs:element name="RealmId" type="xs:string"/>
+    <xs:element name="ExternalID" type="xs:string"/>
+    
+    <xs:element name="Item" type="ns:Item"/>
+    <xs:complexType name="Item">
+        <xs:sequence>
+            <!-- ObjectType = 1 characteristic, 2for CP, 3 for MC -->
+            <xs:element ref="ns:ObjectType" minOccurs="1"/>
+            <xs:element ref="ns:ObjectID" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="ObjectType" type="xs:string"/>
+    <xs:element name="ObjectID" type="xs:string"/>
+    
+    <xs:element name="RetailMSResponse" type="ns:RetailMSResponse"/>
+    <xs:complexType name="RetailMSResponse">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader" />
+        </xs:sequence>
+        <xs:attribute name="jobId" type="xs:string" />
+        <xs:attribute name="status" type="xs:string" />
+        <xs:attribute name="errorCode" type="xs:string" />
+    </xs:complexType>   
+</xs:schema>

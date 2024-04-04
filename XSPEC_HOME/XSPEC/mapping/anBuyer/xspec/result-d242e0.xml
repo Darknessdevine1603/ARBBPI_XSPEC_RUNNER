@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expect xmlns="http://www.jenitennison.com/xslt/xspec" select="/element()">
+   <content-wrap xmlns="">
+      <Combined>
+         <Payload>
+            <cXML payloadID="..." timestamp="...">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02005543705-T</Identity>
+                     </Credential>
+                     <Credential domain="EndPointID">
+                        <Identity>CIG</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="VendorID">
+                        <Identity>100000</Identity>
+                     </Credential>
+                     <Correspondent>
+                        <Contact role="correspondent">
+                           <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                           <PostalAddress>
+                              <Street>Kolping Str. 15 1277</Street>
+                              <City>NY</City>
+                              <Country isoCountryCode="DE">Germany</Country>
+                           </PostalAddress>
+                           <Email name="routing">Aribadefect@sap.com</Email>
+                           <Fax name="">
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                 <AreaOrCityCode/>
+                                 <Number>3456</Number>
+                                 <Extension>433</Extension>
+                              </TelephoneNumber>
+                           </Fax>
+                        </Contact>
+                     </Correspondent>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+                  <Path>
+                     <Node type="copy">
+                        <Credential domain="VendorID">
+                           <Identity>100035</Identity>
+                        </Credential>
+                     </Node>
+                     <Node type="copy">
+                        <Credential domain="VendorID">
+                           <Identity>100010</Identity>
+                        </Credential>
+                     </Node>
+                  </Path>
+                  <OriginalDocument payloadID=""/>
+               </Header>
+               <Request deploymentMode="test">
+                  <OrderRequest>
+                     <OrderRequestHeader orderID="4500060187"
+                                         orderDate="2021-06-28T12:00:00+05:30"
+                                         orderVersion="1"
+                                         orderType="regular"
+                                         type="new">
+                        <Total>
+                           <Money currency="USD">50300.00</Money>
+                        </Total>
+                        <ShipTo>
+                           <Address isoCountryCode="" addressID="" addressIDDomain="buyerLocationID">
+                              <Name xml:lang="DE"/>
+                              <PostalAddress name="default">
+                                 <Street/>
+                                 <City/>
+                                 <Municipality/>
+                                 <State>Hamburg</State>
+                                 <PostalCode/>
+                                 <Country isoCountryCode=""/>
+                              </PostalAddress>
+                           </Address>
+                           <IdReference identifier="" domain="buyerLocationID"/>
+                           <IdReference identifier="0001" domain="storageLocationID"/>
+                        </ShipTo>
+                        <BillTo>
+                           <Address addressID="0001" isoCountryCode="DE">
+                              <Name xml:lang="EN">default</Name>
+                              <PostalAddress>
+                                 <Street>234-123456</Street>
+                                 <City>Berlin</City>
+                                 <Municipality>bangalore North</Municipality>
+                                 <State>Berlin</State>
+                                 <PostalCode>10243</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>1111111111555</Number>
+                                    <Extension>32</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>455555</Number>
+                                    <Extension>5555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                           <IdReference identifier="0001" domain="buyerID"/>
+                        </BillTo>
+                        <BusinessPartner type="organization" role="soldTo">
+                           <Address isoCountryCode="DE"
+                                    addressID="0001"
+                                    addressIDDomain="buyerAccountID">
+                              <Name xml:lang="EN">default</Name>
+                              <PostalAddress>
+                                 <Street>234-123456</Street>
+                                 <City>Berlin</City>
+                                 <Municipality>bangalore North</Municipality>
+                                 <State>Berlin</State>
+                                 <PostalCode>10243</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>1111111111555</Number>
+                                    <Extension>32</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>455555</Number>
+                                    <Extension>5555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                           <IdReference domain="buyerAccountID" identifier="0001"/>
+                        </BusinessPartner>
+                        <LegalEntity>
+                           <IdReference identifier="0001" domain="CompanyCode">
+                              <Description xml:lang="DE"/>
+                           </IdReference>
+                        </LegalEntity>
+                        <OrganizationalUnit>
+                           <IdReference identifier="0001" domain="PurchasingOrganization">
+                              <Description xml:lang="DE">Einkaufsorg. 0001</Description>
+                           </IdReference>
+                        </OrganizationalUnit>
+                        <OrganizationalUnit>
+                           <IdReference identifier="001" domain="PurchasingGroup">
+                              <Description xml:lang="DE">Einkaufer 1</Description>
+                           </IdReference>
+                        </OrganizationalUnit>
+                        <Contact role="supplierCorporate"
+                                 addressID="100000"
+                                 addressIDDomain="buyerID">
+                           <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                           <PostalAddress>
+                              <Street>Kolping Str. 15 1277</Street>
+                              <City>NY</City>
+                              <Municipality>d.k</Municipality>
+                              <State>Berlin</State>
+                              <PostalCode>56066</PostalCode>
+                              <Country isoCountryCode="DE"/>
+                           </PostalAddress>
+                           <Email name="default">Aribadefect@sap.com</Email>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                 <AreaOrCityCode/>
+                                 <Number>777777745</Number>
+                                 <Extension>5555</Extension>
+                              </TelephoneNumber>
+                           </Phone>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="US">1</CountryCode>
+                                 <AreaOrCityCode/>
+                                 <Number>7777777</Number>
+                                 <Extension>32</Extension>
+                              </TelephoneNumber>
+                           </Phone>
+                           <Fax>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                 <AreaOrCityCode/>
+                                 <Number>3456</Number>
+                                 <Extension>433</Extension>
+                              </TelephoneNumber>
+                           </Fax>
+                           <IdReference identifier="100000" domain="buyerID"/>
+                        </Contact>
+                        <Comments type="Pricing types" xml:lang="EN">
+To run XSpec from within your Ant build file, the essential step is to tell Ant where to find XSpec's build.xml which contains the property and target definitions needed to run XSpec.
+
+The simplest way is to just include XSpec's file:
+
+&lt;include file="../../xspec/build.xml" /&gt;<Attachment>
+                              <URL>cid:2</URL>
+                           </Attachment>
+                        </Comments>
+                        <Comments type="Header text" xml:lang="EN"> Simple service with child PO_8</Comments>
+                        <Comments type="Deadlines" xml:lang="EN">
+When you need to override (by predefining) the Ant properties used in XSpec's build.xml, you can either:
+
+Define the properties individually in your own build file; or
+Define a xspec.properties property that refers to a property file that will be used by XSpec's build.xml.</Comments>
+                        <Comments type="Terms of delivery" xml:lang="EN">
+This runs XSpec and produces the HTML report for a single XSpec file.
+
+Note that when included/imported, the xspec target is usually seen prefixed with the project name (xspec). That's why antcall in the above example has target="xspec.xspec" instead of target="xspec".
+
+Optionally you can define a macro with specific properties and execute it whenever you need to run the tests.</Comments>
+                        <OrderRequestHeaderIndustry>
+                           <ExternalDocumentType documentType="NB">
+                              <Description xml:lang="DE">Standard PO</Description>
+                           </ExternalDocumentType>
+                        </OrderRequestHeaderIndustry>
+                        <Extrinsic name="CompanyCode">0001</Extrinsic>
+                        <Extrinsic name="PurchaseGroup">001</Extrinsic>
+                        <Extrinsic name="PurchaseOrganization">0001</Extrinsic>
+                        <Extrinsic name="Requester">KHARPURI</Extrinsic>
+                        <Extrinsic name="Ariba.invoicingAllowed">Yes</Extrinsic>
+                        <Extrinsic name="Ariba.availableAmount">18100</Extrinsic>
+                        <Extrinsic name="AribaOrderID">SK285</Extrinsic>
+                        <Extrinsic name="buyerVatID">DE456789012</Extrinsic>
+                        <Extrinsic name="partyAdditionalID">100000</Extrinsic>
+                     </OrderRequestHeader>
+                     <ItemOut quantity="1.000"
+                              lineNumber="10"
+                              requestedDeliveryDate="2021-06-26T12:00:00+05:30"
+                              unlimitedDelivery="yes"
+                              itemType="composite"
+                              requiresServiceEntry="yes"
+                              itemClassification="service">
+                        <ItemID>
+                           <SupplierPartID/>
+                           <BuyerPartID/>
+                        </ItemID>
+                        <BlanketItemDetail>
+                           <Description xml:lang="DE">Simple Service with child</Description>
+                           <MaxAdhocAmount>
+                              <Money currency="USD">1000.00</Money>
+                           </MaxAdhocAmount>
+                           <MaxQuantity>1.000</MaxQuantity>
+                           <MinQuantity>1.000</MinQuantity>
+                           <UnitPrice>
+                              <Money currency="USD">4000</Money>
+                           </UnitPrice>
+                           <UnitOfMeasure>SU</UnitOfMeasure>
+                           <PriceBasisQuantity quantity="1" conversionFactor="1">
+                              <UnitOfMeasure>SU</UnitOfMeasure>
+                           </PriceBasisQuantity>
+                           <Classification domain="ERPCommodityCode">00801</Classification>
+                           <Extrinsic name="AccountCategory">K</Extrinsic>
+                           <Extrinsic name="ReceivingType"/>
+                           <Extrinsic name="extLineNumber">10</Extrinsic>
+                           <Extrinsic name="ExpectedUnplanned">
+                              <Money currency="USD">0.00</Money>
+                           </Extrinsic>
+                        </BlanketItemDetail>
+                        <ShipTo>
+                           <Address isoCountryCode="DE"
+                                    addressID="0001"
+                                    addressIDDomain="buyerLocationID">
+                              <Name xml:lang="EN">Werk 0001</Name>
+                              <PostalAddress>
+                                 <Street>123-321 plantA 456-654</Street>
+                                 <City>Berlin</City>
+                                 <Municipality/>
+                                 <State>02</State>
+                                 <PostalCode>12345</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Email name="default" preferredLang="en">email@plant0001.com</Email>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>333333</Number>
+                                    <Extension>3333</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>455555</Number>
+                                    <Extension>5555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                           <IdReference identifier="0001" domain="buyerLocationID"/>
+                           <IdReference identifier="" domain="storageLocationID"/>
+                        </ShipTo>
+                        <SpendDetail>
+                           <Extrinsic name="GenericServiceCategory"/>
+                        </SpendDetail>
+                        <Distribution>
+                           <Accounting name="DistributionCharge">
+                              <AccountingSegment id="400000">
+                                 <Name xml:lang="DE">GeneralLedger</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="ADODNTEST">
+                                 <Name xml:lang="DE">CostCenter</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="PS_PSP_PNR">
+                                 <Name xml:lang="DE">WBSElement</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="ANLN1">
+                                 <Name xml:lang="DE">Asset</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="0.00">
+                                 <Name xml:lang="DE">Amount</Name>
+                                 <Description xml:lang="DE">Amount</Description>
+                              </AccountingSegment>
+                           </Accounting>
+                           <Charge>
+                              <Money currency="USD">2600.00</Money>
+                           </Charge>
+                        </Distribution>
+                        <Distribution>
+                           <Accounting name="DistributionCharge">
+                              <AccountingSegment id="400000">
+                                 <Name xml:lang="DE">GeneralLedger</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="SAP-DUMMY1">
+                                 <Name xml:lang="DE">CostCenter</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="0.00">
+                                 <Name xml:lang="DE">Amount</Name>
+                                 <Description xml:lang="DE">Amount</Description>
+                              </AccountingSegment>
+                           </Accounting>
+                           <Charge>
+                              <Money currency="USD">1400.00</Money>
+                           </Charge>
+                        </Distribution>
+                        <Comments type="Item text" xml:lang="EN">
+Contents
+Introduction
+Running XSpec tests from your Ant build file
+Running XSpec's Ant build file from the command line
+Using Ant to run multiple XSpec tests
+Ant Properties</Comments>
+                        <ControlKeys>
+                           <OCInstruction value="notAllowed">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </OCInstruction>
+                           <ASNInstruction value="notAllowed">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </ASNInstruction>
+                           <InvoiceInstruction value="isNotERS" verificationType="goodsReceipt"/>
+                        </ControlKeys>
+                        <ScheduleLine quantity="1.000"
+                                      requestedDeliveryDate="2021-06-26T12:00:00+05:30"
+                                      lineNumber="1">
+                           <UnitOfMeasure>SU</UnitOfMeasure>
+                        </ScheduleLine>
+                     </ItemOut>
+                     <ItemOut quantity="300.000"
+                              lineNumber="20"
+                              requestedDeliveryDate="2021-06-29T12:00:00+05:30">
+                        <ItemID>
+                           <SupplierPartID>285</SupplierPartID>
+                           <BuyerPartID>138</BuyerPartID>
+                        </ItemID>
+                        <ItemDetail>
+                           <UnitPrice>
+                              <Money currency="USD">47</Money>
+                           </UnitPrice>
+                           <Description xml:lang="DE">##138-SEMI FINISHED SUBCONPO$$</Description>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <PriceBasisQuantity quantity="1" conversionFactor="1">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </PriceBasisQuantity>
+                           <Classification domain="ERPCommodityCode">01</Classification>
+                           <Classification domain="ERPCommodityCodeDescription">Material Group 1</Classification>
+                           <Classification domain="LineOfBusiness">Test PH</Classification>
+                           <PlannedAcceptanceDays>1</PlannedAcceptanceDays>
+                           <Extrinsic name="ReceivingType">4</Extrinsic>
+                           <Extrinsic name="extLineNumber">20</Extrinsic>
+                        </ItemDetail>
+                        <ShipTo>
+                           <Address isoCountryCode="IN"
+                                    addressID="0001"
+                                    addressIDDomain="buyerLocationID">
+                              <Name xml:lang="EN">SL0001</Name>
+                              <PostalAddress>
+                                 <Street/>
+                                 <City/>
+                                 <Municipality/>
+                                 <State/>
+                                 <PostalCode/>
+                                 <Country isoCountryCode="IN"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>2323</Number>
+                                    <Extension>33</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>44444</Number>
+                                    <Extension>555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                           <IdReference identifier="0001" domain="buyerLocationID"/>
+                           <IdReference identifier="0001" domain="storageLocationID"/>
+                        </ShipTo>
+                        <Contact role="BuyerPlannerCode">
+                           <Name xml:lang="EN">PERSON 1</Name>
+                           <IdReference identifier="001" domain="BuyerPlannerCode">
+                              <Description xml:lang="EN">PERSON 1</Description>
+                           </IdReference>
+                        </Contact>
+                        <ControlKeys>
+                           <OCInstruction value="notAllowed">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </OCInstruction>
+                           <ASNInstruction value="notAllowed">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </ASNInstruction>
+                           <InvoiceInstruction value="isNotERS">
+                              <TemporaryPrice value="yes"/>
+                           </InvoiceInstruction>
+                        </ControlKeys>
+                        <ScheduleLine quantity="300.000"
+                                      requestedDeliveryDate="2021-06-29T12:00:00+05:30"
+                                      lineNumber="1"
+                                      deliveryWindow="P7D">
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                        </ScheduleLine>
+                        <ItemOutIndustry>
+                           <QualityInfo requiresQualityProcess="yes">
+                              <IdReference identifier="0001" domain="controlCode"/>
+                              <IdReference identifier="Delivery release" domain="controlCodeDesc"/>
+                           </QualityInfo>
+                        </ItemOutIndustry>
+                     </ItemOut>
+                     <ItemOut quantity="300.000"
+                              lineNumber="30"
+                              requestedDeliveryDate="2021-06-29T12:00:00+05:30">
+                        <ItemID>
+                           <SupplierPartID>285</SupplierPartID>
+                           <BuyerPartID>138</BuyerPartID>
+                        </ItemID>
+                        <ItemDetail>
+                           <UnitPrice>
+                              <Money currency="USD">47</Money>
+                           </UnitPrice>
+                           <Description xml:lang="DE">##138-SEMI FINISHED SUBCONPO$$</Description>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <PriceBasisQuantity quantity="1" conversionFactor="1">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </PriceBasisQuantity>
+                           <Classification domain="ERPCommodityCode">01</Classification>
+                           <Classification domain="ERPCommodityCodeDescription">Material Group 1</Classification>
+                           <Classification domain="LineOfBusiness">Test PH</Classification>
+                           <PlannedAcceptanceDays>1</PlannedAcceptanceDays>
+                           <Extrinsic name="ReceivingType">4</Extrinsic>
+                           <Extrinsic name="extLineNumber">30</Extrinsic>
+                        </ItemDetail>
+                        <ShipTo>
+                           <Address isoCountryCode="IN"
+                                    addressID="0001"
+                                    addressIDDomain="buyerLocationID">
+                              <Name xml:lang="EN">SL0001</Name>
+                              <PostalAddress>
+                                 <Street/>
+                                 <City/>
+                                 <Municipality/>
+                                 <State/>
+                                 <PostalCode/>
+                                 <Country isoCountryCode="IN"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>2323</Number>
+                                    <Extension>33</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>44444</Number>
+                                    <Extension>555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                           <IdReference identifier="0001" domain="buyerLocationID"/>
+                           <IdReference identifier="0001" domain="storageLocationID"/>
+                        </ShipTo>
+                        <Contact role="BuyerPlannerCode">
+                           <Name xml:lang="EN">PERSON 1</Name>
+                           <IdReference identifier="001" domain="BuyerPlannerCode">
+                              <Description xml:lang="EN">PERSON 1</Description>
+                           </IdReference>
+                        </Contact>
+                        <ControlKeys>
+                           <OCInstruction value="requiredBeforeASN">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </OCInstruction>
+                           <ASNInstruction value="notAllowed">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </ASNInstruction>
+                           <InvoiceInstruction value="isNotERS">
+                              <TemporaryPrice value="yes"/>
+                           </InvoiceInstruction>
+                        </ControlKeys>
+                        <ScheduleLine quantity="300.000"
+                                      requestedDeliveryDate="2021-06-29T12:00:00+05:30"
+                                      lineNumber="1"
+                                      deliveryWindow="P1M">
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <SubcontractingComponent quantity="0.0" requirementDate="">
+                              <ComponentID>30_1_</ComponentID>
+                              <UnitOfMeasure/>
+                              <Description xml:lang="EN"/>
+                              <Batch>
+                                 <BuyerBatchID>BATCH</BuyerBatchID>
+                              </Batch>
+                           </SubcontractingComponent>
+                           <DeliveryWindow>P7D</DeliveryWindow>
+                        </ScheduleLine>
+                        <ItemOutIndustry>
+                           <QualityInfo requiresQualityProcess="yes">
+                              <IdReference identifier="0001" domain="controlCode"/>
+                              <IdReference identifier="Delivery release" domain="controlCodeDesc"/>
+                              <IdReference identifier="0001" domain="certificateType"/>
+                           </QualityInfo>
+                        </ItemOutIndustry>
+                     </ItemOut>
+                     <ItemOut quantity="300.000"
+                              lineNumber="40"
+                              requestedDeliveryDate="2021-06-29T12:00:00+05:30">
+                        <ItemID>
+                           <SupplierPartID>285</SupplierPartID>
+                           <BuyerPartID>138</BuyerPartID>
+                        </ItemID>
+                        <ItemDetail>
+                           <UnitPrice>
+                              <Money currency="USD">47</Money>
+                           </UnitPrice>
+                           <Description xml:lang="DE">##138-SEMI FINISHED SUBCONPO$$</Description>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <PriceBasisQuantity quantity="1" conversionFactor="1">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </PriceBasisQuantity>
+                           <Classification domain="ERPCommodityCode">01</Classification>
+                           <Classification domain="ERPCommodityCodeDescription">Material Group 1</Classification>
+                           <Classification domain="LineOfBusiness">Test PH</Classification>
+                           <PlannedAcceptanceDays>1</PlannedAcceptanceDays>
+                           <Extrinsic name="ReceivingType">4</Extrinsic>
+                           <Extrinsic name="extLineNumber">40</Extrinsic>
+                        </ItemDetail>
+                        <ShipTo>
+                           <Address isoCountryCode="IN"
+                                    addressID="0001"
+                                    addressIDDomain="buyerLocationID">
+                              <Name xml:lang="EN">SL0001</Name>
+                              <PostalAddress>
+                                 <Street/>
+                                 <City/>
+                                 <Municipality/>
+                                 <State/>
+                                 <PostalCode/>
+                                 <Country isoCountryCode="IN"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>2323</Number>
+                                    <Extension>33</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="AZ">994</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>44444</Number>
+                                    <Extension>555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                           <IdReference identifier="0001" domain="buyerLocationID"/>
+                           <IdReference identifier="0001" domain="storageLocationID"/>
+                        </ShipTo>
+                        <Contact role="BuyerPlannerCode">
+                           <Name xml:lang="EN">PERSON 1</Name>
+                           <IdReference identifier="001" domain="BuyerPlannerCode">
+                              <Description xml:lang="EN">PERSON 1</Description>
+                           </IdReference>
+                        </Contact>
+                        <ControlKeys>
+                           <OCInstruction value="requiredBeforeASN">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </OCInstruction>
+                           <ASNInstruction value="notAllowed">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </ASNInstruction>
+                           <InvoiceInstruction value="isNotERS">
+                              <TemporaryPrice value="yes"/>
+                           </InvoiceInstruction>
+                        </ControlKeys>
+                        <ScheduleLine quantity="300.000"
+                                      requestedDeliveryDate="2021-06-29T12:00:00+05:30"
+                                      lineNumber="1"
+                                      deliveryWindow="P1M">
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <SubcontractingComponent quantity="0.0" requirementDate="">
+                              <ComponentID>40_1_</ComponentID>
+                              <UnitOfMeasure/>
+                              <Description xml:lang="EN"/>
+                              <Batch>
+                                 <BuyerBatchID>BATCH</BuyerBatchID>
+                              </Batch>
+                           </SubcontractingComponent>
+                           <DeliveryWindow>P1M</DeliveryWindow>
+                        </ScheduleLine>
+                        <ItemOutIndustry isHUMandatory="yes">
+                           <QualityInfo requiresQualityProcess="yes">
+                              <CertificateInfo isRequired="yes">
+                                 <IdReference identifier="0001" domain="certificateType"/>
+                              </CertificateInfo>
+                           </QualityInfo>
+                           <SerialNumberInfo requiresSerialNumber="yes" type="list">
+                              <SerialNumber>E1ARBCIG_SERNR</SerialNumber>
+                           </SerialNumberInfo>
+                        </ItemOutIndustry>
+                        <AssetInfo equipmentId="EQUNR"/>
+                     </ItemOut>
+                     <ItemOut quantity="1.000"
+                              lineNumber="50"
+                              requestedDeliveryDate="2021-06-26T12:00:00+05:30"
+                              unlimitedDelivery="yes"
+                              itemType="composite"
+                              requiresServiceEntry="yes"
+                              itemClassification="service">
+                        <ItemID>
+                           <SupplierPartID/>
+                           <BuyerPartID/>
+                        </ItemID>
+                        <BlanketItemDetail>
+                           <Description xml:lang="DE">Simple Service with child</Description>
+                           <MaxAdhocAmount>
+                              <Money currency="USD">1000.00</Money>
+                           </MaxAdhocAmount>
+                           <MaxQuantity>1.000</MaxQuantity>
+                           <MinQuantity>1.000</MinQuantity>
+                           <UnitPrice>
+                              <Money currency="USD">4000</Money>
+                           </UnitPrice>
+                           <UnitOfMeasure>SU</UnitOfMeasure>
+                           <PriceBasisQuantity quantity="1" conversionFactor="1">
+                              <UnitOfMeasure>SU</UnitOfMeasure>
+                           </PriceBasisQuantity>
+                           <Classification domain="ERPCommodityCode">00801</Classification>
+                           <Extrinsic name="AccountCategory">K</Extrinsic>
+                           <Extrinsic name="ReceivingType"/>
+                           <Extrinsic name="extLineNumber">50</Extrinsic>
+                           <Extrinsic name="ExpectedUnplanned">
+                              <Money currency="USD">0.00</Money>
+                           </Extrinsic>
+                        </BlanketItemDetail>
+                        <ShipTo>
+                           <Address isoCountryCode="DE"
+                                    addressID="0001"
+                                    addressIDDomain="buyerLocationID">
+                              <Name xml:lang="EN">Werk 0001</Name>
+                              <PostalAddress>
+                                 <Street>123-321 plantA 456-654</Street>
+                                 <City>Berlin</City>
+                                 <Municipality/>
+                                 <State>02</State>
+                                 <PostalCode>12345</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Email name="default" preferredLang="en">email@plant0001.com</Email>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>333333</Number>
+                                    <Extension>3333</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>455555</Number>
+                                    <Extension>5555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                           <IdReference identifier="0001" domain="buyerLocationID"/>
+                           <IdReference identifier="" domain="storageLocationID"/>
+                        </ShipTo>
+                        <SpendDetail>
+                           <Extrinsic name="GenericServiceCategory"/>
+                        </SpendDetail>
+                        <Distribution>
+                           <Accounting name="DistributionCharge">
+                              <AccountingSegment id="400000">
+                                 <Name xml:lang="DE">GeneralLedger</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="ADODNTEST">
+                                 <Name xml:lang="DE">CostCenter</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="AUFNR">
+                                 <Name xml:lang="DE">WorkOrder</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="PS_PSP_PNR">
+                                 <Name xml:lang="DE">WBSElement</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="ANLN1">
+                                 <Name xml:lang="DE">Asset</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="0.00">
+                                 <Name xml:lang="DE">Amount</Name>
+                                 <Description xml:lang="DE">Amount</Description>
+                              </AccountingSegment>
+                           </Accounting>
+                           <Charge>
+                              <Money currency="USD">2600.00</Money>
+                           </Charge>
+                        </Distribution>
+                        <Distribution>
+                           <Accounting name="DistributionCharge">
+                              <AccountingSegment id="400000">
+                                 <Name xml:lang="DE">GeneralLedger</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="SAP-DUMMY1">
+                                 <Name xml:lang="DE">CostCenter</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="0.00">
+                                 <Name xml:lang="DE">Amount</Name>
+                                 <Description xml:lang="DE">Amount</Description>
+                              </AccountingSegment>
+                           </Accounting>
+                           <Charge>
+                              <Money currency="USD">1400.00</Money>
+                           </Charge>
+                        </Distribution>
+                        <Comments type="Info record PO text" xml:lang="EN">
+Apache Ant is a Java library and command line tool typically used to compile and build software applications - particularly Java applications. However, Ant can be used to pilot any type of process
+                        which can be described in terms of targets and tasks. Ant's syntax is based on XML and an Ant build file is itself a well-formed XML file.
+
+You can incorporate running XSpec tests into your own Ant build process or you can use Ant to run the XSpec tests from the command line similarly to how you run one of the provided scripts</Comments>
+                        <Comments type="Item text" xml:lang="EN">
+Contents
+Introduction
+Running XSpec tests from your Ant build file
+Running XSpec's Ant build file from the command line
+Using Ant to run multiple XSpec tests
+Ant Properties</Comments>
+                        <Comments type="Material PO text" xml:lang="EN">
+To run XSpec from within your Ant build file, the essential step is to tell Ant where to find XSpec's build.xml which contains the property and target definitions needed to run XSpec.</Comments>
+                        <Comments type="Delivery text" xml:lang="EN">
+When you need to override (by predefining) the Ant properties used in XSpec's build.xml, you can either:
+
+Define the properties individually in your own build file; or
+Define a xspec.properties property that refers to a property file that will be used by XSpec's build.xml.</Comments>
+                        <Comments type="Info record note" xml:lang="EN">
+This runs XSpec and produces the HTML report for a single XSpec file.
+
+Note that when included/imported, the xspec target is usually seen prefixed with the project name (xspec). That's why antcall in the above example has target="xspec.xspec" instead of target="xspec".
+
+Optionally you can define a macro with specific properties and execute it whenever you need to run the tests.</Comments>
+                        <ControlKeys>
+                           <OCInstruction value="notAllowed">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </OCInstruction>
+                           <ASNInstruction value="notAllowed">
+                              <Lower>
+                                 <Tolerances/>
+                              </Lower>
+                              <Upper>
+                                 <Tolerances/>
+                              </Upper>
+                           </ASNInstruction>
+                           <InvoiceInstruction value="isNotERS" verificationType="goodsReceipt"/>
+                        </ControlKeys>
+                        <ScheduleLine quantity="1.000"
+                                      requestedDeliveryDate="2021-06-26T12:00:00+05:30"
+                                      lineNumber="1">
+                           <UnitOfMeasure>SU</UnitOfMeasure>
+                        </ScheduleLine>
+                     </ItemOut>
+                     <ItemOut quantity="50.000"
+                              lineNumber="1000100010"
+                              parentLineNumber="10"
+                              itemType="item"
+                              itemClassification="service">
+                        <ItemID>
+                           <SupplierPartID/>
+                           <BuyerPartID/>
+                        </ItemID>
+                        <ItemDetail>
+                           <UnitPrice>
+                              <Money currency="USD">80</Money>
+                           </UnitPrice>
+                           <Description xml:lang="DE">Child 1</Description>
+                           <UnitOfMeasure>HUR</UnitOfMeasure>
+                           <PriceBasisQuantity quantity="1.000" conversionFactor="1">
+                              <UnitOfMeasure>HUR</UnitOfMeasure>
+                           </PriceBasisQuantity>
+                           <Classification domain="UNSPSC">00801</Classification>
+                           <Classification domain="ERPCommodityCode">00801</Classification>
+                           <Classification domain="ERPCommodityCodeDescription">P2P QA Service MGRP</Classification>
+                           <Extrinsic name="AccountCategory">K</Extrinsic>
+                           <Extrinsic name="extLineNumber">10</Extrinsic>
+                        </ItemDetail>
+                        <ShipTo>
+                           <Address addressID="0001">
+                              <Name xml:lang="EN">Werk 0001</Name>
+                              <PostalAddress>
+                                 <Street>123-321 plantA 456-654</Street>
+                                 <City>Berlin</City>
+                                 <Municipality/>
+                                 <State>Hamburg</State>
+                                 <PostalCode>12345</PostalCode>
+                                 <Country isoCountryCode="DE">DE</Country>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>333333-3333</Number>
+                                    <Extension>3333</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>455555-5555</Number>
+                                    <Extension>5555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                        </ShipTo>
+                        <SpendDetail>
+                           <Extrinsic name="GenericServiceCategory">service</Extrinsic>
+                        </SpendDetail>
+                        <Distribution>
+                           <Accounting name="DistributionCharge">
+                              <AccountingSegment id="400000">
+                                 <Name xml:lang="DE">GeneralLedger</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="SAP-DUMMY">
+                                 <Name xml:lang="DE">CostCenter</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="AUFNR">
+                                 <Name xml:lang="DE">WorkOrder</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="01">
+                                 <Name xml:lang="DE">SAPSerialNumber</Name>
+                                 <Description xml:lang="DE">SAP Serial Number</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="100.0">
+                                 <Name xml:lang="DE"/>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                           </Accounting>
+                           <Charge>
+                              <Money currency="USD">4000.00</Money>
+                           </Charge>
+                        </Distribution>
+                     </ItemOut>
+                     <ItemOut quantity="50.000"
+                              lineNumber="1000100010"
+                              parentLineNumber="10"
+                              itemType="item"
+                              itemClassification="service">
+                        <ItemID>
+                           <SupplierPartID/>
+                           <BuyerPartID/>
+                        </ItemID>
+                        <ItemDetail>
+                           <UnitPrice>
+                              <Money currency="USD">80</Money>
+                           </UnitPrice>
+                           <Description xml:lang="DE">Child 1</Description>
+                           <UnitOfMeasure>HUR</UnitOfMeasure>
+                           <PriceBasisQuantity quantity="1.000" conversionFactor="1">
+                              <UnitOfMeasure>HUR</UnitOfMeasure>
+                           </PriceBasisQuantity>
+                           <Classification domain="UNSPSC">00801</Classification>
+                           <Classification domain="ERPCommodityCode">00801</Classification>
+                           <Classification domain="ERPCommodityCodeDescription">P2P QA Service MGRP</Classification>
+                           <Extrinsic name="AccountCategory">K</Extrinsic>
+                           <Extrinsic name="extLineNumber">10</Extrinsic>
+                        </ItemDetail>
+                        <ShipTo>
+                           <Address addressID="0001">
+                              <Name xml:lang="EN">Werk 0001</Name>
+                              <PostalAddress>
+                                 <Street>123-321 plantA 456-654</Street>
+                                 <City>Berlin</City>
+                                 <Municipality/>
+                                 <State>Hamburg</State>
+                                 <PostalCode>12345</PostalCode>
+                                 <Country isoCountryCode="DE">DE</Country>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>333333-3333</Number>
+                                    <Extension>3333</Extension>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE">49</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number>455555-5555</Number>
+                                    <Extension>5555</Extension>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Address>
+                        </ShipTo>
+                        <SpendDetail>
+                           <Extrinsic name="GenericServiceCategory">service</Extrinsic>
+                        </SpendDetail>
+                        <Distribution>
+                           <Accounting name="DistributionCharge">
+                              <AccountingSegment id="400000">
+                                 <Name xml:lang="DE">GeneralLedger</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="SAP-DUMMY">
+                                 <Name xml:lang="DE">CostCenter</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="01">
+                                 <Name xml:lang="DE">SAPSerialNumber</Name>
+                                 <Description xml:lang="DE">SAP Serial Number</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="PS_PSP_PNR">
+                                 <Name xml:lang="DE">WBSElement</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="ANLN1">
+                                 <Name xml:lang="DE">Asset</Name>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                              <AccountingSegment id="100.0">
+                                 <Name xml:lang="DE"/>
+                                 <Description xml:lang="DE">ID</Description>
+                              </AccountingSegment>
+                           </Accounting>
+                           <Charge>
+                              <Money currency="USD">4000.00</Money>
+                           </Charge>
+                        </Distribution>
+                     </ItemOut>
+                  </OrderRequest>
+               </Request>
+            </cXML>
+         </Payload>
+         <AttachmentList>
+            <Attachment>
+               <AttachmentName>emp.txt</AttachmentName>
+               <AttachmentType>text/plain</AttachmentType>
+               <AttachmentID>2</AttachmentID>
+               <AttachmentContent>YXJ1bi1zYWxlcy01MDAwCmthcmFuLXB1cmNoLTQwMDAKbWFoaS1hY2N0cy0zMDAwCmpvaG4tZmluYW4tNjAwMApndXJ1LXNhbGVzLTUwMDAw</AttachmentContent>
+            </Attachment>
+         </AttachmentList>
+      </Combined>
+   </content-wrap>
+</expect>

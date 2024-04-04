@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_BankMasterChange_cXML_0000_BankMasterChange.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4/MAPPING_ANY_AddOn_0000_BankMasterChange_cXML_0000_BankMasterChange.xsl"
+        date="2023-04-27T15:40:11.06521+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_BankMasterChange_cXML_0000_BankMasterChange.xspec">
+      <label>Scenario for BankMasterChange</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4/BankMasterChange/BankMasterChange_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:BankMasterDataRequest xmlns:urn="http://sap.com/xi/SAPGlobal20/Global">
+               <urn:BankMasterDataUploadInputBean_Item>
+                  <urn:item>
+                     <urn:_bankMasterDetail>
+                        <urn:item>
+                           <urn:CountryKey>US</urn:CountryKey>
+                           <urn:Id>098451111</urn:Id>
+                           <urn:RecordCreatedDate>2019-11-14T06:28:43</urn:RecordCreatedDate>
+                           <urn:CreatorName>C5285219</urn:CreatorName>
+                           <urn:Name>AKAN Test 88</urn:Name>
+                           <urn:Province>AZ</urn:Province>
+                           <urn:HouseStreetAddress>baker Street 888</urn:HouseStreetAddress>
+                           <urn:City>Virginia</urn:City>
+                           <urn:SWIFTCode>WERT5555</urn:SWIFTCode>
+                           <urn:Group>26</urn:Group>
+                           <urn:CurrentAccount>true</urn:CurrentAccount>
+                           <urn:DeletionIndicator>true</urn:DeletionIndicator>
+                           <urn:Number>098451111</urn:Number>
+                           <urn:AddressNumber/>
+                           <urn:Branch>VIrgina-7</urn:Branch>
+                           <urn:CheckDigitCalculationMethod/>
+                           <urn:Format/>
+                        </urn:item>
+                     </urn:_bankMasterDetail>
+                  </urn:item>
+               </urn:BankMasterDataUploadInputBean_Item>
+            </urn:BankMasterDataRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ChangeBankMaster</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:BankMasterDataRequest xmlns:urn="http://sap.com/xi/SAPGlobal20/Global">
+                  <urn:BankMasterDataUploadInputBean_Item>
+                     <urn:item>
+                        <urn:_bankMasterDetail>
+                           <urn:item>
+                              <urn:CountryKey>US</urn:CountryKey>
+                              <urn:Id>098451111</urn:Id>
+                              <urn:RecordCreatedDate>2019-11-14T06:28:43</urn:RecordCreatedDate>
+                              <urn:CreatorName>C5285219</urn:CreatorName>
+                              <urn:Name>AKAN Test 88</urn:Name>
+                              <urn:Province>AZ</urn:Province>
+                              <urn:HouseStreetAddress>baker Street 888</urn:HouseStreetAddress>
+                              <urn:City>Virginia</urn:City>
+                              <urn:SWIFTCode>WERT5555</urn:SWIFTCode>
+                              <urn:Group>26</urn:Group>
+                              <urn:CurrentAccount>true</urn:CurrentAccount>
+                              <urn:DeletionIndicator>true</urn:DeletionIndicator>
+                              <urn:Number>098451111</urn:Number>
+                              <urn:AddressNumber/>
+                              <urn:Branch>VIrgina-7</urn:Branch>
+                              <urn:CheckDigitCalculationMethod/>
+                              <urn:Format/>
+                           </urn:item>
+                        </urn:_bankMasterDetail>
+                     </urn:item>
+                  </urn:BankMasterDataUploadInputBean_Item>
+               </urn:BankMasterDataRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

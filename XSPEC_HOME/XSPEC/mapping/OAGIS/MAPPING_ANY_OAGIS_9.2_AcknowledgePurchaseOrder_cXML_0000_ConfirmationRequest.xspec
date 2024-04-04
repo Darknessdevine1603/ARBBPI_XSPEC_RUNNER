@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_OAGIS_9.2_AcknowledgePurchaseOrder_cXML_0000_ConfirmationRequest.xsl">
+    <x:scenario label="Acknowledge PurchaseOrder">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="anSupplierANID" select="'AN02003013907-T'"/>
+        <x:param name="anBuyerANID" select="'AN02003013906-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/OAGIS/Confirmation/ConfirmationRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/OAGIS/Confirmation/ConfirmationRequest_AM.dat"
+            select="element()" label="Acknowledge PurchaseOrder"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,261 @@
+<Combined>
+   <Payload>
+      <cXML payloadID="1525758404517.1657191722.000001185@h8/qgmxMIxEqUXhYV2sRlNcIlxg=" timestamp="2018-05-07T22:46:44-07:00" version="1.2.037" xml:lang="en-US" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+   <Header>
+      <!-- class: ariba.encoder.xml.AXComponent -->
+      <From>
+         <!-- class: ariba.encoder.xml.AXComponent -->
+         <Credential domain="NetworkId">
+            <!-- class: ariba.encoder.xml.AXComponent -->
+            <Identity>AN02004204493-T</Identity>
+         </Credential>
+      </From>
+      <To>
+         <!-- class: ariba.encoder.xml.AXComponent -->
+         <Credential domain="NetworkId">
+            <!-- class: ariba.encoder.xml.AXComponent -->
+            <Identity>AN02004204493-T</Identity>
+         </Credential>
+      </To>
+      <Sender>
+         <Credential domain="NetworkId">
+            <!-- class: ariba.encoder.xml.AXComponent -->
+            <Identity>AN01000000088</Identity>
+            
+         </Credential>
+         <UserAgent>ACM 15s1</UserAgent>
+      </Sender>
+   </Header>
+   <!-- class: ariba.sourcing.integration.networkrfq.QuoteMessageEncode -->
+   <Request deploymentMode="production">
+      <ContractRequest>
+         <ContractRequestHeader agreementDate="2019-03-12T00:00:00-00:00" contractID="CW23022" createDate="2019-03-11T23:14:12-07:00" effectiveDate="2019-03-13T00:00:00-00:00" expirationDate="2019-03-31T00:00:00-00:00" operation="update" type="value" xml:lang="en">
+            <LegalEntity>
+               <IdReference domain="CompanyCode" identifier="0001"/>
+            </LegalEntity>
+            <OrganizationID>
+               <Credential domain="NetworkID">
+                  <Identity>AN02006849403</Identity>
+               </Credential>
+               <Credential domain="PrivateID">
+                  <Identity>0000100000</Identity>
+               </Credential>
+            </OrganizationID>
+            <OrganizationalUnit>
+               <IdReference domain="PurchasingOrganization" identifier="0001"/>
+            </OrganizationalUnit>
+            <OrganizationalUnit>
+               <IdReference domain="PurchasingGroup" identifier="001"/>
+            </OrganizationalUnit>
+            <PaymentTerm payInNumberOfDays="014">
+               <Discount>
+                  <DiscountPercent percent="3.000"/>
+               </Discount>
+               <Extrinsic name="ID">0002</Extrinsic>
+            </PaymentTerm>
+            <PaymentTerm payInNumberOfDays="030">
+               <Discount>
+                  <DiscountPercent percent="2.000"/>
+               </Discount>
+               <Extrinsic name="ID">0002</Extrinsic>
+            </PaymentTerm>
+            <PaymentTerm payInNumberOfDays="045">
+               <Discount>
+                  <DiscountPercent percent="0.000"/>
+               </Discount>
+               <Extrinsic name="ID">0002</Extrinsic>
+            </PaymentTerm>
+            <MaxAmount>
+               <Money currency="USD">44444.00</Money>
+            </MaxAmount>
+            <DocumentInfo documentID="5500000852" documentType="Scheduling Agreement"/>
+            <Extrinsic name="DocumentType">ScheduleAgreement</Extrinsic>
+         </ContractRequestHeader>
+         <ContractItemIn operation="update">
+            <MaxQuantity>20.000</MaxQuantity>
+            <ItemIn itemClassification="material" itemType="item" lineNumber="1" quantity="40.000">
+               <ItemID>
+                  <SupplierPartID/>
+                  <SupplierPartAuxiliaryID/>
+                  <BuyerPartID>2372</BuyerPartID>
+                  <IdReference domain="SAPLineNumber" identifier="00010"/>
+               </ItemID>
+               <ItemDetail>
+                  <UnitPrice>
+                     <Money currency="USD">123.00</Money>
+                     <Modifications>
+                        <Modification>
+                           <AdditionalDeduction type="DISCOUNT">
+                              <DeductionAmount>
+                                 <Money currency="USD">2</Money>
+                              </DeductionAmount>
+                           </AdditionalDeduction>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction type="DISCOUNT">
+                              <DeductionPercent percent="3"/>
+                           </AdditionalDeduction>
+                        </Modification>
+                        <Modification>
+                           <AdditionalCost>
+                              <Money currency="USD">5</Money>
+                           </AdditionalCost>
+                        </Modification>
+                        <Modification>
+                           <AdditionalCost>
+                              <Percentage percent="3"/>
+                           </AdditionalCost>
+                        </Modification>
+                     </Modifications>
+                  </UnitPrice>
+                  <Description xml:lang="en">with plant</Description>
+                  <UnitOfMeasure>EA</UnitOfMeasure>
+                  <Classification domain="MaterialGroup">002</Classification>
+                  <ManufacturerPartID/>
+                  <ManufacturerName/>
+                  <URL/>
+                  <LeadTime/>
+                  <Extrinsic name="Material Number">2372</Extrinsic>
+                  <Extrinsic name="Material Type">ROH</Extrinsic>
+                  <Extrinsic name="ECW_00_800.ariba.masterdata.ItemMaster.OrderUnit"/>
+                  <Extrinsic name="InternalItemNumber">3769374</Extrinsic>
+               </ItemDetail>
+               <ShipTo>
+                  <Address addressID="0001" addressIDDomain="buyerLocationID">
+                     <Name xml:lang="en">Hamburg</Name>
+                  </Address>
+               </ShipTo>
+            </ItemIn>
+         </ContractItemIn>
+         <ContractItemIn operation="update">
+            <MaxQuantity>10.000</MaxQuantity>
+            <TermsOfDelivery>
+               <TermsOfDeliveryCode value="TransportCondition"/>
+               <ShippingPaymentMethod value="Other"/>
+               <TransportTerms value="CPT">Freight-free</TransportTerms>
+            </TermsOfDelivery>
+            <ItemIn itemClassification="material" itemType="item" lineNumber="2" quantity="30.000">
+               <ItemID>
+                  <SupplierPartID>SP002</SupplierPartID>
+                  <SupplierPartAuxiliaryID/>
+                  <BuyerPartID/>
+                  <IdReference domain="SAPLineNumber" identifier="00020"/>
+               </ItemID>
+               <ItemDetail>
+                  <UnitPrice>
+                     <Money currency="USD">255.00</Money>
+                     <Modifications>
+                        <Modification>
+                           <AdditionalDeduction type="DISCOUNT">
+                              <DeductionAmount>
+                                 <Money currency="USD">1.00</Money>
+                              </DeductionAmount>
+                           </AdditionalDeduction>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction type="DISCOUNT">
+                              <DeductionPercent percent="2.00"/>
+                           </AdditionalDeduction>
+                        </Modification>
+                        <Modification>
+                           <AdditionalCost>
+                              <Money currency="USD">3.00</Money>
+                           </AdditionalCost>
+                        </Modification>
+                        <Modification>
+                           <AdditionalCost>
+                              <Percentage percent="4.00"/>
+                           </AdditionalCost>
+                        </Modification>
+                     </Modifications>
+                  </UnitPrice>
+                  <Description xml:lang="en">Line2</Description>
+                  <UnitOfMeasure>EA</UnitOfMeasure>
+                  <Classification domain="unspsc">All</Classification>
+                  <Classification domain="MaterialGroup">001</Classification>
+                  <ManufacturerPartID/>
+                  <ManufacturerName/>
+                  <URL/>
+                  <LeadTime/>
+                  <Extrinsic name="Material Number"/>
+                  <Extrinsic name="Material Type"/>
+                  <Extrinsic name="ECW_00_800.ariba.masterdata.ItemMaster.OrderUnit">EA</Extrinsic>
+                  <Extrinsic name="Incoterms Location">Inco Location</Extrinsic>
+                  <Extrinsic name="Price Unit">{UnitOfMeasure=EA, Amount=2.000}</Extrinsic>
+                  <Extrinsic name="InternalItemNumber">3769375</Extrinsic>
+               </ItemDetail>
+               <ShipTo>
+                  <Address addressID="0001" addressIDDomain="buyerLocationID">
+                     <Name xml:lang="en">Hamburg</Name>
+                  </Address>
+               </ShipTo>
+            </ItemIn>
+         </ContractItemIn>
+         <ContractItemIn operation="new">
+            <MaxQuantity>10.000</MaxQuantity>
+            <TermsOfDelivery>
+               <TermsOfDeliveryCode value="TransportCondition"/>
+               <ShippingPaymentMethod value="Other"/>
+               <TransportTerms value="CPT">Freight-free</TransportTerms>
+            </TermsOfDelivery>
+            <ItemIn itemClassification="material" itemType="item" lineNumber="3" quantity="30.000">
+               <ItemID>
+                  <SupplierPartID>SP002</SupplierPartID>
+                  <SupplierPartAuxiliaryID/>
+                  <BuyerPartID/>
+               </ItemID>
+               <ItemDetail>
+                  <UnitPrice>
+                     <Money currency="USD">2500.00</Money>
+                     <Modifications>
+                        <Modification>
+                           <AdditionalDeduction type="DISCOUNT">
+                              <DeductionAmount>
+                                 <Money currency="USD">1.00</Money>
+                              </DeductionAmount>
+                           </AdditionalDeduction>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction type="DISCOUNT">
+                              <DeductionPercent percent="2.00"/>
+                           </AdditionalDeduction>
+                        </Modification>
+                        <Modification>
+                           <AdditionalCost>
+                              <Money currency="USD">3.00</Money>
+                           </AdditionalCost>
+                        </Modification>
+                        <Modification>
+                           <AdditionalCost>
+                              <Percentage percent="4.00"/>
+                           </AdditionalCost>
+                        </Modification>
+                     </Modifications>
+                  </UnitPrice>
+                  <Description xml:lang="en">Line3</Description>
+                  <UnitOfMeasure>EA</UnitOfMeasure>
+                  <Classification domain="unspsc">All</Classification>
+                  <Classification domain="MaterialGroup">001</Classification>
+                  <ManufacturerPartID/>
+                  <ManufacturerName/>
+                  <URL/>
+                  <LeadTime/>
+                  <Extrinsic name="Material Number"/>
+                  <Extrinsic name="Material Type"/>
+                  <Extrinsic name="ECW_00_800.ariba.masterdata.ItemMaster.OrderUnit">EA</Extrinsic>
+                  <Extrinsic name="Incoterms Location">Inco Location</Extrinsic>
+                  <Extrinsic name="Price Unit">{UnitOfMeasure=EA, Amount=2.000}</Extrinsic>
+                  <Extrinsic name="InternalItemNumber">3769375</Extrinsic>
+               </ItemDetail>
+               <ShipTo>
+                  <Address addressID="0001" addressIDDomain="buyerLocationID">
+                     <Name xml:lang="en">Hamburg</Name>
+                  </Address>
+               </ShipTo>
+            </ItemIn>
+         </ContractItemIn>
+      </ContractRequest>
+   </Request>
+</cXML>
+   </Payload>
+</Combined>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/GUSI//MAPPING_ANY_cXML_0000_ReceiptRequest_GUSI_2.1_receivingAdvice.xsl">
+    <x:scenario label="Receipt Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'GUSIPG'"/>
+        <x:param name="anAlternativeReceiver" select="'GUSISupplier'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCorrelationID" select="'ReceivingAdvice'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/GUSI/ReceiptRequest/ReceiptRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/GUSI/ReceiptRequest/ReceiptRequest_AM_1.xml"
+            select="element()" label="Receipt Request"/>
+    </x:scenario>
+    <x:scenario label="Receipt Request with batch">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'GUSIPG'"/>
+        <x:param name="anAlternativeReceiver" select="'GUSISupplier'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"  select="'PROD'"/>
+        <x:param name="anCorrelationID" select="'ReceivingAdvice'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/GUSI/ReceiptRequest/ReceiptRequest_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/GUSI/ReceiptRequest/ReceiptRequest_AM_2.xml"
+            select="element()" label="Receipt Request with batch"/>
+    </x:scenario>    
+</x:description>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/GUSI/MAPPING_ANY_cXML_0000_JITOrderRequest_GUSI_2.1_multiShipmentOrder.xsl">
+    <x:scenario label="JIT Order Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'GUSIBuyer'"/>
+        <x:param name="anAlternativeReceiver" select="'GUSISupplier'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCorrelationID" select="'892dc22b-4bfc-9394-b4a0-c18fc2ace8ad'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/GUSI/OrderRequest/JITOrderRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/GUSI/OrderRequest/JITOrderRequest_AM.xml"
+            select="element()" label="JIT Order Request"/>
+    </x:scenario>
+    <x:scenario label="JIT Order Request with EANID">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver" select="'GUSISupplier'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCorrelationID" select="'892dc22b-4bfc-9394-b4a0-c18fc2ace8ad'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/GUSI/OrderRequest/GUSI_JITOrderRequest_BM1.dat"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/GUSI/OrderRequest/GUSI_JITOrderRequest_AM1.xml"
+            select="element()" label="JIT Order Request with EANID"/>
+    </x:scenario>   
+    <x:scenario label="JIT Order Request with Shipto">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver" select="'GUSISupplier'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCorrelationID" select="'892dc22b-4bfc-9394-b4a0-c18fc2ace8ad'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/GUSI/OrderRequest/GUSI_JITOrderRequest_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/GUSI/OrderRequest/GUSI_JITOrderRequest_AM2.xml"
+            select="element()" label="JIT Order Request with Shipto"/>
+    </x:scenario>     
+</x:description>

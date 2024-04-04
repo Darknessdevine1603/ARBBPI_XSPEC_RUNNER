@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://sap.com/xi/ARBCIG1" xmlns="http://sap.com/xi/ARBCIG1"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="InvoiceStatusUpdateRequest" type="InvoiceStatusUpdate"/>
+    <xsd:simpleType name="LanguageCode">
+        <xsd:restriction base="xsd:language">
+            <xsd:minLength value="2"/>
+            <xsd:maxLength value="9"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TextFormat">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="2"/>
+            <xsd:maxLength value="3"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TextTDLine">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="132"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TextID">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TextName">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="TextObject">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="BusinessTransactionDocumentItemID">
+        <xsd:restriction base="xsd:token">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="InvoiceStatusUpdate">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">Data type for Invoice status update</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Comments" minOccurs="0">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="Comment" minOccurs="0" maxOccurs="unbounded">
+                                        <xsd:complexType>
+                                            <xsd:simpleContent>
+                                                <xsd:extension base="xsd:string">
+                                                  <xsd:attribute name="LANG" type="xsd:language"/>
+                                                </xsd:extension>
+                                            </xsd:simpleContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="LOGICAL_SYSTEM" type="xsd:string"/>
+                        <xsd:element name="LIFNR">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="10"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="INV_DOC_NO">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="16"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="DOC_DATE" type="xsd:date"/>
+                        <xsd:element name="DOC_TIME" type="xsd:time"/>
+                        <xsd:element name="INVOICE_STATUS">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="50"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="DUE_DATE" type="xsd:date" minOccurs="0"/>
+                        <xsd:element name="AMT_DOCCUR">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:decimal">
+                                    <xsd:totalDigits value="23"/>
+                                    <xsd:fractionDigits value="4"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="CURRENCY">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="5"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="ERP_INV_NO" type="xsd:string"/>
+                        <xsd:element name="DOC_REFERENCE" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="CXML_INVOICE_ID" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="AribaExtension" type="AribaExtension" minOccurs="0"
+                            maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Attachments" type="Attachments" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="AribaComment" type="AribaComment" minOccurs="0" maxOccurs="unbounded"
+            />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AribaComment">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">IDT for Ariba Comments</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="TextObject" type="TextObject" minOccurs="0"/>
+                        <xsd:element name="TextName" type="TextName" minOccurs="0"/>
+                        <xsd:element name="TextID" type="TextID" minOccurs="0"/>
+                        <xsd:element name="TextLang" type="LanguageCode" minOccurs="0"/>
+                        <xsd:element name="ItemNumber" type="BusinessTransactionDocumentItemID"
+                            minOccurs="0"/>
+                        <xsd:element name="TextDesc" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="AribaLine" minOccurs="0" maxOccurs="unbounded">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="TextFormat" type="TextFormat" minOccurs="0"/>
+                                    <xsd:element name="TextLine" type="TextTDLine" minOccurs="0"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AribaExtension">
+        <xsd:attribute name="objectName" type="xsd:string"/>
+        <xsd:attribute name="objectKey" type="xsd:string"/>
+        <xsd:attribute name="fieldName" type="xsd:string"/>
+        <xsd:attribute name="fieldValue" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="Attachments">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="EN">Proxy Attachment Structure for Ariba Cloud
+                Integration</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="FileName" type="xsd:string"/>
+                        <xsd:element name="Charset" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="LineNumber" type="BusinessTransactionDocumentItemID"
+                            minOccurs="0"/>
+                        <xsd:element name="ContentId" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="ContentType" type="xsd:string"/>
+                        <xsd:element name="ContentLength" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="Content" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

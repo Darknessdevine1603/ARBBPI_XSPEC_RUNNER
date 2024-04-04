@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xsl"
+        date="2023-04-27T15:27:43.373217+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xspec">
+      <label>AN Service Entry Sheet Create</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SES/ANSESCreate.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2019-08-18T17:38:10-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1500463943527-8192175367351465993@10.163.3.224</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ServiceAcknowledgement>
+                  <ID>ARIBA_ASN</ID>
+                  <SellerID>0000100000</SellerID>
+                  <CreationDateTime>20190818</CreationDateTime>
+                  <Description>SES#4567</Description>
+                  <TextCollection>
+                     <Text>
+                        <TypeCode/>
+                        <ContentText>test comments</ContentText>
+                     </Text>
+                  </TextCollection>
+                  <Item>
+                     <ID>00010</ID>
+                     <FinalIndicator>true</FinalIndicator>
+                     <ByBidderProvidedIndicator/>
+                     <Distrib/>
+                     <DeliveryPeriod>
+                        <StartDateTime/>
+                        <EndDateTime/>
+                     </DeliveryPeriod>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <Price>
+                        <Amount currencyCode="EUR">1.00</Amount>
+                        <BaseQuantity unitCode="EA">1</BaseQuantity>
+                     </Price>
+                     <Description>Child Line 1</Description>
+                     <HierarchyRelationship>
+                        <ParentItemID>1</ParentItemID>
+                     </HierarchyRelationship>
+                     <Product>
+                        <SellerID>Child Line 1</SellerID>
+                     </Product>
+                     <PurchasingContractReference>
+                        <ID>5000100010</ID>
+                        <ItemID/>
+                     </PurchasingContractReference>
+                     <PurchaseOrderReference>
+                        <ID>4500037647</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <AccountAssignment/>
+                     <AccountAssignmentValues/>
+                     <ServicePerformerParty>
+                        <BuyerID>a</BuyerID>
+                        <SellerID/>
+                     </ServicePerformerParty>
+                     <TextCollection/>
+                  </Item>
+               </ServiceAcknowledgement>
+            </n0:ServiceEntrySheetRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Not yet implemented</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2019-08-18T17:38:10-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1500463943527-8192175367351465993@10.163.3.224</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ServiceAcknowledgement>
+                     <ID>ARIBA_ASN</ID>
+                     <SellerID>0000100000</SellerID>
+                     <CreationDateTime>20190818</CreationDateTime>
+                     <Description>SES#4567</Description>
+                     <TextCollection>
+                        <Text>
+                           <TypeCode/>
+                           <ContentText>test comments</ContentText>
+                        </Text>
+                     </TextCollection>
+                     <Item>
+                        <ID>00010</ID>
+                        <FinalIndicator>true</FinalIndicator>
+                        <ByBidderProvidedIndicator/>
+                        <Distrib/>
+                        <DeliveryPeriod>
+                           <StartDateTime/>
+                           <EndDateTime/>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <Price>
+                           <Amount currencyCode="EUR">1.00</Amount>
+                           <BaseQuantity unitCode="EA">1</BaseQuantity>
+                        </Price>
+                        <Description>Child Line 1</Description>
+                        <HierarchyRelationship>
+                           <ParentItemID>1</ParentItemID>
+                        </HierarchyRelationship>
+                        <Product>
+                           <SellerID>Child Line 1</SellerID>
+                        </Product>
+                        <PurchasingContractReference>
+                           <ID>5000100010</ID>
+                           <ItemID/>
+                        </PurchasingContractReference>
+                        <PurchaseOrderReference>
+                           <ID>4500037647</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <AccountAssignment/>
+                        <AccountAssignmentValues/>
+                        <ServicePerformerParty>
+                           <BuyerID>a</BuyerID>
+                           <SellerID/>
+                        </ServicePerformerParty>
+                        <TextCollection/>
+                     </Item>
+                  </ServiceAcknowledgement>
+               </n0:ServiceEntrySheetRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xspec">
+      <label>AN Service Entry Sheet Cancel</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SES/ANSESCancel.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2019-02-24T22:07:15-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1544770668551-6695360130500917765@10.163.3.203</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ServiceAcknowledgement>
+                  <ActionCode>03</ActionCode>
+                  <FinalIndicator>true</FinalIndicator>
+                  <ID>ARIBA_ASN</ID>
+                  <SellerID>100000</SellerID>
+                  <CreationDateTime>20190224</CreationDateTime>
+                  <Description>SES-41_1</Description>
+                  <TextCollection>
+                     <Text>
+                        <TypeCode/>
+                        <ContentText>test comments</ContentText>
+                     </Text>
+                  </TextCollection>
+                  <Item>
+                     <ID>00010</ID>
+                     <FinalIndicator>true</FinalIndicator>
+                     <ByBidderProvidedIndicator/>
+                     <Distrib/>
+                     <DeliveryPeriod>
+                        <StartDateTime>20190224</StartDateTime>
+                        <EndDateTime>20190226</EndDateTime>
+                     </DeliveryPeriod>
+                     <Quantity unitCode="EA">200</Quantity>
+                     <Price>
+                        <Amount currencyCode="EUR">40.00</Amount>
+                        <BaseQuantity unitCode="EA">1</BaseQuantity>
+                     </Price>
+                     <Description>Test SES Cancel- 22883</Description>
+                     <HierarchyRelationship>
+                        <ParentItemID>1</ParentItemID>
+                     </HierarchyRelationship>
+                     <PurchasingContractReference>
+                        <ID>5000100010</ID>
+                        <ItemID/>
+                     </PurchasingContractReference>
+                     <PurchaseOrderReference>
+                        <ID>4500031841</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <AccountAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>0000400000</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>0000404000</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                     </AccountAssignment>
+                     <AccountAssignmentValues/>
+                     <ServicePerformerParty>
+                        <BuyerID>ranjan</BuyerID>
+                        <SellerID/>
+                     </ServicePerformerParty>
+                     <TextCollection/>
+                  </Item>
+                  <Item>
+                     <ID>00020</ID>
+                     <FinalIndicator>true</FinalIndicator>
+                     <ByBidderProvidedIndicator/>
+                     <Distrib/>
+                     <DeliveryPeriod>
+                        <StartDateTime>20190224</StartDateTime>
+                        <EndDateTime>20190226</EndDateTime>
+                     </DeliveryPeriod>
+                     <Quantity unitCode="EA">300</Quantity>
+                     <Price>
+                        <Amount currencyCode="EUR">50.00</Amount>
+                        <BaseQuantity unitCode="EA">1</BaseQuantity>
+                     </Price>
+                     <Description>Test SES cancel-22883</Description>
+                     <HierarchyRelationship>
+                        <ParentItemID>2</ParentItemID>
+                     </HierarchyRelationship>
+                     <PurchasingContractReference>
+                        <ID>5000100020</ID>
+                        <ItemID/>
+                     </PurchasingContractReference>
+                     <PurchaseOrderReference>
+                        <ID>4500031841</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <AccountAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>2</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>0000400000</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>2</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>0000404000</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                     </AccountAssignment>
+                     <AccountAssignmentValues/>
+                     <ServicePerformerParty>
+                        <BuyerID>ranjan</BuyerID>
+                        <SellerID/>
+                     </ServicePerformerParty>
+                     <TextCollection/>
+                  </Item>
+               </ServiceAcknowledgement>
+               <AribaComment>
+                  <Item>
+                     <TextID>F01</TextID>
+                     <TextLang>'EN'</TextLang>
+                     <AribaLine>
+                        <TextLine>test comments</TextLine>
+                     </AribaLine>
+                  </Item>
+               </AribaComment>
+            </n0:ServiceEntrySheetRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>AN Service Entry Sheet Cancel</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2019-02-24T22:07:15-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1544770668551-6695360130500917765@10.163.3.203</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ServiceAcknowledgement>
+                     <ActionCode>03</ActionCode>
+                     <FinalIndicator>true</FinalIndicator>
+                     <ID>ARIBA_ASN</ID>
+                     <SellerID>100000</SellerID>
+                     <CreationDateTime>20190224</CreationDateTime>
+                     <Description>SES-41_1</Description>
+                     <TextCollection>
+                        <Text>
+                           <TypeCode/>
+                           <ContentText>test comments</ContentText>
+                        </Text>
+                     </TextCollection>
+                     <Item>
+                        <ID>00010</ID>
+                        <FinalIndicator>true</FinalIndicator>
+                        <ByBidderProvidedIndicator/>
+                        <Distrib/>
+                        <DeliveryPeriod>
+                           <StartDateTime>20190224</StartDateTime>
+                           <EndDateTime>20190226</EndDateTime>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">200</Quantity>
+                        <Price>
+                           <Amount currencyCode="EUR">40.00</Amount>
+                           <BaseQuantity unitCode="EA">1</BaseQuantity>
+                        </Price>
+                        <Description>Test SES Cancel- 22883</Description>
+                        <HierarchyRelationship>
+                           <ParentItemID>1</ParentItemID>
+                        </HierarchyRelationship>
+                        <PurchasingContractReference>
+                           <ID>5000100010</ID>
+                           <ItemID/>
+                        </PurchasingContractReference>
+                        <PurchaseOrderReference>
+                           <ID>4500031841</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <AccountAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>0000400000</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>0000404000</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                        </AccountAssignment>
+                        <AccountAssignmentValues/>
+                        <ServicePerformerParty>
+                           <BuyerID>ranjan</BuyerID>
+                           <SellerID/>
+                        </ServicePerformerParty>
+                        <TextCollection/>
+                     </Item>
+                     <Item>
+                        <ID>00020</ID>
+                        <FinalIndicator>true</FinalIndicator>
+                        <ByBidderProvidedIndicator/>
+                        <Distrib/>
+                        <DeliveryPeriod>
+                           <StartDateTime>20190224</StartDateTime>
+                           <EndDateTime>20190226</EndDateTime>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">300</Quantity>
+                        <Price>
+                           <Amount currencyCode="EUR">50.00</Amount>
+                           <BaseQuantity unitCode="EA">1</BaseQuantity>
+                        </Price>
+                        <Description>Test SES cancel-22883</Description>
+                        <HierarchyRelationship>
+                           <ParentItemID>2</ParentItemID>
+                        </HierarchyRelationship>
+                        <PurchasingContractReference>
+                           <ID>5000100020</ID>
+                           <ItemID/>
+                        </PurchasingContractReference>
+                        <PurchaseOrderReference>
+                           <ID>4500031841</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <AccountAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>2</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>0000400000</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>2</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>0000404000</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                        </AccountAssignment>
+                        <AccountAssignmentValues/>
+                        <ServicePerformerParty>
+                           <BuyerID>ranjan</BuyerID>
+                           <SellerID/>
+                        </ServicePerformerParty>
+                        <TextCollection/>
+                     </Item>
+                  </ServiceAcknowledgement>
+                  <AribaComment>
+                     <Item>
+                        <TextID>F01</TextID>
+                        <TextLang>'EN'</TextLang>
+                        <AribaLine>
+                           <TextLine>test comments</TextLine>
+                        </AribaLine>
+                     </Item>
+                  </AribaComment>
+               </n0:ServiceEntrySheetRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xspec">
+      <label>AN Service Entry Sheet Missedfields</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SES/ANSESMissedfields.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2018-12-13T18:57:48-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1544770668551-6695360130500917765@10.163.3.203</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ServiceAcknowledgement>
+                  <ID>ARIBA_ASN</ID>
+                  <SellerID>100000</SellerID>
+                  <CreationDateTime>20181213</CreationDateTime>
+                  <Description>SES4530814_4</Description>
+                  <TextCollection/>
+                  <Item>
+                     <ID>00010</ID>
+                     <FinalIndicator>false</FinalIndicator>
+                     <ByBidderProvidedIndicator/>
+                     <Distrib/>
+                     <DeliveryPeriod>
+                        <StartDateTime>20181213</StartDateTime>
+                        <EndDateTime>20181213</EndDateTime>
+                     </DeliveryPeriod>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <Price>
+                        <Amount currencyCode="EUR">500.00</Amount>
+                        <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                     </Price>
+                     <Description>Test ses</Description>
+                     <HierarchyRelationship>
+                        <ParentItemID>1</ParentItemID>
+                     </HierarchyRelationship>
+                     <PurchasingContractReference>
+                        <ID>5000100010</ID>
+                        <ItemID/>
+                     </PurchasingContractReference>
+                     <PurchaseOrderReference>
+                        <ID>4530814</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <AccountAssignment/>
+                     <AccountAssignmentValues/>
+                     <ServicePerformerParty>
+                        <BuyerID>123</BuyerID>
+                        <SellerID/>
+                     </ServicePerformerParty>
+                     <TextCollection/>
+                  </Item>
+               </ServiceAcknowledgement>
+            </n0:ServiceEntrySheetRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>AN Service Entry Sheet Missedfields</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2018-12-13T18:57:48-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1544770668551-6695360130500917765@10.163.3.203</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ServiceAcknowledgement>
+                     <ID>ARIBA_ASN</ID>
+                     <SellerID>100000</SellerID>
+                     <CreationDateTime>20181213</CreationDateTime>
+                     <Description>SES4530814_4</Description>
+                     <TextCollection/>
+                     <Item>
+                        <ID>00010</ID>
+                        <FinalIndicator>false</FinalIndicator>
+                        <ByBidderProvidedIndicator/>
+                        <Distrib/>
+                        <DeliveryPeriod>
+                           <StartDateTime>20181213</StartDateTime>
+                           <EndDateTime>20181213</EndDateTime>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <Price>
+                           <Amount currencyCode="EUR">500.00</Amount>
+                           <BaseQuantity unitCode="EA">1.000</BaseQuantity>
+                        </Price>
+                        <Description>Test ses</Description>
+                        <HierarchyRelationship>
+                           <ParentItemID>1</ParentItemID>
+                        </HierarchyRelationship>
+                        <PurchasingContractReference>
+                           <ID>5000100010</ID>
+                           <ItemID/>
+                        </PurchasingContractReference>
+                        <PurchaseOrderReference>
+                           <ID>4530814</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <AccountAssignment/>
+                        <AccountAssignmentValues/>
+                        <ServicePerformerParty>
+                           <BuyerID>123</BuyerID>
+                           <SellerID/>
+                        </ServicePerformerParty>
+                        <TextCollection/>
+                     </Item>
+                  </ServiceAcknowledgement>
+               </n0:ServiceEntrySheetRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xspec">
+      <label>AN Service Entry Sheet Quantity Distribution</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SES/ANSESQtyDirtrib.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-07-26T22:34:45-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1627382085297-8139994015150358484@10.163.193.137</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>Q8JCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ServiceAcknowledgement>
+                  <ID>ARIBA_ASN</ID>
+                  <SellerID>100000</SellerID>
+                  <CreationDateTime>20210726</CreationDateTime>
+                  <Description>SES_XSPEC1</Description>
+                  <TextCollection>
+                     <Text>
+                        <TypeCode/>
+                        <ContentText>Header comments</ContentText>
+                     </Text>
+                  </TextCollection>
+                  <Item>
+                     <ID>00010</ID>
+                     <FinalIndicator>true</FinalIndicator>
+                     <ByBidderProvidedIndicator>false</ByBidderProvidedIndicator>
+                     <Distrib>1</Distrib>
+                     <DeliveryPeriod>
+                        <StartDateTime>20210726</StartDateTime>
+                        <EndDateTime>20210726</EndDateTime>
+                     </DeliveryPeriod>
+                     <Quantity unitCode="EA">100</Quantity>
+                     <Price>
+                        <Amount currencyCode="EUR">150.00</Amount>
+                        <BaseQuantity unitCode="EA">0</BaseQuantity>
+                     </Price>
+                     <Description>text sub service</Description>
+                     <HierarchyRelationship>
+                        <ParentItemID>1</ParentItemID>
+                     </HierarchyRelationship>
+                     <PurchasingContractReference>
+                        <ID>5000100010</ID>
+                        <ItemID/>
+                     </PurchasingContractReference>
+                     <PurchaseOrderReference>
+                        <ID>4500060647</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <AccountAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>400010</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>400000</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>400010</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                     </AccountAssignment>
+                     <AccountAssignmentValues>
+                        <AccAssValues>
+                           <Quantity>40.000</Quantity>
+                        </AccAssValues>
+                        <AccAssValues>
+                           <Quantity>40.000</Quantity>
+                        </AccAssValues>
+                        <AccAssValues>
+                           <Quantity>20.000</Quantity>
+                        </AccAssValues>
+                     </AccountAssignmentValues>
+                     <ServicePerformerParty>
+                        <BuyerID/>
+                        <SellerID/>
+                     </ServicePerformerParty>
+                     <TextCollection>
+                        <Text>
+                           <TypeCode/>
+                           <ContentText>Line item comments</ContentText>
+                        </Text>
+                     </TextCollection>
+                  </Item>
+               </ServiceAcknowledgement>
+            </n0:ServiceEntrySheetRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>AN Service Entry Sheet Quantity Distribution</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2021-07-26T22:34:45-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1627382085297-8139994015150358484@10.163.193.137</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>Q8JCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ServiceAcknowledgement>
+                     <ID>ARIBA_ASN</ID>
+                     <SellerID>100000</SellerID>
+                     <CreationDateTime>20210726</CreationDateTime>
+                     <Description>SES_XSPEC1</Description>
+                     <TextCollection>
+                        <Text>
+                           <TypeCode/>
+                           <ContentText>Header comments</ContentText>
+                        </Text>
+                     </TextCollection>
+                     <Item>
+                        <ID>00010</ID>
+                        <FinalIndicator>true</FinalIndicator>
+                        <ByBidderProvidedIndicator>false</ByBidderProvidedIndicator>
+                        <Distrib>1</Distrib>
+                        <DeliveryPeriod>
+                           <StartDateTime>20210726</StartDateTime>
+                           <EndDateTime>20210726</EndDateTime>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">100</Quantity>
+                        <Price>
+                           <Amount currencyCode="EUR">150.00</Amount>
+                           <BaseQuantity unitCode="EA">0</BaseQuantity>
+                        </Price>
+                        <Description>text sub service</Description>
+                        <HierarchyRelationship>
+                           <ParentItemID>1</ParentItemID>
+                        </HierarchyRelationship>
+                        <PurchasingContractReference>
+                           <ID>5000100010</ID>
+                           <ItemID/>
+                        </PurchasingContractReference>
+                        <PurchaseOrderReference>
+                           <ID>4500060647</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <AccountAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>400010</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>400000</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>400010</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                        </AccountAssignment>
+                        <AccountAssignmentValues>
+                           <AccAssValues>
+                              <Quantity>40.000</Quantity>
+                           </AccAssValues>
+                           <AccAssValues>
+                              <Quantity>40.000</Quantity>
+                           </AccAssValues>
+                           <AccAssValues>
+                              <Quantity>20.000</Quantity>
+                           </AccAssValues>
+                        </AccountAssignmentValues>
+                        <ServicePerformerParty>
+                           <BuyerID/>
+                           <SellerID/>
+                        </ServicePerformerParty>
+                        <TextCollection>
+                           <Text>
+                              <TypeCode/>
+                              <ContentText>Line item comments</ContentText>
+                           </Text>
+                        </TextCollection>
+                     </Item>
+                  </ServiceAcknowledgement>
+               </n0:ServiceEntrySheetRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xspec">
+      <label>AN Service Entry Sheet Amount Distribution</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SES/ANSESQAmtDirtrib.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-07-26T22:41:51-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1627382511564-1375084288595798015@10.163.193.137</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ServiceAcknowledgement>
+                  <ID>ARIBA_ASN</ID>
+                  <SellerID>100000</SellerID>
+                  <CreationDateTime>20210726</CreationDateTime>
+                  <Description>SES_XSPEC2</Description>
+                  <TextCollection/>
+                  <Item>
+                     <FinalIndicator>false</FinalIndicator>
+                     <ByBidderProvidedIndicator>true</ByBidderProvidedIndicator>
+                     <Distrib>3</Distrib>
+                     <DeliveryPeriod>
+                        <StartDateTime>20210726</StartDateTime>
+                        <EndDateTime>20210726</EndDateTime>
+                     </DeliveryPeriod>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <Price>
+                        <Amount currencyCode="EUR">1100.00</Amount>
+                        <BaseQuantity unitCode="EA">1</BaseQuantity>
+                     </Price>
+                     <Description>Ad-hoc Item</Description>
+                     <HierarchyRelationship>
+                        <ParentItemID>1</ParentItemID>
+                     </HierarchyRelationship>
+                     <Product>
+                        <SellerID>test mat</SellerID>
+                     </Product>
+                     <PurchasingContractReference>
+                        <ID>20</ID>
+                        <ItemID/>
+                     </PurchasingContractReference>
+                     <PurchaseOrderReference>
+                        <ID>4500060647</ID>
+                        <ItemID>20</ItemID>
+                     </PurchaseOrderReference>
+                     <AccountAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>400000</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>400010</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                     </AccountAssignment>
+                     <AccountAssignmentValues>
+                        <AccAssValues>
+                           <Amount currencyCode="EUR">360.00</Amount>
+                        </AccAssValues>
+                        <AccAssValues>
+                           <Amount currencyCode="EUR">840.00</Amount>
+                        </AccAssValues>
+                     </AccountAssignmentValues>
+                     <ServicePerformerParty>
+                        <BuyerID/>
+                        <SellerID/>
+                     </ServicePerformerParty>
+                     <TextCollection/>
+                  </Item>
+               </ServiceAcknowledgement>
+            </n0:ServiceEntrySheetRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>AN Service Entry Sheet Amount Distribution</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2021-07-26T22:41:51-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1627382511564-1375084288595798015@10.163.193.137</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ServiceAcknowledgement>
+                     <ID>ARIBA_ASN</ID>
+                     <SellerID>100000</SellerID>
+                     <CreationDateTime>20210726</CreationDateTime>
+                     <Description>SES_XSPEC2</Description>
+                     <TextCollection/>
+                     <Item>
+                        <FinalIndicator>false</FinalIndicator>
+                        <ByBidderProvidedIndicator>true</ByBidderProvidedIndicator>
+                        <Distrib>3</Distrib>
+                        <DeliveryPeriod>
+                           <StartDateTime>20210726</StartDateTime>
+                           <EndDateTime>20210726</EndDateTime>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <Price>
+                           <Amount currencyCode="EUR">1100.00</Amount>
+                           <BaseQuantity unitCode="EA">1</BaseQuantity>
+                        </Price>
+                        <Description>Ad-hoc Item</Description>
+                        <HierarchyRelationship>
+                           <ParentItemID>1</ParentItemID>
+                        </HierarchyRelationship>
+                        <Product>
+                           <SellerID>test mat</SellerID>
+                        </Product>
+                        <PurchasingContractReference>
+                           <ID>20</ID>
+                           <ItemID/>
+                        </PurchasingContractReference>
+                        <PurchaseOrderReference>
+                           <ID>4500060647</ID>
+                           <ItemID>20</ItemID>
+                        </PurchaseOrderReference>
+                        <AccountAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>400000</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>400010</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                        </AccountAssignment>
+                        <AccountAssignmentValues>
+                           <AccAssValues>
+                              <Amount currencyCode="EUR">360.00</Amount>
+                           </AccAssValues>
+                           <AccAssValues>
+                              <Amount currencyCode="EUR">840.00</Amount>
+                           </AccAssValues>
+                        </AccountAssignmentValues>
+                        <ServicePerformerParty>
+                           <BuyerID/>
+                           <SellerID/>
+                        </ServicePerformerParty>
+                        <TextCollection/>
+                     </Item>
+                  </ServiceAcknowledgement>
+               </n0:ServiceEntrySheetRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xspec">
+      <label>AN Service Entry Sheet Percentage Distribution</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SES/ANSESQPercentDirtrib.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-07-27T00:51:14-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1627390275047-7310468354231948376@10.163.193.137</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ServiceAcknowledgement>
+                  <ID>ARIBA_ASN</ID>
+                  <SellerID>100000</SellerID>
+                  <CreationDateTime>20210727</CreationDateTime>
+                  <Description>SES_XSPEC3</Description>
+                  <TextCollection/>
+                  <Item>
+                     <ID>00010</ID>
+                     <FinalIndicator>true</FinalIndicator>
+                     <ByBidderProvidedIndicator/>
+                     <Distrib/>
+                     <DeliveryPeriod>
+                        <StartDateTime>20210727</StartDateTime>
+                        <EndDateTime>20210727</EndDateTime>
+                     </DeliveryPeriod>
+                     <Quantity unitCode="EA">150</Quantity>
+                     <Price>
+                        <Amount currencyCode="EUR">10.00</Amount>
+                        <BaseQuantity unitCode="EA">1</BaseQuantity>
+                     </Price>
+                     <Description>text sub service 2</Description>
+                     <HierarchyRelationship>
+                        <ParentItemID>1</ParentItemID>
+                     </HierarchyRelationship>
+                     <PurchasingContractReference>
+                        <ID>5000300010</ID>
+                        <ItemID/>
+                     </PurchasingContractReference>
+                     <PurchaseOrderReference>
+                        <ID>4500060647</ID>
+                        <ItemID>30</ItemID>
+                     </PurchaseOrderReference>
+                     <AccountAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>400000</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>SAP-DUMMY</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>400010</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                     </AccountAssignment>
+                     <AccountAssignmentValues>
+                        <AccAssValues>
+                           <Percentage>75.0</Percentage>
+                        </AccAssValues>
+                        <AccAssValues>
+                           <Percentage>25.0</Percentage>
+                        </AccAssValues>
+                     </AccountAssignmentValues>
+                     <ServicePerformerParty>
+                        <BuyerID/>
+                        <SellerID>Field Engineer</SellerID>
+                     </ServicePerformerParty>
+                     <TextCollection/>
+                  </Item>
+               </ServiceAcknowledgement>
+            </n0:ServiceEntrySheetRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>AN Service Entry Sheet Percentage Distribution</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2021-07-27T00:51:14-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1627390275047-7310468354231948376@10.163.193.137</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ServiceAcknowledgement>
+                     <ID>ARIBA_ASN</ID>
+                     <SellerID>100000</SellerID>
+                     <CreationDateTime>20210727</CreationDateTime>
+                     <Description>SES_XSPEC3</Description>
+                     <TextCollection/>
+                     <Item>
+                        <ID>00010</ID>
+                        <FinalIndicator>true</FinalIndicator>
+                        <ByBidderProvidedIndicator/>
+                        <Distrib/>
+                        <DeliveryPeriod>
+                           <StartDateTime>20210727</StartDateTime>
+                           <EndDateTime>20210727</EndDateTime>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">150</Quantity>
+                        <Price>
+                           <Amount currencyCode="EUR">10.00</Amount>
+                           <BaseQuantity unitCode="EA">1</BaseQuantity>
+                        </Price>
+                        <Description>text sub service 2</Description>
+                        <HierarchyRelationship>
+                           <ParentItemID>1</ParentItemID>
+                        </HierarchyRelationship>
+                        <PurchasingContractReference>
+                           <ID>5000300010</ID>
+                           <ItemID/>
+                        </PurchasingContractReference>
+                        <PurchaseOrderReference>
+                           <ID>4500060647</ID>
+                           <ItemID>30</ItemID>
+                        </PurchaseOrderReference>
+                        <AccountAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>400000</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>SAP-DUMMY</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>400010</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                        </AccountAssignment>
+                        <AccountAssignmentValues>
+                           <AccAssValues>
+                              <Percentage>75.0</Percentage>
+                           </AccAssValues>
+                           <AccAssValues>
+                              <Percentage>25.0</Percentage>
+                           </AccAssValues>
+                        </AccountAssignmentValues>
+                        <ServicePerformerParty>
+                           <BuyerID/>
+                           <SellerID>Field Engineer</SellerID>
+                        </ServicePerformerParty>
+                        <TextCollection/>
+                     </Item>
+                  </ServiceAcknowledgement>
+               </n0:ServiceEntrySheetRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xspec">
+      <label>AN Service Entry Sheet Buyer/Supplier Part ID</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SES/ANSES_BuyerSupplierPartID.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <CreationDateTime>2021-09-17T01:32:46-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1631885566723-7051666872672994410@10.163.193.137</AribaNetworkPayloadID>
+                  <AribaNetworkID/>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ServiceAcknowledgement>
+                  <ID>ARIBA_ASN</ID>
+                  <SellerID>100000</SellerID>
+                  <CreationDateTime>20210917</CreationDateTime>
+                  <Description>SES_4500009287</Description>
+                  <TextCollection/>
+                  <Item>
+                     <FinalIndicator>false</FinalIndicator>
+                     <ByBidderProvidedIndicator>true</ByBidderProvidedIndicator>
+                     <Distrib>3</Distrib>
+                     <DeliveryPeriod>
+                        <StartDateTime/>
+                        <EndDateTime/>
+                     </DeliveryPeriod>
+                     <Quantity unitCode="EA">1</Quantity>
+                     <Price>
+                        <Amount currencyCode="EUR">50.00</Amount>
+                        <BaseQuantity unitCode="EA">1</BaseQuantity>
+                     </Price>
+                     <Description>Ad-hoc Item</Description>
+                     <HierarchyRelationship>
+                        <ParentItemID>1</ParentItemID>
+                     </HierarchyRelationship>
+                     <Product>
+                        <BuyerID>000000000004000003</BuyerID>
+                        <SellerID>SupplierPartID1</SellerID>
+                     </Product>
+                     <PurchasingContractReference>
+                        <ID>10</ID>
+                        <ItemID>4600000165</ItemID>
+                     </PurchasingContractReference>
+                     <PurchaseOrderReference>
+                        <ID>4500009287</ID>
+                        <ItemID>10</ItemID>
+                     </PurchaseOrderReference>
+                     <AccountAssignment>
+                        <AccountingCodingBlockAssignment>
+                           <OrdinalNumberValue>1</OrdinalNumberValue>
+                           <CostCentreID>CC00005</CostCentreID>
+                           <ProjectReference>
+                              <ProjectID/>
+                           </ProjectReference>
+                           <InternalOrderID/>
+                           <GeneralLedgerAccountReference>
+                              <ID>449100</ID>
+                           </GeneralLedgerAccountReference>
+                           <FixedAssetReference>
+                              <MasterFixedAssetID/>
+                           </FixedAssetReference>
+                        </AccountingCodingBlockAssignment>
+                     </AccountAssignment>
+                     <AccountAssignmentValues>
+                        <AccAssValues>
+                           <Amount currencyCode="EUR">50.00</Amount>
+                        </AccAssValues>
+                     </AccountAssignmentValues>
+                     <ServicePerformerParty>
+                        <BuyerID/>
+                        <SellerID/>
+                     </ServicePerformerParty>
+                     <TextCollection/>
+                  </Item>
+               </ServiceAcknowledgement>
+            </n0:ServiceEntrySheetRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="true">
+         <label>AN Service Entry Sheet Buyer/Supplier Part ID</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ServiceEntrySheetRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <CreationDateTime>2021-09-17T01:32:46-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1631885566723-7051666872672994410@10.163.193.137</AribaNetworkPayloadID>
+                     <AribaNetworkID/>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ServiceAcknowledgement>
+                     <ID>ARIBA_ASN</ID>
+                     <SellerID>100000</SellerID>
+                     <CreationDateTime>20210917</CreationDateTime>
+                     <Description>SES_4500009287</Description>
+                     <TextCollection/>
+                     <Item>
+                        <FinalIndicator>false</FinalIndicator>
+                        <ByBidderProvidedIndicator>true</ByBidderProvidedIndicator>
+                        <Distrib>3</Distrib>
+                        <DeliveryPeriod>
+                           <StartDateTime/>
+                           <EndDateTime/>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">1</Quantity>
+                        <Price>
+                           <Amount currencyCode="EUR">50.00</Amount>
+                           <BaseQuantity unitCode="EA">1</BaseQuantity>
+                        </Price>
+                        <Description>Ad-hoc Item</Description>
+                        <HierarchyRelationship>
+                           <ParentItemID>1</ParentItemID>
+                        </HierarchyRelationship>
+                        <Product>
+                           <BuyerID>000000000004000003</BuyerID>
+                           <SellerID>SupplierPartID1</SellerID>
+                        </Product>
+                        <PurchasingContractReference>
+                           <ID>10</ID>
+                           <ItemID>4600000165</ItemID>
+                        </PurchasingContractReference>
+                        <PurchaseOrderReference>
+                           <ID>4500009287</ID>
+                           <ItemID>10</ItemID>
+                        </PurchaseOrderReference>
+                        <AccountAssignment>
+                           <AccountingCodingBlockAssignment>
+                              <OrdinalNumberValue>1</OrdinalNumberValue>
+                              <CostCentreID>CC00005</CostCentreID>
+                              <ProjectReference>
+                                 <ProjectID/>
+                              </ProjectReference>
+                              <InternalOrderID/>
+                              <GeneralLedgerAccountReference>
+                                 <ID>449100</ID>
+                              </GeneralLedgerAccountReference>
+                              <FixedAssetReference>
+                                 <MasterFixedAssetID/>
+                              </FixedAssetReference>
+                           </AccountingCodingBlockAssignment>
+                        </AccountAssignment>
+                        <AccountAssignmentValues>
+                           <AccAssValues>
+                              <Amount currencyCode="EUR">50.00</Amount>
+                           </AccAssValues>
+                        </AccountAssignmentValues>
+                        <ServicePerformerParty>
+                           <BuyerID/>
+                           <SellerID/>
+                        </ServicePerformerParty>
+                        <TextCollection/>
+                     </Item>
+                  </ServiceAcknowledgement>
+               </n0:ServiceEntrySheetRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

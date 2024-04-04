@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_cXML_0000_ShipNoticeRequest_OAGIS_9.2_NotifyShipment.xsl">
+    <x:scenario label="Ship Notice Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:param name="anEnvName"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/ShipNotice/ShipNotice_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/ShipNotice/ShipNotice_AM.xml"
+            select="element()" label="Ship Notice Request"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request - Prod">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag" select="'Yes'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/ShipNotice/ShipNotice_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/ShipNotice/ShipNotice_AM1.xml"
+            select="element()" label="Ship Notice Request - Prod"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request - Delete">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag" select="'Yes'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/ShipNotice/ShipNoticeDelete_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/ShipNotice/ShipNoticeDelete_AM.xml"
+            select="element()" label="Ship Notice Request - Delete"/>
+    </x:scenario>
+</x:description>

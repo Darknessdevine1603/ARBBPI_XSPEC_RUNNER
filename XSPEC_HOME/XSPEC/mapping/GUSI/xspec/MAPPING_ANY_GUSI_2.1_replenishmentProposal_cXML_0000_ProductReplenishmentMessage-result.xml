@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/GUSI/MAPPING_ANY_GUSI_2.1_replenishmentProposal_cXML_0000_ProductReplenishmentMessage.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/GUSI/MAPPING_ANY_GUSI_2.1_replenishmentProposal_cXML_0000_ProductReplenishmentMessage.xsl"
+        date="2023-04-27T15:57:10.520232+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/GUSI/MAPPING_ANY_GUSI_2.1_replenishmentProposal_cXML_0000_ProductReplenishmentMessage.xspec">
+      <label>Replenishment Proposal Product Replenishment Message</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:57:10.739782+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004512490-T</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004512477-T</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkId">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Message deploymentMode="test">
+                  <ProductReplenishmentMessage>
+                     <ProductReplenishmentHeader creationDate="2017-05-07T11:47:42-08:00"
+                                                 messageID="RIT_GUSI_Replenishment"
+                                                 processType="SMI"/>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part ID</SupplierPartID>
+                           <BuyerPartID>Buyer Part ID</BuyerPartID>
+                        </ItemID>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en">Ship To Name</Name>
+                           <IdReference domain="EANID" identifier="3456789012345"/>
+                           <IdReference domain="buyerLocationID" identifier="Ship To Party ID"/>
+                        </Contact>
+                        <Contact role="supplierCorporate"
+                                 addressID="Supplier Party ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Supplier Party Name</Name>
+                           <IdReference domain="EANID" identifier="2345678901234"/>
+                        </Contact>
+                        <Contact role="locationFrom"
+                                 addressID="Ship From Party ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Ship From Name</Name>
+                           <IdReference domain="EANID" identifier="1234567890123"/>
+                        </Contact>
+                        <Contact role="BuyerPlannerCode">
+                           <Name xml:lang="EN">Person name</Name>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode=""/>
+                                 <AreaOrCityCode/>
+                                 <Number>1234567</Number>
+                              </TelephoneNumber>
+                           </Phone>
+                        </Contact>
+                        <Contact role="inventoryLocation"
+                                 addressID="Inventory Location ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Inventory Location Name</Name>
+                           <IdReference domain="EANID" identifier="5678901234123"/>
+                        </Contact>
+                        <ReplenishmentTimeSeries type="plannedReceipt">
+                           <TimeSeriesDetails>
+                              <Period startDate="2017-05-28T00:00:00-08:00"
+                                      endDate="2017-05-28T00:00:00-08:00"/>
+                              <TimeSeriesQuantity quantity="180.000">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </TimeSeriesQuantity>
+                              <Extrinsic name="ScheduleFrequence">DAY</Extrinsic>
+                           </TimeSeriesDetails>
+                        </ReplenishmentTimeSeries>
+                        <Extrinsic name="EANID">12345678901234</Extrinsic>
+                        <Extrinsic name="purchaseOrderLineItemNo">100</Extrinsic>
+                        <Extrinsic name="purchaseOrderNo">Purchase Order Document ID</Extrinsic>
+                     </ProductReplenishmentDetails>
+                  </ProductReplenishmentMessage>
+               </Message>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Replenishment Proposal Product Replenishment Message</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004512490-T</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004512477-T</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkId">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Message deploymentMode="test">
+                     <ProductReplenishmentMessage>
+                        <ProductReplenishmentHeader creationDate="2017-05-07T11:47:42-08:00"
+                                                    messageID="RIT_GUSI_Replenishment"
+                                                    processType="SMI"/>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part ID</SupplierPartID>
+                              <BuyerPartID>Buyer Part ID</BuyerPartID>
+                           </ItemID>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en">Ship To Name</Name>
+                              <IdReference domain="EANID" identifier="3456789012345"/>
+                              <IdReference domain="buyerLocationID" identifier="Ship To Party ID"/>
+                           </Contact>
+                           <Contact role="supplierCorporate"
+                                    addressID="Supplier Party ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Supplier Party Name</Name>
+                              <IdReference domain="EANID" identifier="2345678901234"/>
+                           </Contact>
+                           <Contact role="locationFrom"
+                                    addressID="Ship From Party ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Ship From Name</Name>
+                              <IdReference domain="EANID" identifier="1234567890123"/>
+                           </Contact>
+                           <Contact role="BuyerPlannerCode">
+                              <Name xml:lang="EN">Person name</Name>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode=""/>
+                                    <AreaOrCityCode/>
+                                    <Number>1234567</Number>
+                                 </TelephoneNumber>
+                              </Phone>
+                           </Contact>
+                           <Contact role="inventoryLocation"
+                                    addressID="Inventory Location ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Inventory Location Name</Name>
+                              <IdReference domain="EANID" identifier="5678901234123"/>
+                           </Contact>
+                           <ReplenishmentTimeSeries type="plannedReceipt">
+                              <TimeSeriesDetails>
+                                 <Period startDate="2017-05-28T00:00:00-08:00"
+                                         endDate="2017-05-28T00:00:00-08:00"/>
+                                 <TimeSeriesQuantity quantity="180.000">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </TimeSeriesQuantity>
+                                 <Extrinsic name="ScheduleFrequence">DAY</Extrinsic>
+                              </TimeSeriesDetails>
+                           </ReplenishmentTimeSeries>
+                           <Extrinsic name="EANID">12345678901234</Extrinsic>
+                           <Extrinsic name="purchaseOrderLineItemNo">100</Extrinsic>
+                           <Extrinsic name="purchaseOrderNo">Purchase Order Document ID</Extrinsic>
+                        </ProductReplenishmentDetails>
+                     </ProductReplenishmentMessage>
+                  </Message>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/GUSI/MAPPING_ANY_GUSI_2.1_replenishmentProposal_cXML_0000_ProductReplenishmentMessage.xspec">
+      <label>Replenishment Proposal Product Replenishment Message with contact details</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_BM_1.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:57:10.887955+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004512490-T</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004512477-T</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkId">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Message deploymentMode="production">
+                  <ProductReplenishmentMessage>
+                     <ProductReplenishmentHeader creationDate="2017-05-07T11:47:42-08:00"
+                                                 messageID="RIT_GUSI_Replenishment"
+                                                 processType="SMI"/>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part ID</SupplierPartID>
+                           <BuyerPartID>Buyer Part ID</BuyerPartID>
+                        </ItemID>
+                        <Contact role="locationTo"
+                                 addressID="Buyer Party ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Buyer Party Name</Name>
+                           <IdReference domain="EANID" identifier="0008970000000"/>
+                           <IdReference domain="buyerLocationID" identifier="Ship To Party ID"/>
+                        </Contact>
+                        <Contact role="locationFrom"
+                                 addressID="Supplier Party ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Supplier Party Name</Name>
+                           <IdReference domain="EANID" identifier="2345678901234"/>
+                        </Contact>
+                        <Contact role="BuyerPlannerCode">
+                           <Name xml:lang="EN">Person name 2</Name>
+                           <Email>test@123.com</Email>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode=""/>
+                                 <AreaOrCityCode/>
+                                 <Number>1234567</Number>
+                              </TelephoneNumber>
+                           </Phone>
+                           <Fax>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode=""/>
+                                 <AreaOrCityCode/>
+                                 <Number>1234567</Number>
+                              </TelephoneNumber>
+                           </Fax>
+                           <URL>http://www.testweb.com</URL>
+                        </Contact>
+                        <Contact role="inventoryLocation"
+                                 addressID="Inventory Location ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Inventory Location Name</Name>
+                           <IdReference domain="EANID" identifier="5678901234123"/>
+                        </Contact>
+                        <ReplenishmentTimeSeries type="plannedReceipt">
+                           <TimeSeriesDetails>
+                              <Period startDate="2017-05-28T00:00:00-08:00"
+                                      endDate="2017-05-28T00:00:00-08:00"/>
+                              <TimeSeriesQuantity quantity="180.000">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </TimeSeriesQuantity>
+                              <Extrinsic name="ScheduleFrequence">DAY</Extrinsic>
+                           </TimeSeriesDetails>
+                        </ReplenishmentTimeSeries>
+                        <Extrinsic name="EANID">12345678901234</Extrinsic>
+                        <Extrinsic name="purchaseOrderLineItemNo">100</Extrinsic>
+                        <Extrinsic name="purchaseOrderNo">Purchase Order Document ID</Extrinsic>
+                     </ProductReplenishmentDetails>
+                  </ProductReplenishmentMessage>
+               </Message>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="false">
+         <label>Replenishment Proposal Product Replenishment Message with contact details</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004512490-T</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004512477-T</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkId">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Message deploymentMode="test">
+                     <ProductReplenishmentMessage>
+                        <ProductReplenishmentHeader creationDate="2017-05-07T11:47:42-08:00"
+                                                    messageID="RIT_GUSI_Replenishment"
+                                                    processType="SMI"/>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part ID</SupplierPartID>
+                              <BuyerPartID>Buyer Part ID</BuyerPartID>
+                           </ItemID>
+                           <Contact role="locationTo"
+                                    addressID="Buyer Party ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Buyer Party Name</Name>
+                              <IdReference domain="EANID" identifier="0008970000000"/>
+                              <IdReference domain="buyerLocationID" identifier="Ship To Party ID"/>
+                           </Contact>
+                           <Contact role="locationFrom"
+                                    addressID="Supplier Party ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Supplier Party Name</Name>
+                              <IdReference domain="EANID" identifier="2345678901234"/>
+                           </Contact>
+                           <Contact role="BuyerPlannerCode">
+                              <Name xml:lang="EN">Person name 2</Name>
+                              <Email>test@123.com</Email>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode=""/>
+                                    <AreaOrCityCode/>
+                                    <Number>1234567</Number>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode=""/>
+                                    <AreaOrCityCode/>
+                                    <Number>1234567</Number>
+                                 </TelephoneNumber>
+                              </Fax>
+                              <URL>http://www.testweb.com</URL>
+                           </Contact>
+                           <Contact role="inventoryLocation"
+                                    addressID="Inventory Location ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Inventory Location Name</Name>
+                              <IdReference domain="EANID" identifier="5678901234123"/>
+                           </Contact>
+                           <ReplenishmentTimeSeries type="plannedReceipt">
+                              <TimeSeriesDetails>
+                                 <Period startDate="2017-05-28T00:00:00-08:00"
+                                         endDate="2017-05-28T00:00:00-08:00"/>
+                                 <TimeSeriesQuantity quantity="180.000">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </TimeSeriesQuantity>
+                                 <Extrinsic name="ScheduleFrequence">DAY</Extrinsic>
+                              </TimeSeriesDetails>
+                           </ReplenishmentTimeSeries>
+                           <Extrinsic name="EANID">12345678901234</Extrinsic>
+                           <Extrinsic name="purchaseOrderLineItemNo">100</Extrinsic>
+                           <Extrinsic name="purchaseOrderNo">Purchase Order Document ID</Extrinsic>
+                        </ProductReplenishmentDetails>
+                     </ProductReplenishmentMessage>
+                  </Message>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/GUSI/MAPPING_ANY_GUSI_2.1_replenishmentProposal_cXML_0000_ProductReplenishmentMessage.xspec">
+      <label>Replenishment Proposal Product Replenishment Message 3</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_BM_3.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:57:10.965913+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004512490-T</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004512477-T</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkId">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Message deploymentMode="production">
+                  <ProductReplenishmentMessage>
+                     <ProductReplenishmentHeader creationDate="2017-05-07T11:47:42-08:00"
+                                                 messageID="RIT_GUSI_Replenishment"
+                                                 processType="SMI"/>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part ID</SupplierPartID>
+                           <BuyerPartID>Buyer Part ID</BuyerPartID>
+                        </ItemID>
+                        <Contact role="locationTo"
+                                 addressID="Buyer Party ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Buyer Party Name</Name>
+                           <IdReference domain="EANID" identifier="123"/>
+                           <IdReference domain="buyerLocationID" identifier="Ship To Party ID"/>
+                        </Contact>
+                        <Contact role="locationFrom"
+                                 addressID="Supplier Party ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Supplier Party Name</Name>
+                           <IdReference domain="EANID" identifier="2345678901234"/>
+                        </Contact>
+                        <Contact role="BuyerPlannerCode">
+                           <Name xml:lang="EN">Person name 2</Name>
+                           <Email>test@123.com</Email>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode=""/>
+                                 <AreaOrCityCode/>
+                                 <Number>1234567</Number>
+                              </TelephoneNumber>
+                           </Phone>
+                           <Fax>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode=""/>
+                                 <AreaOrCityCode/>
+                                 <Number>1234567</Number>
+                              </TelephoneNumber>
+                           </Fax>
+                           <URL>http://www.testweb.com</URL>
+                        </Contact>
+                        <Contact role="inventoryLocation"
+                                 addressID="Inventory Location ID"
+                                 addressIDDomain="Assigned by buyer or buyer's agent">
+                           <Name xml:lang="en">Inventory Location Name</Name>
+                           <IdReference domain="EANID" identifier="5678901234123"/>
+                        </Contact>
+                        <ReplenishmentTimeSeries type="plannedReceipt">
+                           <TimeSeriesDetails>
+                              <Period startDate="2017-05-28T00:00:00-08:00"
+                                      endDate="2017-05-28T00:00:00-08:00"/>
+                              <TimeSeriesQuantity quantity="180.000">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </TimeSeriesQuantity>
+                              <Extrinsic name="ScheduleFrequence">DAY</Extrinsic>
+                           </TimeSeriesDetails>
+                        </ReplenishmentTimeSeries>
+                        <Extrinsic name="EANID">12345678901234</Extrinsic>
+                        <Extrinsic name="purchaseOrderLineItemNo">100</Extrinsic>
+                        <Extrinsic name="purchaseOrderNo">Purchase Order Document ID</Extrinsic>
+                     </ProductReplenishmentDetails>
+                  </ProductReplenishmentMessage>
+               </Message>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="false">
+         <label>Replenishment Proposal Product Replenishment Message 3</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004512490-T</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004512477-T</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkId">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Message deploymentMode="test">
+                     <ProductReplenishmentMessage>
+                        <ProductReplenishmentHeader creationDate="2017-05-07T11:47:42-08:00"
+                                                    messageID="RIT_GUSI_Replenishment"
+                                                    processType="SMI"/>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part ID</SupplierPartID>
+                              <BuyerPartID>Buyer Part ID</BuyerPartID>
+                           </ItemID>
+                           <Contact role="locationTo"
+                                    addressID="Buyer Party ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Buyer Party Name</Name>
+                              <IdReference domain="EANID" identifier="0008970000000"/>
+                              <IdReference domain="buyerLocationID" identifier="Ship To Party ID"/>
+                           </Contact>
+                           <Contact role="locationFrom"
+                                    addressID="Supplier Party ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Supplier Party Name</Name>
+                              <IdReference domain="EANID" identifier="2345678901234"/>
+                           </Contact>
+                           <Contact role="BuyerPlannerCode">
+                              <Name xml:lang="EN">Person name 2</Name>
+                              <Email>test@123.com</Email>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode=""/>
+                                    <AreaOrCityCode/>
+                                    <Number>1234567</Number>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode=""/>
+                                    <AreaOrCityCode/>
+                                    <Number>1234567</Number>
+                                 </TelephoneNumber>
+                              </Fax>
+                              <URL>http://www.testweb.com</URL>
+                           </Contact>
+                           <Contact role="inventoryLocation"
+                                    addressID="Inventory Location ID"
+                                    addressIDDomain="Assigned by buyer or buyer's agent">
+                              <Name xml:lang="en">Inventory Location Name</Name>
+                              <IdReference domain="EANID" identifier="5678901234123"/>
+                           </Contact>
+                           <ReplenishmentTimeSeries type="plannedReceipt">
+                              <TimeSeriesDetails>
+                                 <Period startDate="2017-05-28T00:00:00-08:00"
+                                         endDate="2017-05-28T00:00:00-08:00"/>
+                                 <TimeSeriesQuantity quantity="180.000">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </TimeSeriesQuantity>
+                                 <Extrinsic name="ScheduleFrequence">DAY</Extrinsic>
+                              </TimeSeriesDetails>
+                           </ReplenishmentTimeSeries>
+                           <Extrinsic name="EANID">12345678901234</Extrinsic>
+                           <Extrinsic name="purchaseOrderLineItemNo">100</Extrinsic>
+                           <Extrinsic name="purchaseOrderNo">Purchase Order Document ID</Extrinsic>
+                        </ProductReplenishmentDetails>
+                     </ProductReplenishmentMessage>
+                  </Message>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

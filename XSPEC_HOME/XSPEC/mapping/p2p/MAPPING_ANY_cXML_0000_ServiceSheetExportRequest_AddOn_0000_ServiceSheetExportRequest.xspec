@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_ServiceSheetExportRequest_AddOn_0000_ServiceSheetExportRequest.xsl">
+    <x:scenario label="Scenario for ServiceSheetExportRequest">
+        <x:param name="anAddOnCIVersion"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/SES/ServiceSheetExportRequest_BM.xml"/>
+        <x:expect label="Scenario for ServiceSheetExportRequest" href="../../../XSPEC/payloads/target/inbound/p2p/SES/ServiceSheetExportRequest_AM.xml" select="element()" />      
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario for testing ServiceSheetStatusAsyncExportRequest">
+        <x:param name="anAddOnCIVersion"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/SESStatusExport/ServiceSheetStatusAsyncExportRequest_BM.xml"/>
+        <x:expect label="Scenario for testing ServiceSheetStatusAsyncExportRequest" href="../../../XSPEC/payloads/target/inbound/p2p/SESStatusExport/ServiceSheetStatusAsyncExportRequest_AM.xml" select="element()" />  
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing with Network and activity with match 'ServiceSheetExportRequest">
+        <x:param name="anAddOnCIVersion"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/SES/SES With Network.xml"/>
+        <x:expect label="Scenario for testing with Network and activity with match 'ServiceSheetExportRequest" href="../../../XSPEC/payloads/target/inbound/p2p/SES/SES With Network_AM.xml" select="element()" />      
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing with Contract with match 'ServiceSheetExportRequest">
+        <x:param name="anAddOnCIVersion" select="'ARBCI10017'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/SES/SES With Contract_BM.xml"/>
+        <x:expect label="Scenario for testing with Contract with match 'ServiceSheetExportRequest" href="../../../XSPEC/payloads/target/inbound/p2p/SES/SES With Contract_AM.xml" select="element()" />      
+    </x:scenario>
+    <x:scenario label="Scenario for testing with Contract with match 'ServiceSheetExportRequest SP 14 or less">
+        <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/SES/SES With Contract_BM.xml"/>
+        <x:expect label="Scenario for testing with Contract with match 'ServiceSheetExportRequest SP 14 or less" href="../../../XSPEC/payloads/target/inbound/p2p/SES/SES With ContractLowSP_AM.xml" select="element()" />      
+    </x:scenario>
+
+    <!--<x:scenario label="Scenario for testing function erpDate">
+        <x:call template="erpDate">
+            <x:param name="p2pDate" select="'no_value'"/>
+        </x:call>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>-->
+</x:description>

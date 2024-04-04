@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_BankChargeRequest_AddOn_0000_BankChargeRequest.xsl">
+    <x:scenario label="Bank Charge Request">
+        <x:param name="anERPName"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anSourceDocumentType" select="'BankChargeRequest'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anAddOnCIVersion"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/BankCharge/BankChargeRequest.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/BankCharge/BankChargeRequest.dat"
+            select="element()" label="Bank Charge Request"/>
+    </x:scenario>   
+</x:description>

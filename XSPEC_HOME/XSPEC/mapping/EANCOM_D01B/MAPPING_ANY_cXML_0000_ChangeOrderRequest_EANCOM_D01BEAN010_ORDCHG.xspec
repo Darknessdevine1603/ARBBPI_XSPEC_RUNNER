@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EANCOM_D01B/MAPPING_ANY_cXML_0000_ChangeOrderRequest_EANCOM_D01BEAN010_ORDCHG.xsl">
+    <x:scenario label="Change Purchase Order">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID" select="'0860299001917'"/>
+        <x:param name="anReceiverGroupID" select="'EAN0000000032'"/>
+        <x:param name="anGLNFlip"/>
+        <x:param name="exchange"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EANCOM_D01B/OrderRequest/ChangeOrderTaxDetail_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EANCOM_D01B/OrderRequest/ChangeOrderTaxDetail_AM.dat"
+            select="element()" label="Change Purchase Order"/>
+    </x:scenario>
+    <x:scenario label="Change Purchase Order with attachment">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID" select="'0860299001917'"/>
+        <x:param name="anReceiverGroupID" select="'EAN0000000032'"/>
+        <x:param name="anGLNFlip"/>
+        <x:param name="exchange"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EANCOM_D01B/OrderRequest/ChangeOrder_RIT1_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EANCOM_D01B/OrderRequest/ChangeOrder_RIT1_AM.dat"
+            select="element()" label="Change Purchase Order with attachment"/>
+    </x:scenario>
+    <x:scenario label="Change Purchase Order with Comments">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'anISASender'"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver" select="'anISAReceiver'"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID" select="'0860299001917'"/>
+        <x:param name="anReceiverGroupID" select="'EAN0000000032'"/>
+        <x:param name="anGLNFlip" select="'true'"/>
+        <x:param name="exchange"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EANCOM_D01B/OrderRequest/ChangeOrder_RIT2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EANCOM_D01B/OrderRequest/ChangeOrder_RIT2_AM.dat"
+            select="element()" label="Change Purchase Order with Comments"/>
+    </x:scenario>
+    <x:scenario label="Change Purchase Order delete">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID" select="'0860299001917'"/>
+        <x:param name="anReceiverGroupID" select="'EAN0000000032'"/>
+        <x:param name="anGLNFlip"/>
+        <x:param name="exchange"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EANCOM_D01B/OrderRequest/ChangeOrder_RIT3_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EANCOM_D01B/OrderRequest/ChangeOrder_RIT3_AM.dat"
+            select="element()" label="Change Purchase Order delete"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EANCOM_D01B/MAPPING_ANY_EANCOM_D01BEAN008_DESADV_cXML_0000_ShipNoticeRequest.xsl">
+    <x:scenario label="Change Purchase Order">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/ShipNotice/ShipNotice_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/ShipNotice/ShipNotice_AM.dat"
+            select="element()" label="Change Purchase Order"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice - Multi PO">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT1_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT1_AM.dat"
+            select="element()" label="Ship Notice - Multi PO"/>
+    </x:scenario>
+    <x:scenario label="Ship Notice Request - Single PO">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT2_AM.dat"
+            select="element()" label="Ship Notice Request - Single PO"/>
+    </x:scenario>
+<!--    <x:scenario label="Ship Notice Request detail">
+        <!-\-        Parameter in main XSLT -\->
+        <x:param name="anSupplierANID"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT3_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT3_AM.dat"
+            select="element()" label="Ship Notice Request detail"/>
+    </x:scenario>-->
+<!--    <x:scenario label="Ship Notice Request with more info">
+        <!-\-        Parameter in main XSLT -\->
+        <x:param name="anSupplierANID"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT4_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT4_AM.dat"
+            select="element()" label="Ship Notice Request with more info"/>
+    </x:scenario>-->
+<!--    <x:scenario label="Ship Notice Request with comments">
+        <!-\-        Parameter in main XSLT -\->
+        <x:param name="anSupplierANID"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT5_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D01B/ShipNotice/ShipNotice_RIT5_AM.dat"
+            select="element()" label="Ship Notice Request with comments"/>
+    </x:scenario>-->
+</x:description>

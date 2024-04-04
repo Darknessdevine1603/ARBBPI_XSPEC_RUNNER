@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_cXML_0000_ChangeOrderRequest_UN-EDIFACT_D96A_ORDCHG.xsl">
+    <x:scenario label="Change Order Request exemptType Mixed">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/ChangeOrderRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/ChangeOrderRequest_AM.dat"
+            select="element()" label="Change Order Request exemptType Mixed"/>
+    </x:scenario>
+    <x:scenario label="Change Order Request - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/ChangeOrderRequest_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/ChangeOrderRequest_AM2.dat"
+            select="element()" label="Change Order Request - 2"/>
+    </x:scenario>
+    
+    <x:scenario label="Change Order Request Multi Line exemptType Standard">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/ChangeOrderRequestMultiLine_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/ChangeOrderRequestMultiLine_AM.dat"
+            select="element()" label="Change Order Request Multi Line exemptType Standard"/>
+    </x:scenario>
+    <x:scenario label="Change Order Request Multi Line">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender"/>
+        <x:param name="anISASenderQual"/>
+        <x:param name="anISAReceiver"/>
+        <x:param name="anISAReceiverQual"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/EDIFACT_D96A/OrderRequest/ChangeOrderRequestNoExempt_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/EDIFACT_D96A/OrderRequest/ChangeOrderRequestNoExempt_AM.dat"
+            select="element()" label="Change Order Request Multi Line"/>
+    </x:scenario>
+</x:description>

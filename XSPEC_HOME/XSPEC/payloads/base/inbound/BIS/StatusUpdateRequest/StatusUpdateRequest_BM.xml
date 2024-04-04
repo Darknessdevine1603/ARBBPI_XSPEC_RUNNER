@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>													
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.2.049/cXML.dtd">													
+<cXML payloadID="payload" timestamp="2020-10-12T12:39:31+00:00" version="1.2.049" xml:lang="en-US">													
+   <Header>												
+      <From>											
+         <Credential domain="BusinessPartnerId">										
+            <Identity>									
+               <IdReference domain = "iso6523" identifier = "9925:BE12345678"/>								
+            </Identity>									
+         </Credential>										
+      </From>											
+      <To>											
+         <Credential domain="BusinessPartnerId">										
+            <Identity>									
+               <IdReference domain = "iso6523" identifier = "9925:BE3456789"/>								
+            </Identity>									
+         </Credential>										
+         <Correspondent preferredLanguage = "de">										
+            <Contact role = "correspondent">									
+               <Name xml:lang = "en-US">SupplierName</Name>								
+            </Contact>									
+            <Routing destination="peppol"/>									
+         </Correspondent>										
+      </To>											
+      <Sender>											
+         <Credential domain="NetworkID">										
+            <Identity>ANXXXXXXXXXXX-T</Identity>									
+            <SharedSecret>XXXX</SharedSecret>									
+         </Credential>										
+         <UserAgent>Ariba SN</UserAgent>										
+      </Sender>											
+   </Header>												
+   <Request deploymentMode="test">												
+      <StatusUpdateRequest>											
+         <DocumentReference payloadID="payloadID0"/>										
+         <Status code="200" text="OK" xml:lang="en">Accepted without error</Status>										
+         <InvoiceStatus type="paid">										
+            <InvoiceIDInfo invoiceID="invoiceID0" invoiceDate="2020-10-12T08:39:31+00:00"/>									
+            <Comments xml:lang="en-US" type="Action">No action required</Comments>									
+            <Comments xml:lang="en-US" type="Reason">No Issue</Comments>									
+         </InvoiceStatus>										
+      </StatusUpdateRequest>											
+   </Request>												
+</cXML>													

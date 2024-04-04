@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ConfirmationRequest_S4HANA_0000_orderconfirmationrequest.xsl">
+    <x:scenario label="OrderConfirmationRequest - Mat. limit + Service limit + Attachment">
+        <!-- Parameter in main XSLT -->
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Mat_Service_limit_Attachment_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/Confirmation/OC_Mat_Service_limit_Attachment_AM.dat"
+            select="element()" label="OrderConfirmationRequest - Mat. limit + Service limit + Attachment"/>
+    </x:scenario>
+    
+    <x:scenario label="OrderConfirmationRequest - Mat. + Service">
+        <!-- Parameter in main XSLT -->
+        <x:param name="cXMLAttachments"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Mat_Service_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/Confirmation/OC_Mat_Service_AM.dat"
+            select="element()" label="OrderConfirmationRequest - Mat. + Service"/>
+    </x:scenario>
+    
+    <x:scenario label="OrderConfirmationRequest - Item Rejected">
+        <!-- Parameter in main XSLT -->
+        <x:param name="cXMLAttachments"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Mat_Item_Rejected_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/Confirmation/OC_Mat_Item_Rejected_AM.dat"
+            select="element()" label="OrderConfirmationRequest - Item Rejected"/>
+    </x:scenario>
+    
+    <x:scenario label="OrderConfirmationRequest - Hierarchy">
+        <!-- Parameter in main XSLT -->
+        <x:param name="cXMLAttachments"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Hierarchy_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/Confirmation/OC_Hierarchy_AM.dat"
+            select="element()" label="OrderConfirmationRequest - Hierarchy"/>
+    </x:scenario>
+
+    <x:scenario label="OrderConfirmationRequest - Header accept">
+        <!-- Parameter in main XSLT -->
+        <x:param name="cXMLAttachments"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Header_accept_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/Confirmation/OC_Header_accept_AM.dat"
+            select="element()" label="OrderConfirmationRequest - Header accept"/>
+    </x:scenario>
+
+    <x:scenario label="OrderConfirmationRequest - Service limit">
+        <!-- Parameter in main XSLT -->
+        <x:param name="cXMLAttachments"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/Confirmation/OC_Service_limit_BM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/Confirmation/OC_Service_limit_AM.dat"
+            select="element()" label="OrderConfirmationRequest - Service limit"/>
+    </x:scenario>
+
+</x:description>

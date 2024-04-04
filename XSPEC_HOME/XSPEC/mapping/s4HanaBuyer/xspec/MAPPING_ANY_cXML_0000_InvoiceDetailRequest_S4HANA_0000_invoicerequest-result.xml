@@ -1,0 +1,1643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xsl"
+        date="2023-04-27T15:46:21.447145+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Invoice with Goods receipt</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_B_GR_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1602767928503-1197291286811153441</ID>
+                  <CreationDateTime>2020-10-15T18:48:47+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1602767928503-1197291286811153441@10.163.3.194"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>INV_32637</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                  <DocumentDate>2020-10-15</DocumentDate>
+                  <GrossAmount currencyCode="EUR">35.7</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>10300089</BuyerPartyID>
+                     <Address>
+                        <AddressName>S4Lean - TEST</AddressName>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010</AddressName>
+                     </Address>
+                  </Party>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">5.7</Amount>
+                     <TaxPercentage>19</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">10</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500032637</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2020-10-15</TaxDeterminationDate>
+                     </ItemTax>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">20</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">2</InvoicedQuantity>
+                     <PurchaseOrderID>4500032637</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2020-10-15</TaxDeterminationDate>
+                     </ItemTax>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="false">
+         <label>Invoice Request - Invoice with Goods receipt</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1602767928503-1197291286811153441</ID>
+                     <CreationDateTime>2020-10-15T18:48:47+05:30</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>INV_32637</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                     <DocumentDate>2020-10-15</DocumentDate>
+                     <GrossAmount currencyCode="EUR">35.7</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>10300089</BuyerPartyID>
+                        <Address>
+                           <AddressName>S4Lean - TEST</AddressName>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010</AddressName>
+                        </Address>
+                     </Party>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">5.7</Amount>
+                        <TaxPercentage>19</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">10.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500032637</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2020-10-15</TaxDeterminationDate>
+                        </ItemTax>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">20.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">2</InvoicedQuantity>
+                        <PurchaseOrderID>4500032637</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2020-10-15</TaxDeterminationDate>
+                        </ItemTax>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Invoice Lean Service</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_4500040220_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1623676870212-1323512301024600273</ID>
+                  <CreationDateTime>2021-06-14T18:51:08+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1623676870212-1323512301024600273@10.163.3.224"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>INV4500040220</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                  <DocumentDate>2021-06-14</DocumentDate>
+                  <GrossAmount currencyCode="EUR">156.19</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>10300089</BuyerPartyID>
+                     <Address>
+                        <AddressName>S4Lean - TEST</AddressName>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010</AddressName>
+                     </Address>
+                  </Party>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">24.94</Amount>
+                     <TaxPercentage>19</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">131.25</NetAmount>
+                     <InvoicedQuantity unitCode="HUR">90</InvoicedQuantity>
+                     <PurchaseOrderID>4500040220</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <ServiceEntrySheetIDBySupplier>SES4500040220</ServiceEntrySheetIDBySupplier>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2021-06-14</TaxDeterminationDate>
+                     </ItemTax>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="false">
+         <label>Invoice Request - Invoice Lean Service</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1623676870212-1323512301024600273</ID>
+                     <CreationDateTime>2021-06-14T18:51:08+05:30</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>INV4500040220</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                     <DocumentDate>2021-06-14</DocumentDate>
+                     <GrossAmount currencyCode="EUR">156.19</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>10300089</BuyerPartyID>
+                        <Address>
+                           <AddressName>S4Lean - TEST</AddressName>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010</AddressName>
+                        </Address>
+                     </Party>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">24.94</Amount>
+                        <TaxPercentage>19</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">131.25</NetAmount>
+                        <InvoicedQuantity unitCode="HUR">90</InvoicedQuantity>
+                        <PurchaseOrderID>4500040220</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <ServiceEntrySheetIDBySupplier>SES4500040220</ServiceEntrySheetIDBySupplier>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2021-06-14</TaxDeterminationDate>
+                        </ItemTax>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Header+Item text (Multi Material/Service with/without language code)</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_header_item_text_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1638253793303-6180316199530063508</ID>
+                  <CreationDateTime>2021-11-29T22:29:53-08:00</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>12345</RecipientBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>AN02008197911-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1638253793303-6180316199530063508@10.163.192.198"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>INV4500001229</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                  <DocumentDate>2021-11-29</DocumentDate>
+                  <GrossAmount currencyCode="USD">70</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>10300096</BuyerPartyID>
+                     <Address>
+                        <AddressName>Test Inlandslieferant1 DE- AN-TEST</AddressName>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010</AddressName>
+                     </Address>
+                  </Party>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                     <Amount currencyCode="USD">0</Amount>
+                     <TaxPercentage>0</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <DocumentHeaderText Type="Note">
+                     <TextElementLanguage>en</TextElementLanguage>
+                     <TextElementText>HeaderCommentsLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG
+                    LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG
+                    DefaultLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG
+                    LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGHeader</TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="USD">20</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500001229</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <DeliveryNote>SHIP4500001229</DeliveryNote>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>0</TaxPercentage>
+                        <TaxDeterminationDate>2021-11-29</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>en</TextElementLanguage>
+                        <TextElementText>Item_1_LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG_Item_1</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="USD">20</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500001229</PurchaseOrderID>
+                     <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                     <DeliveryNote>SHIP4500001229</DeliveryNote>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>0</TaxPercentage>
+                        <TaxDeterminationDate>2021-11-29</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>EN</TextElementLanguage>
+                        <TextElementText>Item_2_LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG_Item_1</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>3</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="USD">50</NetAmount>
+                     <InvoicedQuantity unitCode="HUR">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500001229</PurchaseOrderID>
+                     <PurchaseOrderItemID>000030</PurchaseOrderItemID>
+                     <DeliveryNote>SHIP4500001229</DeliveryNote>
+                     <ServiceEntrySheetIDBySupplier>VELBTU00000061</ServiceEntrySheetIDBySupplier>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>0</TaxPercentage>
+                        <TaxDeterminationDate>2021-11-29</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>en</TextElementLanguage>
+                        <TextElementText>Item_3_LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG_Item_2</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>4</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="USD">50</NetAmount>
+                     <InvoicedQuantity unitCode="HUR">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500001229</PurchaseOrderID>
+                     <PurchaseOrderItemID>000040</PurchaseOrderItemID>
+                     <DeliveryNote>SHIP4500001229</DeliveryNote>
+                     <ServiceEntrySheetIDBySupplier>VELBTU00000061</ServiceEntrySheetIDBySupplier>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>0</TaxPercentage>
+                        <TaxDeterminationDate>2021-11-29</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>EN</TextElementLanguage>
+                        <TextElementText>Item_4_LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG_Item_2</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="false">
+         <label>Invoice Request - Header+Item text (Multi Material/Service with/without language code)</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1638253793303-6180316199530063508</ID>
+                     <CreationDateTime>2021-11-29T22:29:53-08:00</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>12345</RecipientBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>AN02008197911-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>INV4500001229</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                     <DocumentDate>2021-11-29</DocumentDate>
+                     <GrossAmount currencyCode="USD">70.0</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>10300096</BuyerPartyID>
+                        <Address>
+                           <AddressName>Test Inlandslieferant1 DE- AN-TEST</AddressName>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010</AddressName>
+                        </Address>
+                     </Party>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <Amount currencyCode="USD">.0</Amount>
+                        <TaxPercentage>0</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <DocumentHeaderText Type="Note">
+                        <TextElementLanguage>en</TextElementLanguage>
+                        <TextElementText>HeaderCommentsLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG
+                    LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG
+                    DefaultLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG
+                    LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGHeader</TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="USD">20.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500001229</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <DeliveryNote>SHIP4500001229</DeliveryNote>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>0</TaxPercentage>
+                           <TaxDeterminationDate>2021-11-29</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>en</TextElementLanguage>
+                           <TextElementText>Item_1_LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG_Item_1</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="USD">20.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500001229</PurchaseOrderID>
+                        <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                        <DeliveryNote>SHIP4500001229</DeliveryNote>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>0</TaxPercentage>
+                           <TaxDeterminationDate>2021-11-29</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>EN</TextElementLanguage>
+                           <TextElementText>Item_2_LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG_Item_1</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>3</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="USD">50.0</NetAmount>
+                        <InvoicedQuantity unitCode="HUR">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500001229</PurchaseOrderID>
+                        <PurchaseOrderItemID>000030</PurchaseOrderItemID>
+                        <DeliveryNote>SHIP4500001229</DeliveryNote>
+                        <ServiceEntrySheetIDBySupplier>VELBTU00000061</ServiceEntrySheetIDBySupplier>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>0</TaxPercentage>
+                           <TaxDeterminationDate>2021-11-29</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>en</TextElementLanguage>
+                           <TextElementText>Item_3_LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG_Item_2</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>4</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="USD">50.0</NetAmount>
+                        <InvoicedQuantity unitCode="HUR">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500001229</PurchaseOrderID>
+                        <PurchaseOrderItemID>000040</PurchaseOrderItemID>
+                        <DeliveryNote>SHIP4500001229</DeliveryNote>
+                        <ServiceEntrySheetIDBySupplier>VELBTU00000061</ServiceEntrySheetIDBySupplier>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>0</TaxPercentage>
+                           <TaxDeterminationDate>2021-11-29</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>EN</TextElementLanguage>
+                           <TextElementText>Item_4_LONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONGLONG_Item_2</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Header text without language code</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/Invoice_header_text_wo_lang_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID/>
+                  <CreationDateTime>2020-09-21T14:31:40+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+                  <SenderParty>
+                     <InternalID>AN02005082260-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="69d2ac1b-bdbd-9a6d-b725-adf7228daf1b"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>INV_90000193</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                  <DocumentDate>2020-09-21</DocumentDate>
+                  <GrossAmount currencyCode="EUR">165.1</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>S1000</BuyerPartyID>
+                     <Address>
+                        <AddressName/>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010</AddressName>
+                     </Address>
+                  </Party>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">6.67</Amount>
+                     <TaxPercentage>19.0</TaxPercentage>
+                  </HeaderTax>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>A2</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">9.1</Amount>
+                     <TaxPercentage>7.0</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <DocumentHeaderText Type="Note">
+                     <TextElementLanguage>EN</TextElementLanguage>
+                     <TextElementText>Header text</TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>10</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">35.1</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">2</InvoicedQuantity>
+                     <PurchaseOrderID>4500011381</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                        <TaxPercentage>19.0</TaxPercentage>
+                        <TaxDeterminationDate>2020-09-21</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>de</TextElementLanguage>
+                        <TextElementText>Item_1 text</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>20</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">130</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500011381</PurchaseOrderID>
+                     <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>A2</SupplierTaxTypeCode>
+                        <TaxPercentage>7.0</TaxPercentage>
+                        <TaxDeterminationDate>2020-09-21</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>de</TextElementLanguage>
+                        <TextElementText>Item_2 text</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Attachment FileName="" MimeType="" FileSize="">
+                     <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                  </Attachment>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="false">
+         <label>Invoice Request - Header text without language code</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID/>
+                     <CreationDateTime>2020-09-21T14:31:40+05:30</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                     <SenderParty>
+                        <InternalID>AN02005082260-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>INV_90000193</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                     <DocumentDate>2020-09-21</DocumentDate>
+                     <GrossAmount currencyCode="EUR">180.87</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>S1000</BuyerPartyID>
+                        <Address>
+                           <AddressName/>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010</AddressName>
+                        </Address>
+                     </Party>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">6.67</Amount>
+                        <TaxPercentage>19.0</TaxPercentage>
+                     </HeaderTax>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>A2</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">9.1</Amount>
+                        <TaxPercentage>7.0</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <DocumentHeaderText Type="Note">
+                        <TextElementLanguage>EN</TextElementLanguage>
+                        <TextElementText>Header text</TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>10</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">35.1</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">2</InvoicedQuantity>
+                        <PurchaseOrderID>4500011381</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                           <TaxPercentage>19.0</TaxPercentage>
+                           <TaxDeterminationDate>2020-09-21</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>de</TextElementLanguage>
+                           <TextElementText>Item_1 text</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>20</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">130.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500011381</PurchaseOrderID>
+                        <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>A2</SupplierTaxTypeCode>
+                           <TaxPercentage>7.0</TaxPercentage>
+                           <TaxDeterminationDate>2020-09-21</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>de</TextElementLanguage>
+                           <TextElementText>Item_2 text</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Attachment FileName="" MimeType="" FileSize="">
+                        <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                     </Attachment>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Pricing elements</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/Invoice_pricing_elements_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID/>
+                  <CreationDateTime>2020-05-11T19:39:39+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+                  <SenderParty>
+                     <InternalID>AN02005082260-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="AF9SRZHX3CEWlbwsXCQf1yLqVaJ-"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>INV_10000163</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                  <DocumentDate>2020-05-11</DocumentDate>
+                  <GrossAmount currencyCode="EUR">123</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>S1000</BuyerPartyID>
+                     <Address>
+                        <AddressName/>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010</AddressName>
+                     </Address>
+                  </Party>
+                  <PricingElement>
+                     <SupplierConditionType listID="Shipping Cost">HFVA</SupplierConditionType>
+                     <ConditionAmount currencyCode="EUR">110</ConditionAmount>
+                  </PricingElement>
+                  <PricingElement>
+                     <SupplierConditionType listID="Special Handling Charge">HSVA</SupplierConditionType>
+                     <ConditionAmount currencyCode="EUR">10</ConditionAmount>
+                  </PricingElement>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">6</Amount>
+                     <TaxPercentage>10.0</TaxPercentage>
+                  </HeaderTax>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">6</Amount>
+                     <TaxPercentage>10.0</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <DocumentHeaderText Type="Note">
+                     <TextElementText>[Ariba added comment: Created in the name and on behalf of the supplier]
+                </TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>10</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">123</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">3</InvoicedQuantity>
+                     <PurchaseOrderID>4500006713</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                        <TaxPercentage>10.0</TaxPercentage>
+                        <TaxDeterminationDate>2020-05-11</TaxDeterminationDate>
+                     </ItemTax>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>A2</SupplierTaxTypeCode>
+                        <TaxPercentage>10.0</TaxPercentage>
+                        <TaxDeterminationDate>2020-05-11</TaxDeterminationDate>
+                     </ItemTax>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="false">
+         <label>Invoice Request - Pricing elements</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID/>
+                     <CreationDateTime>2020-05-11T19:39:39+05:30</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                     <SenderParty>
+                        <InternalID>AN02005082260-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>INV_10000163</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                     <DocumentDate>2020-05-11</DocumentDate>
+                     <GrossAmount currencyCode="EUR">135.0</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>S1000</BuyerPartyID>
+                        <Address>
+                           <AddressName/>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010</AddressName>
+                        </Address>
+                     </Party>
+                     <PricingElement>
+                        <SupplierConditionType listID="Cash Discount">HDVA</SupplierConditionType>
+                        <ConditionAmount currencyCode="EUR">15.0</ConditionAmount>
+                     </PricingElement>
+                     <PricingElement>
+                        <SupplierConditionType listID="Shipping Cost">HFVA</SupplierConditionType>
+                        <ConditionAmount currencyCode="EUR">110.0</ConditionAmount>
+                     </PricingElement>
+                     <PricingElement>
+                        <SupplierConditionType listID="Special Handling Charge">HSVA</SupplierConditionType>
+                        <ConditionAmount currencyCode="EUR">10.0</ConditionAmount>
+                     </PricingElement>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">6.0</Amount>
+                        <TaxPercentage>10.0</TaxPercentage>
+                     </HeaderTax>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">6.0</Amount>
+                        <TaxPercentage>10.0</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <DocumentHeaderText Type="Note">
+                        <TextElementText>[Ariba added comment: Created in the name and on behalf of the supplier]
+                </TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>10</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">123.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">3</InvoicedQuantity>
+                        <PurchaseOrderID>4500006713</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>A1</SupplierTaxTypeCode>
+                           <TaxPercentage>10.0</TaxPercentage>
+                           <TaxDeterminationDate>2020-05-11</TaxDeterminationDate>
+                        </ItemTax>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>A2</SupplierTaxTypeCode>
+                           <TaxPercentage>10.0</TaxPercentage>
+                           <TaxDeterminationDate>2020-05-11</TaxDeterminationDate>
+                        </ItemTax>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Multiple IBD</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_3232_multiple_IBD_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1583403262825-2375131026974807306</ID>
+                  <CreationDateTime>2020-03-05T15:44:20+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+                  <SenderParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1583403262825-2375131026974807306@10.163.3.224"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>INV_3232</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                  <DocumentDate>2020-03-05</DocumentDate>
+                  <GrossAmount currencyCode="EUR">2856</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>10300089</BuyerPartyID>
+                     <Address>
+                        <AddressName>S4Lean - TEST</AddressName>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010</AddressName>
+                     </Address>
+                  </Party>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">456</Amount>
+                     <TaxPercentage>19</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">1400</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">10</InvoicedQuantity>
+                     <PurchaseOrderID>4500003232</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <DeliveryNote>ASN_3232_1</DeliveryNote>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2020-03-05</TaxDeterminationDate>
+                     </ItemTax>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">1000</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">20</InvoicedQuantity>
+                     <PurchaseOrderID>4500003232</PurchaseOrderID>
+                     <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                     <DeliveryNote>ASN_3232_2</DeliveryNote>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2020-03-05</TaxDeterminationDate>
+                     </ItemTax>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="false">
+         <label>Invoice Request - Multiple IBD</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1583403262825-2375131026974807306</ID>
+                     <CreationDateTime>2020-03-05T15:44:20+05:30</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                     <SenderParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>INV_3232</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                     <DocumentDate>2020-03-05</DocumentDate>
+                     <GrossAmount currencyCode="EUR">2856.0</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>10300089</BuyerPartyID>
+                        <Address>
+                           <AddressName>S4Lean - TEST</AddressName>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010</AddressName>
+                        </Address>
+                     </Party>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">456.0</Amount>
+                        <TaxPercentage>19</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">1400.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">10</InvoicedQuantity>
+                        <PurchaseOrderID>4500003232</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <DeliveryNote>ASN_3232_1</DeliveryNote>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2020-03-05</TaxDeterminationDate>
+                        </ItemTax>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">1000.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">20</InvoicedQuantity>
+                        <PurchaseOrderID>4500003232</PurchaseOrderID>
+                        <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                        <DeliveryNote>ASN_3232_2</DeliveryNote>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2020-03-05</TaxDeterminationDate>
+                        </ItemTax>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Credit Memo</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/CreditMemo_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1631010817172-1068693035053783860</ID>
+                  <CreationDateTime>2021-09-07T16:03:36+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>12345</RecipientBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1631010817172-1068693035053783860@10.163.193.142"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>CM41912</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>005</SupplierInvoiceTypeCode>
+                  <DocumentDate>2021-09-07</DocumentDate>
+                  <GrossAmount currencyCode="EUR">41.9</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>10300089</BuyerPartyID>
+                     <Address>
+                        <AddressName>S4Lean - TEST</AddressName>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010</AddressName>
+                     </Address>
+                  </Party>
+                  <PricingElement>
+                     <SupplierConditionType listID="Special Handling Charge">HSVA</SupplierConditionType>
+                     <ConditionAmount currencyCode="EUR">10</ConditionAmount>
+                  </PricingElement>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">1.9</Amount>
+                     <TaxPercentage>19</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>003</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">10</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500041912</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>EN</TextElementLanguage>
+                        <TextElementText>Comment 1 material item</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>003</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">20</NetAmount>
+                     <InvoicedQuantity unitCode="HUR">2</InvoicedQuantity>
+                     <PurchaseOrderID>4500041912</PurchaseOrderID>
+                     <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                     <ServiceEntrySheetIDBySupplier>SES41912</ServiceEntrySheetIDBySupplier>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>EN</TextElementLanguage>
+                        <TextElementText>Comment 1 service item</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Attachment FileName="" MimeType="" FileSize="">
+                     <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                  </Attachment>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="false">
+         <label>Invoice Request - Credit Memo</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1631010817172-1068693035053783860</ID>
+                     <CreationDateTime>2021-09-07T16:03:36+05:30</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>12345</RecipientBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>CM41912</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>005</SupplierInvoiceTypeCode>
+                     <DocumentDate>2021-09-07</DocumentDate>
+                     <GrossAmount currencyCode="EUR">41.9</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>10300089</BuyerPartyID>
+                        <Address>
+                           <AddressName>S4Lean - TEST</AddressName>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010</AddressName>
+                        </Address>
+                     </Party>
+                     <PricingElement>
+                        <SupplierConditionType listID="Special Handling Charge">HSVA</SupplierConditionType>
+                        <ConditionAmount currencyCode="EUR">10.0</ConditionAmount>
+                     </PricingElement>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">1.9</Amount>
+                        <TaxPercentage>19</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>003</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">10.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500041912</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>EN</TextElementLanguage>
+                           <TextElementText>Comment 1 material item</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>003</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">20.0</NetAmount>
+                        <InvoicedQuantity unitCode="HUR">2</InvoicedQuantity>
+                        <PurchaseOrderID>4500041912</PurchaseOrderID>
+                        <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                        <ServiceEntrySheetIDBySupplier>SES41912</ServiceEntrySheetIDBySupplier>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>EN</TextElementLanguage>
+                           <TextElementText>Comment 1 service item</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Attachment FileName="" MimeType="" FileSize="">
+                        <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                     </Attachment>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario8"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Service Tax</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_Service_Tax_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1631009743704-8491499120242079395</ID>
+                  <CreationDateTime>2021-09-07T15:45:43+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>12345</RecipientBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1631009743704-8491499120242079395@10.163.193.142"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>INV41912</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                  <DocumentDate>2021-09-07</DocumentDate>
+                  <GrossAmount currencyCode="EUR">42.9</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>10300089</BuyerPartyID>
+                     <Address>
+                        <AddressName>S4Lean - TEST</AddressName>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010</AddressName>
+                     </Address>
+                  </Party>
+                  <PricingElement>
+                     <SupplierConditionType listID="Special Handling Charge">HSVA</SupplierConditionType>
+                     <ConditionAmount currencyCode="EUR">10</ConditionAmount>
+                  </PricingElement>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">1.9</Amount>
+                     <TaxPercentage>19</TaxPercentage>
+                  </HeaderTax>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>SAL</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">1</Amount>
+                     <TaxPercentage>5</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">10</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500041912</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>EN</TextElementLanguage>
+                        <TextElementText>Comment 1 material item</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">20</NetAmount>
+                     <InvoicedQuantity unitCode="HUR">2</InvoicedQuantity>
+                     <PurchaseOrderID>4500041912</PurchaseOrderID>
+                     <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                     <ServiceEntrySheetIDBySupplier>SES41912</ServiceEntrySheetIDBySupplier>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>SAL</SupplierTaxTypeCode>
+                        <TaxPercentage>5</TaxPercentage>
+                        <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>EN</TextElementLanguage>
+                        <TextElementText>Comment 1 service item</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Attachment FileName="" MimeType="" FileSize="">
+                     <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                  </Attachment>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario8-expect1" successful="false">
+         <label>Invoice Request - Service Tax</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1631009743704-8491499120242079395</ID>
+                     <CreationDateTime>2021-09-07T15:45:43+05:30</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>12345</RecipientBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>INV41912</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                     <DocumentDate>2021-09-07</DocumentDate>
+                     <GrossAmount currencyCode="EUR">42.9</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>10300089</BuyerPartyID>
+                        <Address>
+                           <AddressName>S4Lean - TEST</AddressName>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010</AddressName>
+                        </Address>
+                     </Party>
+                     <PricingElement>
+                        <SupplierConditionType listID="Special Handling Charge">HSVA</SupplierConditionType>
+                        <ConditionAmount currencyCode="EUR">10.0</ConditionAmount>
+                     </PricingElement>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">1.9</Amount>
+                        <TaxPercentage>19</TaxPercentage>
+                     </HeaderTax>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>SAL</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">1.0</Amount>
+                        <TaxPercentage>5</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">10.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500041912</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>EN</TextElementLanguage>
+                           <TextElementText>Comment 1 material item</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">20.0</NetAmount>
+                        <InvoicedQuantity unitCode="HUR">2</InvoicedQuantity>
+                        <PurchaseOrderID>4500041912</PurchaseOrderID>
+                        <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                        <ServiceEntrySheetIDBySupplier>SES41912</ServiceEntrySheetIDBySupplier>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>SAL</SupplierTaxTypeCode>
+                           <TaxPercentage>5</TaxPercentage>
+                           <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>EN</TextElementLanguage>
+                           <TextElementText>Comment 1 service item</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Attachment FileName="" MimeType="" FileSize="">
+                        <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                     </Attachment>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario9"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - SoldTo</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_SoldTo_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1631009743704-8491499120242079395</ID>
+                  <CreationDateTime>2021-09-07T15:45:43+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>12345</RecipientBusinessSystemID>
+                  <SenderParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1631009743704-8491499120242079395@10.163.193.142"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Invoice>
+                  <SupplierInvoiceID>INV41912</SupplierInvoiceID>
+                  <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                  <DocumentDate>2021-09-07</DocumentDate>
+                  <GrossAmount currencyCode="EUR">42.9</GrossAmount>
+                  <Party PartyType="BillFrom">
+                     <BuyerPartyID>10300089</BuyerPartyID>
+                     <Address>
+                        <AddressName>S4Lean - TEST</AddressName>
+                     </Address>
+                  </Party>
+                  <Party PartyType="BillTo">
+                     <Address>
+                        <AddressName>Company Code 1010 - Address Name soldTo</AddressName>
+                     </Address>
+                  </Party>
+                  <PricingElement>
+                     <SupplierConditionType listID="Special Handling Charge">HSVA</SupplierConditionType>
+                     <ConditionAmount currencyCode="EUR">10</ConditionAmount>
+                  </PricingElement>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">1.9</Amount>
+                     <TaxPercentage>19</TaxPercentage>
+                  </HeaderTax>
+                  <HeaderTax>
+                     <SupplierTaxTypeCode>SAL</SupplierTaxTypeCode>
+                     <Amount currencyCode="EUR">1</Amount>
+                     <TaxPercentage>5</TaxPercentage>
+                  </HeaderTax>
+                  <DocumentHeaderText Type="Text">
+                     <TextElementText>ARIBA_INVOICE</TextElementText>
+                  </DocumentHeaderText>
+                  <Item>
+                     <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">10</NetAmount>
+                     <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                     <PurchaseOrderID>4500041912</PurchaseOrderID>
+                     <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                     <DeliveryNote>31669</DeliveryNote>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <TaxPercentage>19</TaxPercentage>
+                        <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>FR</TextElementLanguage>
+                        <TextElementText>Comment 1 material item</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Item>
+                     <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                     <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                     <NetAmount currencyCode="EUR">20</NetAmount>
+                     <InvoicedQuantity unitCode="HUR">2</InvoicedQuantity>
+                     <PurchaseOrderID>4500041912</PurchaseOrderID>
+                     <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                     <DeliveryNote>31669</DeliveryNote>
+                     <ServiceEntrySheetIDBySupplier>SES41912</ServiceEntrySheetIDBySupplier>
+                     <ItemTax>
+                        <SupplierTaxTypeCode>SAL</SupplierTaxTypeCode>
+                        <TaxPercentage>5</TaxPercentage>
+                        <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                     </ItemTax>
+                     <DocumentItemText Type="Note">
+                        <TextElementLanguage>EN</TextElementLanguage>
+                        <TextElementText>Comment 1 service item</TextElementText>
+                     </DocumentItemText>
+                     <HigherLevelItem>000000</HigherLevelItem>
+                  </Item>
+                  <Attachment FileName="" MimeType="" FileSize="">
+                     <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                  </Attachment>
+               </Invoice>
+            </n0:InvoiceRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario9-expect1" successful="false">
+         <label>Invoice Request - SoldTo</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:InvoiceRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1631009743704-8491499120242079395</ID>
+                     <CreationDateTime>2021-09-07T15:45:43+05:30</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>12345</RecipientBusinessSystemID>
+                     <SenderParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </SenderParty>
+                  </MessageHeader>
+                  <Invoice>
+                     <SupplierInvoiceID>INV41912</SupplierInvoiceID>
+                     <SupplierInvoiceTypeCode>004</SupplierInvoiceTypeCode>
+                     <DocumentDate>2021-09-07</DocumentDate>
+                     <GrossAmount currencyCode="EUR">42.9</GrossAmount>
+                     <Party PartyType="BillFrom">
+                        <BuyerPartyID>10300089</BuyerPartyID>
+                        <Address>
+                           <AddressName>S4Lean - TEST</AddressName>
+                        </Address>
+                     </Party>
+                     <Party PartyType="BillTo">
+                        <Address>
+                           <AddressName>Company Code 1010 - Address Name soldTo</AddressName>
+                        </Address>
+                     </Party>
+                     <PricingElement>
+                        <SupplierConditionType listID="Special Handling Charge">HSVA</SupplierConditionType>
+                        <ConditionAmount currencyCode="EUR">10.0</ConditionAmount>
+                     </PricingElement>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">1.9</Amount>
+                        <TaxPercentage>19</TaxPercentage>
+                     </HeaderTax>
+                     <HeaderTax>
+                        <SupplierTaxTypeCode>SAL</SupplierTaxTypeCode>
+                        <Amount currencyCode="EUR">1.0</Amount>
+                        <TaxPercentage>5</TaxPercentage>
+                     </HeaderTax>
+                     <DocumentHeaderText Type="Text">
+                        <TextElementText>ARIBA_INVOICE</TextElementText>
+                     </DocumentHeaderText>
+                     <Item>
+                        <SupplierInvoiceItemID>1</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">10.0</NetAmount>
+                        <InvoicedQuantity unitCode="PCE">1</InvoicedQuantity>
+                        <PurchaseOrderID>4500041912</PurchaseOrderID>
+                        <PurchaseOrderItemID>000010</PurchaseOrderItemID>
+                        <DeliveryNote>31669</DeliveryNote>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>VAT</SupplierTaxTypeCode>
+                           <TaxPercentage>19</TaxPercentage>
+                           <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>FR</TextElementLanguage>
+                           <TextElementText>Comment 1 material item</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Item>
+                        <SupplierInvoiceItemID>2</SupplierInvoiceItemID>
+                        <SupplierInvoiceItemTypeCode>002</SupplierInvoiceItemTypeCode>
+                        <NetAmount currencyCode="EUR">20.0</NetAmount>
+                        <InvoicedQuantity unitCode="HUR">2</InvoicedQuantity>
+                        <PurchaseOrderID>4500041912</PurchaseOrderID>
+                        <PurchaseOrderItemID>000020</PurchaseOrderItemID>
+                        <DeliveryNote>31669</DeliveryNote>
+                        <ServiceEntrySheetIDBySupplier>SES41912</ServiceEntrySheetIDBySupplier>
+                        <ItemTax>
+                           <SupplierTaxTypeCode>SAL</SupplierTaxTypeCode>
+                           <TaxPercentage>5</TaxPercentage>
+                           <TaxDeterminationDate>2021-09-07</TaxDeterminationDate>
+                        </ItemTax>
+                        <DocumentItemText Type="Note">
+                           <TextElementLanguage>EN</TextElementLanguage>
+                           <TextElementText>Comment 1 service item</TextElementText>
+                        </DocumentItemText>
+                        <HigherLevelItem>000000</HigherLevelItem>
+                     </Item>
+                     <Attachment FileName="" MimeType="" FileSize="">
+                        <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                     </Attachment>
+                  </Invoice>
+               </n0:InvoiceRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario10"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_S4HANA_0000_invoicerequest.xspec">
+      <label>Invoice Request - Cancellation of Supplier Invoice</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/InvoiceRequest/INV_Cancel_BM.xml"/>
+      </input-wrap>

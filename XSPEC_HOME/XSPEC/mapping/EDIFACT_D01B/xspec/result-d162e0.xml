@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expect xmlns="http://www.jenitennison.com/xslt/xspec" select="/element()">
+   <content-wrap xmlns="">
+      <cXML payloadID="" timestamp="...">
+         <Header>
+            <From>
+               <Credential domain="NetworkID">
+                  <Identity>AN02005736193-T</Identity>
+               </Credential>
+            </From>
+            <To>
+               <Credential domain="NetworkID">
+                  <Identity>AN02005736194-T</Identity>
+               </Credential>
+               <Credential domain="SystemID">
+                  <Identity>System ID</Identity>
+               </Credential>
+            </To>
+            <Sender>
+               <Credential domain="NetworkID">
+                  <Identity>AN01000000087</Identity>
+                  <SharedSecret/>
+               </Credential>
+               <UserAgent>Ariba Supplier</UserAgent>
+            </Sender>
+         </Header>
+         <Request deploymentMode="production">
+            <InvoiceDetailRequest>
+               <InvoiceDetailRequestHeader invoiceID="Invoice ID override BGM"
+                                           purpose="standard"
+                                           operation="new"
+                                           invoiceDate="--T::+00:00"
+                                           invoiceOrigin="supplier">
+                  <InvoiceDetailHeaderIndicator/>
+                  <InvoiceDetailLineIndicator isTaxInLine="yes" isShippingInLine="yes" isAccountingInLine="yes"/>
+                  <InvoicePartner>
+                     <Contact role="from" addressID="Party ID" addressIDDomain="EANID">
+                        <Name xml:lang="en">Party AddrName 1Party AddrName 2Party AddrName 3Party AddrName 4Party AddrName 5</Name>
+                        <PostalAddress>
+                           <DeliverTo>Party Name 1</DeliverTo>
+                           <DeliverTo>Party Name 2</DeliverTo>
+                           <DeliverTo>Party Name 3</DeliverTo>
+                           <DeliverTo>Party Name 4</DeliverTo>
+                           <DeliverTo>Party Name 5</DeliverTo>
+                           <Street>Party Street1</Street>
+                           <Street>Party Street 2</Street>
+                           <Street>Party Street 3</Street>
+                           <Street>Party Street 4</Street>
+                           <City>Party City</City>
+                           <PostalCode>ZIP</PostalCode>
+                           <Country isoCountryCode="DE">Germany</Country>
+                        </PostalAddress>
+                        <Email name="from">test@test.com</Email>
+                        <Phone name="from">
+                           <TelephoneNumber>
+                              <CountryCode isoCountryCode="">0162/45471225</CountryCode>
+                              <AreaOrCityCode/>
+                              <Number/>
+                           </TelephoneNumber>
+                        </Phone>
+                        <Fax name="from">
+                           <TelephoneNumber>
+                              <CountryCode isoCountryCode="">0180/45471225</CountryCode>
+                              <AreaOrCityCode/>
+                              <Number/>
+                           </TelephoneNumber>
+                        </Fax>
+                        <URL name="from">CA.test.com</URL>
+                        <Extrinsic name="LegalStatus">GmbH</Extrinsic>
+                        <Extrinsic name="LegalCapital">
+                           <Money currency="EUR">100000</Money>
+                        </Extrinsic>
+                     </Contact>
+                     <IdReference domain="reference" identifier="Reference ID"/>
+                     <IdReference domain="memberNumber" identifier="Member ID"/>
+                     <IdReference domain="creditorRefID" identifier="Creditor ID"/>
+                     <IdReference domain="transactionReference" identifier="Transcation ID"/>
+                     <IdReference domain="supplierTaxID" identifier="GST ID"/>
+                     <IdReference domain="CASReference" identifier="CASReference"/>
+                     <IdReference domain="personalID" identifier="Peronal ID"/>
+                     <IdReference domain="sirenNo" identifier="SIREN ID"/>
+                     <IdReference domain="siretNo" identifier="SIRET ID"/>
+                     <IdReference domain="accountPayableID" identifier="Account Payable ID"/>
+                     <IdReference domain="fiscalNumber" identifier="Fiscal ID"/>
+                     <IdReference domain="governmentNumber" identifier="Government ID"/>
+                     <IdReference domain="vendorNumber" identifier="Vendor ID"/>
+                     <IdReference domain="companyCode" identifier="Company Code"/>
+                     <IdReference domain="accountID" identifier="Account ID"/>
+                     <IdReference domain="bankRoutingID" identifier="Bank Routing ID"/>
+                     <IdReference domain="contactPerson" identifier="Contact Person"/>
+                     <IdReference domain="departmentName" identifier="Department ID"/>
+                     <IdReference domain="taxExemptionID" identifier="Tax Exemption ID"/>
+                     <IdReference domain="vatID" identifier="Supplier VAT ID"/>
+                  </InvoicePartner>
+                  <InvoicePartner>
+                     <Contact role="buyer" addressID="Party ID" addressIDDomain="EANID">
+                        <Name xml:lang="en">Party AddrName 1</Name>
+                        <PostalAddress>
+                           <DeliverTo>Party Name 1</DeliverTo>
+                           <Street>Party Street1</Street>
+                           <City>Party City</City>
+                           <PostalCode>ZIP</PostalCode>
+                           <Country isoCountryCode="DE">Germany</Country>
+                        </PostalAddress>
+                     </Contact>
+                     <IdReference domain="vatID" identifier="Buyer Vat ID"/>
+                  </InvoicePartner>
+                  <InvoicePartner>
+                     <Contact role="soldTo" addressID="ID" addressIDDomain="EANID">
+                        <Name xml:lang="en"/>
+                        <PostalAddress>
+                           <DeliverTo>Name1</DeliverTo>
+                           <Street>Street1</Street>
+                           <City>City</City>
+                           <PostalCode>67890</PostalCode>
+                           <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                        <Email name="soldTo">test@RequesterTest.com</Email>
+                        <Phone name="soldTo">
+                           <TelephoneNumber>
+                              <CountryCode isoCountryCode="">0162/45471225</CountryCode>
+                              <AreaOrCityCode/>
+                              <Number/>
+                           </TelephoneNumber>
+                        </Phone>
+                     </Contact>
+                     <IdReference domain="accountReceivableID" identifier="Account Receivable ID"/>
+                  </InvoicePartner>
+                  <InvoicePartner>
+                     <Contact role="issuerOfInvoice" addressID="ID" addressIDDomain="EANID">
+                        <Name xml:lang="en"/>
+                        <PostalAddress>
+                           <DeliverTo>Name1</DeliverTo>
+                           <Street>Street1</Street>
+                           <City>City</City>
+                           <PostalCode>67890</PostalCode>
+                           <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                     </Contact>
+                  </InvoicePartner>
+                  <InvoicePartner>
+                     <Contact role="remitTo" addressID="ID" addressIDDomain="EANID">
+                        <Name xml:lang="en"/>
+                        <PostalAddress>
+                           <DeliverTo>Name1</DeliverTo>
+                           <Street>Street1</Street>
+                           <City>City</City>
+                           <PostalCode>67890</PostalCode>
+                           <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                     </Contact>
+                     <IdReference domain="abaRoutingNumber" identifier="ABA Rounting"/>
+                     <IdReference domain="supplierTaxID" identifier="Supplier TAX ID"/>
+                     <IdReference domain="bankRoutingID" identifier="Bank Routing ID"/>
+                  </InvoicePartner>
+                  <InvoicePartner>
+                     <Contact role="subsequentBuyer" addressID="ID" addressIDDomain="EANID">
+                        <Name xml:lang="en"/>
+                        <PostalAddress>
+                           <DeliverTo>Name1</DeliverTo>
+                           <Street>Street1</Street>
+                           <City>City</City>
+                           <PostalCode>67890</PostalCode>
+                           <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                     </Contact>
+                     <IdReference domain="vatID" identifier="Vat ID"/>
+                  </InvoicePartner>
+                  <InvoicePartner>
+                     <Contact role="wireReceivingBank">
+                        <Name xml:lang="en-US">Bank name</Name>
+                     </Contact>
+                     <IdReference identifier="DE0000000IBAN000000000000000000000" domain="ibanID"/>
+                     <IdReference identifier="999SWIFT999" domain="swiftID"/>
+                     <IdReference identifier="Acct owner" domain="accountName"/>
+                     <IdReference identifier="Acct type" domain="accountType"/>
+                     <IdReference identifier="Bank name" domain="branchName"/>
+                     <IdReference identifier="GB" domain="bankCountryCode"/>
+                     <IdReference identifier="Bank Routing ID" domain="bankRoutingID"/>
+                  </InvoicePartner>
+                  <InvoiceDetailShipping shippingDate="--T::+00:00">
+                     <Contact role="carrierCorporate" addressID="ID" addressIDDomain="EANID">
+                        <Name xml:lang="en"/>
+                        <PostalAddress>
+                           <DeliverTo>Name1</DeliverTo>
+                           <Street>Street1</Street>
+                           <City>City</City>
+                           <PostalCode>67890</PostalCode>
+                           <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                     </Contact>
+                     <Contact role="shipFrom" addressID="ID" addressIDDomain="EANID">
+                        <Name xml:lang="en"/>
+                        <PostalAddress>
+                           <DeliverTo>Name1</DeliverTo>
+                           <Street>Street1</Street>
+                           <City>City</City>
+                           <PostalCode>67890</PostalCode>
+                           <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                     </Contact>
+                     <Contact role="shipTo" addressID="ID" addressIDDomain="EANID">
+                        <Name xml:lang="en"/>
+                        <PostalAddress>
+                           <DeliverTo>Name1</DeliverTo>
+                           <Street>Street1</Street>
+                           <City>City</City>
+                           <PostalCode>67890</PostalCode>
+                           <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                        <Email name="shipTo">test@test.com</Email>
+                        <Phone name="shipTo">
+                           <TelephoneNumber>
+                              <CountryCode isoCountryCode="">0162/45471225</CountryCode>
+                              <AreaOrCityCode/>
+                              <Number/>
+                           </TelephoneNumber>
+                        </Phone>
+                        <Fax name="shipTo">
+                           <TelephoneNumber>
+                              <CountryCode isoCountryCode="">0180/45471225</CountryCode>
+                              <AreaOrCityCode/>
+                              <Number/>
+                           </TelephoneNumber>
+                        </Fax>
+                        <URL name="shipTo">CA.test.com</URL>
+                     </Contact>
+                     <ShipmentIdentifier>Legal company name</ShipmentIdentifier>
+                     <ShipmentIdentifier>carrierID</ShipmentIdentifier>
+                  </InvoiceDetailShipping>
+                  <ShipNoticeIDInfo shipNoticeID="Ship Notice ID" shipNoticeDate="--T::+00:00">
+                     <IdReference domain="packListID" identifier="Packaging List ID"/>
+                  </ShipNoticeIDInfo>
+                  <PaymentTerm payInNumberOfDays="30">
+                     <Extrinsic name="netDueDate">--T::+00:00</Extrinsic>
+                  </PaymentTerm>
+                  <PaymentTerm payInNumberOfDays="30">
+                     <Discount>
+                        <DiscountAmount>
+                           <Money currency="">-1234</Money>
+                        </DiscountAmount>
+                     </Discount>
+                  </PaymentTerm>
+                  <PaymentTerm payInNumberOfDays="30">
+                     <Discount>
+                        <DiscountAmount>
+                           <Money currency="">1234</Money>
+                        </DiscountAmount>
+                     </Discount>
+                  </PaymentTerm>
+                  <PaymentTerm payInNumberOfDays="14">
+                     <Discount>
+                        <DiscountPercent percent="3"/>
+                     </Discount>
+                     <Extrinsic name="discountDueDate">--T::+00:00</Extrinsic>
+                  </PaymentTerm>
+                  <PaymentTerm payInNumberOfDays="60">
+                     <Discount>
+                        <DiscountPercent percent="-3"/>
+                     </Discount>
+                  </PaymentTerm>
+                  <PaymentTerm payInNumberOfDays="60">
+                     <Discount>
+                        <DiscountPercent percent="-3"/>
+                     </Discount>
+                     <Extrinsic name="penaltyDueDate">--T::+00:00</Extrinsic>
+                  </PaymentTerm>
+                  <Period startDate="--T::+00:00" endDate="--T::+00:00"/>
+                  <Comments xml:lang="DE">Text1Text2Text3Text4Text5</Comments>
+                  <Extrinsic name="invoiceSubmissionMethod">CIG_EDIFact</Extrinsic>
+                  <Extrinsic name="taxExchangeRate">0.123</Extrinsic>
+                  <Extrinsic name="supplierCommercialCredentials">Amtsgericht Ludwigshafen</Extrinsic>
+                  <Extrinsic name="supplierCommercialIdentifier">Government ID</Extrinsic>
+                  <Extrinsic name="supplierVatID">Supplier VAT ID</Extrinsic>
+                  <Extrinsic name="deliveryDate">--T::+00:00</Extrinsic>
+                  <Extrinsic name="shipFromCountry">DE</Extrinsic>
+                  <Extrinsic name="shipToCountry">US</Extrinsic>
+                  <Extrinsic name="DeliveryNoteNum">Delivery Note Number</Extrinsic>
+                  <Extrinsic name="ultimateCustomerReferenceID">Ultimate Customer ID</Extrinsic>
+                  <Extrinsic name="">Extrinsic Text 2Extrinsic Text 3Extrinsic Text 4Extrinsic Text 5</Extrinsic>
+                  <Extrinsic name="MutuallyDefinedName">Mutually defined identification</Extrinsic>
+               </InvoiceDetailRequestHeader>
+               <InvoiceDetailOrder>
+                  <InvoiceDetailOrderInfo>
+                     <MasterAgreementIDInfo agreementID="Delivery Note ID"
+                                            agreementDate="--T::+00:00"
+                                            agreementType="scheduling_agreement"/>
+                     <OrderIDInfo orderID="Delivery Note ID" orderDate="--T::+00:00"/>
+                     <SupplierOrderInfo orderID="Delivery Note ID" orderDate="--T::+00:00"/>
+                  </InvoiceDetailOrderInfo>
+                  <InvoiceDetailItem invoiceLineNumber="1"
+                                     quantity="2"
+                                     referenceDate="--T::+00:00"
+                                     inspectionDate="--T::+00:00">
+                     <UnitOfMeasure>C62</UnitOfMeasure>
+                     <UnitPrice/>
+                     <InvoiceDetailItemReference lineNumber="001" serialNumber="Serial No">
+                        <ItemID>
+                           <SupplierPartID>Supplier Part ID</SupplierPartID>
+                           <SupplierPartAuxiliaryID>Supplier Part ID</SupplierPartAuxiliaryID>
+                           <BuyerPartID>Supplier Part ID</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="EN">Item 1 description 1Item 1 description 2<ShortName>ItemShort 1 description 1</ShortName>
+                        </Description>
+                        <Classification domain="UNSPSC" code="Classification"/>
+                        <SerialNumber>Serial No</SerialNumber>
+                     </InvoiceDetailItemReference>
+                     <ShipNoticeLineItemReference shipNoticeLineNumber="001"/>
+                     <SubtotalAmount>
+                        <Money currency="EUR">474.72</Money>
+                     </SubtotalAmount>
+                     <Tax>
+                        <Money currency="EUR">474.72</Money>
+                        <Description xml:lang="DE">Mutally defined tax note 1Mutally defined tax note 2Mutally defined tax note 3Mutally defined tax note 4Mutally defined tax note 5</Description>
+                        <TaxDetail purpose="tax"
+                                   category="vat"
+                                   percentageRate="12.00"
+                                   taxPointDate="--T::+00:00"
+                                   paymentDate="--T::+00:00"
+                                   isTriangularTransaction="yes"
+                                   exemptDetail="exempt">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">474.72</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Tax Desciption</Description>
+                           <Extrinsic name="taxAccountcode">Rate ID</Extrinsic>
+                           <Extrinsic name="taxJurisdiction">DE</Extrinsic>
+                        </TaxDetail>
+                        <TaxDetail purpose="shippingTax" category="other" percentageRate="12.00">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">120.00</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Shipping TAX</Description>
+                        </TaxDetail>
+                        <TaxDetail purpose="specialHandlingTax"
+                                   category="other"
+                                   percentageRate="12.00">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">12.00</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Special Handling TAX</Description>
+                        </TaxDetail>
+                     </Tax>
+                     <InvoiceDetailLineShipping>
+                        <InvoiceDetailShipping>
+                           <Contact role="carrierCorporate" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <City>City</City>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipFrom" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <City>City</City>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <City>City</City>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                           </Contact>
+                        </InvoiceDetailShipping>
+                        <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                     </InvoiceDetailLineShipping>
+                     <ShipNoticeIDInfo shipNoticeID="Ship Notice ID" shipNoticeDate="--T::+00:00">
+                        <IdReference domain="packListID" identifier="Packing List ID"/>
+                     </ShipNoticeIDInfo>
+                     <GrossAmount>
+                        <Money currency="EUR">237.36</Money>
+                     </GrossAmount>
+                     <InvoiceDetailDiscount percentageRate="10">
+                        <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                     </InvoiceDetailDiscount>
+                     <InvoiceItemModifications>
+                        <Modification>
+                           <AdditionalCost>
+                              <Money currency="EUR">0.99</Money>
+                           </AdditionalCost>
+                           <ModificationDetail name="Handling">
+                              <Description xml:lang="en">Handling</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification>
+                           <AdditionalCost>
+                              <Percentage percent="5.00"/>
+                           </AdditionalCost>
+                           <ModificationDetail name="Handling">
+                              <Description xml:lang="en">Handling</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction>
+                              <DeductionAmount>
+                                 <Money currency="EUR">25.74</Money>
+                              </DeductionAmount>
+                           </AdditionalDeduction>
+                           <Tax>
+                              <Money currency="EUR">17</Money>
+                              <Description xml:lang="en">DESCRIPTION</Description>
+                              <TaxDetail purpose="tax"
+                                         category="vat"
+                                         percentageRate="12.00"
+                                         exemptDetail="exempt">
+                                 <TaxableAmount>
+                                    <Money currency="EUR">1000.00</Money>
+                                 </TaxableAmount>
+                                 <TaxAmount>
+                                    <Money currency="EUR">17</Money>
+                                 </TaxAmount>
+                                 <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                                 <Description xml:lang="en">DESCRIPTION</Description>
+                              </TaxDetail>
+                           </Tax>
+                           <ModificationDetail name="Adjustment" startDate="--T::+00:00" endDate="--T::+00:00">
+                              <Description xml:lang="en">Adjustment</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction>
+                              <DeductionAmount>
+                                 <Money currency="EUR">25.74</Money>
+                              </DeductionAmount>
+                           </AdditionalDeduction>
+                           <Tax>
+                              <Money currency="EUR">17</Money>
+                              <Description xml:lang="en">DESCRIPTION</Description>
+                              <TaxDetail purpose="tax"
+                                         category="qst"
+                                         percentageRate="12.00"
+                                         exemptDetail="exempt">
+                                 <TaxableAmount>
+                                    <Money currency="EUR">1000.00</Money>
+                                 </TaxableAmount>
+                                 <TaxAmount>
+                                    <Money currency="EUR">17</Money>
+                                 </TaxAmount>
+                                 <TaxLocation xml:lang="en">.qc.ca</TaxLocation>
+                                 <Description xml:lang="en">DESCRIPTION</Description>
+                              </TaxDetail>
+                           </Tax>
+                           <ModificationDetail name="Adjustment" startDate="--T::+00:00" endDate="--T::+00:00">
+                              <Description xml:lang="en">Adjustment</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction>
+                              <DeductedPrice>
+                                 <Money currency="EUR">25.74</Money>
+                              </DeductedPrice>
+                           </AdditionalDeduction>
+                           <Tax>
+                              <Money currency="EUR">17</Money>
+                              <Description xml:lang="en">DESCRIPTION</Description>
+                              <TaxDetail purpose="tax"
+                                         category="vat"
+                                         percentageRate="12.00"
+                                         exemptDetail="exempt">
+                                 <TaxableAmount>
+                                    <Money currency="EUR">1000.00</Money>
+                                 </TaxableAmount>
+                                 <TaxAmount>
+                                    <Money currency="EUR">17</Money>
+                                 </TaxAmount>
+                                 <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                                 <Description xml:lang="en">DESCRIPTION</Description>
+                              </TaxDetail>
+                           </Tax>
+                           <ModificationDetail name="Adjustment" startDate="--T::+00:00" endDate="--T::+00:00">
+                              <Description xml:lang="en">Adjustment</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction>
+                              <DeductionPercent percent="10"/>
+                           </AdditionalDeduction>
+                           <Tax>
+                              <Money currency="EUR">17</Money>
+                              <Description xml:lang="en">DESCRIPTION</Description>
+                              <TaxDetail purpose="tax"
+                                         category="vat"
+                                         percentageRate="12.00"
+                                         exemptDetail="exempt">
+                                 <TaxableAmount>
+                                    <Money currency="EUR">1000.00</Money>
+                                 </TaxableAmount>
+                                 <TaxAmount>
+                                    <Money currency="EUR">17</Money>
+                                 </TaxAmount>
+                                 <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                                 <Description xml:lang="en">DESCRIPTION</Description>
+                              </TaxDetail>
+                           </Tax>
+                           <ModificationDetail name="Adjustment" startDate="--T::+00:00" endDate="--T::+00:00">
+                              <Description xml:lang="en">Adjustment</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification/>
+                        <Modification/>
+                        <Modification>
+                           <OriginalPrice>
+                              <Money currency="EUR">0.99</Money>
+                           </OriginalPrice>
+                           <AdditionalCost>
+                              <Percentage percent="5.00"/>
+                           </AdditionalCost>
+                           <ModificationDetail name="Charge">
+                              <Description xml:lang="en">Charge ID</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction>
+                              <DeductionAmount>
+                                 <Money currency="EUR">25.74</Money>
+                              </DeductionAmount>
+                           </AdditionalDeduction>
+                           <ModificationDetail name="Allowance">
+                              <Description xml:lang="en">Allowance ID</Description>
+                           </ModificationDetail>
+                        </Modification>
+                     </InvoiceItemModifications>
+                     <TotalAmountWithoutTax>
+                        <Money currency="EUR">10.00</Money>
+                     </TotalAmountWithoutTax>
+                     <NetAmount>
+                        <Money currency="EUR">474.72</Money>
+                     </NetAmount>
+                     <Distribution>
+                        <Accounting name="Segment ID">
+                           <AccountingSegment id="Segment Name">
+                              <Name xml:lang="en">Segment Description</Name>
+                              <Description xml:lang="en">Segment Description</Description>
+                           </AccountingSegment>
+                        </Accounting>
+                        <Charge>
+                           <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                        </Charge>
+                     </Distribution>
+                     <Comments xml:lang="DE">Text1Text2Text3Text4Text5</Comments>
+                     <Extrinsic name="shipFromCountry">DE</Extrinsic>
+                     <Extrinsic name="shipToCountry">US</Extrinsic>
+                     <Extrinsic name="costCenter">Approval user Cost Center</Extrinsic>
+                     <Extrinsic name="ApprovalUserCostCenter">Approval user Cost Center</Extrinsic>
+                     <Extrinsic name="GLAccount">GLA Account</Extrinsic>
+                     <Extrinsic name="FreightCostKey">Freight Cost Key</Extrinsic>
+                     <Extrinsic name="ExtriniscName">Extrinsic Text 1Extrinsic Text 2Extrinsic Text 3Extrinsic Text 4Extrinsic Text 5</Extrinsic>
+                  </InvoiceDetailItem>
+                  <InvoiceDetailItem invoiceLineNumber="1"
+                                     quantity="2"
+                                     referenceDate="--T::+00:00"
+                                     inspectionDate="--T::+00:00">
+                     <UnitOfMeasure>C62</UnitOfMeasure>
+                     <UnitPrice/>
+                     <InvoiceDetailItemReference lineNumber="001" serialNumber="Serial No">
+                        <ItemID>
+                           <SupplierPartID>Supplier Part ID</SupplierPartID>
+                           <SupplierPartAuxiliaryID>Supplier Part ID</SupplierPartAuxiliaryID>
+                           <BuyerPartID>Supplier Part ID</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="EN">
+                           <ShortName>ItemShort 1 description 1</ShortName>
+                        </Description>
+                        <Classification domain="UNSPSC" code="Classification"/>
+                        <SerialNumber>Serial No</SerialNumber>
+                        <InvoiceDetailItemReferenceIndustry>
+                           <InvoiceDetailItemReferenceRetail>
+                              <EANID>EAN ID</EANID>
+                           </InvoiceDetailItemReferenceRetail>
+                        </InvoiceDetailItemReferenceIndustry>
+                     </InvoiceDetailItemReference>
+                     <ShipNoticeLineItemReference shipNoticeLineNumber="001"/>
+                     <SubtotalAmount>
+                        <Money currency="EUR">474.72</Money>
+                     </SubtotalAmount>
+                     <Tax>
+                        <Money currency="EUR">474.72</Money>
+                        <Description xml:lang="DE">Mutally defined tax note 1Mutally defined tax note 2Mutally defined tax note 3Mutally defined tax note 4Mutally defined tax note 5</Description>
+                        <TaxDetail purpose="tax"
+                                   category="vat"
+                                   percentageRate="12.00"
+                                   taxPointDate="--T::+00:00"
+                                   paymentDate="--T::+00:00"
+                                   isTriangularTransaction="yes"
+                                   exemptDetail="exempt">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">474.72</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Tax Desciption</Description>
+                           <Extrinsic name="taxAccountcode">Rate ID</Extrinsic>
+                           <Extrinsic name="taxJurisdiction">DE</Extrinsic>
+                        </TaxDetail>
+                        <TaxDetail purpose="shippingTax" category="other" percentageRate="12.00">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">120.00</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Shipping TAX</Description>
+                        </TaxDetail>
+                        <TaxDetail purpose="specialHandlingTax"
+                                   category="other"
+                                   percentageRate="12.00">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">12.00</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Special Handling TAX</Description>
+                        </TaxDetail>
+                     </Tax>
+                     <InvoiceDetailLineShipping>
+                        <InvoiceDetailShipping>
+                           <Contact role="carrierCorporate" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <City>City</City>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipFrom" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <City>City</City>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <City>City</City>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                           </Contact>
+                        </InvoiceDetailShipping>
+                        <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                     </InvoiceDetailLineShipping>
+                     <ShipNoticeIDInfo shipNoticeID="Ship Notice ID" shipNoticeDate="--T::+00:00">
+                        <IdReference domain="packListID" identifier="Packing List ID"/>
+                     </ShipNoticeIDInfo>
+                     <GrossAmount>
+                        <Money currency="EUR">237.36</Money>
+                     </GrossAmount>
+                     <InvoiceDetailDiscount percentageRate="10">
+                        <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                     </InvoiceDetailDiscount>
+                     <InvoiceItemModifications>
+                        <Modification/>
+                        <Modification/>
+                        <Modification>
+                           <OriginalPrice>
+                              <Money currency="EUR">0.99</Money>
+                           </OriginalPrice>
+                           <AdditionalCost>
+                              <Percentage percent="5.00"/>
+                           </AdditionalCost>
+                           <ModificationDetail name="Charge">
+                              <Description xml:lang="en">Charge ID</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction>
+                              <DeductionAmount>
+                                 <Money currency="EUR">25.74</Money>
+                              </DeductionAmount>
+                           </AdditionalDeduction>
+                           <ModificationDetail name="Allowance">
+                              <Description xml:lang="en">Allowance ID</Description>
+                           </ModificationDetail>
+                        </Modification>
+                     </InvoiceItemModifications>
+                     <TotalAmountWithoutTax>
+                        <Money currency="EUR">10.00</Money>
+                     </TotalAmountWithoutTax>
+                     <NetAmount>
+                        <Money currency="EUR">474.72</Money>
+                     </NetAmount>
+                     <Distribution>
+                        <Accounting name="Segment ID">
+                           <AccountingSegment id="Segment Name">
+                              <Name xml:lang="en">Segment Description</Name>
+                              <Description xml:lang="en">Segment Description</Description>
+                           </AccountingSegment>
+                        </Accounting>
+                        <Charge>
+                           <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                        </Charge>
+                     </Distribution>
+                     <Comments xml:lang="DE">Text1Text2Text3Text4Text5</Comments>
+                     <Extrinsic name="shipFromCountry">DE</Extrinsic>
+                     <Extrinsic name="shipToCountry">US</Extrinsic>
+                     <Extrinsic name="costCenter">Approval user Cost Center</Extrinsic>
+                     <Extrinsic name="ApprovalUserCostCenter">Approval user Cost Center</Extrinsic>
+                     <Extrinsic name="GLAccount">GLA Account</Extrinsic>
+                     <Extrinsic name="FreightCostKey">Freight Cost Key</Extrinsic>
+                     <Extrinsic name="ExtriniscName">Extrinsic Text 1Extrinsic Text 2Extrinsic Text 3Extrinsic Text 4Extrinsic Text 5</Extrinsic>
+                  </InvoiceDetailItem>
+                  <InvoiceDetailItem invoiceLineNumber="1" quantity="2">
+                     <UnitOfMeasure>C62</UnitOfMeasure>
+                     <UnitPrice/>
+                     <InvoiceDetailItemReference lineNumber="001" serialNumber="Serial No">
+                        <ItemID>
+                           <SupplierPartID>Supplier Part ID</SupplierPartID>
+                           <SupplierPartAuxiliaryID>Supplier Part ID</SupplierPartAuxiliaryID>
+                           <BuyerPartID>Supplier Part ID</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="EN">
+                           <ShortName>ItemShort 1 description 1</ShortName>
+                        </Description>
+                        <Classification domain="UNSPSC" code="Classification"/>
+                        <SerialNumber>Serial No</SerialNumber>
+                        <InvoiceDetailItemReferenceIndustry>
+                           <InvoiceDetailItemReferenceRetail>
+                              <EANID>EAN ID</EANID>
+                           </InvoiceDetailItemReferenceRetail>
+                        </InvoiceDetailItemReferenceIndustry>
+                     </InvoiceDetailItemReference>
+                     <ShipNoticeLineItemReference shipNoticeLineNumber="001"/>
+                     <SubtotalAmount>
+                        <Money currency="EUR">474.72</Money>
+                     </SubtotalAmount>
+                     <Tax>
+                        <Money currency="EUR">474.72</Money>
+                        <Description xml:lang="DE">Mutally defined tax note 1Mutally defined tax note 2Mutally defined tax note 3Mutally defined tax note 4Mutally defined tax note 5</Description>
+                        <TaxDetail purpose="tax"
+                                   category="vat"
+                                   percentageRate="12.00"
+                                   taxPointDate="--T::+00:00"
+                                   paymentDate="--T::+00:00"
+                                   isTriangularTransaction="yes"
+                                   exemptDetail="exempt">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">474.72</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Tax Desciption</Description>
+                           <Extrinsic name="taxAccountcode">Rate ID</Extrinsic>
+                           <Extrinsic name="taxJurisdiction">DE</Extrinsic>
+                        </TaxDetail>
+                        <TaxDetail purpose="shippingTax" category="other" percentageRate="12.00">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">120.00</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Shipping TAX</Description>
+                        </TaxDetail>
+                        <TaxDetail purpose="specialHandlingTax"
+                                   category="other"
+                                   percentageRate="12.00">
+                           <TaxableAmount>
+                              <Money currency="EUR">1000.00</Money>
+                           </TaxableAmount>
+                           <TaxAmount>
+                              <Money currency="EUR">12.00</Money>
+                           </TaxAmount>
+                           <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                           <Description xml:lang="en">Special Handling TAX</Description>
+                        </TaxDetail>
+                     </Tax>
+                     <InvoiceDetailLineShipping>
+                        <InvoiceDetailShipping shippingDate="--T::+00:00">
+                           <Contact role="shipFrom" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <DeliverTo>a</DeliverTo>
+                                 <DeliverTo>b</DeliverTo>
+                                 <DeliverTo>c</DeliverTo>
+                                 <DeliverTo>d</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <Street>a</Street>
+                                 <Street>b</Street>
+                                 <Street>c</Street>
+                                 <City>City</City>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                              <Email name="shipFrom">test@test.com</Email>
+                              <Phone name="shipFrom">
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="">0162/45471225</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number/>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax name="shipFrom">
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="">0180/45471225</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number/>
+                                 </TelephoneNumber>
+                              </Fax>
+                              <URL name="shipFrom">CA.test.com</URL>
+                           </Contact>
+                           <Contact role="carrierCorporate" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <DeliverTo>a</DeliverTo>
+                                 <DeliverTo>b</DeliverTo>
+                                 <DeliverTo>c</DeliverTo>
+                                 <DeliverTo>d</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <Street>a</Street>
+                                 <Street>b</Street>
+                                 <Street>c</Street>
+                                 <City>City</City>
+                                 <State isoStateCode="AL">Alabama</State>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                              <Email name="Contact Name1Contact Name2">test@test.com</Email>
+                              <Phone name="Contact Name1Contact Name2">
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="">0162/45471225</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number/>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax name="Contact Name1Contact Name2">
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="">0180/45471225</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number/>
+                                 </TelephoneNumber>
+                              </Fax>
+                              <URL name="Contact Name1Contact Name2">CA.test.com</URL>
+                           </Contact>
+                           <Contact role="shipTo" addressID="ID" addressIDDomain="EANID">
+                              <Name xml:lang="en"/>
+                              <PostalAddress>
+                                 <DeliverTo>Name1</DeliverTo>
+                                 <Street>Street1</Street>
+                                 <City>City</City>
+                                 <PostalCode>67890</PostalCode>
+                                 <Country isoCountryCode="US">United States</Country>
+                              </PostalAddress>
+                              <Email name="shipTo">test@test.com</Email>
+                              <Phone name="shipTo">
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="">0162/45471225</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number/>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax name="shipTo">
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="">0180/45471225</CountryCode>
+                                    <AreaOrCityCode/>
+                                    <Number/>
+                                 </TelephoneNumber>
+                              </Fax>
+                              <URL name="shipTo">CA.test.com</URL>
+                           </Contact>
+                        </InvoiceDetailShipping>
+                        <Money currency="EUR EUR" alternateAmount="25.74" alternateCurrency="USD">0.99 25.74</Money>
+                     </InvoiceDetailLineShipping>
+                     <ShipNoticeIDInfo shipNoticeID="Ship Notice ID" shipNoticeDate="--T::+00:00">
+                        <IdReference domain="packListID" identifier="Packing List ID"/>
+                     </ShipNoticeIDInfo>
+                     <GrossAmount>
+                        <Money currency="EUR">237.36</Money>
+                     </GrossAmount>
+                     <InvoiceDetailDiscount percentageRate="10">
+                        <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                     </InvoiceDetailDiscount>
+                     <InvoiceItemModifications>
+                        <Modification/>
+                        <Modification/>
+                        <Modification>
+                           <AdditionalCost>
+                              <Percentage percent="5.00"/>
+                           </AdditionalCost>
+                           <ModificationDetail name="Charge">
+                              <Description xml:lang="en">Charge ID</Description>
+                           </ModificationDetail>
+                        </Modification>
+                        <Modification>
+                           <AdditionalDeduction>
+                              <DeductionAmount>
+                                 <Money currency="EUR">25.74</Money>
+                              </DeductionAmount>
+                           </AdditionalDeduction>
+                           <ModificationDetail name="Allowance">
+                              <Description xml:lang="en">Allowance ID</Description>
+                           </ModificationDetail>
+                        </Modification>
+                     </InvoiceItemModifications>
+                     <TotalAmountWithoutTax>
+                        <Money currency="EUR">10.00</Money>
+                     </TotalAmountWithoutTax>
+                     <NetAmount>
+                        <Money currency="EUR">474.72</Money>
+                     </NetAmount>
+                     <Distribution>
+                        <Accounting name="Segment ID">
+                           <AccountingSegment id="Segment Name">
+                              <Name xml:lang="en">Segment Description</Name>
+                              <Description xml:lang="en">Segment Description</Description>
+                           </AccountingSegment>
+                        </Accounting>
+                        <Charge>
+                           <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                        </Charge>
+                     </Distribution>
+                     <Comments xml:lang="DE">Text1Text2Text3Text4Text5</Comments>
+                     <Extrinsic name="shipFromCountry">DE</Extrinsic>
+                     <Extrinsic name="shipToCountry">US</Extrinsic>
+                     <Extrinsic name="costCenter">Approval user Cost Center</Extrinsic>
+                     <Extrinsic name="ApprovalUserCostCenter">Approval user Cost Center</Extrinsic>
+                     <Extrinsic name="GLAccount">GLA Account</Extrinsic>
+                     <Extrinsic name="FreightCostKey">Freight Cost Key</Extrinsic>
+                     <Extrinsic name="ExtriniscName">Extrinsic Text 1Extrinsic Text 2Extrinsic Text 3Extrinsic Text 4Extrinsic Text 5</Extrinsic>
+                  </InvoiceDetailItem>
+               </InvoiceDetailOrder>
+               <InvoiceDetailSummary>
+                  <SubtotalAmount>
+                     <Money currency="EUR">1186.80</Money>
+                  </SubtotalAmount>
+                  <Tax>
+                     <Money currency="EUR">1186.80</Money>
+                     <Description xml:lang="DE">Mutally defined tax note 1Mutally defined tax note 2Mutally defined tax note 3Mutally defined tax note 4Mutally defined tax note 5</Description>
+                     <TaxDetail purpose="tax"
+                                category="vat"
+                                percentageRate="12.00"
+                                isTriangularTransaction="yes"
+                                exemptDetail="exempt">
+                        <TaxableAmount>
+                           <Money currency="EUR">474.72</Money>
+                        </TaxableAmount>
+                        <TaxAmount>
+                           <Money currency="EUR">90.20</Money>
+                        </TaxAmount>
+                        <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                        <Description xml:lang="en">Tax Description</Description>
+                        <TriangularTransactionLawReference xml:lang="DE">TaxTriangular note 1TaxTriangular note 2TaxTriangular note 3TaxTriangular note 4TaxTriangular note 5</TriangularTransactionLawReference>
+                        <Extrinsic name="taxAccountcode">Rate ID</Extrinsic>
+                     </TaxDetail>
+                     <TaxDetail purpose="shippingTax" category="other" percentageRate="12.00">
+                        <TaxableAmount>
+                           <Money currency="EUR">1000.00</Money>
+                        </TaxableAmount>
+                        <TaxAmount>
+                           <Money currency="EUR">120.00</Money>
+                        </TaxAmount>
+                        <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                        <Description xml:lang="en">Shipping TAX</Description>
+                     </TaxDetail>
+                     <TaxDetail purpose="specialHandlingTax"
+                                category="other"
+                                percentageRate="12.00">
+                        <TaxableAmount>
+                           <Money currency="EUR">1000.00</Money>
+                        </TaxableAmount>
+                        <TaxAmount>
+                           <Money currency="EUR">12.00</Money>
+                        </TaxAmount>
+                        <TaxLocation xml:lang="en">Tax location</TaxLocation>
+                        <Description xml:lang="en">Special Handling TAX</Description>
+                     </TaxDetail>
+                  </Tax>
+                  <SpecialHandlingAmount>
+                     <Money currency="EUR">0.58</Money>
+                  </SpecialHandlingAmount>
+                  <ShippingAmount>
+                     <Money currency="EUR">0.58</Money>
+                  </ShippingAmount>
+                  <GrossAmount>
+                     <Money currency="EUR">12.00</Money>
+                  </GrossAmount>
+                  <InvoiceDetailDiscount percentageRate="10">
+                     <Money currency="EUR" alternateAmount="25.74" alternateCurrency="USD">25.74</Money>
+                  </InvoiceDetailDiscount>
+                  <InvoiceHeaderModifications>
+                     <Modification>
+                        <OriginalPrice>
+                           <Money currency="EUR">0.99</Money>
+                        </OriginalPrice>
+                        <ModificationDetail name="Charge">
+                           <Description xml:lang="en">Charge ID</Description>
+                        </ModificationDetail>
+                     </Modification>
+                     <Modification>
+                        <AdditionalDeduction>
+                           <DeductionAmount>
+                              <Money currency="EUR">25.74</Money>
+                           </DeductionAmount>
+                        </AdditionalDeduction>
+                        <ModificationDetail name="Allowance">
+                           <Description xml:lang="en">Allowance ID</Description>
+                        </ModificationDetail>
+                     </Modification>
+                  </InvoiceHeaderModifications>
+                  <InvoiceDetailSummaryLineItemModifications>
+                     <Modification>
+                        <AdditionalCost>
+                           <Money currency="EUR">25.74</Money>
+                        </AdditionalCost>
+                        <ModificationDetail name="Adjustment">
+                           <Description xml:lang="en">Description-1Description-2<ShortName>Allowance ID</ShortName>
+                           </Description>
+                        </ModificationDetail>
+                     </Modification>
+                  </InvoiceDetailSummaryLineItemModifications>
+                  <TotalCharges>
+                     <Money currency="EUR">12.00</Money>
+                  </TotalCharges>
+                  <TotalAllowances>
+                     <Money currency="EUR">37.74</Money>
+                  </TotalAllowances>
+                  <TotalAmountWithoutTax>
+                     <Money currency="EUR">1186.80</Money>
+                  </TotalAmountWithoutTax>
+                  <NetAmount>
+                     <Money currency="EUR">1326.85</Money>
+                  </NetAmount>
+                  <DepositAmount>
+                     <Money currency="EUR">1186.80</Money>
+                  </DepositAmount>
+                  <DueAmount>
+                     <Money currency="EUR">1186.80</Money>
+                  </DueAmount>
+               </InvoiceDetailSummary>
+            </InvoiceDetailRequest>
+         </Request>
+      </cXML>
+   </content-wrap>
+</expect>

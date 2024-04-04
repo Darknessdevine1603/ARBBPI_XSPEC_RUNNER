@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_DeltaStockRequest_AddOn_0000_StockCheckRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_DeltaStockRequest_AddOn_0000_StockCheckRequest.xsl"
+        date="2023-04-27T15:34:12.313972+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_DeltaStockRequest_AddOn_0000_StockCheckRequest.xspec">
+      <label>Scenario for Delta Stock Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/DeltaStock/DeltaStockExport_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:StockCheckRequest xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                  TransactionId="1623411176212"
+                                  RealmName="156"/>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Delta Stock Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:StockCheckRequest xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                     TransactionId="1623411176212"
+                                     RealmName="156"/>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_DeltaStockRequest_AddOn_0000_StockCheckRequest.xspec">
+      <label>Scenario for Delta Stock Request with batch</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/DeltaStock/DeltaStockExport_batch_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:StockCheckRequest xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                  TransactionId="1567264323676"
+                                  BatchNumber="0"
+                                  RealmName="147"/>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Scenario for Delta Stock Request with batch</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:StockCheckRequest xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                     TransactionId="1567264323676"
+                                     BatchNumber="0"
+                                     RealmName="147"/>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

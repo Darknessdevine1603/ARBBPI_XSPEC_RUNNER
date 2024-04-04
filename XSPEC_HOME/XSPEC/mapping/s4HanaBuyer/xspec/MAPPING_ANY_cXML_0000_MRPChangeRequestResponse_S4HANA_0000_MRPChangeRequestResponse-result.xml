@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_MRPChangeRequestResponse_S4HANA_0000_MRPChangeRequestResponse.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_MRPChangeRequestResponse_S4HANA_0000_MRPChangeRequestResponse.xsl"
+        date="2023-04-27T15:50:04.919197+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_MRPChangeRequestResponse_S4HANA_0000_MRPChangeRequestResponse.xspec">
+      <label>MRP change request response 1 - approve</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/MRP/MRPChangeResponse1_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+               <MessageHeader>
+                  <ID>1629736291734-2836665940864485973</ID>
+                  <CreationDateTime>1629736291734</CreationDateTime>
+                  <SenderBusinessSystemID>null</SenderBusinessSystemID>
+               </MessageHeader>
+               <MRPChangeRequestResponse>
+                  <ChangeRequestUUID>FA163EC18E9E1EEC80A6D5A0ACDCABB2</ChangeRequestUUID>
+                  <MRPElement>4500041436</MRPElement>
+                  <MRPElementItem>20</MRPElementItem>
+                  <MRPPlant>1010</MRPPlant>
+                  <Material>3581</Material>
+                  <ChangeRequestSupplierResponse>01</ChangeRequestSupplierResponse>
+                  <ChangeRequestNote> [ 8/23/2021, 9:31:31 AM ] Test</ChangeRequestNote>
+                  <Supplier>10300080</Supplier>
+                  <SupplierPlant/>
+                  <ChangeRequestResponseScheduleLine>
+                     <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                     <ProposedDeliveryQuantity xmlns:n1="http://sap.com/xi/APPL/Global2" n1:unitCode=""/>
+                     <ProposedDeliveryDate>null</ProposedDeliveryDate>
+                     <ProposedDeliveryDateTime>null</ProposedDeliveryDateTime>
+                  </ChangeRequestResponseScheduleLine>
+                  <ChangeRequestCostOfChange currencyCode="EUR">0.0</ChangeRequestCostOfChange>
+                  <ChangeRequestRejectionCode>null</ChangeRequestRejectionCode>
+               </MRPChangeRequestResponse>
+            </n0:MRPChangeRequestResponse>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>MRP change request response 1 - approve</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+                  <MessageHeader>
+                     <ID>...</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>null</SenderBusinessSystemID>
+                  </MessageHeader>
+                  <MRPChangeRequestResponse>
+                     <ChangeRequestUUID>FA163EC18E9E1EEC80A6D5A0ACDCABB2</ChangeRequestUUID>
+                     <MRPElement>4500041436</MRPElement>
+                     <MRPElementItem>20</MRPElementItem>
+                     <MRPPlant>1010</MRPPlant>
+                     <Material>3581</Material>
+                     <ChangeRequestSupplierResponse>01</ChangeRequestSupplierResponse>
+                     <ChangeRequestNote>...</ChangeRequestNote>
+                     <Supplier>10300080</Supplier>
+                     <SupplierPlant/>
+                     <ChangeRequestResponseScheduleLine>
+                        <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                        <ProposedDeliveryQuantity xmlns:n1="http://sap.com/xi/APPL/Global2" n1:unitCode=""/>
+                        <ProposedDeliveryDate>null</ProposedDeliveryDate>
+                        <ProposedDeliveryDateTime>null</ProposedDeliveryDateTime>
+                     </ChangeRequestResponseScheduleLine>
+                     <ChangeRequestCostOfChange currencyCode="EUR">0.0</ChangeRequestCostOfChange>
+                     <ChangeRequestRejectionCode>null</ChangeRequestRejectionCode>
+                  </MRPChangeRequestResponse>
+               </n0:MRPChangeRequestResponse>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_MRPChangeRequestResponse_S4HANA_0000_MRPChangeRequestResponse.xspec">
+      <label>MRP change request response 2 - reject</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/MRP/MRPChangeResponse2_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+               <MessageHeader>
+                  <ID>1629736291734-2836665940864485973</ID>
+                  <CreationDateTime>1629736291734</CreationDateTime>
+                  <SenderBusinessSystemID>null</SenderBusinessSystemID>
+               </MessageHeader>
+               <MRPChangeRequestResponse>
+                  <ChangeRequestUUID>FA163EC18E9E1EEC80A6D5A0ACDCABB2</ChangeRequestUUID>
+                  <MRPElement>4500041436</MRPElement>
+                  <MRPElementItem>20</MRPElementItem>
+                  <MRPPlant>1010</MRPPlant>
+                  <Material>3581</Material>
+                  <ChangeRequestSupplierResponse>02</ChangeRequestSupplierResponse>
+                  <ChangeRequestNote> [ 8/23/2021, 9:31:31 AM ] Test</ChangeRequestNote>
+                  <Supplier>10300080</Supplier>
+                  <SupplierPlant/>
+                  <ChangeRequestResponseScheduleLine>
+                     <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                     <ProposedDeliveryQuantity xmlns:n1="http://sap.com/xi/APPL/Global2" n1:unitCode=""/>
+                     <ProposedDeliveryDate>null</ProposedDeliveryDate>
+                     <ProposedDeliveryDateTime>null</ProposedDeliveryDateTime>
+                  </ChangeRequestResponseScheduleLine>
+                  <ChangeRequestCostOfChange currencyCode="EUR">0.0</ChangeRequestCostOfChange>
+                  <ChangeRequestRejectionCode>null</ChangeRequestRejectionCode>
+               </MRPChangeRequestResponse>
+            </n0:MRPChangeRequestResponse>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>MRP change request response 2 - reject</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+                  <MessageHeader>
+                     <ID>...</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>null</SenderBusinessSystemID>
+                  </MessageHeader>
+                  <MRPChangeRequestResponse>
+                     <ChangeRequestUUID>FA163EC18E9E1EEC80A6D5A0ACDCABB2</ChangeRequestUUID>
+                     <MRPElement>4500041436</MRPElement>
+                     <MRPElementItem>20</MRPElementItem>
+                     <MRPPlant>1010</MRPPlant>
+                     <Material>3581</Material>
+                     <ChangeRequestSupplierResponse>02</ChangeRequestSupplierResponse>
+                     <ChangeRequestNote>...</ChangeRequestNote>
+                     <Supplier>10300080</Supplier>
+                     <SupplierPlant/>
+                     <ChangeRequestResponseScheduleLine>
+                        <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                        <ProposedDeliveryQuantity xmlns:n1="http://sap.com/xi/APPL/Global2" n1:unitCode=""/>
+                        <ProposedDeliveryDate>null</ProposedDeliveryDate>
+                        <ProposedDeliveryDateTime>null</ProposedDeliveryDateTime>
+                     </ChangeRequestResponseScheduleLine>
+                     <ChangeRequestCostOfChange currencyCode="EUR">0.0</ChangeRequestCostOfChange>
+                     <ChangeRequestRejectionCode>null</ChangeRequestRejectionCode>
+                  </MRPChangeRequestResponse>
+               </n0:MRPChangeRequestResponse>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_MRPChangeRequestResponse_S4HANA_0000_MRPChangeRequestResponse.xspec">
+      <label>MRP change request response 3 - alternate proposal</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/MRP/MRPChangeResponse3_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+               <MessageHeader>
+                  <ID>1629736291734-2836665940864485973</ID>
+                  <CreationDateTime>1629736291734</CreationDateTime>
+                  <SenderBusinessSystemID>null</SenderBusinessSystemID>
+               </MessageHeader>
+               <MRPChangeRequestResponse>
+                  <ChangeRequestUUID>FA163EC18E9E1EEC80A6D5A0ACDCABB2</ChangeRequestUUID>
+                  <MRPElement>4500041436</MRPElement>
+                  <MRPElementItem>20</MRPElementItem>
+                  <MRPPlant>1010</MRPPlant>
+                  <Material>3581</Material>
+                  <ChangeRequestSupplierResponse>03</ChangeRequestSupplierResponse>
+                  <ChangeRequestNote> [ 8/23/2021, 9:31:31 AM ] Test</ChangeRequestNote>
+                  <Supplier>10300080</Supplier>
+                  <SupplierPlant/>
+                  <ChangeRequestResponseScheduleLine>
+                     <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                     <ProposedDeliveryQuantity xmlns:n1="http://sap.com/xi/APPL/Global2" n1:unitCode=""/>
+                     <ProposedDeliveryDate>null</ProposedDeliveryDate>
+                     <ProposedDeliveryDateTime>null</ProposedDeliveryDateTime>
+                  </ChangeRequestResponseScheduleLine>
+                  <ChangeRequestCostOfChange currencyCode="EUR">0.0</ChangeRequestCostOfChange>
+                  <ChangeRequestRejectionCode>null</ChangeRequestRejectionCode>
+               </MRPChangeRequestResponse>
+            </n0:MRPChangeRequestResponse>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>MRP change request response 3 - alternate proposal</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+                  <MessageHeader>
+                     <ID>...</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>null</SenderBusinessSystemID>
+                  </MessageHeader>
+                  <MRPChangeRequestResponse>
+                     <ChangeRequestUUID>FA163EC18E9E1EEC80A6D5A0ACDCABB2</ChangeRequestUUID>
+                     <MRPElement>4500041436</MRPElement>
+                     <MRPElementItem>20</MRPElementItem>
+                     <MRPPlant>1010</MRPPlant>
+                     <Material>3581</Material>
+                     <ChangeRequestSupplierResponse>03</ChangeRequestSupplierResponse>
+                     <ChangeRequestNote> [ 8/23/2021, 9:31:31 AM ] Test</ChangeRequestNote>
+                     <Supplier>10300080</Supplier>
+                     <SupplierPlant/>
+                     <ChangeRequestResponseScheduleLine>
+                        <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                        <ProposedDeliveryQuantity xmlns:n1="http://sap.com/xi/APPL/Global2" n1:unitCode=""/>
+                        <ProposedDeliveryDate>null</ProposedDeliveryDate>
+                        <ProposedDeliveryDateTime>null</ProposedDeliveryDateTime>
+                     </ChangeRequestResponseScheduleLine>
+                     <ChangeRequestCostOfChange currencyCode="EUR">0.0</ChangeRequestCostOfChange>
+                     <ChangeRequestRejectionCode>null</ChangeRequestRejectionCode>
+                  </MRPChangeRequestResponse>
+               </n0:MRPChangeRequestResponse>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_MRPChangeRequestResponse_S4HANA_0000_MRPChangeRequestResponse.xspec">
+      <label>MRP change request response 4 - ToParty</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/MRP/MRPChangeResponse4_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+               <MessageHeader>
+                  <ID>1629736291734-2836665940864485973</ID>
+                  <CreationDateTime>1629736291734</CreationDateTime>
+                  <SenderBusinessSystemID>0LOALS1 null</SenderBusinessSystemID>
+               </MessageHeader>
+               <MRPChangeRequestResponse>
+                  <ChangeRequestUUID>FA163EC18E9E1EEC80A6D5A0ACDCABB2</ChangeRequestUUID>
+                  <MRPElement>4500041436</MRPElement>
+                  <MRPElementItem>20</MRPElementItem>
+                  <MRPPlant>1010</MRPPlant>
+                  <Material>3581</Material>
+                  <ChangeRequestSupplierResponse>03</ChangeRequestSupplierResponse>
+                  <ChangeRequestNote> [ 8/23/2021, 9:31:31 AM ] Test</ChangeRequestNote>
+                  <SupplierPlant/>
+                  <ChangeRequestResponseScheduleLine>
+                     <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                     <ProposedDeliveryQuantity xmlns:n1="http://sap.com/xi/APPL/Global2" n1:unitCode=""/>
+                     <ProposedDeliveryDate>null</ProposedDeliveryDate>
+                     <ProposedDeliveryDateTime>null</ProposedDeliveryDateTime>
+                  </ChangeRequestResponseScheduleLine>
+                  <ChangeRequestCostOfChange currencyCode="EUR">0.0</ChangeRequestCostOfChange>
+                  <ChangeRequestRejectionCode>null</ChangeRequestRejectionCode>
+               </MRPChangeRequestResponse>
+            </n0:MRPChangeRequestResponse>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>MRP change request response 4 - ToParty</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+                  <MessageHeader>
+                     <ID>...</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>...</SenderBusinessSystemID>
+                  </MessageHeader>
+                  <MRPChangeRequestResponse>
+                     <ChangeRequestUUID>FA163EC18E9E1EEC80A6D5A0ACDCABB2</ChangeRequestUUID>
+                     <MRPElement>4500041436</MRPElement>
+                     <MRPElementItem>20</MRPElementItem>
+                     <MRPPlant>1010</MRPPlant>
+                     <Material>3581</Material>
+                     <ChangeRequestSupplierResponse>03</ChangeRequestSupplierResponse>
+                     <ChangeRequestNote>...</ChangeRequestNote>
+                     <SupplierPlant/>
+                     <ChangeRequestResponseScheduleLine>
+                        <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                        <ProposedDeliveryQuantity xmlns:n1="http://sap.com/xi/APPL/Global2" n1:unitCode=""/>
+                        <ProposedDeliveryDate>null</ProposedDeliveryDate>
+                        <ProposedDeliveryDateTime>null</ProposedDeliveryDateTime>
+                     </ChangeRequestResponseScheduleLine>
+                     <ChangeRequestCostOfChange currencyCode="EUR">0.0</ChangeRequestCostOfChange>
+                     <ChangeRequestRejectionCode>null</ChangeRequestRejectionCode>
+                  </MRPChangeRequestResponse>
+               </n0:MRPChangeRequestResponse>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_MRPChangeRequestResponse_S4HANA_0000_MRPChangeRequestResponse.xspec">
+      <label>MRP change request response 5 - split response</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/MRP/MRPChangeResponse_split_response.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+               <MessageHeader>
+                  <ID/>
+                  <CreationDateTime>2021-03-20T12:00:00+00:00</CreationDateTime>
+                  <SenderBusinessSystemID>{{BuyerANID}}</SenderBusinessSystemID>
+               </MessageHeader>
+               <MRPChangeRequestResponse>
+                  <ChangeRequestUUID>CRUUID001</ChangeRequestUUID>
+                  <MRPElement>4503086651</MRPElement>
+                  <MRPElementItem>10</MRPElementItem>
+                  <MRPPlant>0001</MRPPlant>
+                  <Material>FIO-SOAP-TSC023</Material>
+                  <ChangeRequestSupplierResponse>03</ChangeRequestSupplierResponse>
+                  <ChangeRequestNote>CRR Comments Sline1 Item1</ChangeRequestNote>
+                  <SupplierPlant/>
+                  <ChangeRequestResponseScheduleLine>
+                     <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                     <ProposedDeliveryDate>2021-01-01</ProposedDeliveryDate>
+                     <ProposedDeliveryDateTime>2021-01-01T12:00:00+02:00</ProposedDeliveryDateTime>
+                  </ChangeRequestResponseScheduleLine>
+                  <ChangeRequestResponseScheduleLine>
+                     <MRPElementScheduleLine>0000</MRPElementScheduleLine>
+                     <ProposedDeliveryDate>2022-02-02</ProposedDeliveryDate>
+                     <ProposedDeliveryDateTime>2022-02-02T12:00:00+02:00</ProposedDeliveryDateTime>
+                  </ChangeRequestResponseScheduleLine>
+                  <ChangeRequestCostOfChange currencyCode="EUR">10.0</ChangeRequestCostOfChange>
+               </MRPChangeRequestResponse>
+            </n0:MRPChangeRequestResponse>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>MRP change request response 5 - split response</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:MRPChangeRequestResponse xmlns:n0="http://sap.com/xi/SAPGlobal20/Global">
+                  <MessageHeader>
+                     <ID/>
+                     <CreationDateTime>2021-03-20T12:00:00+00:00</CreationDateTime>
+                     <SenderBusinessSystemID>{{BuyerANID}}</SenderBusinessSystemID>
+                  </MessageHeader>
+                  <MRPChangeRequestResponse>
+                     <ChangeRequestUUID>CRUUID001</ChangeRequestUUID>
+                     <MRPElement>4503086651</MRPElement>
+                     <MRPElementItem>10</MRPElementItem>
+                     <MRPPlant>0001</MRPPlant>
+                     <Material>FIO-SOAP-TSC023</Material>
+                     <ChangeRequestSupplierResponse>03</ChangeRequestSupplierResponse>
+                     <ChangeRequestNote>CRR Comments Sline1 Item1</ChangeRequestNote>
+                     <SupplierPlant/>
+                     <ChangeRequestResponseScheduleLine>
+                        <MRPElementScheduleLine>1</MRPElementScheduleLine>
+                        <ProposedDeliveryDate>2021-01-01</ProposedDeliveryDate>
+                        <ProposedDeliveryDateTime>2021-01-01T12:00:00+02:00</ProposedDeliveryDateTime>
+                     </ChangeRequestResponseScheduleLine>
+                     <ChangeRequestResponseScheduleLine>
+                        <MRPElementScheduleLine>0000</MRPElementScheduleLine>
+                        <ProposedDeliveryDate>2022-02-02</ProposedDeliveryDate>
+                        <ProposedDeliveryDateTime>2022-02-02T12:00:00+02:00</ProposedDeliveryDateTime>
+                     </ChangeRequestResponseScheduleLine>
+                     <ChangeRequestCostOfChange currencyCode="EUR">10.0</ChangeRequestCostOfChange>
+                  </MRPChangeRequestResponse>
+               </n0:MRPChangeRequestResponse>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

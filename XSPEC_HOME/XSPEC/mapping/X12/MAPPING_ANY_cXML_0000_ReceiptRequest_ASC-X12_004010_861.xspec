@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/X12/MAPPING_ANY_cXML_0000_ReceiptRequest_ASC-X12_004010_861.xsl">
+    <x:scenario label="Receipt Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'ARIBA'"/>
+        <x:param name="anISASenderQual" select="'ZZ'"/>
+        <x:param name="anISAReceiver" select="'RITSUPPL9'"/>
+        <x:param name="anISAReceiverQual" select="'ZZ'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue" select="'200010249'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"  select="'RITBuyer_9'"/>
+        <x:param name="anReceiverGroupID"  select="'RITSUPPL9'"/>
+       
+        <x:param name="segmentCount"/>
+        <x:param name="exchange"/>
+        <x:param name="anCRFlag"/>
+               
+        <x:context href="../../../XSPEC/payloads/base/inbound/X12/Receipts/ReceiptRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/X12/Receipts/ReceiptRequest_AM.dat"
+            select="element()" label="Receipt Request"/>
+    </x:scenario>
+    <x:scenario label="Receipt Request Update">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'ARIBA'"/>
+        <x:param name="anISASenderQual" select="'ZZ'"/>
+        <x:param name="anISAReceiver" select="'RITSUPPL9'"/>
+        <x:param name="anISAReceiverQual" select="'ZZ'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue" select="'200010249'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        
+        <x:param name="segmentCount"/>
+        <x:param name="exchange"/>
+        <x:param name="anCRFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/X12/Receipts/ReceiptRequestUpdate_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/X12/Receipts/ReceiptRequestUpdate_AM.dat"
+            select="element()" label="Receipt Request Update"/>
+    </x:scenario>
+    <x:scenario label="Receipt Request Delete">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anISASender" select="'ARIBA'"/>
+        <x:param name="anISASenderQual" select="'ZZ'"/>
+        <x:param name="anISAReceiver" select="'RITSUPPL9'"/>
+        <x:param name="anISAReceiverQual" select="'ZZ'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue" select="'200010249'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        
+        <x:param name="segmentCount"/>
+        <x:param name="exchange"/>
+        <x:param name="anCRFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/X12/Receipts/ReceiptRequestDelete_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/X12/Receipts/ReceiptRequestDelete_AM.dat"
+            select="element()" label="Receipt Request Delete"/>
+    </x:scenario>
+</x:description>

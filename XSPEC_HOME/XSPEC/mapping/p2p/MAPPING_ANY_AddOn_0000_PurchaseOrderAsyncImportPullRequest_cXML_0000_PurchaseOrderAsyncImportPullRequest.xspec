@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_PurchaseOrderAsyncImportPullRequest_cXML_0000_PurchaseOrderAsyncImportPullRequest.xsl">
+    <x:scenario label="PurchaseOrderResponse">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/PurchaseOrderAsyncImportPullRequest/PurchaseOrderAsyncImportPullRequestBM_PO.xml"/>
+        <x:expect label="PurchaseOrderResponse" href="../../../XSPEC/payloads/target/outbound/p2p/PurchaseOrderAsyncImportPullRequest/PurchaseOrderAsyncImportPullRequestAM_PO.xml" select="element()" />       
+    </x:scenario>
+    
+    <x:scenario label="PurchaseOrderResponseError">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/PurchaseOrderAsyncImportPullRequest/PurchaseOrderAsyncImportPullRequesterr_BM.xml"/>
+        <x:expect label="PurchaseOrderResponseError" href="../../../XSPEC/payloads/target/outbound/p2p/PurchaseOrderAsyncImportPullRequest/PurchaseOrderAsyncImportPullRequest_AMerr.xml" select="element()" />       
+    </x:scenario>
+    
+    <x:scenario label="PurchaseOrderResponseMulti">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/PurchaseOrderAsyncImportPullRequest/PurchaseOrderAsyncImportPullRequestBM_multi.xml"/>
+        <x:expect label="PurchaseOrderResponseMulti" href="../../../XSPEC/payloads/target/outbound/p2p/PurchaseOrderAsyncImportPullRequest/PurchaseOrderAsyncImportPullRequest_AM_multi.xml" select="element()" />       
+    </x:scenario>
+</x:description>

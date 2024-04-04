@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_RequestForQuotation_cXML_0000_RequestForQuotation.xsl">    
+    <x:scenario label="Scenario 1 for Request for Quotation">
+        <x:param name="anLocalTesting" select="'YES'"/>        
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/RFQ/RequestForQuotation_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/RFQ/RequestForQuotation_AM.dat"
+            select="element()" label="Scenario 1 for Request for Quotation"/>              
+    </x:scenario>      
+    <x:scenario label="RFQ_ITEM_HIERARCHY">
+        <x:param name="anLocalTesting" select="'YES'"/>        
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/RFQ/RFQ_ITEM_HIERARCHY_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/RFQ/RFQ_ITEM_HIERARCHY_AM.dat"
+            select="element()" label="RFQ_ITEM_HIERARCHY"/>              
+    </x:scenario>        
+</x:description>

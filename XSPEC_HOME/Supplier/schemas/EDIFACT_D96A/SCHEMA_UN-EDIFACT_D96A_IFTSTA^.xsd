@@ -1,0 +1,1920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hci="http://sap.com/hci" xmlns="urn:sap.com:typesystem:b2b:6:un-edifact" targetNamespace="urn:sap.com:typesystem:b2b:6:un-edifact">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<hci:resourceinfo>
+				<hci:info key="typeSystem" value="UN-EDIFACT"/>
+				<hci:info key="typeSystemVersion" value="D.96A"/>
+				<hci:info key="category" value="Template"/>
+				<hci:info key="rootNode" value="M_IFTSTA"/>
+				<hci:info key="responsibleAgencyName" value="UN/ECE (United Nations - Economic Commission for Europe)"/>
+				<hci:info key="responsibleAgencyCode" value="6"/>
+				<hci:info key="messageType" value="IFTSTA"/>
+				<hci:info key="messageName" value="Instruction message"/>
+				<hci:info key="targetNamespace" value="urn:sap.com:typesystem:b2b:6:un-edifact"/>
+				<hci:info key="documentNumber" value="/M_IFTSTA/S_BGM/D_1004"/>
+			</hci:resourceinfo>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="M_IFTSTA">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="S_UNH" type="S_UNH"/>
+				<xsd:element name="S_BGM" type="S_BGM"/>
+				<xsd:element name="S_DTM" type="S_DTM" minOccurs="0" maxOccurs="9"/>
+				<xsd:element name="S_TSR" type="S_TSR" minOccurs="0"/>
+				<xsd:element name="G_SG1" minOccurs="0" maxOccurs="9">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="S_NAD" type="S_NAD"/>
+							<xsd:element name="G_SG2" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="S_CTA" type="S_CTA"/>
+										<xsd:element name="S_COM" type="S_COM" minOccurs="0" maxOccurs="9"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="G_SG3" minOccurs="0" maxOccurs="9">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="S_RFF" type="S_RFF"/>
+							<xsd:element name="S_DTM" type="S_DTM" minOccurs="0"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="S_LOC" type="S_LOC" minOccurs="0" maxOccurs="9"/>
+				<xsd:element name="S_FTX" type="S_FTX" minOccurs="0" maxOccurs="9"/>
+				<xsd:element name="S_CNT" type="S_CNT" minOccurs="0" maxOccurs="9"/>
+				<xsd:element name="G_SG4" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="S_CNI" type="S_CNI"/>
+							<xsd:element name="S_LOC" type="S_LOC" minOccurs="0" maxOccurs="9"/>
+							<xsd:element name="S_CNT" type="S_CNT" minOccurs="0" maxOccurs="9"/>
+							<xsd:element name="G_SG5" minOccurs="1" maxOccurs="99">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="S_STS" type="S_STS"/>
+										<xsd:element name="S_RFF" type="S_RFF" minOccurs="0" maxOccurs="9"/>
+										<xsd:element name="S_DTM" type="S_DTM" minOccurs="0" maxOccurs="9"/>
+										<xsd:element name="S_DOC" type="S_DOC" minOccurs="0"/>
+										<xsd:element name="S_FTX" type="S_FTX" minOccurs="0" maxOccurs="9"/>
+										<xsd:element name="S_NAD" type="S_NAD" minOccurs="0" maxOccurs="9"/>
+										<xsd:element name="S_LOC" type="S_LOC" minOccurs="0"/>
+										<xsd:element name="S_PCI" type="S_PCI" minOccurs="0" maxOccurs="99"/>
+										<xsd:element name="G_SG6" minOccurs="0" maxOccurs="99">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="S_TDT" type="S_TDT"/>
+													<xsd:element name="S_RFF" type="S_RFF" minOccurs="0" maxOccurs="9"/>
+													<xsd:element name="S_LOC" type="S_LOC" minOccurs="0" maxOccurs="9"/>
+													<xsd:element name="S_DTM" type="S_DTM" minOccurs="0" maxOccurs="9"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="G_SG7" minOccurs="0" maxOccurs="99">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="S_EQD" type="S_EQD"/>
+													<xsd:element name="S_MEA" type="S_MEA" minOccurs="0" maxOccurs="9"/>
+													<xsd:element name="S_DIM" type="S_DIM" minOccurs="0" maxOccurs="9"/>
+													<xsd:element name="S_SEL" type="S_SEL" minOccurs="0" maxOccurs="9"/>
+													<xsd:element name="G_SG8" minOccurs="0" maxOccurs="99">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="S_EQA" type="S_EQA"/>
+																<xsd:element name="S_SEL" type="S_SEL" minOccurs="0" maxOccurs="9"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="G_SG9" minOccurs="0" maxOccurs="99">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="S_GID" type="S_GID"/>
+													<xsd:element name="S_HAN" type="S_HAN" minOccurs="0" maxOccurs="9"/>
+													<xsd:element name="G_SG10" minOccurs="0" maxOccurs="99">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="S_MEA" type="S_MEA"/>
+																<xsd:element name="S_EQN" type="S_EQN" minOccurs="0"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="G_SG11" minOccurs="0" maxOccurs="99">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="S_DIM" type="S_DIM"/>
+																<xsd:element name="S_EQN" type="S_EQN" minOccurs="0"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="G_SG12" minOccurs="0" maxOccurs="99">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="S_PCI" type="S_PCI"/>
+																<xsd:element name="S_GIN" type="S_GIN" minOccurs="0" maxOccurs="9"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="S_UNT" type="S_UNT"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="S_UNH">
+		<xsd:sequence>
+			<xsd:element name="D_0062" type="D_0062"/>
+			<xsd:element name="C_S009" type="C_S009"/>
+			<xsd:element name="D_0068" type="D_0068" minOccurs="0"/>
+			<xsd:element name="C_S010" type="C_S010" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_BGM">
+		<xsd:sequence>
+			<xsd:element name="C_C002" type="C_C002" minOccurs="0"/>
+			<xsd:element name="D_1004" type="D_1004" minOccurs="0"/>
+			<xsd:element name="D_1225" type="D_1225" minOccurs="0"/>
+			<xsd:element name="D_4343" type="D_4343" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_DTM">
+		<xsd:sequence>
+			<xsd:element name="C_C507" type="C_C507"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_TSR">
+		<xsd:sequence>
+			<xsd:element name="C_C536" type="C_C536" minOccurs="0"/>
+			<xsd:element name="C_C233" type="C_C233" minOccurs="0"/>
+			<xsd:element name="C_C537" type="C_C537" minOccurs="0"/>
+			<xsd:element name="C_C703" type="C_C703" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_LOC">
+		<xsd:sequence>
+			<xsd:element name="D_3227" type="D_3227"/>
+			<xsd:element name="C_C517" type="C_C517" minOccurs="0"/>
+			<xsd:element name="C_C519" type="C_C519" minOccurs="0"/>
+			<xsd:element name="C_C553" type="C_C553" minOccurs="0"/>
+			<xsd:element name="D_5479" type="D_5479" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_FTX">
+		<xsd:sequence>
+			<xsd:element name="D_4451" type="D_4451"/>
+			<xsd:element name="D_4453" type="D_4453" minOccurs="0"/>
+			<xsd:element name="C_C107" type="C_C107" minOccurs="0"/>
+			<xsd:element name="C_C108" type="C_C108" minOccurs="0"/>
+			<xsd:element name="D_3453" type="D_3453" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_CNT">
+		<xsd:sequence>
+			<xsd:element name="C_C270" type="C_C270"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_UNT">
+		<xsd:sequence>
+			<xsd:element name="D_0074" type="D_0074"/>
+			<xsd:element name="D_0062" type="D_0062"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S009">
+		<xsd:sequence>
+			<xsd:element name="D_0065" type="D_0065"/>
+			<xsd:element name="D_0052" type="D_0052"/>
+			<xsd:element name="D_0054" type="D_0054"/>
+			<xsd:element name="D_0051" type="D_0051"/>
+			<xsd:element name="D_0057" type="D_0057" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S010">
+		<xsd:sequence>
+			<xsd:element name="D_0070" type="D_0070"/>
+			<xsd:element name="D_0073" type="D_0073" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C002">
+		<xsd:sequence>
+			<xsd:element name="D_1001" type="D_1001" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_1000" type="D_1000" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C507">
+		<xsd:sequence>
+			<xsd:element name="D_2005" type="D_2005"/>
+			<xsd:element name="D_2380" type="D_2380" minOccurs="0"/>
+			<xsd:element name="D_2379" type="D_2379" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C536">
+		<xsd:sequence>
+			<xsd:element name="D_4065" type="D_4065"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C233">
+		<xsd:sequence>
+			<xsd:element name="D_7273" type="D_7273"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_7273_2" type="D_7273" minOccurs="0"/>
+			<xsd:element name="D_1131_2" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055_2" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C537">
+		<xsd:sequence>
+			<xsd:element name="D_4219" type="D_4219"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C703">
+		<xsd:sequence>
+			<xsd:element name="D_7085" type="D_7085"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_NAD">
+		<xsd:sequence>
+			<xsd:element name="D_3035" type="D_3035"/>
+			<xsd:element name="C_C082" type="C_C082" minOccurs="0"/>
+			<xsd:element name="C_C058" type="C_C058" minOccurs="0"/>
+			<xsd:element name="C_C080" type="C_C080" minOccurs="0"/>
+			<xsd:element name="C_C059" type="C_C059" minOccurs="0"/>
+			<xsd:element name="D_3164" type="D_3164" minOccurs="0"/>
+			<xsd:element name="D_3229" type="D_3229" minOccurs="0"/>
+			<xsd:element name="D_3251" type="D_3251" minOccurs="0"/>
+			<xsd:element name="D_3207" type="D_3207" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C082">
+		<xsd:sequence>
+			<xsd:element name="D_3039" type="D_3039"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C058">
+		<xsd:sequence>
+			<xsd:element name="D_3124" type="D_3124"/>
+			<xsd:element name="D_3124_2" type="D_3124" minOccurs="0"/>
+			<xsd:element name="D_3124_3" type="D_3124" minOccurs="0"/>
+			<xsd:element name="D_3124_4" type="D_3124" minOccurs="0"/>
+			<xsd:element name="D_3124_5" type="D_3124" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C080">
+		<xsd:sequence>
+			<xsd:element name="D_3036" type="D_3036"/>
+			<xsd:element name="D_3036_2" type="D_3036" minOccurs="0"/>
+			<xsd:element name="D_3036_3" type="D_3036" minOccurs="0"/>
+			<xsd:element name="D_3036_4" type="D_3036" minOccurs="0"/>
+			<xsd:element name="D_3036_5" type="D_3036" minOccurs="0"/>
+			<xsd:element name="D_3045" type="D_3045" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C059">
+		<xsd:sequence>
+			<xsd:element name="D_3042" type="D_3042"/>
+			<xsd:element name="D_3042_2" type="D_3042" minOccurs="0"/>
+			<xsd:element name="D_3042_3" type="D_3042" minOccurs="0"/>
+			<xsd:element name="D_3042_4" type="D_3042" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_CTA">
+		<xsd:sequence>
+			<xsd:element name="D_3139" type="D_3139" minOccurs="0"/>
+			<xsd:element name="C_C056" type="C_C056" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_COM">
+		<xsd:sequence>
+			<xsd:element name="C_C076" type="C_C076"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C056">
+		<xsd:sequence>
+			<xsd:element name="D_3413" type="D_3413" minOccurs="0"/>
+			<xsd:element name="D_3412" type="D_3412" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C076">
+		<xsd:sequence>
+			<xsd:element name="D_3148" type="D_3148"/>
+			<xsd:element name="D_3155" type="D_3155"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_RFF">
+		<xsd:sequence>
+			<xsd:element name="C_C506" type="C_C506"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C506">
+		<xsd:sequence>
+			<xsd:element name="D_1153" type="D_1153"/>
+			<xsd:element name="D_1154" type="D_1154" minOccurs="0"/>
+			<xsd:element name="D_1156" type="D_1156" minOccurs="0"/>
+			<xsd:element name="D_4000" type="D_4000" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C517">
+		<xsd:sequence>
+			<xsd:element name="D_3225" type="D_3225" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_3224" type="D_3224" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C519">
+		<xsd:sequence>
+			<xsd:element name="D_3223" type="D_3223" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_3222" type="D_3222" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C553">
+		<xsd:sequence>
+			<xsd:element name="D_3233" type="D_3233" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_3232" type="D_3232" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C107">
+		<xsd:sequence>
+			<xsd:element name="D_4441" type="D_4441"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C108">
+		<xsd:sequence>
+			<xsd:element name="D_4440" type="D_4440"/>
+			<xsd:element name="D_4440_2" type="D_4440" minOccurs="0"/>
+			<xsd:element name="D_4440_3" type="D_4440" minOccurs="0"/>
+			<xsd:element name="D_4440_4" type="D_4440" minOccurs="0"/>
+			<xsd:element name="D_4440_5" type="D_4440" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C270">
+		<xsd:sequence>
+			<xsd:element name="D_6069" type="D_6069"/>
+			<xsd:element name="D_6066" type="D_6066"/>
+			<xsd:element name="D_6411" type="D_6411" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_CNI">
+		<xsd:sequence>
+			<xsd:element name="D_1490" type="D_1490" minOccurs="0"/>
+			<xsd:element name="C_C503" type="C_C503" minOccurs="0"/>
+			<xsd:element name="D_1312" type="D_1312" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C503">
+		<xsd:sequence>
+			<xsd:element name="D_1004" type="D_1004" minOccurs="0"/>
+			<xsd:element name="D_1373" type="D_1373" minOccurs="0"/>
+			<xsd:element name="D_1366" type="D_1366" minOccurs="0"/>
+			<xsd:element name="D_3453" type="D_3453" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_STS">
+		<xsd:sequence>
+			<xsd:element name="C_C601" type="C_C601" minOccurs="0"/>
+			<xsd:element name="C_C555" type="C_C555" minOccurs="0"/>
+			<xsd:element name="C_C556" type="C_C556" minOccurs="0"/>
+			<xsd:element name="C_C556_2" type="C_C556" minOccurs="0"/>
+			<xsd:element name="C_C556_3" type="C_C556" minOccurs="0"/>
+			<xsd:element name="C_C556_4" type="C_C556" minOccurs="0"/>
+			<xsd:element name="C_C556_5" type="C_C556" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_DOC">
+		<xsd:sequence>
+			<xsd:element name="C_C002" type="C_C002"/>
+			<xsd:element name="C_C503" type="C_C503" minOccurs="0"/>
+			<xsd:element name="D_3153" type="D_3153" minOccurs="0"/>
+			<xsd:element name="D_1220" type="D_1220" minOccurs="0"/>
+			<xsd:element name="D_1218" type="D_1218" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_PCI">
+		<xsd:sequence>
+			<xsd:element name="D_4233" type="D_4233" minOccurs="0"/>
+			<xsd:element name="C_C210" type="C_C210" minOccurs="0"/>
+			<xsd:element name="D_8275" type="D_8275" minOccurs="0"/>
+			<xsd:element name="C_C827" type="C_C827" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C601">
+		<xsd:sequence>
+			<xsd:element name="D_9015" type="D_9015"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C555">
+		<xsd:sequence>
+			<xsd:element name="D_9011" type="D_9011"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_9010" type="D_9010" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C556">
+		<xsd:sequence>
+			<xsd:element name="D_9013" type="D_9013"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_9012" type="D_9012" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C210">
+		<xsd:sequence>
+			<xsd:element name="D_7102" type="D_7102"/>
+			<xsd:element name="D_7102_2" type="D_7102" minOccurs="0"/>
+			<xsd:element name="D_7102_3" type="D_7102" minOccurs="0"/>
+			<xsd:element name="D_7102_4" type="D_7102" minOccurs="0"/>
+			<xsd:element name="D_7102_5" type="D_7102" minOccurs="0"/>
+			<xsd:element name="D_7102_6" type="D_7102" minOccurs="0"/>
+			<xsd:element name="D_7102_7" type="D_7102" minOccurs="0"/>
+			<xsd:element name="D_7102_8" type="D_7102" minOccurs="0"/>
+			<xsd:element name="D_7102_9" type="D_7102" minOccurs="0"/>
+			<xsd:element name="D_7102_10" type="D_7102" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C827">
+		<xsd:sequence>
+			<xsd:element name="D_7511" type="D_7511"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_TDT">
+		<xsd:sequence>
+			<xsd:element name="D_8051" type="D_8051"/>
+			<xsd:element name="D_8028" type="D_8028" minOccurs="0"/>
+			<xsd:element name="C_C220" type="C_C220" minOccurs="0"/>
+			<xsd:element name="C_C228" type="C_C228" minOccurs="0"/>
+			<xsd:element name="C_C040" type="C_C040" minOccurs="0"/>
+			<xsd:element name="D_8101" type="D_8101" minOccurs="0"/>
+			<xsd:element name="C_C401" type="C_C401" minOccurs="0"/>
+			<xsd:element name="C_C222" type="C_C222" minOccurs="0"/>
+			<xsd:element name="D_8281" type="D_8281" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C220">
+		<xsd:sequence>
+			<xsd:element name="D_8067" type="D_8067" minOccurs="0"/>
+			<xsd:element name="D_8066" type="D_8066" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C228">
+		<xsd:sequence>
+			<xsd:element name="D_8179" type="D_8179" minOccurs="0"/>
+			<xsd:element name="D_8178" type="D_8178" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C040">
+		<xsd:sequence>
+			<xsd:element name="D_3127" type="D_3127" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_3128" type="D_3128" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C401">
+		<xsd:sequence>
+			<xsd:element name="D_8457" type="D_8457"/>
+			<xsd:element name="D_8459" type="D_8459"/>
+			<xsd:element name="D_7130" type="D_7130" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C222">
+		<xsd:sequence>
+			<xsd:element name="D_8213" type="D_8213" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_8212" type="D_8212" minOccurs="0"/>
+			<xsd:element name="D_8453" type="D_8453" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_EQD">
+		<xsd:sequence>
+			<xsd:element name="D_8053" type="D_8053"/>
+			<xsd:element name="C_C237" type="C_C237" minOccurs="0"/>
+			<xsd:element name="C_C224" type="C_C224" minOccurs="0"/>
+			<xsd:element name="D_8077" type="D_8077" minOccurs="0"/>
+			<xsd:element name="D_8249" type="D_8249" minOccurs="0"/>
+			<xsd:element name="D_8169" type="D_8169" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_MEA">
+		<xsd:sequence>
+			<xsd:element name="D_6311" type="D_6311"/>
+			<xsd:element name="C_C502" type="C_C502" minOccurs="0"/>
+			<xsd:element name="C_C174" type="C_C174" minOccurs="0"/>
+			<xsd:element name="D_7383" type="D_7383" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_DIM">
+		<xsd:sequence>
+			<xsd:element name="D_6145" type="D_6145"/>
+			<xsd:element name="C_C211" type="C_C211"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_SEL">
+		<xsd:sequence>
+			<xsd:element name="D_9308" type="D_9308"/>
+			<xsd:element name="C_C215" type="C_C215" minOccurs="0"/>
+			<xsd:element name="D_4517" type="D_4517" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C237">
+		<xsd:sequence>
+			<xsd:element name="D_8260" type="D_8260" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_3207" type="D_3207" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C224">
+		<xsd:sequence>
+			<xsd:element name="D_8155" type="D_8155" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_8154" type="D_8154" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C502">
+		<xsd:sequence>
+			<xsd:element name="D_6313" type="D_6313" minOccurs="0"/>
+			<xsd:element name="D_6321" type="D_6321" minOccurs="0"/>
+			<xsd:element name="D_6155" type="D_6155" minOccurs="0"/>
+			<xsd:element name="D_6154" type="D_6154" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C174">
+		<xsd:sequence>
+			<xsd:element name="D_6411" type="D_6411"/>
+			<xsd:element name="D_6314" type="D_6314" minOccurs="0"/>
+			<xsd:element name="D_6162" type="D_6162" minOccurs="0"/>
+			<xsd:element name="D_6152" type="D_6152" minOccurs="0"/>
+			<xsd:element name="D_6432" type="D_6432" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C211">
+		<xsd:sequence>
+			<xsd:element name="D_6411" type="D_6411"/>
+			<xsd:element name="D_6168" type="D_6168" minOccurs="0"/>
+			<xsd:element name="D_6140" type="D_6140" minOccurs="0"/>
+			<xsd:element name="D_6008" type="D_6008" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C215">
+		<xsd:sequence>
+			<xsd:element name="D_9303" type="D_9303" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_9302" type="D_9302" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_EQA">
+		<xsd:sequence>
+			<xsd:element name="D_8053" type="D_8053"/>
+			<xsd:element name="C_C237" type="C_C237" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_GID">
+		<xsd:sequence>
+			<xsd:element name="D_1496" type="D_1496" minOccurs="0"/>
+			<xsd:element name="C_C213" type="C_C213" minOccurs="0"/>
+			<xsd:element name="C_C213_2" type="C_C213" minOccurs="0"/>
+			<xsd:element name="C_C213_3" type="C_C213" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_HAN">
+		<xsd:sequence>
+			<xsd:element name="C_C524" type="C_C524" minOccurs="0"/>
+			<xsd:element name="C_C218" type="C_C218" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C213">
+		<xsd:sequence>
+			<xsd:element name="D_7224" type="D_7224" minOccurs="0"/>
+			<xsd:element name="D_7065" type="D_7065" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_7064" type="D_7064" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C524">
+		<xsd:sequence>
+			<xsd:element name="D_4079" type="D_4079" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+			<xsd:element name="D_4078" type="D_4078" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C218">
+		<xsd:sequence>
+			<xsd:element name="D_7419" type="D_7419" minOccurs="0"/>
+			<xsd:element name="D_1131" type="D_1131" minOccurs="0"/>
+			<xsd:element name="D_3055" type="D_3055" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_EQN">
+		<xsd:sequence>
+			<xsd:element name="C_C523" type="C_C523"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C523">
+		<xsd:sequence>
+			<xsd:element name="D_6350" type="D_6350" minOccurs="0"/>
+			<xsd:element name="D_6353" type="D_6353" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_GIN">
+		<xsd:sequence>
+			<xsd:element name="D_7405" type="D_7405"/>
+			<xsd:element name="C_C208" type="C_C208"/>
+			<xsd:element name="C_C208_2" type="C_C208" minOccurs="0"/>
+			<xsd:element name="C_C208_3" type="C_C208" minOccurs="0"/>
+			<xsd:element name="C_C208_4" type="C_C208" minOccurs="0"/>
+			<xsd:element name="C_C208_5" type="C_C208" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_C208">
+		<xsd:sequence>
+			<xsd:element name="D_7402" type="D_7402"/>
+			<xsd:element name="D_7402_2" type="D_7402" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="D_0062">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="14"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0068">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0065">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0052">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0054">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0051">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0057">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0070">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="2"/>
+					<xsd:pattern value="\d{1,2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="-\d{1,2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="4"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0073">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1004">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1225">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4343">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1001">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1131">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3055">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1000">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_2005">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_2380">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_2379">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4065">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7273">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4219">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7085">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3035">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3164">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3229">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3251">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3207">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3039">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3124">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3036">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3045">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3042">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3139">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3413">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3412">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3148">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="512"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3155">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1153">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1154">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1156">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4000">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3227">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_5479">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3225">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3224">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3223">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3222">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3233">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3232">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4451">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4453">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3453">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4441">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4440">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6069">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6066">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="18"/>
+					<xsd:pattern value="\d{1,18}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="19"/>
+					<xsd:pattern value="-\d{1,18}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="19"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="20"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6411">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1490">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="4"/>
+					<xsd:pattern value="\d{1,4}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="5"/>
+					<xsd:pattern value="-\d{1,4}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="5"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="6"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1312">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="4"/>
+					<xsd:pattern value="\d{1,4}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="5"/>
+					<xsd:pattern value="-\d{1,4}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="5"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="6"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1373">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1366">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_9015">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_9011">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_9010">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_9013">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_9012">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3153">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1220">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="2"/>
+					<xsd:pattern value="\d{1,2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="-\d{1,2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="4"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1218">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="2"/>
+					<xsd:pattern value="\d{1,2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="-\d{1,2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="4"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4233">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8275">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7102">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7511">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8051">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8028">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8101">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8281">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8067">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8066">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8179">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8178">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3127">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_3128">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8457">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8459">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7130">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8213">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8212">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8453">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8053">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8077">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8249">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8169">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8260">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8155">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_8154">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6311">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7383">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6313">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6321">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6155">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6154">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6314">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="18"/>
+					<xsd:pattern value="\d{1,18}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="19"/>
+					<xsd:pattern value="-\d{1,18}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="19"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="20"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6162">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="18"/>
+					<xsd:pattern value="\d{1,18}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="19"/>
+					<xsd:pattern value="-\d{1,18}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="19"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="20"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6152">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="18"/>
+					<xsd:pattern value="\d{1,18}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="19"/>
+					<xsd:pattern value="-\d{1,18}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="19"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="20"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6432">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="2"/>
+					<xsd:pattern value="\d{1,2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="-\d{1,2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="4"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6145">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6168">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="15"/>
+					<xsd:pattern value="\d{1,15}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="16"/>
+					<xsd:pattern value="-\d{1,15}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="16"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="17"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6140">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="15"/>
+					<xsd:pattern value="\d{1,15}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="16"/>
+					<xsd:pattern value="-\d{1,15}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="16"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="17"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6008">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="15"/>
+					<xsd:pattern value="\d{1,15}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="16"/>
+					<xsd:pattern value="-\d{1,15}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="16"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="17"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_9308">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4517">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_9303">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_9302">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_1496">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="5"/>
+					<xsd:pattern value="\d{1,5}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="6"/>
+					<xsd:pattern value="-\d{1,5}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="6"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="7"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7224">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="8"/>
+					<xsd:pattern value="\d{1,8}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="9"/>
+					<xsd:pattern value="-\d{1,8}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="9"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="10"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7065">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7064">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4079">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_4078">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7419">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6350">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="15"/>
+					<xsd:pattern value="\d{1,15}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="16"/>
+					<xsd:pattern value="-\d{1,15}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="16"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="17"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_6353">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7405">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_7402">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0074">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="6"/>
+					<xsd:pattern value="\d{1,6}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="7"/>
+					<xsd:pattern value="-\d{1,6}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="7"/>
+					<xsd:pattern value="\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:maxLength value="8"/>
+					<xsd:pattern value="-\d+[.,]\d+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+</xsd:schema>

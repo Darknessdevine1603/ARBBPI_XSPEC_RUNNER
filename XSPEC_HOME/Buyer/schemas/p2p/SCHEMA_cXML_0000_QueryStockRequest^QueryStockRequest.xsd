@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="QueryStockRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element  name= "keys" type="StockKey" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="transactionId" type="xs:long" use="required"></xs:attribute>
+            <xs:attribute name="realmId" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="StockKey">
+        <xs:sequence>
+            <xs:element id="matnr" name="matnr" type="xs:string" />
+            <xs:element id="plant" name="plant" type="xs:string" />
+            <xs:element id="lgort" name="lgort" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/xCBL/MAPPING_ANY_xCBL_3.0_AdvanceShipmentNotice_cXML_0000_ShipNoticeRequest.xsl">
+    <x:scenario label="xCBL Order Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/xCBL/OrderRequest/OrderRequest.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/xCBL/OrderRequest/OrderRequest.dat"
+            select="*" label="xCBL Order Request"/>
+    </x:scenario>
+</x:description>

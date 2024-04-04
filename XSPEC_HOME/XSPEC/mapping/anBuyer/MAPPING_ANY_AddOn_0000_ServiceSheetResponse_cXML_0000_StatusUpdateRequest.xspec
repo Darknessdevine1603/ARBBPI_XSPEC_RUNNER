@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_ServiceSheetResponse_cXML_0000_StatusUpdateRequest.xsl">
+    <x:scenario label="SES Response Approved">
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/SES/SESResponseApproved.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/SES/SESResponseApproved.dat"
+            select="element()" label="SES Response Approved"/>
+    </x:scenario>
+
+    <x:scenario label="SES Response Rejected">
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/SES/SESResponseRejected.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/SES/SESResponseRejected.dat"
+            select="element()" label="SES Response Rejected"/>
+    </x:scenario>
+
+</x:description>

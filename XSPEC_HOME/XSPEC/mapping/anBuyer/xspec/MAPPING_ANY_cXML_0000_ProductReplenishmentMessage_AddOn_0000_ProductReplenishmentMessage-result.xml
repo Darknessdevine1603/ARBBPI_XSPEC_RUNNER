@@ -1,0 +1,2177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xsl"
+        date="2023-04-27T15:30:40.102822+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xspec">
+      <label>PRM scenario</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM1.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                     xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID schemeID="FC7131773-1572968257386"/>
+                  <CreationDateTime>2019-11-05T03:37:37-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ProductReplenishmentHeader>
+                  <CreationDate>2019-11-05</CreationDate>
+                  <Vendor>100000</Vendor>
+                  <ProcessType>SMI</ProcessType>
+               </ProductReplenishmentHeader>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID/>
+                  <BuyerPartID>000000000000001828</BuyerPartID>
+                  <Plant>0001</Plant>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <ReplenishmentTimeSeries>
+                     <Type>plannedReceipt</Type>
+                     <TimeSeriesDetails>
+                        <StartDate>2019-11-06</StartDate>
+                        <StartTime>20:00:00</StartTime>
+                        <EndDate>2019-11-06</EndDate>
+                        <EndTime>20:00:00</EndTime>
+                        <Quantity unitCode="EA">10</Quantity>
+                     </TimeSeriesDetails>
+                     <TimeSeriesDetails>
+                        <StartDate>2019-11-08</StartDate>
+                        <StartTime>20:00:00</StartTime>
+                        <EndDate>2019-11-08</EndDate>
+                        <EndTime>20:00:00</EndTime>
+                        <Quantity unitCode="EA">20</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+            </n0:ProductReplenishment>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>PRM scenario</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                        xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID schemeID="FC7131773-1572968257386"/>
+                     <CreationDateTime>2019-11-05T03:37:37-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ProductReplenishmentHeader>
+                     <CreationDate>2019-11-05</CreationDate>
+                     <Vendor>100000</Vendor>
+                     <ProcessType>SMI</ProcessType>
+                  </ProductReplenishmentHeader>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID/>
+                     <BuyerPartID>000000000000001828</BuyerPartID>
+                     <Plant>0001</Plant>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <ReplenishmentTimeSeries>
+                        <Type>plannedReceipt</Type>
+                        <TimeSeriesDetails>
+                           <StartDate>2019-11-06</StartDate>
+                           <StartTime>20:00:00</StartTime>
+                           <EndDate>2019-11-06</EndDate>
+                           <EndTime>20:00:00</EndTime>
+                           <Quantity unitCode="EA">10</Quantity>
+                        </TimeSeriesDetails>
+                        <TimeSeriesDetails>
+                           <StartDate>2019-11-08</StartDate>
+                           <StartTime>20:00:00</StartTime>
+                           <EndDate>2019-11-08</EndDate>
+                           <EndTime>20:00:00</EndTime>
+                           <Quantity unitCode="EA">20</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+               </n0:ProductReplenishment>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xspec">
+      <label>PRM with Inventory scenario</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_Inventory.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                     xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID schemeID="FC7131773-1572968257386"/>
+                  <CreationDateTime>2019-11-05T03:37:37-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ProductReplenishmentHeader>
+                  <CreationDate>2019-11-05</CreationDate>
+                  <Vendor>100000</Vendor>
+                  <ProcessType>SMI</ProcessType>
+               </ProductReplenishmentHeader>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID/>
+                  <BuyerPartID>000000000000001828</BuyerPartID>
+                  <Plant>0001</Plant>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <Characteristic>
+                     <Domain/>
+                     <Value>Accept</Value>
+                  </Characteristic>
+                  <Inventory>
+                     <SubcontractingStockInTransferQuantity unitCode="EA">28.0</SubcontractingStockInTransferQuantity>
+                     <UnrestrictedUseQuantity unitCode="EA">1</UnrestrictedUseQuantity>
+                     <BlockedQuantity unitCode="EA">1</BlockedQuantity>
+                     <QualityInspectionQuantity unitCode="EA">1</QualityInspectionQuantity>
+                     <PromotionQuantity unitCode="EA">1</PromotionQuantity>
+                     <StockInTransferQuantity unitCode="EA">1</StockInTransferQuantity>
+                     <IncrementQuantity unitCode="EA">50.0</IncrementQuantity>
+                     <RequiredMinimumQuantity unitCode="EA">50.0</RequiredMinimumQuantity>
+                     <RequiredMaximumQuantity unitCode="EA">900.0</RequiredMaximumQuantity>
+                     <StockOnHandQuantity unitCode="EA">1</StockOnHandQuantity>
+                     <WorkInProcessQuantity unitCode="EA">1</WorkInProcessQuantity>
+                     <IntransitQuantity unitCode="EA">1</IntransitQuantity>
+                     <ScrapQuantity unitCode="EA">1</ScrapQuantity>
+                     <OrderQuantity unitCode="EA">
+                        <Minimum>0</Minimum>
+                        <Maximum>100</Maximum>
+                     </OrderQuantity>
+                     <DaysOfSupply>
+                        <Minimum>90</Minimum>
+                        <Maximum>1</Maximum>
+                     </DaysOfSupply>
+                  </Inventory>
+                  <ConsignmentInventory>
+                     <SubcontractingStockInTransferQuantity unitCode="EA">1</SubcontractingStockInTransferQuantity>
+                     <UnrestrictedUseQuantity unitCode="EA">17.0</UnrestrictedUseQuantity>
+                     <BlockedQuantity unitCode="EA">2.0</BlockedQuantity>
+                     <QualityInspectionQuantity unitCode="EA">6.0</QualityInspectionQuantity>
+                     <PromotionQuantity unitCode="EA">1</PromotionQuantity>
+                     <StockInTransferQuantity unitCode="EA">1</StockInTransferQuantity>
+                     <IncrementQuantity unitCode="EA">1</IncrementQuantity>
+                     <RequiredMinimumQuantity unitCode="EA">1</RequiredMinimumQuantity>
+                     <RequiredMaximumQuantity unitCode="EA">1</RequiredMaximumQuantity>
+                  </ConsignmentInventory>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType/>
+                     <TimeSeriesDetails>
+                        <StartDate>2019-11-06</StartDate>
+                        <StartTime>20:00:00</StartTime>
+                        <EndDate>2019-11-06</EndDate>
+                        <EndTime>20:00:00</EndTime>
+                        <Quantity unitCode="EA">10</Quantity>
+                     </TimeSeriesDetails>
+                     <TimeSeriesDetails>
+                        <StartDate>2019-11-08</StartDate>
+                        <StartTime>20:00:00</StartTime>
+                        <EndDate>2019-11-08</EndDate>
+                        <EndTime>20:00:00</EndTime>
+                        <Quantity unitCode="EA">20</Quantity>
+                        <IdReference>
+                           <Identifier>identifier</Identifier>
+                           <Domain>domain</Domain>
+                        </IdReference>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+               <AribaComment/>
+            </n0:ProductReplenishment>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>PRM with Inventory scenario</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ProductReplenishment xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <MessageHeader>
+                     <ID schemeID="FC7131773-1572968257386"/>
+                     <CreationDateTime>2019-11-05T03:37:37-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ProductReplenishmentHeader>
+                     <CreationDate>2019-11-05</CreationDate>
+                     <Vendor>100000</Vendor>
+                     <ProcessType>SMI</ProcessType>
+                  </ProductReplenishmentHeader>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID/>
+                     <BuyerPartID>000000000000001828</BuyerPartID>
+                     <Plant>0001</Plant>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <Characteristic>
+                        <Domain/>
+                        <Value>Accept</Value>
+                     </Characteristic>
+                     <Inventory>
+                        <SubcontractingStockInTransferQuantity unitCode="EA">28.0</SubcontractingStockInTransferQuantity>
+                        <UnrestrictedUseQuantity unitCode="EA">1</UnrestrictedUseQuantity>
+                        <BlockedQuantity unitCode="EA">1</BlockedQuantity>
+                        <QualityInspectionQuantity unitCode="EA">1</QualityInspectionQuantity>
+                        <PromotionQuantity unitCode="EA">1</PromotionQuantity>
+                        <StockInTransferQuantity unitCode="EA">1</StockInTransferQuantity>
+                        <IncrementQuantity unitCode="EA">50.0</IncrementQuantity>
+                        <RequiredMinimumQuantity unitCode="EA">50.0</RequiredMinimumQuantity>
+                        <RequiredMaximumQuantity unitCode="EA">900.0</RequiredMaximumQuantity>
+                        <StockOnHandQuantity unitCode="EA">1</StockOnHandQuantity>
+                        <WorkInProcessQuantity unitCode="EA">1</WorkInProcessQuantity>
+                        <IntransitQuantity unitCode="EA">1</IntransitQuantity>
+                        <ScrapQuantity unitCode="EA">1</ScrapQuantity>
+                        <OrderQuantity unitCode="EA">
+                           <Minimum>0</Minimum>
+                           <Maximum>100</Maximum>
+                        </OrderQuantity>
+                        <DaysOfSupply>
+                           <Minimum>90</Minimum>
+                           <Maximum>1</Maximum>
+                        </DaysOfSupply>
+                     </Inventory>
+                     <ConsignmentInventory>
+                        <SubcontractingStockInTransferQuantity unitCode="EA">1</SubcontractingStockInTransferQuantity>
+                        <UnrestrictedUseQuantity unitCode="EA">17.0</UnrestrictedUseQuantity>
+                        <BlockedQuantity unitCode="EA">2.0</BlockedQuantity>
+                        <QualityInspectionQuantity unitCode="EA">6.0</QualityInspectionQuantity>
+                        <PromotionQuantity unitCode="EA">1</PromotionQuantity>
+                        <StockInTransferQuantity unitCode="EA">1</StockInTransferQuantity>
+                        <IncrementQuantity unitCode="EA">1</IncrementQuantity>
+                        <RequiredMinimumQuantity unitCode="EA">1</RequiredMinimumQuantity>
+                        <RequiredMaximumQuantity unitCode="EA">1</RequiredMaximumQuantity>
+                     </ConsignmentInventory>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType/>
+                        <TimeSeriesDetails>
+                           <StartDate>2019-11-06</StartDate>
+                           <StartTime>20:00:00</StartTime>
+                           <EndDate>2019-11-06</EndDate>
+                           <EndTime>20:00:00</EndTime>
+                           <Quantity unitCode="EA">10</Quantity>
+                        </TimeSeriesDetails>
+                        <TimeSeriesDetails>
+                           <StartDate>2019-11-08</StartDate>
+                           <StartTime>20:00:00</StartTime>
+                           <EndDate>2019-11-08</EndDate>
+                           <EndTime>20:00:00</EndTime>
+                           <Quantity unitCode="EA">20</Quantity>
+                           <IdReference>
+                              <Identifier>identifier</Identifier>
+                              <Domain>domain</Domain>
+                           </IdReference>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+                  <AribaComment/>
+               </n0:ProductReplenishment>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xspec">
+      <label>PRM with Zero Quantity</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_Zero_Qty.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                     xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID schemeID="FC7131773-1572968257386"/>
+                  <CreationDateTime>2019-11-05T03:37:37-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ProductReplenishmentHeader>
+                  <CreationDate>2019-11-05</CreationDate>
+                  <Vendor>100000</Vendor>
+                  <ProcessType>SMI</ProcessType>
+               </ProductReplenishmentHeader>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID/>
+                  <BuyerPartID>000000000000001828</BuyerPartID>
+                  <Plant>0001</Plant>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <ReplenishmentTimeSeries>
+                     <Type>plannedReceipt</Type>
+                     <TimeSeriesDetails>
+                        <StartDate>2019-11-06</StartDate>
+                        <StartTime>20:00:00</StartTime>
+                        <EndDate>2019-11-06</EndDate>
+                        <EndTime>20:00:00</EndTime>
+                        <Quantity unitCode="EA">10</Quantity>
+                     </TimeSeriesDetails>
+                     <TimeSeriesDetails>
+                        <StartDate>2019-11-08</StartDate>
+                        <StartTime>20:00:00</StartTime>
+                        <EndDate>2019-11-08</EndDate>
+                        <EndTime>20:00:00</EndTime>
+                        <Quantity unitCode="EA">20</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+            </n0:ProductReplenishment>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>PRM with Zero Quantity</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                        xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID schemeID="FC7131773-1572968257386"/>
+                     <CreationDateTime>2019-11-05T03:37:37-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1499761596863-6179080087130315542@10.163.3.213</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ProductReplenishmentHeader>
+                     <CreationDate>2019-11-05</CreationDate>
+                     <Vendor>100000</Vendor>
+                     <ProcessType>SMI</ProcessType>
+                  </ProductReplenishmentHeader>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID/>
+                     <BuyerPartID>000000000000001828</BuyerPartID>
+                     <Plant>0001</Plant>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <ReplenishmentTimeSeries>
+                        <Type>plannedReceipt</Type>
+                        <TimeSeriesDetails>
+                           <StartDate>2019-11-06</StartDate>
+                           <StartTime>20:00:00</StartTime>
+                           <EndDate>2019-11-06</EndDate>
+                           <EndTime>20:00:00</EndTime>
+                           <Quantity unitCode="EA">10</Quantity>
+                        </TimeSeriesDetails>
+                        <TimeSeriesDetails>
+                           <StartDate>2019-11-08</StartDate>
+                           <StartTime>20:00:00</StartTime>
+                           <EndDate>2019-11-08</EndDate>
+                           <EndTime>20:00:00</EndTime>
+                           <Quantity unitCode="EA">20</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+               </n0:ProductReplenishment>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xspec">
+      <label>PRM with Negative Quantity</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_NegativeValues.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                     xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID schemeID="AribaCIG_MS-FCST-202204150025"/>
+                  <CreationDateTime>2022-04-14T22:30:00+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>AGIVbCqHvPzrsuGhcCfPK_zgFc7l</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ProductReplenishmentHeader>
+                  <CreationDate>2022-04-14</CreationDate>
+                  <Vendor>100000</Vendor>
+                  <ProcessType>ManufacturingVisibility</ProcessType>
+               </ProductReplenishmentHeader>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID>13N4-0XB0A01</SupplierPartID>
+                  <BuyerPartID>M1175509-002</BuyerPartID>
+                  <Plant>4406 0010</Plant>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <Characteristic>
+                     <Domain>flag</Domain>
+                     <Value>FVMY</Value>
+                  </Characteristic>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-02-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-02-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">42301.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">34737.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-20</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-20</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1207.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID>13N4-0XU0511</SupplierPartID>
+                  <BuyerPartID>M1157552-001</BuyerPartID>
+                  <Plant>4406 0011</Plant>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-02-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-02-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1850.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-03</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-03</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1367.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-10</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-10</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1191.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-10</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-10</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1191.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-17</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-17</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1071.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-17</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-17</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1071.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-24</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-24</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">988.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-24</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-24</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">988.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-06-12</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-06-12</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-526.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1739.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-06-12</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-06-12</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-10.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-06-19</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-06-19</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-574.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-06-19</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-06-19</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-58.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-06-26</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-06-26</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-706.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-06-26</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-06-26</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-190.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-03</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-03</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-752.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-03</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-03</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-236.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-10</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-10</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-835.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-10</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-10</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-319.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-17</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-17</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-885.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1739.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-17</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-17</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-369.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-24</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-24</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-897.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-24</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-24</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-381.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-31</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-31</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-947.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-07-31</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-07-31</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-431.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-08-07</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-08-07</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-980.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-08-07</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-08-07</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-464.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-08-28</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-08-28</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-1115.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-08-28</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-08-28</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-599.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-09-04</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-09-04</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-1121.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-09-04</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-09-04</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">-605.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-20</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-20</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1725.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-27</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-27</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1390.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-27</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-27</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1390.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-03</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-03</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1367.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+            </n0:ProductReplenishment>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>PRM with Negative Quantity</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ProductReplenishment xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <MessageHeader>
+                     <ID schemeID="AribaCIG_MS-FCST-202204150025"/>
+                     <CreationDateTime>2022-04-14T22:30:00+05:30</CreationDateTime>
+                     <AribaNetworkPayloadID>AGIVbCqHvPzrsuGhcCfPK_zgFc7l</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ProductReplenishmentHeader>
+                     <CreationDate>2022-04-14</CreationDate>
+                     <Vendor>100000</Vendor>
+                     <ProcessType>ManufacturingVisibility</ProcessType>
+                  </ProductReplenishmentHeader>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID>13N4-0XB0A01</SupplierPartID>
+                     <BuyerPartID>M1175509-002</BuyerPartID>
+                     <Plant>4406 0010</Plant>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <Characteristic>
+                        <Domain>flag</Domain>
+                        <Value>FVMY</Value>
+                     </Characteristic>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-02-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-02-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">42301.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">34737.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-20</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-20</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1207.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID>13N4-0XU0511</SupplierPartID>
+                     <BuyerPartID>M1157552-001</BuyerPartID>
+                     <Plant>4406 0011</Plant>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-02-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-02-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1850.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-03</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-03</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1367.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-10</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-10</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1191.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-10</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-10</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1191.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-17</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-17</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1071.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-17</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-17</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1071.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-24</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-24</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">988.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-24</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-24</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">988.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-06-12</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-06-12</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-526.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1739.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-06-12</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-06-12</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-10.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-06-19</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-06-19</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-574.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-06-19</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-06-19</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-58.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-06-26</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-06-26</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-706.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-06-26</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-06-26</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-190.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-03</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-03</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-752.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-03</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-03</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-236.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-10</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-10</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-835.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-10</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-10</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-319.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-17</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-17</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-885.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1739.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-17</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-17</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-369.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-24</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-24</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-897.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-24</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-24</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-381.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-31</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-31</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-947.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-07-31</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-07-31</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-431.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-08-07</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-08-07</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-980.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-08-07</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-08-07</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-464.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-08-28</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-08-28</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-1115.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-08-28</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-08-28</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-599.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-09-04</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-09-04</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-1121.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-09-04</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-09-04</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">-605.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-20</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-20</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1725.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-27</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-27</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1390.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-27</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-27</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1390.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-03</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-03</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1367.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+               </n0:ProductReplenishment>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xspec">
+      <label>PRM with Negative Quantity process type SMI</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_withNegativeValues_SMI.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                     xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID schemeID="AribaCIG_MS-FCST-202204150025"/>
+                  <CreationDateTime>2022-04-14T22:30:00+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>AGIVbCqHvPzrsuGhcCfPK_zgFc7l</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ProductReplenishmentHeader>
+                  <CreationDate>2022-04-14</CreationDate>
+                  <Vendor>100000</Vendor>
+                  <ProcessType>SMI</ProcessType>
+               </ProductReplenishmentHeader>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID>13N4-0XB0A01</SupplierPartID>
+                  <BuyerPartID>M1175509-002</BuyerPartID>
+                  <Plant>4406 0010</Plant>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <Characteristic>
+                     <Domain>flag</Domain>
+                     <Value>FVMY</Value>
+                  </Characteristic>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-02-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-02-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">42301.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">34737.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-20</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-20</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1207.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID>13N4-0XU0511</SupplierPartID>
+                  <BuyerPartID>M1157552-001</BuyerPartID>
+                  <Plant>4406 0011</Plant>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-02-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-02-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1850.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-03</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-03</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1367.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-10</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-10</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1191.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-10</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-10</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1191.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-17</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-17</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1071.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-17</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-17</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1071.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-24</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-24</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">988.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-24</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-24</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">988.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1739.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-13</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-13</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1739.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-20</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-20</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1725.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-27</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-27</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1390.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>Balance</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-03-27</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-03-27</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1390.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+                  <ReplenishmentTimeSeries>
+                     <Type>custom</Type>
+                     <CustomType>dependentdemand</CustomType>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-04-03</StartDate>
+                        <StartTime>22:30:00</StartTime>
+                        <EndDate>2022-04-03</EndDate>
+                        <EndTime>22:30:00</EndTime>
+                        <Quantity unitCode="EA">1367.000</Quantity>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+            </n0:ProductReplenishment>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>PRM with Negative Quantity process type SMI</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ProductReplenishment xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <MessageHeader>
+                     <ID schemeID="AribaCIG_MS-FCST-202204150025"/>
+                     <CreationDateTime>2022-04-14T22:30:00+05:30</CreationDateTime>
+                     <AribaNetworkPayloadID>AGIVbCqHvPzrsuGhcCfPK_zgFc7l</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ProductReplenishmentHeader>
+                     <CreationDate>2022-04-14</CreationDate>
+                     <Vendor>100000</Vendor>
+                     <ProcessType>SMI</ProcessType>
+                  </ProductReplenishmentHeader>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID>13N4-0XB0A01</SupplierPartID>
+                     <BuyerPartID>M1175509-002</BuyerPartID>
+                     <Plant>4406 0010</Plant>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <Characteristic>
+                        <Domain>flag</Domain>
+                        <Value>FVMY</Value>
+                     </Characteristic>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-02-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-02-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">42301.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">34737.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-20</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-20</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1207.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID>13N4-0XU0511</SupplierPartID>
+                     <BuyerPartID>M1157552-001</BuyerPartID>
+                     <Plant>4406 0011</Plant>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-02-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-02-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1850.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-03</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-03</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1367.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-10</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-10</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1191.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-10</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-10</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1191.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-17</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-17</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1071.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-17</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-17</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1071.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-24</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-24</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">988.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-24</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-24</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">988.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1739.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-13</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-13</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1739.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-20</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-20</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1725.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-27</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-27</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1390.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>Balance</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-03-27</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-03-27</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1390.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                     <ReplenishmentTimeSeries>
+                        <Type>custom</Type>
+                        <CustomType>dependentdemand</CustomType>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-04-03</StartDate>
+                           <StartTime>22:30:00</StartTime>
+                           <EndDate>2022-04-03</EndDate>
+                           <EndTime>22:30:00</EndTime>
+                           <Quantity unitCode="EA">1367.000</Quantity>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+               </n0:ProductReplenishment>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xspec">
+      <label>PRM with Empty Quantity</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_withEmptyQuantity.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                     xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID schemeID="4500410684"/>
+                  <CreationDateTime>2022-07-13T04:51:26+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>AGLOEAiQx3yqTDK_DadTgG1XEa9H</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ProductReplenishmentHeader>
+                  <CreationDate>2022-07-13</CreationDate>
+                  <Vendor>1000920569</Vendor>
+                  <ProcessType>ManufacturingVisibility</ProcessType>
+               </ProductReplenishmentHeader>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID>Q2078AN</SupplierPartID>
+                  <BuyerPartID>Q2078AN</BuyerPartID>
+                  <Plant/>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <ReplenishmentTimeSeries>
+                     <Type>purchaseOrder</Type>
+                     <TimeSeriesDetails>
+                        <StartDate>2022-05-21</StartDate>
+                        <StartTime>12:30:00</StartTime>
+                        <EndDate>2022-05-21</EndDate>
+                        <EndTime>12:30:00</EndTime>
+                     </TimeSeriesDetails>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+            </n0:ProductReplenishment>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>PRM with Empty Quantity</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ProductReplenishment xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <MessageHeader>
+                     <ID schemeID="4500410684"/>
+                     <CreationDateTime>2022-07-13T04:51:26+05:30</CreationDateTime>
+                     <AribaNetworkPayloadID>AGLOEAiQx3yqTDK_DadTgG1XEa9H</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ProductReplenishmentHeader>
+                     <CreationDate>2022-07-13</CreationDate>
+                     <Vendor>1000920569</Vendor>
+                     <ProcessType>ManufacturingVisibility</ProcessType>
+                  </ProductReplenishmentHeader>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID>Q2078AN</SupplierPartID>
+                     <BuyerPartID>Q2078AN</BuyerPartID>
+                     <Plant/>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <ReplenishmentTimeSeries>
+                        <Type>purchaseOrder</Type>
+                        <TimeSeriesDetails>
+                           <StartDate>2022-05-21</StartDate>
+                           <StartTime>12:30:00</StartTime>
+                           <EndDate>2022-05-21</EndDate>
+                           <EndTime>12:30:00</EndTime>
+                        </TimeSeriesDetails>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+               </n0:ProductReplenishment>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xspec">
+      <label>PRM with Empty Quantity process type SMI</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_withEmptyQuantity_SMI.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ProductReplenishment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                     xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID schemeID="FC7740200-1649322324306"/>
+                  <CreationDateTime>2022-04-07T14:35:24+05:30</CreationDateTime>
+                  <AribaNetworkPayloadID>1649322324296-6222583051062090368@10.163.193.138</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <ProductReplenishmentHeader>
+                  <CreationDate>2022-04-07</CreationDate>
+                  <Vendor>100000</Vendor>
+                  <ProcessType>SMI</ProcessType>
+               </ProductReplenishmentHeader>
+               <ProductReplenishmentDetails>
+                  <SupplierPartID>VENDOR MATERIAL 73</SupplierPartID>
+                  <BuyerPartID>71</BuyerPartID>
+                  <Plant>0001</Plant>
+                  <Status/>
+                  <DocumentType/>
+                  <LineNumber/>
+                  <DocumentID/>
+                  <ReplenishmentTimeSeries>
+                     <Type>plannedReceipt</Type>
+                  </ReplenishmentTimeSeries>
+               </ProductReplenishmentDetails>
+            </n0:ProductReplenishment>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="true">
+         <label>PRM with Empty Quantity process type SMI</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ProductReplenishment xmlns:n0="http://sap.com/xi/ARBCIG1"
+                                        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <MessageHeader>
+                     <ID schemeID="FC7740200-1649322324306"/>
+                     <CreationDateTime>2022-04-07T14:35:24+05:30</CreationDateTime>
+                     <AribaNetworkPayloadID>1649322324296-6222583051062090368@10.163.193.138</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <ProductReplenishmentHeader>
+                     <CreationDate>2022-04-07</CreationDate>
+                     <Vendor>100000</Vendor>
+                     <ProcessType>SMI</ProcessType>
+                  </ProductReplenishmentHeader>
+                  <ProductReplenishmentDetails>
+                     <SupplierPartID>VENDOR MATERIAL 73</SupplierPartID>
+                     <BuyerPartID>71</BuyerPartID>
+                     <Plant>0001</Plant>
+                     <Status/>
+                     <DocumentType/>
+                     <LineNumber/>
+                     <DocumentID/>
+                     <ReplenishmentTimeSeries>
+                        <Type>plannedReceipt</Type>
+                     </ReplenishmentTimeSeries>
+                  </ProductReplenishmentDetails>
+               </n0:ProductReplenishment>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

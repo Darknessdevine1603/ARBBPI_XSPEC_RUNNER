@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_OrderConfirmationApprovalRequest_AddOn_0000_OrderConfirmationApprovalRequest.xsl">
+    <x:scenario label="OCA for Purchase Order">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSourceDocumentType" select="'OrderConfirmationApprovalRequest'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/inbound/anBuyer/OCA/OCA-PO.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/anBuyer/OCA/OCA-PO.dat"
+            select="element()" label="OCA for Purchase Order"/>
+    </x:scenario>
+    <x:scenario label="OCA for Scheduling Agreement">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSourceDocumentType" select="'OrderConfirmationApprovalRequest'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/inbound/anBuyer/OCA/OCA-SAR.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/anBuyer/OCA/OCA-SAR.dat"
+            select="element()" label="OCA for Scheduling Agreement"/>
+    </x:scenario>
+    <x:scenario label="OCA with AcceptItem">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSourceDocumentType" select="'OrderConfirmationApprovalRequest'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/inbound/anBuyer/OCA/OCA-AcceptItemDetail.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/anBuyer/OCA/OCA-AcceptItemDetail.dat"
+            select="element()" label="OCA with AcceptItem"/>
+    </x:scenario>
+    <x:scenario label="OCA with AcceptItem with Comments">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSourceDocumentType" select="'OrderConfirmationApprovalRequest'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/inbound/anBuyer/OCA/OCA-AcceptItemDetailComments.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/anBuyer/OCA/OCA-AcceptItemDetailComments.dat"
+            select="element()" label="OCA with AcceptItem with Comments"/>
+    </x:scenario>
+    <x:scenario label="OCA with line item texts">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anSourceDocumentType" select="'OrderConfirmationApprovalRequest'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/inbound/anBuyer/OCA/OCA_Line_Text.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/anBuyer/OCA/OCA_Line_Text.xml"
+            select="element()" label="OCA with line item texts"/>
+    </x:scenario>   
+</x:description>

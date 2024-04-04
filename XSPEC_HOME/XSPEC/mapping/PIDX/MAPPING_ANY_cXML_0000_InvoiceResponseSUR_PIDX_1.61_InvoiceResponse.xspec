@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/PIDX/MAPPING_ANY_cXML_0000_InvoiceResponseSUR_PIDX_1.61_InvoiceResponse.xsl">
+    <x:scenario label="Receipt Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>       
+        <x:param name="anAlternativeReceiver"/>       
+        <x:param name="anSenderGroupID"/>        
+        <x:param name="anReceiverGroupID"/>        
+        <x:param name="anOrginalDocumentID" select="'anOrginalDocumentID'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/StatusUpdate/InvoiceStatusUpdate_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/StatusUpdate/InvoiceStatusUpdate_AM.dat"
+            select="element()" label="Receipt Request"/>
+    </x:scenario>
+    <x:scenario label="InvoiceStatusUpdate with multiline comments">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>       
+        <x:param name="anAlternativeReceiver"/>       
+        <x:param name="anSenderGroupID"/>        
+        <x:param name="anReceiverGroupID"/>        
+        <x:param name="anOrginalDocumentID"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/StatusUpdate/InvoiceStatusUpdate_RIT1_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/StatusUpdate/InvoiceStatusUpdate_RIT1_AM.dat"
+            select="*" label="InvoiceStatusUpdate with multiline comments"/>
+    </x:scenario>
+    <x:scenario label="InvoiceStatusUpdate with DocumentID value">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>       
+        <x:param name="anAlternativeReceiver"/>       
+        <x:param name="anSenderGroupID"/>        
+        <x:param name="anReceiverGroupID"/>        
+        <x:param name="anOrginalDocumentID"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/StatusUpdate/InvoiceStatusUpdate_RIT2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/StatusUpdate/InvoiceStatusUpdate_RIT2_AM.dat"
+            select="*" label="InvoiceStatusUpdate with DocumentID value"/>
+    </x:scenario>
+    <x:scenario label="InvoiceStatusUpdate with credential domain has 'DUNS'">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>       
+        <x:param name="anAlternativeReceiver"/>       
+        <x:param name="anSenderGroupID"/>        
+        <x:param name="anReceiverGroupID"/>        
+        <x:param name="anOrginalDocumentID"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>        
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/StatusUpdate/InvoiceStatusUpdate_RIT3_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/StatusUpdate/InvoiceStatusUpdate_RIT3_AM.dat"
+            select="*" label="InvoiceStatusUpdate with credential domain has 'DUNS'"/>
+    </x:scenario>
+</x:description>

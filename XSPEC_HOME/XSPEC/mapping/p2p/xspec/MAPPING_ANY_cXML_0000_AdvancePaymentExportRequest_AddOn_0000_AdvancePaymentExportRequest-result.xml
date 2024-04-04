@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_AdvancePaymentExportRequest_AddOn_0000_AdvancePaymentExportRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_AdvancePaymentExportRequest_AddOn_0000_AdvancePaymentExportRequest.xsl"
+        date="2023-04-27T15:37:33.099428+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_AdvancePaymentExportRequest_AddOn_0000_AdvancePaymentExportRequest.xspec">
+      <label>Scenario for Advance Payment Export Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/AdvPayment/AdvancePaymentExportRequest_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_ADV_PAYMENT_POST xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_HDR>
+                  <ARIBA_ID>APMT43</ARIBA_ID>
+               </ARIBA_HDR>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <BLINEDATE>20181122183000</BLINEDATE>
+               <DOCDATE>20181024050849</DOCDATE>
+               <DOCUMENTHEADER>
+                  <OBJ_TYPE>BKPFF</OBJ_TYPE>
+                  <BUS_ACT>RFST</BUS_ACT>
+                  <HEADER_TXT>ERP-20200-20</HEADER_TXT>
+                  <COMP_CODE>0001</COMP_CODE>
+                  <DOC_DATE>2018-10-24</DOC_DATE>
+                  <DOC_TYPE>KA</DOC_TYPE>
+               </DOCUMENTHEADER>
+               <ACCOUNTPAYABLE>
+                  <item>
+                     <ITEMNO_ACC>1</ITEMNO_ACC>
+                     <VENDOR_NO>0000100000</VENDOR_NO>
+                     <COMP_CODE>0001</COMP_CODE>
+                     <BLINE_DATE>2018-11-22</BLINE_DATE>
+                     <PYMT_METH>C</PYMT_METH>
+                     <SP_GL_IND>F</SP_GL_IND>
+                  </item>
+               </ACCOUNTPAYABLE>
+               <CURRENCYAMOUNT>
+                  <item>
+                     <ITEMNO_ACC>1</ITEMNO_ACC>
+                     <CURRENCY>USD</CURRENCY>
+                     <AMT_DOCCUR>12.9900</AMT_DOCCUR>
+                  </item>
+               </CURRENCYAMOUNT>
+               <EXTENSION2>
+                  <item>
+                     <STRUCTURE>PO_DETAIL</STRUCTURE>
+                     <VALUEPART1>1</VALUEPART1>
+                     <VALUEPART2>4500003679</VALUEPART2>
+                     <VALUEPART3>00040</VALUEPART3>
+                  </item>
+                  <item>
+                     <STRUCTURE>TRG_GL_IND</STRUCTURE>
+                     <VALUEPART1>1</VALUEPART1>
+                     <VALUEPART2>A</VALUEPART2>
+                  </item>
+               </EXTENSION2>
+            </n0:ARBCIG_ADV_PAYMENT_POST>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Advance Payment Export Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_ADV_PAYMENT_POST xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ARIBA_HDR>
+                     <ARIBA_ID>APMT43</ARIBA_ID>
+                  </ARIBA_HDR>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <BLINEDATE>20181122183000</BLINEDATE>
+                  <DOCDATE>20181024050849</DOCDATE>
+                  <DOCUMENTHEADER>
+                     <OBJ_TYPE>BKPFF</OBJ_TYPE>
+                     <BUS_ACT>RFST</BUS_ACT>
+                     <HEADER_TXT>ERP-20200-20</HEADER_TXT>
+                     <COMP_CODE>0001</COMP_CODE>
+                     <DOC_DATE>2018-10-24</DOC_DATE>
+                     <DOC_TYPE>KA</DOC_TYPE>
+                  </DOCUMENTHEADER>
+                  <ACCOUNTPAYABLE>
+                     <item>
+                        <ITEMNO_ACC>1</ITEMNO_ACC>
+                        <VENDOR_NO>0000100000</VENDOR_NO>
+                        <COMP_CODE>0001</COMP_CODE>
+                        <BLINE_DATE>2018-11-22</BLINE_DATE>
+                        <PYMT_METH>C</PYMT_METH>
+                        <SP_GL_IND>F</SP_GL_IND>
+                     </item>
+                  </ACCOUNTPAYABLE>
+                  <CURRENCYAMOUNT>
+                     <item>
+                        <ITEMNO_ACC>1</ITEMNO_ACC>
+                        <CURRENCY>USD</CURRENCY>
+                        <AMT_DOCCUR>12.9900</AMT_DOCCUR>
+                     </item>
+                  </CURRENCYAMOUNT>
+                  <EXTENSION2>
+                     <item>
+                        <STRUCTURE>PO_DETAIL</STRUCTURE>
+                        <VALUEPART1>1</VALUEPART1>
+                        <VALUEPART2>4500003679</VALUEPART2>
+                        <VALUEPART3>00040</VALUEPART3>
+                     </item>
+                     <item>
+                        <STRUCTURE>TRG_GL_IND</STRUCTURE>
+                        <VALUEPART1>1</VALUEPART1>
+                        <VALUEPART2>A</VALUEPART2>
+                     </item>
+                  </EXTENSION2>
+               </n0:ARBCIG_ADV_PAYMENT_POST>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_AdvancePaymentExportRequest_AddOn_0000_AdvancePaymentExportRequest.xspec">
+      <label>Scenario for Advance Payment Export Request Date Format</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/AdvPayment/AdvancePaymentExportRequestFormatDate_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_ADV_PAYMENT_POST xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_HDR>
+                  <ARIBA_ID>APMT43</ARIBA_ID>
+               </ARIBA_HDR>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <BLINEDATE>20181122000000</BLINEDATE>
+               <DOCDATE>20181024000000</DOCDATE>
+               <DOCUMENTHEADER>
+                  <OBJ_TYPE>BKPFF</OBJ_TYPE>
+                  <BUS_ACT>RFST</BUS_ACT>
+                  <HEADER_TXT>ERP-20200-20</HEADER_TXT>
+                  <COMP_CODE>0001</COMP_CODE>
+                  <DOC_DATE>2018-10-24</DOC_DATE>
+                  <DOC_TYPE>KA</DOC_TYPE>
+               </DOCUMENTHEADER>
+               <ACCOUNTPAYABLE>
+                  <item>
+                     <ITEMNO_ACC>1</ITEMNO_ACC>
+                     <VENDOR_NO>0000100000</VENDOR_NO>
+                     <COMP_CODE>0001</COMP_CODE>
+                     <BLINE_DATE>2018-11-22</BLINE_DATE>
+                     <PYMT_METH>C</PYMT_METH>
+                     <SP_GL_IND>F</SP_GL_IND>
+                  </item>
+               </ACCOUNTPAYABLE>
+               <CURRENCYAMOUNT>
+                  <item>
+                     <ITEMNO_ACC>1</ITEMNO_ACC>
+                     <CURRENCY>USD</CURRENCY>
+                     <AMT_DOCCUR>12.9900</AMT_DOCCUR>
+                  </item>
+               </CURRENCYAMOUNT>
+               <EXTENSION2>
+                  <item>
+                     <STRUCTURE>PO_DETAIL</STRUCTURE>
+                     <VALUEPART1>1</VALUEPART1>
+                     <VALUEPART2>4500003679</VALUEPART2>
+                     <VALUEPART3>00040</VALUEPART3>
+                  </item>
+                  <item>
+                     <STRUCTURE>TRG_GL_IND</STRUCTURE>
+                     <VALUEPART1>1</VALUEPART1>
+                     <VALUEPART2>A</VALUEPART2>
+                  </item>
+               </EXTENSION2>
+            </n0:ARBCIG_ADV_PAYMENT_POST>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Scenario for Advance Payment Export Request Date Format</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_ADV_PAYMENT_POST xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ARIBA_HDR>
+                     <ARIBA_ID>APMT43</ARIBA_ID>
+                  </ARIBA_HDR>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <BLINEDATE>20181122000000</BLINEDATE>
+                  <DOCDATE>20181024000000</DOCDATE>
+                  <DOCUMENTHEADER>
+                     <OBJ_TYPE>BKPFF</OBJ_TYPE>
+                     <BUS_ACT>RFST</BUS_ACT>
+                     <HEADER_TXT>ERP-20200-20</HEADER_TXT>
+                     <COMP_CODE>0001</COMP_CODE>
+                     <DOC_DATE>2018-10-24</DOC_DATE>
+                     <DOC_TYPE>KA</DOC_TYPE>
+                  </DOCUMENTHEADER>
+                  <ACCOUNTPAYABLE>
+                     <item>
+                        <ITEMNO_ACC>1</ITEMNO_ACC>
+                        <VENDOR_NO>0000100000</VENDOR_NO>
+                        <COMP_CODE>0001</COMP_CODE>
+                        <BLINE_DATE>2018-11-22</BLINE_DATE>
+                        <PYMT_METH>C</PYMT_METH>
+                        <SP_GL_IND>F</SP_GL_IND>
+                     </item>
+                  </ACCOUNTPAYABLE>
+                  <CURRENCYAMOUNT>
+                     <item>
+                        <ITEMNO_ACC>1</ITEMNO_ACC>
+                        <CURRENCY>USD</CURRENCY>
+                        <AMT_DOCCUR>12.9900</AMT_DOCCUR>
+                     </item>
+                  </CURRENCYAMOUNT>
+                  <EXTENSION2>
+                     <item>
+                        <STRUCTURE>PO_DETAIL</STRUCTURE>
+                        <VALUEPART1>1</VALUEPART1>
+                        <VALUEPART2>4500003679</VALUEPART2>
+                        <VALUEPART3>00040</VALUEPART3>
+                     </item>
+                     <item>
+                        <STRUCTURE>TRG_GL_IND</STRUCTURE>
+                        <VALUEPART1>1</VALUEPART1>
+                        <VALUEPART2>A</VALUEPART2>
+                     </item>
+                  </EXTENSION2>
+               </n0:ARBCIG_ADV_PAYMENT_POST>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

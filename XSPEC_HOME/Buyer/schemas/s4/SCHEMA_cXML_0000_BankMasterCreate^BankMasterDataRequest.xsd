@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	targetNamespace="urn:Ariba:Sourcing:vrealm_22" xmlns:typens="urn:Ariba:Sourcing:vrealm_22">
+	<xsd:element name="Headers">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="BankMasterDataRequest">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element minOccurs="0" name="BankMasterDataUploadInputBean_Item">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element maxOccurs="1" minOccurs="0" name="item"
+								type="typens:BankMasterDataUploadInputBean"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:all>
+			<xsd:attribute name="partition" type="xsd:string"/>
+			<xsd:attribute name="variant" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="BankMasterDataReply">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element minOccurs="0" name="BankMasterDataUploadOutputBean_Item">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element maxOccurs="1" minOccurs="0" name="item"
+								type="typens:BankMasterDataUploadOutputBean"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:all>
+			<xsd:attribute name="partition" type="xsd:string"/>
+			<xsd:attribute name="variant" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="BankMasterDataUploadInputBean">
+		<xsd:all>
+			<xsd:element name="_bankMasterDetail">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element maxOccurs="unbounded" name="item"
+							type="typens:BankMasterDataDetail"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="BankMasterDataUploadOutputBean">
+		<xsd:all>
+			<xsd:element name="Message" type="xsd:string"/>
+			<xsd:element name="Status" type="xsd:integer"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="BankMasterDataDetail">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="AccountLength" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="AddressNumber" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="BICKY" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Branch" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="COR1DirectDebitSupport" type="xsd:integer"/>
+			<xsd:element minOccurs="0" name="CheckDigitCalculationMethod" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="City" type="xsd:string"/>
+			<xsd:element name="CountryKey" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CreatorName" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CurrentAccount" type="xsd:boolean"/>
+			<xsd:element minOccurs="0" name="DeletionIndicator" type="xsd:boolean"/>
+			<xsd:element minOccurs="0" name="Format" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Group" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="HouseStreetAddress" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="IBANRule" type="xsd:string"/>
+			<xsd:element name="Id" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Name" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="NoCheckSupport" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Number" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="PostOfficeCurrentAccountNumber" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Province" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="RecordCreatedDate" type="xsd:dateTime"/>
+			<xsd:element minOccurs="0" name="ReturnDebitsSupport" type="xsd:integer"/>
+			<xsd:element minOccurs="0" name="RoutingControlCode" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="SDD_B2B" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="SWIFTCode" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ZRes1" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ZRes10" type="xsd:string"/>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

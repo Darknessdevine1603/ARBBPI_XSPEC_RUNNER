@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="art" targetNamespace="art">
+    <xs:element name="ArticleMaster" type="ns:ArticleMaster"/>
+    <xs:complexType name="ArticleMaster">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+            <xs:element ref="ns:Article"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Extensions"/>
+        </xs:sequence>
+        <!-- 03 to delete -->
+        <xs:attribute name="ActionCode" type="xs:string"/>
+        <!-- BOM or ART will be values for BOMMAT and ARTMASS -->
+        <xs:attribute name="RequestType" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:element name="MessageHeader" type="ns:MessageHeader"/>
+    <xs:complexType name="MessageHeader">
+        <xs:sequence>
+            <xs:element ref="ns:MessageID"/>
+            <xs:element ref="ns:CreationDateTime"/>
+            <xs:element ref="ns:SenderBusinessSystemID"/>
+            <xs:element ref="ns:RecipientBusinessSystemID"/>
+            <xs:element minOccurs="0" ref="ns:ExternalID"/>
+            <xs:element minOccurs="0" ref="ns:RealmId"/>
+            <xs:element minOccurs="0" ref="ns:SolutionName"/>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="RealmId" type="xs:string"/>
+    <xs:element name="SolutionName" type="xs:string"/>
+    <xs:element name="MessageID" type="xs:string"/>
+    <!--xs:complexType>
+      <xs:attribute name="schemeAgencyID" use="required" type="xs:string"/>
+      <xs:attribute name="schemeAgencySchemeAgencyID" use="required" type="xs:string"/>
+      <xs:attribute name="schemeID" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element-->
+    <xs:element name="CreationDateTime" type="xs:dateTime"/>
+    <xs:element name="SenderBusinessSystemID" type="xs:string"/>
+    <xs:element name="RecipientBusinessSystemID" type="xs:string"/>
+    <xs:element name="ExternalID" type="xs:string"/>
+
+    <xs:element name="Article" type="ns:Article"/>
+    <xs:complexType name="Article">
+        <xs:sequence>
+            <xs:element ref="ns:BasicData"/>
+            <xs:element maxOccurs="unbounded" ref="ns:Description"/>
+            <xs:element minOccurs="0" ref="ns:Variants"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Characteristic"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Site"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:UnitOfMeasure"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Component"/>
+            <xs:element minOccurs="0" ref="ns:CharacteristicProfile"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="BasicData" type="ns:BasicData"/>
+    <xs:complexType name="BasicData">
+        <xs:sequence>
+            <xs:element ref="ns:ID"/>
+            <xs:element minOccurs="0" ref="ns:LotID"/>
+            <xs:element ref="ns:MaterialType"/>
+            <xs:element ref="ns:MaterialGroup"/>
+            <!--what is the difference between MaterialGroup and MaterialCategory I think material category is type of article-->
+            <xs:element ref="ns:MaterialCategory"/>
+
+            <xs:element minOccurs="0" ref="ns:RefMaterial"/>
+            <xs:element ref="ns:BaseUnitOfMeasure"/>
+            <xs:element minOccurs="0" ref="ns:OrderingUnit"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!--types of  MaterialType, MaterialGroup, BaseUnitOfMeaser, OrderingUnit-->
+    <xs:element name="MaterialType" type="xs:string"/>
+    <xs:element name="MaterialGroup" type="xs:string"/>
+    <xs:element name="MaterialCategory" type="xs:string"/>
+
+    <xs:element name="RefMaterial" type="xs:string"/>
+    <xs:element name="BaseUnitOfMeasure" type="xs:string"/>
+    <xs:element name="OrderingUnit" type="xs:string"/>
+
+    <xs:element name="Variants" type="ns:Variants"/>
+    <xs:complexType name="Variants">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="ns:Variant"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Variant" type="ns:Variant"/>
+    <xs:complexType name="Variant">
+        <xs:sequence>
+            <xs:element ref="ns:VariantID"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Characteristic"/>
+            <xs:element minOccurs="0" ref="ns:MaterialCategory"/>
+            <xs:element minOccurs="0" ref="ns:RefMaterial"/>
+            <xs:element minOccurs="0" ref="ns:BaseUnitOfMeasure"/>
+            <xs:element minOccurs="0" ref="ns:OrderingUnit"/>
+            <xs:element maxOccurs="unbounded" ref="ns:Description"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Site"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:UnitOfMeasure"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="VariantID" type="xs:string"/>
+    <xs:element name="Characteristic" type="ns:Characteristic"/>
+    <xs:complexType name="Characteristic">
+        <xs:sequence>
+            <xs:element ref="ns:CharacteristicId"/>
+            <xs:element ref="ns:Values"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:element name="CharacteristicId" type="xs:string"/>
+
+    <xs:element name="Values" type="ns:Values"/>
+    <xs:complexType name="Values">
+        <xs:sequence>
+            <!--xs:element ref="Value" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element ref="Description" maxOccurs="unbounded"/>
+      <xs:element ref="Default" minOccurs="0"/-->
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:PossibleValue"/>
+        </xs:sequence>
+        <!--xs:attribute name="actionCode" use="required" type="xs:integer"/-->
+    </xs:complexType>
+
+    <xs:element name="PossibleValue" type="ns:PossibleValue"/>
+    <xs:complexType name="PossibleValue">
+        <xs:sequence>
+            <xs:element ref="ns:Value"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Description"/>
+            <xs:element ref="ns:FloatingPointFrom"/>
+            <xs:element ref="ns:FloatingPointTo"/>
+        </xs:sequence>
+        <xs:attribute name="Default" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:element name="FloatingPointFrom" type="xs:string"/>
+    <xs:element name="FloatingPointTo" type="xs:string"/>
+    <xs:element name="Value" type="xs:string"/>
+
+    <xs:element name="Site" type="ns:Site"/>
+    <xs:complexType name="Site">
+        <xs:sequence>
+            <xs:element ref="ns:SiteId"/>
+        </xs:sequence>
+        <xs:attribute name="Delete" type="xs:boolean"/>
+        <xs:attribute name="SiteType" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:element name="SiteId" type="xs:string"/>
+
+    <xs:element name="UnitOfMeasure" type="ns:UnitOfMeasure"/>
+    <xs:complexType name="UnitOfMeasure">
+        <xs:sequence>
+            <xs:element ref="ns:AlternateUnitOfMeasure"/>
+            <xs:element minOccurs="0" ref="ns:Numerator"/>
+            <xs:element minOccurs="0" ref="ns:Denominator"/>
+            <xs:element minOccurs="0" ref="ns:EAN"/>
+            <xs:element minOccurs="0" ref="ns:EANCategory"/>
+        </xs:sequence>
+        <xs:attribute name="Delete" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:element name="AlternateUnitOfMeasure" type="xs:string"/>
+    <xs:element name="Numerator" type="xs:int"/>
+    <xs:element name="Denominator" type="xs:int"/>
+    <xs:element name="EAN" type="xs:string"/>
+    <!-- FROM HERE -->
+    <xs:element name="EANCategory" type="xs:string"/>
+
+    <xs:element name="Component" type="ns:Component"/>
+    <xs:complexType name="Component">
+        <xs:sequence>
+            <xs:element ref="ns:ID"/>
+            <xs:element ref="ns:Quantity"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Quantity" type="ns:Quantity"/>
+    <xs:complexType name="Quantity">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="unitOfMeasure" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="ID" type="xs:string"/>
+    <xs:element name="LotID" type="xs:string"/>
+
+    <xs:element name="Description" type="ns:Description"/>
+    <xs:complexType name="Description">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="languageCode"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="CharacteristicProfile" type="ns:CharacteristicProfile"/>
+    <xs:complexType name="CharacteristicProfile">
+        <xs:sequence>
+            <xs:element ref="ns:CharacteristicProfileId"/>
+            <!-- xs:element ref="Characteristic"/ -->
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="CharacteristicProfileId" type="xs:string"/>
+
+    <xs:element name="Extensions" type="ns:Extensions"/>
+    <xs:complexType name="Extensions">
+        <xs:sequence>
+            <xs:element ref="ns:OBJNAME"/>
+            <xs:element ref="ns:OBJKEY"/>
+            <xs:element ref="ns:FIELDNAME"/>
+            <xs:element ref="ns:FIELDVALUE"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="OBJNAME" type="xs:string"/>
+    <xs:element name="OBJKEY" type="xs:string"/>
+    <xs:element name="FIELDNAME" type="xs:string"/>
+    <xs:element name="FIELDVALUE" type="xs:string"/>
+
+    <xs:element name="RetailMSResponse" type="ns:RetailMSResponse"/>
+    <xs:complexType name="RetailMSResponse">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+        </xs:sequence>
+        <xs:attribute name="jobId" type="xs:string"/>
+        <xs:attribute name="status" type="xs:string"/>
+        <xs:attribute name="errorCode" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

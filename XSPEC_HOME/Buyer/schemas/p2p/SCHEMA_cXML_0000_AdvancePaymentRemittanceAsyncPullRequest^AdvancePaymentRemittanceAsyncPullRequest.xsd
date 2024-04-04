@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="urn:Ariba:Buyer:vsap" xmlns:typens="urn:Ariba:Buyer:vsap">
+    <xsd:element name="Headers">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="AdvancePaymentRemittanceAsyncPullRequest">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0"
+                    name="AdvancePaymentRemittance_AdvancePaymentRemittancePull_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+                                type="typens:AdvancePaymentRemittance_AdvancePaymentRemittancePull"
+                            />
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="AdvancePaymentRemittanceAsyncPullReply">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="1" name="status" type="xsd:string"/>
+            </xsd:all>
+            <xsd:anyAttribute namespace="##local" processContents="lax"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="AdvancePaymentRemittance_AdvancePaymentRemittancePull">
+        <xsd:annotation>
+            <xsd:documentation>Name null, type ariba.payment.core.AdvancePaymentRemittance, variant
+                vrealm_40.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element minOccurs="0" name="Amount">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name ariba.basic.core.Money, group name Reference,
+                            variant vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:all>
+                        <xsd:element minOccurs="0" name="Amount" nillable="true" type="xsd:decimal">
+                            <xsd:annotation>
+                                <xsd:documentation>The ERP amount for a header-level advance payment
+                                    in the user's currency. For line-level advance payments, this
+                                    header-level field must be 0</xsd:documentation>
+                                <xsd:documentation>Class name java.math.BigDecimal, group name
+                                    Reference, variant vrealm_40.</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="Currency">
+                            <xsd:complexType>
+                                <xsd:annotation>
+                                    <xsd:documentation>Transaction currency of the
+                                                amount.</xsd:documentation>
+                                            <xsd:documentation>Class name ariba.basic.core.Currency, group
+                                        name Reference, variant vrealm_40.</xsd:documentation>
+                                </xsd:annotation>
+                                <xsd:all>
+                                    <xsd:element minOccurs="0" name="UniqueName" nillable="true"
+                                        type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>Currency being used by the
+                                                user</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name Reference, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="DocID" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The unique identifier of the advance payment created in P2P
+                        against which remittance is received.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentRemittancePull, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ERPRequestID" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The unique identifier of the advance payment request created
+                        in the ERP for the advance payment</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentRemittancePull, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="LineItems">
+                <xsd:complexType>
+                    <xsd:annotation>
+                        <xsd:documentation>Class name
+                            ariba.payment.core.AdvancePaymentLineItemRemittance, group name
+                            AdvancePaymentLineItemRemittancePull, variant
+                            vrealm_40.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="item">
+                            <xsd:complexType>
+                                <xsd:all>
+                                    <xsd:element minOccurs="0" name="Amount">
+                                        <xsd:complexType>
+                                            <xsd:annotation>
+                                                <xsd:documentation>Class name
+                                                  ariba.basic.core.Money, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:all>
+                                                <xsd:element minOccurs="0" name="Amount"
+                                                  nillable="true" type="xsd:decimal">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>The ERP amount for a line-level
+                                                  advance payment in the user's
+                                                  currency</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  java.math.BigDecimal, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                </xsd:element>
+                                                <xsd:element minOccurs="0" name="Currency">
+                                                  <xsd:complexType>
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Transaction currency of the
+                                                  amount.</xsd:documentation>
+                                                  <xsd:documentation>Class name
+                                                  ariba.basic.core.Currency, group name Reference,
+                                                  variant vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  <xsd:all>
+                                                  <xsd:element minOccurs="0" name="UniqueName"
+                                                  nillable="true" type="xsd:string">
+                                                  <xsd:annotation>
+                                                  <xsd:documentation>Currency being used by the
+                                                  user</xsd:documentation>
+                                                  <xsd:documentation>Class name java.lang.String,
+                                                  group name Reference, variant
+                                                  vrealm_40.</xsd:documentation>
+                                                  </xsd:annotation>
+                                                  </xsd:element>
+                                                  </xsd:all>
+                                                  </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:all>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="DocID" nillable="true"
+                                        type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>The unique identifier of the
+                                                remittance document in the ERP</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name AdvancePaymentLineItemRemittancePull, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="ERPRequestID" nillable="true"
+                                        type="xsd:string">
+                                        <xsd:annotation>
+                                            <xsd:documentation>The unique identifier of the payment
+                                                request created in the ERP for the advance
+                                                payment</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.String, group
+                                                name AdvancePaymentLineItemRemittancePull, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="ERPRequestLineNumber"
+                                        nillable="true" type="xsd:integer">
+                                        <xsd:annotation>
+                                            <xsd:documentation>The unique ID for Advance Payment
+                                                Line Number</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.Integer, group
+                                                name AdvancePaymentLineItemRemittancePull, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="NumberInCollection"
+                                        nillable="true" type="xsd:integer">
+                                        <xsd:annotation>
+                                            <xsd:documentation>The line number for Advance Payment
+                                                LineItem Remittance</xsd:documentation>
+                                            <xsd:documentation>Class name java.lang.Integer, group
+                                                name AdvancePaymentLineItemRemittancePull, variant
+                                                vrealm_40.</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                </xsd:all>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="LookupID" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>The unique identifier of the advance payment remittance made
+                        by the ERP. This ID can be a concatenation of several id's to make it unique
+                        in the external system.</xsd:documentation>
+                    <xsd:documentation>Class name java.lang.String, group name
+                        AdvancePaymentRemittancePull, variant vrealm_40.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+</xsd:schema>

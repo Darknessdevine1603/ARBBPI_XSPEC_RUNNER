@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_ASC-X12_004010_866_cXML_0000_ComponentConsumptionRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_866_cXML_0000_ComponentConsumptionRequest.xsl"
+        date="2023-04-27T16:05:41.059837+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_ASC-X12_004010_866_cXML_0000_ComponentConsumptionRequest.xspec">
+      <label>Component Consumption Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/X12/ComponentConsumption/ComponentConsumption_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T16:05:41.263084+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004417464-T</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02004417465-T</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkId">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <ComponentConsumptionRequest>
+                     <ComponentConsumptionHeader consumptionID="ProductionSequenceID"
+                                                 operation="new"
+                                                 referenceDocumentID="Document Ref ID"/>
+                     <ComponentConsumptionPortion>
+                        <OrderReference orderID="Purchase Order ID" orderDate="2021-05-31T09:30:59-04:00">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ComponentConsumptionItem poLineNumber="10" completedIndicator="yes" quantity="1">
+                           <ItemID>
+                              <SupplierPartID>Vendor Part ID</SupplierPartID>
+                              <SupplierPartAuxiliaryID>Vendor Supplemental Part ID</SupplierPartAuxiliaryID>
+                              <BuyerPartID>Buyer Part ID</BuyerPartID>
+                           </ItemID>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <Batch>
+                              <BuyerBatchID>Buyer Batch ID</BuyerBatchID>
+                              <SupplierBatchID>Supplier Batch ID</SupplierBatchID>
+                           </Batch>
+                           <ComponentConsumptionDetails lineNumber="1" quantity="1">
+                              <Product>
+                                 <SupplierPartID>SLN Vendor Part ID</SupplierPartID>
+                                 <SupplierPartAuxiliaryID>SLN Vendor Supplemental Part ID</SupplierPartAuxiliaryID>
+                                 <BuyerPartID>SLN Buyer Part ID</BuyerPartID>
+                              </Product>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <BuyerBatchID>SLN Buyer Batch ID</BuyerBatchID>
+                              <SupplierBatchID>SLN Supplier Batch ID</SupplierBatchID>
+                              <ReferenceDocumentInfo status="created">
+                                 <DocumentInfo documentType="productionOrder"
+                                               documentDate="2021-05-31T08:30:00-04:00"
+                                               documentID="Document ID"/>
+                                 <DateInfo type="productionStartDate" date="2021-05-31T04:30:00-04:00"/>
+                                 <DateInfo type="productionFinishDate" date="2021-05-31T12:30:00-04:00"/>
+                                 <Extrinsic name="timeZone">UTC</Extrinsic>
+                              </ReferenceDocumentInfo>
+                           </ComponentConsumptionDetails>
+                           <Extrinsic name="ProductionOrder">Production Order ID</Extrinsic>
+                           <Extrinsic name="ProductionOrderStatusDate">2021-05-31T08:30:00-04:00</Extrinsic>
+                           <Extrinsic name="productDescription">Item Description</Extrinsic>
+                        </ComponentConsumptionItem>
+                     </ComponentConsumptionPortion>
+                  </ComponentConsumptionRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Component Consumption Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004417464-T</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02004417465-T</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkId">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <ComponentConsumptionRequest>
+                        <ComponentConsumptionHeader consumptionID="ProductionSequenceID"
+                                                    operation="new"
+                                                    referenceDocumentID="Document Ref ID"/>
+                        <ComponentConsumptionPortion>
+                           <OrderReference orderID="Purchase Order ID" orderDate="2021-05-31T09:30:59-04:00">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ComponentConsumptionItem poLineNumber="10" completedIndicator="yes" quantity="1">
+                              <ItemID>
+                                 <SupplierPartID>Vendor Part ID</SupplierPartID>
+                                 <SupplierPartAuxiliaryID>Vendor Supplemental Part ID</SupplierPartAuxiliaryID>
+                                 <BuyerPartID>Buyer Part ID</BuyerPartID>
+                              </ItemID>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Batch>
+                                 <BuyerBatchID>Buyer Batch ID</BuyerBatchID>
+                                 <SupplierBatchID>Supplier Batch ID</SupplierBatchID>
+                              </Batch>
+                              <ComponentConsumptionDetails lineNumber="1" quantity="1">
+                                 <Product>
+                                    <SupplierPartID>SLN Vendor Part ID</SupplierPartID>
+                                    <SupplierPartAuxiliaryID>SLN Vendor Supplemental Part ID</SupplierPartAuxiliaryID>
+                                    <BuyerPartID>SLN Buyer Part ID</BuyerPartID>
+                                 </Product>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <BuyerBatchID>SLN Buyer Batch ID</BuyerBatchID>
+                                 <SupplierBatchID>SLN Supplier Batch ID</SupplierBatchID>
+                                 <ReferenceDocumentInfo status="created">
+                                    <DocumentInfo documentType="productionOrder"
+                                                  documentDate="2021-05-31T08:30:00-04:00"
+                                                  documentID="Document ID"/>
+                                    <DateInfo type="productionStartDate" date="2021-05-31T04:30:00-04:00"/>
+                                    <DateInfo type="productionFinishDate" date="2021-05-31T12:30:00-04:00"/>
+                                    <Extrinsic name="timeZone">UTC</Extrinsic>
+                                 </ReferenceDocumentInfo>
+                              </ComponentConsumptionDetails>
+                              <Extrinsic name="ProductionOrder">Production Order ID</Extrinsic>
+                              <Extrinsic name="ProductionOrderStatusDate">2021-05-31T08:30:00-04:00</Extrinsic>
+                              <Extrinsic name="productDescription">Item Description</Extrinsic>
+                           </ComponentConsumptionItem>
+                        </ComponentConsumptionPortion>
+                     </ComponentConsumptionRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

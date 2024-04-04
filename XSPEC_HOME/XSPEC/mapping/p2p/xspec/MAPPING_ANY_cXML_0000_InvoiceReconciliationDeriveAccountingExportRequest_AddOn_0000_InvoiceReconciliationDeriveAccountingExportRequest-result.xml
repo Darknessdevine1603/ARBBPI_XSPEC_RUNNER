@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_InvoiceReconciliationDeriveAccountingExportRequest_AddOn_0000_InvoiceReconciliationDeriveAccountingExportRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_InvoiceReconciliationDeriveAccountingExportRequest_AddOn_0000_InvoiceReconciliationDeriveAccountingExportRequest.xsl"
+        date="2023-04-27T15:34:54.136758+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_InvoiceReconciliationDeriveAccountingExportRequest_AddOn_0000_InvoiceReconciliationDeriveAccountingExportRequest.xspec">
+      <label>Scenario for Invoice Reconciliation</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/InvoiceReconciliationDerive/InvoiceReconciliationDeriveAccountingExportRequest_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_DERIVATION xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_DOC_NO>IR11MMPO-1392</ARIBA_DOC_NO>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <SOURCE>InvoiceReconciliationDeriveAccountingExportRequest</SOURCE>
+               <CHECK_CODINGBLOCK>
+                  <item>
+                     <ARIBA_ITEM>1</ARIBA_ITEM>
+                     <ARIBA_SERIAL_NO>1</ARIBA_SERIAL_NO>
+                     <PSTNG_DATE>2020-11-11</PSTNG_DATE>
+                     <COMP_CODE>PSA5</COMP_CODE>
+                     <GL_ACCOUNT>0000400000</GL_ACCOUNT>
+                     <COSTCENTER>PS5200</COSTCENTER>
+                     <ORDERID/>
+                     <WBS_ELEMENT/>
+                     <ASSETMAINNO/>
+                     <ASSETSUBNO/>
+                     <FM_AREA>PSA5</FM_AREA>
+                     <FUNDS_CTR>2000</FUNDS_CTR>
+                     <FUND>301</FUND>
+                     <FUNDS_RES/>
+                     <RES_ITEM/>
+                     <FUNC_AREA_LONG>F1000</FUNC_AREA_LONG>
+                     <GRANT_NBR>NOTRELEVANTGRANT</GRANT_NBR>
+                     <CMMT_ITEM_LONG>44000000</CMMT_ITEM_LONG>
+                     <ARIBA_BUDGET_PERIOD/>
+                  </item>
+               </CHECK_CODINGBLOCK>
+               <ACCOUNT_ASSIGNMENT_TYPES/>
+               <RETURN/>
+            </n0:ARBCIG_DERIVATION>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Invoice Reconciliation</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_DERIVATION xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ARIBA_DOC_NO>IR11MMPO-1392</ARIBA_DOC_NO>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <SOURCE>InvoiceReconciliationDeriveAccountingExportRequest</SOURCE>
+                  <CHECK_CODINGBLOCK>
+                     <item>
+                        <ARIBA_ITEM>1</ARIBA_ITEM>
+                        <ARIBA_SERIAL_NO>1</ARIBA_SERIAL_NO>
+                        <PSTNG_DATE>2020-11-11</PSTNG_DATE>
+                        <COMP_CODE>PSA5</COMP_CODE>
+                        <GL_ACCOUNT>0000400000</GL_ACCOUNT>
+                        <COSTCENTER>PS5200</COSTCENTER>
+                        <ORDERID/>
+                        <WBS_ELEMENT/>
+                        <ASSETMAINNO/>
+                        <ASSETSUBNO/>
+                        <FM_AREA>PSA5</FM_AREA>
+                        <FUNDS_CTR>2000</FUNDS_CTR>
+                        <FUND>301</FUND>
+                        <FUNDS_RES/>
+                        <RES_ITEM/>
+                        <FUNC_AREA_LONG>F1000</FUNC_AREA_LONG>
+                        <GRANT_NBR>NOTRELEVANTGRANT</GRANT_NBR>
+                        <CMMT_ITEM_LONG>44000000</CMMT_ITEM_LONG>
+                        <ARIBA_BUDGET_PERIOD/>
+                     </item>
+                  </CHECK_CODINGBLOCK>
+                  <ACCOUNT_ASSIGNMENT_TYPES/>
+                  <RETURN/>
+               </n0:ARBCIG_DERIVATION>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

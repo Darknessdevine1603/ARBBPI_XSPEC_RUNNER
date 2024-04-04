@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xsl"
+        date="2023-04-27T15:45:07.477591+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest- Basic1</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/DeliveryRequest/DeliveryRequest.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:45:07+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <ShipNoticeRequest>
+                     <ShipNoticeHeader deliveryDate="2021-08-23T05:00:00+05:30"
+                                       shipmentDate="2021-08-23T07:00:00+05:30"
+                                       noticeDate="2021-08-17T12:37:17+05:30"
+                                       operation="new"
+                                       shipmentID="ASN_80000691"
+                                       shipmentType="actual">
+                        <ServiceLevel xml:lang=""/>
+                        <Contact role="shipFrom">
+                           <Name xml:lang="en"/>
+                           <PostalAddress name="Shipping Point 1710 - Address Name">
+                              <Street> 3475 Deer Creek</Street>
+                              <City>Palo Alto</City>
+                              <State>CA</State>
+                              <PostalCode>94304-1355</PostalCode>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                        </Contact>
+                        <Contact role="shipTo" addressID="17100003">
+                           <Name xml:lang="en"/>
+                           <PostalAddress name="Domestic Customer US 3">
+                              <Street>99 Wilhelmstrasse123</Street>
+                              <City>Heilbronn</City>
+                              <State>LA</State>
+                              <PostalCode>70363-5455</PostalCode>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="US"/>
+                                 <AreaOrCityCode/>
+                                 <Number>999-654-2356</Number>
+                              </TelephoneNumber>
+                           </Phone>
+                           <Fax>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="US"/>
+                                 <AreaOrCityCode/>
+                                 <Number>99999999999</Number>
+                              </TelephoneNumber>
+                           </Fax>
+                        </Contact>
+                        <TermsOfDelivery>
+                           <TermsOfDeliveryCode value="TransportCondition"/>
+                           <ShippingPaymentMethod value="other">_</ShippingPaymentMethod>
+                        </TermsOfDelivery>
+                     </ShipNoticeHeader>
+                     <ShipControl>
+                        <CarrierIdentifier domain="companyName"/>
+                        <ShipmentIdentifier/>
+                     </ShipControl>
+                     <ShipNoticePortion>
+                        <OrderReference orderID="5991133">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="1.0">
+                           <ItemID>
+                              <SupplierPartID>TG11</SupplierPartID>
+                              <IdReference domain="EAN13" identifier=""/>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Trad.Good 11,PD,Reg. Trading for 2TY</Description>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <Dimension quantity="19.0" type="grossWeight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="16.2" type="weight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="0.96" type="volume">
+                                 <UnitOfMeasure>MTQ</UnitOfMeasure>
+                              </Dimension>
+                              <ItemDetailIndustry>
+                                 <ItemDetailRetail>
+                                    <EANID/>
+                                 </ItemDetailRetail>
+                              </ItemDetailIndustry>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                           <ShipNoticeItemIndustry>
+                              <ShipNoticeItemRetail>
+                                 <BestBeforeDate date=""/>
+                                 <ExpiryDate date=""/>
+                              </ShipNoticeItemRetail>
+                           </ShipNoticeItemIndustry>
+                        </ShipNoticeItem>
+                     </ShipNoticePortion>
+                  </ShipNoticeRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ShipNoticeRequest Basic1</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <ShipNoticeRequest>
+                        <ShipNoticeHeader deliveryDate="2021-08-23T05:00:00+05:30"
+                                          shipmentDate="2021-08-23T07:00:00+05:30"
+                                          noticeDate="2021-08-17T12:37:17+05:30"
+                                          operation="new"
+                                          shipmentID="ASN_80000691"
+                                          shipmentType="actual">
+                           <ServiceLevel xml:lang=""/>
+                           <Contact role="shipFrom">
+                              <Name xml:lang="en"/>
+                              <PostalAddress name="Shipping Point 1710 - Address Name">
+                                 <Street> 3475 Deer Creek</Street>
+                                 <City>Palo Alto</City>
+                                 <State>CA</State>
+                                 <PostalCode>94304-1355</PostalCode>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo" addressID="17100003">
+                              <Name xml:lang="en"/>
+                              <PostalAddress name="Domestic Customer US 3">
+                                 <Street>99 Wilhelmstrasse123</Street>
+                                 <City>Heilbronn</City>
+                                 <State>LA</State>
+                                 <PostalCode>70363-5455</PostalCode>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="US"/>
+                                    <AreaOrCityCode/>
+                                    <Number>999-654-2356</Number>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="US"/>
+                                    <AreaOrCityCode/>
+                                    <Number>99999999999</Number>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Contact>
+                           <TermsOfDelivery>
+                              <TermsOfDeliveryCode value="TransportCondition"/>
+                              <ShippingPaymentMethod value="other">_</ShippingPaymentMethod>
+                           </TermsOfDelivery>
+                        </ShipNoticeHeader>
+                        <ShipControl>
+                           <CarrierIdentifier domain="companyName"/>
+                           <ShipmentIdentifier/>
+                        </ShipControl>
+                        <ShipNoticePortion>
+                           <OrderReference orderID="5991133">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="1.0">
+                              <ItemID>
+                                 <SupplierPartID>TG11</SupplierPartID>
+                                 <IdReference domain="EAN13" identifier=""/>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Trad.Good 11,PD,Reg. Trading for 2TY</Description>
+                                 <UnitOfMeasure>PCE</UnitOfMeasure>
+                                 <Dimension quantity="19.0" type="grossWeight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="16.2" type="weight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="0.96" type="volume">
+                                    <UnitOfMeasure>MTQ</UnitOfMeasure>
+                                 </Dimension>
+                                 <ItemDetailIndustry>
+                                    <ItemDetailRetail>
+                                       <EANID/>
+                                    </ItemDetailRetail>
+                                 </ItemDetailIndustry>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <ShipNoticeItemIndustry>
+                                 <ShipNoticeItemRetail>
+                                    <BestBeforeDate date=""/>
+                                    <ExpiryDate date=""/>
+                                 </ShipNoticeItemRetail>
+                              </ShipNoticeItemIndustry>
+                           </ShipNoticeItem>
+                        </ShipNoticePortion>
+                     </ShipNoticeRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest- Basic2</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/DeliveryRequest/DeliveryRequest1.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:45:08+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <ShipNoticeRequest>
+                     <ShipNoticeHeader deliveryDate="2021-08-23T05:00:00+05:30"
+                                       shipmentDate="2021-08-23T07:00:00+05:30"
+                                       noticeDate="2021-08-17T12:48:22+05:30"
+                                       operation="new"
+                                       shipmentID="ASN_80000692"
+                                       shipmentType="actual">
+                        <ServiceLevel xml:lang=""/>
+                        <Contact role="shipFrom">
+                           <Name xml:lang="en"/>
+                           <PostalAddress name="Shipping Point 1710 - Address Name">
+                              <Street> 3475 Deer Creek</Street>
+                              <City>Palo Alto</City>
+                              <State>CA</State>
+                              <PostalCode>94304-1355</PostalCode>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                        </Contact>
+                        <Contact role="shipTo" addressID="17100003">
+                           <Name xml:lang="en"/>
+                           <PostalAddress name="Domestic Customer US 3">
+                              <Street>99 Wilhelmstrasse123</Street>
+                              <City>Heilbronn</City>
+                              <State>LA</State>
+                              <PostalCode>70363-5455</PostalCode>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="US"/>
+                                 <AreaOrCityCode/>
+                                 <Number>999-654-2356</Number>
+                              </TelephoneNumber>
+                           </Phone>
+                           <Fax>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="US"/>
+                                 <AreaOrCityCode/>
+                                 <Number>99999999999</Number>
+                              </TelephoneNumber>
+                           </Fax>
+                        </Contact>
+                        <TermsOfDelivery>
+                           <TermsOfDeliveryCode value="TransportCondition"/>
+                           <ShippingPaymentMethod value="other">_</ShippingPaymentMethod>
+                        </TermsOfDelivery>
+                     </ShipNoticeHeader>
+                     <ShipControl>
+                        <CarrierIdentifier domain="companyName"/>
+                        <ShipmentIdentifier/>
+                     </ShipControl>
+                     <ShipNoticePortion>
+                        <OrderReference orderID="5991137">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="1.0">
+                           <ItemID>
+                              <SupplierPartID>TG11</SupplierPartID>
+                              <IdReference domain="EAN13" identifier=""/>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Trad.Good 11,PD,Reg. Trading for 2TY</Description>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <Dimension quantity="19.0" type="grossWeight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="16.2" type="weight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="0.96" type="volume">
+                                 <UnitOfMeasure>MTQ</UnitOfMeasure>
+                              </Dimension>
+                              <ItemDetailIndustry>
+                                 <ItemDetailRetail>
+                                    <EANID/>
+                                 </ItemDetailRetail>
+                              </ItemDetailIndustry>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                           <ShipNoticeItemIndustry>
+                              <ShipNoticeItemRetail>
+                                 <BestBeforeDate date=""/>
+                                 <ExpiryDate date=""/>
+                              </ShipNoticeItemRetail>
+                           </ShipNoticeItemIndustry>
+                        </ShipNoticeItem>
+                     </ShipNoticePortion>
+                  </ShipNoticeRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>ShipNoticeRequest Basic2</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <ShipNoticeRequest>
+                        <ShipNoticeHeader deliveryDate="2021-08-23T05:00:00+05:30"
+                                          shipmentDate="2021-08-23T07:00:00+05:30"
+                                          noticeDate="2021-08-17T12:48:22+05:30"
+                                          operation="new"
+                                          shipmentID="ASN_80000692"
+                                          shipmentType="actual">
+                           <ServiceLevel xml:lang=""/>
+                           <Contact role="shipFrom">
+                              <Name xml:lang="en"/>
+                              <PostalAddress name="Shipping Point 1710 - Address Name">
+                                 <Street> 3475 Deer Creek</Street>
+                                 <City>Palo Alto</City>
+                                 <State>CA</State>
+                                 <PostalCode>94304-1355</PostalCode>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo" addressID="17100003">
+                              <Name xml:lang="en"/>
+                              <PostalAddress name="Domestic Customer US 3">
+                                 <Street>99 Wilhelmstrasse123</Street>
+                                 <City>Heilbronn</City>
+                                 <State>LA</State>
+                                 <PostalCode>70363-5455</PostalCode>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="US"/>
+                                    <AreaOrCityCode/>
+                                    <Number>999-654-2356</Number>
+                                 </TelephoneNumber>
+                              </Phone>
+                              <Fax>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="US"/>
+                                    <AreaOrCityCode/>
+                                    <Number>99999999999</Number>
+                                 </TelephoneNumber>
+                              </Fax>
+                           </Contact>
+                           <TermsOfDelivery>
+                              <TermsOfDeliveryCode value="TransportCondition"/>
+                              <ShippingPaymentMethod value="other">_</ShippingPaymentMethod>
+                           </TermsOfDelivery>
+                        </ShipNoticeHeader>
+                        <ShipControl>
+                           <CarrierIdentifier domain="companyName"/>
+                           <ShipmentIdentifier/>
+                        </ShipControl>
+                        <ShipNoticePortion>
+                           <OrderReference orderID="5991137">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="1.0">
+                              <ItemID>
+                                 <SupplierPartID>TG11</SupplierPartID>
+                                 <IdReference domain="EAN13" identifier=""/>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Trad.Good 11,PD,Reg. Trading for 2TY</Description>
+                                 <UnitOfMeasure>PCE</UnitOfMeasure>
+                                 <Dimension quantity="19.0" type="grossWeight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="16.2" type="weight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="0.96" type="volume">
+                                    <UnitOfMeasure>MTQ</UnitOfMeasure>
+                                 </Dimension>
+                                 <ItemDetailIndustry>
+                                    <ItemDetailRetail>
+                                       <EANID/>
+                                    </ItemDetailRetail>
+                                 </ItemDetailIndustry>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <ShipNoticeItemIndustry>
+                                 <ShipNoticeItemRetail>
+                                    <BestBeforeDate date=""/>
+                                    <ExpiryDate date=""/>
+                                 </ShipNoticeItemRetail>
+                              </ShipNoticeItemIndustry>
+                           </ShipNoticeItem>
+                        </ShipNoticePortion>
+                     </ShipNoticeRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest- BatchDetails</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/DeliveryRequest/BatchDetails.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:45:08+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <Credential domain="EndPointID">
+                        <Identity>CIG</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="VendorID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <ShipNoticeRequest>
+                     <ShipNoticeHeader deliveryDate="2021-09-26T22:00:00+05:30"
+                                       shipmentDate="2021-09-26T22:00:00+05:30"
+                                       noticeDate="2021-09-29T10:36:05+05:30"
+                                       operation="new"
+                                       shipmentID="80000833"
+                                       shipmentType="actual">
+                        <ServiceLevel xml:lang="de"/>
+                        <Contact role="shipFrom">
+                           <Name xml:lang="de"/>
+                           <PostalAddress name="Shipping Point 1010 - Address Name">
+                              <Street>Dietmar-Hopp-Allee 16 </Street>
+                              <City>Walldorf</City>
+                              <State>BW</State>
+                              <PostalCode>69190</PostalCode>
+                              <Country isoCountryCode="DE"/>
+                           </PostalAddress>
+                        </Contact>
+                        <Contact role="shipTo" addressID="10300008">
+                           <Name xml:lang="de"/>
+                           <PostalAddress name="Inland-Lohnbearbeiter B Test AN, DE">
+                              <Street>Breite Strasse 5</Street>
+                              <City>Berlin</City>
+                              <State>BE</State>
+                              <PostalCode>13187</PostalCode>
+                              <Country isoCountryCode="DE"/>
+                           </PostalAddress>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="DE"/>
+                                 <AreaOrCityCode/>
+                                 <Number>030 953100-0</Number>
+                              </TelephoneNumber>
+                           </Phone>
+                        </Contact>
+                        <TermsOfDelivery>
+                           <TermsOfDeliveryCode value="TransportCondition"/>
+                           <ShippingPaymentMethod value="other">_</ShippingPaymentMethod>
+                        </TermsOfDelivery>
+                     </ShipNoticeHeader>
+                     <ShipControl>
+                        <CarrierIdentifier domain="companyName"/>
+                        <ShipmentIdentifier/>
+                     </ShipControl>
+                     <ShipNoticePortion>
+                        <OrderReference orderID="4500042373">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="2.0">
+                           <ItemID>
+                              <SupplierPartID>SUBCOMP1</SupplierPartID>
+                              <IdReference domain="EAN13" identifier=""/>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Lohnbearbeitung Komponente 1</Description>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Dimension quantity="2.0" type="grossWeight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="2.0" type="weight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="" type="volume">
+                                 <UnitOfMeasure/>
+                              </Dimension>
+                              <ItemDetailIndustry>
+                                 <ItemDetailRetail>
+                                    <EANID/>
+                                 </ItemDetailRetail>
+                              </ItemDetailIndustry>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                              <BuyerBatchID>BTHCOMP1</BuyerBatchID>
+                              <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                           </Batch>
+                           <ShipNoticeItemIndustry>
+                              <ShipNoticeItemRetail>
+                                 <BestBeforeDate date="2021-05-29"/>
+                                 <ExpiryDate date=""/>
+                              </ShipNoticeItemRetail>
+                           </ShipNoticeItemIndustry>
+                        </ShipNoticeItem>
+                        <ShipNoticeItem shipNoticeLineNumber="20" lineNumber="10" quantity="1.0">
+                           <ItemID>
+                              <SupplierPartID>SUBCOMP2</SupplierPartID>
+                              <IdReference domain="EAN13" identifier=""/>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Lohnbearbeitung Komponente 2</Description>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Dimension quantity="0.0" type="grossWeight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="0.0" type="weight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="" type="volume">
+                                 <UnitOfMeasure/>
+                              </Dimension>
+                              <ItemDetailIndustry>
+                                 <ItemDetailRetail>
+                                    <EANID/>
+                                 </ItemDetailRetail>
+                              </ItemDetailIndustry>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                              <BuyerBatchID>BTHCOMP2</BuyerBatchID>
+                              <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                           </Batch>
+                           <ShipNoticeItemIndustry>
+                              <ShipNoticeItemRetail>
+                                 <BestBeforeDate date="2021-05-29"/>
+                                 <ExpiryDate date=""/>
+                              </ShipNoticeItemRetail>
+                           </ShipNoticeItemIndustry>
+                        </ShipNoticeItem>
+                        <ShipNoticeItem shipNoticeLineNumber="30" lineNumber="10" quantity="1.0">
+                           <ItemID>
+                              <SupplierPartID>SUBCOMP3</SupplierPartID>
+                              <IdReference domain="EAN13" identifier=""/>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Lohnbearbeitung Komponente 3</Description>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Dimension quantity="0.0" type="grossWeight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="0.0" type="weight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="" type="volume">
+                                 <UnitOfMeasure/>
+                              </Dimension>
+                              <ItemDetailIndustry>
+                                 <ItemDetailRetail>
+                                    <EANID/>
+                                 </ItemDetailRetail>
+                              </ItemDetailIndustry>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                              <BuyerBatchID>BTHCOMP3</BuyerBatchID>
+                              <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                           </Batch>
+                           <ShipNoticeItemIndustry>
+                              <ShipNoticeItemRetail>
+                                 <BestBeforeDate date="2021-05-29"/>
+                                 <ExpiryDate date=""/>
+                              </ShipNoticeItemRetail>
+                           </ShipNoticeItemIndustry>
+                        </ShipNoticeItem>
+                     </ShipNoticePortion>
+                  </ShipNoticeRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="false">
+         <label>ShipNoticeRequest BatchDetails</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <Credential domain="EndPointID">
+                           <Identity>CIG</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="VendorID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <Credential domain="EndPointID">
+                           <Identity>cig_cert_eu</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <ShipNoticeRequest>
+                        <ShipNoticeHeader deliveryDate="2021-09-26T22:00:00+05:30"
+                                          shipmentDate="2021-09-26T22:00:00+05:30"
+                                          noticeDate="2021-09-29T10:36:05+05:30"
+                                          operation="new"
+                                          shipmentID="80000833"
+                                          shipmentType="actual">
+                           <ServiceLevel xml:lang="de"/>
+                           <Contact role="shipFrom">
+                              <Name xml:lang="de"/>
+                              <PostalAddress name="Shipping Point 1010 - Address Name">
+                                 <Street>Dietmar-Hopp-Allee 16 </Street>
+                                 <City>Walldorf</City>
+                                 <State>BW</State>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo" addressID="10300008">
+                              <Name xml:lang="de"/>
+                              <PostalAddress name="Inland-Lohnbearbeiter B Test AN, DE">
+                                 <Street>Breite Strasse 5</Street>
+                                 <City>Berlin</City>
+                                 <State>BE</State>
+                                 <PostalCode>13187</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE"/>
+                                    <AreaOrCityCode/>
+                                    <Number>030 953100-0</Number>
+                                 </TelephoneNumber>
+                              </Phone>
+                           </Contact>
+                           <TermsOfDelivery>
+                              <TermsOfDeliveryCode value="TransportCondition"/>
+                              <ShippingPaymentMethod value="other">_</ShippingPaymentMethod>
+                           </TermsOfDelivery>
+                        </ShipNoticeHeader>
+                        <ShipControl>
+                           <CarrierIdentifier domain="companyName"/>
+                           <ShipmentIdentifier/>
+                        </ShipControl>
+                        <ShipNoticePortion>
+                           <OrderReference orderID="4500042373">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="2.0">
+                              <ItemID>
+                                 <SupplierPartID>SUBCOMP1</SupplierPartID>
+                                 <IdReference domain="EAN13" identifier=""/>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Lohnbearbeitung Komponente 1</Description>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Dimension quantity="2.0" type="grossWeight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="2.0" type="weight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="" type="volume">
+                                    <UnitOfMeasure/>
+                                 </Dimension>
+                                 <ItemDetailIndustry>
+                                    <ItemDetailRetail>
+                                       <EANID/>
+                                    </ItemDetailRetail>
+                                 </ItemDetailIndustry>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                                 <BuyerBatchID>BTHCOMP1</BuyerBatchID>
+                                 <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                              </Batch>
+                              <ShipNoticeItemIndustry>
+                                 <ShipNoticeItemRetail>
+                                    <BestBeforeDate date="2021-05-29"/>
+                                    <ExpiryDate date=""/>
+                                 </ShipNoticeItemRetail>
+                              </ShipNoticeItemIndustry>
+                           </ShipNoticeItem>
+                           <ShipNoticeItem shipNoticeLineNumber="20" lineNumber="10" quantity="1.0">
+                              <ItemID>
+                                 <SupplierPartID>SUBCOMP2</SupplierPartID>
+                                 <IdReference domain="EAN13" identifier=""/>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Lohnbearbeitung Komponente 2</Description>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Dimension quantity="0.0" type="grossWeight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="0.0" type="weight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="" type="volume">
+                                    <UnitOfMeasure/>
+                                 </Dimension>
+                                 <ItemDetailIndustry>
+                                    <ItemDetailRetail>
+                                       <EANID/>
+                                    </ItemDetailRetail>
+                                 </ItemDetailIndustry>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                                 <BuyerBatchID>BTHCOMP2</BuyerBatchID>
+                                 <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                              </Batch>
+                              <ShipNoticeItemIndustry>
+                                 <ShipNoticeItemRetail>
+                                    <BestBeforeDate date="2021-05-29"/>
+                                    <ExpiryDate date=""/>
+                                 </ShipNoticeItemRetail>
+                              </ShipNoticeItemIndustry>
+                           </ShipNoticeItem>
+                           <ShipNoticeItem shipNoticeLineNumber="30" lineNumber="10" quantity="1.0">
+                              <ItemID>
+                                 <SupplierPartID>SUBCOMP3</SupplierPartID>
+                                 <IdReference domain="EAN13" identifier=""/>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Lohnbearbeitung Komponente 3</Description>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Dimension quantity="0.0" type="grossWeight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="0.0" type="weight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="" type="volume">
+                                    <UnitOfMeasure/>
+                                 </Dimension>
+                                 <ItemDetailIndustry>
+                                    <ItemDetailRetail>
+                                       <EANID/>
+                                    </ItemDetailRetail>
+                                 </ItemDetailIndustry>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                                 <BuyerBatchID>BTHCOMP3</BuyerBatchID>
+                                 <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                              </Batch>
+                              <ShipNoticeItemIndustry>
+                                 <ShipNoticeItemRetail>
+                                    <BestBeforeDate date="2021-05-29"/>
+                                    <ExpiryDate date=""/>
+                                 </ShipNoticeItemRetail>
+                              </ShipNoticeItemIndustry>
+                           </ShipNoticeItem>
+                        </ShipNoticePortion>
+                     </ShipNoticeRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_OutboundDelivery_cXML_0000_ShipNoticeRequest.xspec">
+      <label>ShipNoticeRequest- Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/DeliveryRequest/BatchDetailsComments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:45:08+05:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <Credential domain="EndPointID">
+                        <Identity>CIG</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="VendorID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="production">
+                  <ShipNoticeRequest>
+                     <ShipNoticeHeader deliveryDate="2021-09-26T22:00:00+05:30"
+                                       shipmentDate="2021-09-26T22:00:00+05:30"
+                                       noticeDate="2021-09-29T10:36:05+05:30"
+                                       operation="new"
+                                       shipmentID="80000833"
+                                       shipmentType="actual">
+                        <ServiceLevel xml:lang=""/>
+                        <Contact role="shipFrom">
+                           <Name xml:lang=""/>
+                           <PostalAddress name="Shipping Point 1010 - Address Name">
+                              <Street>StreetAddressName</Street>
+                              <City>Walldorf</City>
+                              <State>BW</State>
+                              <PostalCode>69190</PostalCode>
+                              <Country isoCountryCode="DE"/>
+                           </PostalAddress>
+                        </Contact>
+                        <Contact role="shipTo" addressID="10300008">
+                           <Name xml:lang="de"/>
+                           <PostalAddress name="Inland-Lohnbearbeiter B Test AN, DE">
+                              <Street>Breite Strasse 5</Street>
+                              <City>Berlin</City>
+                              <State>BE</State>
+                              <PostalCode>13187</PostalCode>
+                              <Country isoCountryCode="DE"/>
+                           </PostalAddress>
+                           <Phone>
+                              <TelephoneNumber>
+                                 <CountryCode isoCountryCode="DE"/>
+                                 <AreaOrCityCode/>
+                                 <Number>030 953100-0</Number>
+                              </TelephoneNumber>
+                           </Phone>
+                        </Contact>
+                        <Comments xml:lang="FR">TextElementText TextElementText TextElementText</Comments>
+                        <TermsOfDelivery>
+                           <TermsOfDeliveryCode value="TransportCondition"/>
+                           <ShippingPaymentMethod value="other">_</ShippingPaymentMethod>
+                        </TermsOfDelivery>
+                     </ShipNoticeHeader>
+                     <ShipControl>
+                        <CarrierIdentifier domain="companyName"/>
+                        <ShipmentIdentifier/>
+                     </ShipControl>
+                     <ShipNoticePortion>
+                        <OrderReference orderID="4500042373">
+                           <DocumentReference payloadID=""/>
+                        </OrderReference>
+                        <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="2.0">
+                           <ItemID>
+                              <SupplierPartID>SUBCOMP1</SupplierPartID>
+                              <BuyerPartID>BuyerProductID</BuyerPartID>
+                              <IdReference domain="EAN13" identifier=""/>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Lohnbearbeitung Komponente 1</Description>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Dimension quantity="2.0" type="grossWeight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="2.0" type="weight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="" type="volume">
+                                 <UnitOfMeasure/>
+                              </Dimension>
+                              <ItemDetailIndustry>
+                                 <ItemDetailRetail>
+                                    <EANID/>
+                                 </ItemDetailRetail>
+                              </ItemDetailIndustry>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                              <BuyerBatchID>BTHCOMP1</BuyerBatchID>
+                              <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                           </Batch>
+                           <ShipNoticeItemIndustry>
+                              <ShipNoticeItemRetail>
+                                 <BestBeforeDate date="2021-05-29"/>
+                                 <ExpiryDate date=""/>
+                              </ShipNoticeItemRetail>
+                           </ShipNoticeItemIndustry>
+                        </ShipNoticeItem>
+                        <ShipNoticeItem shipNoticeLineNumber="20" lineNumber="10" quantity="1.0">
+                           <ItemID>
+                              <SupplierPartID>SUBCOMP2</SupplierPartID>
+                              <IdReference domain="EAN13" identifier=""/>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Lohnbearbeitung Komponente 2</Description>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Dimension quantity="0.0" type="grossWeight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="0.0" type="weight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="" type="volume">
+                                 <UnitOfMeasure/>
+                              </Dimension>
+                              <ItemDetailIndustry>
+                                 <ItemDetailRetail>
+                                    <EANID/>
+                                 </ItemDetailRetail>
+                              </ItemDetailIndustry>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                              <BuyerBatchID>BTHCOMP2</BuyerBatchID>
+                              <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                           </Batch>
+                           <ShipNoticeItemIndustry>
+                              <ShipNoticeItemRetail>
+                                 <BestBeforeDate date="2021-05-29"/>
+                                 <ExpiryDate date=""/>
+                              </ShipNoticeItemRetail>
+                           </ShipNoticeItemIndustry>
+                        </ShipNoticeItem>
+                        <ShipNoticeItem shipNoticeLineNumber="30" lineNumber="10" quantity="1.0">
+                           <ItemID>
+                              <SupplierPartID>SUBCOMP3</SupplierPartID>
+                              <IdReference domain="EAN13" identifier=""/>
+                           </ItemID>
+                           <ShipNoticeItemDetail>
+                              <Description xml:lang="">Lohnbearbeitung Komponente 3</Description>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Dimension quantity="0.0" type="grossWeight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="0.0" type="weight">
+                                 <UnitOfMeasure>KGM</UnitOfMeasure>
+                              </Dimension>
+                              <Dimension quantity="" type="volume">
+                                 <UnitOfMeasure/>
+                              </Dimension>
+                              <ItemDetailIndustry>
+                                 <ItemDetailRetail>
+                                    <EANID/>
+                                 </ItemDetailRetail>
+                              </ItemDetailIndustry>
+                           </ShipNoticeItemDetail>
+                           <UnitOfMeasure>EA</UnitOfMeasure>
+                           <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                              <BuyerBatchID>BTHCOMP3</BuyerBatchID>
+                              <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                           </Batch>
+                           <ShipNoticeItemIndustry>
+                              <ShipNoticeItemRetail>
+                                 <BestBeforeDate date="2021-05-29"/>
+                                 <ExpiryDate date=""/>
+                              </ShipNoticeItemRetail>
+                           </ShipNoticeItemIndustry>
+                           <Comments xml:lang="FR">TextElementText TextElementText TextElementText</Comments>
+                        </ShipNoticeItem>
+                     </ShipNoticePortion>
+                  </ShipNoticeRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="false">
+         <label>ShipNoticeRequest Comments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <Credential domain="EndPointID">
+                           <Identity>CIG</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="VendorID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                        <Credential domain="EndPointID">
+                           <Identity>cig_cert_eu</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="production">
+                     <ShipNoticeRequest>
+                        <ShipNoticeHeader deliveryDate="2021-09-26T22:00:00+05:30"
+                                          shipmentDate="2021-09-26T22:00:00+05:30"
+                                          noticeDate="2021-09-29T10:36:05+05:30"
+                                          operation="new"
+                                          shipmentID="80000833"
+                                          shipmentType="actual">
+                           <ServiceLevel xml:lang=""/>
+                           <Contact role="shipFrom">
+                              <Name xml:lang=""/>
+                              <PostalAddress name="Shipping Point 1010 - Address Name">
+                                 <Street>StreetAddressName</Street>
+                                 <City>Walldorf</City>
+                                 <State>BW</State>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo" addressID="10300008">
+                              <Name xml:lang="de"/>
+                              <PostalAddress name="Inland-Lohnbearbeiter B Test AN, DE">
+                                 <Street>Breite Strasse 5</Street>
+                                 <City>Berlin</City>
+                                 <State>BE</State>
+                                 <PostalCode>13187</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Phone>
+                                 <TelephoneNumber>
+                                    <CountryCode isoCountryCode="DE"/>
+                                    <AreaOrCityCode/>
+                                    <Number>030 953100-0</Number>
+                                 </TelephoneNumber>
+                              </Phone>
+                           </Contact>
+                           <Comments xml:lang="FR">TextElementText TextElementText TextElementText</Comments>
+                           <TermsOfDelivery>
+                              <TermsOfDeliveryCode value="TransportCondition"/>
+                              <ShippingPaymentMethod value="other">_</ShippingPaymentMethod>
+                           </TermsOfDelivery>
+                        </ShipNoticeHeader>
+                        <ShipControl>
+                           <CarrierIdentifier domain="companyName"/>
+                           <ShipmentIdentifier/>
+                        </ShipControl>
+                        <ShipNoticePortion>
+                           <OrderReference orderID="4500042373">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                           <ShipNoticeItem shipNoticeLineNumber="10" lineNumber="10" quantity="2.0">
+                              <ItemID>
+                                 <SupplierPartID>SUBCOMP1</SupplierPartID>
+                                 <BuyerPartID>BuyerProductID</BuyerPartID>
+                                 <IdReference domain="EAN13" identifier=""/>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Lohnbearbeitung Komponente 1</Description>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Dimension quantity="2.0" type="grossWeight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="2.0" type="weight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="" type="volume">
+                                    <UnitOfMeasure/>
+                                 </Dimension>
+                                 <ItemDetailIndustry>
+                                    <ItemDetailRetail>
+                                       <EANID/>
+                                    </ItemDetailRetail>
+                                 </ItemDetailIndustry>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                                 <BuyerBatchID>BTHCOMP1</BuyerBatchID>
+                                 <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                              </Batch>
+                              <ShipNoticeItemIndustry>
+                                 <ShipNoticeItemRetail>
+                                    <BestBeforeDate date="2021-05-29"/>
+                                    <ExpiryDate date=""/>
+                                 </ShipNoticeItemRetail>
+                              </ShipNoticeItemIndustry>
+                           </ShipNoticeItem>
+                           <ShipNoticeItem shipNoticeLineNumber="20" lineNumber="10" quantity="1.0">
+                              <ItemID>
+                                 <SupplierPartID>SUBCOMP2</SupplierPartID>
+                                 <IdReference domain="EAN13" identifier=""/>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Lohnbearbeitung Komponente 2</Description>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Dimension quantity="0.0" type="grossWeight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="0.0" type="weight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="" type="volume">
+                                    <UnitOfMeasure/>
+                                 </Dimension>
+                                 <ItemDetailIndustry>
+                                    <ItemDetailRetail>
+                                       <EANID/>
+                                    </ItemDetailRetail>
+                                 </ItemDetailIndustry>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                                 <BuyerBatchID>BTHCOMP2</BuyerBatchID>
+                                 <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                              </Batch>
+                              <ShipNoticeItemIndustry>
+                                 <ShipNoticeItemRetail>
+                                    <BestBeforeDate date="2021-05-29"/>
+                                    <ExpiryDate date=""/>
+                                 </ShipNoticeItemRetail>
+                              </ShipNoticeItemIndustry>
+                           </ShipNoticeItem>
+                           <ShipNoticeItem shipNoticeLineNumber="30" lineNumber="10" quantity="1.0">
+                              <ItemID>
+                                 <SupplierPartID>SUBCOMP3</SupplierPartID>
+                                 <IdReference domain="EAN13" identifier=""/>
+                              </ItemID>
+                              <ShipNoticeItemDetail>
+                                 <Description xml:lang="">Lohnbearbeitung Komponente 3</Description>
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                                 <Dimension quantity="0.0" type="grossWeight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="0.0" type="weight">
+                                    <UnitOfMeasure>KGM</UnitOfMeasure>
+                                 </Dimension>
+                                 <Dimension quantity="" type="volume">
+                                    <UnitOfMeasure/>
+                                 </Dimension>
+                                 <ItemDetailIndustry>
+                                    <ItemDetailRetail>
+                                       <EANID/>
+                                    </ItemDetailRetail>
+                                 </ItemDetailIndustry>
+                              </ShipNoticeItemDetail>
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                              <Batch productionDate="2021-05-29" expirationDate="2023-09-29">
+                                 <BuyerBatchID>BTHCOMP3</BuyerBatchID>
+                                 <SupplierBatchID>SUP_BTHCOMP1</SupplierBatchID>
+                              </Batch>
+                              <ShipNoticeItemIndustry>
+                                 <ShipNoticeItemRetail>
+                                    <BestBeforeDate date="2021-05-29"/>
+                                    <ExpiryDate date=""/>
+                                 </ShipNoticeItemRetail>
+                              </ShipNoticeItemIndustry>
+                              <Comments xml:lang="FR">TextElementText TextElementText TextElementText</Comments>
+                           </ShipNoticeItem>
+                        </ShipNoticePortion>
+                     </ShipNoticeRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

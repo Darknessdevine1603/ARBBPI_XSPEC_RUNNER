@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xsl"
+        date="2023-04-27T15:31:35.551876+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xspec">
+      <label>Status Update Request Invoice</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anSupplier/StatusUpdate/StatusUpdateRequest.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+               <StatusUpdate>
+                  <ERPDocumentNo>1003873747</ERPDocumentNo>
+                  <DocumentNo/>
+                  <DocumentType>InvoiceRequest</DocumentType>
+                  <LogicalSystem>ACECLNT010</LogicalSystem>
+                  <Vendor>AN01095774884-T</Vendor>
+                  <Date>2019-09-26</Date>
+                  <Time>12:32:21</Time>
+                  <Status>ACCEPTED</Status>
+                  <TimeZone>00:00</TimeZone>
+                  <Comment>
+                     <Comment languageCode="en">Accepted</Comment>
+                  </Comment>
+                  <AribaExtension/>
+               </StatusUpdate>
+            </n0:DocumentStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Status Update Request Invoice</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+                  <StatusUpdate>
+                     <ERPDocumentNo>...</ERPDocumentNo>
+                     <DocumentNo>...</DocumentNo>
+                     <DocumentType>...</DocumentType>
+                     <LogicalSystem>...</LogicalSystem>
+                     <Vendor>...</Vendor>
+                     <Date>...</Date>
+                     <Time>...</Time>
+                     <Status>...</Status>
+                     <TimeZone>...</TimeZone>
+                     <Comment>
+                        <Comment languageCode="en">...</Comment>
+                     </Comment>
+                     <AribaExtension>...</AribaExtension>
+                  </StatusUpdate>
+               </n0:DocumentStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xspec">
+      <label>Status Update Request Invoice with erpDocNumber</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anSupplier/StatusUpdate/StatusUpdateRequest.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+               <ERPDocumentNo>InvoiceRequest</ERPDocumentNo>
+               <DocumentNo/>
+               <DocumentType>InvoiceRequest</DocumentType>
+               <LogicalSystem/>
+               <Vendor/>
+               <Date>19-09-26</Date>
+               <Time>12:09:21</Time>
+               <Status>ACCEPTED</Status>
+               <TimeZone/>
+               <Comment>
+                  <Comment languageCode="en">Accepted InvoiceRequest</Comment>
+               </Comment>
+               <AribaExtension/>
+            </n0:DocumentStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Status Update Request Invoice with erpDocNumber</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+                  <ERPDocumentNo>...</ERPDocumentNo>
+                  <DocumentNo>...</DocumentNo>
+                  <DocumentType>...</DocumentType>
+                  <LogicalSystem>...</LogicalSystem>
+                  <Vendor>...</Vendor>
+                  <Date>...</Date>
+                  <Time>...</Time>
+                  <Status>...</Status>
+                  <TimeZone>...</TimeZone>
+                  <Comment>
+                     <Comment languageCode="en">...</Comment>
+                  </Comment>
+                  <AribaExtension>...</AribaExtension>
+               </n0:DocumentStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xspec">
+      <label>Status Update Request Invoice</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anSupplier/StatusUpdate/StatusUpdateRequest.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+               <ERPDocumentNo>InvoiceRequest</ERPDocumentNo>
+               <DocumentNo/>
+               <DocumentType/>
+               <LogicalSystem/>
+               <Vendor/>
+               <Date>19-09-26</Date>
+               <Time>12:09:21</Time>
+               <Status>ACCEPTED</Status>
+               <TimeZone/>
+               <Comment>
+                  <Comment languageCode="en">Accepted InvoiceRequest</Comment>
+               </Comment>
+               <AribaExtension/>
+            </n0:DocumentStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Status Update Request Invoice</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+                  <ERPDocumentNo>...</ERPDocumentNo>
+                  <DocumentNo>...</DocumentNo>
+                  <DocumentType>...</DocumentType>
+                  <LogicalSystem>...</LogicalSystem>
+                  <Vendor>...</Vendor>
+                  <Date>...</Date>
+                  <Time>...</Time>
+                  <Status>...</Status>
+                  <TimeZone>...</TimeZone>
+                  <Comment>
+                     <Comment languageCode="en">...</Comment>
+                  </Comment>
+                  <AribaExtension>...</AribaExtension>
+               </n0:DocumentStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xspec">
+      <label>Status Update Request Confirmation Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anSupplier/StatusUpdate/StatusUpdateRequestConfirm.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+               <StatusUpdate>
+                  <ERPDocumentNo>1003873747</ERPDocumentNo>
+                  <DocumentNo/>
+                  <DocumentType>SalesOrderConfirmation</DocumentType>
+                  <LogicalSystem>ACECLNT010</LogicalSystem>
+                  <Vendor>AN01095774884-T</Vendor>
+                  <Date>2019-09-26</Date>
+                  <Time>12:32:21</Time>
+                  <Status>ACCEPTED</Status>
+                  <TimeZone>00:00</TimeZone>
+                  <Comment>
+                     <Comment languageCode="en">Accepted</Comment>
+                  </Comment>
+                  <AribaExtension/>
+               </StatusUpdate>
+            </n0:DocumentStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>Status Update Request Confirmation Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+                  <StatusUpdate>
+                     <ERPDocumentNo>...</ERPDocumentNo>
+                     <DocumentNo>...</DocumentNo>
+                     <DocumentType>...</DocumentType>
+                     <LogicalSystem>...</LogicalSystem>
+                     <Vendor>...</Vendor>
+                     <Date>...</Date>
+                     <Time>...</Time>
+                     <Status>...</Status>
+                     <TimeZone>...</TimeZone>
+                     <Comment>
+                        <Comment languageCode="en">...</Comment>
+                     </Comment>
+                     <AribaExtension>...</AribaExtension>
+                  </StatusUpdate>
+               </n0:DocumentStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xspec">
+      <label>Status Update Request Confirmation Request  with erpDocNumber</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anSupplier/StatusUpdate/StatusUpdateRequestConfirm.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+               <ERPDocumentNo>ConfirmationRequest</ERPDocumentNo>
+               <DocumentNo/>
+               <DocumentType>SalesOrderConfirmation</DocumentType>
+               <LogicalSystem/>
+               <Vendor/>
+               <Date>19-09-26</Date>
+               <Time>12:09:21</Time>
+               <Status>ACCEPTED</Status>
+               <TimeZone/>
+               <Comment>
+                  <Comment languageCode="en">Accepted ConfirmationRequest</Comment>
+               </Comment>
+               <AribaExtension/>
+            </n0:DocumentStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>Status Update Request Confirmation Request with erpDocNumber</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+                  <ERPDocumentNo>...</ERPDocumentNo>
+                  <DocumentNo>...</DocumentNo>
+                  <DocumentType>...</DocumentType>
+                  <LogicalSystem>...</LogicalSystem>
+                  <Vendor>...</Vendor>
+                  <Date>...</Date>
+                  <Time>...</Time>
+                  <Status>...</Status>
+                  <TimeZone>...</TimeZone>
+                  <Comment>
+                     <Comment languageCode="en">...</Comment>
+                  </Comment>
+                  <AribaExtension>...</AribaExtension>
+               </n0:DocumentStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xspec">
+      <label>Status Update Request Ship Notice</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anSupplier/StatusUpdate/StatusUpdateRequestShipNotice.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+               <StatusUpdate>
+                  <ERPDocumentNo>1003873747</ERPDocumentNo>
+                  <DocumentNo/>
+                  <DocumentType>OutboundDelivery</DocumentType>
+                  <LogicalSystem>ACECLNT010</LogicalSystem>
+                  <Vendor>AN01095774884-T</Vendor>
+                  <Date>2019-09-26</Date>
+                  <Time>12:32:21</Time>
+                  <Status>REJECTED</Status>
+                  <TimeZone>00:00</TimeZone>
+                  <Comment>
+                     <Comment languageCode="en">Rejected</Comment>
+                  </Comment>
+                  <AribaExtension/>
+               </StatusUpdate>
+            </n0:DocumentStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>Status Update Request Ship Notice</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+                  <StatusUpdate>
+                     <ERPDocumentNo>...</ERPDocumentNo>
+                     <DocumentNo>...</DocumentNo>
+                     <DocumentType>...</DocumentType>
+                     <LogicalSystem>...</LogicalSystem>
+                     <Vendor>...</Vendor>
+                     <Date>...</Date>
+                     <Time>...</Time>
+                     <Status>...</Status>
+                     <TimeZone>...</TimeZone>
+                     <Comment>
+                        <Comment languageCode="en">...</Comment>
+                     </Comment>
+                     <AribaExtension>...</AribaExtension>
+                  </StatusUpdate>
+               </n0:DocumentStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anSupplier/MAPPING_ANY_cXML_0000_StatusUpdateRequest_AddOn_0000_DocumentStatusUpdateRequest.xspec">
+      <label>Status Update Request Ship Notice with erpDocNumber</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anSupplier/StatusUpdate/StatusUpdateRequestShipNotice.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+               <ERPDocumentNo>ShipNoticeRequest</ERPDocumentNo>
+               <DocumentNo/>
+               <DocumentType>OutboundDelivery</DocumentType>
+               <LogicalSystem/>
+               <Vendor/>
+               <Date>2019-09-27</Date>
+               <Time/>
+               <Status>REJECTED</Status>
+               <TimeZone/>
+               <Comment>
+                  <Comment languageCode="en">Rejected ShipNoticeRequest</Comment>
+               </Comment>
+               <AribaExtension/>
+            </n0:DocumentStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="true">
+         <label>Status Update Request Ship Notice with erpDocNumber</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DocumentStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIS">
+                  <ERPDocumentNo>ShipNoticeRequest</ERPDocumentNo>
+                  <DocumentNo/>
+                  <DocumentType>OutboundDelivery</DocumentType>
+                  <LogicalSystem/>
+                  <Vendor/>
+                  <Date>2019-09-27</Date>
+                  <Time/>
+                  <Status>REJECTED</Status>
+                  <TimeZone/>
+                  <Comment>
+                     <Comment languageCode="en">Rejected ShipNoticeRequest</Comment>
+                  </Comment>
+                  <AribaExtension/>
+               </n0:DocumentStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

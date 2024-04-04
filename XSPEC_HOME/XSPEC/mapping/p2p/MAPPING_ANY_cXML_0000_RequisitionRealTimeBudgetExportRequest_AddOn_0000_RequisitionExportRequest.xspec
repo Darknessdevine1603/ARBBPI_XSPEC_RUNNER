@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_RequisitionRealTimeBudgetExportRequest_AddOn_0000_RequisitionExportRequest.xsl">
+      
+    <x:scenario
+        label="RequisitionExportRequest">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/RequisitionExportRequest_BM.xml"/>
+        <x:expect label="RequisitionRequest" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/RequisitionExportRequest_AM.xml" select="*" />      
+    </x:scenario>
+    
+    <x:scenario
+        label="RequisitionBudgetCheck">
+        <x:param name="anSourceDocumentType" select= "'RequisitionBudgetCheckExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/RequisitionBudgetCheck_BM.xml"/>
+        <x:expect label="RequisitionBudgetCheck" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/RequisitionBudgetCheck_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithContract">
+        <x:param name="anSourceDocumentType" select= "'RequisitionBudgetCheckExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithContract_BM.xml"/>
+        <x:expect label="ReqWithContract" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithContract_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithAdhocAddres">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithAdhocAddress_BM.xml"/>
+        <x:expect label="ReqWithAdhocAddres" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithAdhocAddress_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithService">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithService_BM.xml"/>
+        <x:expect label="ReqWithService" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithService_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithServiceSplits">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithServiceSplits_BM.xml"/>
+        <x:expect label="ReqWithServiceSplits" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithServiceSplits_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithHeldLines">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithHeldLines_BM.xml"/>
+        <x:expect label="ReqWithHeldLines" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithHeldLines_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithHeldLinesCharLength">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithHeldLinesWithCharLength_BM.xml"/>
+        <x:expect label="ReqWithHeldLinesCharLength" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithHeldLinesCharLength_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithLineTypes">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithTLC_BM .xml"/>
+        <x:expect label="ReqWithTLC" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithTLC_AM .xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithDiscount">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithTLCDiscount_BM.xml"/>
+        <x:expect label="ReqWithDiscount" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithTLCDiscount_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithNetwork">
+        <x:param name="anSourceDocumentType" select= "'RequisitionBudgetCheckExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithNetwork_BM.xml"/>
+        <x:expect label="ReqWithNetwork" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithNetwork_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithPBQ">
+        <x:param name="anSourceDocumentType" select= "'RequisitionBudgetCheckExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithPBQ_BM.xml"/>
+        <x:expect label="ReqWithPBQ" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithPBQ_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithLimitOrder">
+        <x:param name="anSourceDocumentType" select= "'RequisitionBudgetCheckExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithLimitOrder_BM.xml"/>
+        <x:expect label="ReqWithLimitOrder" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithLimitOrder_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithSimpleService">
+        <x:param name="anSourceDocumentType" select= "'RequisitionBudgetCheckExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithSimpleService_BM.xml"/>
+        <x:expect label="ReqWithSimpleService" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithSimpleService_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithDemandAggregation">
+        <x:param name="anSourceDocumentType" select= "'RequisitionBudgetCheckExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithDemandAggregation_BM.xml"/>
+        <x:expect label="ReqWithDemandAggregation" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithDemandAggregation_AM.xml" select="*" />       
+    </x:scenario>
+  
+    <x:scenario
+        label="Length Checks">
+        <x:param name="anSourceDocumentType" select= "'RequisitionBudgetCheckExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/Req_LengthChecks_BM.xml"/>
+        <x:expect label="Length Checks" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/Req_LengthChecks_AM.xml" select="*" />       
+    </x:scenario>
+    <!-- IG-37134 : Amount formatting based on currency -->
+    <x:scenario
+        label="ReqWithServiceInNonDecimalCurrency">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithService_NonDecimalCurrency_BM.xml"/>
+        <x:expect label="ReqWithService" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithService_NonDecimalCurrency_AM.xml" select="*" />       
+    </x:scenario>
+<!-- XSPEC code coverage improvement -->
+    <x:scenario
+        label="ReqWithServiceHeld">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithService_held_BM.xml"/>
+        <x:expect label="ReqWithServiceHeld" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithServiceHeld_AM.xml" select="*" />       
+    </x:scenario>
+    
+    <x:scenario
+        label="ReqWithServiceSplitsHeld">
+        <x:param name="anSourceDocumentType" select= "'RequisitionRealTimeBudgetExportRequest'"/>
+        <x:param name="anERPSystemID" select= "'Q8JCLNT002'"/>
+        <x:param name="anSenderID1" select= "'156'"/>
+        <x:param name="anXsltDoctype" select= "'RequisitionExportRequest'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/Requisition/ReqWithServiceSplits_Held_BM.xml"/>
+        <x:expect label="ReqWithServiceSplitsHeld" href="../../../XSPEC/payloads/target/inbound/p2p/Requisition/ReqWithServiceSplitsHeld_AM.xml" select="*" />       
+    </x:scenario>    
+</x:description>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EANCOM_D96A/MAPPING_ANY_EANCOM_D96AEAN008_INVOIC_cXML_0000_InvoiceDetailRequest.xsl">
+    <x:scenario label="Invoice Detail Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004578867-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004835624-T'"/>        
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_AM.dat"
+            select="element()" label="Confirmation"/>
+    </x:scenario>
+    
+    <x:scenario label="Invoice Detail Request - Regular Item">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004578867-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004835624-T'"/>        
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_AM1.dat"
+            select="element()" label="Invoice Detail Request - Regular Item"/>
+    </x:scenario>
+    
+    <x:scenario label="Invoice Detail Request - Regular Item: 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004578867-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004835624-T'"/>        
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_BM6.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_AM6.dat"
+            select="element()" label="Invoice Detail Request - Regular Item: 2"/>
+    </x:scenario>
+    
+    <x:scenario label="Invoice Detail Request - Credit Memo">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004578867-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004835624-T'"/>        
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_AM2.dat"
+            select="element()" label="Invoice Detail Request - Credit memo"/>
+    </x:scenario>
+    <x:scenario label="Invoice Detail Request - Credit Memo - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004578867-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004835624-T'"/>        
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_BM8.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_AM8.dat"
+            select="element()" label="Invoice Detail Request - Credit memo - 2"/>
+    </x:scenario>
+    
+    <x:scenario label="Invoice Detail Request - Summary Invoice">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004578867-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004835624-T'"/>        
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_BM3.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_AM3.dat"
+            select="element()" label="Invoice Detail Request - Summary Invoice"/>
+    </x:scenario>
+    
+    <x:scenario label="Invoice Detail Request - Summary Invoice - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004578867-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004835624-T'"/>        
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_BM7.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_AM7.dat"
+            select="element()" label="Invoice Detail Request - Summary Invoice - 2"/>
+    </x:scenario>
+    
+    <x:scenario label="Invoice Detail Request - line level credit memo">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004578867-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004835624-T'"/>        
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_BM4.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EANCOM_D96A/Invoice/InvoiceDetailRequest_AM4.dat"
+            select="element()" label="Invoice Detail Request - line level credit memo"/>
+    </x:scenario>
+</x:description>

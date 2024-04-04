@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_ReservationAsyncExportRequest_AddOn_0000_ReservationAsyncExportRequest.xsl">
+    <x:scenario label="ReservationRequestGL">
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ReservationRequest/ReservationAsyncExportRequest_BM.xml"/>
+        <x:expect label="ReservationRequestGl" href="../../../XSPEC/payloads/target/inbound/p2p/ReservationRequest/ReservationAsyncExportRequest_AM.xml" select="element()" />
+    </x:scenario>
+    
+    <x:scenario label="ReservationRequestWBS">
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ReservationRequest/ReservationWithWBS_BM.xml"/>
+        <x:expect label="ReservationRequestWBS" href="../../../XSPEC/payloads/target/inbound/p2p/ReservationRequest/ReservationWithWBS_AM.xml" select="element()" />
+    </x:scenario>
+    
+    <x:scenario label="ReservationRequestAsset">
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ReservationRequest/ReservationWithAsset_BM.xml"/>
+        <x:expect label="ReservationRequestAsset" href="../../../XSPEC/payloads/target/inbound/p2p/ReservationRequest/ReservationWithAsset_AM.xml" select="element()" />
+    </x:scenario>
+    
+    <x:scenario label="ReservationRequestOrder">
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ReservationRequest/ReservationWithOrder_BM.xml"/>
+        <x:expect label="ReservationRequestOrder" href="../../../XSPEC/payloads/target/inbound/p2p/ReservationRequest/ReservationWithOrder_AM.xml" select="element()" />
+    </x:scenario>
+    
+    <x:scenario label="ReservationRequestComment">
+        <x:param name="anAddOnCIVersion" select="'ARBCIG0017'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/p2p/ReservationRequest/ReservationAsyncExportRequest_Comment_BM.xml"/>
+        <x:expect label="ReservationRequestComment" href="../../../XSPEC/payloads/target/inbound/p2p/ReservationRequest/ReservationAsyncExportRequest_Comment_AM.xml" select="element()" />
+    </x:scenario>
+    
+</x:description>

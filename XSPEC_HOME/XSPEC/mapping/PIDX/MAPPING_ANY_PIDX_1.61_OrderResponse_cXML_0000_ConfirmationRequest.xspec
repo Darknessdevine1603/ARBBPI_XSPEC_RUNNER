@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/PIDX/MAPPING_ANY_PIDX_1.61_OrderResponse_cXML_0000_ConfirmationRequest.xsl">
+    <x:scenario label="Confirmation Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>     
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/> <!-- used for allDetail logic -->
+
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Confirmation/ConfirmationRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Confirmation/ConfirmationRequest_AM.dat"
+            select="element()" label="Confirmation Request"/>
+    </x:scenario>
+    <x:scenario label="Confirmation Request All Details">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'true'"/>    
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/> <!-- used for allDetail logic -->
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Confirmation/ConfirmationRequestAllDetails_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Confirmation/ConfirmationRequestAllDetails_AM.dat"
+            select="element()" label="Confirmation Request All Details"/>
+    </x:scenario>
+    <x:scenario label="Confirmation Request Ship To">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>     
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/> <!-- used for allDetail logic -->
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Confirmation/ConfirmationRequestShipTo_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Confirmation/ConfirmationRequestShipTo_AM.dat"
+            select="element()" label="Confirmation Request Ship To"/>
+    </x:scenario>
+    <x:scenario label="Confirmation Request All Details Ship To">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'true'"/>    
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/> <!-- used for allDetail logic -->
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Confirmation/ConfirmationRequestAllDetailsShipTo_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Confirmation/ConfirmationRequestAllDetailsShipTo_AM.dat"
+            select="element()" label="Confirmation Request All Details Ship To"/>
+    </x:scenario>
+    <x:scenario label="Confirmation Request Bill To">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>     
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/> <!-- used for allDetail logic -->
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Confirmation/ConfirmationRequestBillTo_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Confirmation/ConfirmationRequestBillTo_AM.dat"
+            select="element()" label="Confirmation Request Bill To"/>
+    </x:scenario>
+    <x:scenario label="Confirmation Request All Details Bill To">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'true'"/>    
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/> <!-- used for allDetail logic -->
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/Confirmation/ConfirmationRequestAllDetailsBillTo_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/Confirmation/ConfirmationRequestAllDetailsBillTo_AM.dat"
+            select="element()" label="Confirmation Request All Details Bill To"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,1481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_InvoiceDetailRequest_cXML_0000_InvoiceDetailRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_InvoiceDetailRequest_cXML_0000_InvoiceDetailRequest.xsl"
+        date="2023-04-27T15:50:41.700303+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_InvoiceDetailRequest_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>InvoiceDetailRequest Basic</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/InvoiceRequest/InvoiceRequest.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML payloadID="" timestamp="2023-04-27T15:50:42+05:30">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <InvoiceDetailRequest>
+                     <InvoiceDetailRequestHeader invoiceDate="2021-01-18"
+                                                 invoiceID="INV_90000236"
+                                                 invoiceOrigin="supplier"
+                                                 operation="new"
+                                                 purpose="standard">
+                        <InvoiceDetailHeaderIndicator/>
+                        <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                        <InvoicePartner>
+                           <Contact role="remitTo">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="from">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                           <IdReference domain="vatID" identifier="DE123456789"/>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="billTo">
+                              <Name xml:lang="de">Company Code 1010</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                           <IdReference domain="vatID" identifier="DE192455022"/>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="soldTo">
+                              <Name xml:lang="de">Company Code 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoicePartner>
+                        <InvoiceDetailShipping>
+                           <Contact role="shipFrom">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo">
+                              <Name xml:lang="de">Plant 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoiceDetailShipping>
+                        <Extrinsic name="invoiceSourceDocument">4500004354</Extrinsic>
+                        <Extrinsic name="BuyerVATID">DE192455022</Extrinsic>
+                        <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+                     </InvoiceDetailRequestHeader>
+                     <InvoiceDetailOrder>
+                        <InvoiceDetailOrderInfo>
+                           <OrderReference orderID="4500004354">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                        </InvoiceDetailOrderInfo>
+                        <InvoiceDetailItem invoiceLineNumber="10" quantity="1">
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                           <UnitPrice>
+                              <Money currency="EUR">17.55</Money>
+                           </UnitPrice>
+                           <InvoiceDetailItemReference lineNumber="000010">
+                              <ItemID>
+                                 <SupplierPartID>TG12</SupplierPartID>
+                                 <BuyerPartID>SP001</BuyerPartID>
+                              </ItemID>
+                           </InvoiceDetailItemReference>
+                           <SubtotalAmount>
+                              <Money currency="EUR">17.55</Money>
+                           </SubtotalAmount>
+                           <Tax>
+                              <Money currency="EUR">2.81</Money>
+                              <Description xml:lang="de"/>
+                              <TaxDetail category="A1" percentageRate="16.0" taxPointDate="2021-01-18">
+                                 <TaxableAmount>
+                                    <Money currency="EUR">17.55</Money>
+                                 </TaxableAmount>
+                                 <TaxAmount>
+                                    <Money currency="EUR">2.81</Money>
+                                 </TaxAmount>
+                              </TaxDetail>
+                           </Tax>
+                           <GrossAmount>
+                              <Money currency="EUR">20.36</Money>
+                           </GrossAmount>
+                           <NetAmount>
+                              <Money currency="EUR">17.55</Money>
+                           </NetAmount>
+                           <ShipNoticeIDInfo shipNoticeID="80000486"/>
+                        </InvoiceDetailItem>
+                        <InvoiceDetailShipNoticeInfo>
+                           <ShipNoticeReference shipNoticeID="80000486"/>
+                        </InvoiceDetailShipNoticeInfo>
+                     </InvoiceDetailOrder>
+                     <InvoiceDetailSummary>
+                        <SubtotalAmount>
+                           <Money currency="EUR">17.55</Money>
+                        </SubtotalAmount>
+                        <Tax>
+                           <Money currency="EUR">2.81</Money>
+                           <Description xml:lang="de"/>
+                           <TaxDetail category="A1" percentageRate="16.0">
+                              <TaxAmount>
+                                 <Money currency="EUR">2.81</Money>
+                              </TaxAmount>
+                           </TaxDetail>
+                        </Tax>
+                        <GrossAmount>
+                           <Money currency="EUR">20.36</Money>
+                        </GrossAmount>
+                        <NetAmount>
+                           <Money currency="EUR">17.55</Money>
+                        </NetAmount>
+                        <DueAmount>
+                           <Money currency="EUR">20.36</Money>
+                        </DueAmount>
+                     </InvoiceDetailSummary>
+                  </InvoiceDetailRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="false">
+         <label>InvoiceDetailRequest Basic</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML payloadID="..." timestamp="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <InvoiceDetailRequest>
+                        <InvoiceDetailRequestHeader invoiceDate="2021-01-18T11:10:54+05:30"
+                                                    invoiceID="INV_90000236"
+                                                    invoiceOrigin="supplier"
+                                                    operation="new"
+                                                    purpose="standard">
+                           <InvoiceDetailHeaderIndicator/>
+                           <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                           <InvoicePartner>
+                              <Contact role="remitTo">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="from">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference domain="vatID" identifier="DE123456789"/>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="billTo">
+                                 <Name xml:lang="de">Company Code 1010</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference domain="vatID" identifier="DE192455022"/>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="soldTo">
+                                 <Name xml:lang="de">Company Code 1010 - Address Name 1</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoicePartner>
+                           <InvoiceDetailShipping>
+                              <Contact role="shipFrom">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <Contact role="shipTo">
+                                 <Name xml:lang="de">Plant 1010 - Address Name 1</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoiceDetailShipping>
+                           <Extrinsic name="BuyerVATID">DE192455022</Extrinsic>
+                           <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+                        </InvoiceDetailRequestHeader>
+                        <InvoiceDetailOrder>
+                           <InvoiceDetailOrderInfo>
+                              <OrderReference orderID="4500004354">
+                                 <DocumentReference payloadID=""/>
+                              </OrderReference>
+                           </InvoiceDetailOrderInfo>
+                           <InvoiceDetailItem invoiceLineNumber="10" quantity="1">
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <UnitPrice>
+                                 <Money currency="EUR">17.55</Money>
+                              </UnitPrice>
+                              <InvoiceDetailItemReference lineNumber="000010">
+                                 <ItemID>
+                                    <SupplierPartID>TG12</SupplierPartID>
+                                    <BuyerPartID>SP001</BuyerPartID>
+                                 </ItemID>
+                                 <Classification domain="NotAvailable"/>
+                              </InvoiceDetailItemReference>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">17.55</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">2.81</Money>
+                                 <Description xml:lang="de"/>
+                                 <TaxDetail category="A1" percentageRate="16.0">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">17.55</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">2.81</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">20.36</Money>
+                              </GrossAmount>
+                              <NetAmount>
+                                 <Money currency="EUR">17.55</Money>
+                              </NetAmount>
+                           </InvoiceDetailItem>
+                        </InvoiceDetailOrder>
+                        <InvoiceDetailSummary>
+                           <SubtotalAmount>
+                              <Money currency="EUR">17.55</Money>
+                           </SubtotalAmount>
+                           <Tax>
+                              <Money currency="EUR">2.81</Money>
+                              <Description xml:lang="de"/>
+                              <TaxDetail category="A1" percentageRate="16.0">
+                                 <TaxAmount>
+                                    <Money currency="EUR">2.81</Money>
+                                 </TaxAmount>
+                                 <Description xml:lang="de"/>
+                              </TaxDetail>
+                           </Tax>
+                           <GrossAmount>
+                              <Money currency="EUR">20.36</Money>
+                           </GrossAmount>
+                           <NetAmount>
+                              <Money currency="EUR">17.55</Money>
+                           </NetAmount>
+                           <DueAmount>
+                              <Money currency="EUR">20.36</Money>
+                           </DueAmount>
+                        </InvoiceDetailSummary>
+                     </InvoiceDetailRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_InvoiceDetailRequest_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>InvoiceDetailRequest Taxes</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/InvoiceRequest/InvoiceRequest1.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML payloadID="" timestamp="2023-04-27T15:50:42+05:30">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <InvoiceDetailRequest>
+                     <InvoiceDetailRequestHeader invoiceDate="2021-01-27"
+                                                 invoiceID="CREM_90000240"
+                                                 invoiceOrigin="supplier"
+                                                 operation="new"
+                                                 purpose="lineLevelCreditMemo">
+                        <InvoiceDetailHeaderIndicator/>
+                        <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                        <InvoicePartner>
+                           <Contact role="remitTo">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="from">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                           <IdReference domain="vatID" identifier="DE123456789"/>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="billTo">
+                              <Name xml:lang="">Company Code 1010</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                           <IdReference domain="vatID" identifier="DE192455022"/>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="soldTo">
+                              <Name xml:lang="">Company Code 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoicePartner>
+                        <InvoiceDetailShipping>
+                           <Contact role="shipFrom">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo">
+                              <Name xml:lang="de">Plant 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoiceDetailShipping>
+                        <Extrinsic name="invoiceSourceDocument">4500004385</Extrinsic>
+                        <Extrinsic name="BuyerVATID">DE192455022</Extrinsic>
+                        <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+                     </InvoiceDetailRequestHeader>
+                     <InvoiceDetailOrder>
+                        <InvoiceDetailOrderInfo>
+                           <OrderReference orderID="4500004385">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                        </InvoiceDetailOrderInfo>
+                        <InvoiceDetailItem invoiceLineNumber="10" quantity="-1">
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                           <UnitPrice>
+                              <Money currency="EUR">-17.55</Money>
+                           </UnitPrice>
+                           <InvoiceDetailItemReference lineNumber="000010">
+                              <ItemID>
+                                 <SupplierPartID>TG12</SupplierPartID>
+                                 <BuyerPartID/>
+                              </ItemID>
+                           </InvoiceDetailItemReference>
+                           <SubtotalAmount>
+                              <Money currency="EUR">-17.55</Money>
+                           </SubtotalAmount>
+                           <Tax>
+                              <Money currency="EUR">-2.81</Money>
+                              <Description xml:lang="de"/>
+                              <TaxDetail category="A1" percentageRate="16.0" taxPointDate="2021-01-27">
+                                 <TaxableAmount>
+                                    <Money currency="EUR">-17.55</Money>
+                                 </TaxableAmount>
+                                 <TaxAmount>
+                                    <Money currency="EUR">-2.81</Money>
+                                 </TaxAmount>
+                              </TaxDetail>
+                           </Tax>
+                           <GrossAmount>
+                              <Money currency="EUR">-20.36</Money>
+                           </GrossAmount>
+                           <NetAmount>
+                              <Money currency="EUR">-17.55</Money>
+                           </NetAmount>
+                           <ShipNoticeIDInfo shipNoticeID="80000496"/>
+                        </InvoiceDetailItem>
+                        <InvoiceDetailShipNoticeInfo>
+                           <ShipNoticeReference shipNoticeID="80000496"/>
+                        </InvoiceDetailShipNoticeInfo>
+                     </InvoiceDetailOrder>
+                     <InvoiceDetailSummary>
+                        <SubtotalAmount>
+                           <Money currency="EUR">-17.55</Money>
+                        </SubtotalAmount>
+                        <Tax>
+                           <Money currency="EUR">-2.81</Money>
+                           <Description xml:lang="de"/>
+                           <TaxDetail category="A1" percentageRate="16.0">
+                              <TaxAmount>
+                                 <Money currency="EUR">-2.81</Money>
+                              </TaxAmount>
+                           </TaxDetail>
+                        </Tax>
+                        <GrossAmount>
+                           <Money currency="EUR">-20.36</Money>
+                        </GrossAmount>
+                        <NetAmount>
+                           <Money currency="EUR">-17.55</Money>
+                        </NetAmount>
+                        <DueAmount>
+                           <Money currency="EUR">-20.36</Money>
+                        </DueAmount>
+                     </InvoiceDetailSummary>
+                  </InvoiceDetailRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="false">
+         <label>InvoiceDetailRequest Taxes</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML payloadID="..." timestamp="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <InvoiceDetailRequest>
+                        <InvoiceDetailRequestHeader invoiceDate="2021-01-27T12:22:41+05:30"
+                                                    invoiceID="CREM_90000240"
+                                                    invoiceOrigin="supplier"
+                                                    operation="new"
+                                                    purpose="lineLevelCreditMemo">
+                           <InvoiceDetailHeaderIndicator/>
+                           <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                           <InvoicePartner>
+                              <Contact role="remitTo">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="from">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference domain="vatID" identifier="DE123456789"/>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="billTo">
+                                 <Name xml:lang="">Company Code 1010</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference domain="vatID" identifier="DE192455022"/>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="soldTo">
+                                 <Name xml:lang="">Company Code 1010 - Address Name 1</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoicePartner>
+                           <InvoiceDetailShipping>
+                              <Contact role="shipFrom">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <Contact role="shipTo">
+                                 <Name xml:lang="de">Plant 1010 - Address Name 1</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoiceDetailShipping>
+                           <Extrinsic name="BuyerVATID">DE192455022</Extrinsic>
+                           <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+                        </InvoiceDetailRequestHeader>
+                        <InvoiceDetailOrder>
+                           <InvoiceDetailOrderInfo>
+                              <OrderReference orderID="4500004385">
+                                 <DocumentReference payloadID=""/>
+                              </OrderReference>
+                           </InvoiceDetailOrderInfo>
+                           <InvoiceDetailItem invoiceLineNumber="10" quantity="-1">
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <UnitPrice>
+                                 <Money currency="EUR">-17.55</Money>
+                              </UnitPrice>
+                              <InvoiceDetailItemReference lineNumber="000010">
+                                 <ItemID>
+                                    <SupplierPartID>TG12</SupplierPartID>
+                                    <BuyerPartID/>
+                                 </ItemID>
+                                 <Classification domain="NotAvailable"/>
+                              </InvoiceDetailItemReference>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">-17.55</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">-2.81</Money>
+                                 <Description xml:lang="de"/>
+                                 <TaxDetail category="A1" percentageRate="16.0">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">-17.55</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">-2.81</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">-20.36</Money>
+                              </GrossAmount>
+                              <NetAmount>
+                                 <Money currency="EUR">-17.55</Money>
+                              </NetAmount>
+                           </InvoiceDetailItem>
+                        </InvoiceDetailOrder>
+                        <InvoiceDetailSummary>
+                           <SubtotalAmount>
+                              <Money currency="EUR">-17.55</Money>
+                           </SubtotalAmount>
+                           <Tax>
+                              <Money currency="EUR">-2.81</Money>
+                              <Description xml:lang="de"/>
+                              <TaxDetail category="A1" percentageRate="16.0">
+                                 <TaxAmount>
+                                    <Money currency="EUR">-2.81</Money>
+                                 </TaxAmount>
+                                 <Description xml:lang="de"/>
+                              </TaxDetail>
+                           </Tax>
+                           <GrossAmount>
+                              <Money currency="EUR">-20.36</Money>
+                           </GrossAmount>
+                           <NetAmount>
+                              <Money currency="EUR">-17.55</Money>
+                           </NetAmount>
+                           <DueAmount>
+                              <Money currency="EUR">-20.36</Money>
+                           </DueAmount>
+                        </InvoiceDetailSummary>
+                     </InvoiceDetailRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_InvoiceDetailRequest_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>InvoiceDetailRequest Payment Terms</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/InvoiceRequest/InvoiceRequest2.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML payloadID="" timestamp="2023-04-27T15:50:42+05:30">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <InvoiceDetailRequest>
+                     <InvoiceDetailRequestHeader invoiceDate="2021-01-27"
+                                                 invoiceID="INV_90000240"
+                                                 invoiceOrigin="supplier"
+                                                 operation="new"
+                                                 purpose="standard">
+                        <InvoiceDetailHeaderIndicator/>
+                        <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                        <InvoicePartner>
+                           <Contact role="remitTo">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="from">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                           <IdReference domain="vatID" identifier="DE123456789"/>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="billTo">
+                              <Name xml:lang="">Company Code 1010</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                           <IdReference domain="vatID" identifier="DE192455022"/>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="soldTo">
+                              <Name xml:lang="">Company Code 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoicePartner>
+                        <InvoiceDetailShipping>
+                           <Contact role="shipFrom">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                           </Contact>
+                           <Contact role="shipTo">
+                              <Name xml:lang="">Plant 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoiceDetailShipping>
+                        <PaymentTerm payInNumberOfDays="5">
+                           <Discount>
+                              <DiscountPercent percent="12"/>
+                           </Discount>
+                        </PaymentTerm>
+                        <PaymentTerm payInNumberOfDays="3">
+                           <Discount>
+                              <DiscountPercent percent="9"/>
+                           </Discount>
+                        </PaymentTerm>
+                        <PaymentTerm payInNumberOfDays="2"/>
+                        <Extrinsic name="invoiceSourceDocument">4500004385</Extrinsic>
+                        <Extrinsic name="BuyerVATID">DE192455022</Extrinsic>
+                        <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+                     </InvoiceDetailRequestHeader>
+                     <InvoiceDetailOrder>
+                        <InvoiceDetailOrderInfo>
+                           <OrderReference orderID="4500004385">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                        </InvoiceDetailOrderInfo>
+                        <InvoiceDetailItem invoiceLineNumber="10" quantity="1">
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                           <InvoiceDetailItemReference lineNumber="000010">
+                              <ItemID>
+                                 <SupplierPartID>TG12</SupplierPartID>
+                                 <BuyerPartID>SP001</BuyerPartID>
+                              </ItemID>
+                           </InvoiceDetailItemReference>
+                           <SubtotalAmount>
+                              <Money currency="EUR">17.55</Money>
+                           </SubtotalAmount>
+                           <Tax>
+                              <Money currency="EUR">2.81</Money>
+                              <Description xml:lang="EN"/>
+                              <TaxDetail category="A1" percentageRate="16.0" taxPointDate="2021-01-27">
+                                 <TaxableAmount>
+                                    <Money currency="EUR">17.55</Money>
+                                 </TaxableAmount>
+                                 <TaxAmount>
+                                    <Money currency="EUR">2.81</Money>
+                                 </TaxAmount>
+                              </TaxDetail>
+                           </Tax>
+                           <GrossAmount>
+                              <Money currency="EUR">20.36</Money>
+                           </GrossAmount>
+                           <NetAmount>
+                              <Money currency="EUR">17.55</Money>
+                           </NetAmount>
+                           <ShipNoticeIDInfo shipNoticeID="80000496"/>
+                        </InvoiceDetailItem>
+                        <InvoiceDetailShipNoticeInfo>
+                           <ShipNoticeReference shipNoticeID="80000496"/>
+                        </InvoiceDetailShipNoticeInfo>
+                     </InvoiceDetailOrder>
+                     <InvoiceDetailSummary>
+                        <SubtotalAmount>
+                           <Money currency="EUR">17.55</Money>
+                        </SubtotalAmount>
+                        <Tax>
+                           <Money currency="EUR">2.81</Money>
+                           <Description xml:lang="EN"/>
+                           <TaxDetail category="A1" percentageRate="16.0">
+                              <TaxAmount>
+                                 <Money currency="EUR">2.81</Money>
+                              </TaxAmount>
+                           </TaxDetail>
+                        </Tax>
+                        <GrossAmount>
+                           <Money currency="EUR">20.36</Money>
+                        </GrossAmount>
+                        <NetAmount>
+                           <Money currency="EUR">17.55</Money>
+                        </NetAmount>
+                        <DueAmount>
+                           <Money currency="EUR">20.36</Money>
+                        </DueAmount>
+                     </InvoiceDetailSummary>
+                  </InvoiceDetailRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="false">
+         <label>InvoiceDetailRequest Payment Terms</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML payloadID="..." timestamp="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <InvoiceDetailRequest>
+                        <InvoiceDetailRequestHeader invoiceDate="2021-01-27T12:22:41+05:30"
+                                                    invoiceID="INV_90000240"
+                                                    invoiceOrigin="supplier"
+                                                    operation="new"
+                                                    purpose="standard">
+                           <InvoiceDetailHeaderIndicator/>
+                           <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                           <InvoicePartner>
+                              <Contact role="remitTo">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="from">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference domain="vatID" identifier="DE123456789"/>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="billTo">
+                                 <Name xml:lang="">Company Code 1010</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference domain="vatID" identifier="DE192455022"/>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="soldTo">
+                                 <Name xml:lang="">Company Code 1010 - Address Name 1</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoicePartner>
+                           <InvoiceDetailShipping>
+                              <Contact role="shipFrom">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <Contact role="shipTo">
+                                 <Name xml:lang="">Plant 1010 - Address Name 1</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoiceDetailShipping>
+                           <PaymentTerm payInNumberOfDays="5">
+                              <Discount>
+                                 <DiscountPercent percent="12"/>
+                              </Discount>
+                           </PaymentTerm>
+                           <PaymentTerm payInNumberOfDays="3">
+                              <Discount>
+                                 <DiscountPercent percent="9"/>
+                              </Discount>
+                           </PaymentTerm>
+                           <PaymentTerm payInNumberOfDays="2"/>
+                           <Extrinsic name="BuyerVATID">DE192455022</Extrinsic>
+                           <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+                        </InvoiceDetailRequestHeader>
+                        <InvoiceDetailOrder>
+                           <InvoiceDetailOrderInfo>
+                              <OrderReference orderID="4500004385">
+                                 <DocumentReference payloadID=""/>
+                              </OrderReference>
+                           </InvoiceDetailOrderInfo>
+                           <InvoiceDetailItem invoiceLineNumber="10" quantity="1">
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <UnitPrice>
+                                 <Money currency="EUR">17.55</Money>
+                              </UnitPrice>
+                              <InvoiceDetailItemReference lineNumber="000010">
+                                 <ItemID>
+                                    <SupplierPartID>TG12</SupplierPartID>
+                                    <BuyerPartID>SP001</BuyerPartID>
+                                 </ItemID>
+                                 <Classification domain="NotAvailable"/>
+                              </InvoiceDetailItemReference>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">17.55</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">2.81</Money>
+                                 <Description xml:lang="EN"/>
+                                 <TaxDetail category="A1" percentageRate="16.0">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">17.55</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">2.81</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">20.36</Money>
+                              </GrossAmount>
+                              <NetAmount>
+                                 <Money currency="EUR">17.55</Money>
+                              </NetAmount>
+                           </InvoiceDetailItem>
+                        </InvoiceDetailOrder>
+                        <InvoiceDetailSummary>
+                           <SubtotalAmount>
+                              <Money currency="EUR">17.55</Money>
+                           </SubtotalAmount>
+                           <Tax>
+                              <Money currency="EUR">2.81</Money>
+                              <Description xml:lang="EN"/>
+                              <TaxDetail category="A1" percentageRate="16.0">
+                                 <TaxAmount>
+                                    <Money currency="EUR">2.81</Money>
+                                 </TaxAmount>
+                                 <Description xml:lang="EN"/>
+                              </TaxDetail>
+                           </Tax>
+                           <GrossAmount>
+                              <Money currency="EUR">20.36</Money>
+                           </GrossAmount>
+                           <NetAmount>
+                              <Money currency="EUR">17.55</Money>
+                           </NetAmount>
+                           <DueAmount>
+                              <Money currency="EUR">20.36</Money>
+                           </DueAmount>
+                        </InvoiceDetailSummary>
+                     </InvoiceDetailRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_InvoiceDetailRequest_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>InvoiceDetailRequest Pricing Elements</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/InvoiceRequest/InvoiceRequest3.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML payloadID="" timestamp="2023-04-27T15:50:42+05:30">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity/>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkID">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba_Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Request deploymentMode="test">
+                  <InvoiceDetailRequest>
+                     <InvoiceDetailRequestHeader invoiceDate="2021-06-28"
+                                                 invoiceID="INV_90000329"
+                                                 invoiceOrigin="supplier"
+                                                 operation="new"
+                                                 purpose="standard">
+                        <InvoiceDetailHeaderIndicator/>
+                        <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                        <InvoicePartner>
+                           <Contact role="remitTo">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Email>noreply@sap.com</Email>
+                              <IdReference domain="supplierID" identifier="10100001"/>
+                           </Contact>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="from">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Email>noreply@sap.com</Email>
+                              <IdReference domain="supplierID" identifier="10100001"/>
+                           </Contact>
+                           <IdReference domain="vatID" identifier="DE123456789"/>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="billTo">
+                              <Name xml:lang="de">Company Code 1010</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100001"/>
+                           </Contact>
+                           <IdReference domain="vatID" identifier="DE192455022"/>
+                        </InvoicePartner>
+                        <InvoicePartner>
+                           <Contact role="soldTo">
+                              <Name xml:lang="">Company Code 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Email>noreply@sap.com</Email>
+                              <IdReference domain="supplierID" identifier="10100080"/>
+                           </Contact>
+                        </InvoicePartner>
+                        <InvoiceDetailShipping>
+                           <Contact role="shipFrom">
+                              <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <Email>noreply@sap.com</Email>
+                           </Contact>
+                           <Contact role="shipTo">
+                              <Name xml:lang="de">Plant 1010 - Address Name 1</Name>
+                              <PostalAddress>
+                                 <Street>Dietmar-Hopp-Allee 16</Street>
+                                 <City>Walldorf</City>
+                                 <PostalCode>69190</PostalCode>
+                                 <Country isoCountryCode="DE"/>
+                              </PostalAddress>
+                              <IdReference domain="supplierID" identifier="10100001"/>
+                           </Contact>
+                        </InvoiceDetailShipping>
+                        <Extrinsic name="invoiceSourceDocument">4500006181</Extrinsic>
+                        <Extrinsic name="BuyerVATID">DE192455022</Extrinsic>
+                        <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+                     </InvoiceDetailRequestHeader>
+                     <InvoiceDetailOrder>
+                        <InvoiceDetailOrderInfo>
+                           <OrderReference orderID="4500006181">
+                              <DocumentReference payloadID=""/>
+                           </OrderReference>
+                        </InvoiceDetailOrderInfo>
+                        <InvoiceDetailItem invoiceLineNumber="10" quantity="3">
+                           <UnitOfMeasure>PCE</UnitOfMeasure>
+                           <UnitPrice>
+                              <Money currency="EUR">91.0</Money>
+                           </UnitPrice>
+                           <InvoiceDetailItemReference lineNumber="000010">
+                              <ItemID>
+                                 <SupplierPartID>TG12</SupplierPartID>
+                                 <BuyerPartID>SP001</BuyerPartID>
+                              </ItemID>
+                           </InvoiceDetailItemReference>
+                           <SubtotalAmount>
+                              <Money currency="EUR">273.0</Money>
+                           </SubtotalAmount>
+                           <Tax>
+                              <Money currency="EUR">43.68</Money>
+                              <Description xml:lang="de"/>
+                              <TaxDetail category="A1" percentageRate="16.0" taxPointDate="2021-06-28">
+                                 <TaxableAmount>
+                                    <Money currency="EUR">273.0</Money>
+                                 </TaxableAmount>
+                                 <TaxAmount>
+                                    <Money currency="EUR">43.68</Money>
+                                 </TaxAmount>
+                              </TaxDetail>
+                           </Tax>
+                           <GrossAmount>
+                              <Money currency="EUR">316.68</Money>
+                           </GrossAmount>
+                           <NetAmount>
+                              <Money currency="EUR">273.0</Money>
+                           </NetAmount>
+                           <ShipNoticeIDInfo shipNoticeID="80000682"/>
+                        </InvoiceDetailItem>
+                        <InvoiceDetailShipNoticeInfo>
+                           <ShipNoticeReference shipNoticeID="80000682"/>
+                        </InvoiceDetailShipNoticeInfo>
+                     </InvoiceDetailOrder>
+                     <InvoiceDetailSummary>
+                        <SubtotalAmount>
+                           <Money currency="EUR">273.0</Money>
+                        </SubtotalAmount>
+                        <Tax>
+                           <Money currency="EUR">43.68</Money>
+                           <Description xml:lang="de"/>
+                           <TaxDetail category="A1" percentageRate="16.0">
+                              <TaxAmount>
+                                 <Money currency="EUR">43.68</Money>
+                              </TaxAmount>
+                           </TaxDetail>
+                        </Tax>
+                        <SpecialHandlingAmount>
+                           <Money currency="EUR">10.0</Money>
+                        </SpecialHandlingAmount>
+                        <ShippingAmount>
+                           <Money currency="EUR">20.0</Money>
+                        </ShippingAmount>
+                        <GrossAmount>
+                           <Money currency="EUR">316.68</Money>
+                        </GrossAmount>
+                        <InvoiceDetailDiscount>
+                           <Money currency="EUR">57.0</Money>
+                        </InvoiceDetailDiscount>
+                        <NetAmount>
+                           <Money currency="EUR">273.0</Money>
+                        </NetAmount>
+                        <DueAmount>
+                           <Money currency="EUR">316.68</Money>
+                        </DueAmount>
+                     </InvoiceDetailSummary>
+                  </InvoiceDetailRequest>
+               </Request>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="false">
+         <label>InvoiceDetailRequest Pricing Elements</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML payloadID="..." timestamp="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity/>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkID">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba_Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Request deploymentMode="test">
+                     <InvoiceDetailRequest>
+                        <InvoiceDetailRequestHeader invoiceDate="2021-06-28T19:35:43+05:30"
+                                                    invoiceID="INV_90000329"
+                                                    invoiceOrigin="supplier"
+                                                    operation="new"
+                                                    purpose="standard">
+                           <InvoiceDetailHeaderIndicator/>
+                           <InvoiceDetailLineIndicator isTaxInLine="yes"/>
+                           <InvoicePartner>
+                              <Contact role="remitTo">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="from">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference domain="vatID" identifier="DE123456789"/>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="billTo">
+                                 <Name xml:lang="de">Company Code 1010</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference domain="vatID" identifier="DE192455022"/>
+                           </InvoicePartner>
+                           <InvoicePartner>
+                              <Contact role="soldTo">
+                                 <Name xml:lang="">Company Code 1010 - Address Name 1</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoicePartner>
+                           <InvoiceDetailShipping>
+                              <Contact role="shipFrom">
+                                 <Name xml:lang="de">Sales Org 1010(Selling Company)</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                              <Contact role="shipTo">
+                                 <Name xml:lang="de">Plant 1010 - Address Name 1</Name>
+                                 <PostalAddress>
+                                    <Street>Dietmar-Hopp-Allee 16</Street>
+                                    <City>Walldorf</City>
+                                    <PostalCode>69190</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                              </Contact>
+                           </InvoiceDetailShipping>
+                           <Extrinsic name="BuyerVATID">DE192455022</Extrinsic>
+                           <Extrinsic name="SupplierVATID">DE123456789</Extrinsic>
+                        </InvoiceDetailRequestHeader>
+                        <InvoiceDetailOrder>
+                           <InvoiceDetailOrderInfo>
+                              <OrderReference orderID="4500006181">
+                                 <DocumentReference payloadID=""/>
+                              </OrderReference>
+                           </InvoiceDetailOrderInfo>
+                           <InvoiceDetailItem invoiceLineNumber="10" quantity="3">
+                              <UnitOfMeasure>PCE</UnitOfMeasure>
+                              <UnitPrice>
+                                 <Money currency="EUR">91</Money>
+                              </UnitPrice>
+                              <InvoiceDetailItemReference lineNumber="000010">
+                                 <ItemID>
+                                    <SupplierPartID>TG12</SupplierPartID>
+                                    <BuyerPartID>SP001</BuyerPartID>
+                                 </ItemID>
+                                 <Classification domain="NotAvailable"/>
+                              </InvoiceDetailItemReference>
+                              <SubtotalAmount>
+                                 <Money currency="EUR">273.0</Money>
+                              </SubtotalAmount>
+                              <Tax>
+                                 <Money currency="EUR">43.68</Money>
+                                 <Description xml:lang="de"/>
+                                 <TaxDetail category="A1" percentageRate="16.0">
+                                    <TaxableAmount>
+                                       <Money currency="EUR">273.0</Money>
+                                    </TaxableAmount>
+                                    <TaxAmount>
+                                       <Money currency="EUR">43.68</Money>
+                                    </TaxAmount>
+                                 </TaxDetail>
+                              </Tax>
+                              <GrossAmount>
+                                 <Money currency="EUR">316.68</Money>
+                              </GrossAmount>
+                              <NetAmount>
+                                 <Money currency="EUR">273.0</Money>
+                              </NetAmount>
+                           </InvoiceDetailItem>
+                        </InvoiceDetailOrder>
+                        <InvoiceDetailSummary>
+                           <SubtotalAmount>
+                              <Money currency="EUR">273.0</Money>
+                           </SubtotalAmount>
+                           <Tax>
+                              <Money currency="EUR">43.68</Money>
+                              <Description xml:lang="de"/>
+                              <TaxDetail category="A1" percentageRate="16.0">
+                                 <TaxAmount>
+                                    <Money currency="EUR">43.68</Money>
+                                 </TaxAmount>
+                                 <Description xml:lang="de"/>
+                              </TaxDetail>
+                           </Tax>
+                           <SpecialHandlingAmount>
+                              <Money currency="EUR">10.0</Money>
+                           </SpecialHandlingAmount>
+                           <ShippingAmount>
+                              <Money currency="EUR">20.0</Money>
+                           </ShippingAmount>
+                           <GrossAmount>
+                              <Money currency="EUR">316.68</Money>
+                           </GrossAmount>
+                           <InvoiceDetailDiscount>
+                              <Money currency="EUR">57.0</Money>
+                           </InvoiceDetailDiscount>
+                           <NetAmount>
+                              <Money currency="EUR">273.0</Money>
+                           </NetAmount>
+                           <DueAmount>
+                              <Money currency="EUR">316.68</Money>
+                           </DueAmount>
+                        </InvoiceDetailSummary>
+                     </InvoiceDetailRequest>
+                  </Request>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaSupplier/MAPPING_ANY_S4HANA_0000_InvoiceDetailRequest_cXML_0000_InvoiceDetailRequest.xspec">
+      <label>InvoiceDetailRequest ANID</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaSupplier/InvoiceRequest/InvoiceRequest4.xml"/>
+      </input-wrap>

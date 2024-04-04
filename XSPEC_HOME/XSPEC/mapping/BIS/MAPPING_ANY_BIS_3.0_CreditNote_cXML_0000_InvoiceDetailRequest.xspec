@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/BIS/MAPPING_ANY_BIS_3.0_CreditNote_cXML_0000_InvoiceDetailRequest.xsl">
+    <x:scenario label="Credit Note - 1">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/BIS/Invoice/CreditNote_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/BIS/Invoice/CreditNote_AM1.dat"
+            select="element()" label="Credit Note - 1"/>
+    </x:scenario>
+    
+    <x:scenario label="Credit Note - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/BIS/Invoice/CreditNote_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/BIS/Invoice/CreditNote_AM2.dat"
+            select="element()" label="Credit Note - 2"/>
+    </x:scenario>
+    
+
+</x:description>

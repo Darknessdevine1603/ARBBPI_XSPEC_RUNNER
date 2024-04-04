@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_ArticleComponents_cXML_0000_ArticleComponents.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4/MAPPING_ANY_AddOn_0000_ArticleComponents_cXML_0000_ArticleComponents.xsl"
+        date="2023-04-27T15:39:38.005053+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_ArticleComponents_cXML_0000_ArticleComponents.xspec">
+      <label>Scenario for ArticleComponents</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4/ArticleComponents/ArticleComponents_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ArticleMaster xmlns="art" RequestType="BOM">
+               <MessageHeader>
+                  <MessageID>0000000000584096</MessageID>
+                  <CreationDateTime>2018-06-04T13:46:32</CreationDateTime>
+                  <SenderBusinessSystemID>QODCLNT002</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>ARIBACIG</RecipientBusinessSystemID>
+                  <ExternalID/>
+               </MessageHeader>
+               <Article>
+                  <BasicData>
+                     <ID>000000000000004581</ID>
+                  </BasicData>
+                  <Component>
+                     <ID>000000000004568001</ID>
+                     <Quantity unitOfMeasure="EA">1.0</Quantity>
+                  </Component>
+                  <Component>
+                     <ID>000000000004568002</ID>
+                     <Quantity unitOfMeasure="EA">2.0</Quantity>
+                  </Component>
+               </Article>
+            </ArticleMaster>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ArticleComponents</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ArticleMaster xmlns="art" RequestType="BOM">
+                  <MessageHeader>
+                     <MessageID>0000000000584096</MessageID>
+                     <CreationDateTime>2018-06-04T13:46:32</CreationDateTime>
+                     <SenderBusinessSystemID>QODCLNT002</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>ARIBACIG</RecipientBusinessSystemID>
+                     <ExternalID/>
+                  </MessageHeader>
+                  <Article>
+                     <BasicData>
+                        <ID>000000000000004581</ID>
+                     </BasicData>
+                     <Component>
+                        <ID>000000000004568001</ID>
+                        <Quantity unitOfMeasure="EA">1.0</Quantity>
+                     </Component>
+                     <Component>
+                        <ID>000000000004568002</ID>
+                        <Quantity unitOfMeasure="EA">2.0</Quantity>
+                     </Component>
+                  </Article>
+               </ArticleMaster>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_AddOn_0000_ArticleComponents_cXML_0000_ArticleComponents.xspec">
+      <label>Scenario for ArticleComponents_ExtraFields</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4/ArticleComponents/ArticleComponents_ExtraFields_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ArticleMaster xmlns="art" RequestType="BOM">
+               <MessageHeader>
+                  <MessageID>0000000000873208</MessageID>
+                  <CreationDateTime>2018-04-06T11:35:27</CreationDateTime>
+                  <SenderBusinessSystemID>%%SNDPRN%%</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>ARIBACIG</RecipientBusinessSystemID>
+                  <ExternalID/>
+               </MessageHeader>
+               <Article>
+                  <BasicData>
+                     <ID>000000000006487190</ID>
+                  </BasicData>
+                  <Component>
+                     <ID>000000000006487185</ID>
+                     <Quantity unitOfMeasure="EA">2.000</Quantity>
+                  </Component>
+                  <Component>
+                     <ID/>
+                     <Quantity unitOfMeasure="EA">3.000</Quantity>
+                  </Component>
+               </Article>
+            </ArticleMaster>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>ArticleComponents_ExtraFields</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ArticleMaster xmlns="art" RequestType="BOM">
+                  <MessageHeader>
+                     <MessageID>0000000000873208</MessageID>
+                     <CreationDateTime>2018-04-06T11:35:27</CreationDateTime>
+                     <SenderBusinessSystemID>%%SNDPRN%%</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>ARIBACIG</RecipientBusinessSystemID>
+                     <ExternalID/>
+                  </MessageHeader>
+                  <Article>
+                     <BasicData>
+                        <ID>000000000006487190</ID>
+                     </BasicData>
+                     <Component>
+                        <ID>000000000006487185</ID>
+                        <Quantity unitOfMeasure="EA">2.000</Quantity>
+                     </Component>
+                     <Component>
+                        <ID>...</ID>
+                        <Quantity unitOfMeasure="EA">3.000</Quantity>
+                     </Component>
+                  </Article>
+               </ArticleMaster>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

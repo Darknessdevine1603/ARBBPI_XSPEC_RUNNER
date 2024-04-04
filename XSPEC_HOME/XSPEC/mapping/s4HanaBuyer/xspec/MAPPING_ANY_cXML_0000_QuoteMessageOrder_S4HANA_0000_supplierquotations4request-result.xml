@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_QuoteMessageOrder_S4HANA_0000_supplierquotations4request.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_QuoteMessageOrder_S4HANA_0000_supplierquotations4request.xsl"
+        date="2023-04-27T15:44:47.150965+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_QuoteMessageOrder_S4HANA_0000_supplierquotations4request.xspec">
+      <label>QuoteMessageOrder- Basic1</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/QuoteMessageOrder/QuoteMessageOrder.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n1:SupplierQuotationS4Request xmlns:n1="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <CreationDateTime>2021-02-03T22:31:03+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02005079151-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+               </MessageHeader>
+               <SupplierQuotationS4>
+                  <SupplierQuotationExternalId>0000001679</SupplierQuotationExternalId>
+                  <RequestForQuotationId>7000002480</RequestForQuotationId>
+                  <SupplierQuotationExternalStatus>accept</SupplierQuotationExternalStatus>
+                  <SupplierQuotationSubmissionDate>2021-02-03T22:31:03+05:30</SupplierQuotationSubmissionDate>
+                  <BindingPeriodEndDate>2021-02-03T22:31:03+05:30</BindingPeriodEndDate>
+                  <FollowOnDocumentCategory>F</FollowOnDocumentCategory>
+                  <FollowOnDocumentType/>
+                  <Supplier>10300087</Supplier>
+                  <Language>DE</Language>
+                  <SupplierQuotationItem>
+                     <SupplierQuotationExternalItemID>10</SupplierQuotationExternalItemID>
+                     <RequestForQuotationItemID>10</RequestForQuotationItemID>
+                     <OfferedQuantity unitCode="PCE">1150</OfferedQuantity>
+                     <PricingElements>
+                        <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                        <ConditionRateValue>1000.0000</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionTypeName>SHIPPING</ConditionTypeName>
+                        <ConditionRateValue>5.0000</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <TextCollection>
+                        <ContentText languageCode="DE">test111</ContentText>
+                        <TypeCode>O01</TypeCode>
+                     </TextCollection>
+                  </SupplierQuotationItem>
+                  <SupplierQuotationItem>
+                     <SupplierQuotationExternalItemID>20</SupplierQuotationExternalItemID>
+                     <RequestForQuotationItemID>20</RequestForQuotationItemID>
+                     <OfferedQuantity unitCode="EA">450</OfferedQuantity>
+                     <PricingElements>
+                        <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                        <ConditionRateValue>5.0000</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionTypeName>SHIPPING</ConditionTypeName>
+                        <ConditionRateValue>5.0000</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <TextCollection>
+                        <ContentText languageCode="DE">test222</ContentText>
+                        <TypeCode>O01</TypeCode>
+                     </TextCollection>
+                  </SupplierQuotationItem>
+                  <SupplierQuotationItem>
+                     <SupplierQuotationExternalItemID>30</SupplierQuotationExternalItemID>
+                     <RequestForQuotationItemID>30</RequestForQuotationItemID>
+                     <OfferedQuantity unitCode="EA">110</OfferedQuantity>
+                     <PricingElements>
+                        <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                        <ConditionRateValue>500.0000</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionTypeName>SHIPPING</ConditionTypeName>
+                        <ConditionRateValue>5.0000</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <TextCollection>
+                        <ContentText languageCode="DE">test333</ContentText>
+                        <TypeCode>O01</TypeCode>
+                     </TextCollection>
+                  </SupplierQuotationItem>
+               </SupplierQuotationS4>
+            </n1:SupplierQuotationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>QuoteMessageOrder- Basic1</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n1:SupplierQuotationS4Request xmlns:n1="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02005079151-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>...</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <SupplierQuotationS4>
+                     <SupplierQuotationExternalId>0000001679</SupplierQuotationExternalId>
+                     <RequestForQuotationId>7000002480</RequestForQuotationId>
+                     <SupplierQuotationExternalStatus>accept</SupplierQuotationExternalStatus>
+                     <SupplierQuotationSubmissionDate>2021-02-03T22:31:03+05:30</SupplierQuotationSubmissionDate>
+                     <BindingPeriodEndDate>2021-02-03T22:31:03+05:30</BindingPeriodEndDate>
+                     <FollowOnDocumentCategory>F</FollowOnDocumentCategory>
+                     <FollowOnDocumentType/>
+                     <Supplier>10300087</Supplier>
+                     <Language>DE</Language>
+                     <SupplierQuotationItem>
+                        <SupplierQuotationExternalItemID>10</SupplierQuotationExternalItemID>
+                        <RequestForQuotationItemID>10</RequestForQuotationItemID>
+                        <OfferedQuantity unitCode="PCE">1150</OfferedQuantity>
+                        <PricingElements>
+                           <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                           <ConditionRateValue>1000.0000</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionTypeName>SHIPPING</ConditionTypeName>
+                           <ConditionRateValue>5.0000</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <TextCollection>
+                           <ContentText languageCode="DE">test111</ContentText>
+                           <TypeCode>O01</TypeCode>
+                        </TextCollection>
+                     </SupplierQuotationItem>
+                     <SupplierQuotationItem>
+                        <SupplierQuotationExternalItemID>20</SupplierQuotationExternalItemID>
+                        <RequestForQuotationItemID>20</RequestForQuotationItemID>
+                        <OfferedQuantity unitCode="EA">450</OfferedQuantity>
+                        <PricingElements>
+                           <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                           <ConditionRateValue>5.0000</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionTypeName>SHIPPING</ConditionTypeName>
+                           <ConditionRateValue>5.0000</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <TextCollection>
+                           <ContentText languageCode="DE">test222</ContentText>
+                           <TypeCode>O01</TypeCode>
+                        </TextCollection>
+                     </SupplierQuotationItem>
+                     <SupplierQuotationItem>
+                        <SupplierQuotationExternalItemID>30</SupplierQuotationExternalItemID>
+                        <RequestForQuotationItemID>30</RequestForQuotationItemID>
+                        <OfferedQuantity unitCode="EA">110</OfferedQuantity>
+                        <PricingElements>
+                           <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                           <ConditionRateValue>500.0000</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionTypeName>SHIPPING</ConditionTypeName>
+                           <ConditionRateValue>5.0000</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <TextCollection>
+                           <ContentText languageCode="DE">test333</ContentText>
+                           <TypeCode>O01</TypeCode>
+                        </TextCollection>
+                     </SupplierQuotationItem>
+                  </SupplierQuotationS4>
+               </n1:SupplierQuotationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

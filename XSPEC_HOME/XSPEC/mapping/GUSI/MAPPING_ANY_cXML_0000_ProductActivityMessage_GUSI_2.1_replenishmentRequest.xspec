@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/GUSI/MAPPING_ANY_cXML_0000_ProductActivityMessage_GUSI_2.1_replenishmentRequest.xsl">
+    <x:scenario label="Consignment Product Activity">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'0061835142'"/>
+        <x:param name="anAlternativeReceiver" select="'GUSISupplier'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCorrelationID" select="'892dc22b-4bfc-9394-b4a0-c18fc2ace8ad'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/GUSI/ProductActivity/ConsignmentProductActivity_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/GUSI/ProductActivity/ConsignmentProductActivity_AM_1.xml"
+            select="element()" label="Consignment Product Activity"/>
+    </x:scenario>
+    <x:scenario label="Replenishment Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'0061835142'"/>
+        <x:param name="anAlternativeReceiver" select="'GUSISupplier'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCorrelationID" select="'892dc22b-4bfc-9394-b4a0-c18fc2ace8ad'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/GUSI/ProductActivity/ReplenishmentRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/GUSI/ProductActivity/ReplenishmentRequest_AM_1.xml"
+            select="element()" label="Replenishment Request"/>
+    </x:scenario>    
+    <x:scenario label="Consignment Product Activity with EANID">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'0061835142'"/>
+        <x:param name="anAlternativeReceiver" select="'GUSISupplier'"/>
+        <x:param name="anDate"/>
+        <x:param name="anTime"/>
+        <x:param name="anICNValue"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCorrelationID" select="'892dc22b-4bfc-9394-b4a0-c18fc2ace8ad'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/GUSI/ProductActivity/GUSI_ProductActivity_BM1.dat"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/GUSI/ProductActivity/GUSI_ProductActivity_AM1.xml"
+            select="element()" label="Consignment Product Activity with EANID"/>
+    </x:scenario>    
+</x:description>

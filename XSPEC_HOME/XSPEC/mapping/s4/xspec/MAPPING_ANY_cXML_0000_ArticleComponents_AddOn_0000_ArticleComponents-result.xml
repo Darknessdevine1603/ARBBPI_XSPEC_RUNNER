@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_ArticleComponents_AddOn_0000_ArticleComponents.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4/MAPPING_ANY_cXML_0000_ArticleComponents_AddOn_0000_ArticleComponents.xsl"
+        date="2023-04-27T15:41:31.218671+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4/MAPPING_ANY_cXML_0000_ArticleComponents_AddOn_0000_ArticleComponents.xspec">
+      <label>Scenario for ArticleComponents</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4/ArticleComponents/ArticleComponents_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ARBCIGR_BOMMAT>
+               <IDOC BEGIN="1">
+                  <EDI_DC40 SEGMENT="1">
+                     <IDOCTYP>ARBCIGR_BOMMAT</IDOCTYP>
+                     <MESTYP>BOMMAT</MESTYP>
+                     <SNDPOR>RANJAN-P</SNDPOR>
+                     <SNDPRT>LS</SNDPRT>
+                     <SNDPRN>ARIBACIG</SNDPRN>
+                     <RCVPRT>LS</RCVPRT>
+                     <RCVPRN>QODCLNT002</RCVPRN>
+                     <RCVPOR>RANJAN-P</RCVPOR>
+                  </EDI_DC40>
+                  <E1STZUM SEGMENT="1">
+                     <MSGFN>005</MSGFN>
+                     <STLTY>M</STLTY>
+                     <E1MASTM SEGMENT="1">
+                        <MSGFN>005</MSGFN>
+                        <MATNR>000000000000001862</MATNR>
+                        <MATNR_EXTERNAL>1:ENOD:6005</MATNR_EXTERNAL>
+                        <STLAN>1</STLAN>
+                     </E1MASTM>
+                     <E1STKOM SEGMENT="1">
+                        <MSGFN>005</MSGFN>
+                        <DATUV>20230427</DATUV>
+                     </E1STKOM>
+                     <E1STPOM SEGMENT="1">
+                        <MSGFN>005</MSGFN>
+                        <IDNRK>000000000001853001</IDNRK>
+                        <POSTP>L</POSTP>
+                        <MENGE_C>1.0</MENGE_C>
+                        <MEINS/>
+                     </E1STPOM>
+                     <E1STPOM SEGMENT="1">
+                        <MSGFN>005</MSGFN>
+                        <IDNRK>000000000001853002</IDNRK>
+                        <POSTP>L</POSTP>
+                        <MENGE_C>1.0</MENGE_C>
+                        <MEINS>MLT</MEINS>
+                     </E1STPOM>
+                     <E1STPOM SEGMENT="1">
+                        <MSGFN>005</MSGFN>
+                        <IDNRK>000000000001853003</IDNRK>
+                        <POSTP>L</POSTP>
+                        <MENGE_C>1.0</MENGE_C>
+                        <MEINS>MLT</MEINS>
+                     </E1STPOM>
+                  </E1STZUM>
+               </IDOC>
+            </ARBCIGR_BOMMAT>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ArticleComponents</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ARBCIGR_BOMMAT>
+                  <IDOC BEGIN="1">
+                     <EDI_DC40 SEGMENT="1">
+                        <IDOCTYP>ARBCIGR_BOMMAT</IDOCTYP>
+                        <MESTYP>BOMMAT</MESTYP>
+                        <SNDPOR>RANJAN-P</SNDPOR>
+                        <SNDPRT>LS</SNDPRT>
+                        <SNDPRN>ARIBACIG</SNDPRN>
+                        <RCVPRT>LS</RCVPRT>
+                        <RCVPRN>QODCLNT002</RCVPRN>
+                        <RCVPOR>RANJAN-P</RCVPOR>
+                     </EDI_DC40>
+                     <E1STZUM SEGMENT="1">
+                        <MSGFN>005</MSGFN>
+                        <STLTY>M</STLTY>
+                        <E1MASTM SEGMENT="1">
+                           <MSGFN>005</MSGFN>
+                           <MATNR>000000000000001862</MATNR>
+                           <MATNR_EXTERNAL>1:ENOD:6005</MATNR_EXTERNAL>
+                           <STLAN>1</STLAN>
+                        </E1MASTM>
+                        <E1STKOM SEGMENT="1">
+                           <MSGFN>005</MSGFN>
+                           <DATUV>...</DATUV>
+                        </E1STKOM>
+                        <E1STPOM SEGMENT="1">
+                           <MSGFN>005</MSGFN>
+                           <IDNRK>000000000001853001</IDNRK>
+                           <POSTP>L</POSTP>
+                           <MENGE_C>1.0</MENGE_C>
+                           <MEINS/>
+                        </E1STPOM>
+                        <E1STPOM SEGMENT="1">
+                           <MSGFN>005</MSGFN>
+                           <IDNRK>000000000001853002</IDNRK>
+                           <POSTP>L</POSTP>
+                           <MENGE_C>1.0</MENGE_C>
+                           <MEINS>MLT</MEINS>
+                        </E1STPOM>
+                        <E1STPOM SEGMENT="1">
+                           <MSGFN>005</MSGFN>
+                           <IDNRK>000000000001853003</IDNRK>
+                           <POSTP>L</POSTP>
+                           <MENGE_C>1.0</MENGE_C>
+                           <MEINS>MLT</MEINS>
+                        </E1STPOM>
+                     </E1STZUM>
+                  </IDOC>
+               </ARBCIGR_BOMMAT>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

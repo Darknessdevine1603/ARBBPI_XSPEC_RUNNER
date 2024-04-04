@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_ReservationDeleteAsyncExportRequest_AddOn_0000_ReservationAsyncExportRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_ReservationDeleteAsyncExportRequest_AddOn_0000_ReservationAsyncExportRequest.xsl"
+        date="2023-04-27T15:36:56.89654+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_ReservationDeleteAsyncExportRequest_AddOn_0000_ReservationAsyncExportRequest.xspec">
+      <label>ReservationDeleteAsyncExportRequest</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/ReservationDelete/ReservationDeleteAsyncExportRequest_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_STK_RESERVATION xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ITEM>
+                  <item>
+                     <ARIBA_ITEM>1</ARIBA_ITEM>
+                     <RESERV_NO>0000002201</RESERV_NO>
+                     <RES_ITEM>0001</RES_ITEM>
+                     <STATUS_IND>3</STATUS_IND>
+                     <DELETE_IND>X</DELETE_IND>
+                  </item>
+               </ITEM>
+               <ARIBA_DOC_NO>RES15</ARIBA_DOC_NO>
+               <PARTITION>PREALM</PARTITION>
+               <VARIANT>VREALM</VARIANT>
+            </n0:ARBCIG_STK_RESERVATION>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ReservationDeleteAsyncExportRequest</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_STK_RESERVATION xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ITEM>
+                     <item>
+                        <ARIBA_ITEM>1</ARIBA_ITEM>
+                        <RESERV_NO>0000002201</RESERV_NO>
+                        <RES_ITEM>0001</RES_ITEM>
+                        <STATUS_IND>3</STATUS_IND>
+                        <DELETE_IND>X</DELETE_IND>
+                     </item>
+                  </ITEM>
+                  <ARIBA_DOC_NO>RES15</ARIBA_DOC_NO>
+                  <PARTITION>PREALM</PARTITION>
+                  <VARIANT>VREALM</VARIANT>
+               </n0:ARBCIG_STK_RESERVATION>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

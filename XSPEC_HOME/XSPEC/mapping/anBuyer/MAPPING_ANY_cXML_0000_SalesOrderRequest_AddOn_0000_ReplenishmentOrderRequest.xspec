@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_SalesOrderRequest_AddOn_0000_ReplenishmentOrderRequest.xsl">
+    <x:scenario label="ReplenishmentOrder">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SalesOrder/ReplenishmentOrder.xml"/>
+        <x:expect label="ReplenishmentOrder" href="../../../XSPEC/payloads/target/inbound/anBuyer/SalesOrder/ReplenishmentOrder.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="ReplenishmentOrderMissedfields">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SalesOrder/ReplenishmentOrderMissedfields.xml"/>
+        <x:expect label="ReplenishmentOrderMissedfields" href="../../../XSPEC/payloads/target/inbound/anBuyer/SalesOrder/ReplenishmentOrderMissedfields.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="ReplenishmentOrderMissedfields with Comments">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SalesOrder/ReplenishmentOrderComments.xml"/>
+        <x:expect label="ReplenishmentOrderMissedfields with Comment" href="../../../XSPEC/payloads/target/inbound/anBuyer/SalesOrder/ReplenishmentOrderComments.xml" select="element()"/>
+    </x:scenario>
+</x:description>

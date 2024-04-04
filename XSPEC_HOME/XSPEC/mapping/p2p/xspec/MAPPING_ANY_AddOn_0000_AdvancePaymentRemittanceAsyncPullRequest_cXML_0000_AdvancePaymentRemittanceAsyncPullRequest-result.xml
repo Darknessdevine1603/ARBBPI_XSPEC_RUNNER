@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_AdvancePaymentRemittanceAsyncPullRequest_cXML_0000_AdvancePaymentRemittanceAsyncPullRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_AdvancePaymentRemittanceAsyncPullRequest_cXML_0000_AdvancePaymentRemittanceAsyncPullRequest.xsl"
+        date="2023-04-27T15:34:38.750467+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_AdvancePaymentRemittanceAsyncPullRequest_cXML_0000_AdvancePaymentRemittanceAsyncPullRequest.xspec">
+      <label>ADV Payment Remittance</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/AdvPaymentRemittance/Advance pAyment remittance_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:AdvancePaymentRemittanceAsyncPullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                          partition="PREALM_156"
+                                                          variant="VREALM_156">
+               <urn:AdvancePaymentRemittance_AdvancePaymentRemittancePull_Item>
+                  <urn:item>
+                     <urn:DocID>APMT32</urn:DocID>
+                     <urn:ERPRequestID>1700000625</urn:ERPRequestID>
+                     <urn:LineItems>
+                        <urn:item>
+                           <urn:Amount>
+                              <urn:Amount>150.0</urn:Amount>
+                              <urn:Currency>
+                                 <urn:UniqueName>USD</urn:UniqueName>
+                              </urn:Currency>
+                           </urn:Amount>
+                           <urn:DocID>APMT32</urn:DocID>
+                           <urn:ERPRequestID>1500000134</urn:ERPRequestID>
+                           <urn:ERPRequestLineNumber>002</urn:ERPRequestLineNumber>
+                           <urn:NumberInCollection>1</urn:NumberInCollection>
+                        </urn:item>
+                     </urn:LineItems>
+                     <urn:LookupID>000115000001342019</urn:LookupID>
+                  </urn:item>
+                  <urn:item>
+                     <urn:DocID>APMT33</urn:DocID>
+                     <urn:ERPRequestID>1700000626</urn:ERPRequestID>
+                     <urn:LineItems>
+                        <urn:item>
+                           <urn:Amount>
+                              <urn:Amount>250.0</urn:Amount>
+                              <urn:Currency>
+                                 <urn:UniqueName>USD</urn:UniqueName>
+                              </urn:Currency>
+                           </urn:Amount>
+                           <urn:DocID>APMT33</urn:DocID>
+                           <urn:ERPRequestID>1500000135</urn:ERPRequestID>
+                           <urn:ERPRequestLineNumber>002</urn:ERPRequestLineNumber>
+                           <urn:NumberInCollection>1</urn:NumberInCollection>
+                        </urn:item>
+                        <urn:item>
+                           <urn:Amount>
+                              <urn:Amount>175.0</urn:Amount>
+                              <urn:Currency>
+                                 <urn:UniqueName>USD</urn:UniqueName>
+                              </urn:Currency>
+                           </urn:Amount>
+                           <urn:DocID>APMT33</urn:DocID>
+                           <urn:ERPRequestID>1500000136</urn:ERPRequestID>
+                           <urn:ERPRequestLineNumber>002</urn:ERPRequestLineNumber>
+                           <urn:NumberInCollection>2</urn:NumberInCollection>
+                        </urn:item>
+                     </urn:LineItems>
+                     <urn:LookupID>000115000001352019</urn:LookupID>
+                  </urn:item>
+               </urn:AdvancePaymentRemittance_AdvancePaymentRemittancePull_Item>
+            </urn:AdvancePaymentRemittanceAsyncPullRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ADV Payment Remittance</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:AdvancePaymentRemittanceAsyncPullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                             partition="PREALM_156"
+                                                             variant="VREALM_156">
+                  <urn:AdvancePaymentRemittance_AdvancePaymentRemittancePull_Item>
+                     <urn:item>
+                        <urn:DocID>APMT32</urn:DocID>
+                        <urn:ERPRequestID>1700000625</urn:ERPRequestID>
+                        <urn:LineItems>
+                           <urn:item>
+                              <urn:Amount>
+                                 <urn:Amount>150.0</urn:Amount>
+                                 <urn:Currency>
+                                    <urn:UniqueName>USD</urn:UniqueName>
+                                 </urn:Currency>
+                              </urn:Amount>
+                              <urn:DocID>APMT32</urn:DocID>
+                              <urn:ERPRequestID>1500000134</urn:ERPRequestID>
+                              <urn:ERPRequestLineNumber>002</urn:ERPRequestLineNumber>
+                              <urn:NumberInCollection>1</urn:NumberInCollection>
+                           </urn:item>
+                        </urn:LineItems>
+                        <urn:LookupID>000115000001342019</urn:LookupID>
+                     </urn:item>
+                     <urn:item>
+                        <urn:DocID>APMT33</urn:DocID>
+                        <urn:ERPRequestID>1700000626</urn:ERPRequestID>
+                        <urn:LineItems>
+                           <urn:item>
+                              <urn:Amount>
+                                 <urn:Amount>250.0</urn:Amount>
+                                 <urn:Currency>
+                                    <urn:UniqueName>USD</urn:UniqueName>
+                                 </urn:Currency>
+                              </urn:Amount>
+                              <urn:DocID>APMT33</urn:DocID>
+                              <urn:ERPRequestID>1500000135</urn:ERPRequestID>
+                              <urn:ERPRequestLineNumber>002</urn:ERPRequestLineNumber>
+                              <urn:NumberInCollection>1</urn:NumberInCollection>
+                           </urn:item>
+                           <urn:item>
+                              <urn:Amount>
+                                 <urn:Amount>175.0</urn:Amount>
+                                 <urn:Currency>
+                                    <urn:UniqueName>USD</urn:UniqueName>
+                                 </urn:Currency>
+                              </urn:Amount>
+                              <urn:DocID>APMT33</urn:DocID>
+                              <urn:ERPRequestID>1500000136</urn:ERPRequestID>
+                              <urn:ERPRequestLineNumber>002</urn:ERPRequestLineNumber>
+                              <urn:NumberInCollection>2</urn:NumberInCollection>
+                           </urn:item>
+                        </urn:LineItems>
+                        <urn:LookupID>000115000001352019</urn:LookupID>
+                     </urn:item>
+                  </urn:AdvancePaymentRemittance_AdvancePaymentRemittancePull_Item>
+               </urn:AdvancePaymentRemittanceAsyncPullRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

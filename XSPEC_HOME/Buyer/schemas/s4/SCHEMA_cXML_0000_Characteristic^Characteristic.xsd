@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="ch" elementFormDefault="qualified"
+    targetNamespace="ch">
+    <xs:element name="Characteristic" type="ns:Characteristic"/>
+    <xs:complexType name="Characteristic">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+            <xs:element ref="ns:ID"/>
+            <xs:element minOccurs="0" ref="ns:Status"/>
+            <xs:element ref="ns:Format"/>
+            <xs:element ref="ns:ValueAssignment"/>
+            <xs:element ref="ns:Descriptions"/>
+            <xs:element ref="ns:Values"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Extensions"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="MessageHeader" type="ns:MessageHeader"/>
+
+    <xs:complexType name="MessageHeader">
+        <xs:sequence>
+            <xs:element ref="ns:MessageID"/>
+            <xs:element ref="ns:CreationDateTime"/>
+            <xs:element ref="ns:SenderBusinessSystemID"/>
+            <xs:element ref="ns:RecipientBusinessSystemID"/>
+            <xs:element minOccurs="0" ref="ns:ExternalID"/>
+            <xs:element minOccurs="0" ref="ns:RealmId"/>
+            <xs:element minOccurs="0" ref="ns:SolutionName"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="RealmId" type="xs:string"/>
+    <xs:element name="SolutionName" type="xs:string"/>
+    <xs:element name="MessageID" type="xs:string"/>
+    <!--xs:complexType>
+      <xs:attribute name="schemeAgencyID" use="required" type="xs:string"/>
+      <xs:attribute name="schemeAgencySchemeAgencyID" use="required" type="xs:string"/>
+      <xs:attribute name="schemeID" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element-->
+    <xs:element name="CreationDateTime" type="xs:dateTime"/>
+    <xs:element name="SenderBusinessSystemID" type="xs:string"/>
+    <xs:element name="RecipientBusinessSystemID" type="xs:string"/>
+    <xs:element name="ExternalID" type="xs:string"/>
+
+    <xs:element name="ID" type="xs:string"/>
+    <xs:element name="Status" type="xs:string"/>
+
+    <xs:element name="Format" type="ns:Format"/>
+    <xs:complexType name="Format">
+        <xs:sequence>
+            <xs:element ref="ns:DataType"/>
+            <xs:element minOccurs="0" ref="ns:Length"/>
+            <xs:element minOccurs="0" ref="ns:MinRange"/>
+            <xs:element minOccurs="0" ref="ns:MaxRange"/>
+            <xs:element minOccurs="0" ref="ns:NoOfDecimalPlaces"/>
+            <xs:element minOccurs="0" ref="ns:CaseSensitive"/>
+            <xs:element minOccurs="0" ref="ns:UnitOfMeasure"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="UnitOfMeasure" type="xs:string"/>
+
+    <xs:element name="DataType" type="xs:string"/>
+    <xs:element name="Length" type="xs:integer"/>
+    <xs:element name="NoOfDecimalPlaces" type="xs:integer"/>
+    <xs:element name="CaseSensitive" type="xs:boolean"/>
+    <xs:element name="MinRange" type="xs:string"/>
+    <xs:element name="MaxRange" type="xs:string"/>
+
+    <xs:element name="ValueAssignment" type="ns:ValueAssignment"/>
+    <xs:complexType name="ValueAssignment">
+        <xs:attribute name="SingleValue" type="xs:boolean"/>
+        <xs:attribute name="Restrictable" type="xs:boolean"/>
+        <xs:attribute name="NegativeAllowed" type="xs:boolean"/>
+        <xs:attribute name="IntervalAllowed" type="xs:boolean"/>
+        <xs:attribute name="EntryRequired" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:element name="Descriptions" type="ns:Descriptions"/>
+    <xs:complexType name="Descriptions">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="ns:Description"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Values" type="ns:Values"/>
+    <xs:complexType name="Values">
+        <xs:sequence>
+            <!--xs:element ref="Value" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element ref="Description" maxOccurs="unbounded"/>
+      <xs:element ref="Default" minOccurs="0"/-->
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:PossibleValue"/>
+        </xs:sequence>
+        <!--xs:attribute name="actionCode" use="required" type="xs:integer"/-->
+    </xs:complexType>
+
+    <xs:element name="Description" type="ns:Description"/>
+    <xs:complexType name="Description">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="languageCode"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="PossibleValue" type="ns:PossibleValue"/>
+    <xs:complexType name="PossibleValue">
+        <xs:sequence>
+            <xs:element minOccurs="0" ref="ns:Value"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns:Description"/>
+            <xs:element minOccurs="0" ref="ns:FloatingPointFrom"/>
+            <xs:element minOccurs="0" ref="ns:FloatingPointTo"/>
+        </xs:sequence>
+        <xs:attribute name="Default" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:element name="FloatingPointFrom" type="xs:string"/>
+    <xs:element name="FloatingPointTo" type="xs:string"/>
+    <xs:element name="Value" type="xs:string"/>
+
+    <xs:element name="Extensions" type="ns:Extensions"/>
+    <xs:complexType name="Extensions">
+        <xs:sequence>
+            <xs:element ref="ns:OBJNAME"/>
+            <xs:element ref="ns:OBJKEY"/>
+            <xs:element ref="ns:FIELDNAME"/>
+            <xs:element ref="ns:FIELDVALUE"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="OBJNAME" type="xs:string"/>
+    <xs:element name="OBJKEY" type="xs:string"/>
+    <xs:element name="FIELDNAME" type="xs:string"/>
+    <xs:element name="FIELDVALUE" type="xs:string"/>
+
+    <xs:element name="RetailMSResponse" type="ns:RetailMSResponse"/>
+    <xs:complexType name="RetailMSResponse">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+        </xs:sequence>
+        <xs:attribute name="jobId" type="xs:string"/>
+        <xs:attribute name="status" type="xs:string"/>
+        <xs:attribute name="errorCode" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

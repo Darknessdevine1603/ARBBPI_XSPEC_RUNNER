@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/GUSI/MAPPING_ANY_GUSI_2.1_replenishmentProposal_cXML_0000_ProductReplenishmentMessage.xsl">
+    <x:scenario label="Replenishment Proposal Product Replenishment Message">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004512490-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004512477-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_AM.dat"
+            select="element()" label="Replenishment Proposal Product Replenishment Message"/>
+    </x:scenario>
+    <x:scenario label="Replenishment Proposal Product Replenishment Message with contact details">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004512490-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004512477-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_BM_1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_AM_1.xml"
+            select="element()" label="Replenishment Proposal Product Replenishment Message with contact details"/>
+    </x:scenario>   
+    
+    <x:scenario label="Replenishment Proposal Product Replenishment Message 3">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004512490-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004512477-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_BM_3.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/GUSI/ProductReplenishment/ReplenishmentProposal_ProductReplenishmentMessage_AM_1.xml"
+            select="element()" label="Replenishment Proposal Product Replenishment Message 3"/>
+    </x:scenario> 
+</x:description>

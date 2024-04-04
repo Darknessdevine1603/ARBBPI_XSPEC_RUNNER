@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Test Coverage Report for /Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/GUSI/MAPPING_ANY_cXML_0000_ReceiptRequest_GUSI_2.1_receivingAdvice.xsl</title>
+      <style type="text/css">/****************************************************************************/
+/*  File:       test-report.css                                             */
+/*  Author:     Jeni Tennison                                               */
+/*  Tags:                                                                   */
+/*    Copyright (c) 2008, 2010 Jeni Tennison (see end of file.)             */
+/* ------------------------------------------------------------------------ */
+
+/* test */
+
+/* box model */
+
+body {
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	padding: 0.3em 0.5em 0.3em 0.5em;
+	position: relative;
+}
+
+h2 {
+	padding: 0.1em 0.5em 0.2em 0.5em;
+}
+
+h3 {
+	padding-left: 0.6em;
+}
+
+h4 {
+	padding-left: 0.8em;
+}
+
+p,
+table {
+	margin-left: 5%;
+}
+
+dd ul,
+dd ol {
+	margin-left: 0%;
+}
+
+li ul,
+li ol {
+	margin-left: 5%;
+}
+
+dl,
+ul,
+ol,
+blockquote {
+	margin-left: 10%;
+}
+
+dt {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	clear: both;
+}
+
+dd p {
+	margin-left: -5px;
+	margin-top: 5px;
+	clear: both;
+}
+
+p.link {
+	margin-top: 4px;
+	margin-bottom: 0px;
+	clear: both;
+}
+
+tr td,
+td p,
+li,
+li p {
+	margin-left: 0%;
+}
+
+td {
+	padding-right: 5%;
+}
+
+.link img,
+dt img {
+	vertical-align: middle;
+	position: relative;
+	top: -5px;
+}
+
+img {
+	position: relative;
+}
+
+#xml-link {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 10%;
+	margin-left: 0%;
+}
+
+#link-up {
+	position: absolute;
+	left: 93%;
+	right: 2em;
+	top: 0.3em;
+}
+
+#link-top {
+	position: absolute;
+	left: 89%;
+	right: 4em;
+	top: 0.3em;
+}
+
+.popup {
+	display: block;
+	visibility: hidden;
+	float: right;
+	position: absolute;
+	top: 5px;
+	left: -200px;
+	z-index: 1;
+	padding: 0.3em;
+	width: 220px;
+}
+
+.note {
+	position: relative;
+}
+
+.post {
+	margin-left: 5%;
+	padding-top: 1em;
+}
+
+.example,
+.sidebar {
+	margin-left: 5%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+pre {
+	padding-left: 5%;
+	margin-left: 5%;
+}
+
+dd pre,
+li pre {
+	padding-left: 5%;
+}
+
+/* fonts */
+body,
+table {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: sans-serif;
+}
+
+h1 {
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 120%;
+	font-weight: normal;
+}
+
+h4 {
+	font-size: 100%;
+	font-weight: bold;
+}
+
+dt {
+	font-weight: bold;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+	font-weight: bold;
+}
+
+a.offsite:link,
+a.offsite:visited,
+a.offsite:active,
+a.offsite:hover {
+	font-weight: normal;
+}
+
+/* suppress the normal italics */
+address {
+	font-style: normal;
+}
+
+div.example,
+.sidebar {
+	font-family: sans-serif;
+	font-size: 100%;
+}
+
+.note,
+.link {
+	font-family: sans-serif;
+	/*font-size: 83%;*/
+}
+
+.example,
+.string,
+.rtf,
+.code,
+pre,
+code {
+	font-family: monospace;
+	/*font-size: 83%;*/
+}
+
+.boolean {
+	font-style: italic;
+}
+
+#colophon,
+#xml-link {
+	font-size: 69%;
+}
+
+.question,
+.title {
+	font-weight: bold;
+}
+
+/* colours */
+body {
+	background-color: white;
+	color: black;
+	border: 0px none black;
+}
+
+/* this is to make Navigator fill the entire line */
+h1,
+h2 {
+	border: 1px solid white;
+	width: auto;
+}
+
+h1 {
+	background: #606;
+	color: #6f6;
+}
+
+h2 {
+	color: #606;
+	background: #cfc;
+}
+
+hr {
+	color: #606;
+	background: white;
+}
+
+img,
+a:link img,
+a:visited img,
+a:hover img,
+a:active img,
+#link-up img,
+#link-top img {
+	border: 0px none white;
+	background: transparent;
+}
+
+a:link {
+	color: #636;
+	background: transparent;
+	border: 0px none white;
+}
+
+a:visited {
+	color: #606;
+	background: transparent;
+	border: 0px none white;
+}
+
+a:active {
+	color: #6f6;
+	background: #606;
+	border: 0px none white;
+}
+
+a:hover {
+	color: #636;
+	background: #9f9;
+	border: 0px none white;
+}
+
+a.img:hover,
+a.img:active {
+	background: transparent;
+}
+
+#colophon,
+#xml-link,
+.note {
+	color: #666;
+}
+
+#colophon a:link,
+#colophon a:visited,
+#colophon a:hover,
+#xml-link a:link,
+#xml-link a:visited,
+#xml-link a:hover,
+.note a:link,
+.note a:visited,
+.note a:hover {
+	color: #969;
+	background: transparent;
+}
+
+#colophon a:hover,
+#xml-link a:hover,
+.note a:hover {
+	background: #cfc;
+	color: #969;
+}
+
+.popup {
+	background: white;
+	border: 1px solid #606;
+}
+
+.post {
+	border-top: 2px solid #606;
+}
+
+.example {
+	border-top: 2px solid #606;
+	border-bottom: 2px solid #606;
+}
+
+.sidebar {
+	border-top: 2px solid #090;
+	border-bottom: 2px solid #090;
+}
+
+.rng {
+	border-left: 2px solid #666;
+}
+
+.same {
+	background-color: rgb(206, 239, 174);
+}
+
+.inner-diff {
+	background-color: rgba(255, 204, 204, 0.4);
+}
+
+.diff {
+	background-color: #fcc;
+}
+
+.whitespace {
+	/*font-style: italic;*/
+	color: #999;
+	/*background: white;*/
+}
+
+.ellipsis {
+	color: #999;
+}
+
+.xmlns.trivial {
+	color: #c0c0c0;
+}
+
+.ignored {
+	font-style: italic;
+	color: #999;
+	background: white;
+}
+
+.hit {
+}
+
+.missed {
+	background-color: #a33;
+	color: white;
+}
+
+/* text */
+ol ol li {
+	list-style: lower-alpha;
+}
+
+td {
+	vertical-align: top;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+.question {
+	text-indent: -33px;
+}
+
+.byline {
+	text-align: right;
+}
+
+#link-top,
+#link-up {
+	text-align: right;
+}
+
+a {
+	text-decoration: none;
+}
+
+body > h2:first-of-type {
+	background: inherit;
+	font-size: 1.7em;
+	margin-bottom: 0;
+}
+
+table {
+	width: 95%;
+	/* border: collapse; */
+}
+
+th {
+	text-align: left;
+}
+
+th.totals {
+	text-align: center;
+	font-weight: normal;
+}
+
+div > table > tbody > tr > th:first-child {
+	font-weight: bold;
+	color: #474747;
+}
+
+.xspec tbody th {
+	font-weight: normal; /*font-size: 0.8em;*/
+	border-top: 1px #666 solid;
+}
+.xspec tbody td {
+	/*font-size: 0.8em;*/
+	color: #262626;
+}
+
+.xspec tbody th .elapsed {
+	float: right;
+	font-weight: initial;
+}
+
+.successful {
+	background-color: #cfc;
+}
+.pending {
+	background-color: #eee;
+	color: #666;
+}
+.failed {
+	background-color: #fcc;
+}
+
+.successful td:first-child:before,
+body > table:first-of-type tr.successful th:first-child:before {
+	margin-right: 5px;
+
+	/* optimized version of ../../graphics/success12.png */
+	content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAABcUlEQVR42m1SPUsDQRB9661BIoEQDBqJnRhE1BD8CP4AgwhWEbQIKIhi6Q/QwspCtBBs/CBG1Fb9AWK0iBosLCQgYmGQEFARRUguezfuLeZygsWbmZ037zEMyxZ2W0IgHBIoIjPoF6q2QQYIWVlPcxmS3mYt4vFpjmEpd4pNaJ9vRvS9ILa57Aw2ejUYBtVcTdsZPnc7Qk0juNQ3QC/o55JkhnAO19wDnjAmIkkcZBMwBVmci1uEoR5Od4K73o94eAuZpx3kX+9U35TgVjAqVWdmZUWOhldQrnwhnduEELD7dVYhdMJY9zom+/ZAgqOnNY7OQAynt0sol3TFSyiRWklUCKXyN8Jt40gM7SPo68VDIY1c/ly5KlBtJaU+vlmEpyGArmBMkiZOrpdV3yFQ4PJBkmBkCqTO5jE3fITixyOei/dy0L5aVSjY7Jo/w10sqnFmn9VU+e+ZhW7BvGAzq/4O2UiBMCBJRv9/DyHDFQFTPwI/IlPYPLYnAAAAAElFTkSuQmCC");
+}
+
+.failed td:first-child:before,
+body > table:first-of-type tr.failed th:first-child:before {
+	margin-right: 5px;
+
+	/* optimized version of ../../graphics/fail12.png */
+	content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAjVBMVEWDKBSQLBadMBidMBiSLBWSLRaLKhWCKBOZLheHKRT//////v3ivLPgt67dsafhraLfqJvcopXQl4vNkoTKjH3RbljKaVO8aVaxYlCsUDylUDusOh+wNxu0OBu4ORy7OhzAOx3EPB2rNRqnNBqjMhifMRidMBeaLxeXLhaULRaRLBaOKxWLKhWIKRSFKBRkN75PAAAACnRSTlP7+c3Hx8TIwicknixbQAAAAIZJREFUeNoNwsEKgkAUBdD77jzSXKhDuEpyURBE//8h0SratQuKRK3QsdccjqTjDgLEV9VpPSEyYHPjVtFb9LYQKNYPrVk7fOyAfdMUWRnX9VHFLO9GJB4ClR8wxyIQYmGveZmGu1BUJFjm5fHtShDM8xVZFZ4nXtQVjDxd4hbPytGRPLf8A/K/MGOep8atAAAAAElFTkSuQmCC");
+}
+
+.pending td:first-child:before,
+body > table:first-of-type tr.pending th:first-child:before {
+	margin-right: 5px;
+
+	/* optimized version of ../../graphics/pending12.png */
+	content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAt1BMVEVgYGBZWVldXV1gYGBjY2NmZmZnZ2dnZ2diYmJfX19dXV1hYWFZWVlYWFhiYmJeXl5YWFhoaGj6+vr39/fz8/Py8vLv7+/p6enk5OR9fX18fHx7e3t6enp5eXl4eHh3d3d2dnZ1dXV0dHRzc3NycnJxcXFwcHBvb29ubm5tbW1sbGxra2tqamppaWloaGhnZ2dmZmZlZWVkZGRjY2NiYmJhYWFfX19eXl5dXV1cXFxbW1taWlpZWVl0CTiLAAAAEnRSTlP++/75/P7Nx8fHyMTBwygmIycZZx20AAAAdElEQVR42jWKvQ4BURSEzzdzED+NQiFRaCWi4f1rhcor2EZl2RDdcq+YyUzyZYb5c0MUn3PIaPUKKk4aBgsqfHPRVpLl0nuFbbkKoe7te5ftw0jue4OJFIeOn4KZsNN26SB28Z9OHi+RJUTePL0263LMY5sfIzMU3HCY7dEAAAAASUVORK5CYII=");
+}
+
+.xspecResult {
+	width: 95%;
+	table-layout: fixed;
+}
+
+.xspecResult td,
+.xspecResult th {
+	width: 50%;
+}
+
+.xspecResult pre {
+	margin-left: 0;
+	padding: 0.5em;
+	overflow: auto;
+	border: 1px #999 dotted;
+}
+
+span.scenario-totals {
+	float: right;
+	text-align: right;
+}
+
+/* highlight the link target */
+*:target {
+	box-shadow: -0.5rem 0 0 0 #fc511d;
+}
+
+/* hint button */
+.xTestReport {
+	display: grid;
+	grid-template-areas:
+		"title title"
+		"table hint";
+	grid-template-columns: 1fr 1em;
+}
+.xTestReportTitle {
+	grid-area: title;
+}
+.xTestReportHint {
+	grid-area: hint;
+}
+.xspecResult {
+	grid-area: table;
+}
+
+/* ------------------------------------------------------------------------ */
+/*  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS COMMENT.               */
+/*                                                                          */
+/*  Copyright (c) 2008, 2010 Jeni Tennison                                  */
+/*                                                                          */
+/*  The contents of this file are subject to the MIT License (see the URI   */
+/*  http://www.opensource.org/licenses/mit-license.php for details).        */
+/*                                                                          */
+/*  Permission is hereby granted, free of charge, to any person obtaining   */
+/*  a copy of this software and associated documentation files (the         */
+/*  "Software"), to deal in the Software without restriction, including     */
+/*  without limitation the rights to use, copy, modify, merge, publish,     */
+/*  distribute, sublicense, and/or sell copies of the Software, and to      */
+/*  permit persons to whom the Software is furnished to do so, subject to   */
+/*  the following conditions:                                               */
+/*                                                                          */
+/*  The above copyright notice and this permission notice shall be          */
+/*  included in all copies or substantial portions of the Software.         */
+/*                                                                          */
+/*  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,         */
+/*  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF      */
+/*  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  */
+/*  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY    */
+/*  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,    */
+/*  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE       */
+/*  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                  */
+/* ------------------------------------------------------------------------ */
+</style>
+   </head>
+   <body>
+      <h1>Test Coverage Report</h1>
+      <p>Stylesheet:  <a href="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/GUSI/MAPPING_ANY_cXML_0000_ReceiptRequest_GUSI_2.1_receivingAdvice.xsl">/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/GUSI/MAPPING_ANY_cXML_0000_ReceiptRequest_GUSI_2.1_receivingAdvice.xsl</a></p>
+      <h2>module: /Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/GUSI/MAPPING_ANY_cXML_0000_ReceiptRequest_GUSI_2.1_receivingAdvice.xsl;
+         218 lines</h2>
+      <pre>001: <span class="ignored">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+002: <span class="ignored">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0"&gt;</span>
+003: <span class="ignored">	</span><span class="ignored">&lt;xsl:strip-space elements="*"/&gt;</span><span class="ignored">&lt;xsl:strip-space elements="*"/&gt;</span><span class="ignored">&lt;xsl:strip-space elements="*"/&gt;</span><span class="ignored">&lt;xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/&gt;</span>
+004: 
+005: <span class="ignored">	</span><span class="ignored">&lt;xsl:param name="anAlternativeSender"/&gt;</span>
+006: <span class="ignored">	</span><span class="ignored">&lt;xsl:param name="anAlternativeReceiver"/&gt;</span>
+007: <span class="ignored">	</span><span class="ignored">&lt;xsl:param name="anDate"/&gt;</span>
+008: <span class="ignored">	</span><span class="ignored">&lt;xsl:param name="anTime"/&gt;</span>
+009: <span class="ignored">	</span><span class="ignored">&lt;xsl:param name="anICNValue"/&gt;</span>
+010: <span class="ignored">	</span><span class="ignored">&lt;xsl:param name="anCorrelationID"/&gt;</span>
+011: <span class="ignored">	</span><span class="ignored">&lt;xsl:param name="anEnvName"/&gt;</span>
+012: 
+013: <span class="ignored">	</span><span class="hit">&lt;xsl:variable name="lookups" select="document('/Users/i320581/Documents/XSPEC_HOME/XSPEC/common/Supplier/LOOKUP_GUSI_2.1.xml')"/&gt;</span>
+014: <span class="ignored">	</span><span class="ignored">&lt;xsl:include href="FORMAT_cXML_0000_GUSI_2.1.xsl"/&gt;</span>
+015: 
+016: <span class="ignored">	</span><span class="ignored">&lt;!--xsl:variable name="lookups" select="document('cXML_GUSI_lookup.xml')"/&gt;</span>
+017: <span class="ignored">	&lt;xsl:include href="Format_cXML_to_GUSI.xsl"/--&gt;</span>
+018: 
+019: <span class="ignored">	</span><span class="hit">&lt;xsl:template match="//ReceiptRequest"&gt;</span>
+020: <span class="ignored">		</span><span class="hit">&lt;sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:eanucc="urn:ean.ucc:2" xmlns:deliver="urn:ean.ucc:deliver:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;</span>
+021: <span class="ignored">			</span><span class="hit">&lt;xsl:call-template name="createGUSIHeader"&gt;</span>
+022: <span class="ignored">				</span><span class="missed">&lt;xsl:with-param name="version" select="'2.1'"/&gt;</span>
+023: <span class="ignored">				</span><span class="missed">&lt;xsl:with-param name="type" select="'ReceivingAdvice'"/&gt;</span>
+024: <span class="ignored">				</span><span class="missed">&lt;xsl:with-param name="hdrversion" select="'2.2'"/&gt;</span>
+025: <span class="ignored">				</span><span class="missed">&lt;xsl:with-param name="time" select="substring(/cXML/@timestamp,1,19)"/&gt;</span>
+026: <span class="ignored">			</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+027: <span class="ignored">			</span><span class="hit">&lt;eanucc:message&gt;</span>
+028: <span class="ignored">				</span><span class="hit">&lt;entityIdentification&gt;</span>
+029: <span class="ignored">					</span><span class="hit">&lt;uniqueCreatorIdentification&gt;</span>
+030: <span class="ignored">						</span><span class="hit">&lt;xsl:value-of select="$anCorrelationID"/&gt;</span>
+031: <span class="ignored">					</span><span class="hit">&lt;/uniqueCreatorIdentification&gt;</span>
+032: <span class="ignored">					</span><span class="hit">&lt;contentOwner&gt;</span>
+033: <span class="ignored">						</span><span class="hit">&lt;xsl:call-template name="createContentOwner"&gt;</span>
+034: <span class="ignored">						</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+035: <span class="ignored">					</span><span class="hit">&lt;/contentOwner&gt;</span>
+036: <span class="ignored">				</span><span class="hit">&lt;/entityIdentification&gt;</span>
+037: <span class="ignored">				</span><span class="hit">&lt;eanucc:transaction&gt;</span>
+038: <span class="ignored">					</span><span class="hit">&lt;entityIdentification&gt;</span>
+039: <span class="ignored">						</span><span class="hit">&lt;uniqueCreatorIdentification&gt;</span>
+040: <span class="ignored">							</span><span class="hit">&lt;xsl:value-of select="$anCorrelationID"/&gt;</span>
+041: <span class="ignored">						</span><span class="hit">&lt;/uniqueCreatorIdentification&gt;</span>
+042: <span class="ignored">						</span><span class="hit">&lt;contentOwner&gt;</span>
+043: <span class="ignored">							</span><span class="hit">&lt;xsl:call-template name="createContentOwner"&gt;</span>
+044: <span class="ignored">							</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+045: <span class="ignored">						</span><span class="hit">&lt;/contentOwner&gt;</span>
+046: <span class="ignored">					</span><span class="hit">&lt;/entityIdentification&gt;</span>
+047: <span class="ignored">					</span><span class="hit">&lt;command&gt;</span>
+048: <span class="ignored">						</span><span class="hit">&lt;eanucc:documentCommand&gt;</span>
+049: <span class="ignored">							</span><span class="hit">&lt;documentCommandHeader type="ADD"&gt;</span>
+050: <span class="ignored">								</span><span class="hit">&lt;entityIdentification&gt;</span>
+051: <span class="ignored">									</span><span class="hit">&lt;uniqueCreatorIdentification&gt;</span>
+052: <span class="ignored">										</span><span class="hit">&lt;xsl:value-of select="$anCorrelationID"/&gt;</span>
+053: <span class="ignored">									</span><span class="hit">&lt;/uniqueCreatorIdentification&gt;</span>
+054: <span class="ignored">									</span><span class="hit">&lt;contentOwner&gt;</span>
+055: <span class="ignored">										</span><span class="hit">&lt;xsl:call-template name="createContentOwner"&gt;</span>
+056: <span class="ignored">										</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+057: <span class="ignored">									</span><span class="hit">&lt;/contentOwner&gt;</span>
+058: <span class="ignored">								</span><span class="hit">&lt;/entityIdentification&gt;</span>
+059: <span class="ignored">							</span><span class="hit">&lt;/documentCommandHeader&gt;</span>
+060: <span class="ignored">							</span><span class="hit">&lt;documentCommandOperand&gt;</span>
+061: <span class="ignored">								</span><span class="hit">&lt;xsl:element name="deliver:receivingAdvice"&gt;</span>
+062: <span class="ignored">									</span><span class="hit">&lt;xsl:attribute name="creationDateTime"&gt;</span>
+063: <span class="ignored">										</span><span class="hit">&lt;xsl:call-template name="formatDate"&gt;</span>
+064: <span class="ignored">											</span><span class="missed">&lt;xsl:with-param name="cxmlDate" select="normalize-space(ReceiptRequestHeader/@receiptDate)"/&gt;</span>
+065: <span class="ignored">										</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+066: <span class="ignored">									</span><span class="hit">&lt;/xsl:attribute&gt;</span>
+067: <span class="ignored">									</span><span class="hit">&lt;xsl:attribute name="documentStatus"&gt;</span>
+068: <span class="ignored">										</span><span class="hit">&lt;xsl:choose&gt;</span>
+069: <span class="ignored">											</span><span class="missed">&lt;xsl:when test="normalize-space(ReceiptRequestHeader/@operation)='new'"&gt;</span><span class="missed">ORIGINAL</span><span class="missed">&lt;/xsl:when&gt;</span>
+070: <span class="ignored">											</span><span class="missed">&lt;xsl:when test="normalize-space(ReceiptRequestHeader/@operation)='update'"&gt;</span><span class="missed">REPLACE</span><span class="missed">&lt;/xsl:when&gt;</span>
+071: <span class="ignored">											</span><span class="missed">&lt;xsl:otherwise&gt;</span><span class="missed">ORIGINAL</span><span class="missed">&lt;/xsl:otherwise&gt;</span>
+072: <span class="ignored">										</span><span class="hit">&lt;/xsl:choose&gt;</span>
+073: <span class="ignored">									</span><span class="hit">&lt;/xsl:attribute&gt;</span>
+074: <span class="ignored">									</span><span class="hit">&lt;reportingCode&gt;</span><span class="hit">CONFIRMATION</span><span class="hit">&lt;/reportingCode&gt;</span>
+075: 
+076: <span class="ignored">									</span><span class="hit">&lt;receivingAdviceIdentification&gt;</span>
+077: <span class="ignored">										</span><span class="hit">&lt;uniqueCreatorIdentification&gt;</span>
+078: <span class="ignored">											</span><span class="hit">&lt;xsl:value-of select="ReceiptRequestHeader/@receiptID"/&gt;</span>
+079: <span class="ignored">										</span><span class="hit">&lt;/uniqueCreatorIdentification&gt;</span>
+080: <span class="ignored">										</span><span class="hit">&lt;contentOwner&gt;</span>
+081: <span class="ignored">											</span><span class="hit">&lt;xsl:call-template name="createContentOwner"&gt;</span>
+082: <span class="ignored">											</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+083: <span class="ignored">										</span><span class="hit">&lt;/contentOwner&gt;</span>
+084: <span class="ignored">									</span><span class="hit">&lt;/receivingAdviceIdentification&gt;</span>
+085: <span class="ignored">									</span><span class="hit">&lt;xsl:if test="normalize-space(ReceiptRequestHeader/Extrinsic[@name='shipToID'])!=''"&gt;</span>
+086: <span class="ignored">										</span><span class="hit">&lt;shipTo&gt;</span>
+087: <span class="ignored">											</span><span class="hit">&lt;xsl:call-template name="createContentOwner"&gt;</span>
+088: <span class="ignored">												</span><span class="missed">&lt;xsl:with-param name="additionalPartyIdentificationValue" select="normalize-space(ReceiptRequestHeader/Extrinsic[@name='shipToID'])"/&gt;</span>
+089: <span class="ignored">											</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+090: <span class="ignored">										</span><span class="hit">&lt;/shipTo&gt;</span>
+091: <span class="ignored">									</span><span class="hit">&lt;/xsl:if&gt;</span>
+092: <span class="ignored">									</span><span class="hit">&lt;xsl:if test="normalize-space(ReceiptRequestHeader/Extrinsic[@name='vendorIDNo'])!=''"&gt;</span>
+093: 
+094: <span class="ignored">										</span><span class="hit">&lt;shipper&gt;</span>
+095: 
+096: <span class="ignored">											</span><span class="hit">&lt;xsl:call-template name="createContentOwner"&gt;</span>
+097: <span class="ignored">												</span><span class="missed">&lt;xsl:with-param name="additionalPartyIdentificationValue" select="normalize-space(ReceiptRequestHeader/Extrinsic[@name='vendorIDNo'])"/&gt;</span>
+098: <span class="ignored">											</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+099: <span class="ignored">										</span><span class="hit">&lt;/shipper&gt;</span>
+100: <span class="ignored">									</span><span class="hit">&lt;/xsl:if&gt;</span>
+101: <span class="ignored">									</span><span class="hit">&lt;xsl:if test="normalize-space(ReceiptRequestHeader/Extrinsic[@name='shipToID'])!=''"&gt;</span>
+102: <span class="ignored">										</span><span class="hit">&lt;receiver&gt;</span>
+103: <span class="ignored">											</span><span class="hit">&lt;xsl:call-template name="createContentOwner"&gt;</span>
+104: <span class="ignored">												</span><span class="missed">&lt;xsl:with-param name="additionalPartyIdentificationValue" select="normalize-space(ReceiptRequestHeader/Extrinsic[@name='shipToID'])"/&gt;</span>
+105: <span class="ignored">											</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+106: <span class="ignored">										</span><span class="hit">&lt;/receiver&gt;</span>
+107: <span class="ignored">									</span><span class="hit">&lt;/xsl:if&gt;</span>
+108: <span class="ignored">									</span><span class="hit">&lt;xsl:for-each select="ReceiptOrder/ReceiptItem"&gt;</span>
+109: <span class="ignored">										</span><span class="hit">&lt;receivingAdviceItemContainmentLineItem&gt;</span>
+110: <span class="ignored">											</span><span class="hit">&lt;xsl:attribute name="number"&gt;</span>
+111: <span class="ignored">												</span><span class="hit">&lt;xsl:value-of select="@receiptLineNumber"/&gt;</span>
+112: <span class="ignored">											</span><span class="hit">&lt;/xsl:attribute&gt;</span>
+113: <span class="ignored">											</span><span class="hit">&lt;xsl:if test="ReceiptItemReference/ItemID/BuyerPartID!=''"&gt;</span>
+114: <span class="ignored">												</span><span class="hit">&lt;containedItemIdentification&gt;</span>
+115: <span class="ignored">													</span><span class="hit">&lt;gtin&gt;</span><span class="hit">00000000000000</span><span class="hit">&lt;/gtin&gt;</span>
+116: <span class="ignored">													</span><span class="hit">&lt;additionalTradeItemIdentification&gt;</span>
+117: <span class="ignored">														</span><span class="hit">&lt;additionalTradeItemIdentificationValue&gt;</span>
+118: <span class="ignored">															</span><span class="hit">&lt;xsl:value-of select="ReceiptItemReference/ItemID/BuyerPartID"/&gt;</span>
+119: <span class="ignored">														</span><span class="hit">&lt;/additionalTradeItemIdentificationValue&gt;</span>
+120: <span class="ignored">														</span><span class="hit">&lt;additionalTradeItemIdentificationType&gt;</span><span class="hit">BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</span><span class="hit">&lt;/additionalTradeItemIdentificationType&gt;</span>
+121: <span class="ignored">													</span><span class="hit">&lt;/additionalTradeItemIdentification&gt;</span>
+122: <span class="ignored">												</span><span class="hit">&lt;/containedItemIdentification&gt;</span>
+123: <span class="ignored">											</span><span class="hit">&lt;/xsl:if&gt;</span>
+124: <span class="ignored">											</span><span class="hit">&lt;deliveryNote&gt;</span>
+125: <span class="ignored">												</span><span class="hit">&lt;xsl:attribute name="number"&gt;</span>
+126: <span class="ignored">													</span><span class="hit">&lt;xsl:value-of select="ReceiptItemReference/ShipNoticeLineItemReference/@shipNoticeLineNumber"/&gt;</span>
+127: <span class="ignored">												</span><span class="hit">&lt;/xsl:attribute&gt;</span>
+128: <span class="ignored">												</span><span class="hit">&lt;reference&gt;</span>
+129: <span class="ignored">													</span><span class="hit">&lt;referenceDateTime&gt;</span>
+130: 
+131: <span class="ignored">														</span><span class="hit">&lt;xsl:call-template name="formatDate"&gt;</span>
+132: <span class="ignored">															</span><span class="missed">&lt;xsl:with-param name="cxmlDate" select="ReceiptItemReference/ShipNoticeIDInfo/@shipNoticeDate"/&gt;</span>
+133: <span class="ignored">														</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+134: <span class="ignored">													</span><span class="hit">&lt;/referenceDateTime&gt;</span>
+135: <span class="ignored">													</span><span class="hit">&lt;referenceIdentification&gt;</span>
+136: <span class="ignored">														</span><span class="hit">&lt;xsl:value-of select="ReceiptItemReference/ShipNoticeIDInfo/@shipNoticeID"/&gt;</span>
+137: <span class="ignored">													</span><span class="hit">&lt;/referenceIdentification&gt;</span>
+138: <span class="ignored">												</span><span class="hit">&lt;/reference&gt;</span>
+139: <span class="ignored">											</span><span class="hit">&lt;/deliveryNote&gt;</span>
+140: <span class="ignored">											</span><span class="hit">&lt;purchaseOrder&gt;</span>
+141: <span class="ignored">												</span><span class="hit">&lt;documentLineReference&gt;</span>
+142: <span class="ignored">													</span><span class="hit">&lt;xsl:attribute name="number"&gt;</span>
+143: <span class="ignored">														</span><span class="hit">&lt;xsl:value-of select="ReceiptItemReference/@lineNumber"/&gt;</span>
+144: <span class="ignored">													</span><span class="hit">&lt;/xsl:attribute&gt;</span>
+145: <span class="ignored">													</span><span class="hit">&lt;documentReference&gt;</span>
+146: <span class="ignored">														</span><span class="hit">&lt;uniqueCreatorIdentification&gt;</span>
+147: <span class="ignored">															</span><span class="hit">&lt;xsl:value-of select="../ReceiptOrderInfo/OrderReference/@orderID"/&gt;</span>
+148: <span class="ignored">														</span><span class="hit">&lt;/uniqueCreatorIdentification&gt;</span>
+149: <span class="hit">&lt;contentOwner&gt;</span>
+150: <span class="ignored">														</span><span class="hit">&lt;xsl:call-template name="createContentOwner"&gt;</span>
+151: <span class="ignored">														</span><span class="hit">&lt;/xsl:call-template&gt;</span><span class="hit">&lt;/contentOwner&gt;</span>
+152: <span class="ignored">													</span><span class="hit">&lt;/documentReference&gt;</span>
+153: <span class="ignored">												</span><span class="hit">&lt;/documentLineReference&gt;</span>
+154: <span class="ignored">											</span><span class="hit">&lt;/purchaseOrder&gt;</span>
+155: <span class="ignored">											</span><span class="hit">&lt;xsl:if test="Batch/SupplierBatchID!='' or Batch/BuyerBatchID!=''"&gt;</span>
+156: <span class="ignored">												</span><span class="hit">&lt;extendedAttributes&gt;</span>
+157: <span class="ignored">													</span><span class="hit">&lt;xsl:if test="Batch/SupplierBatchID!=''"&gt;</span>
+158: <span class="ignored">														</span><span class="hit">&lt;batchNumber&gt;</span>
+159: <span class="ignored">															</span><span class="hit">&lt;xsl:value-of select="Batch/SupplierBatchID"/&gt;</span>
+160: <span class="ignored">														</span><span class="hit">&lt;/batchNumber&gt;</span>
+161: <span class="ignored">													</span><span class="hit">&lt;/xsl:if&gt;</span>
+162: <span class="ignored">													</span><span class="hit">&lt;xsl:if test="Batch/BuyerBatchID!=''"&gt;</span>
+163: <span class="ignored">														</span><span class="hit">&lt;lotNumber&gt;</span>
+164: <span class="ignored">															</span><span class="hit">&lt;xsl:value-of select="Batch/BuyerBatchID"/&gt;</span>
+165: <span class="ignored">														</span><span class="hit">&lt;/lotNumber&gt;</span>
+166: <span class="ignored">													</span><span class="hit">&lt;/xsl:if&gt;</span>
+167: <span class="ignored">												</span><span class="hit">&lt;/extendedAttributes&gt;</span>
+168: <span class="ignored">											</span><span class="hit">&lt;/xsl:if&gt;</span>
+169: <span class="ignored">											</span><span class="hit">&lt;quantityAccepted&gt;</span>
+170: <span class="ignored">												</span><span class="hit">&lt;value&gt;</span>
+171: <span class="ignored">													</span><span class="hit">&lt;xsl:value-of select=".[@type='received']/@quantity"/&gt;</span>
+172: <span class="ignored">												</span><span class="hit">&lt;/value&gt;</span>
+173: <span class="ignored">												</span><span class="hit">&lt;unitOfMeasure&gt;</span>
+174: <span class="ignored">													</span><span class="hit">&lt;measurementUnitCodeValue&gt;</span>
+175: <span class="ignored">														</span><span class="hit">&lt;xsl:value-of select="UnitRate/UnitOfMeasure"/&gt;</span>
+176: <span class="ignored">													</span><span class="hit">&lt;/measurementUnitCodeValue&gt;</span>
+177: <span class="ignored">												</span><span class="hit">&lt;/unitOfMeasure&gt;</span>
+178: <span class="ignored">											</span><span class="hit">&lt;/quantityAccepted&gt;</span>
+179: <span class="ignored">											</span><span class="hit">&lt;quantityReceived&gt;</span>
+180: <span class="ignored">												</span><span class="hit">&lt;value&gt;</span>
+181: <span class="ignored">													</span><span class="hit">&lt;xsl:value-of select=".[@type='received']/@quantity"/&gt;</span>
+182: <span class="ignored">												</span><span class="hit">&lt;/value&gt;</span>
+183: <span class="ignored">												</span><span class="hit">&lt;unitOfMeasure&gt;</span>
+184: <span class="ignored">													</span><span class="hit">&lt;measurementUnitCodeValue&gt;</span>
+185: <span class="ignored">														</span><span class="hit">&lt;xsl:value-of select="UnitRate/UnitOfMeasure"/&gt;</span>
+186: <span class="ignored">													</span><span class="hit">&lt;/measurementUnitCodeValue&gt;</span>
+187: <span class="ignored">												</span><span class="hit">&lt;/unitOfMeasure&gt;</span>
+188: <span class="ignored">											</span><span class="hit">&lt;/quantityReceived&gt;</span>
+189: <span class="ignored">										</span><span class="hit">&lt;/receivingAdviceItemContainmentLineItem&gt;</span>
+190: <span class="ignored">									</span><span class="hit">&lt;/xsl:for-each&gt;</span>
+191: <span class="ignored">									</span><span class="hit">&lt;receiptInformation&gt;</span>
+192: <span class="ignored">										</span><span class="hit">&lt;receivingDateTime&gt;</span>
+193: <span class="ignored">											</span><span class="hit">&lt;xsl:call-template name="formatDate"&gt;</span>
+194: <span class="ignored">												</span><span class="missed">&lt;xsl:with-param name="cxmlDate" select="ReceiptRequestHeader/@receiptDate"/&gt;</span>
+195: <span class="ignored">											</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+196: <span class="ignored">										</span><span class="hit">&lt;/receivingDateTime&gt;</span>
+197: <span class="ignored">									</span><span class="hit">&lt;/receiptInformation&gt;</span>
+198: <span class="ignored">									</span><span class="hit">&lt;billOfLadingNumber&gt;</span>
+199: <span class="ignored">										</span><span class="hit">&lt;referenceDateTime&gt;</span>
+200: <span class="ignored">											</span><span class="hit">&lt;xsl:call-template name="formatDate"&gt;</span>
+201: <span class="ignored">												</span><span class="missed">&lt;xsl:with-param name="cxmlDate" select="(ReceiptOrder/ReceiptItem/ReceiptItemReference/ShipNoticeIDInfo/@shipNoticeDate)[1]"/&gt;</span>
+202: <span class="ignored">											</span><span class="hit">&lt;/xsl:call-template&gt;</span>
+203: <span class="ignored">										</span><span class="hit">&lt;/referenceDateTime&gt;</span>
+204: <span class="ignored">										</span><span class="hit">&lt;referenceIdentification&gt;</span>
+205: <span class="ignored">											</span><span class="hit">&lt;xsl:value-of select="(ReceiptOrder/ReceiptItem/ReceiptItemReference/ShipNoticeIDInfo/@shipNoticeID)[1]"/&gt;</span>
+206: <span class="ignored">										</span><span class="hit">&lt;/referenceIdentification&gt;</span>
+207: <span class="ignored">									</span><span class="hit">&lt;/billOfLadingNumber&gt;</span>
+208: <span class="ignored">								</span><span class="hit">&lt;/xsl:element&gt;</span>
+209: <span class="ignored">							</span><span class="hit">&lt;/documentCommandOperand&gt;</span>
+210: <span class="ignored">						</span><span class="hit">&lt;/eanucc:documentCommand&gt;</span>
+211: <span class="ignored">					</span><span class="hit">&lt;/command&gt;</span>
+212: <span class="ignored">				</span><span class="hit">&lt;/eanucc:transaction&gt;</span>
+213: <span class="ignored">			</span><span class="hit">&lt;/eanucc:message&gt;</span>
+214: <span class="ignored">		</span><span class="hit">&lt;/sh:StandardBusinessDocument&gt;</span>
+215: <span class="ignored">	</span><span class="hit">&lt;/xsl:template&gt;</span>
+216: <span class="ignored">	</span><span class="hit">&lt;xsl:template match="cXML/Header"/&gt;</span>
+217: <span class="ignored">&lt;/xsl:stylesheet&gt;</span>
+218: </pre>
+      <h2>module: /Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/GUSI/FORMAT_cXML_0000_GUSI_2.1.xsl;
+         137 lines</h2>
+      <pre>001: <span class="ignored">&lt;?xml version="1.0"?&gt;</span>
+002: <span class="ignored">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:eanucc="urn:ean.ucc:2" xmlns:plan="urn:ean.ucc:plan:2"</span>
+003: <span class="ignored">                exclude-result-prefixes="#all" version="2.0"&gt;</span>
+004: <span class="ignored">	</span><span class="ignored">&lt;!-- Functions --&gt;</span>
+005: 
+006: <span class="ignored">	</span><span class="hit">&lt;xsl:template name="createGUSIHeader"&gt;</span>
+007: <span class="ignored">		</span><span class="hit">&lt;xsl:param name="version"/&gt;</span>
+008: <span class="ignored">		</span><span class="hit">&lt;xsl:param name="hdrversion"/&gt;</span>
+009: <span class="ignored">		</span><span class="hit">&lt;xsl:param name="type"/&gt;</span>
+010: <span class="ignored">		</span><span class="hit">&lt;xsl:param name="time"/&gt;</span>
+011: 
+012: <span class="ignored">		</span><span class="hit">&lt;sh:StandardBusinessDocumentHeader&gt;</span>
+013: <span class="ignored">			</span><span class="hit">&lt;sh:HeaderVersion&gt;</span>
+014: <span class="ignored">				</span><span class="hit">&lt;xsl:choose&gt;</span>
+015: <span class="ignored">					</span><span class="hit">&lt;xsl:when test="$hdrversion!=''"&gt;</span>
+016: <span class="ignored">						</span><span class="hit">&lt;xsl:value-of select="$hdrversion"/&gt;</span>
+017: <span class="ignored">					</span><span class="hit">&lt;/xsl:when&gt;</span>
+018: <span class="ignored">					</span><span class="missed">&lt;xsl:otherwise&gt;</span>
+019: <span class="ignored">						</span><span class="missed">&lt;xsl:text&gt;</span><span class="missed">1.0</span><span class="missed">&lt;/xsl:text&gt;</span>
+020: <span class="ignored">					</span><span class="missed">&lt;/xsl:otherwise&gt;</span>
+021: <span class="ignored">				</span><span class="hit">&lt;/xsl:choose&gt;</span>
+022: <span class="ignored">			</span><span class="hit">&lt;/sh:HeaderVersion&gt;</span>
+023: <span class="ignored">			</span><span class="hit">&lt;sh:Sender&gt;</span>
+024: <span class="ignored">				</span><span class="hit">&lt;sh:Identifier&gt;</span>
+025: <span class="ignored">					</span><span class="hit">&lt;xsl:attribute name="Authority"&gt;</span>
+026: <span class="ignored">						</span><span class="hit">&lt;xsl:text&gt;</span><span class="missed">EAN.UCC</span><span class="hit">&lt;/xsl:text&gt;</span>
+027: <span class="ignored">					</span><span class="hit">&lt;/xsl:attribute&gt;</span>
+028: <span class="ignored">					</span><span class="hit">&lt;xsl:value-of select="$anAlternativeSender"/&gt;</span>
+029: <span class="ignored">				</span><span class="hit">&lt;/sh:Identifier&gt;</span>
+030: <span class="ignored">			</span><span class="hit">&lt;/sh:Sender&gt;</span>
+031: <span class="ignored">			</span><span class="hit">&lt;sh:Receiver&gt;</span>
+032: <span class="ignored">				</span><span class="hit">&lt;sh:Identifier&gt;</span>
+033: <span class="ignored">					</span><span class="hit">&lt;xsl:attribute name="Authority"&gt;</span>
+034: <span class="ignored">						</span><span class="hit">&lt;xsl:text&gt;</span><span class="missed">EAN.UCC</span><span class="hit">&lt;/xsl:text&gt;</span>
+035: <span class="ignored">					</span><span class="hit">&lt;/xsl:attribute&gt;</span>
+036: <span class="ignored">					</span><span class="hit">&lt;xsl:value-of select="$anAlternativeReceiver"/&gt;</span>
+037: <span class="ignored">				</span><span class="hit">&lt;/sh:Identifier&gt;</span>
+038: <span class="ignored">			</span><span class="hit">&lt;/sh:Receiver&gt;</span>
+039: <span class="ignored">			</span><span class="hit">&lt;sh:DocumentIdentification&gt;</span>
+040: <span class="ignored">				</span><span class="hit">&lt;sh:Standard&gt;</span><span class="hit">EAN.UCC</span><span class="hit">&lt;/sh:Standard&gt;</span>
+041: <span class="ignored">				</span><span class="hit">&lt;sh:TypeVersion&gt;</span>
+042: <span class="ignored">					</span><span class="hit">&lt;xsl:value-of select="$version"/&gt;</span>
+043: <span class="ignored">				</span><span class="hit">&lt;/sh:TypeVersion&gt;</span>
+044: <span class="ignored">				</span><span class="hit">&lt;sh:InstanceIdentifier&gt;</span>
+045: <span class="ignored">					</span><span class="hit">&lt;xsl:value-of select="$anCorrelationID"/&gt;</span>
+046: <span class="ignored">				</span><span class="hit">&lt;/sh:InstanceIdentifier&gt;</span>
+047: <span class="ignored">				</span><span class="hit">&lt;sh:Type&gt;</span>
+048: <span class="ignored">					</span><span class="hit">&lt;xsl:value-of select="$type"/&gt;</span>
+049: <span class="ignored">				</span><span class="hit">&lt;/sh:Type&gt;</span>
+050: <span class="ignored">				</span><span class="hit">&lt;sh:MultipleType&gt;</span><span class="hit">false</span><span class="hit">&lt;/sh:MultipleType&gt;</span>
+051: <span class="ignored">				</span><span class="hit">&lt;sh:CreationDateAndTime&gt;</span>
+052: <span class="ignored">					</span><span class="hit">&lt;xsl:value-of select="$time"/&gt;</span>
+053: <span class="ignored">				</span><span class="hit">&lt;/sh:CreationDateAndTime&gt;</span>
+054: <span class="ignored">			</span><span class="hit">&lt;/sh:DocumentIdentification&gt;</span>
+055: <span class="ignored">		</span><span class="hit">&lt;/sh:StandardBusinessDocumentHeader&gt;</span>
+056: <span class="ignored">	</span><span class="hit">&lt;/xsl:template&gt;</span>
+057: 
+058: <span class="ignored">	</span><span class="hit">&lt;xsl:template name="createContentOwner"&gt;</span>
+059: <span class="ignored">		</span><span class="hit">&lt;xsl:param name="gln"/&gt;</span>
+060: <span class="ignored">		</span><span class="hit">&lt;xsl:param name="additionalPartyIdentificationValue"/&gt;</span>
+061: <span class="ignored">		</span><span class="hit">&lt;xsl:param name="additionalPartyIdentificationType"/&gt;</span>
+062: 
+063: <span class="ignored">		</span><span class="hit">&lt;gln&gt;</span>
+064: <span class="ignored">			</span><span class="hit">&lt;xsl:choose&gt;</span>
+065: <span class="ignored">				</span><span class="missed">&lt;xsl:when test="$gln!=''"&gt;</span>
+066: <span class="ignored">					</span><span class="missed">&lt;xsl:value-of select="$gln"/&gt;</span>
+067: <span class="ignored">				</span><span class="missed">&lt;/xsl:when&gt;</span>
+068: <span class="ignored">				</span><span class="missed">&lt;xsl:otherwise&gt;</span><span class="missed">0000000000000</span><span class="missed">&lt;/xsl:otherwise&gt;</span>
+069: <span class="ignored">			</span><span class="hit">&lt;/xsl:choose&gt;</span>
+070: <span class="ignored">		</span><span class="hit">&lt;/gln&gt;</span>
+071: <span class="ignored">		</span><span class="hit">&lt;xsl:choose&gt;</span>
+072: <span class="ignored">			</span><span class="hit">&lt;xsl:when test="$additionalPartyIdentificationValue!=''"&gt;</span>
+073: <span class="ignored">				</span><span class="hit">&lt;additionalPartyIdentification&gt;</span>
+074: <span class="ignored">					</span><span class="hit">&lt;additionalPartyIdentificationValue&gt;</span>
+075: <span class="ignored">						</span><span class="hit">&lt;xsl:value-of select="$additionalPartyIdentificationValue"/&gt;</span>
+076: <span class="ignored">					</span><span class="hit">&lt;/additionalPartyIdentificationValue&gt;</span>
+077: <span class="ignored">					</span><span class="hit">&lt;additionalPartyIdentificationType&gt;</span>
+078: <span class="ignored">						</span><span class="hit">&lt;xsl:choose&gt;</span>
+079: <span class="ignored">							</span><span class="missed">&lt;xsl:when test="$additionalPartyIdentificationType!=''"&gt;</span>
+080: <span class="ignored">								</span><span class="missed">&lt;xsl:value-of select="$additionalPartyIdentificationType"/&gt;</span>
+081: <span class="ignored">							</span><span class="missed">&lt;/xsl:when&gt;</span>
+082: <span class="ignored">							</span><span class="missed">&lt;xsl:otherwise&gt;</span><span class="missed">BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</span><span class="missed">&lt;/xsl:otherwise&gt;</span>
+083: <span class="ignored">						</span><span class="hit">&lt;/xsl:choose&gt;</span>
+084: <span class="ignored">					</span><span class="hit">&lt;/additionalPartyIdentificationType&gt;</span>
+085: <span class="ignored">				</span><span class="hit">&lt;/additionalPartyIdentification&gt;</span>
+086: <span class="ignored">			</span><span class="hit">&lt;/xsl:when&gt;</span>
+087: <span class="ignored">			</span><span class="hit">&lt;xsl:when test="$anAlternativeSender!=''"&gt;</span>
+088: <span class="ignored">				</span><span class="hit">&lt;additionalPartyIdentification&gt;</span>
+089: <span class="ignored">					</span><span class="hit">&lt;additionalPartyIdentificationValue&gt;</span>
+090: <span class="ignored">						</span><span class="hit">&lt;xsl:value-of select="normalize-space($anAlternativeSender)"/&gt;</span>
+091: <span class="ignored">					</span><span class="hit">&lt;/additionalPartyIdentificationValue&gt;</span>
+092: <span class="ignored">					</span><span class="hit">&lt;additionalPartyIdentificationType&gt;</span><span class="hit">BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</span><span class="hit">&lt;/additionalPartyIdentificationType&gt;</span>
+093: <span class="ignored">				</span><span class="hit">&lt;/additionalPartyIdentification&gt;</span>
+094: <span class="ignored">			</span><span class="hit">&lt;/xsl:when&gt;</span>
+095: <span class="ignored">		</span><span class="hit">&lt;/xsl:choose&gt;</span>
+096: <span class="ignored">	</span><span class="hit">&lt;/xsl:template&gt;</span>
+097: 
+098: <span class="ignored">	</span><span class="hit">&lt;xsl:template name="formatDate"&gt;</span>
+099: <span class="ignored">		</span><span class="hit">&lt;xsl:param name="cxmlDate"/&gt;</span>
+100: <span class="ignored">		</span><span class="hit">&lt;xsl:if test="$cxmlDate"&gt;</span>
+101: <span class="ignored">			</span><span class="hit">&lt;xsl:variable name="date"&gt;</span>
+102: <span class="ignored">				</span><span class="hit">&lt;xsl:choose&gt;</span>
+103: <span class="ignored">					</span><span class="hit">&lt;xsl:when test="contains($cxmlDate,'T')"&gt;</span>
+104: <span class="ignored">						</span><span class="hit">&lt;xsl:value-of select="substring-before($cxmlDate,'T')"/&gt;</span>
+105: <span class="ignored">					</span><span class="hit">&lt;/xsl:when&gt;</span>
+106: <span class="ignored">					</span><span class="missed">&lt;xsl:otherwise&gt;</span>
+107: <span class="ignored">						</span><span class="hit">&lt;xsl:value-of select="substring($cxmlDate,1,10)"/&gt;</span>
+108: <span class="ignored">					</span><span class="missed">&lt;/xsl:otherwise&gt;</span>
+109: <span class="ignored">				</span><span class="hit">&lt;/xsl:choose&gt;</span>
+110: <span class="ignored">			</span><span class="hit">&lt;/xsl:variable&gt;</span>
+111: <span class="ignored">			</span><span class="hit">&lt;xsl:variable name="tempTime"&gt;</span>
+112: <span class="ignored">				</span><span class="hit">&lt;xsl:value-of select="substring-after($cxmlDate,'T')"/&gt;</span>
+113: <span class="ignored">			</span><span class="hit">&lt;/xsl:variable&gt;</span>
+114: <span class="ignored">			</span><span class="hit">&lt;xsl:variable name="time"&gt;</span>
+115: <span class="ignored">				</span><span class="hit">&lt;xsl:if test="$tempTime!=''"&gt;</span>
+116: <span class="ignored">					</span><span class="hit">&lt;xsl:choose&gt;</span>
+117: <span class="ignored">						</span><span class="hit">&lt;xsl:when test="contains($tempTime,'-')"&gt;</span>
+118: <span class="ignored">							</span><span class="hit">&lt;xsl:value-of select="substring-before($tempTime,'-')"/&gt;</span>
+119: <span class="ignored">						</span><span class="hit">&lt;/xsl:when&gt;</span>
+120: <span class="ignored">						</span><span class="missed">&lt;xsl:when test="contains($tempTime,'+')"&gt;</span>
+121: <span class="ignored">							</span><span class="hit">&lt;xsl:value-of select="substring-before($tempTime,'+')"/&gt;</span>
+122: <span class="ignored">						</span><span class="missed">&lt;/xsl:when&gt;</span>
+123: <span class="ignored">					</span><span class="hit">&lt;/xsl:choose&gt;</span>
+124: <span class="ignored">				</span><span class="hit">&lt;/xsl:if&gt;</span>
+125: <span class="ignored">			</span><span class="hit">&lt;/xsl:variable&gt;</span>
+126: <span class="ignored">			</span><span class="hit">&lt;xsl:choose&gt;</span>
+127: <span class="ignored">				</span><span class="hit">&lt;xsl:when test="contains($cxmlDate,'T')"&gt;</span>
+128: <span class="ignored">					</span><span class="hit">&lt;xsl:value-of select="concat($date,'T',$time)"/&gt;</span>
+129: <span class="ignored">				</span><span class="hit">&lt;/xsl:when&gt;</span>
+130: <span class="ignored">				</span><span class="missed">&lt;xsl:otherwise&gt;</span>
+131: <span class="ignored">					</span><span class="missed">&lt;xsl:value-of select="$date"/&gt;</span>
+132: <span class="ignored">				</span><span class="missed">&lt;/xsl:otherwise&gt;</span>
+133: <span class="ignored">			</span><span class="hit">&lt;/xsl:choose&gt;</span>
+134: <span class="ignored">		</span><span class="hit">&lt;/xsl:if&gt;</span>
+135: <span class="ignored">	</span><span class="hit">&lt;/xsl:template&gt;</span>
+136: <span class="ignored">&lt;/xsl:stylesheet&gt;</span>
+137: </pre>
+   </body>
+</html>

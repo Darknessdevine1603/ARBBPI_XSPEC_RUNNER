@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_ServiceEntrySheet_AddOn_0000_ServiceSheet.xsl">
+    <x:scenario label="AN Service Entry Sheet Create">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ServiceEntrySheet'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SES/ANSESCreate.xml"/>
+        <x:expect label="Not yet implemented" href="../../../XSPEC/payloads/target/inbound/anBuyer/SES/ANSESCreate.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="AN Service Entry Sheet Cancel">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ServiceEntrySheet'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SES/ANSESCancel.xml"/>
+        <x:expect label="AN Service Entry Sheet Cancel" href="../../../XSPEC/payloads/target/inbound/anBuyer/SES/ANSESCancel.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="AN Service Entry Sheet Missedfields">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ServiceEntrySheet'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anAddOnCIVersion" select="'ARBCI10011'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SES/ANSESMissedfields.xml"/>
+        <x:expect label="AN Service Entry Sheet Missedfields" href="../../../XSPEC/payloads/target/inbound/anBuyer/SES/ANSESMissedfields.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="AN Service Entry Sheet Quantity Distribution">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'Q8JCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ServiceEntrySheet'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anAddOnCIVersion" select="'ARBCI10011'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SES/ANSESQtyDirtrib.xml"/>
+        <x:expect label="AN Service Entry Sheet Quantity Distribution" href="../../../XSPEC/payloads/target/inbound/anBuyer/SES/ANSESQtyDirtrib.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="AN Service Entry Sheet Amount Distribution">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ServiceEntrySheet'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SES/ANSESQAmtDirtrib.xml"/>
+        <x:expect label="AN Service Entry Sheet Amount Distribution" href="../../../XSPEC/payloads/target/inbound/anBuyer/SES/ANSESQAmtDirtrib.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="AN Service Entry Sheet Percentage Distribution">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ServiceEntrySheet'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SES/ANSESQPercentDirtrib.xml"/>
+        <x:expect label="AN Service Entry Sheet Percentage Distribution" href="../../../XSPEC/payloads/target/inbound/anBuyer/SES/ANSESQPercentDirtrib.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="AN Service Entry Sheet Buyer/Supplier Part ID">
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ServiceEntrySheet'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/SES/ANSES_BuyerSupplierPartID.xml"/>
+        <x:expect label="AN Service Entry Sheet Buyer/Supplier Part ID" href="../../../XSPEC/payloads/target/inbound/anBuyer/SES/ANSES_BuyerSupplierPartID.xml" select="element()"/>
+    </x:scenario>
+</x:description>

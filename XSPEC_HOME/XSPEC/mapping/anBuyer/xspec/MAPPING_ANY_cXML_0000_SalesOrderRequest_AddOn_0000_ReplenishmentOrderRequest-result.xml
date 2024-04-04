@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_SalesOrderRequest_AddOn_0000_ReplenishmentOrderRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_SalesOrderRequest_AddOn_0000_ReplenishmentOrderRequest.xsl"
+        date="2023-04-27T15:26:59.441006+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_SalesOrderRequest_AddOn_0000_ReplenishmentOrderRequest.xspec">
+      <label>ReplenishmentOrder</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SalesOrder/ReplenishmentOrder.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ReplenishmentOrderRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ReferenceID>Test RO-6</ReferenceID>
+                  <CreationDateTime>2020-03-31T04:24:35-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1548050425899-8394706301911646927@10.163.3.224</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <PurchaseOrder actionCode="1" itemListCompleteTransmissionIndicator="false">
+                  <VendorParty>
+                     <VendorID>100000</VendorID>
+                  </VendorParty>
+                  <Item actionCode="1" ScheduleLineListCompleteTransmissionIndicator="false">
+                     <ID>1</ID>
+                     <TypeCode/>
+                     <DeliveryBasedInvoiceVerificationIndicator/>
+                     <Quantity unitCode="EA">6</Quantity>
+                     <Product>
+                        <BuyerID>000000000000070402</BuyerID>
+                     </Product>
+                     <Price>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">10</Amount>
+                           <BaseQuantity>0</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <DeliveryDate timeZoneCode="">2020-03-31T19:00:00-12:00</DeliveryDate>
+                     <Description languageCode="en">New SMI Material- do not change</Description>
+                     <ScheduleLine>
+                        <ID>1</ID>
+                        <DeliveryPeriod>
+                           <StartDateTime timeZoneCode="">2020-03-31T19:00:00-12:00</StartDateTime>
+                        </DeliveryPeriod>
+                     </ScheduleLine>
+                  </Item>
+               </PurchaseOrder>
+            </n0:ReplenishmentOrderRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ReplenishmentOrder</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ReplenishmentOrderRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ReferenceID>Test RO-6</ReferenceID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <AribaNetworkPayloadID>1548050425899-8394706301911646927@10.163.3.224</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <PurchaseOrder actionCode="1" itemListCompleteTransmissionIndicator="false">
+                     <VendorParty>
+                        <VendorID>100000</VendorID>
+                     </VendorParty>
+                     <Item actionCode="1" ScheduleLineListCompleteTransmissionIndicator="false">
+                        <ID>1</ID>
+                        <TypeCode/>
+                        <DeliveryBasedInvoiceVerificationIndicator/>
+                        <Quantity unitCode="EA">6</Quantity>
+                        <Product>
+                           <BuyerID>000000000000070402</BuyerID>
+                        </Product>
+                        <Price>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">10</Amount>
+                              <BaseQuantity>0</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <DeliveryDate timeZoneCode="">...</DeliveryDate>
+                        <Description languageCode="en">New SMI Material- do not change</Description>
+                        <ScheduleLine>
+                           <ID>1</ID>
+                           <DeliveryPeriod>
+                              <StartDateTime timeZoneCode="">...</StartDateTime>
+                           </DeliveryPeriod>
+                        </ScheduleLine>
+                     </Item>
+                  </PurchaseOrder>
+               </n0:ReplenishmentOrderRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_SalesOrderRequest_AddOn_0000_ReplenishmentOrderRequest.xspec">
+      <label>ReplenishmentOrderMissedfields</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SalesOrder/ReplenishmentOrderMissedfields.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ReplenishmentOrderRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ReferenceID>RO-19403_SUR1</ReferenceID>
+                  <CreationDateTime>2019-01-13T20:53:12-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1547180546313-3731939048393216961@10.163.3.224</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <PurchaseOrder actionCode="3" itemListCompleteTransmissionIndicator="false">
+                  <VendorParty>
+                     <VendorID>100000</VendorID>
+                  </VendorParty>
+                  <Item actionCode="1" ScheduleLineListCompleteTransmissionIndicator="false">
+                     <ID>1</ID>
+                     <TypeCode/>
+                     <DeliveryBasedInvoiceVerificationIndicator/>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <Product>
+                        <BuyerID>000000000000019403</BuyerID>
+                     </Product>
+                     <Price>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">10</Amount>
+                           <BaseQuantity>0</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <DeliveryDate timeZoneCode="">2019-01-13T19:00:00-12:00</DeliveryDate>
+                     <Description languageCode="en">flat&amp;asket</Description>
+                     <ScheduleLine>
+                        <ID>1</ID>
+                        <DeliveryPeriod>
+                           <StartDateTime timeZoneCode="">2019-01-13T19:00:00-12:00</StartDateTime>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">10</Quantity>
+                     </ScheduleLine>
+                  </Item>
+               </PurchaseOrder>
+               <HeaderComments/>
+            </n0:ReplenishmentOrderRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>ReplenishmentOrderMissedfields</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ReplenishmentOrderRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ReferenceID>RO-19403_SUR1</ReferenceID>
+                     <CreationDateTime>2019-01-13T20:53:12-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1547180546313-3731939048393216961@10.163.3.224</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <PurchaseOrder actionCode="3" itemListCompleteTransmissionIndicator="false">
+                     <VendorParty>
+                        <VendorID>100000</VendorID>
+                     </VendorParty>
+                     <Item actionCode="1" ScheduleLineListCompleteTransmissionIndicator="false">
+                        <ID>1</ID>
+                        <TypeCode/>
+                        <DeliveryBasedInvoiceVerificationIndicator/>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <Product>
+                           <BuyerID>000000000000019403</BuyerID>
+                        </Product>
+                        <Price>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">10</Amount>
+                              <BaseQuantity>0</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <DeliveryDate timeZoneCode="">2019-01-13T19:00:00-12:00</DeliveryDate>
+                        <Description languageCode="en">flat&amp;asket</Description>
+                        <ScheduleLine>
+                           <ID>1</ID>
+                           <DeliveryPeriod>
+                              <StartDateTime timeZoneCode="">2019-01-13T19:00:00-12:00</StartDateTime>
+                           </DeliveryPeriod>
+                           <Quantity unitCode="EA">10</Quantity>
+                        </ScheduleLine>
+                     </Item>
+                  </PurchaseOrder>
+                  <HeaderComments/>
+               </n0:ReplenishmentOrderRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_SalesOrderRequest_AddOn_0000_ReplenishmentOrderRequest.xspec">
+      <label>ReplenishmentOrderMissedfields with Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/SalesOrder/ReplenishmentOrderComments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ReplenishmentOrderRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ReferenceID>RO-19403_SUR1</ReferenceID>
+                  <CreationDateTime>2019-01-13T20:53:12-12:00</CreationDateTime>
+                  <AribaNetworkPayloadID>1547180546313-3731939048393216961@10.163.3.224</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <PurchaseOrder actionCode="3" itemListCompleteTransmissionIndicator="false">
+                  <VendorParty>
+                     <VendorID>100000</VendorID>
+                  </VendorParty>
+                  <Item actionCode="1" ScheduleLineListCompleteTransmissionIndicator="false">
+                     <ID>1</ID>
+                     <TypeCode/>
+                     <DeliveryBasedInvoiceVerificationIndicator/>
+                     <Quantity unitCode="EA">10</Quantity>
+                     <Product>
+                        <BuyerID>000000000000019403</BuyerID>
+                     </Product>
+                     <Price>
+                        <NetUnitPrice>
+                           <Amount currencyCode="USD">10</Amount>
+                           <BaseQuantity>0</BaseQuantity>
+                        </NetUnitPrice>
+                     </Price>
+                     <ReceivingPlantID>0001</ReceivingPlantID>
+                     <DeliveryDate timeZoneCode="">2019-01-13T19:00:00-12:00</DeliveryDate>
+                     <Description languageCode="en">flat&amp;asket</Description>
+                     <ScheduleLine>
+                        <ID>1</ID>
+                        <DeliveryPeriod>
+                           <StartDateTime timeZoneCode="">2019-01-13T19:00:00-12:00</StartDateTime>
+                        </DeliveryPeriod>
+                        <Quantity unitCode="EA">10</Quantity>
+                     </ScheduleLine>
+                     <Comments/>
+                  </Item>
+               </PurchaseOrder>
+               <HeaderComments/>
+            </n0:ReplenishmentOrderRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>ReplenishmentOrderMissedfields with Comment</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ReplenishmentOrderRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ReferenceID>RO-19403_SUR1</ReferenceID>
+                     <CreationDateTime>2019-01-13T20:53:12-12:00</CreationDateTime>
+                     <AribaNetworkPayloadID>1547180546313-3731939048393216961@10.163.3.224</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <PurchaseOrder actionCode="3" itemListCompleteTransmissionIndicator="false">
+                     <VendorParty>
+                        <VendorID>100000</VendorID>
+                     </VendorParty>
+                     <Item actionCode="1" ScheduleLineListCompleteTransmissionIndicator="false">
+                        <ID>1</ID>
+                        <TypeCode/>
+                        <DeliveryBasedInvoiceVerificationIndicator/>
+                        <Quantity unitCode="EA">10</Quantity>
+                        <Product>
+                           <BuyerID>000000000000019403</BuyerID>
+                        </Product>
+                        <Price>
+                           <NetUnitPrice>
+                              <Amount currencyCode="USD">10</Amount>
+                              <BaseQuantity>0</BaseQuantity>
+                           </NetUnitPrice>
+                        </Price>
+                        <ReceivingPlantID>0001</ReceivingPlantID>
+                        <DeliveryDate timeZoneCode="">2019-01-13T19:00:00-12:00</DeliveryDate>
+                        <Description languageCode="en">flat&amp;asket</Description>
+                        <ScheduleLine>
+                           <ID>1</ID>
+                           <DeliveryPeriod>
+                              <StartDateTime timeZoneCode="">2019-01-13T19:00:00-12:00</StartDateTime>
+                           </DeliveryPeriod>
+                           <Quantity unitCode="EA">10</Quantity>
+                        </ScheduleLine>
+                        <Comments/>
+                     </Item>
+                  </PurchaseOrder>
+                  <HeaderComments/>
+               </n0:ReplenishmentOrderRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

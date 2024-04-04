@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetImportPullRequest_cXML_0000_ServiceSheetImportPullRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetImportPullRequest_cXML_0000_ServiceSheetImportPullRequest.xsl"
+        date="2023-04-27T15:36:23.999252+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetImportPullRequest_cXML_0000_ServiceSheetImportPullRequest.xspec">
+      <label>ServiceSheetResponse</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/ServiceSheetImportPullRequest/ServiceSheetImportPullRequestBM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:ServiceSheetImportPullRequest xmlns:urn="urn:Ariba:Buyer:vsap" partition="" variant="">
+               <urn:ServiceSheet_ServiceSheetStatusImport_Item>
+                  <urn:item>
+                     <urn:UniqueName>SB14</urn:UniqueName>
+                     <urn:ERPPOVersionNumber>2</urn:ERPPOVersionNumber>
+                     <urn:Status>approved</urn:Status>
+                     <urn:FiscalYear>2022</urn:FiscalYear>
+                     <urn:InvoiceNumber>CIGTC-33511_MMIN</urn:InvoiceNumber>
+                     <urn:InvoiceDate>2022-01-31</urn:InvoiceDate>
+                     <urn:RejectionReasonCodes>
+                        <urn:item>02</urn:item>
+                     </urn:RejectionReasonCodes>
+                     <urn:item>
+                        <urn:NumberInCollection>1</urn:NumberInCollection>
+                        <urn:PackageInfo>00021986280002198629</urn:PackageInfo>
+                        <urn:ServiceMapKey>Str 205</urn:ServiceMapKey>
+                        <urn:PODeliveryDate>2020-04-29T09:23:27+02:00</urn:PODeliveryDate>
+                        <urn:POQuantity>1.000 </urn:POQuantity>
+                        <urn:POUnitPrice>28000.000000000 </urn:POUnitPrice>
+                     </urn:item>
+                  </urn:item>
+               </urn:ServiceSheet_ServiceSheetStatusImport_Item>
+            </urn:ServiceSheetImportPullRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>ServiceSheetSResponse</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:ServiceSheetImportPullRequest xmlns:urn="urn:Ariba:Buyer:vsap" partition="" variant="">
+                  <urn:ServiceSheet_ServiceSheetStatusImport_Item>
+                     <urn:item>
+                        <urn:UniqueName>SB14</urn:UniqueName>
+                        <urn:ERPPOVersionNumber>2</urn:ERPPOVersionNumber>
+                        <urn:Status>approved</urn:Status>
+                        <urn:FiscalYear>2022</urn:FiscalYear>
+                        <urn:InvoiceNumber>CIGTC-33511_MMIN</urn:InvoiceNumber>
+                        <urn:InvoiceDate>2022-01-31</urn:InvoiceDate>
+                        <urn:RejectionReasonCodes>
+                           <urn:item>02</urn:item>
+                        </urn:RejectionReasonCodes>
+                        <urn:item>
+                           <urn:NumberInCollection>1</urn:NumberInCollection>
+                           <urn:PackageInfo>00021986280002198629</urn:PackageInfo>
+                           <urn:ServiceMapKey>Str 205</urn:ServiceMapKey>
+                           <urn:PODeliveryDate>2020-04-29T09:23:27+02:00</urn:PODeliveryDate>
+                           <urn:POQuantity>1.000 </urn:POQuantity>
+                           <urn:POUnitPrice>28000.000000000 </urn:POUnitPrice>
+                        </urn:item>
+                     </urn:item>
+                  </urn:ServiceSheet_ServiceSheetStatusImport_Item>
+               </urn:ServiceSheetImportPullRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_AddOn_0000_ServiceSheetImportPullRequest_cXML_0000_ServiceSheetImportPullRequest.xspec">
+      <label>ServiceSheetResponseMulti</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/p2p/ServiceSheetImportPullRequest/ServiceSheetImportPullRequestBM_multi.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:ServiceSheetImportPullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                               partition="prealm_140"
+                                               variant="vrealm_140">
+               <urn:ServiceSheetImport_Item>
+                  <urn:item>
+                     <urn:UniqueName>SS830</urn:UniqueName>
+                     <urn:ServiceSheetImport_Item>
+                        <urn:item>
+                           <urn:objectName208>objectName209</urn:objectName208>
+                           <urn:objectName212>objectName213</urn:objectName212>
+                        </urn:item>
+                     </urn:ServiceSheetImport_Item>
+                  </urn:item>
+               </urn:ServiceSheetImport_Item>
+            </urn:ServiceSheetImportPullRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>ServiceSheetSResponseMulti</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:ServiceSheetImportPullRequest xmlns:urn="urn:Ariba:Buyer:vsap"
+                                                  partition="prealm_140"
+                                                  variant="vrealm_140">
+                  <urn:ServiceSheetImport_Item>
+                     <urn:item>
+                        <urn:UniqueName>SS830</urn:UniqueName>
+                        <urn:ServiceSheetImport_Item>
+                           <urn:item>
+                              <urn:objectName208>objectName209</urn:objectName208>
+                              <urn:objectName212>objectName213</urn:objectName212>
+                           </urn:item>
+                        </urn:ServiceSheetImport_Item>
+                     </urn:item>
+                  </urn:ServiceSheetImport_Item>
+               </urn:ServiceSheetImportPullRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

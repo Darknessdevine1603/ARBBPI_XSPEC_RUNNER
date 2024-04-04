@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_SupplierQuotation_S4HANA_0000_supplierquotations4request.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_SupplierQuotation_S4HANA_0000_supplierquotations4request.xsl"
+        date="2023-04-27T15:46:44.89818+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_SupplierQuotation_S4HANA_0000_supplierquotations4request.xspec">
+      <label>SupplierQuotation Standard</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/SupplierQuotation/SupplierQuotationS4RequestAsync_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:SupplierQuotationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <ID/>
+                  <UUID/>
+                  <ReferenceID>ID454309</ReferenceID>
+                  <ReferenceUUID/>
+                  <CreationDateTime>2021-08-24T07:44:14Z</CreationDateTime>
+                  <TestDataIndicator/>
+                  <ReconciliationIndicator/>
+                  <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+               </MessageHeader>
+               <SupplierQuotationS4>
+                  <SupplierQuotationExternalId>ID454309-1001020</SupplierQuotationExternalId>
+                  <RequestForQuotationId>7000003356</RequestForQuotationId>
+                  <RFQCategory/>
+                  <SupplierQuotationExternalStatus>award</SupplierQuotationExternalStatus>
+                  <Supplier>1001020</Supplier>
+                  <Language>en</Language>
+                  <SupplierQuotationSubmissionDate>2021-08-24T07:44:00Z</SupplierQuotationSubmissionDate>
+                  <BindingPeriodEndDate>2021-08-31T07:44:14Z</BindingPeriodEndDate>
+                  <FollowOnDocumentCategory>F</FollowOnDocumentCategory>
+                  <FollowOnDocumentType>NB</FollowOnDocumentType>
+                  <SupplierQuotationItem>
+                     <SupplierQuotationExternalItemID>1</SupplierQuotationExternalItemID>
+                     <RequestForQuotationItemID>10</RequestForQuotationItemID>
+                     <OfferedQuantity unitCode="EA">10</OfferedQuantity>
+                     <SupplierMaterialNumber/>
+                     <Manufacturer/>
+                     <ManufacturerPartNmbr/>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                        <ConditionRateValue>100</ConditionRateValue>
+                        <ConditionCurrency>EUR</ConditionCurrency>
+                     </PricingElements>
+                  </SupplierQuotationItem>
+               </SupplierQuotationS4>
+            </n0:SupplierQuotationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>SupplierQuotation Standard</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:SupplierQuotationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <ID/>
+                     <UUID/>
+                     <ReferenceID>ID454309</ReferenceID>
+                     <ReferenceUUID/>
+                     <CreationDateTime>2021-08-24T07:44:14Z</CreationDateTime>
+                     <TestDataIndicator/>
+                     <ReconciliationIndicator/>
+                     <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <SupplierQuotationS4>
+                     <SupplierQuotationExternalId>ID454309-1001020</SupplierQuotationExternalId>
+                     <RequestForQuotationId>7000003356</RequestForQuotationId>
+                     <RFQCategory/>
+                     <SupplierQuotationExternalStatus>award</SupplierQuotationExternalStatus>
+                     <Supplier>1001020</Supplier>
+                     <Language>en</Language>
+                     <SupplierQuotationSubmissionDate>2021-08-24T07:44:00Z</SupplierQuotationSubmissionDate>
+                     <BindingPeriodEndDate>2021-08-31T07:44:14Z</BindingPeriodEndDate>
+                     <FollowOnDocumentCategory>F</FollowOnDocumentCategory>
+                     <FollowOnDocumentType>NB</FollowOnDocumentType>
+                     <SupplierQuotationItem>
+                        <SupplierQuotationExternalItemID>1</SupplierQuotationExternalItemID>
+                        <RequestForQuotationItemID>10</RequestForQuotationItemID>
+                        <OfferedQuantity unitCode="EA">10</OfferedQuantity>
+                        <SupplierMaterialNumber/>
+                        <Manufacturer/>
+                        <ManufacturerPartNmbr/>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                           <ConditionRateValue>100</ConditionRateValue>
+                           <ConditionCurrency>EUR</ConditionCurrency>
+                        </PricingElements>
+                     </SupplierQuotationItem>
+                  </SupplierQuotationS4>
+               </n0:SupplierQuotationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_SupplierQuotation_S4HANA_0000_supplierquotations4request.xspec">
+      <label>SupplierQuotation with Text Collection</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/SupplierQuotation/SQ_7500001411_Notes_before.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:SupplierQuotationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <ID/>
+                  <UUID/>
+                  <ReferenceID>ID410424</ReferenceID>
+                  <ReferenceUUID/>
+                  <CreationDateTime>2021-06-07T11:53:02Z</CreationDateTime>
+                  <TestDataIndicator/>
+                  <ReconciliationIndicator/>
+                  <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+               </MessageHeader>
+               <SupplierQuotationS4>
+                  <SupplierQuotationExternalId>ID410424-1001444</SupplierQuotationExternalId>
+                  <RequestForQuotationId>7500001411</RequestForQuotationId>
+                  <RFQCategory/>
+                  <SupplierQuotationExternalStatus>award</SupplierQuotationExternalStatus>
+                  <Supplier>1001444</Supplier>
+                  <Language>en</Language>
+                  <SupplierQuotationSubmissionDate>2021-06-07T11:50:59Z</SupplierQuotationSubmissionDate>
+                  <BindingPeriodEndDate>2021-06-14T11:53:02Z</BindingPeriodEndDate>
+                  <FollowOnDocumentCategory>F</FollowOnDocumentCategory>
+                  <FollowOnDocumentType>NB</FollowOnDocumentType>
+                  <SupplierQuotationItem>
+                     <SupplierQuotationExternalItemID>1</SupplierQuotationExternalItemID>
+                     <RequestForQuotationItemID>10</RequestForQuotationItemID>
+                     <OfferedQuantity unitCode="EA">12</OfferedQuantity>
+                     <SupplierMaterialNumber/>
+                     <Manufacturer/>
+                     <ManufacturerPartNmbr/>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                        <ConditionRateValue>7</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                        <ConditionRateValue>2</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                        <ConditionRateValue>100</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <TextCollection>
+                        <ContentText languageCode="en">Note for Item 1</ContentText>
+                        <TypeCode>O01</TypeCode>
+                        <MimeType/>
+                     </TextCollection>
+                  </SupplierQuotationItem>
+                  <SupplierQuotationItem>
+                     <SupplierQuotationExternalItemID>2</SupplierQuotationExternalItemID>
+                     <RequestForQuotationItemID>20</RequestForQuotationItemID>
+                     <OfferedQuantity unitCode="EA">12</OfferedQuantity>
+                     <SupplierMaterialNumber/>
+                     <Manufacturer/>
+                     <ManufacturerPartNmbr/>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                        <ConditionRateValue>2</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                        <ConditionRateValue>2</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                        <ConditionRateValue>90</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <TextCollection>
+                        <ContentText languageCode="en">Note Item 2</ContentText>
+                        <TypeCode>O01</TypeCode>
+                        <MimeType/>
+                     </TextCollection>
+                  </SupplierQuotationItem>
+               </SupplierQuotationS4>
+            </n0:SupplierQuotationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>SupplierQuotation with Text Collection</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:SupplierQuotationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <ID/>
+                     <UUID/>
+                     <ReferenceID>ID410424</ReferenceID>
+                     <ReferenceUUID/>
+                     <CreationDateTime>2021-06-07T11:53:02Z</CreationDateTime>
+                     <TestDataIndicator/>
+                     <ReconciliationIndicator/>
+                     <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <SupplierQuotationS4>
+                     <SupplierQuotationExternalId>ID410424-1001444</SupplierQuotationExternalId>
+                     <RequestForQuotationId>7500001411</RequestForQuotationId>
+                     <RFQCategory/>
+                     <SupplierQuotationExternalStatus>award</SupplierQuotationExternalStatus>
+                     <Supplier>1001444</Supplier>
+                     <Language>en</Language>
+                     <SupplierQuotationSubmissionDate>2021-06-07T11:50:59Z</SupplierQuotationSubmissionDate>
+                     <BindingPeriodEndDate>2021-06-14T11:53:02Z</BindingPeriodEndDate>
+                     <FollowOnDocumentCategory>F</FollowOnDocumentCategory>
+                     <FollowOnDocumentType>NB</FollowOnDocumentType>
+                     <SupplierQuotationItem>
+                        <SupplierQuotationExternalItemID>1</SupplierQuotationExternalItemID>
+                        <RequestForQuotationItemID>10</RequestForQuotationItemID>
+                        <OfferedQuantity unitCode="EA">12</OfferedQuantity>
+                        <SupplierMaterialNumber/>
+                        <Manufacturer/>
+                        <ManufacturerPartNmbr/>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                           <ConditionRateValue>7</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                           <ConditionRateValue>2</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                           <ConditionRateValue>100</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <TextCollection>
+                           <ContentText languageCode="en">Note for Item 1</ContentText>
+                           <TypeCode>O01</TypeCode>
+                           <MimeType/>
+                        </TextCollection>
+                     </SupplierQuotationItem>
+                     <SupplierQuotationItem>
+                        <SupplierQuotationExternalItemID>2</SupplierQuotationExternalItemID>
+                        <RequestForQuotationItemID>20</RequestForQuotationItemID>
+                        <OfferedQuantity unitCode="EA">12</OfferedQuantity>
+                        <SupplierMaterialNumber/>
+                        <Manufacturer/>
+                        <ManufacturerPartNmbr/>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                           <ConditionRateValue>2</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                           <ConditionRateValue>2</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                           <ConditionRateValue>90</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <TextCollection>
+                           <ContentText languageCode="en">Note Item 2</ContentText>
+                           <TypeCode>O01</TypeCode>
+                           <MimeType/>
+                        </TextCollection>
+                     </SupplierQuotationItem>
+                  </SupplierQuotationS4>
+               </n0:SupplierQuotationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_SupplierQuotation_S4HANA_0000_supplierquotations4request.xspec">
+      <label>SupplierQuotation with Condition Quantity</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/SupplierQuotation/SQ_7500001411_ConditionQuantity.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:SupplierQuotationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <ID/>
+                  <UUID/>
+                  <ReferenceID>ID410424</ReferenceID>
+                  <ReferenceUUID/>
+                  <CreationDateTime>2021-06-07T11:53:02Z</CreationDateTime>
+                  <TestDataIndicator/>
+                  <ReconciliationIndicator/>
+                  <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+               </MessageHeader>
+               <SupplierQuotationS4>
+                  <SupplierQuotationExternalId>ID410424-1001444</SupplierQuotationExternalId>
+                  <RequestForQuotationId>7500001411</RequestForQuotationId>
+                  <RFQCategory/>
+                  <SupplierQuotationExternalStatus>award</SupplierQuotationExternalStatus>
+                  <Supplier>1001444</Supplier>
+                  <Language>en</Language>
+                  <SupplierQuotationSubmissionDate>2021-06-07T11:50:59Z</SupplierQuotationSubmissionDate>
+                  <BindingPeriodEndDate>2021-06-14T11:53:02Z</BindingPeriodEndDate>
+                  <FollowOnDocumentCategory>F</FollowOnDocumentCategory>
+                  <FollowOnDocumentType>NB</FollowOnDocumentType>
+                  <TextCollection>
+                     <ContentText languageCode="en">Note for Item 1</ContentText>
+                     <TypeCode>O01</TypeCode>
+                     <MimeType/>
+                  </TextCollection>
+                  <SupplierQuotationItem>
+                     <SupplierQuotationExternalItemID>1</SupplierQuotationExternalItemID>
+                     <RequestForQuotationItemID>10</RequestForQuotationItemID>
+                     <OfferedQuantity unitCode="EA">12</OfferedQuantity>
+                     <SupplierMaterialNumber/>
+                     <Manufacturer/>
+                     <ManufacturerPartNmbr/>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                        <ConditionRateValue>7</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                        <ConditionQuantity unitCode="EA">1</ConditionQuantity>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                        <ConditionQuantity unitCode="EA">1</ConditionQuantity>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                        <ConditionQuantity unitCode="EA">1</ConditionQuantity>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                        <ConditionRateValue>2</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                        <ConditionRateValue>100</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <TextCollection>
+                        <ContentText languageCode="en">Note for Item 1</ContentText>
+                        <TypeCode>O01</TypeCode>
+                        <MimeType/>
+                     </TextCollection>
+                  </SupplierQuotationItem>
+                  <SupplierQuotationItem>
+                     <SupplierQuotationExternalItemID>2</SupplierQuotationExternalItemID>
+                     <RequestForQuotationItemID>20</RequestForQuotationItemID>
+                     <OfferedQuantity unitCode="EA">12</OfferedQuantity>
+                     <SupplierMaterialNumber/>
+                     <Manufacturer/>
+                     <ManufacturerPartNmbr/>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                        <ConditionRateValue>2</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                        <ConditionRateValue>1</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                        <ConditionRateValue>2</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <PricingElements>
+                        <ConditionType/>
+                        <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                        <ConditionRateValue>90</ConditionRateValue>
+                        <ConditionCurrency>USD</ConditionCurrency>
+                     </PricingElements>
+                     <TextCollection>
+                        <ContentText languageCode="en">Note Item 2</ContentText>
+                        <TypeCode>O01</TypeCode>
+                        <MimeType/>
+                     </TextCollection>
+                     <Attachment FileName="FileName" FileSize="FileSize" MimeType="MimeType">
+                        <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="Attachment"/>
+                     </Attachment>
+                  </SupplierQuotationItem>
+               </SupplierQuotationS4>
+            </n0:SupplierQuotationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>SupplierQuotation with Condition Quantity</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:SupplierQuotationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <ID/>
+                     <UUID/>
+                     <ReferenceID>ID410424</ReferenceID>
+                     <ReferenceUUID/>
+                     <CreationDateTime>2021-06-07T11:53:02Z</CreationDateTime>
+                     <TestDataIndicator/>
+                     <ReconciliationIndicator/>
+                     <SenderBusinessSystemID>AN02005451658-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOI36K</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <SupplierQuotationS4>
+                     <SupplierQuotationExternalId>ID410424-1001444</SupplierQuotationExternalId>
+                     <RequestForQuotationId>7500001411</RequestForQuotationId>
+                     <RFQCategory/>
+                     <SupplierQuotationExternalStatus>award</SupplierQuotationExternalStatus>
+                     <Supplier>1001444</Supplier>
+                     <Language>en</Language>
+                     <SupplierQuotationSubmissionDate>2021-06-07T11:50:59Z</SupplierQuotationSubmissionDate>
+                     <BindingPeriodEndDate>2021-06-14T11:53:02Z</BindingPeriodEndDate>
+                     <FollowOnDocumentCategory>F</FollowOnDocumentCategory>
+                     <FollowOnDocumentType>NB</FollowOnDocumentType>
+                     <TextCollection>
+                        <ContentText languageCode="en">Note for Item 1</ContentText>
+                        <TypeCode>O01</TypeCode>
+                        <MimeType/>
+                     </TextCollection>
+                     <SupplierQuotationItem>
+                        <SupplierQuotationExternalItemID>1</SupplierQuotationExternalItemID>
+                        <RequestForQuotationItemID>10</RequestForQuotationItemID>
+                        <OfferedQuantity unitCode="EA">12</OfferedQuantity>
+                        <SupplierMaterialNumber/>
+                        <Manufacturer/>
+                        <ManufacturerPartNmbr/>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                           <ConditionRateValue>7</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                           <ConditionQuantity unitCode="EA">1</ConditionQuantity>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                           <ConditionQuantity unitCode="EA">1</ConditionQuantity>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                           <ConditionQuantity unitCode="EA">1</ConditionQuantity>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                           <ConditionRateValue>2</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                           <ConditionRateValue>100</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <TextCollection>
+                           <ContentText languageCode="en">Note for Item 1</ContentText>
+                           <TypeCode>O01</TypeCode>
+                           <MimeType/>
+                        </TextCollection>
+                     </SupplierQuotationItem>
+                     <SupplierQuotationItem>
+                        <SupplierQuotationExternalItemID>2</SupplierQuotationExternalItemID>
+                        <RequestForQuotationItemID>20</RequestForQuotationItemID>
+                        <OfferedQuantity unitCode="EA">12</OfferedQuantity>
+                        <SupplierMaterialNumber/>
+                        <Manufacturer/>
+                        <ManufacturerPartNmbr/>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTAMT</ConditionTypeName>
+                           <ConditionRateValue>2</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>DISCOUNTPCT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEAMT</ConditionTypeName>
+                           <ConditionRateValue>1</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>SURCHARGEPCT</ConditionTypeName>
+                           <ConditionRateValue>2</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <PricingElements>
+                           <ConditionType/>
+                           <ConditionTypeName>ORIGINALPRICE</ConditionTypeName>
+                           <ConditionRateValue>90</ConditionRateValue>
+                           <ConditionCurrency>USD</ConditionCurrency>
+                        </PricingElements>
+                        <TextCollection>
+                           <ContentText languageCode="en">Note Item 2</ContentText>
+                           <TypeCode>O01</TypeCode>
+                           <MimeType/>
+                        </TextCollection>
+                        <Attachment FileName="FileName" FileSize="FileSize" MimeType="MimeType">
+                           <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="Attachment"/>
+                        </Attachment>
+                     </SupplierQuotationItem>
+                  </SupplierQuotationS4>
+               </n0:SupplierQuotationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

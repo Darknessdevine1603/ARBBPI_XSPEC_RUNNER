@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_PaymentRemittance_AddOn_0000_RemittanceAdvice.xsl">
+    <x:scenario label="AN Payment Remittence">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'PaymentRemittanceRequest'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/PaymentRemit/ANPayRem1.xml"/>
+        <x:expect label="AN Payment Remittence" href="../../../XSPEC/payloads/target/inbound/anBuyer/PaymentRemit/ANPayRem1.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="AN Payment Remittence with Comments">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'PaymentRemittanceRequest'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/PaymentRemit/ANPayRemComments.xml"/>
+        <x:expect label="AN Payment Remittence with Comments" href="../../../XSPEC/payloads/target/inbound/anBuyer/PaymentRemit/ANPayRemComments.xml" select="element()"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="cp" targetNamespace="cp">
+    <xs:element name="CharacteristicProfile" type="ns:CharacteristicProfile"/>
+    <xs:complexType name="CharacteristicProfile">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+            <xs:element ref="ns:Class"/>
+            <xs:element ref="ns:Extensions" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="MessageHeader" type="ns:MessageHeader"/>
+    <xs:complexType name="MessageHeader">
+        <xs:sequence>
+            <xs:element ref="ns:MessageID"/>
+            <xs:element ref="ns:CreationDateTime"/>
+            <xs:element ref="ns:SenderBusinessSystemID"/>
+            <xs:element ref="ns:RecipientBusinessSystemID"/>
+            <xs:element ref="ns:ExternalID" minOccurs="0"/>
+            <xs:element ref="ns:RealmId" minOccurs="0"/>
+            <xs:element ref="ns:SolutionName" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Descriptions" type="ns:Descriptions"/>
+    <xs:complexType name="Descriptions">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="ns:Description"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Description" type="ns:Description"/>
+    <xs:complexType name="Description">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="languageCode"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="RealmId" type="xs:string"/>
+    <xs:element name="SolutionName" type="xs:string"/>
+    <xs:element name="MessageID" type="xs:string"/>
+    <!--xs:complexType>
+      <xs:attribute name="schemeAgencyID" use="required" type="xs:string"/>
+      <xs:attribute name="schemeAgencySchemeAgencyID" use="required" type="xs:string"/>
+      <xs:attribute name="schemeID" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element-->
+    <xs:element name="CreationDateTime" type="xs:dateTime"/>
+    <xs:element name="SenderBusinessSystemID" type="xs:string"/>
+    <xs:element name="RecipientBusinessSystemID" type="xs:string"/>
+    <xs:element name="ExternalID" type="xs:string"/>
+
+    <xs:element name="Class" type="ns:Class"/>
+    <xs:complexType name="Class">
+        <xs:sequence>
+            <xs:element ref="ns:ClassType"/>
+            <xs:element ref="ns:ID"/>
+            <xs:element ref="ns:Status"/>
+            <xs:element ref="ns:Characteristic" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="ns:Descriptions"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="ClassType" type="xs:string"/>
+    <xs:element name="ID" type="xs:string"/>
+    <xs:element name="Status" type="xs:string"/>
+
+    <xs:element name="Characteristic" type="ns:Characteristic"/>
+    <xs:complexType name="Characteristic">
+        <xs:sequence>
+            <xs:element ref="ns:CharacteristicId"/>
+            <xs:element ref="ns:RelevancyIndicator" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="CharacteristicId" type="xs:string"/>
+    <xs:element name="RelevancyIndicator" type="xs:integer"/>
+
+    <xs:element name="Extensions" type="ns:Extensions"/>
+    <xs:complexType name="Extensions">
+        <xs:sequence>
+            <xs:element ref="ns:OBJNAME"/>
+            <xs:element ref="ns:OBJKEY"/>
+            <xs:element ref="ns:FIELDNAME"/>
+            <xs:element ref="ns:FIELDVALUE"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="OBJNAME" type="xs:string"/>
+    <xs:element name="OBJKEY" type="xs:string"/>
+    <xs:element name="FIELDNAME" type="xs:string"/>
+    <xs:element name="FIELDVALUE" type="xs:string"/>
+
+    <xs:element name="RetailMSResponse" type="ns:RetailMSResponse"/>
+    <xs:complexType name="RetailMSResponse">
+        <xs:sequence>
+            <xs:element ref="ns:MessageHeader"/>
+        </xs:sequence>
+        <xs:attribute name="jobId" type="xs:string"/>
+        <xs:attribute name="status" type="xs:string"/>
+        <xs:attribute name="errorCode" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

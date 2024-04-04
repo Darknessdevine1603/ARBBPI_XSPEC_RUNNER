@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_824_cXML_0000_StatusUpdateRequest.xsl">
+    <x:scenario label="Status Update Request Accepted">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anMPLID" select="'input from flow'"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSupplierANID" select="'AN02004417465-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417464-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="anPayloadID"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_824_Accept_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_824_Accept_AM.dat"
+            select="element()" label="Status Update Request Accepted"/>
+    </x:scenario>
+    
+    <x:scenario label="Status Update Request Rejected">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anMPLID" select="'input from flow'"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSupplierANID" select="'AN02004417465-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417464-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="anPayloadID"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_824_Reject_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_824_Reject_AM.dat"
+            select="element()" label="Status Update Request Rejected"/>
+    </x:scenario>
+    
+</x:description>

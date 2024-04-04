@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_997_cXML_0000_TechACKStatusUpdateRequest.xsl">
+    <x:scenario label="Status Update Request - Accept 1">
+        <!--        Parameter in main XSLT -->
+       
+        <x:param name="anPayloadID"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderID" select="'AN02004417464-T'"/>
+        <x:param name="anReceiverID" select="'AN02004417464-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anOrginalPayloadID"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_997_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_997_AM.dat"
+            select="element()" label="Status Update Request"/>
+    </x:scenario>
+    
+    <x:scenario label="Status Update Request - Accept 2">
+        <!--        Parameter in main XSLT -->
+        
+        <x:param name="anPayloadID"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anSenderID" select="'AN02004417464-T'"/>
+        <x:param name="anReceiverID" select="'AN02004417464-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anOrginalPayloadID"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_997_accept_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_997_accept_AM.dat"
+            select="element()" label="Status Update Request - Accept 2"/>
+    </x:scenario>
+    
+    <x:scenario label="Status Update Request - Reject">
+        <!--        Parameter in main XSLT -->
+        
+        <x:param name="anPayloadID"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anSenderID" select="'AN02004417464-T'"/>
+        <x:param name="anReceiverID" select="'AN02004417464-T'"/>
+        <x:param name="anDocNumber"/>
+        <x:param name="anDocType"/>
+        <x:param name="anDocReferenceID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anOrginalPayloadID"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_997_reject_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/StatusUpdateRequest/StatusUpdateRequest_997_reject_AM.dat"
+            select="element()" label="Status Update Request - Reject"/>
+    </x:scenario>
+</x:description>

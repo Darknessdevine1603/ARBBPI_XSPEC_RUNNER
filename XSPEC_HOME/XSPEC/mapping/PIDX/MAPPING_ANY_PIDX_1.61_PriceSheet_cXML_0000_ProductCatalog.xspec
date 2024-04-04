@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/PIDX/MAPPING_ANY_PIDX_1.61_PriceSheet_cXML_0000_ProductCatalog.xsl">
+    <x:scenario label="Product Catalog New">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="cxmlversion"/>
+        <x:param name="anContentID"/>
+        <x:param name="notifyEmail"/>        
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ProductCatalog/PIDX_PriceSheet_New_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ProductCatalog/PIDX_PriceSheet_New_AM.dat"
+            select="element()" label="Product Catalog New"/>
+    </x:scenario>
+    <x:scenario label="Product Catalog Update">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="cxmlversion"/>
+        <x:param name="anContentID"/>
+        <x:param name="notifyEmail"/>        
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ProductCatalog/PIDX_PriceSheet_Update_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ProductCatalog/PIDX_PriceSheet_New_AM.dat"
+            select="element()" label="Product Catalog Update"/>
+    </x:scenario>
+    <x:scenario label="Product Catalog Delete">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02005757093-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005757092-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anMaskANID" select="'_CIGSDRID_'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="cxmlversion"/>
+        <x:param name="anContentID"/>
+        <x:param name="notifyEmail"/>        
+        <x:param name="anSenderDefaultTimeZone" select="'-08:00'"/>        
+        <x:context href="../../../XSPEC/payloads/base/outbound/PIDX/ProductCatalog/PIDX_PriceSheet_Delete_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/PIDX/ProductCatalog/PIDX_PriceSheet_New_AM.dat"
+            select="element()" label="Product Catalog New"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/fieldglass/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_FieldGlass_0000_ERSInvoiceMapperXML.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/fieldglass/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_FieldGlass_0000_ERSInvoiceMapperXML.xsl"
+        date="2023-04-27T15:32:37.827258+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/fieldglass/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_FieldGlass_0000_ERSInvoiceMapperXML.xspec">
+      <label>Invoice Detail request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/fieldglass/Invoice/Invoice.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ERSInvoiceMapperXML>
+               <HeaderData/>
+               <InvoiceData>
+                  <InvoiceDetail>
+                     <ObjectRef>DLABTU00000628</ObjectRef>
+                     <ExternalObjectRef>4500041183</ExternalObjectRef>
+                     <ServiceEntryRef>DLABTU00000628</ServiceEntryRef>
+                     <Adjustments/>
+                     <Status>APPROVED</Status>
+                     <CustomFields>
+                        <CustomField>
+                           <Name>Invoice ID</Name>
+                           <Value>4500041183INV</Value>
+                        </CustomField>
+                        <CustomField>
+                           <Name>Invoice Date</Name>
+                           <Value>2021-07-13T00:15:37-05:00</Value>
+                        </CustomField>
+                     </CustomFields>
+                  </InvoiceDetail>
+               </InvoiceData>
+            </ERSInvoiceMapperXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Invoice Detail request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ERSInvoiceMapperXML>
+                  <HeaderData/>
+                  <InvoiceData>
+                     <InvoiceDetail>
+                        <ObjectRef>DLABTU00000628</ObjectRef>
+                        <ExternalObjectRef>4500041183</ExternalObjectRef>
+                        <ServiceEntryRef>DLABTU00000628</ServiceEntryRef>
+                        <Adjustments/>
+                        <Status>APPROVED</Status>
+                        <CustomFields>
+                           <CustomField>
+                              <Name>Invoice ID</Name>
+                              <Value>4500041183INV</Value>
+                           </CustomField>
+                           <CustomField>
+                              <Name>Invoice Date</Name>
+                              <Value>2021-07-13T00:15:37-05:00</Value>
+                           </CustomField>
+                        </CustomFields>
+                     </InvoiceDetail>
+                  </InvoiceData>
+               </ERSInvoiceMapperXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/fieldglass/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_FieldGlass_0000_ERSInvoiceMapperXML.xspec">
+      <label>Service Invoice Detail request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/fieldglass/Invoice/ServiceInvoice.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ERSInvoiceMapperXML>
+               <HeaderData/>
+               <InvoiceData>
+                  <InvoiceDetail>
+                     <ObjectRef>DLABTU00000628</ObjectRef>
+                     <ExternalObjectRef>4500041183</ExternalObjectRef>
+                     <ServiceEntryRef>DLABTU00000628</ServiceEntryRef>
+                     <Adjustments/>
+                     <Status>APPROVED</Status>
+                     <CustomFields>
+                        <CustomField>
+                           <Name>Invoice ID</Name>
+                           <Value>4500041183INV</Value>
+                        </CustomField>
+                        <CustomField>
+                           <Name>Invoice Date</Name>
+                           <Value>2021-07-13T00:15:37-05:00</Value>
+                        </CustomField>
+                     </CustomFields>
+                  </InvoiceDetail>
+               </InvoiceData>
+            </ERSInvoiceMapperXML>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Service Invoice Detail request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ERSInvoiceMapperXML>
+                  <HeaderData/>
+                  <InvoiceData>
+                     <InvoiceDetail>
+                        <ObjectRef>DLABTU00000628</ObjectRef>
+                        <ExternalObjectRef>4500041183</ExternalObjectRef>
+                        <ServiceEntryRef>DLABTU00000628</ServiceEntryRef>
+                        <Adjustments/>
+                        <Status>APPROVED</Status>
+                        <CustomFields>
+                           <CustomField>
+                              <Name>Invoice ID</Name>
+                              <Value>4500041183INV</Value>
+                           </CustomField>
+                           <CustomField>
+                              <Name>Invoice Date</Name>
+                              <Value>2021-07-13T00:15:37-05:00</Value>
+                           </CustomField>
+                        </CustomFields>
+                     </InvoiceDetail>
+                  </InvoiceData>
+               </ERSInvoiceMapperXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

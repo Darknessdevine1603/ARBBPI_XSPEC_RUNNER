@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/xCBL/MAPPING_ANY_cXML_0000_ChangeOrderRequest_xCBL_3.0_ChangeOrder.xsl">
+    <x:scenario label="xCBL Change Order Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'GUSIBuyerP'"/>
+        <x:param name="anAlternativeReceiver" select="'XCBLRITDS'"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:context
+            href="../../../XSPEC/payloads/base/inbound/xCBL/OrderRequest/ChangeOrderRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/xCBL/OrderRequest/ChangeOrderRequest_AM.dat"
+            select="*" label="xCBL Change Order Request"/>
+    </x:scenario>
+</x:description>

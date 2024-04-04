@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>									
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.2.048/cXML.dtd">									
+<cXML payloadID="payload" timestamp="2019-10-30T12:39:31+00:00" version="1.2.048" xml:lang="en-US">									
+	<Header>								
+		<From>							
+			<Credential domain="NetworkId">						
+				<Identity>ANXXXXXXXXXXX-T</Identity>					
+			</Credential>						
+			<Credential domain="SystemID">						
+				<Identity>System ID</Identity>					
+			</Credential>						
+		</From>							
+		<To>							
+			<Credential domain="NetworkId">						
+				<Identity>ANXXXXXXXXXXX-T</Identity>					
+			</Credential>						
+		</To>							
+		<Sender>							
+			<Credential domain="NetworkID">						
+				<Identity>ANXXXXXXXXXXX-T</Identity>					
+				<SharedSecret>XXXX</SharedSecret>					
+			</Credential>						
+			<UserAgent>Ariba SN</UserAgent>						
+		</Sender>							
+	</Header>								
+	<Request deploymentMode="test">								
+		<OrderRequest>							
+			<OrderRequestHeader orderDate="2019-10-01T12:00:00+00:00" orderID="Order ID" orderType="regular" orderVersion="V0" type="update" shipComplete="yes" pickUpDate="2019-10-02T12:00:00+00:00" expirationDate="2019-10-03T12:30:00+00:00" effectiveDate="2019-10-03T18:30:00+00:00" requestedDeliveryDate="2019-10-03T12:00:00+00:00" agreementID="AgreementID" parentAgreementID="Parent AgreementID">					
+				<Total>					
+					<Money currency="USD" alternateCurrency="USD" alternateAmount="1000.01">1000</Money>				
+					<Modifications>				
+						<Modification>			
+							<OriginalPrice type="OP type">		
+								<Money currency="USD">1000</Money>	
+							</OriginalPrice>		
+							<AdditionalCost>		
+								<Money currency="USD">1</Money>	
+							</AdditionalCost>		
+							<ModificationDetail name="Charge" startDate="2019-09-01T12:00:00+00:00" endDate="2019-09-11T12:00:00+00:00">		
+								<Description xml:lang="en">Charge Descr</Description>	
+							</ModificationDetail>		
+						</Modification>			
+						<Modification>			
+							<AdditionalDeduction>		
+								<DeductionPercent percent="2"/>	
+							</AdditionalDeduction>		
+							<ModificationDetail name="Allowance" startDate="2019-09-02T12:00:00+00:00" endDate="2019-09-12T12:00:00+00:00">		
+								<Description xml:lang="en">Allowance Descr</Description>	
+							</ModificationDetail>		
+						</Modification><Modification>			
+							<AdditionalDeduction>		
+								<DeductedPrice><Money currency="USD">1</Money></DeductedPrice>	
+							</AdditionalDeduction>		
+							<ModificationDetail name="Allowance" startDate="2019-09-02T12:00:00+00:00" endDate="2019-09-12T12:00:00+00:00">		
+								<Description xml:lang="en">Allowance Descr</Description>	
+							</ModificationDetail>		
+						</Modification><Modification>			
+							<AdditionalDeduction>		
+								<DeductionAmount><Money currency="USD">1</Money></DeductionAmount>	
+							</AdditionalDeduction>		
+							<ModificationDetail name="Allowance" startDate="2019-09-02T12:00:00+00:00" endDate="2019-09-12T12:00:00+00:00">		
+								<Description xml:lang="en">Allowance Descr</Description>	
+							</ModificationDetail>		
+						</Modification>			
+					</Modifications>				
+				</Total>					
+				<ShipTo>					
+					<Address isoCountryCode="US" addressIDDomain="ILN" addressID="ST ILN">				
+						<Name xml:lang="EN">ST Name</Name>			
+						<PostalAddress>			
+							<DeliverTo>ST Name2</DeliverTo>		
+							<Street>BT Street</Street>		
+							<City>BT City</City>		
+							<State>TX</State>		
+							<PostalCode>ST ZIP</PostalCode>		
+							<Country isoCountryCode="US"/>		
+						</PostalAddress>			
+						<Email>STemail@xyz.com</Email>			
+						<Phone>			
+							<TelephoneNumber>		
+								<CountryCode isoCountryCode="US"/>	
+								<AreaOrCityCode/>	
+								<Number>123</Number>	
+							</TelephoneNumber>		
+						</Phone>			
+					</Address>				
+					<CarrierIdentifier domain="XYZ">UPS</CarrierIdentifier>				
+					<TransportInformation>				
+						<Route method="motor" means="truck"/>			
+						<ShippingContractNumber>Ship Contract ID</ShippingContractNumber>			
+						<ShippingInstructions>			
+							<Description xml:lang="en">Shipping Instructions</Description>		
+						</ShippingInstructions>			
+					</TransportInformation>				
+					<IdReference domain="storageLocationID" identifier="storageLocation ID"/>				
+					<IdReference domain="buyerLocationID" identifier="buyerLocation ID"/>				
+				</ShipTo>					
+				<BillTo>					
+					<Address isoCountryCode="US" addressIDDomain="DUNS" addressID="BT DUNS">				
+						<Name xml:lang="en">BT Name</Name>			
+						<PostalAddress>			
+							<DeliverTo>BT Name2</DeliverTo>		
+							<Street>BT Street</Street>		
+							<City>BT City</City>		
+							<State>TX</State>		
+							<PostalCode>BT ZIP</PostalCode>		
+							<Country isoCountryCode="US"/>		
+						</PostalAddress>			
+						<Email>BTemail@xyz.com</Email>			
+					</Address>				
+				</BillTo>					
+				<BusinessPartner type="organization" role="soldTo">					
+					<Address isoCountryCode="US" addressID="SO DUNS" addressIDDomain="DUNS">				
+						<Name xml:lang="EN">SO Name</Name>			
+						<PostalAddress name="SO Postal Name">			
+							<DeliverTo>SO Name 2</DeliverTo>		
+							<Street>SO Street</Street>		
+							<City>SO City</City>		
+							<State>TX</State>		
+							<PostalCode>SO ZIP</PostalCode>		
+							<Country isoCountryCode="US"/>		
+							<Extrinsic name="mutuallyDefined">SO What ever XYZ</Extrinsic>		
+						</PostalAddress>			
+						<Email>SOemail@xyz.com</Email>			
+						<Phone>			
+							<TelephoneNumber>		
+								<CountryCode isoCountryCode="US"/>	
+								<AreaOrCityCode/>	
+								<Number>123</Number>	
+							</TelephoneNumber>		
+						</Phone>			
+						<Fax>			
+							<TelephoneNumber>		
+								<CountryCode isoCountryCode="US"/>	
+								<AreaOrCityCode/>	
+								<Number>456</Number>	
+							</TelephoneNumber>		
+						</Fax>			
+						<URL>SOwww.URL.com</URL>			
+					</Address>				
+					<IdReference identifier="SO buyerAccountID" domain="buyerAccountID">				
+						<Description xml:lang="EN">SO Buyer Account ID Desc</Description>			
+					</IdReference>				
+					<IdReference identifier="SO Supplier ID" domain="supplierID">				
+						<Description xml:lang="EN">SO Supplier ID Desc</Description>			
+					</IdReference>				
+				</BusinessPartner>					
+				<LegalEntity>					
+					<IdReference domain="CompanyCode" identifier="CompanyCode123"/>				
+				</LegalEntity>					
+				<OrganizationalUnit>					
+					<IdReference domain="PurchasingOrganization" identifier="PurchasingOrganization123"/>				
+				</OrganizationalUnit>					
+				<OrganizationalUnit>					
+					<IdReference domain="PurchasingGroup" identifier="PurchasingGroup123"/>				
+				</OrganizationalUnit>					
+				<Shipping trackingDomain="UPS" trackingId="TrackingID" tracking="Tracking">					
+					<Money currency="USD" alternateCurrency="EUR" alternateAmount="123.1">123</Money>				
+					<Description xml:lang="en">Shipping Description</Description>				
+				</Shipping>					
+				<Tax>					
+					<Money currency="USD" alternateCurrency="USD" alternateAmount="70.01">70</Money>				
+					<Description xml:lang="en-us" type="text"/>				
+					<TaxDetail purpose="tax" category="gst" isVatRecoverable="yes" isTriangularTransaction="yes" percentageRate="7" exemptDetail="zeroRated" taxPointDate="2019-09-02T12:01:00+00:00" paymentDate="2019-09-02T12:02:00+00:00">				
+						<TaxableAmount>			
+							<Money currency="USD">70</Money>		
+						</TaxableAmount>			
+						<TaxAmount>			
+							<Money currency="USD">7</Money>		
+						</TaxAmount>			
+						<TaxLocation xml:lang="en">Tax Loc</TaxLocation>			
+						<Description xml:lang="en">Tax Description</Description>			
+					</TaxDetail>				
+				</Tax>					
+				<Payment>					
+					<PCard number="123456" name="PCard Name" expiration="2022-02-02T22:22:00+00:00"/>				
+				</Payment>					
+				<PaymentTerm payInNumberOfDays="30">					
+					<Discount>				
+						<DiscountPercent percent="3"/>			
+					</Discount>				
+				</PaymentTerm>					
+				<Contact role="supplierCorporate">					
+					<Name xml:lang="en">SU Name</Name>				
+					<IdReference identifier="accountReceivableID" domain="accountReceivableID"/>				
+				</Contact>					
+				<Contact role="buyer">					
+					<Name xml:lang="en">BY Name</Name>				
+					<Email>BYemail@xyz.com</Email>				
+					<Phone>				
+						<TelephoneNumber>			
+							<CountryCode isoCountryCode="US"/>		
+							<AreaOrCityCode>269</AreaOrCityCode>		
+							<Number>385 2600</Number>		
+						</TelephoneNumber>			
+					</Phone>				
+					<IdReference identifier="accountPayableID" domain="accountPayableID"/>				
+				</Contact>					
+				<Comments xml:lang="en">Header Comments1</Comments>					
+				<Comments type="Type1" xml:lang="en">Header Comment Type1</Comments>					
+				<Comments type="Type2" xml:lang="en">Header Comment Type2</Comments>					
+				<ControlKeys>					
+					<OCInstruction value="allowed">				
+						<Lower>			
+							<Tolerances>		
+								<TimeTolerance limit="10" type="days"/>	
+							</Tolerances>		
+						</Lower>			
+						<Upper>			
+							<Tolerances>		
+								<TimeTolerance limit="20" type="days"/>	
+							</Tolerances>		
+						</Upper>			
+					</OCInstruction>				
+					<ASNInstruction value="allowed"/>				
+					<InvoiceInstruction value="allowed" verificationType="goodsReceipt" unitPriceEditable="yes"/>				
+					<SESInstruction value="allowed" unitPriceEditable="yes"/>				
+				</ControlKeys>					
+				<SupplierOrderInfo orderID="Supplier Order ID" orderDate="2019-10-01T12:00:00+00:00"/>					
+				<TermsOfDelivery>					
+					<TermsOfDeliveryCode value="TransportCondition"/>				
+					<ShippingPaymentMethod value="Other">true</ShippingPaymentMethod>				
+					<TransportTerms value="Other">FTX DIN Text</TransportTerms>				
+					<Address>				
+						<Name xml:lang="en">Destination</Name>			
+					</Address>				
+					<Comments xml:lang="en" type="TermsOfDelivery">Terms Of Delivery Comments</Comments>				
+					<Comments xml:lang="en" type="Transport">Transport Comments</Comments>				
+				</TermsOfDelivery>					
+				<DeliveryPeriod>					
+					<Period startDate="2019-10-03T12:00:00+00:00" endDate="2019-10-03T20:00:00+00:00"/>				
+				</DeliveryPeriod>					
+				<IdReference identifier="Customer Ref ID" domain="CustomerReferenceID"/>					
+				<IdReference identifier="Ultimate Customer Ref ID" domain="UltimateCustomerReferenceID"/>					
+				<IdReference identifier="Additional Ref ID" domain="AdditionalReferenceID"/>					
+				<OrderRequestHeaderIndustry>					
+					<Priority level="1" sequence="S1">				
+						<Description xml:lang="en">Priority Description</Description>			
+					</Priority>				
+					<ExternalDocumentType documentType="docType">				
+						<Description xml:lang="en">External Document</Description>			
+					</ExternalDocumentType>				
+				</OrderRequestHeaderIndustry>					
+				<Extrinsic name="OriginalId">Original Order ID</Extrinsic>					
+				<Extrinsic name="buyerVatID">BY VAT ID</Extrinsic>					
+				<Extrinsic name="supplierVatID">SU VAT ID</Extrinsic>					
+				<Extrinsic name="mutuallyDefined">what ever text</Extrinsic>					
+			</OrderRequestHeader>						
+			<ItemOut quantity="1.000" lineNumber="00010" requestedDeliveryDate="2019-10-01T12:00:00+00:00" itemType="composite" compositeItemType="itemLevel" itemClassification="material" itemCategory="subcontract" subcontractingType="regular" agreementItemNumber="011" requisitionID="Requision ID1" requestedShipmentDate="2019-10-01T01:00:00+00:00" isDeliveryCompleted="yes">					
+				<ItemID>					
+					<SupplierPartID>Supplier Part ID1</SupplierPartID>				
+					<SupplierPartAuxiliaryID></SupplierPartAuxiliaryID>				
+					<BuyerPartID>Buyer Part ID1</BuyerPartID>				
+					<IdReference identifier="EAN ID1" domain=""/>				
+				</ItemID>					
+				<ItemDetail>					
+					<UnitPrice>				
+						<Money currency="USD" alternateCurrency="EUR" alternateAmount="100.1">100</Money>			
+						<Modifications>			
+							<Modification>		
+								<OriginalPrice type="OP type">	
+									<Money currency="USD">100</Money>
+								</OriginalPrice>	
+								<AdditionalCost>	
+									<Money currency="USD">1</Money>
+								</AdditionalCost>	
+								<ModificationDetail name="Charge" startDate="2019-09-01T12:00:00+00:00" endDate="2019-09-11T12:00:00+00:00">	
+									<Description xml:lang="en">Charge Descr</Description>
+								</ModificationDetail>	
+							</Modification>		
+							<Modification>		
+								<AdditionalCost>	
+									<Percentage percent="2">1</Percentage>
+								</AdditionalCost>	
+								<ModificationDetail name="Allowance" startDate="2019-09-02T12:00:00+00:00" endDate="2019-09-12T12:00:00+00:00">	
+									<Description xml:lang="en">Allowance Descr</Description>
+								</ModificationDetail>	
+							</Modification>		
+						</Modifications>			
+					</UnitPrice>				
+					<Description xml:lang="en">Description1</Description>				
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<PriceBasisQuantity quantity="1" conversionFactor="1">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+						<Description xml:lang="en">PBQ Description1</Description>			
+					</PriceBasisQuantity>				
+					<Classification domain="UNSPSC" code="UNSPSC Code1">UNSPSC ID1</Classification>				
+					<Classification domain="NotAvailable">Class ID1</Classification>				
+					<ManufacturerPartID>Manufacturer Part ID1</ManufacturerPartID>				
+					<ManufacturerName>Manufacturer Name1</ManufacturerName>				
+					<URL name="URL Name">URL Address</URL>				
+					<LeadTime>10</LeadTime>				
+					<Dimension quantity="100" type="weight">				
+						<UnitOfMeasure>KGM</UnitOfMeasure>			
+					</Dimension>				
+					<Dimension quantity="100.1" type="volume">				
+						<UnitOfMeasure>LTR</UnitOfMeasure>			
+					</Dimension>				
+					<ItemDetailIndustry isConfigurableMaterial="yes">				
+						<ItemDetailRetail>			
+							<EANID></EANID>		
+									
+						<EuropeanWasteCatalogID>asd</EuropeanWasteCatalogID></ItemDetailRetail>			
+					</ItemDetailIndustry>				
+					<PlannedAcceptanceDays>30</PlannedAcceptanceDays>				
+					<Extrinsic name="mutuallyDefined">what ever text</Extrinsic>				
+				</ItemDetail>					
+				<SupplierID domain="DUNS">Supplier ID1</SupplierID>					
+				<ShipTo>					
+					<Address>				
+						<Name xml:lang="en">ST Name1</Name>			
+					</Address>				
+					<CarrierIdentifier domain="XYZ">UPS1</CarrierIdentifier>				
+					<TransportInformation>				
+						<Route method="motor" means="truck">truck</Route>			
+						<ShippingContractNumber>Ship Contract ID1</ShippingContractNumber>			
+						<ShippingInstructions>			
+							<Description xml:lang="en">Shipping Instructions1</Description>		
+						</ShippingInstructions>			
+					</TransportInformation>				
+				</ShipTo>					
+				<Shipping trackingDomain="UPS" trackingId="TrackingID1" tracking="Tracking1">					
+					<Money currency="USD" alternateCurrency="EUR" alternateAmount="123.1">123</Money>				
+					<Description xml:lang="en">Shipping Description1</Description>				
+				</Shipping>					
+				<Tax>					
+					<Money currency="USD">10</Money>				
+					<Description xml:lang="en-us" type="text"/>				
+					<TaxDetail purpose="tax" category="gst" isVatRecoverable="yes" isTriangularTransaction="yes" percentageRate="1" exemptDetail="zeroRated" taxPointDate="2019-09-02T12:01:00+00:00" paymentDate="2019-09-02T12:02:00+00:00">				
+						<TaxableAmount>			
+							<Money currency="USD">10</Money>		
+						</TaxableAmount>			
+						<TaxAmount>			
+							<Money currency="USD">1</Money>		
+						</TaxAmount>			
+						<TaxLocation xml:lang="en">Tax Loc1</TaxLocation>			
+						<Description xml:lang="en">Tax Description1</Description>			
+					</TaxDetail>				
+				</Tax>					
+				<Distribution>					
+					<Accounting name="name">				
+						<AccountingSegment id="DisID">			
+							<Name xml:lang="en-us">DisName</Name>		
+							<Description xml:lang="en-us">Distribution Description</Description>		
+						</AccountingSegment>			
+						<AccountingSegment id="DisID2">			
+							<Name xml:lang="en-us">N/A</Name>		
+							<Description xml:lang="en-us">N/A</Description>		
+						</AccountingSegment>			
+					</Accounting>				
+					<Charge>				
+						<Money currency="USD">1.12</Money>			
+					</Charge>				
+				</Distribution>					
+				<TermsOfDelivery>					
+					<TermsOfDeliveryCode value="TransportCondition"/>				
+					<ShippingPaymentMethod value="Other">true</ShippingPaymentMethod>				
+					<TransportTerms value="Other">REF0L FOB05 Text1</TransportTerms>				
+					<Address>				
+						<Name xml:lang="en">Destination</Name>			
+					</Address>				
+				</TermsOfDelivery>					
+				<Comments xml:lang="en">Item Comments1.1</Comments>					
+				<Comments type="Type1.1" xml:lang="en">Item Comment Type1.1</Comments>					
+				<Comments type="Type1.2" xml:lang="en">Item Comment Type1.2</Comments>					
+				<ControlKeys>					
+					<OCInstruction value="allowed">				
+						<Lower>			
+							<Tolerances>		
+								<TimeTolerance limit="10" type="days"/>	
+							</Tolerances>		
+						</Lower>			
+						<Upper>			
+							<Tolerances>		
+								<TimeTolerance limit="20" type="days"/>	
+							</Tolerances>		
+						</Upper>			
+					</OCInstruction>				
+					<ASNInstruction value="allowed"/>				
+					<InvoiceInstruction value="allowed" verificationType="goodsReceipt" unitPriceEditable="yes"/>				
+					<SESInstruction value="allowed" unitPriceEditable="yes"/>				
+				</ControlKeys>					
+				<ScheduleLine quantity="1.000" requestedDeliveryDate="2019-11-01T12:00:00+00:00" lineNumber="0001">					
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<ScheduleLineReleaseInfo commitmentCode="firm" cumulativeScheduledQuantity="100">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</ScheduleLineReleaseInfo>				
+					<SubcontractingComponent quantity="100101.000" requirementDate="2019-10-01T01:00:00+00:00" materialProvisionIndicator="regular">				
+						<ComponentID>100101</ComponentID>			
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+						<Description xml:lang="en">CompDescrip 100101</Description>			
+						<Product>			
+							<SupplierPartID>CompSupplierPart 100101</SupplierPartID>		
+							<SupplierPartAuxiliaryID>CompSupplierAuxPart 100101</SupplierPartAuxiliaryID>		
+							<BuyerPartID>CompBuyerPart 100101</BuyerPartID>		
+						</Product>			
+						<ProductRevisionID>CompProductRevision 100101</ProductRevisionID>			
+						<Batch batchQuantity="101" originCountryCode="US" expirationDate="2021-10-01T11:00:00+00:00" productionDate="2019-10-01T11:00:00+00:00" inspectionDate="2019-11-01T11:00:00+00:00" shelfLife="P1Y10M1DT100H10M1S">		
+							<BuyerBatchID></BuyerBatchID>		
+							<SupplierBatchID>Supplier 100101</SupplierBatchID>		
+						</Batch>			
+					</SubcontractingComponent>				
+					<SubcontractingComponent quantity="100102.000" requirementDate="2019-10-01T02:00:00+00:00" materialProvisionIndicator="regular">				
+						<ComponentID>100102</ComponentID>			
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+						<Description xml:lang="en">CompDescrip 100102</Description>			
+						<Product>			
+							<SupplierPartID>CompSupplierPart 100102</SupplierPartID>		
+							<SupplierPartAuxiliaryID>CompSupplierAuxPart 100102</SupplierPartAuxiliaryID>		
+							<BuyerPartID>CompBuyerPart 100102</BuyerPartID>		
+						</Product>			
+						<ProductRevisionID>CompProductRevision 100102</ProductRevisionID>			
+						<Batch batchQuantity="102" originCountryCode="US" expirationDate="2021-10-01T12:00:00+00:00" productionDate="2019-10-01T12:00:00+00:00" inspectionDate="2019-11-01T12:00:00+00:00" shelfLife="P1Y10M1DT100H10M2S">		
+							<BuyerBatchID>BuyerBatch 100102</BuyerBatchID>		
+							<SupplierBatchID>SupplierBatch 100102</SupplierBatchID>		
+						</Batch>			
+					</SubcontractingComponent>				
+				</ScheduleLine>					
+				<ScheduleLine quantity="2.000" requestedDeliveryDate="2019-11-02T12:00:00+00:00" lineNumber="0002">					
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<ScheduleLineReleaseInfo commitmentCode="tradeoff" cumulativeScheduledQuantity="1020">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</ScheduleLineReleaseInfo>				
+					<SubcontractingComponent quantity="100201" requirementDate="2019-10-02T01:00:00+00:00" materialProvisionIndicator="regular">				
+						<ComponentID>100201</ComponentID>			
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+						<Description xml:lang="en">CompDescrip 100201</Description>			
+						<Product>			
+							<SupplierPartID>CompSupplierPart 100201</SupplierPartID>		
+							<SupplierPartAuxiliaryID>CompSupplierAuxPart 100201</SupplierPartAuxiliaryID>		
+							<BuyerPartID>CompBuyerPart 100201</BuyerPartID>		
+						</Product>			
+						<ProductRevisionID>CompProductRevision 100201</ProductRevisionID>			
+						<Batch batchQuantity="201" originCountryCode="US" expirationDate="2021-10-02T11:00:00+00:00" productionDate="2019-10-02T11:00:00+00:00" inspectionDate="2019-11-02T11:00:00+00:00" shelfLife="P2Y10M1DT100H10M1S">		
+							<BuyerBatchID>Buyer Batch 100201</BuyerBatchID>		
+							<SupplierBatchID>Supplier 100201</SupplierBatchID>		
+						</Batch>			
+					</SubcontractingComponent>				
+					<SubcontractingComponent quantity="100202" requirementDate="2019-10-02T01:00:00+00:00" materialProvisionIndicator="regular">				
+						<ComponentID>100202</ComponentID>			
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+						<Description xml:lang="en">CompDescrip 1002021</Description>			
+						<Product>			
+							<SupplierPartID>CompSupplierPart 100202</SupplierPartID>		
+							<SupplierPartAuxiliaryID>CompSupplierAuxPart 100202</SupplierPartAuxiliaryID>		
+							<BuyerPartID>CompBuyerPart 100202</BuyerPartID>		
+						</Product>			
+						<ProductRevisionID>CompProductRevision 100202</ProductRevisionID>			
+						<Batch batchQuantity="202" originCountryCode="US" expirationDate="2021-10-02T12:00:00+00:00" productionDate="2019-10-02T12:00:00+00:00" inspectionDate="2019-11-02T12:00:00+00:00" shelfLife="P2Y10M1DT100H10M1S">		
+							<BuyerBatchID>Buyer Batch 100202</BuyerBatchID>		
+							<SupplierBatchID>Supplier 100202</SupplierBatchID>		
+						</Batch>			
+					</SubcontractingComponent>				
+				</ScheduleLine>					
+				<ScheduleLine quantity="3.000" requestedDeliveryDate="2019-11-03T12:00:00+00:00" lineNumber="0003" deliveryWindow="3">					
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<ScheduleLineReleaseInfo commitmentCode="forecast" cumulativeScheduledQuantity="103">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</ScheduleLineReleaseInfo>				
+				</ScheduleLine>					
+				<ItemOutIndustry requiresRealTimeConsumption="yes" isHUMandatory="yes">					
+					<ItemOutRetail>				
+						<PromotionDealID>Promo Deal ID1</PromotionDealID>			
+					</ItemOutRetail>				
+					<QualityInfo requiresQualityProcess="yes">				
+						<CertificateInfo>			
+							<IdReference identifier="Certificate Type1" domain="certificateType">		
+								<Description xml:lang="en">Certificate Type Descr1</Description>	
+							</IdReference>		
+						</CertificateInfo>			
+					</QualityInfo>				
+					<SerialNumberInfo requiresSerialNumber="yes" type="list">				
+					</SerialNumberInfo>				
+					<BatchInfo requiresBatch="yes"/>				
+				</ItemOutIndustry>					
+				<Packaging>					
+					<Dimension quantity="100" type="weight">				
+						<UnitOfMeasure>KGM</UnitOfMeasure>			
+					</Dimension>				
+					<Dimension quantity="100.1" type="volume">				
+						<UnitOfMeasure>LTR</UnitOfMeasure>			
+					</Dimension>				
+					<Description xml:lang="en" type="Material">Packaging Description1</Description>				
+					<PackagingLevelCode>1</PackagingLevelCode>				
+					<PackageTypeCodeIdentifierCode>CT</PackageTypeCodeIdentifierCode>				
+					<ShippingContainerSerialCode>SSCC Ref1</ShippingContainerSerialCode>				
+					<ShippingContainerSerialCodeReference>SSCC1</ShippingContainerSerialCodeReference>				
+					<PackageID>				
+						<PackageTrackingID>Package Tracking ID1</PackageTrackingID>			
+					</PackageID>				
+					<ShippingMark>Shipping Mark1</ShippingMark>				
+					<OrderedQuantity quantity="1">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</OrderedQuantity>				
+					<DispatchQuantity quantity="1">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</DispatchQuantity>				
+					<FreeGoodsQuantity quantity="10">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</FreeGoodsQuantity>				
+				</Packaging>					
+				<Batch batchQuantity="10" originCountryCode="US" expirationDate="2021-11-03T12:00:00+00:00" productionDate="2019-10-03T12:00:00+00:00" inspectionDate="2019-10-04T12:00:00+00:00" shelfLife="P0Y10M1DT100H10M1S">				
+					<BuyerBatchID>Buyer Batch ID1</BuyerBatchID>				
+					<SupplierBatchID>Supplier Batch ID1</SupplierBatchID>				
+				</Batch>					
+			</ItemOut>						
+			<ItemOut quantity="2.000" lineNumber="00020" requestedDeliveryDate="2019-10-02T12:00:00+00:00" parentLineNumber="00010" itemType="item" itemCategory="subcontract" subcontractingType="regular" itemClassification="material">					
+				<ItemID>					
+					<SupplierPartID>Supplier Part ID2</SupplierPartID>				
+					<IdReference identifier="EAN ID2" domain="EAN-13"/>				
+				</ItemID>					
+				<ItemDetail>					
+					<UnitPrice>				
+						<Money currency="USD">200</Money>			
+					</UnitPrice>				
+					<Description xml:lang="en">Description2</Description>				
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<PriceBasisQuantity quantity="2" conversionFactor="1">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</PriceBasisQuantity>				
+					<Classification domain="UNSPSC" code="UNSPSC Code2">UNSPSC ID2</Classification>				
+				</ItemDetail>					
+				<ScheduleLine quantity="2.000" requestedDeliveryDate="2019-12-01T12:00:00+00:00" lineNumber="0001">					
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<ScheduleLineReleaseInfo commitmentCode="firm" cumulativeScheduledQuantity="200">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</ScheduleLineReleaseInfo>				
+					<SubcontractingComponent quantity="200101.000" requirementDate="2019-10-02T01:00:00+00:00" materialProvisionIndicator="regular">				
+						<ComponentID>200101</ComponentID>			
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+						<Description xml:lang="en">CompDescrip 200101</Description>			
+						<Product>			
+							<SupplierPartID>CompSupplierPart 200101</SupplierPartID>		
+							<SupplierPartAuxiliaryID>CompSupplierAuxPart 200101</SupplierPartAuxiliaryID>		
+							<BuyerPartID>CompBuyerPart 200101</BuyerPartID>		
+						</Product>			
+						<ProductRevisionID>CompProductRevision 200101</ProductRevisionID>			
+						<Batch batchQuantity="201" originCountryCode="US" expirationDate="2021-10-02T11:00:00+00:00" productionDate="2019-10-02T11:00:00+00:00" inspectionDate="2019-11-02T11:00:00+00:00" shelfLife="P1Y20M1DT100H10M1S">		
+							<BuyerBatchID>Buyer Batch 200101</BuyerBatchID>		
+							<SupplierBatchID>Supplier 200101</SupplierBatchID>		
+						</Batch>			
+					</SubcontractingComponent>				
+					<SubcontractingComponent quantity="200102.000" requirementDate="2019-10-02T02:00:00+00:00" materialProvisionIndicator="regular">				
+						<ComponentID>200102</ComponentID>			
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+						<Description xml:lang="en">CompDescrip 200102</Description>			
+						<Product>			
+							<SupplierPartID>CompSupplierPart 200102</SupplierPartID>		
+							<SupplierPartAuxiliaryID>CompSupplierAuxPart 200102</SupplierPartAuxiliaryID>		
+							<BuyerPartID>CompBuyerPart 200102</BuyerPartID>		
+						</Product>			
+						<ProductRevisionID>CompProductRevision 200102</ProductRevisionID>			
+						<Batch batchQuantity="202" originCountryCode="US" expirationDate="2021-10-02T12:00:00+00:00" productionDate="2019-10-02T12:00:00+00:00" inspectionDate="2019-11-02T12:00:00+00:00" shelfLife="P1Y20M1DT100H10M2S">		
+							<BuyerBatchID>Buyer Batch 200102</BuyerBatchID>		
+							<SupplierBatchID>Supplier 200102</SupplierBatchID>		
+						</Batch>			
+					</SubcontractingComponent>				
+				</ScheduleLine>					
+			</ItemOut>						
+			<ItemOut quantity="3.000" lineNumber="00030" requestedDeliveryDate="2019-10-03T12:00:00+00:00" itemType="item" itemClassification="material" isReturn="yes" returnAuthorizationNumber="Return Auth ID3">					
+				<ItemID>					
+					<SupplierPartID>Supplier Return Part ID3</SupplierPartID>				
+					<IdReference identifier="EAN Return ID3" domain="EAN-13"/>				
+				</ItemID>					
+				<ItemDetail>					
+					<UnitPrice>				
+						<Money currency="USD">300</Money>			
+					</UnitPrice>				
+					<Description xml:lang="en">Return Description3</Description>				
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<PriceBasisQuantity quantity="3" conversionFactor="1">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</PriceBasisQuantity>				
+					<Classification domain="UNSPSC" code="Return UNSPSC Code3">Return UNSPSC ID3</Classification>				
+				</ItemDetail>					
+			</ItemOut>						
+			<ItemOut quantity="400.000" lineNumber="00040" requestedDeliveryDate="2019-10-04T12:00:00+00:00" itemType="lean" requiresServiceEntry="yes" itemClassification="service">					
+				<ItemID>					
+					<SupplierPartID>Supplier Service ID</SupplierPartID>				
+				</ItemID>					
+				<ItemDetail>					
+					<UnitPrice>				
+						<Money currency="USD">4000</Money>			
+					</UnitPrice>				
+					<Description xml:lang="en">Service Description</Description>				
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<PriceBasisQuantity quantity="4" conversionFactor="1">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</PriceBasisQuantity>				
+					<Classification domain="">Service Class ID</Classification>				
+				</ItemDetail>					
+				<SpendDetail>					
+					<Extrinsic name="mutuallyDefined">what ever text</Extrinsic>				
+				</SpendDetail>					
+			</ItemOut>						
+			<ItemOut quantity="500.000" lineNumber="00050" requestedDeliveryDate="2019-10-05T12:00:00+00:00" itemType="item" itemClassification="material">					
+				<ItemID>					
+					<SupplierPartID>Supplier Part ID5</SupplierPartID>				
+					<IdReference identifier="EAN ID5" domain="EAN-13"/>				
+				</ItemID>					
+				<BlanketItemDetail>					
+					<Description xml:lang="en">Description5</Description>				
+					<MaxAmount>				
+						<Money currency="USD">10000</Money>			
+					</MaxAmount>				
+					<MinAmount>				
+						<Money currency="USD">1</Money>			
+					</MinAmount>				
+					<MaxQuantity>1000</MaxQuantity>				
+					<MinQuantity>1</MinQuantity>				
+					<UnitPrice>				
+						<Money currency="USD" alternateCurrency="EUR" alternateAmount="500.1">500</Money>			
+						<Modifications>			
+							<Modification>		
+								<OriginalPrice type="OP type">	
+									<Money currency="USD">500</Money>
+								</OriginalPrice>	
+								<AdditionalCost>	
+									<Money currency="USD">5</Money>
+								</AdditionalCost>	
+								<ModificationDetail name="Charge" startDate="2019-09-05T12:00:00+00:00" endDate="2019-09-15T12:00:00+00:00">	
+									<Description xml:lang="en">Charge Descr</Description>
+								</ModificationDetail>	
+							</Modification>		
+							<Modification>		
+								<AdditionalDeduction>	
+									<DeductionPercent percent="5"/>
+								</AdditionalDeduction>	
+								<ModificationDetail name="Allowance" startDate="2019-09-15T12:00:00+00:00" endDate="2019-09-25T12:00:00+00:00">	
+									<Description xml:lang="en">Allowance Descr</Description>
+								</ModificationDetail>	
+							</Modification>		
+						</Modifications>			
+					</UnitPrice>				
+					<UnitOfMeasure>EA</UnitOfMeasure>				
+					<PriceBasisQuantity quantity="5" conversionFactor="1">				
+						<UnitOfMeasure>EA</UnitOfMeasure>			
+					</PriceBasisQuantity>				
+					<Classification domain="UNSPSC" code="UNSPSC Code5">UNSPSC ID1</Classification>				
+					<Classification domain="NotAvailable">Class ID5</Classification>				
+					<Extrinsic name="mutuallyDefined">what ever text</Extrinsic>				
+				</BlanketItemDetail>					
+			</ItemOut>						
+		</OrderRequest>							
+	</Request>								
+</cXML>									

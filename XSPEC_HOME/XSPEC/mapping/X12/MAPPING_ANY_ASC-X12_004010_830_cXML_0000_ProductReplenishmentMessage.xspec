@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_830_cXML_0000_ProductReplenishmentMessage.xsl">
+    <x:scenario label="Transport Confirmation Request - Inventory - 1">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ProductReplenishment/ProductReplenishment_830_Inventory_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ProductReplenishment/ProductReplenishment_830_Inventory_AM.dat"
+            select="element()" label="Transport Confirmation Request - Inventory - 1"/>
+    </x:scenario>
+    
+    <x:scenario label="Transport Confirmation Request - Inventory - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ProductReplenishment/ProductReplenishment_830_Inventory_2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ProductReplenishment/ProductReplenishment_830_Inventory_2_AM.dat"
+            select="element()" label="Transport Confirmation Request - Inventory - 2"/>
+    </x:scenario>
+    
+    <x:scenario label="Transport Confirmation Request - Forecast">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ProductReplenishment/ProductReplenishment_830_Forecast_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ProductReplenishment/ProductReplenishment_830_Forecast_AM.dat"
+            select="element()" label="Transport Confirmation Request - Forecast"/>
+    </x:scenario>
+    
+</x:description>

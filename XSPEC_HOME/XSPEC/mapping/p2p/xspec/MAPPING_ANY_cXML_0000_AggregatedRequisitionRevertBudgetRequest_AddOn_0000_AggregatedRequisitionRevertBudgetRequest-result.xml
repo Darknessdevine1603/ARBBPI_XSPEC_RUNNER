@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_AggregatedRequisitionRevertBudgetRequest_AddOn_0000_AggregatedRequisitionRevertBudgetRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_AggregatedRequisitionRevertBudgetRequest_AddOn_0000_AggregatedRequisitionRevertBudgetRequest.xsl"
+        date="2023-04-27T15:36:03.937643+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_AggregatedRequisitionRevertBudgetRequest_AddOn_0000_AggregatedRequisitionRevertBudgetRequest.xspec">
+      <label>Scenario for Aggregated Requisition Revert Budget Async Export Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/AggregatedRequisitionRevertBugdet/AggregatedRequisitionRevertBudgetAsyncExportRequest_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_BATCH_PURREQ_DELETE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_REQ_NO>SAP3PR3193</ARIBA_REQ_NO>
+               <PARTITION>prealm_140</PARTITION>
+               <VARIANT>vrealm_140</VARIANT>
+               <PRITEM>
+                  <item>
+                     <PREQ_NO>0010030043</PREQ_NO>
+                     <PREQ_ITEM>00010</PREQ_ITEM>
+                     <ARIBA_ITEM>1</ARIBA_ITEM>
+                  </item>
+               </PRITEM>
+            </n0:ARBCIG_BATCH_PURREQ_DELETE>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Aggregated Requisition Revert Budget Async Export Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_BATCH_PURREQ_DELETE xmlns:ns0="urn:Ariba:Buyer:vsap"
+                                              xmlns:n0="urn:sap-com:document:sap:rfc:functions"
+                                              xmlns:prx="urn:sap.com:proxy:NWC:/1SAI/TXS64C2D49B5B68986CABB0:700:2010/02/19">
+                  <ARIBA_REQ_NO>SAP3PR3193</ARIBA_REQ_NO>
+                  <PARTITION>prealm_140</PARTITION>
+                  <VARIANT>vrealm_140</VARIANT>
+                  <PRITEM>
+                     <item>
+                        <PREQ_NO>0010030043</PREQ_NO>
+                        <PREQ_ITEM>00010</PREQ_ITEM>
+                        <ARIBA_ITEM>1</ARIBA_ITEM>
+                     </item>
+                  </PRITEM>
+               </n0:ARBCIG_BATCH_PURREQ_DELETE>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_OAGIS_9.2_NotifyInventoryBalance_cXML_0000_ProductReplenishmentMessage.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/OAGIS/MAPPING_ANY_OAGIS_9.2_NotifyInventoryBalance_cXML_0000_ProductReplenishmentMessage.xsl"
+        date="2023-04-27T15:59:30.255978+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_OAGIS_9.2_NotifyInventoryBalance_cXML_0000_ProductReplenishmentMessage.xspec">
+      <label>Notify Inventory Balance Product Replenishment Message</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/OAGIS/ProductReplenishment/ProductReplenishmentNotifyInventory_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:59:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02003013907-T</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02003013906-T</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkId">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Message deploymentMode="test">
+                  <ProductReplenishmentMessage>
+                     <ProductReplenishmentHeader creationDate="2016-07-11T10:11:12-00:00"
+                                                 messageID="RIT-OAGIS.NotifyInventoryBalance.01"/>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part Number</SupplierPartID>
+                           <BuyerPartID>Buyer Part Number</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="en-US">Free-form Description Text</Description>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en-US">Buyer Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                           <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                        </Contact>
+                        <Contact role="inventoryOwner">
+                           <Name xml:lang="en-US">Invenotry Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                        </Contact>
+                        <Inventory>
+                           <UnrestrictedUseQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </UnrestrictedUseQuantity>
+                        </Inventory>
+                        <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                     </ProductReplenishmentDetails>
+                  </ProductReplenishmentMessage>
+               </Message>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Notify Inventory Balance Product Replenishment Message</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02003013907-T</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02003013906-T</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkId">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Message deploymentMode="test">
+                     <ProductReplenishmentMessage>
+                        <ProductReplenishmentHeader creationDate="2016-07-11T10:11:12-00:00"
+                                                    messageID="RIT-OAGIS.NotifyInventoryBalance.01"/>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part Number</SupplierPartID>
+                              <BuyerPartID>Buyer Part Number</BuyerPartID>
+                           </ItemID>
+                           <Description xml:lang="en-US">Free-form Description Text</Description>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en-US">Buyer Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                              <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                           </Contact>
+                           <Contact role="inventoryOwner">
+                              <Name xml:lang="en-US">Invenotry Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                           </Contact>
+                           <Inventory>
+                              <UnrestrictedUseQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </UnrestrictedUseQuantity>
+                           </Inventory>
+                           <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        </ProductReplenishmentDetails>
+                     </ProductReplenishmentMessage>
+                  </Message>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/OAGIS/MAPPING_ANY_OAGIS_9.2_NotifyInventoryBalance_cXML_0000_ProductReplenishmentMessage.xspec">
+      <label>Notify Inventory Balance Product Replenishment Message - Prod</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/OAGIS/ProductReplenishment/ProductReplenishmentNotifyInventoryProd_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <cXML timestamp="2023-04-27T15:59:30" payloadID="">
+               <Header>
+                  <From>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02003013907-T</Identity>
+                     </Credential>
+                     <Credential domain="VendorID">
+                        <Identity>SenderKey</Identity>
+                     </Credential>
+                     <Credential domain="PrivateID">
+                        <Identity>SenderKey</Identity>
+                     </Credential>
+                  </From>
+                  <To>
+                     <Credential domain="NetworkID">
+                        <Identity>AN02003013906-T</Identity>
+                     </Credential>
+                  </To>
+                  <Sender>
+                     <Credential domain="NetworkId">
+                        <Identity>AN01000000087</Identity>
+                     </Credential>
+                     <UserAgent>Ariba Supplier</UserAgent>
+                  </Sender>
+               </Header>
+               <Message deploymentMode="production">
+                  <ProductReplenishmentMessage>
+                     <ProductReplenishmentHeader creationDate="2016-07-11T10:11:12-00:00"
+                                                 messageID="RIT-OAGIS.NotifyInventoryBalance.01"/>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part Number</SupplierPartID>
+                           <BuyerPartID>Buyer Part Number</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="en-US">Free-form Description Text</Description>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en-US">Buyer Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                           <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                        </Contact>
+                        <Contact role="inventoryOwner">
+                           <Name xml:lang="en-US">Invenotry Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                        </Contact>
+                        <Inventory>
+                           <UnrestrictedUseQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </UnrestrictedUseQuantity>
+                        </Inventory>
+                        <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        <Extrinsic name="abc"/>
+                     </ProductReplenishmentDetails>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part Number</SupplierPartID>
+                           <BuyerPartID>Buyer Part Number</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="en-US">Free-form Description Text</Description>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en-US">Buyer Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                           <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                        </Contact>
+                        <Contact role="inventoryOwner">
+                           <Name xml:lang="en-US">Invenotry Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                        </Contact>
+                        <Inventory>
+                           <StockInTransferQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </StockInTransferQuantity>
+                        </Inventory>
+                        <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                     </ProductReplenishmentDetails>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part Number</SupplierPartID>
+                           <BuyerPartID>Buyer Part Number</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="en-US">Free-form Description Text</Description>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en-US">Buyer Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                           <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                        </Contact>
+                        <Contact role="inventoryOwner">
+                           <Name xml:lang="en-US">Invenotry Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                        </Contact>
+                        <Inventory>
+                           <QualityInspectionQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </QualityInspectionQuantity>
+                        </Inventory>
+                        <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                     </ProductReplenishmentDetails>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part Number</SupplierPartID>
+                           <BuyerPartID>Buyer Part Number</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="en-US">Free-form Description Text</Description>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en-US">Buyer Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                           <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                        </Contact>
+                        <Contact role="inventoryOwner">
+                           <Name xml:lang="en-US">Invenotry Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                        </Contact>
+                        <Inventory>
+                           <UnrestrictedUseQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </UnrestrictedUseQuantity>
+                        </Inventory>
+                        <ConsignmentInventory>
+                           <UnrestrictedUseQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </UnrestrictedUseQuantity>
+                        </ConsignmentInventory>
+                        <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                     </ProductReplenishmentDetails>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part Number</SupplierPartID>
+                           <BuyerPartID>Buyer Part Number</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="en-US">Free-form Description Text</Description>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en-US">Buyer Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                           <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                        </Contact>
+                        <Contact role="inventoryOwner">
+                           <Name xml:lang="en-US">Invenotry Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                        </Contact>
+                        <Inventory>
+                           <QualityInspectionQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </QualityInspectionQuantity>
+                        </Inventory>
+                        <ConsignmentInventory>
+                           <QualityInspectionQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </QualityInspectionQuantity>
+                        </ConsignmentInventory>
+                        <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                     </ProductReplenishmentDetails>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part Number</SupplierPartID>
+                           <BuyerPartID>Buyer Part Number</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="en-US">Free-form Description Text</Description>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en-US">Buyer Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                           <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                        </Contact>
+                        <Contact role="inventoryOwner">
+                           <Name xml:lang="en-US">Invenotry Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                        </Contact>
+                        <Inventory>
+                           <BlockedQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </BlockedQuantity>
+                        </Inventory>
+                        <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                     </ProductReplenishmentDetails>
+                     <ProductReplenishmentDetails>
+                        <ItemID>
+                           <SupplierPartID>Supplier Part Number</SupplierPartID>
+                           <BuyerPartID>Buyer Part Number</BuyerPartID>
+                        </ItemID>
+                        <Description xml:lang="en-US">Free-form Description Text</Description>
+                        <Contact role="locationTo">
+                           <Name xml:lang="en-US">Buyer Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                           <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                           <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                        </Contact>
+                        <Contact role="inventoryOwner">
+                           <Name xml:lang="en-US">Invenotry Location</Name>
+                           <PostalAddress>
+                              <Street>Address Line 1</Street>
+                              <City>City</City>
+                              <State>CA</State>
+                              <Country isoCountryCode="US"/>
+                           </PostalAddress>
+                        </Contact>
+                        <ConsignmentInventory>
+                           <BlockedQuantity quantity="100">
+                              <UnitOfMeasure>EA</UnitOfMeasure>
+                           </BlockedQuantity>
+                        </ConsignmentInventory>
+                        <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                     </ProductReplenishmentDetails>
+                  </ProductReplenishmentMessage>
+               </Message>
+            </cXML>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="false">
+         <label>Notify Inventory Balance Product Replenishment Message - Prod</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <cXML timestamp="..." payloadID="...">
+                  <Header>
+                     <From>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02003013907-T</Identity>
+                        </Credential>
+                        <Credential domain="VendorID">
+                           <Identity>SenderKey</Identity>
+                        </Credential>
+                        <Credential domain="PrivateID">
+                           <Identity>SenderKey</Identity>
+                        </Credential>
+                     </From>
+                     <To>
+                        <Credential domain="NetworkID">
+                           <Identity>AN02003013906-T</Identity>
+                        </Credential>
+                     </To>
+                     <Sender>
+                        <Credential domain="NetworkId">
+                           <Identity>AN01000000087</Identity>
+                        </Credential>
+                        <UserAgent>Ariba Supplier</UserAgent>
+                     </Sender>
+                  </Header>
+                  <Message deploymentMode="production">
+                     <ProductReplenishmentMessage>
+                        <ProductReplenishmentHeader creationDate="2016-07-11T10:11:12-00:00"
+                                                    messageID="RIT-OAGIS.NotifyInventoryBalance.01"/>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part Number</SupplierPartID>
+                              <BuyerPartID>Buyer Part Number</BuyerPartID>
+                           </ItemID>
+                           <Description xml:lang="en-US">Free-form Description Text</Description>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en-US">Buyer Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                              <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                           </Contact>
+                           <Contact role="inventoryOwner">
+                              <Name xml:lang="en-US">Invenotry Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                           </Contact>
+                           <Inventory>
+                              <UnrestrictedUseQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </UnrestrictedUseQuantity>
+                           </Inventory>
+                           <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        </ProductReplenishmentDetails>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part Number</SupplierPartID>
+                              <BuyerPartID>Buyer Part Number</BuyerPartID>
+                           </ItemID>
+                           <Description xml:lang="en-US">Free-form Description Text</Description>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en-US">Buyer Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                              <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                           </Contact>
+                           <Contact role="inventoryOwner">
+                              <Name xml:lang="en-US">Invenotry Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                           </Contact>
+                           <Inventory>
+                              <StockInTransferQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </StockInTransferQuantity>
+                           </Inventory>
+                           <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        </ProductReplenishmentDetails>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part Number</SupplierPartID>
+                              <BuyerPartID>Buyer Part Number</BuyerPartID>
+                           </ItemID>
+                           <Description xml:lang="en-US">Free-form Description Text</Description>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en-US">Buyer Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                              <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                           </Contact>
+                           <Contact role="inventoryOwner">
+                              <Name xml:lang="en-US">Invenotry Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                           </Contact>
+                           <Inventory>
+                              <QualityInspectionQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </QualityInspectionQuantity>
+                           </Inventory>
+                           <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        </ProductReplenishmentDetails>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part Number</SupplierPartID>
+                              <BuyerPartID>Buyer Part Number</BuyerPartID>
+                           </ItemID>
+                           <Description xml:lang="en-US">Free-form Description Text</Description>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en-US">Buyer Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                              <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                           </Contact>
+                           <Contact role="inventoryOwner">
+                              <Name xml:lang="en-US">Invenotry Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                           </Contact>
+                           <Inventory>
+                              <UnrestrictedUseQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </UnrestrictedUseQuantity>
+                           </Inventory>
+                           <ConsignmentInventory>
+                              <UnrestrictedUseQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </UnrestrictedUseQuantity>
+                           </ConsignmentInventory>
+                           <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        </ProductReplenishmentDetails>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part Number</SupplierPartID>
+                              <BuyerPartID>Buyer Part Number</BuyerPartID>
+                           </ItemID>
+                           <Description xml:lang="en-US">Free-form Description Text</Description>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en-US">Buyer Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                              <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                           </Contact>
+                           <Contact role="inventoryOwner">
+                              <Name xml:lang="en-US">Invenotry Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                           </Contact>
+                           <Inventory>
+                              <QualityInspectionQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </QualityInspectionQuantity>
+                           </Inventory>
+                           <ConsignmentInventory>
+                              <QualityInspectionQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </QualityInspectionQuantity>
+                           </ConsignmentInventory>
+                           <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        </ProductReplenishmentDetails>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part Number</SupplierPartID>
+                              <BuyerPartID>Buyer Part Number</BuyerPartID>
+                           </ItemID>
+                           <Description xml:lang="en-US">Free-form Description Text</Description>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en-US">Buyer Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                              <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                           </Contact>
+                           <Contact role="inventoryOwner">
+                              <Name xml:lang="en-US">Invenotry Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="inventoryOwnerID" identifier="Inventory owner ID"/>
+                           </Contact>
+                           <Inventory>
+                              <BlockedQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </BlockedQuantity>
+                           </Inventory>
+                           <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        </ProductReplenishmentDetails>
+                        <ProductReplenishmentDetails>
+                           <ItemID>
+                              <SupplierPartID>Supplier Part Number</SupplierPartID>
+                              <BuyerPartID>Buyer Part Number</BuyerPartID>
+                           </ItemID>
+                           <Description xml:lang="en-US">Free-form Description Text</Description>
+                           <Contact role="locationTo">
+                              <Name xml:lang="en-US">Buyer Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                              <IdReference domain="buyerLocationID" identifier="Buyer location ID"/>
+                              <Extrinsic name="materialStorageLocation">Item Storage Location</Extrinsic>
+                           </Contact>
+                           <Contact role="inventoryOwner">
+                              <Name xml:lang="en-US">Invenotry Location</Name>
+                              <PostalAddress>
+                                 <Street>Address Line 1</Street>
+                                 <City>City</City>
+                                 <State>CA</State>
+                                 <Country isoCountryCode="US"/>
+                              </PostalAddress>
+                           </Contact>
+                           <ConsignmentInventory>
+                              <BlockedQuantity quantity="100">
+                                 <UnitOfMeasure>EA</UnitOfMeasure>
+                              </BlockedQuantity>
+                           </ConsignmentInventory>
+                           <Extrinsic name="InventoryDate">2016-05-23T10:11:12-00:00</Extrinsic>
+                        </ProductReplenishmentDetails>
+                     </ProductReplenishmentMessage>
+                  </Message>
+               </cXML>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

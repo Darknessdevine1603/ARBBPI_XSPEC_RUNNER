@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/fieldglass/MAPPING_ANY_cXML_0000_OrderRequest_FieldGlass_0000_SOW.xsl">
+    <x:scenario label="Change Order Request">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/ChangeOrder/ChangeOrder.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/ChangeOrder/ChangeOrderSOW.dat"
+            select="element()" label="Order Enquiry"/>
+    </x:scenario>
+    <x:scenario label="Send SOWID">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/ChangeOrder/Send_SOWID.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/ChangeOrder/Send_SOWID.dat"
+            select="element()" label="Send SOWID"/>
+    </x:scenario>
+    <x:scenario label="Send_LeanSOW">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/ChangeOrder/Send_LeanSOW.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/ChangeOrder/Send_LeanSOW.dat"
+            select="element()" label="Send_LeanSOW"/>
+    </x:scenario>
+    <x:scenario label="Send_LimitSOW">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/ChangeOrder/Send_LimitSOW.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/ChangeOrder/Send_LimitSOW.dat"
+            select="element()" label="Send_LimitSOW"/>
+    </x:scenario>
+    <x:scenario label="Send_LeanQtyTolerance">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/ChangeOrder/Send_LeanQtyTolerance.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/ChangeOrder/Send_LeanQtyTolerance.dat"
+            select="element()" label="Send_LeanQtyTolerance"/>
+    </x:scenario>
+    <x:scenario label="Send_HierarchySOW_LeanQtyTolerance">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/ChangeOrder/Send_Hierarchy_LeanQtyTolerance.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/ChangeOrder/Send_Hierarchy_LeanQtyTolerance.dat"
+            select="element()" label="Send_Hierarchy_LeanQtyTolerance"/>
+    </x:scenario>
+    <x:scenario label="Send_MixedHierarchySOW">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/ChangeOrder/Send_MixedHierarchySOW.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/ChangeOrder/Send_MixedHierarchySOW.dat"
+            select="element()" label="Send_MixedHierarchySOW"/>
+    </x:scenario>
+</x:description>

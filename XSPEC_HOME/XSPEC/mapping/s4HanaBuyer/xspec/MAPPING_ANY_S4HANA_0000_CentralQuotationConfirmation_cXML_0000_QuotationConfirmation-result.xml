@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_CentralQuotationConfirmation_cXML_0000_QuotationConfirmation.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_CentralQuotationConfirmation_cXML_0000_QuotationConfirmation.xsl"
+        date="2023-04-27T15:47:54.316416+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_CentralQuotationConfirmation_cXML_0000_QuotationConfirmation.xspec">
+      <label>CentralQuotationConfirmation- Basic</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/CentralQuotationConfirmation/CentralQuotationConfirmation.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:QTNConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+               <MessageHeader>
+                  <ID>FA163EA423341EEBBBDA3BE2770F1762</ID>
+                  <UUID/>
+                  <ReferenceID/>
+                  <ReferenceUUID/>
+                  <Origin>CS</Origin>
+                  <CreationDateTime>2021-07-27T11:57:52Z</CreationDateTime>
+                  <TestDataIndicator/>
+                  <ReconciliationIndicator/>
+                  <SenderBusinessSystemID>0LOI36K</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+               </MessageHeader>
+               <QTNConfirmation>
+                  <SupplierQuotationExternalId>433251-1001214</SupplierQuotationExternalId>
+                  <SupplierQuotation>8500000535</SupplierQuotation>
+                  <LogMessage>
+                     <LogMessageCode/>
+                     <LogMessageClass/>
+                     <LogMessageSeverityCode>S</LogMessageSeverityCode>
+                     <LogMessageText>Supplier quotation has been succesfully created.</LogMessageText>
+                  </LogMessage>
+               </QTNConfirmation>
+            </n0:QTNConfirmationS4Request>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>CentralQuotationConfirmation Basic</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:QTNConfirmationS4Request xmlns:n0="http://sap.com/xi/Procurement">
+                  <MessageHeader>
+                     <ID>FA163EA423341EEBBBDA3BE2770F1762</ID>
+                     <UUID/>
+                     <ReferenceID/>
+                     <ReferenceUUID/>
+                     <Origin>CS</Origin>
+                     <CreationDateTime>2021-07-27T11:57:52Z</CreationDateTime>
+                     <TestDataIndicator/>
+                     <ReconciliationIndicator/>
+                     <SenderBusinessSystemID>0LOI36K</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                  </MessageHeader>
+                  <QTNConfirmation>
+                     <SupplierQuotationExternalId>433251-1001214</SupplierQuotationExternalId>
+                     <SupplierQuotation>8500000535</SupplierQuotation>
+                     <LogMessage>
+                        <LogMessageCode/>
+                        <LogMessageClass/>
+                        <LogMessageSeverityCode>S</LogMessageSeverityCode>
+                        <LogMessageText>Supplier quotation has been succesfully created.</LogMessageText>
+                     </LogMessage>
+                  </QTNConfirmation>
+               </n0:QTNConfirmationS4Request>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

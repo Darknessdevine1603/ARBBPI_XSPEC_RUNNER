@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_PurchaseContractStatusUpdateRequestImportRequest_cXML_0000_PurchaseContractStatusUpdateRequestImportRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_PurchaseContractStatusUpdateRequestImportRequest_cXML_0000_PurchaseContractStatusUpdateRequestImportRequest.xsl"
+        date="2023-04-27T15:44:58.167079+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_PurchaseContractStatusUpdateRequestImportRequest_cXML_0000_PurchaseContractStatusUpdateRequestImportRequest.xspec">
+      <label>PurchaseContractUpdateNotification ERROR</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:PurchaseContractStatusUpdateRequestImportRequest xmlns:urn="urn:Ariba:Sourcing:vsap">
+               <urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+                  <urn:item>
+                     <urn:MessageHeader>
+                        <urn:ANID/>
+                        <urn:BusinessSystemID>0LOI36K</urn:BusinessSystemID>
+                        <urn:PayloadID>FA163E9771F91EDC80B28231DBE9B7C8</urn:PayloadID>
+                        <urn:RealmID>AN02005451658-T</urn:RealmID>
+                     </urn:MessageHeader>
+                     <urn:ContractStatusUpdateRequest>
+                        <urn:ContractStatus>
+                           <urn:ContractDate>2021-08-20T08:53:21Z</urn:ContractDate>
+                           <urn:ContractID>CW7309</urn:ContractID>
+                           <urn:Reference>
+                              <urn:Domain>SAPAgreementId</urn:Domain>
+                              <urn:Identifier/>
+                           </urn:Reference>
+                           <urn:ExternalApprovalStatus/>
+                           <urn:Operation>update</urn:Operation>
+                        </urn:ContractStatus>
+                        <urn:ContractItemStatus>
+                           <urn:item>
+                              <urn:Reference>
+                                 <urn:Domain/>
+                                 <urn:Identifier/>
+                              </urn:Reference>
+                              <urn:ReferenceDocInfoLineNumber/>
+                              <urn:Operation/>
+                           </urn:item>
+                        </urn:ContractItemStatus>
+                        <urn:Status>
+                           <urn:Message>[INFORMATION]Item 00010 (external ID  ) is faulty. Please check the following messages:[ERROR]Purchasing organization 1010 not responsible for plant 1710[ERROR]Enter a valid Order Price Un. for item 00010</urn:Message>
+                           <urn:Status>406</urn:Status>
+                        </urn:Status>
+                     </urn:ContractStatusUpdateRequest>
+                  </urn:item>
+               </urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+            </urn:PurchaseContractStatusUpdateRequestImportRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>InvoiceStatusUpdate</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:PurchaseContractStatusUpdateRequestImportRequest xmlns:urn="urn:Ariba:Sourcing:vsap">
+                  <urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+                     <urn:item>
+                        <urn:MessageHeader>
+                           <urn:ANID/>
+                           <urn:BusinessSystemID>0LOI36K</urn:BusinessSystemID>
+                           <urn:PayloadID>FA163E9771F91EDC80B28231DBE9B7C8</urn:PayloadID>
+                           <urn:RealmID>AN02005451658-T</urn:RealmID>
+                        </urn:MessageHeader>
+                        <urn:ContractStatusUpdateRequest>
+                           <urn:ContractStatus>
+                              <urn:ContractDate>...</urn:ContractDate>
+                              <urn:ContractID>CW7309</urn:ContractID>
+                              <urn:Reference>
+                                 <urn:Domain>SAPAgreementId</urn:Domain>
+                                 <urn:Identifier/>
+                              </urn:Reference>
+                              <urn:ExternalApprovalStatus/>
+                              <urn:Operation>update</urn:Operation>
+                           </urn:ContractStatus>
+                           <urn:ContractItemStatus>
+                              <urn:item>
+                                 <urn:Reference>
+                                    <urn:Domain/>
+                                    <urn:Identifier/>
+                                 </urn:Reference>
+                                 <urn:ReferenceDocInfoLineNumber/>
+                                 <urn:Operation/>
+                              </urn:item>
+                           </urn:ContractItemStatus>
+                           <urn:Status>
+                              <urn:Message>[INFORMATION]Item 00010 (external ID  ) is faulty. Please check the following messages:[ERROR]Purchasing organization 1010 not responsible for plant 1710[ERROR]Enter a valid Order Price Un. for item 00010</urn:Message>
+                              <urn:Status>406</urn:Status>
+                           </urn:Status>
+                        </urn:ContractStatusUpdateRequest>
+                     </urn:item>
+                  </urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+               </urn:PurchaseContractStatusUpdateRequestImportRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_PurchaseContractStatusUpdateRequestImportRequest_cXML_0000_PurchaseContractStatusUpdateRequestImportRequest.xspec">
+      <label>PurchaseContractUpdateNotification with Item</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification1_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:PurchaseContractStatusUpdateRequestImportRequest xmlns:urn="urn:Ariba:Sourcing:vsap">
+               <urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+                  <urn:item>
+                     <urn:MessageHeader>
+                        <urn:ANID/>
+                        <urn:BusinessSystemID>0LOI36K</urn:BusinessSystemID>
+                        <urn:PayloadID>FA163EC18E9E1EEBB8F33D687112F516</urn:PayloadID>
+                        <urn:RealmID>AN02005451658-T</urn:RealmID>
+                     </urn:MessageHeader>
+                     <urn:ContractStatusUpdateRequest>
+                        <urn:ContractStatus>
+                           <urn:ContractDate>2021-07-13T05:19:38Z</urn:ContractDate>
+                           <urn:ContractID>CW7135</urn:ContractID>
+                           <urn:Reference>
+                              <urn:Domain>SAPAgreementId</urn:Domain>
+                              <urn:Identifier>4700001717</urn:Identifier>
+                           </urn:Reference>
+                           <urn:ExternalApprovalStatus>02</urn:ExternalApprovalStatus>
+                           <urn:Operation>update</urn:Operation>
+                        </urn:ContractStatus>
+                        <urn:ContractItemStatus>
+                           <urn:item>
+                              <urn:Reference>
+                                 <urn:Domain>SAPLineNumber</urn:Domain>
+                                 <urn:Identifier>00010</urn:Identifier>
+                              </urn:Reference>
+                              <urn:ReferenceDocInfoLineNumber>1</urn:ReferenceDocInfoLineNumber>
+                              <urn:Operation>update</urn:Operation>
+                           </urn:item>
+                        </urn:ContractItemStatus>
+                        <urn:Status>
+                           <urn:Message>[SUCCESS]Quantity Contract created under the number 4700001717</urn:Message>
+                           <urn:Status>200</urn:Status>
+                        </urn:Status>
+                     </urn:ContractStatusUpdateRequest>
+                  </urn:item>
+               </urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+            </urn:PurchaseContractStatusUpdateRequestImportRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>InvoiceStatusUpdate</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:PurchaseContractStatusUpdateRequestImportRequest xmlns:urn="urn:Ariba:Sourcing:vsap">
+                  <urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+                     <urn:item>
+                        <urn:MessageHeader>
+                           <urn:ANID/>
+                           <urn:BusinessSystemID>0LOI36K</urn:BusinessSystemID>
+                           <urn:PayloadID>FA163EC18E9E1EEBB8F33D687112F516</urn:PayloadID>
+                           <urn:RealmID>AN02005451658-T</urn:RealmID>
+                        </urn:MessageHeader>
+                        <urn:ContractStatusUpdateRequest>
+                           <urn:ContractStatus>
+                              <urn:ContractDate>2021-07-13T05:19:38Z</urn:ContractDate>
+                              <urn:ContractID>CW7135</urn:ContractID>
+                              <urn:Reference>
+                                 <urn:Domain>SAPAgreementId</urn:Domain>
+                                 <urn:Identifier>4700001717</urn:Identifier>
+                              </urn:Reference>
+                              <urn:ExternalApprovalStatus>02</urn:ExternalApprovalStatus>
+                              <urn:Operation>update</urn:Operation>
+                           </urn:ContractStatus>
+                           <urn:ContractItemStatus>
+                              <urn:item>
+                                 <urn:Reference>
+                                    <urn:Domain>SAPLineNumber</urn:Domain>
+                                    <urn:Identifier>00010</urn:Identifier>
+                                 </urn:Reference>
+                                 <urn:ReferenceDocInfoLineNumber>1</urn:ReferenceDocInfoLineNumber>
+                                 <urn:Operation>update</urn:Operation>
+                              </urn:item>
+                           </urn:ContractItemStatus>
+                           <urn:Status>
+                              <urn:Message>[SUCCESS]Quantity Contract created under the number 4700001717</urn:Message>
+                              <urn:Status>200</urn:Status>
+                           </urn:Status>
+                        </urn:ContractStatusUpdateRequest>
+                     </urn:item>
+                  </urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+               </urn:PurchaseContractStatusUpdateRequestImportRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_PurchaseContractStatusUpdateRequestImportRequest_cXML_0000_PurchaseContractStatusUpdateRequestImportRequest.xspec">
+      <label>PurchaseContractUpdateNotification</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/s4HanaBuyer/PurchaseContractUpdateNotification/PurchaseContractUpdateNotification2_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <urn:PurchaseContractStatusUpdateRequestImportRequest xmlns:urn="urn:Ariba:Sourcing:vsap">
+               <urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+                  <urn:item>
+                     <urn:MessageHeader>
+                        <urn:ANID/>
+                        <urn:BusinessSystemID>0LOI36K</urn:BusinessSystemID>
+                        <urn:PayloadID>FA163E93BEBD1EDBBBDCBAE908F67078</urn:PayloadID>
+                        <urn:RealmID>AN02005451658-T</urn:RealmID>
+                     </urn:MessageHeader>
+                     <urn:ContractStatusUpdateRequest>
+                        <urn:ContractStatus>
+                           <urn:ContractDate>2021-07-27T14:20:50Z</urn:ContractDate>
+                           <urn:ContractID>CW6999</urn:ContractID>
+                           <urn:Reference>
+                              <urn:Domain>SAPAgreementId</urn:Domain>
+                              <urn:Identifier/>
+                           </urn:Reference>
+                           <urn:ExternalApprovalStatus/>
+                           <urn:Operation>update</urn:Operation>
+                        </urn:ContractStatus>
+                        <urn:ContractItemStatus>
+                           <urn:item>
+                              <urn:Reference>
+                                 <urn:Domain/>
+                                 <urn:Identifier/>
+                              </urn:Reference>
+                              <urn:ReferenceDocInfoLineNumber/>
+                              <urn:Operation/>
+                           </urn:item>
+                        </urn:ContractItemStatus>
+                        <urn:Status>
+                           <urn:Message>[ERROR]Enter Validity End[INFORMATION]Item 00020 (external ID  ) is faulty. Please check the following messages:[ERROR]Order Unit in item 00020 cannot be edited</urn:Message>
+                           <urn:Status>406</urn:Status>
+                        </urn:Status>
+                     </urn:ContractStatusUpdateRequest>
+                  </urn:item>
+               </urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+            </urn:PurchaseContractStatusUpdateRequestImportRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>InvoiceStatusUpdate</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <urn:PurchaseContractStatusUpdateRequestImportRequest xmlns:urn="urn:Ariba:Sourcing:vsap">
+                  <urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+                     <urn:item>
+                        <urn:MessageHeader>
+                           <urn:ANID/>
+                           <urn:BusinessSystemID>0LOI36K</urn:BusinessSystemID>
+                           <urn:PayloadID>FA163E93BEBD1EDBBBDCBAE908F67078</urn:PayloadID>
+                           <urn:RealmID>AN02005451658-T</urn:RealmID>
+                        </urn:MessageHeader>
+                        <urn:ContractStatusUpdateRequest>
+                           <urn:ContractStatus>
+                              <urn:ContractDate>...</urn:ContractDate>
+                              <urn:ContractID>CW6999</urn:ContractID>
+                              <urn:Reference>
+                                 <urn:Domain>SAPAgreementId</urn:Domain>
+                                 <urn:Identifier/>
+                              </urn:Reference>
+                              <urn:ExternalApprovalStatus/>
+                              <urn:Operation>update</urn:Operation>
+                           </urn:ContractStatus>
+                           <urn:ContractItemStatus>
+                              <urn:item>
+                                 <urn:Reference>
+                                    <urn:Domain/>
+                                    <urn:Identifier/>
+                                 </urn:Reference>
+                                 <urn:ReferenceDocInfoLineNumber/>
+                                 <urn:Operation/>
+                              </urn:item>
+                           </urn:ContractItemStatus>
+                           <urn:Status>
+                              <urn:Message>[ERROR]Enter Validity End[INFORMATION]Item 00020 (external ID  ) is faulty. Please check the following messages:[ERROR]Order Unit in item 00020 cannot be edited</urn:Message>
+                              <urn:Status>406</urn:Status>
+                           </urn:Status>
+                        </urn:ContractStatusUpdateRequest>
+                     </urn:item>
+                  </urn:WSPurchaseContractStatusUpdateRequestImportInputBean_Item>
+               </urn:PurchaseContractStatusUpdateRequestImportRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

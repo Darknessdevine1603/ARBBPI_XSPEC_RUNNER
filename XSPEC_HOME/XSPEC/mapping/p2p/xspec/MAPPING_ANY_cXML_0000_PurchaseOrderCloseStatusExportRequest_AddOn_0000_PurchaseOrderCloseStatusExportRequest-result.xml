@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderCloseStatusExportRequest_AddOn_0000_PurchaseOrderCloseStatusExportRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderCloseStatusExportRequest_AddOn_0000_PurchaseOrderCloseStatusExportRequest.xsl"
+        date="2023-04-27T15:33:04.477518+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderCloseStatusExportRequest_AddOn_0000_PurchaseOrderCloseStatusExportRequest.xspec">
+      <label>Scenario for Purchase Order Close Status Export Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/ClosePO/PurchaseOrderCloseStatusExportRequest_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_BAPI_PO_CLOSE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_POID>ICPO236</ARIBA_POID>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <PURCHASEORDER>4500003210</PURCHASEORDER>
+               <POITEM>
+                  <item>
+                     <PO_ITEM>00010</PO_ITEM>
+                     <NO_MORE_GR>X</NO_MORE_GR>
+                     <FINAL_INV>X</FINAL_INV>
+                     <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                  </item>
+                  <item>
+                     <PO_ITEM>00020</PO_ITEM>
+                     <NO_MORE_GR>X</NO_MORE_GR>
+                     <FINAL_INV>X</FINAL_INV>
+                     <ARIBA_ITEM_NO>2</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                  </item>
+                  <item>
+                     <PO_ITEM>00030</PO_ITEM>
+                     <NO_MORE_GR>X</NO_MORE_GR>
+                     <FINAL_INV>X</FINAL_INV>
+                     <ARIBA_ITEM_NO>5</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                  </item>
+               </POITEM>
+            </n0:ARBCIG_BAPI_PO_CLOSE>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Purchase Order Close Status Export Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_BAPI_PO_CLOSE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ARIBA_POID>ICPO236</ARIBA_POID>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <PURCHASEORDER>4500003210</PURCHASEORDER>
+                  <POITEM>
+                     <item>
+                        <PO_ITEM>00010</PO_ITEM>
+                        <NO_MORE_GR>X</NO_MORE_GR>
+                        <FINAL_INV>X</FINAL_INV>
+                        <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                     </item>
+                     <item>
+                        <PO_ITEM>00020</PO_ITEM>
+                        <NO_MORE_GR>X</NO_MORE_GR>
+                        <FINAL_INV>X</FINAL_INV>
+                        <ARIBA_ITEM_NO>2</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                     </item>
+                     <item>
+                        <PO_ITEM>00030</PO_ITEM>
+                        <NO_MORE_GR>X</NO_MORE_GR>
+                        <FINAL_INV>X</FINAL_INV>
+                        <ARIBA_ITEM_NO>5</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                     </item>
+                  </POITEM>
+               </n0:ARBCIG_BAPI_PO_CLOSE>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderCloseStatusExportRequest_AddOn_0000_PurchaseOrderCloseStatusExportRequest.xspec">
+      <label>Scenario for Purchase Order Close Status Export Request with charge line</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/ClosePO/PurchaseOrderCloseExportRequest_BM_CHL.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_BAPI_PO_CLOSE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_POID>ICPO236</ARIBA_POID>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <PURCHASEORDER>4500003210</PURCHASEORDER>
+               <POITEM>
+                  <item>
+                     <PO_ITEM>00010</PO_ITEM>
+                     <NO_MORE_GR>X</NO_MORE_GR>
+                     <FINAL_INV>X</FINAL_INV>
+                     <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                  </item>
+                  <item>
+                     <PO_ITEM>00030</PO_ITEM>
+                     <NO_MORE_GR>X</NO_MORE_GR>
+                     <FINAL_INV>X</FINAL_INV>
+                     <ARIBA_ITEM_NO>5</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>2</PARENT_LINE_NO>
+                  </item>
+               </POITEM>
+            </n0:ARBCIG_BAPI_PO_CLOSE>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Scenario for Purchase Order Close Status Export Request with charge line</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_BAPI_PO_CLOSE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ARIBA_POID>ICPO236</ARIBA_POID>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <PURCHASEORDER>4500003210</PURCHASEORDER>
+                  <POITEM>
+                     <item>
+                        <PO_ITEM>00010</PO_ITEM>
+                        <NO_MORE_GR>X</NO_MORE_GR>
+                        <FINAL_INV>X</FINAL_INV>
+                        <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                     </item>
+                     <item>
+                        <PO_ITEM>00030</PO_ITEM>
+                        <NO_MORE_GR>X</NO_MORE_GR>
+                        <FINAL_INV>X</FINAL_INV>
+                        <ARIBA_ITEM_NO>5</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>2</PARENT_LINE_NO>
+                     </item>
+                  </POITEM>
+               </n0:ARBCIG_BAPI_PO_CLOSE>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_PurchaseOrderCloseStatusExportRequest_AddOn_0000_PurchaseOrderCloseStatusExportRequest.xspec">
+      <label>Scenario for Purchase Order Close Status Export Request with GR and IV indicators</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/ClosePO/PurchaseOrderCloseStatusExportRequest_BM_GR_IV.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:ARBCIG_BAPI_PO_CLOSE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+               <ARIBA_POID>ICPO461</ARIBA_POID>
+               <PARTITION>vrealm_RIT</PARTITION>
+               <VARIANT>vrealm_RIT</VARIANT>
+               <PURCHASEORDER>4500003605</PURCHASEORDER>
+               <POITEM>
+                  <item>
+                     <PO_ITEM>00010</PO_ITEM>
+                     <NO_MORE_GR/>
+                     <FINAL_INV>X</FINAL_INV>
+                     <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                  </item>
+                  <item>
+                     <PO_ITEM>00020</PO_ITEM>
+                     <NO_MORE_GR>X</NO_MORE_GR>
+                     <FINAL_INV/>
+                     <ARIBA_ITEM_NO>2</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                  </item>
+                  <item>
+                     <PO_ITEM>00030</PO_ITEM>
+                     <NO_MORE_GR/>
+                     <FINAL_INV>X</FINAL_INV>
+                     <ARIBA_ITEM_NO>3</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                  </item>
+                  <item>
+                     <PO_ITEM>00030</PO_ITEM>
+                     <NO_MORE_GR>X</NO_MORE_GR>
+                     <FINAL_INV/>
+                     <ARIBA_ITEM_NO>4</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>2</PARENT_LINE_NO>
+                  </item>
+                  <item>
+                     <PO_ITEM>00020</PO_ITEM>
+                     <NO_MORE_GR>X</NO_MORE_GR>
+                     <FINAL_INV/>
+                     <ARIBA_ITEM_NO>5</ARIBA_ITEM_NO>
+                     <PARENT_LINE_NO>2</PARENT_LINE_NO>
+                  </item>
+               </POITEM>
+            </n0:ARBCIG_BAPI_PO_CLOSE>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Scenario for Purchase Order Close Status Export Request with GR and IV indicators</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:ARBCIG_BAPI_PO_CLOSE xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+                  <ARIBA_POID>ICPO461</ARIBA_POID>
+                  <PARTITION>vrealm_RIT</PARTITION>
+                  <VARIANT>vrealm_RIT</VARIANT>
+                  <PURCHASEORDER>4500003605</PURCHASEORDER>
+                  <POITEM>
+                     <item>
+                        <PO_ITEM>00010</PO_ITEM>
+                        <NO_MORE_GR/>
+                        <FINAL_INV>X</FINAL_INV>
+                        <ARIBA_ITEM_NO>1</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                     </item>
+                     <item>
+                        <PO_ITEM>00020</PO_ITEM>
+                        <NO_MORE_GR>X</NO_MORE_GR>
+                        <FINAL_INV/>
+                        <ARIBA_ITEM_NO>2</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                     </item>
+                     <item>
+                        <PO_ITEM>00030</PO_ITEM>
+                        <NO_MORE_GR/>
+                        <FINAL_INV>X</FINAL_INV>
+                        <ARIBA_ITEM_NO>3</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>0</PARENT_LINE_NO>
+                     </item>
+                     <item>
+                        <PO_ITEM>00030</PO_ITEM>
+                        <NO_MORE_GR>X</NO_MORE_GR>
+                        <FINAL_INV/>
+                        <ARIBA_ITEM_NO>4</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>2</PARENT_LINE_NO>
+                     </item>
+                     <item>
+                        <PO_ITEM>00020</PO_ITEM>
+                        <NO_MORE_GR>X</NO_MORE_GR>
+                        <FINAL_INV/>
+                        <ARIBA_ITEM_NO>5</ARIBA_ITEM_NO>
+                        <PARENT_LINE_NO>2</PARENT_LINE_NO>
+                     </item>
+                  </POITEM>
+               </n0:ARBCIG_BAPI_PO_CLOSE>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

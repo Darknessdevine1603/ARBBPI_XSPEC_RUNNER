@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_ExportServiceSheetResponseAsyncRequest_AddOn_0000_BuyerStatusUpdateRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_ExportServiceSheetResponseAsyncRequest_AddOn_0000_BuyerStatusUpdateRequest.xsl"
+        date="2023-04-27T15:34:31.669029+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_ExportServiceSheetResponseAsyncRequest_AddOn_0000_BuyerStatusUpdateRequest.xspec">
+      <label>Scenario for Export Service Sheet Response Async Request for Reject</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/SESResponse/ExportServiceSheetResponseAsyncRequest_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:BuyerStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <partition>prealm_156</partition>
+                  <variant>vrealm_156</variant>
+               </MessageHeader>
+               <DocumentType>ExternalServiceSheetImportAsyncRequest</DocumentType>
+               <DocumentDetails>
+                  <AribaDocumentID/>
+                  <ERPDocumentID>1000735974</ERPDocumentID>
+                  <Status>REJECTED</Status>
+                  <Message>
+                     <Comment>Rejecting External SES: Another SES found with same SES ID: 1000735974
+
+Document Information:
+
+Order ID: 4500058103</Comment>
+                  </Message>
+               </DocumentDetails>
+            </n0:BuyerStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Export Service Sheet Response Async Request for Reject</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:BuyerStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <partition>prealm_156</partition>
+                     <variant>vrealm_156</variant>
+                  </MessageHeader>
+                  <DocumentType>ExternalServiceSheetImportAsyncRequest</DocumentType>
+                  <DocumentDetails>
+                     <AribaDocumentID/>
+                     <ERPDocumentID>1000735974</ERPDocumentID>
+                     <Status>REJECTED</Status>
+                     <Message>
+                        <Comment>Rejecting External SES: Another SES found with same SES ID: 1000735974
+
+Document Information:
+
+Order ID: 4500058103</Comment>
+                     </Message>
+                  </DocumentDetails>
+               </n0:BuyerStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_ExportServiceSheetResponseAsyncRequest_AddOn_0000_BuyerStatusUpdateRequest.xspec">
+      <label>Scenario for Export Service Sheet Response Async Request for Success</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/SESResponse/ExportServiceSheetResponseAsyncRequest_Success_BM.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:BuyerStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <partition>vrealm_RIT</partition>
+                  <variant>vrealm_RIT</variant>
+               </MessageHeader>
+               <DocumentType>ExternalServiceSheetImportAsyncRequest</DocumentType>
+               <DocumentDetails>
+                  <AribaDocumentID>SS849</AribaDocumentID>
+                  <ERPDocumentID>1000704163</ERPDocumentID>
+                  <Status>ACCEPTED</Status>
+                  <Message>
+                     <Comment>Success</Comment>
+                  </Message>
+               </DocumentDetails>
+            </n0:BuyerStatusUpdateRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Scenario for Export Service Sheet Response Async Request for Success</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:BuyerStatusUpdateRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <partition>vrealm_RIT</partition>
+                     <variant>vrealm_RIT</variant>
+                  </MessageHeader>
+                  <DocumentType>ExternalServiceSheetImportAsyncRequest</DocumentType>
+                  <DocumentDetails>
+                     <AribaDocumentID>SS849</AribaDocumentID>
+                     <ERPDocumentID>1000704163</ERPDocumentID>
+                     <Status>ACCEPTED</Status>
+                     <Message>
+                        <Comment>Success</Comment>
+                     </Message>
+                  </DocumentDetails>
+               </n0:BuyerStatusUpdateRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

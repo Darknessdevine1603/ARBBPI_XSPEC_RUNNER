@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anSupplier/MAPPING_ANY_cXML_0000_OrderRequest_AddOn_0000_SalesOrderRequest.xsl">
+    <x:scenario label="Sales Order Request">
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anSupplier/Order/SalesOrder.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anSupplier/Order/SalesOrder.dat"
+            select="element()" label="Sales Order Request"/>
+    </x:scenario>
+    <x:scenario label="Sales Order Request New">
+        <x:param name="anSupplierANID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anSupplier/Order/SalesOrderNew.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anSupplier/Order/SalesOrderNew.dat"
+            select="element()" label="Sales Order Request New"/>
+    </x:scenario>   
+    <x:scenario label="Sales Order Request Update">
+        <x:param name="anSupplierANID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anSupplier/Order/SalesOrderUpdate.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anSupplier/Order/SalesOrderUpdate.dat"
+            select="element()" label="Sales Order Request Update"/>
+    </x:scenario>  
+    <x:scenario label="Sales Order Request Attachments and Comments">
+        <x:param name="anSupplierANID"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anBuyerANID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anSupplier/Order/SalesOrderWithCommentsAttach.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anSupplier/Order/SalesOrderWithCommentsAttach.dat"
+            select="element()" label="Sales Order Request Attachments and Comments"/>
+    </x:scenario>
+</x:description>

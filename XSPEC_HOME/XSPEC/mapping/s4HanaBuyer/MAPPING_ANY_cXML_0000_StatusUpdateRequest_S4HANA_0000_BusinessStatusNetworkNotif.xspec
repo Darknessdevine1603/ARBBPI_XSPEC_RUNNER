@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_cXML_0000_StatusUpdateRequest_S4HANA_0000_BusinessStatusNetworkNotif.xsl">
+    <x:scenario label="Accept Status Update Request">
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anERPSystemID" select="'ER9CLNT001'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anSourceDocumentType" select="'BusinessStatusNotif'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" select="'4FE57760245FDE61E10000000AEZ0105'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/StatusUpdateRequest/AcceptSUR.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/StatusUpdateRequest/AcceptSUR.dat"
+            select="element()" label="Accept Status Update Request"/>
+    </x:scenario>
+    <x:scenario label="Reject Status Update Request">
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005437204-T'"/>
+        <x:param name="anERPSystemID" select="'ER9CLNT001'"/>
+        <x:param name="anTargetDocumentType" select="'StatusUpdateRequest'"/>
+        <x:param name="anSourceDocumentType" select="'BusinessStatusNotif'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID" select="'4FE57760245FDE61E10000000AEE010Z'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <!--        Headers in Parameter Cross Reference Files -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/s4HanaBuyer/StatusUpdateRequest/RejectSUR.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/s4HanaBuyer/StatusUpdateRequest/RejectSUR.dat"
+            select="element()" label="Reject Status Update Request"/>
+    </x:scenario>
+</x:description>

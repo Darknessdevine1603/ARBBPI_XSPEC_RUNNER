@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_MMInvoice_cXML_0000_InvoiceDetailRequest.xsl">
+    <x:scenario label="S4 MM Invoice Request 1">
+        <x:param name="exchange"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPSystemID" select="'OLAS1'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+        <x:param name="anCrossRefFlag" select="'no'"/>
+        <x:param name="anLookUpFlag" select="'no'"/>
+        <x:param name="anUOMFlag" select="'no'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MMInvoice/MMInvoice1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MMInvoice/MMInvoice1.dat"
+            select="element()" label="S4 MM Invoice Request 1"/>
+    </x:scenario>
+    <x:scenario label="Multiple Line Items">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'OLAS1'"/>
+        <x:param name="anIsMultiERP" select="'FALSE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MMInvoice/MM.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MMInvoice/MM.dat"
+            select="element()" label="Multiple Line Items"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Multiple Taxes">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'OLAS1'"/>
+        <x:param name="anIsMultiERP" select="'FALSE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MMInvoice/MMInvoiceMultipleTaxes.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MMInvoice/MMInvoiceMultipleTaxes.dat"
+            select="element()" label="ERP MM Multiple Taxes"/>
+    </x:scenario>
+
+    <x:scenario label="ERP MM Invoice Request for Service Items">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'OLAS1'"/>
+        <x:param name="anIsMultiERP" select="'FALSE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+
+        <x:param name="anCrossRefFlag" select="'NO'"/>
+        <x:param name="anLookUpFlag" select="'NO'"/>
+        <x:param name="anUOMFlag" select="'NO'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MMInvoice/MMInvoiceServiceItem.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MMInvoice/MMInvoiceServiceItem.dat"
+            select="element()" label="ERP MM Invoice Request for Service Items"/>
+    </x:scenario>
+    <x:scenario label="ERP MM Invoice Request for Service Items 2">
+        <x:param name="exchange"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="ancxmlversion"/>
+        <x:param name="anSupplierANID" select="'AN02004404205-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anContentID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anERPSystemID" select="'OLAS1'"/>
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anTargetDocumentType" select="'InvoiceDetailRequest'"/>
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context
+            href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MMInvoice/MMInvoiceServiceItem2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MMInvoice/MMInvoiceServiceItem2.dat"
+            select="element()" label="ERP MM Invoice Request for Service Items 2"/>
+    </x:scenario>
+</x:description>

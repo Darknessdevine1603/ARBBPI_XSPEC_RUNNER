@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_BankChargeRequest_AddOn_0000_BankChargeRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_BankChargeRequest_AddOn_0000_BankChargeRequest.xsl"
+        date="2023-04-27T15:28:52.474145+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_BankChargeRequest_AddOn_0000_BankChargeRequest.xspec">
+      <label>Bank Charge Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/BankCharge/BankChargeRequest.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:FileAttachRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID/>
+                  <AribaNetworkPayloadID>12865_201257</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02005437754-T</AribaNetworkID>
+                  <CreationDateTime>2023-04-27T15:28:52.885555+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>AN02005437754-T</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QKDCLNT521</RecipientBusinessSystemID>
+               </MessageHeader>
+               <Attachment>
+                  <Item>
+                     <Parameter>
+                        <Name>ProviderName</Name>
+                        <Value>Standard Chartered</Value>
+                     </Parameter>
+                     <parameter>
+                        <Name>filename</Name>
+                        <Value>SC_Buyer22222222.csv</Value>
+                     </parameter>
+                     <Parameter>
+                        <Name>frequency</Name>
+                        <Value>daily</Value>
+                     </Parameter>
+                     <Parameter>
+                        <Name>statementDate</Name>
+                        <Value>2020-05-22</Value>
+                     </Parameter>
+                     <Parameter>
+                        <Name>startDate</Name>
+                        <Value>2020-05-22</Value>
+                     </Parameter>
+                     <Parameter>
+                        <Name>endDate</Name>
+                        <Value>2020-05-22</Value>
+                     </Parameter>
+                     <Parameter>
+                        <Name>NumberOfCharges</Name>
+                        <Value>2</Value>
+                     </Parameter>
+                     <FileName>SC_Buyer22222222.csv</FileName>
+                     <ContentId>line1</ContentId>
+                     <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                     <Content>line1</Content>
+                  </Item>
+               </Attachment>
+            </n0:FileAttachRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Bank Charge Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:FileAttachRequest xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID/>
+                     <AribaNetworkPayloadID>12865_201257</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02005437754-T</AribaNetworkID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>AN02005437754-T</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QKDCLNT521</RecipientBusinessSystemID>
+                  </MessageHeader>
+                  <Attachment>
+                     <Item>
+                        <Parameter>
+                           <Name>ProviderName</Name>
+                           <Value>Standard Chartered</Value>
+                        </Parameter>
+                        <parameter>
+                           <Name>filename</Name>
+                           <Value>SC_Buyer22222222.csv</Value>
+                        </parameter>
+                        <Parameter>
+                           <Name>frequency</Name>
+                           <Value>daily</Value>
+                        </Parameter>
+                        <Parameter>
+                           <Name>statementDate</Name>
+                           <Value>2020-05-22</Value>
+                        </Parameter>
+                        <Parameter>
+                           <Name>startDate</Name>
+                           <Value>2020-05-22</Value>
+                        </Parameter>
+                        <Parameter>
+                           <Name>endDate</Name>
+                           <Value>2020-05-22</Value>
+                        </Parameter>
+                        <Parameter>
+                           <Name>NumberOfCharges</Name>
+                           <Value>2</Value>
+                        </Parameter>
+                        <FileName>SC_Buyer22222222.csv</FileName>
+                        <ContentId>line1</ContentId>
+                        <ContentType>text/plain; name="Line Attachment - Copy.txt"</ContentType>
+                        <Content>line1</Content>
+                     </Item>
+                  </Attachment>
+               </n0:FileAttachRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

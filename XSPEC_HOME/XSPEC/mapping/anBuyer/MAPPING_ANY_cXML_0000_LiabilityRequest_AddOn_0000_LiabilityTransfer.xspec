@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_LiabilityRequest_AddOn_0000_LiabilityTransfer.xsl">
+    <x:scenario label="Liability Transfer">
+        <x:param name="anReceiverID"  select="'AN02004404205-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anSourceDocumentType" select="'LiabilityRequest'"/>
+                
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/Liability/LiabilityTransfer.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/Liability/LiabilityTransfer.dat"
+            select="element()" label="Liability Transfer"/>
+    </x:scenario>
+    <x:scenario label="Liability Transfer 2">
+        <x:param name="anReceiverID"  select="'AN02004404205-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anSourceDocumentType" select="'LiabilityRequest'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/Liability/LiabilityTransfer2.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/Liability/LiabilityTransfer2.dat"
+            select="element()" label="Liability Transfer 2"/>
+    </x:scenario>
+</x:description>

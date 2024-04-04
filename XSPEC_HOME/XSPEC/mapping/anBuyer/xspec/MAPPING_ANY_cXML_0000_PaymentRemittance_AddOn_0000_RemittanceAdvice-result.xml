@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_PaymentRemittance_AddOn_0000_RemittanceAdvice.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_PaymentRemittance_AddOn_0000_RemittanceAdvice.xsl"
+        date="2023-04-27T15:27:18.00377+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_PaymentRemittance_AddOn_0000_RemittanceAdvice.xspec">
+      <label>AN Payment Remittence</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/PaymentRemit/ANPayRem1.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:RemittanceAdvice xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>C.20180516.2000000077</ID>
+                  <AribaNetworkPayloadID>ChasePay20167222b3rcd3weddss</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <CreationDateTime>2018-05-16T08:03:22-12:00</CreationDateTime>
+                  <SenderParty>
+                     <InternalID>0000100000</InternalID>
+                  </SenderParty>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <DocumentReference>
+                  <PaymentRemittanceID>C.20180516.2000000077</PaymentRemittanceID>
+                  <PaymentMethod>other</PaymentMethod>
+                  <PaymentDate>2018-05-16T08:03:22-12:00</PaymentDate>
+               </DocumentReference>
+               <RemittanceDetail>
+                  <PayableInfo>
+                     <InvoiceNo>5100001334</InvoiceNo>
+                     <InvoiceYear>0001</InvoiceYear>
+                     <CompanyCode>8001</CompanyCode>
+                  </PayableInfo>
+                  <PriceDetail>
+                     <GrossAmount currencyCode="USD">8</GrossAmount>
+                     <DiscountAmount currencyCode="USD">0</DiscountAmount>
+                     <NetAmount currencyCode="USD">8</NetAmount>
+                  </PriceDetail>
+               </RemittanceDetail>
+               <RemittanceSummary>
+                  <GrossAmount currencyCode="USD">8.00</GrossAmount>
+                  <DiscountAmount currencyCode="USD">0.00</DiscountAmount>
+                  <NetAmount currencyCode="USD">8.00</NetAmount>
+               </RemittanceSummary>
+            </n0:RemittanceAdvice>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>AN Payment Remittence</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:RemittanceAdvice xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>C.20180516.2000000077</ID>
+                     <AribaNetworkPayloadID>ChasePay20167222b3rcd3weddss</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <CreationDateTime>2018-05-16T08:03:22-12:00</CreationDateTime>
+                     <SenderParty>
+                        <InternalID>0000100000</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <DocumentReference>
+                     <PaymentRemittanceID>C.20180516.2000000077</PaymentRemittanceID>
+                     <PaymentMethod>other</PaymentMethod>
+                     <PaymentDate>2018-05-16T08:03:22-12:00</PaymentDate>
+                  </DocumentReference>
+                  <RemittanceDetail>
+                     <PayableInfo>
+                        <InvoiceNo>5100001334</InvoiceNo>
+                        <InvoiceYear>0001</InvoiceYear>
+                        <CompanyCode>8001</CompanyCode>
+                     </PayableInfo>
+                     <PriceDetail>
+                        <GrossAmount currencyCode="USD">8</GrossAmount>
+                        <DiscountAmount currencyCode="USD">0</DiscountAmount>
+                        <NetAmount currencyCode="USD">8</NetAmount>
+                     </PriceDetail>
+                  </RemittanceDetail>
+                  <RemittanceSummary>
+                     <GrossAmount currencyCode="USD">8.00</GrossAmount>
+                     <DiscountAmount currencyCode="USD">0.00</DiscountAmount>
+                     <NetAmount currencyCode="USD">8.00</NetAmount>
+                  </RemittanceSummary>
+               </n0:RemittanceAdvice>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_cXML_0000_PaymentRemittance_AddOn_0000_RemittanceAdvice.xspec">
+      <label>AN Payment Remittence with Comments</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/anBuyer/PaymentRemit/ANPayRemComments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:RemittanceAdvice xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <MessageHeader>
+                  <ID>C.20180516.2000000077</ID>
+                  <AribaNetworkPayloadID>ChasePay20167222b3rcd3weddss</AribaNetworkPayloadID>
+                  <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                  <CreationDateTime>2018-05-16T08:03:22-12:00</CreationDateTime>
+                  <SenderParty>
+                     <InternalID>0000100000</InternalID>
+                  </SenderParty>
+                  <RecipientParty>
+                     <InternalID>QODCLNT002</InternalID>
+                  </RecipientParty>
+               </MessageHeader>
+               <DocumentReference>
+                  <PaymentRemittanceID>C.20180516.2000000077</PaymentRemittanceID>
+                  <RemittanceType>SCFRemittanceType</RemittanceType>
+                  <PaymentMethod>other</PaymentMethod>
+                  <PaymentDate>2018-05-16T08:03:22-12:00</PaymentDate>
+               </DocumentReference>
+               <RemittanceDetail>
+                  <PayableInfo>
+                     <InvoiceNo>5100001334</InvoiceNo>
+                     <InvoiceYear>0001</InvoiceYear>
+                     <CompanyCode>8001</CompanyCode>
+                  </PayableInfo>
+                  <PriceDetail>
+                     <GrossAmount currencyCode="USD">8</GrossAmount>
+                     <DiscountAmount currencyCode="USD">0</DiscountAmount>
+                     <AdjustmentAmount currencyCode="USD">0.01</AdjustmentAmount>
+                     <NetAmount currencyCode="USD">8</NetAmount>
+                  </PriceDetail>
+               </RemittanceDetail>
+               <RemittanceSummary>
+                  <GrossAmount currencyCode="USD">8.00</GrossAmount>
+                  <DiscountAmount currencyCode="USD">0.00</DiscountAmount>
+                  <AdjustmentAmount currencyCode="USD">0.01</AdjustmentAmount>
+                  <NetAmount currencyCode="USD">8.00</NetAmount>
+               </RemittanceSummary>
+               <AribaComment/>
+            </n0:RemittanceAdvice>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>AN Payment Remittence with Comments</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:RemittanceAdvice xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <MessageHeader>
+                     <ID>C.20180516.2000000077</ID>
+                     <AribaNetworkPayloadID>ChasePay20167222b3rcd3weddss</AribaNetworkPayloadID>
+                     <AribaNetworkID>AN02004204493-T</AribaNetworkID>
+                     <CreationDateTime>2018-05-16T08:03:22-12:00</CreationDateTime>
+                     <SenderParty>
+                        <InternalID>0000100000</InternalID>
+                     </SenderParty>
+                     <RecipientParty>
+                        <InternalID>QODCLNT002</InternalID>
+                     </RecipientParty>
+                  </MessageHeader>
+                  <DocumentReference>
+                     <PaymentRemittanceID>C.20180516.2000000077</PaymentRemittanceID>
+                     <RemittanceType>SCFRemittanceType</RemittanceType>
+                     <PaymentMethod>other</PaymentMethod>
+                     <PaymentDate>...</PaymentDate>
+                  </DocumentReference>
+                  <RemittanceDetail>
+                     <PayableInfo>
+                        <InvoiceNo>5100001334</InvoiceNo>
+                        <InvoiceYear>0001</InvoiceYear>
+                        <CompanyCode>8001</CompanyCode>
+                     </PayableInfo>
+                     <PriceDetail>
+                        <GrossAmount currencyCode="USD">8</GrossAmount>
+                        <DiscountAmount currencyCode="USD">0</DiscountAmount>
+                        <AdjustmentAmount currencyCode="USD">0.01</AdjustmentAmount>
+                        <NetAmount currencyCode="USD">8</NetAmount>
+                     </PriceDetail>
+                  </RemittanceDetail>
+                  <RemittanceSummary>
+                     <GrossAmount currencyCode="USD">8.00</GrossAmount>
+                     <DiscountAmount currencyCode="USD">0.00</DiscountAmount>
+                     <AdjustmentAmount currencyCode="USD">0.01</AdjustmentAmount>
+                     <NetAmount currencyCode="USD">8.00</NetAmount>
+                  </RemittanceSummary>
+                  <AribaComment/>
+               </n0:RemittanceAdvice>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

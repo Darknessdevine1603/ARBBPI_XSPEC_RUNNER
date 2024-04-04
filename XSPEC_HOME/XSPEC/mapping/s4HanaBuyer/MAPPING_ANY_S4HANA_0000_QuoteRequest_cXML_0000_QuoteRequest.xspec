@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"-->
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_QuoteRequest_cXML_0000_QuoteRequest.xsl">    
+    <x:scenario label="Scenario 1 for QuoteRequest">
+        
+        <!-- Parameter declaration -->
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'NOPROD'"/>
+        <x:param name="p_path"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/QuoteRequest/payload_7000000987pre.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/QuoteRequest/payload_7000000987out.dat"
+            select="element()" label="Scenario 1 for QuoteRequest"/>
+        
+    </x:scenario>    
+
+
+    <x:scenario label="Scenario 2 for QuoteRequest">
+        
+        <!-- Parameter declaration -->
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="p_path"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/QuoteRequest/payload_7000000987pre.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/QuoteRequest/payload_7000000987out2.dat"
+            select="element()" label="Scenario 2 for QuoteRequest"/>
+        
+    </x:scenario>    
+    
+
+</x:description>

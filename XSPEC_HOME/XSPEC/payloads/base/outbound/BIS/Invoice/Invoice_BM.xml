@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>											
+<ubl:Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"											
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"											
+    xmlns:cec="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"											
+    xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">											
+    <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:xoev-de:kosit:standard:xrechnung_2.1</cbc:CustomizationID>											
+    <cbc:ID>Invoice ID</cbc:ID>											
+    <cbc:IssueDate>2022-02-15</cbc:IssueDate>											
+    <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>											
+    <cbc:Note>Free Text Note for invoice Header</cbc:Note>											
+    <cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>											
+    <cbc:TaxCurrencyCode>USD</cbc:TaxCurrencyCode>											
+    <cbc:BuyerReference>buyer Leitweg ID</cbc:BuyerReference>											
+    <cac:InvoicePeriod>											
+        <cbc:StartDate>2022-02-11</cbc:StartDate>											
+        <cbc:EndDate>2022-02-12</cbc:EndDate>											
+    </cac:InvoicePeriod>											
+    <cac:OrderReference>											
+        <cbc:ID>Order ID</cbc:ID>											
+    </cac:OrderReference>											
+    <cac:BillingReference>											
+        <cac:InvoiceDocumentReference>											
+            <cbc:ID>Old Invoice ID</cbc:ID>											
+            <cbc:IssueDate>2022-01-15</cbc:IssueDate>											
+        </cac:InvoiceDocumentReference>											
+    </cac:BillingReference>											
+    <cac:DespatchDocumentReference>											
+        <cbc:ID>Ship Notice ID</cbc:ID>											
+    </cac:DespatchDocumentReference>											
+    <cac:ContractDocumentReference>											
+        <cbc:ID>Master Agreement ID</cbc:ID>											
+    </cac:ContractDocumentReference>											
+    <cac:AdditionalDocumentReference>											
+        <cbc:ID schemeID="ZZZ">Mutually defined ID</cbc:ID>											
+        <cbc:DocumentDescription>MutuallyDefined</cbc:DocumentDescription>											
+    </cac:AdditionalDocumentReference>											
+    <cac:AdditionalDocumentReference>											
+        <cbc:ID>01</cbc:ID>											
+        <cbc:DocumentDescription>AttachmentFile</cbc:DocumentDescription>											
+        <cac:Attachment>											
+            <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="invoice.pdf">aHR0cHM6Ly90ZXN0LXZlZmEuZGlmaS5uby9wZXBwb2xiaXMvcG9hY2MvYmlsbGluZy8zLjAvYmlzLw==</cbc:EmbeddedDocumentBinaryObject>											
+        </cac:Attachment>											
+    </cac:AdditionalDocumentReference>											
+    <cac:AdditionalDocumentReference>											
+        <cbc:ID>DE</cbc:ID>											
+        <cbc:DocumentDescription>ShipFromCountryCode</cbc:DocumentDescription>											
+    </cac:AdditionalDocumentReference>											
+    <cac:AccountingSupplierParty>											
+        <cac:Party>											
+            <cbc:EndpointID schemeID="9930">German VAT ID</cbc:EndpointID>											
+            <cac:PartyIdentification>											
+                <cbc:ID schemeID="SEPA">SEPA ID</cbc:ID>											
+            </cac:PartyIdentification>											
+            <cac:PartyIdentification>											
+                <cbc:ID schemeID="0088">Supplier EAN ID</cbc:ID>											
+            </cac:PartyIdentification>											
+            <cac:PartyName>											
+                <cbc:Name>Supplier Party Name</cbc:Name>											
+            </cac:PartyName>											
+            <cac:PostalAddress>											
+                <cbc:StreetName>Supplier Street1</cbc:StreetName>											
+                <cbc:AdditionalStreetName>Supplier Street2</cbc:AdditionalStreetName>											
+                <cbc:CityName>Supplier city</cbc:CityName>											
+                <cbc:PostalZone>50829</cbc:PostalZone>											
+                <cbc:CountrySubentity>state</cbc:CountrySubentity>											
+                <cac:AddressLine>											
+                    <cbc:Line>Supplier Street3</cbc:Line>											
+                </cac:AddressLine>											
+                <cac:Country>											
+                    <cbc:IdentificationCode>DE</cbc:IdentificationCode>											
+                </cac:Country>											
+            </cac:PostalAddress>											
+            <cac:PartyTaxScheme>											
+                <cbc:CompanyID>DE123456789</cbc:CompanyID>											
+                <cac:TaxScheme>											
+                    <cbc:ID>VAT</cbc:ID>											
+                </cac:TaxScheme>											
+            </cac:PartyTaxScheme>											
+            <cac:PartyLegalEntity>											
+                <cbc:RegistrationName>Supplier Party Name</cbc:RegistrationName>											
+                <cbc:CompanyID>Supplier Commercial Name</cbc:CompanyID>											
+                <cbc:CompanyLegalForm>Supplier Legal Status</cbc:CompanyLegalForm>											
+            </cac:PartyLegalEntity>											
+            <cac:Contact>											
+                <cbc:Name>Mr. XYZ</cbc:Name>											
+                <cbc:Telephone>+4922222222</cbc:Telephone>											
+                <cbc:ElectronicMail>XYZ@example.com</cbc:ElectronicMail>											
+            </cac:Contact>											
+        </cac:Party>											
+    </cac:AccountingSupplierParty>											
+    <cac:AccountingCustomerParty>											
+        <cac:Party>											
+            <cbc:EndpointID schemeID="0204">buyer Leitweg ID</cbc:EndpointID>											
+            <cac:PartyIdentification>											
+                <cbc:ID schemeID="0088">Buyer EAN ID</cbc:ID>											
+            </cac:PartyIdentification>											
+            <cac:PartyName>											
+                <cbc:Name>Buyer Party Name</cbc:Name>											
+            </cac:PartyName>											
+            <cac:PostalAddress>											
+                <cbc:StreetName>Buyer Street1</cbc:StreetName>											
+                <cbc:AdditionalStreetName>Buyer Street2</cbc:AdditionalStreetName>											
+                <cbc:CityName>Buyer city</cbc:CityName>											
+                <cbc:PostalZone>50829</cbc:PostalZone>											
+                <cbc:CountrySubentity>state</cbc:CountrySubentity>											
+                <cac:AddressLine>											
+                    <cbc:Line>Buyer Street3</cbc:Line>											
+                </cac:AddressLine>											
+                <cac:Country>											
+                    <cbc:IdentificationCode>DE</cbc:IdentificationCode>											
+                </cac:Country>											
+            </cac:PostalAddress>											
+            <cac:PartyTaxScheme>											
+                <cbc:CompanyID>DE987654321</cbc:CompanyID>											
+                <cac:TaxScheme>											
+                    <cbc:ID>VAT</cbc:ID>											
+                </cac:TaxScheme>											
+            </cac:PartyTaxScheme>											
+            <cac:PartyLegalEntity>											
+                <cbc:RegistrationName>Buyer Party Name</cbc:RegistrationName>											
+            </cac:PartyLegalEntity>											
+            <cac:Contact>											
+                <cbc:Name>Mr. ABC</cbc:Name>											
+                <cbc:Telephone>+4911111111</cbc:Telephone>											
+                <cbc:ElectronicMail>ABC@example.com</cbc:ElectronicMail>											
+            </cac:Contact>											
+        </cac:Party>											
+    </cac:AccountingCustomerParty>											
+    <cac:PayeeParty>											
+        <cac:PartyIdentification>											
+            <cbc:ID schemeID="SEPA">Payee SEPA ID</cbc:ID>											
+		</cac:PartyIdentification>									
+        <cac:PartyName>											
+            <cbc:Name>Payee party name</cbc:Name>											
+        </cac:PartyName>											
+        <cac:PartyLegalEntity>											
+            <cbc:CompanyID>Payee party legal name</cbc:CompanyID>											
+        </cac:PartyLegalEntity>											
+    </cac:PayeeParty>											
+    <cac:TaxRepresentativeParty>											
+        <cac:PartyName>											
+            <cbc:Name>TAX representative party name</cbc:Name>											
+        </cac:PartyName>											
+        <cac:PostalAddress>											
+            <cbc:StreetName>TAX representative Street1</cbc:StreetName>											
+            <cbc:AdditionalStreetName>TAX representative Street2</cbc:AdditionalStreetName>											
+            <cbc:CityName>TAX representative city</cbc:CityName>											
+            <cbc:PostalZone>50829</cbc:PostalZone>											
+            <cbc:CountrySubentity>state</cbc:CountrySubentity>											
+            <cac:AddressLine>											
+                <cbc:Line>TAX representative Street3</cbc:Line>											
+            </cac:AddressLine>											
+            <cac:Country>											
+                <cbc:IdentificationCode>DE</cbc:IdentificationCode>											
+            </cac:Country>											
+        </cac:PostalAddress>											
+        <cac:PartyTaxScheme>											
+            <cbc:CompanyID>DE233445567</cbc:CompanyID>											
+            <cac:TaxScheme>											
+                <cbc:ID>VAT</cbc:ID>											
+            </cac:TaxScheme>											
+        </cac:PartyTaxScheme>											
+    </cac:TaxRepresentativeParty>											
+    <cac:Delivery>											
+        <cbc:ActualDeliveryDate>2022-02-11</cbc:ActualDeliveryDate>											
+        <cac:DeliveryLocation>											
+            <cbc:ID schemeID="0088">Delivery EAN ID</cbc:ID>											
+            <cac:Address>											
+                <cbc:StreetName>Delivery Street1</cbc:StreetName>											
+                <cbc:AdditionalStreetName>Delivery Street2</cbc:AdditionalStreetName>											
+                <cbc:CityName>Delivery city</cbc:CityName>											
+                <cbc:PostalZone>50829</cbc:PostalZone>											
+                <cbc:CountrySubentity>state</cbc:CountrySubentity>											
+                <cac:AddressLine>											
+                    <cbc:Line>Delivery Street3</cbc:Line>											
+                </cac:AddressLine>											
+                <cac:Country>											
+                    <cbc:IdentificationCode>DE</cbc:IdentificationCode>											
+                </cac:Country>											
+            </cac:Address>											
+		</cac:DeliveryLocation>									
+        <cac:DeliveryParty>											
+            <cac:PartyName>											
+                <cbc:Name>Delivery party name</cbc:Name>											
+            </cac:PartyName>											
+        </cac:DeliveryParty>											
+    </cac:Delivery>											
+    <cac:PaymentMeans>											
+        <cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>											
+        <cbc:PaymentID>Payment ID</cbc:PaymentID>											
+        <cac:PayeeFinancialAccount>											
+            <cbc:ID>DE122334455667677889</cbc:ID>											
+            <cbc:Name>Supplier Name</cbc:Name>											
+            <cac:FinancialInstitutionBranch>											
+                <cbc:ID>Bank routing ID</cbc:ID>											
+            </cac:FinancialInstitutionBranch>											
+        </cac:PayeeFinancialAccount>											
+    </cac:PaymentMeans>											
+    <cac:PaymentTerms>											
+        <cbc:Note>#SKONTO#TAGE=14#PROZENT=2.25#											
+#SKONTO#TAGE=28#PROZENT=1.00#											
+#VERZUG#TAGE=30#PROZENT=1.00#</cbc:Note>											
+    </cac:PaymentTerms>											
+    <cac:AllowanceCharge>											
+        <cbc:ChargeIndicator>false</cbc:ChargeIndicator>											
+        <cbc:AllowanceChargeReasonCode>95</cbc:AllowanceChargeReasonCode>											
+        <cbc:AllowanceChargeReason>Detail discount</cbc:AllowanceChargeReason>											
+        <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+        <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+        <cac:TaxCategory>											
+            <cbc:ID>Z</cbc:ID>											
+            <cbc:Percent>0</cbc:Percent>											
+            <cac:TaxScheme>											
+                <cbc:ID>VAT</cbc:ID>											
+            </cac:TaxScheme>											
+        </cac:TaxCategory>											
+    </cac:AllowanceCharge>											
+    <cac:AllowanceCharge>											
+        <cbc:ChargeIndicator>true</cbc:ChargeIndicator>											
+        <cbc:AllowanceChargeReasonCode>SAA</cbc:AllowanceChargeReasonCode>											
+        <cbc:AllowanceChargeReason>Shipping charge</cbc:AllowanceChargeReason>											
+        <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+        <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+        <cac:TaxCategory>											
+            <cbc:ID>S</cbc:ID>											
+            <cbc:Percent>19</cbc:Percent>											
+            <cac:TaxScheme>											
+                <cbc:ID>VAT</cbc:ID>											
+            </cac:TaxScheme>											
+        </cac:TaxCategory>											
+    </cac:AllowanceCharge>											
+    <cac:AllowanceCharge>											
+        <cbc:ChargeIndicator>true</cbc:ChargeIndicator>											
+        <cbc:AllowanceChargeReasonCode>SH</cbc:AllowanceChargeReasonCode>											
+        <cbc:AllowanceChargeReason>Special handling</cbc:AllowanceChargeReason>											
+        <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+        <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+        <cac:TaxCategory>											
+            <cbc:ID>S</cbc:ID>											
+            <cbc:Percent>19</cbc:Percent>											
+            <cac:TaxScheme>											
+                <cbc:ID>VAT</cbc:ID>											
+            </cac:TaxScheme>											
+        </cac:TaxCategory>											
+    </cac:AllowanceCharge>											
+    <cac:AllowanceCharge>											
+        <cbc:ChargeIndicator>false</cbc:ChargeIndicator>											
+        <cbc:AllowanceChargeReasonCode>42</cbc:AllowanceChargeReasonCode>											
+        <cbc:AllowanceChargeReason>Allowance</cbc:AllowanceChargeReason>											
+        <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+        <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+        <cbc:BaseAmount currencyID="EUR">5000</cbc:BaseAmount>											
+        <cac:TaxCategory>											
+            <cbc:ID>S</cbc:ID>											
+            <cbc:Percent>1</cbc:Percent>											
+            <cac:TaxScheme>											
+                <cbc:ID>VAT</cbc:ID>											
+            </cac:TaxScheme>											
+        </cac:TaxCategory>											
+    </cac:AllowanceCharge>											
+    <cac:AllowanceCharge>											
+        <cbc:ChargeIndicator>true</cbc:ChargeIndicator>											
+        <cbc:AllowanceChargeReasonCode>ABL</cbc:AllowanceChargeReasonCode>											
+        <cbc:AllowanceChargeReason>Packaging Surcharge</cbc:AllowanceChargeReason>											
+        <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+        <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+        <cbc:BaseAmount currencyID="EUR">5000</cbc:BaseAmount>											
+        <cac:TaxCategory>											
+            <cbc:ID>S</cbc:ID>											
+            <cbc:Percent>1</cbc:Percent>											
+            <cac:TaxScheme>											
+                <cbc:ID>VAT</cbc:ID>											
+            </cac:TaxScheme>											
+        </cac:TaxCategory>											
+    </cac:AllowanceCharge>											
+    <cac:TaxTotal>											
+        <cbc:TaxAmount currencyID="EUR">14.25</cbc:TaxAmount>											
+        <cac:TaxSubtotal>											
+            <cbc:TaxableAmount currencyID="EUR">75.00</cbc:TaxableAmount>											
+            <cbc:TaxAmount currencyID="EUR">14.25</cbc:TaxAmount>											
+            <cac:TaxCategory>											
+                <cbc:ID>E</cbc:ID>											
+                <cbc:Percent>0</cbc:Percent>											
+                <cbc:TaxExemptionReasonCode>VATEX-EU-O</cbc:TaxExemptionReasonCode>											
+                <cbc:TaxExemptionReason>Not subject to VAT</cbc:TaxExemptionReason>											
+                <cac:TaxScheme>											
+                    <cbc:ID>VAT</cbc:ID>											
+                </cac:TaxScheme>											
+            </cac:TaxCategory>											
+        </cac:TaxSubtotal>											
+    </cac:TaxTotal>											
+    <cac:TaxTotal>											
+        <cbc:TaxAmount currencyID="USD">15.68</cbc:TaxAmount>											
+    </cac:TaxTotal>											
+    <cac:LegalMonetaryTotal>											
+        <cbc:LineExtensionAmount currencyID="EUR">75.00</cbc:LineExtensionAmount>											
+        <cbc:TaxExclusiveAmount currencyID="EUR">75.00</cbc:TaxExclusiveAmount>											
+        <cbc:TaxInclusiveAmount currencyID="EUR">89.25</cbc:TaxInclusiveAmount>											
+        <cbc:AllowanceTotalAmount currencyID="EUR">89.25</cbc:AllowanceTotalAmount>											
+        <cbc:ChargeTotalAmount currencyID="EUR">89.25</cbc:ChargeTotalAmount>											
+        <cbc:PrepaidAmount currencyID="EUR">89.25</cbc:PrepaidAmount>											
+        <cbc:PayableRoundingAmount currencyID="EUR">89.25</cbc:PayableRoundingAmount>											
+        <cbc:PayableAmount currencyID="EUR">89.25</cbc:PayableAmount>											
+    </cac:LegalMonetaryTotal>											
+    <cac:InvoiceLine>											
+        <cbc:ID>10</cbc:ID>											
+        <cbc:Note>Free Text Note for invoice Line</cbc:Note>											
+        <cbc:InvoicedQuantity unitCode="C62">6</cbc:InvoicedQuantity>											
+        <cbc:LineExtensionAmount currencyID="EUR">75.00</cbc:LineExtensionAmount>											
+        <cac:OrderLineReference>											
+            <cbc:LineID>0001</cbc:LineID>											
+        </cac:OrderLineReference>											
+        <cac:DocumentReference>											
+            <cbc:ID schemeID="DQ">Delivery Note</cbc:ID>											
+        </cac:DocumentReference>											
+        <cac:AllowanceCharge>											
+            <cbc:ChargeIndicator>false</cbc:ChargeIndicator>											
+            <cbc:AllowanceChargeReasonCode>95</cbc:AllowanceChargeReasonCode>											
+            <cbc:AllowanceChargeReason>Detail discount</cbc:AllowanceChargeReason>											
+            <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+            <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+        </cac:AllowanceCharge>											
+        <cac:AllowanceCharge>											
+            <cbc:ChargeIndicator>true</cbc:ChargeIndicator>											
+            <cbc:AllowanceChargeReasonCode>SAA</cbc:AllowanceChargeReasonCode>											
+            <cbc:AllowanceChargeReason>Shipping charge</cbc:AllowanceChargeReason>											
+            <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+            <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+        </cac:AllowanceCharge>											
+        <cac:AllowanceCharge>											
+            <cbc:ChargeIndicator>true</cbc:ChargeIndicator>											
+            <cbc:AllowanceChargeReasonCode>SH</cbc:AllowanceChargeReasonCode>											
+            <cbc:AllowanceChargeReason>Special handling</cbc:AllowanceChargeReason>											
+            <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+            <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+        </cac:AllowanceCharge>											
+        <cac:AllowanceCharge>											
+            <cbc:ChargeIndicator>false</cbc:ChargeIndicator>											
+            <cbc:AllowanceChargeReasonCode>42</cbc:AllowanceChargeReasonCode>											
+            <cbc:AllowanceChargeReason>Allowance</cbc:AllowanceChargeReason>											
+            <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+            <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+            <cbc:BaseAmount currencyID="EUR">5000</cbc:BaseAmount>											
+        </cac:AllowanceCharge>											
+        <cac:AllowanceCharge>											
+            <cbc:ChargeIndicator>true</cbc:ChargeIndicator>											
+            <cbc:AllowanceChargeReasonCode>ABL</cbc:AllowanceChargeReasonCode>											
+            <cbc:AllowanceChargeReason>Packaging Surcharge</cbc:AllowanceChargeReason>											
+            <cbc:MultiplierFactorNumeric>5</cbc:MultiplierFactorNumeric>											
+            <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+            <cbc:BaseAmount currencyID="EUR">5000</cbc:BaseAmount>											
+        </cac:AllowanceCharge>											
+        <cac:Item>											
+            <cbc:Description>Free form item description</cbc:Description>											
+            <cbc:Name>Item name</cbc:Name>											
+            <cac:BuyersItemIdentification>											
+                <cbc:ID>Buyer part ID</cbc:ID>											
+            </cac:BuyersItemIdentification>											
+            <cac:SellersItemIdentification>											
+                <cbc:ID>Seller part ID</cbc:ID>											
+            </cac:SellersItemIdentification>											
+            <cac:OriginCountry>											
+                <cbc:IdentificationCode>DE</cbc:IdentificationCode>											
+            </cac:OriginCountry>											
+            <cac:CommodityClassification>											
+                <cbc:ItemClassificationCode listID="EN">Item EAN ID</cbc:ItemClassificationCode>											
+            </cac:CommodityClassification>											
+            <cac:CommodityClassification>											
+                <cbc:ItemClassificationCode listID="SN">Item serial											
+                    number</cbc:ItemClassificationCode>											
+            </cac:CommodityClassification>											
+            <cac:CommodityClassification>											
+                <cbc:ItemClassificationCode listID="UP">Item universal product											
+                    code</cbc:ItemClassificationCode>											
+            </cac:CommodityClassification>											
+            <cac:CommodityClassification>											
+                <cbc:ItemClassificationCode listID="VS">Supplier auxiliary part											
+                    ID</cbc:ItemClassificationCode>											
+            </cac:CommodityClassification>											
+            <cac:CommodityClassification>											
+                <cbc:ItemClassificationCode listID="TSR">European waste catalog											
+                    ID</cbc:ItemClassificationCode>											
+            </cac:CommodityClassification>											
+            <cac:CommodityClassification>											
+                <cbc:ItemClassificationCode listID="TST">Item UNSPSC ID</cbc:ItemClassificationCode>											
+            </cac:CommodityClassification>											
+            <cac:ClassifiedTaxCategory>											
+                <cbc:ID>S</cbc:ID>											
+                <cbc:Percent>19</cbc:Percent>											
+                <cac:TaxScheme>											
+                    <cbc:ID>VAT</cbc:ID>											
+                </cac:TaxScheme>											
+            </cac:ClassifiedTaxCategory>											
+            <cac:AdditionalItemProperty>											
+                <cbc:Name>customExtrinsic</cbc:Name>											
+                <cbc:Value>Extrinsic value</cbc:Value>											
+            </cac:AdditionalItemProperty>											
+        </cac:Item>											
+        <cac:Price>											
+            <cbc:PriceAmount currencyID="EUR">12.50</cbc:PriceAmount>											
+            <cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>											
+            <cac:AllowanceCharge>											
+                <cbc:ChargeIndicator>false</cbc:ChargeIndicator>											
+                <cbc:Amount currencyID="EUR">100</cbc:Amount>											
+				<cbc:BaseAmount currencyID="EUR">400</cbc:BaseAmount>							
+            </cac:AllowanceCharge>											
+        </cac:Price>											
+    </cac:InvoiceLine>											
+</ubl:Invoice>											

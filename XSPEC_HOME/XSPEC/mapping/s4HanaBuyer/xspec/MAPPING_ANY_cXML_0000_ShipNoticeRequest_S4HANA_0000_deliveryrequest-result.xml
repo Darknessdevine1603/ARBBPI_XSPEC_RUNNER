@@ -1,0 +1,1683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xsl"
+        date="2023-04-27T15:48:18.307147+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 1 - ASN40729 - Partial Quantity</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN40729_partial_quantity_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1623743322336-2816557783570510681@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID>10300099</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1623743322336-2816557783570510681@10.163.3.224"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>ASN40729</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>S4 Subcontractor - TEST</AddressName>
+                        <StreetName>jUnitDummy</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                        <Region>CA</Region>
+                     </Address>
+                  </Party>
+                  <Party PartyType="WE">
+                     <Address>
+                        <AddressName>Storage Location 101B - Address Nam</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                        <Region>BW</Region>
+                     </Address>
+                  </Party>
+                  <DeliveryDateTime>2021-06-22T03:00:00-07:00</DeliveryDateTime>
+                  <DocumentDate>2021-06-15</DocumentDate>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">9</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500040729</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM13</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">5</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM14</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">8</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                  </DeliveryItem>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">18</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500040729</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>20</UnderlyingPurchaseOrderItem>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM13</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">15</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM14</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">17</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                  </DeliveryItem>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Test Ship Notice 1 - ASN40729 - Partial Quantity</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1623743322336-2816557783570510681@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID>10300099</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1623743322336-2816557783570510681@10.163.3.224"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>ASN40729</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>S4 Subcontractor - TEST</AddressName>
+                           <StreetName>jUnitDummy</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                           <Region>CA</Region>
+                        </Address>
+                     </Party>
+                     <Party PartyType="WE">
+                        <Address>
+                           <AddressName>Storage Location 101B - Address Nam</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                           <Region>BW</Region>
+                        </Address>
+                     </Party>
+                     <DeliveryDateTime>2021-06-22T03:00:00-07:00</DeliveryDateTime>
+                     <DocumentDate>2021-06-15</DocumentDate>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">9</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500040729</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM13</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">5</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM14</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">8</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                     </DeliveryItem>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">18</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500040729</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>20</UnderlyingPurchaseOrderItem>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM13</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">15</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM14</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">17</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                     </DeliveryItem>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 2 - ASN40667 - Full Quantity</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN40667_full_quantity_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1623742393683-5525097777701688106@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID>10300099</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1623742393683-5525097777701688106@10.163.3.224"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>ASN40667</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>S4 Subcontractor - TEST</AddressName>
+                        <StreetName>jUnitDummy</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                        <Region>CA</Region>
+                     </Address>
+                  </Party>
+                  <Party PartyType="WE">
+                     <Address>
+                        <AddressName>Storage Location 101B - Address Nam</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                        <Region>BW</Region>
+                     </Address>
+                  </Party>
+                  <DeliveryDateTime>2021-06-23T03:00:00-07:00</DeliveryDateTime>
+                  <DocumentDate>2021-06-15</DocumentDate>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">10</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500040667</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM13</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">10.0</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM14</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">10.0</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                  </DeliveryItem>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">20</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500040667</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>20</UnderlyingPurchaseOrderItem>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM13</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">20.0</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM14</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">20.0</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                  </DeliveryItem>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Test Ship Notice 2 - ASN40667 - Full Quantity</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1623742393683-5525097777701688106@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID>10300099</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1623742393683-5525097777701688106@10.163.3.224"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>ASN40667</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>S4 Subcontractor - TEST</AddressName>
+                           <StreetName>jUnitDummy</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                           <Region>CA</Region>
+                        </Address>
+                     </Party>
+                     <Party PartyType="WE">
+                        <Address>
+                           <AddressName>Storage Location 101B - Address Nam</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                           <Region>BW</Region>
+                        </Address>
+                     </Party>
+                     <DeliveryDateTime>2021-06-23T03:00:00-07:00</DeliveryDateTime>
+                     <DocumentDate>2021-06-15</DocumentDate>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">10</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500040667</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM13</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">10.0</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM14</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">10.0</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                     </DeliveryItem>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">20</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500040667</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>20</UnderlyingPurchaseOrderItem>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM13</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">20.0</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM14</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">20.0</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                     </DeliveryItem>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 3 - ASN_2986 - BATCH</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN_2986_Batch_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1611234778311-8255595757949550512@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>QKICLNT701</RecipientBusinessSystemID>
+                  <RecipientParty>
+                     <InternalID>AN02005439245-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID>10300080</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1611234778311-8255595757949550512@10.163.3.224"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>ASN_2986</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>S4 Seller OP - TEST</AddressName>
+                        <StreetName>jUnitDummy</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                        <Region>CA</Region>
+                     </Address>
+                  </Party>
+                  <Party PartyType="AG">
+                     <Address>
+                        <AddressName>Plant 1010 - Address Name 1</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                        <Region>BW</Region>
+                     </Address>
+                  </Party>
+                  <ActualGoodsMovementDateTime>2021-01-21T03:00:00-08:00</ActualGoodsMovementDateTime>
+                  <DeliveryDateTime>2021-01-22T03:00:00-08:00</DeliveryDateTime>
+                  <DocumentDate>2021-01-21</DocumentDate>
+                  <HeaderGrossWeight unitCode="kg">43</HeaderGrossWeight>
+                  <HeaderVolume unitCode="l">10</HeaderVolume>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>TG11</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">10</ActualDeliveryQuantity>
+                     <Batch>
+                        <Batch>SUPBATCH1</Batch>
+                        <ManufactureDate>2021-01-12</ManufactureDate>
+                        <ShelfLifeExpirationDate>2021-01-31</ShelfLifeExpirationDate>
+                     </Batch>
+                     <UnderlyingPurchaseOrder>4500002986</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                  </DeliveryItem>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>TG11</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">20</ActualDeliveryQuantity>
+                     <Batch>
+                        <Batch>SUPBATCH2</Batch>
+                        <ManufactureDate>2021-01-11</ManufactureDate>
+                        <ShelfLifeExpirationDate>2021-01-30</ShelfLifeExpirationDate>
+                     </Batch>
+                     <UnderlyingPurchaseOrder>4500002986</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>20</UnderlyingPurchaseOrderItem>
+                  </DeliveryItem>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Test Ship Notice 3 - ASN_2986 - BATCH</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1611234778311-8255595757949550512@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>QKICLNT701</RecipientBusinessSystemID>
+                     <RecipientParty>
+                        <InternalID>AN02005439245-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID>10300080</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1611234778311-8255595757949550512@10.163.3.224"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>ASN_2986</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>S4 Seller OP - TEST</AddressName>
+                           <StreetName>jUnitDummy</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                           <Region>CA</Region>
+                        </Address>
+                     </Party>
+                     <Party PartyType="AG">
+                        <Address>
+                           <AddressName>Plant 1010 - Address Name 1</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                           <Region>BW</Region>
+                        </Address>
+                     </Party>
+                     <ActualGoodsMovementDateTime>2021-01-21T03:00:00-08:00</ActualGoodsMovementDateTime>
+                     <DeliveryDateTime>2021-01-22T03:00:00-08:00</DeliveryDateTime>
+                     <DocumentDate>2021-01-21</DocumentDate>
+                     <HeaderGrossWeight unitCode="kg">43</HeaderGrossWeight>
+                     <HeaderVolume unitCode="l">10</HeaderVolume>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>TG11</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">10</ActualDeliveryQuantity>
+                        <Batch>
+                           <Batch>SUPBATCH1</Batch>
+                           <ManufactureDate>2021-01-12</ManufactureDate>
+                           <ShelfLifeExpirationDate>2021-01-31</ShelfLifeExpirationDate>
+                        </Batch>
+                        <UnderlyingPurchaseOrder>4500002986</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     </DeliveryItem>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>TG11</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">20</ActualDeliveryQuantity>
+                        <Batch>
+                           <Batch>SUPBATCH2</Batch>
+                           <ManufactureDate>2021-01-11</ManufactureDate>
+                           <ShelfLifeExpirationDate>2021-01-30</ShelfLifeExpirationDate>
+                        </Batch>
+                        <UnderlyingPurchaseOrder>4500002986</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>20</UnderlyingPurchaseOrderItem>
+                     </DeliveryItem>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 4 - ASN4204 - Component BATCH</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN4204_ComponentBatch_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1632221094540-8675831436789251503@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID/>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1632221094540-8675831436789251503@10.163.193.137"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>ASN42094_3</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>S4-Subcontractor - TEST</AddressName>
+                        <StreetName>jUnitDummy</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                        <Region>CA</Region>
+                     </Address>
+                  </Party>
+                  <Party PartyType="WE">
+                     <Address>
+                        <AddressName>Storage Location 101A - Address Nam</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                        <Region>BW</Region>
+                     </Address>
+                  </Party>
+                  <ActualGoodsMovementDateTime>2021-09-20T23:30:00-07:00</ActualGoodsMovementDateTime>
+                  <DeliveryDateTime>2021-09-20T23:30:00-07:00</DeliveryDateTime>
+                  <DocumentDate>2021-09-21</DocumentDate>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">1.0</ActualDeliveryQuantity>
+                     <Batch>
+                        <Batch>SupBatch1</Batch>
+                        <ManufactureDate>2021-09-19</ManufactureDate>
+                        <ShelfLifeExpirationDate>2021-09-28</ShelfLifeExpirationDate>
+                     </Batch>
+                     <UnderlyingPurchaseOrder>4500042094</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM13</SubcontrgProductID>
+                        <SubcontrgBatch>CompBuyBatch1</SubcontrgBatch>
+                        <SubcontrgBatchBySupplier>CompSupBatch1</SubcontrgBatchBySupplier>
+                        <QuantityInEntryUnit unitCode="PCE">1</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM14</SubcontrgProductID>
+                        <SubcontrgBatch>CompBuyBatch2</SubcontrgBatch>
+                        <SubcontrgBatchBySupplier>CompSupBatch2</SubcontrgBatchBySupplier>
+                        <QuantityInEntryUnit unitCode="PCE">1</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                  </DeliveryItem>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>Test Ship Notice 4 - ASN4204 - Component BATCH</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1632221094540-8675831436789251503@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID>0LOALS1</RecipientBusinessSystemID>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID/>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1632221094540-8675831436789251503@10.163.193.137"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>ASN42094_3</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>S4-Subcontractor - TEST</AddressName>
+                           <StreetName>jUnitDummy</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                           <Region>CA</Region>
+                        </Address>
+                     </Party>
+                     <Party PartyType="WE">
+                        <Address>
+                           <AddressName>Storage Location 101A - Address Nam</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                           <Region>BW</Region>
+                        </Address>
+                     </Party>
+                     <ActualGoodsMovementDateTime>2021-09-20T23:30:00-07:00</ActualGoodsMovementDateTime>
+                     <DeliveryDateTime>2021-09-20T23:30:00-07:00</DeliveryDateTime>
+                     <DocumentDate>2021-09-21</DocumentDate>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">1.0</ActualDeliveryQuantity>
+                        <Batch>
+                           <Batch>SupBatch1</Batch>
+                           <ManufactureDate>2021-09-19</ManufactureDate>
+                           <ShelfLifeExpirationDate>2021-09-28</ShelfLifeExpirationDate>
+                        </Batch>
+                        <UnderlyingPurchaseOrder>4500042094</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM13</SubcontrgProductID>
+                           <SubcontrgBatch>CompBuyBatch1</SubcontrgBatch>
+                           <SubcontrgBatchBySupplier>CompSupBatch1</SubcontrgBatchBySupplier>
+                           <QuantityInEntryUnit unitCode="PCE">1</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM14</SubcontrgProductID>
+                           <SubcontrgBatch>CompBuyBatch2</SubcontrgBatch>
+                           <SubcontrgBatchBySupplier>CompSupBatch2</SubcontrgBatchBySupplier>
+                           <QuantityInEntryUnit unitCode="PCE">1</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                     </DeliveryItem>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 5 - ASN2648 - Serial numbers</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN2648_SerialNumbers_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1634638392405-6556301965075193664@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID>10300008</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1634638392405-6556301965075193664@10.163.193.140"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>ASN2648</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>S4-Subcontractor - TEST</AddressName>
+                        <StreetName>jUnitDummy</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                        <Region>CA</Region>
+                     </Address>
+                  </Party>
+                  <Party PartyType="WE">
+                     <Address>
+                        <AddressName>Storage Location 101C - Address Nam</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                        <Region>BW</Region>
+                     </Address>
+                  </Party>
+                  <ActualGoodsMovementDateTime>2021-10-19T23:30:00-07:00</ActualGoodsMovementDateTime>
+                  <DeliveryDateTime>2021-10-28T23:30:00-07:00</DeliveryDateTime>
+                  <DocumentDate>2021-10-19</DocumentDate>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>RM33</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">2</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500042648</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     <Serial>
+                        <SerialNumber>101</SerialNumber>
+                     </Serial>
+                     <Serial>
+                        <SerialNumber>102</SerialNumber>
+                     </Serial>
+                     <Serial>
+                        <SerialNumber>103</SerialNumber>
+                     </Serial>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM13</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">1</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                     <SubcontractingComponent>
+                        <SubcontrgProductID>RM14</SubcontrgProductID>
+                        <QuantityInEntryUnit unitCode="PCE">1</QuantityInEntryUnit>
+                     </SubcontractingComponent>
+                  </DeliveryItem>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>Test Ship Notice 5 - ASN2648 - Serial numbers</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1634638392405-6556301965075193664@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID>10300008</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1634638392405-6556301965075193664@10.163.193.140"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>ASN2648</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>S4-Subcontractor - TEST</AddressName>
+                           <StreetName>jUnitDummy</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                           <Region>CA</Region>
+                        </Address>
+                     </Party>
+                     <Party PartyType="WE">
+                        <Address>
+                           <AddressName>Storage Location 101C - Address Nam</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                           <Region>BW</Region>
+                        </Address>
+                     </Party>
+                     <ActualGoodsMovementDateTime>2021-10-19T23:30:00-07:00</ActualGoodsMovementDateTime>
+                     <DeliveryDateTime>2021-10-28T23:30:00-07:00</DeliveryDateTime>
+                     <DocumentDate>2021-10-19</DocumentDate>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>RM33</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">2</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500042648</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                        <Serial>
+                           <SerialNumber>101</SerialNumber>
+                        </Serial>
+                        <Serial>
+                           <SerialNumber>102</SerialNumber>
+                        </Serial>
+                        <Serial>
+                           <SerialNumber>103</SerialNumber>
+                        </Serial>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM13</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">1</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                        <SubcontractingComponent>
+                           <SubcontrgProductID>RM14</SubcontrgProductID>
+                           <QuantityInEntryUnit unitCode="PCE">1</QuantityInEntryUnit>
+                        </SubcontractingComponent>
+                     </DeliveryItem>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 6 - Multi level packaging one SKU</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/Multi level packaging one SKU_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1649944466941-4114714147398363936@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID>10300008</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1649944466941-4114714147398363936@10.163.193.138"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>asn_ 4500053306</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>S4-Subcontractor - TEST</AddressName>
+                        <StreetName>jUnitDummy</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                     </Address>
+                  </Party>
+                  <Party PartyType="WE">
+                     <Address>
+                        <AddressName>Storage Location 101B - Address Nam</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                     </Address>
+                  </Party>
+                  <DeliveryDateTime>2022-04-14T23:30:00-07:00</DeliveryDateTime>
+                  <DocumentDate>2022-04-14</DocumentDate>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">2000</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500053306</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                  </DeliveryItem>
+                  <HandlingUnit>
+                     <ID>ANInternalID5-2</ID>
+                     <AlternativeID>AlternateID_5-2</AlternativeID>
+                     <ID_Type>H</ID_Type>
+                     <LoadCarrier>
+                        <Product>
+                           <BuyerProductID>PMPALLET</BuyerProductID>
+                        </Product>
+                     </LoadCarrier>
+                     <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                     <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                     <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                     <LowerLevelHandlingUnit>
+                        <ID>ANInternalID6-2</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>ANInternalID6-2</ID>
+                     <AlternativeID>AlternateID_6-2</AlternativeID>
+                     <ID_Type>H</ID_Type>
+                     <LoadCarrier>
+                        <Product>
+                           <BuyerProductID>PMCARTON</BuyerProductID>
+                        </Product>
+                     </LoadCarrier>
+                     <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                     <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                     <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                     <LowerLevelHandlingUnit>
+                        <ID>ANInternalID7-2</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>ANInternalID7-2</ID>
+                     <AlternativeID>AlternateID_7-2</AlternativeID>
+                     <ID_Type>H</ID_Type>
+                     <LoadCarrier>
+                        <Product>
+                           <BuyerProductID>PMWIREBASKET</BuyerProductID>
+                        </Product>
+                     </LoadCarrier>
+                     <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                     <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                     <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                     <Load>
+                        <BusinessTransactionDocumentReference>
+                           <ID>asn_ 4500053306</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                        <Quantity unitCode="PCE">200</Quantity>
+                     </Load>
+                  </HandlingUnit>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>Test Ship Notice 6 - Multi level packaging one SKU</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1649944466941-4114714147398363936@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID>10300008</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1649944466941-4114714147398363936@10.163.193.138"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>asn_ 4500053306</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>S4-Subcontractor - TEST</AddressName>
+                           <StreetName>jUnitDummy</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                        </Address>
+                     </Party>
+                     <Party PartyType="WE">
+                        <Address>
+                           <AddressName>Storage Location 101B - Address Nam</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                        </Address>
+                     </Party>
+                     <DeliveryDateTime>2022-04-14T23:30:00-07:00</DeliveryDateTime>
+                     <DocumentDate>2022-04-14</DocumentDate>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">2000</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500053306</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     </DeliveryItem>
+                     <HandlingUnit>
+                        <ID>ANInternalID5-2</ID>
+                        <AlternativeID>AlternateID_5-2</AlternativeID>
+                        <ID_Type>H</ID_Type>
+                        <LoadCarrier>
+                           <Product>
+                              <BuyerProductID>PMPALLET</BuyerProductID>
+                           </Product>
+                        </LoadCarrier>
+                        <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                        <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                        <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                        <LowerLevelHandlingUnit>
+                           <ID>ANInternalID6-2</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>ANInternalID6-2</ID>
+                        <AlternativeID>AlternateID_6-2</AlternativeID>
+                        <ID_Type>H</ID_Type>
+                        <LoadCarrier>
+                           <Product>
+                              <BuyerProductID>PMCARTON</BuyerProductID>
+                           </Product>
+                        </LoadCarrier>
+                        <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                        <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                        <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                        <LowerLevelHandlingUnit>
+                           <ID>ANInternalID7-2</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>ANInternalID7-2</ID>
+                        <AlternativeID>AlternateID_7-2</AlternativeID>
+                        <ID_Type>H</ID_Type>
+                        <LoadCarrier>
+                           <Product>
+                              <BuyerProductID>PMWIREBASKET</BuyerProductID>
+                           </Product>
+                        </LoadCarrier>
+                        <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                        <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                        <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                        <Load>
+                           <BusinessTransactionDocumentReference>
+                              <ID>asn_ 4500053306</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                           <Quantity unitCode="PCE">200</Quantity>
+                        </Load>
+                     </HandlingUnit>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 7 - Single level packaging with Auxiliary Material</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/Single level packaging with Auxiliary Material_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1649944466941-4114714147398363936@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID>10300008</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1649944466941-4114714147398363936@10.163.193.138"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>asn_ 4500053306</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>S4-Subcontractor - TEST</AddressName>
+                        <StreetName>jUnitDummy</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                     </Address>
+                  </Party>
+                  <Party PartyType="WE">
+                     <Address>
+                        <AddressName>Storage Location 101B - Address Nam</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                     </Address>
+                  </Party>
+                  <DeliveryDateTime>2022-04-14T23:30:00-07:00</DeliveryDateTime>
+                  <DocumentDate>2022-04-14</DocumentDate>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">2000</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500053306</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                  </DeliveryItem>
+                  <HandlingUnit>
+                     <ID>ANInternalID6-4</ID>
+                     <AlternativeID>AlternateID_6-4</AlternativeID>
+                     <ID_Type>H</ID_Type>
+                     <LoadCarrier>
+                        <Product>
+                           <BuyerProductID>PMWIREBASKET</BuyerProductID>
+                        </Product>
+                     </LoadCarrier>
+                     <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                     <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                     <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                     <AdditionalPackaging>
+                        <Product>
+                           <BuyerProductID>PMFILLING</BuyerProductID>
+                        </Product>
+                        <Quantity unitCode="PCE">200</Quantity>
+                     </AdditionalPackaging>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>ANInternalID7-4</ID>
+                     <AlternativeID>AlternateID_7-4</AlternativeID>
+                     <ID_Type>H</ID_Type>
+                     <LoadCarrier>
+                        <Product>
+                           <BuyerProductID>PMWIREBASKET</BuyerProductID>
+                        </Product>
+                     </LoadCarrier>
+                     <HeightMeasure unitCode="CMT">11</HeightMeasure>
+                     <LengthMeasure unitCode="CMT">21</LengthMeasure>
+                     <WidthMeasure unitCode="CMT">6</WidthMeasure>
+                     <Load>
+                        <BusinessTransactionDocumentReference>
+                           <ID>asn_ 4500053306</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                        <Quantity unitCode="PCE">200</Quantity>
+                     </Load>
+                  </HandlingUnit>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="true">
+         <label>Test Ship Notice 7 - Single level packaging with Auxiliary Material</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1649944466941-4114714147398363936@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID>10300008</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1649944466941-4114714147398363936@10.163.193.138"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>asn_ 4500053306</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>S4-Subcontractor - TEST</AddressName>
+                           <StreetName>jUnitDummy</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                        </Address>
+                     </Party>
+                     <Party PartyType="WE">
+                        <Address>
+                           <AddressName>Storage Location 101B - Address Nam</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                        </Address>
+                     </Party>
+                     <DeliveryDateTime>2022-04-14T23:30:00-07:00</DeliveryDateTime>
+                     <DocumentDate>2022-04-14</DocumentDate>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">2000</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500053306</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     </DeliveryItem>
+                     <HandlingUnit>
+                        <ID>ANInternalID6-4</ID>
+                        <AlternativeID>AlternateID_6-4</AlternativeID>
+                        <ID_Type>H</ID_Type>
+                        <LoadCarrier>
+                           <Product>
+                              <BuyerProductID>PMWIREBASKET</BuyerProductID>
+                           </Product>
+                        </LoadCarrier>
+                        <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                        <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                        <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                        <AdditionalPackaging>
+                           <Product>
+                              <BuyerProductID>PMFILLING</BuyerProductID>
+                           </Product>
+                           <Quantity unitCode="PCE">200</Quantity>
+                        </AdditionalPackaging>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>ANInternalID7-4</ID>
+                        <AlternativeID>AlternateID_7-4</AlternativeID>
+                        <ID_Type>H</ID_Type>
+                        <LoadCarrier>
+                           <Product>
+                              <BuyerProductID>PMWIREBASKET</BuyerProductID>
+                           </Product>
+                        </LoadCarrier>
+                        <HeightMeasure unitCode="CMT">11</HeightMeasure>
+                        <LengthMeasure unitCode="CMT">21</LengthMeasure>
+                        <WidthMeasure unitCode="CMT">6</WidthMeasure>
+                        <Load>
+                           <BusinessTransactionDocumentReference>
+                              <ID>asn_ 4500053306</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                           <Quantity unitCode="PCE">200</Quantity>
+                        </Load>
+                     </HandlingUnit>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario8"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 8 - Mixed HU: Different materials in same HU</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/Mixed HU- Different materials in same HU_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1649944466941-4114714147398363936@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID>10300008</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1649944466941-4114714147398363936@10.163.193.138"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>asn_ 4500053306-125</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>S4-Subcontractor - TEST</AddressName>
+                        <StreetName>jUnitDummy</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                     </Address>
+                  </Party>
+                  <Party PartyType="WE">
+                     <Address>
+                        <AddressName>Storage Location 101B - Address Nam</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                     </Address>
+                  </Party>
+                  <DeliveryDateTime>2022-04-14T23:30:00-07:00</DeliveryDateTime>
+                  <DocumentDate>2022-04-14</DocumentDate>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">2000</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500053306</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                  </DeliveryItem>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>SG23</BuyerProductID>
+                        <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="PCE">2000</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500053306</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                  </DeliveryItem>
+                  <HandlingUnit>
+                     <ID>ANInternalID5-125</ID>
+                     <AlternativeID>AlternateID_5-125</AlternativeID>
+                     <ID_Type>H</ID_Type>
+                     <LoadCarrier>
+                        <Product>
+                           <BuyerProductID>PMCARTON</BuyerProductID>
+                        </Product>
+                     </LoadCarrier>
+                     <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                     <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                     <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                     <LowerLevelHandlingUnit>
+                        <ID>ANInternalID6-125</ID>
+                     </LowerLevelHandlingUnit>
+                  </HandlingUnit>
+                  <HandlingUnit>
+                     <ID>ANInternalID6-125</ID>
+                     <AlternativeID>AlternateID_6-125</AlternativeID>
+                     <ID_Type>H</ID_Type>
+                     <LoadCarrier>
+                        <Product>
+                           <BuyerProductID>PMWIREBASKET</BuyerProductID>
+                        </Product>
+                     </LoadCarrier>
+                     <HeightMeasure unitCode="CMT">11</HeightMeasure>
+                     <LengthMeasure unitCode="CMT">21</LengthMeasure>
+                     <WidthMeasure unitCode="CMT">6</WidthMeasure>
+                     <Load>
+                        <BusinessTransactionDocumentReference>
+                           <ID>asn_ 4500053306-125</ID>
+                           <ItemID>1</ItemID>
+                        </BusinessTransactionDocumentReference>
+                        <Quantity unitCode="PCE">20</Quantity>
+                     </Load>
+                     <Load>
+                        <BusinessTransactionDocumentReference>
+                           <ID>asn_ 4500053306-125</ID>
+                           <ItemID>2</ItemID>
+                        </BusinessTransactionDocumentReference>
+                        <Quantity unitCode="PCE">20</Quantity>
+                     </Load>
+                  </HandlingUnit>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario8-expect1" successful="true">
+         <label>Test Ship Notice 8 - Mixed HU: Different materials in same HU</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1649944466941-4114714147398363936@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID>10300008</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1649944466941-4114714147398363936@10.163.193.138"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>asn_ 4500053306-125</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>S4-Subcontractor - TEST</AddressName>
+                           <StreetName>jUnitDummy</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                        </Address>
+                     </Party>
+                     <Party PartyType="WE">
+                        <Address>
+                           <AddressName>Storage Location 101B - Address Nam</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                        </Address>
+                     </Party>
+                     <DeliveryDateTime>2022-04-14T23:30:00-07:00</DeliveryDateTime>
+                     <DocumentDate>2022-04-14</DocumentDate>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">2000</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500053306</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     </DeliveryItem>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>SG23</BuyerProductID>
+                           <SupplierProductID>Non-Catalog-Item</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="PCE">2000</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500053306</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     </DeliveryItem>
+                     <HandlingUnit>
+                        <ID>ANInternalID5-125</ID>
+                        <AlternativeID>AlternateID_5-125</AlternativeID>
+                        <ID_Type>H</ID_Type>
+                        <LoadCarrier>
+                           <Product>
+                              <BuyerProductID>PMCARTON</BuyerProductID>
+                           </Product>
+                        </LoadCarrier>
+                        <HeightMeasure unitCode="CMT">10</HeightMeasure>
+                        <LengthMeasure unitCode="CMT">20</LengthMeasure>
+                        <WidthMeasure unitCode="CMT">5</WidthMeasure>
+                        <LowerLevelHandlingUnit>
+                           <ID>ANInternalID6-125</ID>
+                        </LowerLevelHandlingUnit>
+                     </HandlingUnit>
+                     <HandlingUnit>
+                        <ID>ANInternalID6-125</ID>
+                        <AlternativeID>AlternateID_6-125</AlternativeID>
+                        <ID_Type>H</ID_Type>
+                        <LoadCarrier>
+                           <Product>
+                              <BuyerProductID>PMWIREBASKET</BuyerProductID>
+                           </Product>
+                        </LoadCarrier>
+                        <HeightMeasure unitCode="CMT">11</HeightMeasure>
+                        <LengthMeasure unitCode="CMT">21</LengthMeasure>
+                        <WidthMeasure unitCode="CMT">6</WidthMeasure>
+                        <Load>
+                           <BusinessTransactionDocumentReference>
+                              <ID>asn_ 4500053306-125</ID>
+                              <ItemID>1</ItemID>
+                           </BusinessTransactionDocumentReference>
+                           <Quantity unitCode="PCE">20</Quantity>
+                        </Load>
+                        <Load>
+                           <BusinessTransactionDocumentReference>
+                              <ID>asn_ 4500053306-125</ID>
+                              <ItemID>2</ItemID>
+                           </BusinessTransactionDocumentReference>
+                           <Quantity unitCode="PCE">20</Quantity>
+                        </Load>
+                     </HandlingUnit>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario9"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/s4HanaBuyer/MAPPING_ANY_cXML_0000_ShipNoticeRequest_S4HANA_0000_deliveryrequest.xspec">
+      <label>Test Ship Notice 9 - Attachment</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/s4HanaBuyer/DeliveryRequest/ASN_cXML_BM_file_with_Attachments.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+               <MessageHeader>
+                  <ID>1657022512117-4104474704864606865@1</ID>
+                  <CreationDateTime>2023-04-27T15:48:19+05:30</CreationDateTime>
+                  <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                  <RecipientBusinessSystemID/>
+                  <RecipientParty>
+                     <InternalID>AN02005083674-T</InternalID>
+                  </RecipientParty>
+                  <SenderParty>
+                     <InternalID>10300089</InternalID>
+                  </SenderParty>
+                  <BusinessScope>
+                     <TypeCode/>
+                     <InstanceID schemeID="1657022512117-4104474704864606865@10.163.193.140"/>
+                  </BusinessScope>
+               </MessageHeader>
+               <Delivery>
+                  <DeliveryDocumentBySupplier>Pack_86</DeliveryDocumentBySupplier>
+                  <Party PartyType="CP">
+                     <Address>
+                        <AddressName>Simple Semiconductor</AddressName>
+                        <StreetName>Semiconductor St</StreetName>
+                        <PostalCode>94089</PostalCode>
+                        <CityName>Sunnyvale</CityName>
+                        <Country>US</Country>
+                        <Region>CA</Region>
+                     </Address>
+                  </Party>
+                  <Party PartyType="WE">
+                     <Address>
+                        <AddressName>Plant 1010 - Address Name 1</AddressName>
+                        <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                        <PostalCode>69190</PostalCode>
+                        <CityName>Walldorf</CityName>
+                        <Country>DE</Country>
+                     </Address>
+                  </Party>
+                  <ActualGoodsMovementDateTime>2022-07-05T03:00:00-07:00</ActualGoodsMovementDateTime>
+                  <DeliveryDateTime>2022-07-05T03:00:00-07:00</DeliveryDateTime>
+                  <DocumentDate>2022-07-05</DocumentDate>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>3975</BuyerProductID>
+                        <SupplierProductID>VEND_MAT_NO_3975</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="EA">4</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500113421</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                  </DeliveryItem>
+                  <DeliveryItem>
+                     <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                     <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                     <Material>
+                        <BuyerProductID>3975</BuyerProductID>
+                        <SupplierProductID>VEND_MAT_NO_3975</SupplierProductID>
+                     </Material>
+                     <ActualDeliveryQuantity unitCode="EA">5</ActualDeliveryQuantity>
+                     <UnderlyingPurchaseOrder>4500113421</UnderlyingPurchaseOrder>
+                     <UnderlyingPurchaseOrderItem>20</UnderlyingPurchaseOrderItem>
+                  </DeliveryItem>
+                  <Attachment FileName="" MimeType="" FileSize="">
+                     <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                  </Attachment>
+               </Delivery>
+            </n0:DeliveryRequest>
+         </content-wrap>
+      </result>
+      <test id="scenario9-expect1" successful="true">
+         <label>Test Ship Notice 9 - Attachment</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:DeliveryRequest xmlns:n0="http://sap.com/xi/EDI">
+                  <MessageHeader>
+                     <ID>1657022512117-4104474704864606865@1</ID>
+                     <CreationDateTime>...</CreationDateTime>
+                     <SenderBusinessSystemID>ARIBA_NETWORK</SenderBusinessSystemID>
+                     <RecipientBusinessSystemID/>
+                     <RecipientParty>
+                        <InternalID>AN02005083674-T</InternalID>
+                     </RecipientParty>
+                     <SenderParty>
+                        <InternalID>10300089</InternalID>
+                     </SenderParty>
+                     <BusinessScope>
+                        <TypeCode/>
+                        <InstanceID schemeID="1657022512117-4104474704864606865@10.163.193.140"/>
+                     </BusinessScope>
+                  </MessageHeader>
+                  <Delivery>
+                     <DeliveryDocumentBySupplier>Pack_86</DeliveryDocumentBySupplier>
+                     <Party PartyType="CP">
+                        <Address>
+                           <AddressName>Simple Semiconductor</AddressName>
+                           <StreetName>Semiconductor St</StreetName>
+                           <PostalCode>94089</PostalCode>
+                           <CityName>Sunnyvale</CityName>
+                           <Country>US</Country>
+                           <Region>CA</Region>
+                        </Address>
+                     </Party>
+                     <Party PartyType="WE">
+                        <Address>
+                           <AddressName>Plant 1010 - Address Name 1</AddressName>
+                           <StreetName>Dietmar-Hopp-Allee 16</StreetName>
+                           <PostalCode>69190</PostalCode>
+                           <CityName>Walldorf</CityName>
+                           <Country>DE</Country>
+                        </Address>
+                     </Party>
+                     <ActualGoodsMovementDateTime>2022-07-05T03:00:00-07:00</ActualGoodsMovementDateTime>
+                     <DeliveryDateTime>2022-07-05T03:00:00-07:00</DeliveryDateTime>
+                     <DocumentDate>2022-07-05</DocumentDate>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>1</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>1</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>3975</BuyerProductID>
+                           <SupplierProductID>VEND_MAT_NO_3975</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="EA">4</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500113421</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>10</UnderlyingPurchaseOrderItem>
+                     </DeliveryItem>
+                     <DeliveryItem>
+                        <DeliveryDocumentItem>2</DeliveryDocumentItem>
+                        <DeliveryDocumentItemBySupplier>2</DeliveryDocumentItemBySupplier>
+                        <Material>
+                           <BuyerProductID>3975</BuyerProductID>
+                           <SupplierProductID>VEND_MAT_NO_3975</SupplierProductID>
+                        </Material>
+                        <ActualDeliveryQuantity unitCode="EA">5</ActualDeliveryQuantity>
+                        <UnderlyingPurchaseOrder>4500113421</UnderlyingPurchaseOrder>
+                        <UnderlyingPurchaseOrderItem>20</UnderlyingPurchaseOrderItem>
+                     </DeliveryItem>
+                     <Attachment FileName="" MimeType="" FileSize="">
+                        <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href=""/>
+                     </Attachment>
+                  </Delivery>
+               </n0:DeliveryRequest>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

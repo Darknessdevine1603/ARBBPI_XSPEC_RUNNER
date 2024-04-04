@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xsl">
+    <x:scenario label="Payment Proposal with Wire Transfer">
+        <x:param name="anIsMultiERP" select="'NO'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPSystemID"  select="'Q8JCLNT002'"/>
+        <x:param name="anTargetDocumentType" select="'PaymentProposalRequest'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithWire.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/anBuyer/PPR/PPRwithWire.dat" select="element()" label="PPayment Proposal with Wire Transfer"/>
+    </x:scenario>
+    <x:scenario label="Payment Proposal with Cheque Payment Method">
+        <x:param name="anIsMultiERP" select="'NO'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPSystemID"  select="'Q8JCLNT002'"/>
+        <x:param name="anTargetDocumentType" select="'PaymentProposalRequest'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithCheque.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/anBuyer/PPR/PPRwithCheque.dat" select="element()" label="Payment Proposal with Cheque Payment Method"/>
+    </x:scenario>
+    <x:scenario label="Payment Proposal with Automated clearing house">
+        <x:param name="anIsMultiERP" select="'YES'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPSystemID"  select="'Q8JCLNT002'"/>
+        <x:param name="anTargetDocumentType" select="'PaymentProposalRequest'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithACH.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/anBuyer/PPR/PPRwithACH.dat" select="element()" label="Payment Proposal with Automated clearing house"/>        
+    </x:scenario>
+    <x:scenario label="Payment Proposal with Other Payment Method">
+        <x:param name="anIsMultiERP" select="'YES'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPSystemID"  select="'Q8JCLNT002'"/>
+        <x:param name="anTargetDocumentType" select="'PaymentProposalRequest'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithOther.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/anBuyer/PPR/PPRwithOther.dat" select="element()" label="Payment Proposal with Other Payment Method"/>
+    </x:scenario>
+    <x:scenario label="Payment Proposal with No Tax">
+        <x:param name="anIsMultiERP" select="'YES'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPSystemID"  select="'Q8JCLNT002'"/>
+        <x:param name="anTargetDocumentType" select="'PaymentProposalRequest'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithNoTax.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/anBuyer/PPR/PPRwithNoTax.dat" select="element()" label="Payment Proposal with No Tax"/>
+    </x:scenario>
+    <x:scenario label="Payment Proposal with Tax">
+        <x:param name="anIsMultiERP" select="'YES'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPSystemID"  select="'Q8JCLNT002'"/>
+        <x:param name="anTargetDocumentType" select="'PaymentProposalRequest'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithTax.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/anBuyer/PPR/PPRwithTax.dat" select="element()" label="Payment Proposal with Tax"/>
+    </x:scenario>
+    <x:scenario label="Payment Proposal with House Bank">
+        <x:param name="anIsMultiERP" select="'YES'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSharedSecrete"/>
+        <x:param name="anERPSystemID"  select="'Q8JCLNT002'"/>
+        <x:param name="anTargetDocumentType" select="'PaymentProposalRequest'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithHouseBank.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/anBuyer/PPR/PPRwithHouseBank.dat" select="element()" label="Payment Proposal with House Bank"/>
+    </x:scenario>
+</x:description>

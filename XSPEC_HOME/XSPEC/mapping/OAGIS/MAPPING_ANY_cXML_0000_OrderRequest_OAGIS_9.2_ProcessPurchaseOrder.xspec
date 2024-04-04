@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_cXML_0000_OrderRequest_OAGIS_9.2_ProcessPurchaseOrder.xsl">
+    <x:scenario label="Order Request">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag" select="'Yes'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_AM.dat"
+            select="element()" label="Order Request"/>
+    </x:scenario>
+    <x:scenario label="Order Request with Multi Comments">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag" select="'Yes'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_RIT1_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_RIT1_AM.dat"
+            select="element()" label="Order Request with Multi Comments"/>
+    </x:scenario>
+    <x:scenario label="Order Request with Subcontract details">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_RIT2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_RIT2_AM.dat"
+            select="element()" label="Order Request with Subcontract details"/>
+    </x:scenario>
+    <x:scenario label="Order Request detail">
+        <!-- Parameter in main XSLT -->
+        <x:param name="anAlternativeSender" select="'OAGISBuyer32'"/>
+        <x:param name="anAlternativeReceiver" select="'658731930T'"/>
+        <x:param name="releaseID" select="'9.2'"/>
+        <x:param name="anCRFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/OrderRequest/OrderRequest_RIT3_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/OrderRequest/OrderRequest_RIT3_AM.dat"
+            select="element()" label="Order Request detail"/>
+    </x:scenario>      
+</x:description>

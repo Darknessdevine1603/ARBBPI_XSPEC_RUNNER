@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Combined>
+  <Payload>
+    <cXML payloadID="1625812879636-298211034380728633@10.163.3.186" timestamp="2021-07-08T23:41:19-07:00" xml:lang="en-US">
+      <Header>
+        <From>
+          <Credential            domain="NetworkID">
+            <Identity>AN01000000001</Identity>
+          </Credential>
+          <Credential            domain="PrivateID">
+            <Identity>100000</Identity>
+          </Credential>
+        </From>
+        <To>
+          <Credential            domain="NetworkID">
+            <Identity>AN02005543705-T</Identity>
+          </Credential>
+          <Credential            domain="EndPointID">
+            <Identity>CIG</Identity>
+          </Credential>
+        </To>
+        <Sender>
+          <Credential            domain="NetworkID">
+            <Identity>AN01000000001</Identity>
+          </Credential>
+          <UserAgent>SCMSupplier</UserAgent>
+        </Sender>
+        <Path>
+          <Node                type="copy">
+            <Credential        domain="NetworkID">
+              <Identity>AN02004712159-T</Identity>
+            </Credential>
+          </Node>
+        </Path>
+        <OriginalDocument payloadID="1625812879636-298211034380728633@10.163.3.186"/>
+      </Header>
+      <Request deploymentMode="production">
+        <ApprovalRequest>
+          <ApprovalRequestHeader creationDate="2021-07-08T23:41:19-07:00" type="orderConfirmation">
+            <DocumentReference payloadID="1625812732464-4362894272770388917@10.163.3.194">
+            </DocumentReference>
+            <cXMLAttachment>
+              <Attachment>
+                <URL>cid:1625812732464-4362894272770388917@10.163.3.194</URL>
+              </Attachment>
+            </cXMLAttachment>
+            <Extrinsic name="Ariba.orderPayloadId">42010AEE25281EEBB88FFA7E9F90CAF4</Extrinsic>
+          </ApprovalRequestHeader>
+          <AcceptanceItem lineNumber="10" acceptanceStatus="rejected">
+            <DeviationReason value="priceDeviation">
+            </DeviationReason>
+            <AcceptanceItemDetail lineNumber="10" approvedAction = "rejected">
+              <UnitPrice>
+                <Money currency="EUR">0.01</Money>
+              </UnitPrice>
+              <AcceptanceScheduleDetail approvedAction="update">
+                
+              </AcceptanceScheduleDetail>
+            </AcceptanceItemDetail>
+          </AcceptanceItem>
+          <AcceptanceItem lineNumber="20" acceptanceStatus="awaitingApproval">
+            <DeviationReason value="quantityDeviation">
+            </DeviationReason>
+            <AcceptanceItemDetail lineNumber="10" approvedAction = "replace">
+              <AcceptanceScheduleDetail lineNumber="10" approvedAction="delete" deliveryDate="2021-07-08T23:38:52-07:00">
+                
+              </AcceptanceScheduleDetail>
+            </AcceptanceItemDetail>
+          </AcceptanceItem>
+        </ApprovalRequest>
+        <ConfirmationRequest>
+          <ConfirmationHeader noticeDate="2021-07-08T23:38:52-07:00" type="allDetail" operation="new" confirmID="OCA_5500003095">
+            <Comments xml:lang="FR">Test Code Coverage</Comments>
+          </ConfirmationHeader>
+          <OrderReference orderDate="2021-07-08T23:30:00-07:00" orderID="55000030955500003095">
+            <DocumentReference payloadID="42010AEE25281EEBB88FFA7E9F90CAF4">
+            </DocumentReference>
+          </OrderReference>
+          <ConfirmationItem itemType="item" quantity="200.000" lineNumber="10">
+            <UnitOfMeasure>EA</UnitOfMeasure>
+            <ConfirmationStatus deliveryDate="2021-07-11T23:30:00-07:00" type="accepted" quantity="180">
+              <UnitOfMeasure>EA</UnitOfMeasure>
+              <ItemIn lineNumber="10" quantity="180">
+                <ItemID>
+                  <SupplierPartID>285</SupplierPartID>
+                  <SupplierPartAuxiliaryID>
+                  </SupplierPartAuxiliaryID>
+                  <BuyerPartID>138</BuyerPartID>
+                </ItemID>
+                <ItemDetail>
+                  <UnitPrice>
+                    <Money currency="EUR">50.00</Money>
+                  </UnitPrice>
+                  <Description xml:lang="EN">##138-SEMI FINISHED SUBCONPO$$</Description>
+                  <UnitOfMeasure>EA</UnitOfMeasure>
+                  <PriceBasisQuantity conversionFactor="1" quantity="1">
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                  </PriceBasisQuantity>
+                  <Classification domain="ERPCommodityCode">01</Classification>
+                  <Classification domain="ERPCommodityCodeDescription">Material Group 1</Classification>
+                  <Classification domain="LineOfBusiness">Test PH</Classification>
+                </ItemDetail>
+              </ItemIn>
+              <ScheduleLineReference lineNumber="1" requestedDeliveryDate="2021-07-11T23:30:00-07:00" quantity="200">
+              </ScheduleLineReference>
+              <Extrinsic name="scheduleLineNumber">1</Extrinsic>
+            </ConfirmationStatus>
+            <ConfirmationStatus type="unknown" quantity="20.000">
+              <UnitOfMeasure>EA</UnitOfMeasure>
+            </ConfirmationStatus>
+          </ConfirmationItem>
+          <ConfirmationItem itemType="item" quantity="150.000" lineNumber="20">
+            <UnitOfMeasure>EA</UnitOfMeasure>
+            <ConfirmationStatus deliveryDate="2021-07-12T23:30:00-07:00" type="accept" quantity="130">
+              <UnitOfMeasure>EA</UnitOfMeasure>
+              <ItemIn lineNumber="20" quantity="130">
+                <ItemID>
+                  <SupplierPartID>SAPARIBA</SupplierPartID>
+                  <SupplierPartAuxiliaryID>
+                  </SupplierPartAuxiliaryID>
+                  <BuyerPartID>R2000</BuyerPartID>
+                </ItemID>
+                <ItemDetail>
+                  <UnitPrice>
+                    <Money currency="EUR">150.00</Money>
+                  </UnitPrice>
+                  <Description xml:lang="EN">Casing R2000 test- Change</Description>
+                  <UnitOfMeasure>EA</UnitOfMeasure>
+                  <PriceBasisQuantity conversionFactor="1" quantity="1">
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                  </PriceBasisQuantity>
+                  <Classification domain="ERPCommodityCode">01</Classification>
+                  <Classification domain="ERPCommodityCodeDescription">Material Group 1</Classification>
+                </ItemDetail>
+              </ItemIn>
+              <ScheduleLineReference lineNumber="1" requestedDeliveryDate="2021-07-12T23:30:00-07:00" quantity="150">
+              </ScheduleLineReference>
+              <Extrinsic name="scheduleLineNumber">1</Extrinsic>
+            </ConfirmationStatus>
+            <ConfirmationStatus type="unknown" quantity="20.000">
+              <UnitOfMeasure>EA</UnitOfMeasure>
+            </ConfirmationStatus>
+          </ConfirmationItem>
+        </ConfirmationRequest>
+      </Request>
+    </cXML>
+  </Payload>
+</Combined>

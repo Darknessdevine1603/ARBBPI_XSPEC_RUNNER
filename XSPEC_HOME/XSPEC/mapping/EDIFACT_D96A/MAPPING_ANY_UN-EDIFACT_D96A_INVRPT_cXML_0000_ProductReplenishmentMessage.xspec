@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_UN-EDIFACT_D96A_INVRPT_cXML_0000_ProductReplenishmentMessage.xsl">
+    <x:scenario label="Product Replenishment Message - 1">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004579339-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/ProductReplenishment/ProductReplenishmentMessage_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/ProductReplenishment/ProductReplenishmentMessage_AM.xml"
+            select="element()" label="Product Replenishment Message - 1"/>
+    </x:scenario>
+    
+    <x:scenario label="Product Replenishment Message - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004579339-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/ProductReplenishment/ProductReplenishmentMessage_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/ProductReplenishment/ProductReplenishmentMessage_AM1.xml"
+            select="element()" label="Product Replenishment Message - 2"/>
+    </x:scenario>
+</x:description>

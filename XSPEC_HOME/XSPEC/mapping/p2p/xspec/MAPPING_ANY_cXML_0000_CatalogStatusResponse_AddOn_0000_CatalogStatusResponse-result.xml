@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_CatalogStatusResponse_AddOn_0000_CatalogStatusResponse.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/p2p/MAPPING_ANY_cXML_0000_CatalogStatusResponse_AddOn_0000_CatalogStatusResponse.xsl"
+        date="2023-04-27T15:33:53.005651+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/p2p/MAPPING_ANY_cXML_0000_CatalogStatusResponse_AddOn_0000_CatalogStatusResponse.xspec">
+      <label>Scenario for Catalog Status Response</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/p2p/StatusResponse/CatalogStatusResponse_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <n0:BuyerCatalogStatusResponseMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+               <Item>
+                  <SystemID>Q8JCLNT002</SystemID>
+                  <RealmID>156</RealmID>
+                  <DocumentType>CatalogStatusResponse</DocumentType>
+                  <SubscriptionName>CLASS_AUTO_FULL</SubscriptionName>
+                  <LoadMode>F</LoadMode>
+                  <BatchID>BatchID</BatchID>
+                  <FileID>42010aee-2525-1edc-8f8c-55765ebb</FileID>
+                  <FileName>BuyerCatalog20211103055822.CIF</FileName>
+                  <UploadStatus>Success</UploadStatus>
+                  <UploadComments>Success</UploadComments>
+               </Item>
+            </n0:BuyerCatalogStatusResponseMsg>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>Scenario for Catalog Status Response</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <n0:BuyerCatalogStatusResponseMsg xmlns:n0="http://sap.com/xi/ARBCIG1">
+                  <Item>
+                     <SystemID>Q8JCLNT002</SystemID>
+                     <RealmID>156</RealmID>
+                     <DocumentType>CatalogStatusResponse</DocumentType>
+                     <SubscriptionName>CLASS_AUTO_FULL</SubscriptionName>
+                     <LoadMode>F</LoadMode>
+                     <BatchID>BatchID</BatchID>
+                     <FileID>42010aee-2525-1edc-8f8c-55765ebb</FileID>
+                     <FileName>BuyerCatalog20211103055822.CIF</FileName>
+                     <UploadStatus>Success</UploadStatus>
+                     <UploadComments>Success</UploadComments>
+                  </Item>
+               </n0:BuyerCatalogStatusResponseMsg>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

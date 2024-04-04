@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/OAGIS/MAPPING_ANY_OAGIS_9.2_ConfirmBOD.xsl">
+    <x:scenario label="Acknowledge PurchaseOrder">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anEnvName" select="'ACK'"/>
+        <x:param name="anEventType" select="'ACK'"/>
+        <x:param name="anErrorCode" select="'201'"/>
+        <x:param name="anErrorDescription" select="'Accepted'"/>
+        <x:param name="anErrorXPath"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anDocReferenceID" select="'AribaCIG_MS_INV_210930154610'"/>
+        <x:param name="anMessageID" select="'AribaCIG_MS_INV_210930154610'"/> 
+        <x:param name="anAlternateReceiverID" select="'658731930'"/>
+        <x:param name="anAlternateSenderID" select="'081466849'"/>
+        <x:param name="anDateTime" select="'2021-09-30T07:47:08+00:00'"/>
+        <x:param name="anIflowName" select="'com_sap_an_in_outbound'"/>
+        <x:param name="anICNValue"/>  
+        <x:param name="releaseID" select="'9.2'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/StatusUpdateRequest/StatusUpdateRequestAck_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/StatusUpdateRequest/StatusUpdateRequestAck_AM.dat"
+            select="element()" label="Acknowledge PurchaseOrder"/>
+    </x:scenario>
+    <x:scenario label="Acknowledge Purchase Order Error">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anEnvName" select="'ACK'"/>
+        <x:param name="anEventType" select="'ACK'"/>
+        <x:param name="anErrorCode"/>
+        <x:param name="anErrorDescription" select="'Accepted'"/>
+        <x:param name="anErrorXPath"/>
+        <x:param name="anCorrelationID"/>
+        <x:param name="anDocReferenceID" select="'AribaCIG_MS_INV_210930154610'"/>
+        <x:param name="anMessageID" select="'AribaCIG_MS_INV_210930154610'"/> 
+        <x:param name="anAlternateReceiverID" select="'658731930'"/>
+        <x:param name="anAlternateSenderID" select="'081466849'"/>
+        <x:param name="anDateTime" select="'2021-09-30T07:47:08+00:00'"/>
+        <x:param name="anIflowName" select="'com_sap_an_in_outbound'"/>
+        <x:param name="anICNValue"/>  
+        <x:param name="releaseID" select="'9.2'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/OAGIS/StatusUpdateRequest/StatusUpdateRequestAck_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/OAGIS/StatusUpdateRequest/StatusUpdateRequestAckError_AM.dat"
+            select="element()" label="Acknowledge Purchase Order Error"/>
+    </x:scenario>
+</x:description>

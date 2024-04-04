@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/fieldglass/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_FieldGlass_0000_ServiceEntrySheetStsNotifMsg.xsl">
+    <x:scenario label="Service Entry Sheet - Status Update Request processing">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/SES/SES_SUR.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/SES/SES_SUR.dat"
+            select="element()" label="Service Entry Sheet - Status Update Request processing"/>
+    </x:scenario>
+    <x:scenario label="Service Entry Sheet - Status Update Request approved">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/SES/SES_SURApproved.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/SES/SES_SURApproved.dat"
+            select="element()" label="Service Entry Sheet - Status Update Request approved"/>
+    </x:scenario>
+    <x:scenario label="Service Entry Sheet - Status Update Request rejected">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/SES/SES_SURRejected.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/SES/SES_SURRejected.dat"
+            select="element()" label="Service Entry Sheet - Status Update Request rejected"/>
+    </x:scenario>
+    <x:scenario label="Service Entry Sheet - Status Update Request failed">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/fieldglass/SES/SES_SURFailed.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/fieldglass/SES/SES_SURFailed.dat"
+            select="element()" label="Service Entry Sheet - Status Update Request failed"/>
+    </x:scenario>
+</x:description>

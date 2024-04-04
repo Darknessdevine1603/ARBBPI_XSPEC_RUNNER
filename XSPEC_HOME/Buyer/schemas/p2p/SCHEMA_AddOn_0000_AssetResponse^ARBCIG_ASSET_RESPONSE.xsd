@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+ <xsd:element name="ARBCIG_ASSET_RESPONSE">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="ARIBA_REQ_NO" minOccurs="0">
+     <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="50"/>
+      </xsd:restriction>
+     </xsd:simpleType>
+    </xsd:element>
+    <xsd:element name="PARTITION" minOccurs="0">
+     <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="20"/>
+      </xsd:restriction>
+     </xsd:simpleType>
+    </xsd:element>
+    <xsd:element name="SOURCE" minOccurs="0" type="xsd:string"/>
+    <xsd:element name="SYSTEMID" minOccurs="0" type="xsd:string"/>
+    <xsd:element name="VARIANT" minOccurs="0">
+     <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="20"/>
+      </xsd:restriction>
+     </xsd:simpleType>
+    </xsd:element>
+    <xsd:element name="BAPI1022_1">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="ARBCIG_BAPI1022_1"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="RETURN" minOccurs="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="ARBCIG_ACCOUNTING_RETURN"
+       />
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+ <xsd:complexType name="ARBCIG_ACCOUNTING_RETURN">
+  <xsd:sequence>
+   <xsd:element name="TYPE" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="1"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ID" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="20"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="NUMBER" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="3"/>
+      <xsd:pattern value="\d+"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="MESSAGE" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="220"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="LOG_NO" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="20"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="LOG_MSG_NO" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="6"/>
+      <xsd:pattern value="\d+"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="MESSAGE_V1" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="50"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="MESSAGE_V2" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="50"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="MESSAGE_V3" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="50"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="MESSAGE_V4" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="50"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="PARAMETER" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="32"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ROW" minOccurs="0" type="xsd:integer"/>
+   <xsd:element name="FIELD" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="30"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="SYSTEM" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="10"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ARIBA_ITEM" minOccurs="0" type="xsd:integer"/>
+   <xsd:element name="ARIBA_SERIAL_NO" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="2"/>
+      <xsd:pattern value="\d+"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ARBCIG_BAPI1022_1">
+  <xsd:sequence>
+   <xsd:element name="COMP_CODE" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="4"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ASSETMAINO" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="12"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ASSETSUBNO" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="4"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+   <xsd:element name="ARIBA_ITEM" minOccurs="0" type="xsd:integer"/>
+   <xsd:element name="ARIBA_SERIAL_NO" minOccurs="0">
+    <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="2"/>
+      <xsd:pattern value="\d+"/>
+     </xsd:restriction>
+    </xsd:simpleType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+</xsd:schema>

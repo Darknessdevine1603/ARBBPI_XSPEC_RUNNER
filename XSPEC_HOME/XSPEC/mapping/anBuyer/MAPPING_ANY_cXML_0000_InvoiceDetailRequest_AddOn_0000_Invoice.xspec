@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+   stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_InvoiceDetailRequest_AddOn_0000_Invoice.xsl">
+   <x:scenario label="Invoice with Attachment">
+      <x:param name="anERPName" select="'NWCCLNT520'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'14'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceAttachment.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceAttachment.dat"
+         select="element()" label="Invoice with Attachment"/>
+   </x:scenario>  
+   <x:scenario label="Invoice with Unplanned Delivery Costs">
+      <x:param name="anERPName"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceUnplannedCosts.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceUnplannedCosts.dat"
+         select="element()" label="Invoice with Unplanned Delivery Costs"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Shipping and Handling">
+      <x:param name="anERPName"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceShippingHandling.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceShippingHandling.dat"
+         select="element()" label="Invoice with Shipping and Handling"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Master Agreement Reference">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceBuyerMasterAgreementReference.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceBuyerMasterAgreementReference.dat"
+         select="element()" label="Invoice with Master Agreement Reference"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Master Agreement ID Info">
+      <x:param name="anERPName"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceBuyerMasterAgreementIDInfo.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceBuyerMasterAgreementIDInfo.dat"
+         select="element()" label="Invoice with Master Agreement ID Info"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Service Items">
+      <x:param name="anERPName"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceServiceItems.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceServiceItems.dat"
+         select="element()" label="Invoice with Service Items"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Service Items Reference">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceServiceItemReference.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceServiceItemReference.dat"
+         select="element()" label="Invoice with Service Items Reference"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Service Items Info ID">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceServiceItemInfoID.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceServiceItemInfoID.dat"
+         select="element()" label="Invoice with Service Items Info ID"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Account Distribution">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceDistribution.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceDistribution.dat"
+         select="element()" label="Invoice with Account Distribution"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Account Distribution - Non PO Scenario 1">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceDistributionNonPO.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceDistributionNonPO.dat"
+         select="element()" label="Invoice with Account Distribution - Non PO Scenario 1"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Account Distribution - Non PO Scenario 2">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceDistributionNonPOAccounts.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceDistributionNonPOAccounts.dat"
+         select="element()" label="Invoice with Account Distribution - Non PO Scenario 2"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Header Order ID">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceHeaderOrderID.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceHeaderOrderID.dat"
+         select="element()" label="Invoice with Header Order ID"/>
+   </x:scenario>
+   <x:scenario label="Invoice with Order Info ID">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceOrderInfoID.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceOrderInfoID.dat"
+         select="element()" label="Invoice with Order Info ID"/>
+   </x:scenario>
+   
+   <x:scenario label="Invoice - Credit Memo">
+      <x:param name="anERPName"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceCreditMemo.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceCreditMemo.dat"
+         select="element()" label="Invoice - Credit Memo"/>
+   </x:scenario>
+   <x:scenario label="Invoice - Credit Memo S4Hana">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceCreditMemoS4Hana.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceCreditMemoS4Hana.dat"
+         select="element()" label="Invoice - Credit Memo S4Hana"/>
+   </x:scenario>
+   <x:scenario label="Invoice - Credit Memo Line Level">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceLineLevelCreditMemo.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceLineLevelCreditMemo.dat"
+         select="element()" label="Invoice - Credit Memo Line Level"/>
+   </x:scenario>
+   <x:scenario label="Invoice - Debit Memo Line Level">
+      <x:param name="anERPName" select="'S4CORE'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceLineLevelDebitMemo.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceLineLevelDebitMemo.dat"
+         select="element()" label="Invoice - Debit Memo Line Level"/>
+   </x:scenario>
+   <x:scenario label="Invoice - LI">
+      <x:param name="anERPName" select="'NWCCLNT520'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequestLI'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/InvoiceAttachmentLI.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/InvoiceAttachmentLI.dat"
+         select="element()" label="Invoice - LI"/>
+   </x:scenario> 
+   <x:scenario label="Rate value with thousand separator">
+      <x:param name="anERPName" select="'NWCCLNT520'"/>
+      <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+      <x:param name="anERPSystemID" select="'NWCCLNT520'"/>
+      <x:param name="anSourceDocumentType" select="'InvoiceDetailRequest'"/>
+      <x:param name="anERPTimeZone" select="'+02:30'"/>
+      <x:param name="anAddOnCIVersion" select="'ARBCI10014'"/>
+      
+      <x:param name="anCrossRefFlag" select="'YES'"/>
+      <x:param name="anLookUpFlag" select="'YES'"/>
+      <x:param name="anUOMFlag" select="'YES'"/>
+      <x:param name="anLocalTesting" select="'YES'"/>
+      <x:context
+         href="../../../XSPEC/payloads/base/inbound/anBuyer/Invoice/Invoice_rate_issue_bm.xml"/>
+      <x:expect
+         href="../../../XSPEC/payloads/target/inbound/anBuyer/Invoice/Invoice_rate_issue_AM.xml"
+         select="element()" label="Rate value with thousand separator"/>
+   </x:scenario>    
+</x:description>

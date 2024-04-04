@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_MRPChangeRequest_cXML_0000_MRPChangeRequest.xsl">
+    <x:scenario label="MRP Change Request 1 - Delivery Date">            
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"  select="'0LOI36K'"/>
+        <x:param name="anTargetDocumentType"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anAddOnCIVersion"  select="'V2'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>        
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MRP/MRPChangeRequest1_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MRP/MRPChangeRequest1_AM.xml" 
+            label="MRP Change Request 1 - Delivery Date" select="*"/>
+    </x:scenario>
+    <x:scenario label="MRP Change Request 2 - Quantity">
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"  select="'0LOI36K'"/>
+        <x:param name="anTargetDocumentType"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MRP/MRPChangeRequest2_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MRP/MRPChangeRequest2_AM.xml" 
+            label="MRP Change Request 2 - Quantity" select="*"/>
+    </x:scenario>
+    <x:scenario label="MRP Change Request 3 - Reason code S1">        
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"  select="'0LOI36K'"/>
+        <x:param name="anTargetDocumentType"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MRP/MRPChangeRequest3_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MRP/MRPChangeRequest3_AM.xml" 
+            label="MRP Change Request 3 - Reason code S1" select="*"/>
+    </x:scenario>
+    <x:scenario label="MRP Change Request 4 - Multi ERP">        
+        <x:param name="anIsMultiERP"  select="'TRUE'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="anERPSystemID"  select="'0LOI36K'"/>
+        <x:param name="anTargetDocumentType"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="anProviderANID"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/MRP/MRPChangeRequest4_BM.xml"/>
+        <x:expect  href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/MRP/MRPChangeRequest4_AM.xml" 
+            label="MRP Change Request 4 - Multi ERP" select="*"/>
+    </x:scenario>
+</x:description>

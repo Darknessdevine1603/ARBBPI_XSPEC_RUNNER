@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_cXML_0000_TextMessageSUR_ASC-X12_004010_864.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/X12/MAPPING_ANY_cXML_0000_TextMessageSUR_ASC-X12_004010_864.xsl"
+        date="2023-04-27T16:03:03.821287+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_cXML_0000_TextMessageSUR_ASC-X12_004010_864.xspec">
+      <label>TextMessage Status Update Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/X12/StatusUpdateRequest/TextMessageSUR_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ns0:Interchange xmlns:ns0="urn:sap.com:typesystem:b2b:116:asc-x12:824:004010">
+               <S_ISA>
+                  <D_I01>00</D_I01>
+                  <D_I02>
+                     <ws xmlns="http://www.jenitennison.com/xslt/xspec">          </ws>
+                  </D_I02>
+                  <D_I03>00</D_I03>
+                  <D_I04>
+                     <ws xmlns="http://www.jenitennison.com/xslt/xspec">          </ws>
+                  </D_I04>
+                  <D_I05_1>ZZ</D_I05_1>
+                  <D_I06>ARIBA          </D_I06>
+                  <D_I05_2>ZZ</D_I05_2>
+                  <D_I07>RITSUPPL9      </D_I07>
+                  <D_I08>230427</D_I08>
+                  <D_I09>1603</D_I09>
+                  <D_I10>U</D_I10>
+                  <D_I11>00401</D_I11>
+                  <D_I12>000107835</D_I12>
+                  <D_I13>0</D_I13>
+                  <D_I14>P</D_I14>
+                  <D_I15>^</D_I15>
+               </S_ISA>
+               <FunctionalGroup>
+                  <S_GS>
+                     <D_479>TX</D_479>
+                     <D_142>RITBuyer_9</D_142>
+                     <D_124>RITSUPPL9</D_124>
+                     <D_373>20230427</D_373>
+                     <D_337>160307</D_337>
+                     <D_28>000107835</D_28>
+                     <D_455>X</D_455>
+                     <D_480>004010</D_480>
+                  </S_GS>
+                  <M_864>
+                     <S_ST>
+                        <D_143>864</D_143>
+                        <D_329>0001</D_329>
+                     </S_ST>
+                     <S_BMG>
+                        <D_353>SU</D_353>
+                        <D_352>ShipNoticeDocument</D_352>
+                     </S_BMG>
+                     <S_DTM>
+                        <D_374>999</D_374>
+                        <D_373>20130503</D_373>
+                        <D_337>172059</D_337>
+                        <D_623>18</D_623>
+                     </S_DTM>
+                     <G_MIT>
+                        <S_MIT>
+                           <D_127>RIT_X12_TextMsgSUR_QA</D_127>
+                           <D_352>Accepted</D_352>
+                        </S_MIT>
+                        <S_MSG>
+                           <D_933>Buyer's comments</D_933>
+                        </S_MSG>
+                     </G_MIT>
+                     <S_SE>
+                        <D_96>#segCount#</D_96>
+                        <D_329>0001</D_329>
+                     </S_SE>
+                  </M_864>
+                  <S_GE>
+                     <D_97>1</D_97>
+                     <D_28>000107835</D_28>
+                  </S_GE>
+               </FunctionalGroup>
+               <S_IEA>
+                  <D_I16>1</D_I16>
+                  <D_I12>000107835</D_I12>
+               </S_IEA>
+            </ns0:Interchange>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>TextMessage Status Update Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ns0:Interchange xmlns:ns0="urn:sap.com:typesystem:b2b:116:asc-x12:824:004010">
+                  <S_ISA>
+                     <D_I01>00</D_I01>
+                     <D_I02>...</D_I02>
+                     <D_I03>00</D_I03>
+                     <D_I04>...</D_I04>
+                     <D_I05_1>ZZ</D_I05_1>
+                     <D_I06>ARIBA          </D_I06>
+                     <D_I05_2>ZZ</D_I05_2>
+                     <D_I07>RITSUPPL9      </D_I07>
+                     <D_I08>...</D_I08>
+                     <D_I09>...</D_I09>
+                     <D_I10>U</D_I10>
+                     <D_I11>00401</D_I11>
+                     <D_I12>000107835</D_I12>
+                     <D_I13>0</D_I13>
+                     <D_I14>P</D_I14>
+                     <D_I15>^</D_I15>
+                  </S_ISA>
+                  <FunctionalGroup>
+                     <S_GS>
+                        <D_479>TX</D_479>
+                        <D_142>RITBuyer_9</D_142>
+                        <D_124>RITSUPPL9</D_124>
+                        <D_373>...</D_373>
+                        <D_337>...</D_337>
+                        <D_28>000107835</D_28>
+                        <D_455>X</D_455>
+                        <D_480>004010</D_480>
+                     </S_GS>
+                     <M_864>
+                        <S_ST>
+                           <D_143>864</D_143>
+                           <D_329>0001</D_329>
+                        </S_ST>
+                        <S_BMG>
+                           <D_353>SU</D_353>
+                           <D_352>ShipNoticeDocument</D_352>
+                        </S_BMG>
+                        <S_DTM>
+                           <D_374>999</D_374>
+                           <D_373>20130503</D_373>
+                           <D_337>172059</D_337>
+                           <D_623>18</D_623>
+                        </S_DTM>
+                        <G_MIT>
+                           <S_MIT>
+                              <D_127>RIT_X12_TextMsgSUR_QA</D_127>
+                              <D_352>Accepted</D_352>
+                           </S_MIT>
+                           <S_MSG>
+                              <D_933>Buyer's comments</D_933>
+                           </S_MSG>
+                        </G_MIT>
+                        <S_SE>
+                           <D_96>...</D_96>
+                           <D_329>0001</D_329>
+                        </S_SE>
+                     </M_864>
+                     <S_GE>
+                        <D_97>1</D_97>
+                        <D_28>000107835</D_28>
+                     </S_GE>
+                  </FunctionalGroup>
+                  <S_IEA>
+                     <D_I16>1</D_I16>
+                     <D_I12>000107835</D_I12>
+                  </S_IEA>
+               </ns0:Interchange>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_cXML_0000_TextMessageSUR_ASC-X12_004010_864.xspec">
+      <label>TextMessage Status Update Request noSender</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/X12/StatusUpdateRequest/TextMessageSURnoSender_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ns0:Interchange xmlns:ns0="urn:sap.com:typesystem:b2b:116:asc-x12:824:004010">
+               <S_ISA>
+                  <D_I01>00</D_I01>
+                  <D_I02>
+                     <ws xmlns="http://www.jenitennison.com/xslt/xspec">          </ws>
+                  </D_I02>
+                  <D_I03>00</D_I03>
+                  <D_I04>
+                     <ws xmlns="http://www.jenitennison.com/xslt/xspec">          </ws>
+                  </D_I04>
+                  <D_I05_1>ZZ</D_I05_1>
+                  <D_I06>ARIBA          </D_I06>
+                  <D_I05_2>ZZ</D_I05_2>
+                  <D_I07>RITSUPPL9      </D_I07>
+                  <D_I08>230427</D_I08>
+                  <D_I09>1603</D_I09>
+                  <D_I10>U</D_I10>
+                  <D_I11>00401</D_I11>
+                  <D_I12>000107835</D_I12>
+                  <D_I13>0</D_I13>
+                  <D_I14>P</D_I14>
+                  <D_I15>^</D_I15>
+               </S_ISA>
+               <FunctionalGroup>
+                  <S_GS>
+                     <D_479>TX</D_479>
+                     <D_142>ARIBA</D_142>
+                     <D_124>ARIBA</D_124>
+                     <D_373>20230427</D_373>
+                     <D_337>160309</D_337>
+                     <D_28>000107835</D_28>
+                     <D_455>X</D_455>
+                     <D_480>004010</D_480>
+                  </S_GS>
+                  <M_864>
+                     <S_ST>
+                        <D_143>864</D_143>
+                        <D_329>0001</D_329>
+                     </S_ST>
+                     <S_BMG>
+                        <D_353>SU</D_353>
+                        <D_352>ShipNoticeDocument</D_352>
+                     </S_BMG>
+                     <S_DTM>
+                        <D_374>999</D_374>
+                        <D_373>20130503</D_373>
+                        <D_337>172059</D_337>
+                        <D_623>18</D_623>
+                     </S_DTM>
+                     <G_MIT>
+                        <S_MIT>
+                           <D_127>RIT_X12_TextMsgSUR_QA</D_127>
+                           <D_352>Accepted</D_352>
+                        </S_MIT>
+                        <S_MSG>
+                           <D_933>Buyer's comments</D_933>
+                        </S_MSG>
+                     </G_MIT>
+                     <S_SE>
+                        <D_96>#segCount#</D_96>
+                        <D_329>0001</D_329>
+                     </S_SE>
+                  </M_864>
+                  <S_GE>
+                     <D_97>1</D_97>
+                     <D_28>000107835</D_28>
+                  </S_GE>
+               </FunctionalGroup>
+               <S_IEA>
+                  <D_I16>1</D_I16>
+                  <D_I12>000107835</D_I12>
+               </S_IEA>
+            </ns0:Interchange>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>TextMessage Status Update Request noSender</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ns0:Interchange xmlns:ns0="urn:sap.com:typesystem:b2b:116:asc-x12:824:004010">
+                  <S_ISA>
+                     <D_I01>00</D_I01>
+                     <D_I02>...</D_I02>
+                     <D_I03>00</D_I03>
+                     <D_I04>...</D_I04>
+                     <D_I05_1>ZZ</D_I05_1>
+                     <D_I06>ARIBA          </D_I06>
+                     <D_I05_2>ZZ</D_I05_2>
+                     <D_I07>RITSUPPL9      </D_I07>
+                     <D_I08>...</D_I08>
+                     <D_I09>...</D_I09>
+                     <D_I10>U</D_I10>
+                     <D_I11>00401</D_I11>
+                     <D_I12>000107835</D_I12>
+                     <D_I13>0</D_I13>
+                     <D_I14>P</D_I14>
+                     <D_I15>^</D_I15>
+                  </S_ISA>
+                  <FunctionalGroup>
+                     <S_GS>
+                        <D_479>TX</D_479>
+                        <D_142>ARIBA</D_142>
+                        <D_124>ARIBA</D_124>
+                        <D_373>...</D_373>
+                        <D_337>...</D_337>
+                        <D_28>000107835</D_28>
+                        <D_455>X</D_455>
+                        <D_480>004010</D_480>
+                     </S_GS>
+                     <M_864>
+                        <S_ST>
+                           <D_143>864</D_143>
+                           <D_329>0001</D_329>
+                        </S_ST>
+                        <S_BMG>
+                           <D_353>SU</D_353>
+                           <D_352>ShipNoticeDocument</D_352>
+                        </S_BMG>
+                        <S_DTM>
+                           <D_374>999</D_374>
+                           <D_373>20130503</D_373>
+                           <D_337>172059</D_337>
+                           <D_623>18</D_623>
+                        </S_DTM>
+                        <G_MIT>
+                           <S_MIT>
+                              <D_127>RIT_X12_TextMsgSUR_QA</D_127>
+                              <D_352>Accepted</D_352>
+                           </S_MIT>
+                           <S_MSG>
+                              <D_933>Buyer's comments</D_933>
+                           </S_MSG>
+                        </G_MIT>
+                        <S_SE>
+                           <D_96>#segCount#</D_96>
+                           <D_329>0001</D_329>
+                        </S_SE>
+                     </M_864>
+                     <S_GE>
+                        <D_97>1</D_97>
+                        <D_28>000107835</D_28>
+                     </S_GE>
+                  </FunctionalGroup>
+                  <S_IEA>
+                     <D_I16>1</D_I16>
+                     <D_I12>000107835</D_I12>
+                  </S_IEA>
+               </ns0:Interchange>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/X12/MAPPING_ANY_cXML_0000_TextMessageSUR_ASC-X12_004010_864.xspec">
+      <label>TextMessage Status Update Request Declined </label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/X12/StatusUpdateRequest/TextMessageSURDecline_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <ns0:Interchange xmlns:ns0="urn:sap.com:typesystem:b2b:116:asc-x12:824:004010">
+               <S_ISA>
+                  <D_I01>00</D_I01>
+                  <D_I02>
+                     <ws xmlns="http://www.jenitennison.com/xslt/xspec">          </ws>
+                  </D_I02>
+                  <D_I03>00</D_I03>
+                  <D_I04>
+                     <ws xmlns="http://www.jenitennison.com/xslt/xspec">          </ws>
+                  </D_I04>
+                  <D_I05_1>ZZ</D_I05_1>
+                  <D_I06>ARIBA          </D_I06>
+                  <D_I05_2>ZZ</D_I05_2>
+                  <D_I07>RITSUPPL9      </D_I07>
+                  <D_I08>230427</D_I08>
+                  <D_I09>1603</D_I09>
+                  <D_I10>U</D_I10>
+                  <D_I11>00401</D_I11>
+                  <D_I12>000107835</D_I12>
+                  <D_I13>0</D_I13>
+                  <D_I14>P</D_I14>
+                  <D_I15>^</D_I15>
+               </S_ISA>
+               <FunctionalGroup>
+                  <S_GS>
+                     <D_479>TX</D_479>
+                     <D_142>RITBuyer_9</D_142>
+                     <D_124>RITSUPPL9</D_124>
+                     <D_373>20230427</D_373>
+                     <D_337>160309</D_337>
+                     <D_28>000107835</D_28>
+                     <D_455>X</D_455>
+                     <D_480>004010</D_480>
+                  </S_GS>
+                  <M_864>
+                     <S_ST>
+                        <D_143>864</D_143>
+                        <D_329>0001</D_329>
+                     </S_ST>
+                     <S_BMG>
+                        <D_353>SU</D_353>
+                        <D_352>ShipNoticeDocument</D_352>
+                     </S_BMG>
+                     <S_DTM>
+                        <D_374>999</D_374>
+                        <D_373>20130503</D_373>
+                        <D_337>172059</D_337>
+                        <D_623>18</D_623>
+                     </S_DTM>
+                     <G_MIT>
+                        <S_MIT>
+                           <D_127>RIT_X12_TextMsgSUR_QA</D_127>
+                           <D_352>declined</D_352>
+                        </S_MIT>
+                        <S_MSG>
+                           <D_933>200</D_933>
+                        </S_MSG>
+                        <S_MSG>
+                           <D_933>OK</D_933>
+                        </S_MSG>
+                        <S_MSG>
+                           <D_933>Buyer's comments</D_933>
+                        </S_MSG>
+                        <S_MSG>
+                           <D_933>declined</D_933>
+                        </S_MSG>
+                     </G_MIT>
+                     <S_SE>
+                        <D_96>#segCount#</D_96>
+                        <D_329>0001</D_329>
+                     </S_SE>
+                  </M_864>
+                  <S_GE>
+                     <D_97>1</D_97>
+                     <D_28>000107835</D_28>
+                  </S_GE>
+               </FunctionalGroup>
+               <S_IEA>
+                  <D_I16>1</D_I16>
+                  <D_I12>000107835</D_I12>
+               </S_IEA>
+            </ns0:Interchange>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>TextMessage Status Update Request Decline</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <ns0:Interchange xmlns:ns0="urn:sap.com:typesystem:b2b:116:asc-x12:824:004010">
+                  <S_ISA>
+                     <D_I01>00</D_I01>
+                     <D_I02>...</D_I02>
+                     <D_I03>00</D_I03>
+                     <D_I04>...</D_I04>
+                     <D_I05_1>ZZ</D_I05_1>
+                     <D_I06>ARIBA          </D_I06>
+                     <D_I05_2>ZZ</D_I05_2>
+                     <D_I07>RITSUPPL9      </D_I07>
+                     <D_I08>...</D_I08>
+                     <D_I09>...</D_I09>
+                     <D_I10>U</D_I10>
+                     <D_I11>00401</D_I11>
+                     <D_I12>000107835</D_I12>
+                     <D_I13>0</D_I13>
+                     <D_I14>P</D_I14>
+                     <D_I15>^</D_I15>
+                  </S_ISA>
+                  <FunctionalGroup>
+                     <S_GS>
+                        <D_479>TX</D_479>
+                        <D_142>RITBuyer_9</D_142>
+                        <D_124>RITSUPPL9</D_124>
+                        <D_373>...</D_373>
+                        <D_337>...</D_337>
+                        <D_28>000107835</D_28>
+                        <D_455>X</D_455>
+                        <D_480>004010</D_480>
+                     </S_GS>
+                     <M_864>
+                        <S_ST>
+                           <D_143>864</D_143>
+                           <D_329>0001</D_329>
+                        </S_ST>
+                        <S_BMG>
+                           <D_353>SU</D_353>
+                           <D_352>ShipNoticeDocument</D_352>
+                        </S_BMG>
+                        <S_DTM>
+                           <D_374>999</D_374>
+                           <D_373>20130503</D_373>
+                           <D_337>172059</D_337>
+                           <D_623>18</D_623>
+                        </S_DTM>
+                        <G_MIT>
+                           <S_MIT>
+                              <D_127>RIT_X12_TextMsgSUR_QA</D_127>
+                              <D_352>declined</D_352>
+                           </S_MIT>
+                           <S_MSG>
+                              <D_933>200</D_933>
+                           </S_MSG>
+                           <S_MSG>
+                              <D_933>OK</D_933>
+                           </S_MSG>
+                           <S_MSG>
+                              <D_933>Buyer's comments</D_933>
+                           </S_MSG>
+                           <S_MSG>
+                              <D_933>declined</D_933>
+                           </S_MSG>
+                        </G_MIT>
+                        <S_SE>
+                           <D_96>#segCount#</D_96>
+                           <D_329>0001</D_329>
+                        </S_SE>
+                     </M_864>
+                     <S_GE>
+                        <D_97>1</D_97>
+                        <D_28>000107835</D_28>
+                     </S_GE>
+                  </FunctionalGroup>
+                  <S_IEA>
+                     <D_I16>1</D_I16>
+                     <D_I12>000107835</D_I12>
+                  </S_IEA>
+               </ns0:Interchange>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

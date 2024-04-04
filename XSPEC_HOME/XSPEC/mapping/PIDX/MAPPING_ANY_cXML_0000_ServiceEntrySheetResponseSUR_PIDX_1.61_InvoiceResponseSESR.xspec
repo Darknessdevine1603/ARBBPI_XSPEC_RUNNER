@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/PIDX/MAPPING_ANY_cXML_0000_ServiceEntrySheetResponseSUR_PIDX_1.61_InvoiceResponseSESR.xsl">
+    <x:scenario label="Service Entry Sheet Response Status Update Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>        
+        <x:param name="anAlternativeReceiver"/>        
+        <x:param name="anSenderGroupID"/>        
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag"/>
+
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/StatusUpdate/ServiceSheetResponse_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/StatusUpdate/ServiceSheetResponse_AM.dat"
+            select="element()" label="Service Entry Sheet Response Status Update Request"/>
+    </x:scenario>
+    <x:scenario label="Service Entry Sheet Response Status Update Request with InvoiceID value">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>        
+        <x:param name="anAlternativeReceiver"/>        
+        <x:param name="anSenderGroupID"/>        
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/StatusUpdate/ServiceSheetResponse_RIT1_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/StatusUpdate/ServiceSheetResponse_RIT1_AM.dat"
+            select="*" label="Service Entry Sheet Response Status Update Request with InvoiceID value"/>
+    </x:scenario>
+    <x:scenario label="Service Entry Sheet Response Status Update Request with Comments">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>        
+        <x:param name="anAlternativeReceiver"/>        
+        <x:param name="anSenderGroupID"/>        
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/StatusUpdate/ServiceSheetResponse_RIT2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/StatusUpdate/ServiceSheetResponse_RIT2_AM.dat"
+            select="*" label="Service Entry Sheet Response Status Update Request with Comments"/>
+    </x:scenario>    
+</x:description>

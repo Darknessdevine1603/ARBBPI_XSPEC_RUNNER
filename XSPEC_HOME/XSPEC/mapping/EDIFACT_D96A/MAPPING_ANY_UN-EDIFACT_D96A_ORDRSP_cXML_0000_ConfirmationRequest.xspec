@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/EDIFACT_D96A/MAPPING_ANY_UN-EDIFACT_D96A_ORDRSP_cXML_0000_ConfirmationRequest.xsl">
+    <x:scenario label="Confirmation Request - 1">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005083890-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_AM.xml"
+            select="element()" label="Confirmation Request"/>
+    </x:scenario>
+    <x:scenario label="Confirmation Request - 2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005083890-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_BM1.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_AM1.xml"
+            select="element()" label="Confirmation Request - 2"/>
+    </x:scenario>    
+    
+    <x:scenario label="Confirmation Request - 3">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005083890-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_BM3.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_AM3.xml"
+            select="element()" label="Confirmation Request - 3"/>
+    </x:scenario>
+    
+    <x:scenario label="Confirmation Request - 4">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005083890-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_BM4.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_AM4.xml"
+            select="element()" label="Confirmation Request - 4"/>
+    </x:scenario>
+    
+    <x:scenario label="Confirmation Request - 5">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005083890-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="cXMLAttachments" select="'abc'"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_BM5.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_AM5.xml"
+            select="element()" label="Confirmation Request - 5"/>
+    </x:scenario>
+    
+    <x:scenario label="Confirmation Request - Reject">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anSupplierANID" select="'AN02004579340-T'"/>
+        <x:param name="anBuyerANID" select="'AN02005083890-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>
+        <x:param name="cXMLAttachments"/>
+        <x:param name="attachSeparator" select="'\|'"/>
+        <x:param name="anAllDetailOCFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_BM2.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/EDIFACT_D96A/Confirmation/ConfirmationRequest_AM2.xml"
+            select="element()" label="Confirmation Request - Reject"/>
+    </x:scenario>
+</x:description>

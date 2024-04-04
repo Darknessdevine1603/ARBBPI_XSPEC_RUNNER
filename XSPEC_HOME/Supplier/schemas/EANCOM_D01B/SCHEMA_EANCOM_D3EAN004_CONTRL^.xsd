@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hci="http://sap.com/hci" xmlns="urn:sap.com:typesystem:b2b:9:eancom" targetNamespace="urn:sap.com:typesystem:b2b:9:eancom">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<hci:resourceinfo>
+				<hci:info key="typeSystem" value="UN-EDIFACT"/>
+				<hci:info key="typeSystemVersion" value="D.96A"/>
+				<hci:info key="responsibleAgencyName" value="UN/ECE (United Nations - Economic Commission for Europe)"/>
+				<hci:info key="responsibleAgencyCode" value="6"/>
+				<hci:info key="refMIGSystem" value="EANCOM"/>
+				<hci:info key="refMIGSystemVersion" value="2002"/>
+				<hci:info key="refMIGVersionControlNumber" value="EAN003"/>
+				<hci:info key="refMIGResponsibleAgencyName" value="GS1"/>
+				<hci:info key="refMIGResponsibleAgencyCode" value="9"/>
+				<hci:info key="category" value="RefMIG"/>
+				<hci:info key="rootNode" value="M_CONTRL"/>
+				<hci:info key="messageType" value="CONTRL"/>
+				<hci:info key="messageName" value="Syntax and service report message"/>
+				<hci:info key="targetNamespace" value="urn:sap.com:typesystem:b2b:9:eancom"/>
+				<hci:info key="documentNumber" value="/M_CONTRL/S_BGM/C_C106/D_1004"/>
+			</hci:resourceinfo>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="M_CONTRL">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="S_UNH" type="S_UNH"/>
+				<xsd:element name="S_UCI" type="S_UCI"/>
+				<xsd:element name="G_SG1" minOccurs="0" maxOccurs="999999">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="S_UCM" type="S_UCM"/>
+							<xsd:element name="G_SG2" minOccurs="0" maxOccurs="999">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="S_UCS" type="S_UCS"/>
+										<xsd:element name="S_UCD" type="S_UCD" minOccurs="0" maxOccurs="99"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="S_UNT" type="S_UNT"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="C_S001">
+		<xsd:sequence>
+			<xsd:element name="D_0001" type="D_0001"/>
+			<xsd:element name="D_0002" type="D_0002"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S002">
+		<xsd:sequence>
+			<xsd:element name="D_0004" type="D_0004"/>
+			<xsd:element name="D_0007" type="D_0007"/>
+			<xsd:element name="D_0008" type="D_0008" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S003">
+		<xsd:sequence>
+			<xsd:element name="D_0010" type="D_0010"/>
+			<xsd:element name="D_0007" type="D_0007"/>
+			<xsd:element name="D_0014" type="D_0014" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S004">
+		<xsd:sequence>
+			<xsd:element name="D_0017" type="D_0017"/>
+			<xsd:element name="D_0019" type="D_0019"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S005">
+		<xsd:sequence>
+			<xsd:element name="D_0022" type="D_0022"/>
+			<xsd:element name="D_0025" type="D_0025" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S009">
+		<xsd:sequence>
+			<xsd:element name="D_0065" type="D_0065"/>
+			<xsd:element name="D_0052" type="D_0052" minOccurs="0"/>
+			<xsd:element name="D_0054" type="D_0054"/>
+			<xsd:element name="D_0051" type="D_0051"/>
+			<xsd:element name="D_0057" type="D_0057"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S010">
+		<xsd:sequence>
+			<xsd:element name="D_0070" type="D_0070"/>
+			<xsd:element name="D_0073" type="D_0073" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="C_S011">
+		<xsd:sequence>
+			<xsd:element name="D_0098" type="D_0098"/>
+			<xsd:element name="D_0104" type="D_0104" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_UCD">
+		<xsd:sequence>
+			<xsd:element name="D_0085" type="D_0085"/>
+			<xsd:element name="C_S011" type="C_S011"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_UCI">
+		<xsd:sequence>
+			<xsd:element name="D_0020" type="D_0020"/>
+			<xsd:element name="C_S002" type="C_S002"/>
+			<xsd:element name="C_S003" type="C_S003"/>
+			<xsd:element name="D_0083" type="D_0083"/>
+			<xsd:element name="D_0085" type="D_0085" minOccurs="0"/>
+			<xsd:element name="D_0013" type="D_0013" minOccurs="0"/>
+			<xsd:element name="C_S011" type="C_S011" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_UCM">
+		<xsd:sequence>
+			<xsd:element name="D_0062" type="D_0062"/>
+			<xsd:element name="C_S009" type="C_S009"/>
+			<xsd:element name="D_0083" type="D_0083"/>
+			<xsd:element name="D_0085" type="D_0085" minOccurs="0"/>
+			<xsd:element name="D_0013" type="D_0013" minOccurs="0"/>
+			<xsd:element name="C_S011" type="C_S011" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_UCS">
+		<xsd:sequence>
+			<xsd:element name="D_0096" type="D_0096"/>
+			<xsd:element name="D_0085" type="D_0085" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_UNH">
+		<xsd:sequence>
+			<xsd:element name="D_0062" type="D_0062"/>
+			<xsd:element name="C_S009" type="C_S009"/>
+			<xsd:element name="D_0068" type="D_0068" minOccurs="0"/>
+			<xsd:element name="C_S010" type="C_S010" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="S_UNT">
+		<xsd:sequence>
+			<xsd:element name="D_0074" type="D_0074"/>
+			<xsd:element name="D_0062" type="D_0062"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="D_0001">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:length value="4"/>
+			<xsd:enumeration value="UNOA">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UN/ECE level A</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNOB">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UN/ECE level B</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNOC">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UN/ECE level C</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNOD">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UN/ECE level D</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNOE">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UN/ECE level E</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNOF">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UN/ECE level F</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0002">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0004">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="13"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0007">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0008">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="14"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0010">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="13"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0013">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:length value="3"/>
+			<xsd:enumeration value="UCD">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Data element error indication</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UCF">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Functional group response</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UCI">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Interchange response</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UCM">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Message response</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UCS">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Segment error indication</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNA">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Service string advice</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNB">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Interchange header</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNE">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Functional group trailer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNG">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Functional group header</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNH">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Message header</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNS">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Section control</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNT">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Message trailer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UNZ">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Interchange trailer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0014">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="14"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0017">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0019">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0020">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="14"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0022">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="14"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0025">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:length value="2"/>
+			<xsd:enumeration value="AA">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Reference</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BB">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Password</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0026">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="14"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0029">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0031">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0032">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0035">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0036">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0051">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="2"/>
+			<xsd:enumeration value="EN">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN International</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UN">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UN/CEFACT</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0052">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+			<xsd:enumeration value="4">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Service message, version 4</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Draft version/UN/EDIFACT Directory</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0054">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">First release</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="3">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Third release, CONTRL message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="01B">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Release 2001 - B</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0057">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="6"/>
+			<xsd:enumeration value="EAN001">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN002">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN003">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN004">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN005">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN006">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN007">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN008">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN009">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN010">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">EAN version control number (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0062">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="14"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0065">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="6"/>
+			<xsd:enumeration value="APERAK">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Application error and acknowledgement message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AUTACK">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Secure authentication and acknowledgement message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BANSTA">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Banking status message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CNTCND">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Contractual conditions message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="COACSU">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Commercial account summary message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="COMDIS">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Commercial dispute message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CONDRA">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Drawing administration message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CONTRL">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Syntax and service report message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CREMUL">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Multiple credit advice message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DEBMUL">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Multiple debit advice message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DELFOR">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Delivery schedule message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DESADV">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Despatch advice message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DIRDEB">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Direct debit message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FINCAN">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Financial cancellation message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FINSTA">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Financial statement of an account message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GENRAL">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">General purpose message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HANMOV">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Cargo/goods handling and movement message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IFCSUM">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Forwarding and consolidation summary message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IFTMAN">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Arrival notice message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IFTMBC">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Booking confirmation message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IFTMBF">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Firm booking message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IFTMIN">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Instruction message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IFTSTA">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">International multimodal status report message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="INSDES">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Instruction to despatch message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="INVOIC">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Invoice message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="INVRPT">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Inventory report message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KEYMAN">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Security key and certificate management message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MSCONS">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Metered services consumption report message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ORDCHG">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Purchase order change request message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ORDERS">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Purchase order message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ORDRSP">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Purchase order response message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OSTENQ">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Order status enquiry message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OSTRPT">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Order status report message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PARTIN">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Party information message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PAYDUC">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Payroll deductions advice message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PAYMUL">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Multiple payment order message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PRICAT">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Price/sales catalogue message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PRODAT">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Product data message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PROINQ">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Product inquiry message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="QALITY">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Quality data message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="QUOTES">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Quote message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RECADV">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Receiving advice message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="REMADV">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Remittance advice message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="REQOTE">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Request for quote message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RETANN">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Announcement for returns message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RETINS">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Instruction for returns message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SLSFCT">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Sales forecast message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SLSRPT">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Sales data report message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TAXCON">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Tax control message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0068">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0070">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0073">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0074">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0083">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Acknowledged (this level and all lower levels) (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Acknowledged - errors detected and reported (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="3">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">One or more rejected - next lower level (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="4">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">This level and all lower levels rejected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="5">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UNB/UNZ accepted (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="6">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UNB/UNZ rejected (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="7">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">This level acknowledged, next lower level acknowledged if not explicitly rejected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="8">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Interchange received</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0085">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="preserve"/>
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">UNA not supported (EAN Code)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Syntax level or version not supported</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="7">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Interchange recipient not actual recipient</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="12">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Invalid value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="13">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Missing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="14">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Value not supported in this position</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="15">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Not supported in this position</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Too many constituents</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">No agreement</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Unspecified error</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="19">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Invalid decimal notation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="20">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Character invalid as service character</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="21">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Invalid character(s)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="22">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Invalid service character(s)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="23">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Unknown interchange sender</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="24">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Too old</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="25">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Test indicator not supported</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="26">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Duplicate detected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="27">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Security function not supported</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="28">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">References do not match</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="29">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Control count does not match number of instances received</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="30">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Functional groups and messages mixed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="32">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Lower level empty</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="33">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Invalid occurrence outside message or functional group</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="37">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Invalid type of character(s)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="39">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Data element too long</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="40">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Data element too short</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="41">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Permanent communication network error</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="42">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Temporary communication network error</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="43">
+				<xsd:annotation>
+					<xsd:documentation source="Name" xml:lang="en-us">Unknown interchange recipient</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0096">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0098">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="D_0104">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

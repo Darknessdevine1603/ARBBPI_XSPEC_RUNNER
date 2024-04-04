@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/GUSI/MAPPING_ANY_cXML_0000_ProductActivityMessage_GUSI_2.1_replenishmentRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Supplier/mapping/GUSI/MAPPING_ANY_cXML_0000_ProductActivityMessage_GUSI_2.1_replenishmentRequest.xsl"
+        date="2023-04-27T15:58:02.087213+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/GUSI/MAPPING_ANY_cXML_0000_ProductActivityMessage_GUSI_2.1_replenishmentRequest.xspec">
+      <label>Consignment Product Activity</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/GUSI/ProductActivity/ConsignmentProductActivity_BM.xml"/>
+      </input-wrap>
+      <result href="result-d14e0.xml"/>
+      <test id="scenario1-expect1" successful="false">
+         <label>Consignment Product Activity</label>
+         <expect href="result-d17e0.xml"/>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/GUSI/MAPPING_ANY_cXML_0000_ProductActivityMessage_GUSI_2.1_replenishmentRequest.xspec">
+      <label>Replenishment Request</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/GUSI/ProductActivity/ReplenishmentRequest_BM.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+                                         xmlns:eanucc="urn:ean.ucc:2"
+                                         xmlns:plan="urn:ean.ucc:plan:2"
+                                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <sh:StandardBusinessDocumentHeader>
+                  <sh:HeaderVersion>2.2</sh:HeaderVersion>
+                  <sh:Sender>
+                     <sh:Identifier Authority="EAN.UCC">0061835142</sh:Identifier>
+                  </sh:Sender>
+                  <sh:Receiver>
+                     <sh:Identifier Authority="EAN.UCC">GUSISupplier</sh:Identifier>
+                  </sh:Receiver>
+                  <sh:DocumentIdentification>
+                     <sh:Standard>EAN.UCC</sh:Standard>
+                     <sh:TypeVersion>2.1</sh:TypeVersion>
+                     <sh:InstanceIdentifier>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</sh:InstanceIdentifier>
+                     <sh:Type>ReplenishmentRequest</sh:Type>
+                     <sh:MultipleType>false</sh:MultipleType>
+                     <sh:CreationDateAndTime>2015-07-20T17:48:37</sh:CreationDateAndTime>
+                  </sh:DocumentIdentification>
+               </sh:StandardBusinessDocumentHeader>
+               <eanucc:message>
+                  <entityIdentification>
+                     <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                     <contentOwner>
+                        <gln>0000000000000</gln>
+                        <additionalPartyIdentification>
+                           <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                           <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                        </additionalPartyIdentification>
+                     </contentOwner>
+                  </entityIdentification>
+                  <eanucc:transaction>
+                     <entityIdentification>
+                        <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                        <contentOwner>
+                           <gln>0000000000000</gln>
+                           <additionalPartyIdentification>
+                              <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                              <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                           </additionalPartyIdentification>
+                        </contentOwner>
+                     </entityIdentification>
+                     <command>
+                        <eanucc:documentCommand>
+                           <documentCommandHeader type="ADD">
+                              <entityIdentification>
+                                 <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                                 <contentOwner>
+                                    <gln>0000000000000</gln>
+                                    <additionalPartyIdentification>
+                                       <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                       <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                    </additionalPartyIdentification>
+                                 </contentOwner>
+                              </entityIdentification>
+                           </documentCommandHeader>
+                           <documentCommandOperand>
+                              <plan:replenishmentRequest creationDateTime="2016-08-24"
+                                                         documentStatus="ORIGINAL"
+                                                         replenishmentRequestDocumentType="GROSS_REQUIREMENTS_AND_INVENTORY"
+                                                         structureType="LOCATION_BY_ITEM">
+                                 <contentVersion>
+                                    <versionIdentification>2.1</versionIdentification>
+                                 </contentVersion>
+                                 <documentStructureVersion>
+                                    <versionIdentification>2.1</versionIdentification>
+                                 </documentStructureVersion>
+                                 <replenishmentRequestIdentification>
+                                    <uniqueCreatorIdentification>RIT_GUSI_ProductActivityMessage</uniqueCreatorIdentification>
+                                    <contentOwner>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </contentOwner>
+                                 </replenishmentRequestIdentification>
+                                 <seller>
+                                    <gln>0000000000000</gln>
+                                    <additionalPartyIdentification>
+                                       <additionalPartyIdentificationValue>GUSISupplier</additionalPartyIdentificationValue>
+                                       <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                    </additionalPartyIdentification>
+                                 </seller>
+                                 <buyer>
+                                    <gln>0000000000000</gln>
+                                    <additionalPartyIdentification>
+                                       <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                       <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                    </additionalPartyIdentification>
+                                 </buyer>
+                                 <replenishmentRequestItemLocationInformation>
+                                    <tradeItemIdentification>
+                                       <gtin>00000000000000</gtin>
+                                       <additionalTradeItemIdentification>
+                                          <additionalTradeItemIdentificationValue>QH2-00001</additionalTradeItemIdentificationValue>
+                                          <additionalTradeItemIdentificationType>BUYER_ASSIGNED</additionalTradeItemIdentificationType>
+                                       </additionalTradeItemIdentification>
+                                       <additionalTradeItemIdentification>
+                                          <additionalTradeItemIdentificationValue>QH1-00001</additionalTradeItemIdentificationValue>
+                                          <additionalTradeItemIdentificationType>SUPPLIER_ASSIGNED</additionalTradeItemIdentificationType>
+                                       </additionalTradeItemIdentification>
+                                    </tradeItemIdentification>
+                                    <shipTo>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>4260</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>CEVA Logistics</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>FOR_INTERNAL_USE_1</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </shipTo>
+                                    <inventoryLocation>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>4260</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>CEVA Logistics</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>FOR_INTERNAL_USE_1</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </inventoryLocation>
+                                    <replenishmentRequestRequirementsLineItem number="1" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>1000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-03-07" endDate="2016-03-07"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestRequirementsLineItem number="2" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>2000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-03-14" endDate="2016-03-14"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestRequirementsLineItem number="3" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>3000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-03-21" endDate="2016-03-21"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestRequirementsLineItem number="4" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>4000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-03-28" endDate="2016-03-28"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestRequirementsLineItem number="5" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>5000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-04-04" endDate="2016-04-04"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestInventoryStatusLineItem number="1">
+                                       <inventoryStatusQuantitySpecification inventoryStatusType="ON_HAND">
+                                          <quantityOfUnits>
+                                             <value>0.000</value>
+                                          </quantityOfUnits>
+                                       </inventoryStatusQuantitySpecification>
+                                    </replenishmentRequestInventoryStatusLineItem>
+                                 </replenishmentRequestItemLocationInformation>
+                              </plan:replenishmentRequest>
+                           </documentCommandOperand>
+                        </eanucc:documentCommand>
+                     </command>
+                  </eanucc:transaction>
+               </eanucc:message>
+            </sh:StandardBusinessDocument>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Replenishment Request</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <sh:StandardBusinessDocument xmlns:eanucc="urn:ean.ucc:2"
+                                            xmlns:plan="urn:ean.ucc:plan:2"
+                                            xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+                                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <sh:StandardBusinessDocumentHeader>
+                     <sh:HeaderVersion>2.2</sh:HeaderVersion>
+                     <sh:Sender>
+                        <sh:Identifier Authority="EAN.UCC">0061835142</sh:Identifier>
+                     </sh:Sender>
+                     <sh:Receiver>
+                        <sh:Identifier Authority="EAN.UCC">GUSISupplier</sh:Identifier>
+                     </sh:Receiver>
+                     <sh:DocumentIdentification>
+                        <sh:Standard>EAN.UCC</sh:Standard>
+                        <sh:TypeVersion>2.1</sh:TypeVersion>
+                        <sh:InstanceIdentifier>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</sh:InstanceIdentifier>
+                        <sh:Type>ReplenishmentRequest</sh:Type>
+                        <sh:MultipleType>false</sh:MultipleType>
+                        <sh:CreationDateAndTime>2015-07-20T17:48:37</sh:CreationDateAndTime>
+                     </sh:DocumentIdentification>
+                  </sh:StandardBusinessDocumentHeader>
+                  <eanucc:message>
+                     <entityIdentification>
+                        <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                        <contentOwner>
+                           <gln>0000000000000</gln>
+                           <additionalPartyIdentification>
+                              <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                              <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                           </additionalPartyIdentification>
+                        </contentOwner>
+                     </entityIdentification>
+                     <eanucc:transaction>
+                        <entityIdentification>
+                           <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                           <contentOwner>
+                              <gln>0000000000000</gln>
+                              <additionalPartyIdentification>
+                                 <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                 <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                              </additionalPartyIdentification>
+                           </contentOwner>
+                        </entityIdentification>
+                        <command>
+                           <eanucc:documentCommand>
+                              <documentCommandHeader type="ADD">
+                                 <entityIdentification>
+                                    <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                                    <contentOwner>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </contentOwner>
+                                 </entityIdentification>
+                              </documentCommandHeader>
+                              <documentCommandOperand>
+                                 <plan:replenishmentRequest creationDateTime="2016-08-24"
+                                                            documentStatus="ORIGINAL"
+                                                            replenishmentRequestDocumentType="GROSS_REQUIREMENTS_AND_INVENTORY"
+                                                            structureType="LOCATION_BY_ITEM">
+                                    <contentVersion>
+                                       <versionIdentification>2.1</versionIdentification>
+                                    </contentVersion>
+                                    <documentStructureVersion>
+                                       <versionIdentification>2.1</versionIdentification>
+                                    </documentStructureVersion>
+                                    <replenishmentRequestIdentification>
+                                       <uniqueCreatorIdentification>RIT_GUSI_ProductActivityMessage</uniqueCreatorIdentification>
+                                       <contentOwner>
+                                          <gln>0000000000000</gln>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                       </contentOwner>
+                                    </replenishmentRequestIdentification>
+                                    <seller>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>GUSISupplier</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </seller>
+                                    <buyer>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </buyer>
+                                    <replenishmentRequestItemLocationInformation>
+                                       <tradeItemIdentification>
+                                          <gtin>00000000000000</gtin>
+                                          <additionalTradeItemIdentification>
+                                             <additionalTradeItemIdentificationValue>QH2-00001</additionalTradeItemIdentificationValue>
+                                             <additionalTradeItemIdentificationType>BUYER_ASSIGNED</additionalTradeItemIdentificationType>
+                                          </additionalTradeItemIdentification>
+                                          <additionalTradeItemIdentification>
+                                             <additionalTradeItemIdentificationValue>QH1-00001</additionalTradeItemIdentificationValue>
+                                             <additionalTradeItemIdentificationType>SUPPLIER_ASSIGNED</additionalTradeItemIdentificationType>
+                                          </additionalTradeItemIdentification>
+                                       </tradeItemIdentification>
+                                       <shipTo>
+                                          <gln>0000000000000</gln>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>4260</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>CEVA Logistics</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>FOR_INTERNAL_USE_1</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                       </shipTo>
+                                       <inventoryLocation>
+                                          <gln>0000000000000</gln>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>4260</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>CEVA Logistics</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>FOR_INTERNAL_USE_1</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                       </inventoryLocation>
+                                       <replenishmentRequestRequirementsLineItem number="1" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>1000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-03-07" endDate="2016-03-07"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestRequirementsLineItem number="2" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>2000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-03-14" endDate="2016-03-14"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestRequirementsLineItem number="3" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>3000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-03-21" endDate="2016-03-21"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestRequirementsLineItem number="4" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>4000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-03-28" endDate="2016-03-28"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestRequirementsLineItem number="5" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>5000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-04-04" endDate="2016-04-04"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestInventoryStatusLineItem number="1">
+                                          <inventoryStatusQuantitySpecification inventoryStatusType="ON_HAND">
+                                             <quantityOfUnits>
+                                                <value>0.000</value>
+                                             </quantityOfUnits>
+                                          </inventoryStatusQuantitySpecification>
+                                       </replenishmentRequestInventoryStatusLineItem>
+                                    </replenishmentRequestItemLocationInformation>
+                                 </plan:replenishmentRequest>
+                              </documentCommandOperand>
+                           </eanucc:documentCommand>
+                        </command>
+                     </eanucc:transaction>
+                  </eanucc:message>
+               </sh:StandardBusinessDocument>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/GUSI/MAPPING_ANY_cXML_0000_ProductActivityMessage_GUSI_2.1_replenishmentRequest.xspec">
+      <label>Consignment Product Activity with EANID</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/inbound/GUSI/ProductActivity/GUSI_ProductActivity_BM1.dat"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <sh:StandardBusinessDocument xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+                                         xmlns:eanucc="urn:ean.ucc:2"
+                                         xmlns:plan="urn:ean.ucc:plan:2"
+                                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <sh:StandardBusinessDocumentHeader>
+                  <sh:HeaderVersion>2.2</sh:HeaderVersion>
+                  <sh:Sender>
+                     <sh:Identifier Authority="EAN.UCC">0061835142</sh:Identifier>
+                  </sh:Sender>
+                  <sh:Receiver>
+                     <sh:Identifier Authority="EAN.UCC">GUSISupplier</sh:Identifier>
+                  </sh:Receiver>
+                  <sh:DocumentIdentification>
+                     <sh:Standard>EAN.UCC</sh:Standard>
+                     <sh:TypeVersion>2.1</sh:TypeVersion>
+                     <sh:InstanceIdentifier>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</sh:InstanceIdentifier>
+                     <sh:Type>ReplenishmentRequest</sh:Type>
+                     <sh:MultipleType>false</sh:MultipleType>
+                     <sh:CreationDateAndTime>2015-07-20T17:48:37</sh:CreationDateAndTime>
+                  </sh:DocumentIdentification>
+               </sh:StandardBusinessDocumentHeader>
+               <eanucc:message>
+                  <entityIdentification>
+                     <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                     <contentOwner>
+                        <gln>0000000000000</gln>
+                        <additionalPartyIdentification>
+                           <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                           <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                        </additionalPartyIdentification>
+                     </contentOwner>
+                  </entityIdentification>
+                  <eanucc:transaction>
+                     <entityIdentification>
+                        <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                        <contentOwner>
+                           <gln>0000000000000</gln>
+                           <additionalPartyIdentification>
+                              <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                              <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                           </additionalPartyIdentification>
+                        </contentOwner>
+                     </entityIdentification>
+                     <command>
+                        <eanucc:documentCommand>
+                           <documentCommandHeader type="ADD">
+                              <entityIdentification>
+                                 <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                                 <contentOwner>
+                                    <gln>0000000000000</gln>
+                                    <additionalPartyIdentification>
+                                       <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                       <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                    </additionalPartyIdentification>
+                                 </contentOwner>
+                              </entityIdentification>
+                           </documentCommandHeader>
+                           <documentCommandOperand>
+                              <plan:replenishmentRequest creationDateTime="2016-08-24"
+                                                         documentStatus="ORIGINAL"
+                                                         replenishmentRequestDocumentType="GROSS_REQUIREMENTS_AND_INVENTORY"
+                                                         structureType="LOCATION_BY_ITEM">
+                                 <contentVersion>
+                                    <versionIdentification>2.1</versionIdentification>
+                                 </contentVersion>
+                                 <documentStructureVersion>
+                                    <versionIdentification>2.1</versionIdentification>
+                                 </documentStructureVersion>
+                                 <replenishmentRequestIdentification>
+                                    <uniqueCreatorIdentification>RIT_GUSI_PG_ProductActivityMessage</uniqueCreatorIdentification>
+                                    <contentOwner>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </contentOwner>
+                                 </replenishmentRequestIdentification>
+                                 <seller>
+                                    <gln>0000000000000</gln>
+                                    <additionalPartyIdentification>
+                                       <additionalPartyIdentificationValue>GUSISupplier</additionalPartyIdentificationValue>
+                                       <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                    </additionalPartyIdentification>
+                                 </seller>
+                                 <buyer>
+                                    <gln>0000000000000</gln>
+                                    <additionalPartyIdentification>
+                                       <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                       <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                    </additionalPartyIdentification>
+                                 </buyer>
+                                 <replenishmentRequestItemLocationInformation>
+                                    <tradeItemIdentification>
+                                       <gtin>12345678</gtin>
+                                       <additionalTradeItemIdentification>
+                                          <additionalTradeItemIdentificationValue>QH2-00001</additionalTradeItemIdentificationValue>
+                                          <additionalTradeItemIdentificationType>BUYER_ASSIGNED</additionalTradeItemIdentificationType>
+                                       </additionalTradeItemIdentification>
+                                       <additionalTradeItemIdentification>
+                                          <additionalTradeItemIdentificationValue>QH1-00001</additionalTradeItemIdentificationValue>
+                                          <additionalTradeItemIdentificationType>SUPPLIER_ASSIGNED</additionalTradeItemIdentificationType>
+                                       </additionalTradeItemIdentification>
+                                    </tradeItemIdentification>
+                                    <shipTo>
+                                       <gln>4</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>4260</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>TEST123</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>CEVA Logistics</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>FOR_INTERNAL_USE_1</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </shipTo>
+                                    <inventoryLocation>
+                                       <gln>6</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>4260</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>TEST123</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>CEVA Logistics</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>FOR_INTERNAL_USE_1</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </inventoryLocation>
+                                    <replenishmentRequestRequirementsLineItem number="1" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>1000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-03-07" endDate="2016-03-07"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestRequirementsLineItem number="2" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>2000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-03-14" endDate="2016-03-14"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestRequirementsLineItem number="3" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>3000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-03-21" endDate="2016-03-21"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestRequirementsLineItem number="4" timeBucketSize="DAY">
+                                       <requiredQuantity>
+                                          <value>4000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-03-28" endDate="2016-03-28"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestRequirementsLineItem number="5" timeBucketSize="WEEK">
+                                       <requiredQuantity>
+                                          <value>5000.000</value>
+                                          <unitOfMeasure>
+                                             <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                          </unitOfMeasure>
+                                       </requiredQuantity>
+                                       <requirementsPeriod>
+                                          <timePeriod beginDate="2016-04-04" endDate="2016-04-04"/>
+                                       </requirementsPeriod>
+                                    </replenishmentRequestRequirementsLineItem>
+                                    <replenishmentRequestInventoryStatusLineItem number="1">
+                                       <inventoryStatusQuantitySpecification inventoryStatusType="ON_HAND">
+                                          <quantityOfUnits>
+                                             <value>0.0</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </quantityOfUnits>
+                                       </inventoryStatusQuantitySpecification>
+                                       <inventoryStatusQuantitySpecification inventoryStatusType="QUARANTINED">
+                                          <quantityOfUnits>
+                                             <value>0.0</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </quantityOfUnits>
+                                       </inventoryStatusQuantitySpecification>
+                                       <inventoryStatusQuantitySpecification inventoryStatusType="ON_HOLD">
+                                          <quantityOfUnits>
+                                             <value>0.0</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </quantityOfUnits>
+                                       </inventoryStatusQuantitySpecification>
+                                       <inventoryStatusQuantitySpecification inventoryStatusType="MINIMUM_STOCK">
+                                          <quantityOfUnits>
+                                             <value>0.0</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </quantityOfUnits>
+                                       </inventoryStatusQuantitySpecification>
+                                       <inventoryStatusQuantitySpecification inventoryStatusType="MAXIMUM_STOCK">
+                                          <quantityOfUnits>
+                                             <value>0.0</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </quantityOfUnits>
+                                       </inventoryStatusQuantitySpecification>
+                                    </replenishmentRequestInventoryStatusLineItem>
+                                 </replenishmentRequestItemLocationInformation>
+                              </plan:replenishmentRequest>
+                           </documentCommandOperand>
+                        </eanucc:documentCommand>
+                     </command>
+                  </eanucc:transaction>
+               </eanucc:message>
+            </sh:StandardBusinessDocument>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Consignment Product Activity with EANID</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <sh:StandardBusinessDocument xmlns:eanucc="urn:ean.ucc:2"
+                                            xmlns:plan="urn:ean.ucc:plan:2"
+                                            xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+                                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <sh:StandardBusinessDocumentHeader>
+                     <sh:HeaderVersion>2.2</sh:HeaderVersion>
+                     <sh:Sender>
+                        <sh:Identifier Authority="EAN.UCC">0061835142</sh:Identifier>
+                     </sh:Sender>
+                     <sh:Receiver>
+                        <sh:Identifier Authority="EAN.UCC">GUSISupplier</sh:Identifier>
+                     </sh:Receiver>
+                     <sh:DocumentIdentification>
+                        <sh:Standard>EAN.UCC</sh:Standard>
+                        <sh:TypeVersion>2.1</sh:TypeVersion>
+                        <sh:InstanceIdentifier>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</sh:InstanceIdentifier>
+                        <sh:Type>ReplenishmentRequest</sh:Type>
+                        <sh:MultipleType>false</sh:MultipleType>
+                        <sh:CreationDateAndTime>2015-07-20T17:48:37</sh:CreationDateAndTime>
+                     </sh:DocumentIdentification>
+                  </sh:StandardBusinessDocumentHeader>
+                  <eanucc:message>
+                     <entityIdentification>
+                        <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                        <contentOwner>
+                           <gln>0000000000000</gln>
+                           <additionalPartyIdentification>
+                              <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                              <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                           </additionalPartyIdentification>
+                        </contentOwner>
+                     </entityIdentification>
+                     <eanucc:transaction>
+                        <entityIdentification>
+                           <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                           <contentOwner>
+                              <gln>0000000000000</gln>
+                              <additionalPartyIdentification>
+                                 <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                 <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                              </additionalPartyIdentification>
+                           </contentOwner>
+                        </entityIdentification>
+                        <command>
+                           <eanucc:documentCommand>
+                              <documentCommandHeader type="ADD">
+                                 <entityIdentification>
+                                    <uniqueCreatorIdentification>892dc22b-4bfc-9394-b4a0-c18fc2ace8ad</uniqueCreatorIdentification>
+                                    <contentOwner>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </contentOwner>
+                                 </entityIdentification>
+                              </documentCommandHeader>
+                              <documentCommandOperand>
+                                 <plan:replenishmentRequest creationDateTime="2016-08-24"
+                                                            documentStatus="ORIGINAL"
+                                                            replenishmentRequestDocumentType="GROSS_REQUIREMENTS_AND_INVENTORY"
+                                                            structureType="LOCATION_BY_ITEM">
+                                    <contentVersion>
+                                       <versionIdentification>2.1</versionIdentification>
+                                    </contentVersion>
+                                    <documentStructureVersion>
+                                       <versionIdentification>2.1</versionIdentification>
+                                    </documentStructureVersion>
+                                    <replenishmentRequestIdentification>
+                                       <uniqueCreatorIdentification>RIT_GUSI_PG_ProductActivityMessage</uniqueCreatorIdentification>
+                                       <contentOwner>
+                                          <gln>0000000000000</gln>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                       </contentOwner>
+                                    </replenishmentRequestIdentification>
+                                    <seller>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>GUSISupplier</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </seller>
+                                    <buyer>
+                                       <gln>0000000000000</gln>
+                                       <additionalPartyIdentification>
+                                          <additionalPartyIdentificationValue>0061835142</additionalPartyIdentificationValue>
+                                          <additionalPartyIdentificationType>BUYER_ASSIGNED_IDENTIFIER_FOR_A_PARTY</additionalPartyIdentificationType>
+                                       </additionalPartyIdentification>
+                                    </buyer>
+                                    <replenishmentRequestItemLocationInformation>
+                                       <tradeItemIdentification>
+                                          <gtin>12345678</gtin>
+                                          <additionalTradeItemIdentification>
+                                             <additionalTradeItemIdentificationValue>QH2-00001</additionalTradeItemIdentificationValue>
+                                             <additionalTradeItemIdentificationType>BUYER_ASSIGNED</additionalTradeItemIdentificationType>
+                                          </additionalTradeItemIdentification>
+                                          <additionalTradeItemIdentification>
+                                             <additionalTradeItemIdentificationValue>QH1-00001</additionalTradeItemIdentificationValue>
+                                             <additionalTradeItemIdentificationType>SUPPLIER_ASSIGNED</additionalTradeItemIdentificationType>
+                                          </additionalTradeItemIdentification>
+                                       </tradeItemIdentification>
+                                       <shipTo>
+                                          <gln>4</gln>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>4260</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>TEST123</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>CEVA Logistics</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>FOR_INTERNAL_USE_1</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                       </shipTo>
+                                       <inventoryLocation>
+                                          <gln>6</gln>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>4260</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>TEST123</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                          <additionalPartyIdentification>
+                                             <additionalPartyIdentificationValue>CEVA Logistics</additionalPartyIdentificationValue>
+                                             <additionalPartyIdentificationType>FOR_INTERNAL_USE_1</additionalPartyIdentificationType>
+                                          </additionalPartyIdentification>
+                                       </inventoryLocation>
+                                       <replenishmentRequestRequirementsLineItem number="1" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>1000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-03-07" endDate="2016-03-07"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestRequirementsLineItem number="2" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>2000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-03-14" endDate="2016-03-14"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestRequirementsLineItem number="3" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>3000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-03-21" endDate="2016-03-21"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestRequirementsLineItem number="4" timeBucketSize="DAY">
+                                          <requiredQuantity>
+                                             <value>4000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-03-28" endDate="2016-03-28"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestRequirementsLineItem number="5" timeBucketSize="WEEK">
+                                          <requiredQuantity>
+                                             <value>5000.000</value>
+                                             <unitOfMeasure>
+                                                <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                             </unitOfMeasure>
+                                          </requiredQuantity>
+                                          <requirementsPeriod>
+                                             <timePeriod beginDate="2016-04-04" endDate="2016-04-04"/>
+                                          </requirementsPeriod>
+                                       </replenishmentRequestRequirementsLineItem>
+                                       <replenishmentRequestInventoryStatusLineItem number="1">
+                                          <inventoryStatusQuantitySpecification inventoryStatusType="ON_HAND">
+                                             <quantityOfUnits>
+                                                <value>0.0</value>
+                                                <unitOfMeasure>
+                                                   <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                                </unitOfMeasure>
+                                             </quantityOfUnits>
+                                          </inventoryStatusQuantitySpecification>
+                                          <inventoryStatusQuantitySpecification inventoryStatusType="QUARANTINED">
+                                             <quantityOfUnits>
+                                                <value>0.0</value>
+                                                <unitOfMeasure>
+                                                   <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                                </unitOfMeasure>
+                                             </quantityOfUnits>
+                                          </inventoryStatusQuantitySpecification>
+                                          <inventoryStatusQuantitySpecification inventoryStatusType="ON_HOLD">
+                                             <quantityOfUnits>
+                                                <value>0.0</value>
+                                                <unitOfMeasure>
+                                                   <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                                </unitOfMeasure>
+                                             </quantityOfUnits>
+                                          </inventoryStatusQuantitySpecification>
+                                          <inventoryStatusQuantitySpecification inventoryStatusType="MINIMUM_STOCK">
+                                             <quantityOfUnits>
+                                                <value>0.0</value>
+                                                <unitOfMeasure>
+                                                   <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                                </unitOfMeasure>
+                                             </quantityOfUnits>
+                                          </inventoryStatusQuantitySpecification>
+                                          <inventoryStatusQuantitySpecification inventoryStatusType="MAXIMUM_STOCK">
+                                             <quantityOfUnits>
+                                                <value>0.0</value>
+                                                <unitOfMeasure>
+                                                   <measurementUnitCodeValue>EA</measurementUnitCodeValue>
+                                                </unitOfMeasure>
+                                             </quantityOfUnits>
+                                          </inventoryStatusQuantitySpecification>
+                                       </replenishmentRequestInventoryStatusLineItem>
+                                    </replenishmentRequestItemLocationInformation>
+                                 </plan:replenishmentRequest>
+                              </documentCommandOperand>
+                           </eanucc:documentCommand>
+                        </command>
+                     </eanucc:transaction>
+                  </eanucc:message>
+               </sh:StandardBusinessDocument>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

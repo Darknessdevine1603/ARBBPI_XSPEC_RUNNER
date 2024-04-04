@@ -1,0 +1,2639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xspec"
+        stylesheet="file:/Users/i320581/Documents/XSPEC_HOME/Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xsl"
+        date="2023-04-27T15:29:33.456459+05:30">
+   <scenario id="scenario1"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xspec">
+      <label>Payment Proposal with Wire Transfer</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithWire.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:29:33984+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress>
+                                    <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                    <Street>Kolping Str. 15</Street>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </Correspondent>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret/>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <PaymentProposalRequest paymentProposalID="190043523220210010001Q8J"
+                                                operation="new"
+                                                paymentDate="2021-04-14T07:26:54+05:30"
+                                                companyCode="0001">
+                           <PayableInfo>
+                              <PayableInvoiceInfo>
+                                 <InvoiceIDInfo invoiceID="INV_0677" invoiceDate="2021-03-15T07:26:54+05:30"/>
+                              </PayableInvoiceInfo>
+                           </PayableInfo>
+                           <PaymentMethod type="wire">
+                              <Description xml:lang="EN">
+                                 <ShortName>wire transfer</ShortName>
+                              </Description>
+                           </PaymentMethod>
+                           <PaymentPartner>
+                              <Contact role="payer" addressID="000001" addressIDDomain="payeeID">
+                                 <Name xml:lang="EN">SAP A.G.</Name>
+                                 <PostalAddress name="25871">
+                                    <Street>234</Street>
+                                    <Street/>
+                                    <Street/>
+                                    <City>Walldorf</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>1111111111555</Number>
+                                       <Extension>32</Extension>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>455555</Number>
+                                       <Extension>5555</Extension>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="payee" addressID="100000" addressIDDomain="payerID">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress name="25866">
+                                    <Street>Kolping Str. 15</Street>
+                                    <Street>Best Vendor For Product 12123</Street>
+                                    <Street/>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Email name="default">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="receivingBank" addressID="">
+                                 <Name xml:lang=""/>
+                                 <PostalAddress>
+                                    <Street/>
+                                    <Street/>
+                                    <Street/>
+                                    <City/>
+                                    <State/>
+                                    <Country isoCountryCode=""/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference identifier="" domain="abaRoutingNumber"/>
+                           </PaymentPartner>
+                           <PaymentTerms paymentTermCode="0001"/>
+                           <GrossAmount>
+                              <Money currency="EUR">200.00</Money>
+                           </GrossAmount>
+                           <DiscountBasis>
+                              <Money currency="EUR">200.00</Money>
+                           </DiscountBasis>
+                           <DiscountAmount>
+                              <Money currency="EUR">0.0</Money>
+                           </DiscountAmount>
+                           <NetAmount>
+                              <Money currency="EUR">200.00</Money>
+                           </NetAmount>
+                           <Comments xml:lang="en"/>
+                           <Extrinsic name="immediatepay"/>
+                           <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                           <Extrinsic name="organizationUnit">0001</Extrinsic>
+                           <Extrinsic name="originalInvoiceNo">INV_0677</Extrinsic>
+                           <Extrinsic name="buyerInvoiceID">1900435232</Extrinsic>
+                           <Extrinsic name="fiscalYear">2021</Extrinsic>
+                           <Extrinsic name="earlyPaymentDiscount">
+                              <Money currency="EUR">0.0</Money>
+                           </Extrinsic>
+                        </PaymentProposalRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario1-expect1" successful="true">
+         <label>PPayment Proposal with Wire Transfer</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                       <Street>Kolping Str. 15</Street>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </Correspondent>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret/>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <PaymentProposalRequest companyCode="0001"
+                                                   paymentProposalID="190043523220210010001Q8J"
+                                                   paymentDate="2021-04-14T07:26:54+05:30"
+                                                   operation="new">
+                              <PayableInfo>
+                                 <PayableInvoiceInfo>
+                                    <InvoiceIDInfo invoiceID="INV_0677" invoiceDate="2021-03-15T07:26:54+05:30"/>
+                                 </PayableInvoiceInfo>
+                              </PayableInfo>
+                              <PaymentMethod type="wire">
+                                 <Description xml:lang="EN">
+                                    <ShortName>wire transfer</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                              <PaymentPartner>
+                                 <Contact role="payer" addressIDDomain="payeeID" addressID="000001">
+                                    <Name xml:lang="EN">SAP A.G.</Name>
+                                    <PostalAddress name="25871">
+                                       <Street>234</Street>
+                                       <Street/>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>1111111111555</Number>
+                                          <Extension>32</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>455555</Number>
+                                          <Extension>5555</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="payee" addressIDDomain="payerID" addressID="100000">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress name="25866">
+                                       <Street>Kolping Str. 15</Street>
+                                       <Street>Best Vendor For Product 12123</Street>
+                                       <Street/>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Email name="default">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="receivingBank" addressID="">
+                                    <Name xml:lang=""/>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <Street/>
+                                       <Street/>
+                                       <City/>
+                                       <State/>
+                                       <Country isoCountryCode=""/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <IdReference identifier="" domain="abaRoutingNumber"/>
+                              </PaymentPartner>
+                              <PaymentTerms paymentTermCode="0001"/>
+                              <GrossAmount>
+                                 <Money currency="EUR">200.00</Money>
+                              </GrossAmount>
+                              <DiscountBasis>
+                                 <Money currency="EUR">200.00</Money>
+                              </DiscountBasis>
+                              <DiscountAmount>
+                                 <Money currency="EUR">0.0</Money>
+                              </DiscountAmount>
+                              <NetAmount>
+                                 <Money currency="EUR">200.00</Money>
+                              </NetAmount>
+                              <Comments xml:lang="en"/>
+                              <Extrinsic name="immediatepay"/>
+                              <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                              <Extrinsic name="organizationUnit">0001</Extrinsic>
+                              <Extrinsic name="originalInvoiceNo">INV_0677</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1900435232</Extrinsic>
+                              <Extrinsic name="fiscalYear">2021</Extrinsic>
+                              <Extrinsic name="earlyPaymentDiscount">
+                                 <Money currency="EUR">0.0</Money>
+                              </Extrinsic>
+                           </PaymentProposalRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario2"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xspec">
+      <label>Payment Proposal with Cheque Payment Method</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithCheque.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:29:3345+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress>
+                                    <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                    <Street>Kolping Str. 15</Street>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </Correspondent>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret/>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <PaymentProposalRequest paymentProposalID="510000149720180010001Q8J"
+                                                operation="new"
+                                                paymentDate="2018-07-06T10:13:03+05:30"
+                                                companyCode="0001">
+                           <PayableInfo>
+                              <PayableInvoiceInfo>
+                                 <InvoiceIDInfo invoiceID="5100001497" invoiceDate="2018-06-06T10:13:03+05:30"/>
+                              </PayableInvoiceInfo>
+                           </PayableInfo>
+                           <PaymentMethod type="check">
+                              <Description xml:lang="EN">
+                                 <ShortName>Scheck@!mit Scheckmanagement&amp;#</ShortName>
+                              </Description>
+                           </PaymentMethod>
+                           <PaymentPartner>
+                              <Contact role="payer" addressID="000001" addressIDDomain="payeeID">
+                                 <Name xml:lang="EN">SAP A.G.</Name>
+                                 <PostalAddress name="25871">
+                                    <Street>234</Street>
+                                    <Street/>
+                                    <Street/>
+                                    <City>Walldorf</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>1111111111555</Number>
+                                       <Extension>32</Extension>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>455555</Number>
+                                       <Extension>5555</Extension>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="payee" addressID="100000" addressIDDomain="payerID">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress name="25866">
+                                    <Street>Kolping Str. 15</Street>
+                                    <Street>Best Vendor For Product 12123</Street>
+                                    <Street/>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Email name="default">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="receivingBank" addressID="">
+                                 <Name xml:lang=""/>
+                                 <PostalAddress>
+                                    <Street/>
+                                    <Street/>
+                                    <Street/>
+                                    <City/>
+                                    <State/>
+                                    <Country isoCountryCode=""/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference identifier="" domain="abaRoutingNumber"/>
+                           </PaymentPartner>
+                           <PaymentTerms paymentTermCode="0003"/>
+                           <GrossAmount>
+                              <Money currency="USD">10400.00</Money>
+                           </GrossAmount>
+                           <DiscountBasis>
+                              <Money currency="USD">10400.00</Money>
+                           </DiscountBasis>
+                           <DiscountAmount>
+                              <Money currency="USD">0.0</Money>
+                           </DiscountAmount>
+                           <Tax>
+                              <Money currency="USD">400.00</Money>
+                              <Description xml:lang="EN">Tax Summary</Description>
+                              <TaxDetail category="sales">
+                                 <TaxAmount>
+                                    <Money currency="USD">400.0</Money>
+                                 </TaxAmount>
+                                 <TaxLocation xml:lang="EN"/>
+                              </TaxDetail>
+                           </Tax>
+                           <NetAmount>
+                              <Money currency="USD">10400.00</Money>
+                           </NetAmount>
+                           <Comments xml:lang="en"/>
+                           <Extrinsic name="immediatepay"/>
+                           <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                           <Extrinsic name="organizationUnit">0001</Extrinsic>
+                           <Extrinsic name="originalInvoiceNo">5100001497</Extrinsic>
+                           <Extrinsic name="buyerInvoiceID">5100001497</Extrinsic>
+                           <Extrinsic name="fiscalYear">2018</Extrinsic>
+                           <Extrinsic name="earlyPaymentDiscount">
+                              <Money currency="USD">0.0</Money>
+                           </Extrinsic>
+                        </PaymentProposalRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario2-expect1" successful="true">
+         <label>Payment Proposal with Cheque Payment Method</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                       <Street>Kolping Str. 15</Street>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </Correspondent>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret/>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <PaymentProposalRequest companyCode="0001"
+                                                   paymentProposalID="510000149720180010001Q8J"
+                                                   paymentDate="2018-07-06T10:13:03+05:30"
+                                                   operation="new">
+                              <PayableInfo>
+                                 <PayableInvoiceInfo>
+                                    <InvoiceIDInfo invoiceID="5100001497" invoiceDate="2018-06-06T10:13:03+05:30"/>
+                                 </PayableInvoiceInfo>
+                              </PayableInfo>
+                              <PaymentMethod type="check">
+                                 <Description xml:lang="EN">
+                                    <ShortName>Scheck@!mit Scheckmanagement&amp;#</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                              <PaymentPartner>
+                                 <Contact role="payer" addressIDDomain="payeeID" addressID="000001">
+                                    <Name xml:lang="EN">SAP A.G.</Name>
+                                    <PostalAddress name="25871">
+                                       <Street>234</Street>
+                                       <Street/>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>1111111111555</Number>
+                                          <Extension>32</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>455555</Number>
+                                          <Extension>5555</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="payee" addressIDDomain="payerID" addressID="100000">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress name="25866">
+                                       <Street>Kolping Str. 15</Street>
+                                       <Street>Best Vendor For Product 12123</Street>
+                                       <Street/>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Email name="default">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="receivingBank" addressID="">
+                                    <Name xml:lang=""/>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <Street/>
+                                       <Street/>
+                                       <City/>
+                                       <State/>
+                                       <Country isoCountryCode=""/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <IdReference identifier="" domain="abaRoutingNumber"/>
+                              </PaymentPartner>
+                              <PaymentTerms paymentTermCode="0003"/>
+                              <GrossAmount>
+                                 <Money currency="USD">10400.00</Money>
+                              </GrossAmount>
+                              <DiscountBasis>
+                                 <Money currency="USD">10400.00</Money>
+                              </DiscountBasis>
+                              <DiscountAmount>
+                                 <Money currency="USD">0.0</Money>
+                              </DiscountAmount>
+                              <Tax>
+                                 <Money currency="USD">400.00</Money>
+                                 <Description xml:lang="EN">Tax Summary</Description>
+                                 <TaxDetail category="sales">
+                                    <TaxAmount>
+                                       <Money currency="USD">400.0</Money>
+                                    </TaxAmount>
+                                    <TaxLocation xml:lang="EN"/>
+                                 </TaxDetail>
+                              </Tax>
+                              <NetAmount>
+                                 <Money currency="USD">10400.00</Money>
+                              </NetAmount>
+                              <Comments xml:lang="en"/>
+                              <Extrinsic name="immediatepay"/>
+                              <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                              <Extrinsic name="organizationUnit">0001</Extrinsic>
+                              <Extrinsic name="originalInvoiceNo">5100001497</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">5100001497</Extrinsic>
+                              <Extrinsic name="fiscalYear">2018</Extrinsic>
+                              <Extrinsic name="earlyPaymentDiscount">
+                                 <Money currency="USD">0.0</Money>
+                              </Extrinsic>
+                           </PaymentProposalRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario3"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xspec">
+      <label>Payment Proposal with Automated clearing house</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithACH.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:29:34973+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress>
+                                    <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                    <Street>Kolping Str. 15</Street>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </Correspondent>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret/>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="production">
+                        <PaymentProposalRequest paymentProposalID="510000637320200010001Q8J"
+                                                operation="new"
+                                                paymentDate="2020-10-06T08:14:50+05:30"
+                                                companyCode="0001">
+                           <PayableInfo>
+                              <PayableInvoiceInfo>
+                                 <InvoiceIDInfo invoiceID="5105613282" invoiceDate="2020-09-06T08:14:50+05:30"/>
+                              </PayableInvoiceInfo>
+                           </PayableInfo>
+                           <PaymentMethod type="ach">
+                              <Description xml:lang="EN">
+                                 <ShortName>Scheck@!mit Scheckmanagement&amp;#</ShortName>
+                              </Description>
+                           </PaymentMethod>
+                           <PaymentPartner>
+                              <Contact role="payer" addressID="000001" addressIDDomain="payeeID">
+                                 <Name xml:lang="EN">SAP A.G.</Name>
+                                 <PostalAddress name="25871">
+                                    <Street>234</Street>
+                                    <Street/>
+                                    <Street/>
+                                    <City>Walldorf</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>1111111111555</Number>
+                                       <Extension>32</Extension>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>455555</Number>
+                                       <Extension>5555</Extension>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="payee" addressID="100000" addressIDDomain="payerID">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress name="25866">
+                                    <Street>Kolping Str. 15</Street>
+                                    <Street>Best Vendor For Product 12123</Street>
+                                    <Street/>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Email name="default">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="receivingBank" addressID="">
+                                 <Name xml:lang=""/>
+                                 <PostalAddress>
+                                    <Street/>
+                                    <Street/>
+                                    <Street/>
+                                    <City/>
+                                    <State/>
+                                    <Country isoCountryCode=""/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference identifier="" domain="abaRoutingNumber"/>
+                           </PaymentPartner>
+                           <PaymentTerms paymentTermCode="0001"/>
+                           <GrossAmount>
+                              <Money currency="EUR">1040.00</Money>
+                           </GrossAmount>
+                           <DiscountBasis>
+                              <Money currency="EUR">1000.00</Money>
+                           </DiscountBasis>
+                           <DiscountAmount>
+                              <Money currency="EUR">0.0</Money>
+                           </DiscountAmount>
+                           <Tax>
+                              <Money currency="EUR">40.00</Money>
+                              <Description xml:lang="EN">Tax Summary</Description>
+                              <TaxDetail category="">
+                                 <TaxAmount>
+                                    <Money currency="EUR">40.0</Money>
+                                 </TaxAmount>
+                                 <TaxLocation xml:lang="EN"/>
+                              </TaxDetail>
+                           </Tax>
+                           <NetAmount>
+                              <Money currency="EUR">1040.00</Money>
+                           </NetAmount>
+                           <Comments xml:lang="en"/>
+                           <Extrinsic name="immediatepay"/>
+                           <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                           <Extrinsic name="organizationUnit">0001</Extrinsic>
+                           <Extrinsic name="originalInvoiceNo">5105613282</Extrinsic>
+                           <Extrinsic name="buyerInvoiceID">5100006373</Extrinsic>
+                           <Extrinsic name="fiscalYear">2020</Extrinsic>
+                           <Extrinsic name="earlyPaymentDiscount">
+                              <Money currency="EUR">0.0</Money>
+                           </Extrinsic>
+                        </PaymentProposalRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario3-expect1" successful="true">
+         <label>Payment Proposal with Automated clearing house</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                       <Street>Kolping Str. 15</Street>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </Correspondent>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret/>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="production">
+                           <PaymentProposalRequest companyCode="0001"
+                                                   paymentProposalID="510000637320200010001Q8J"
+                                                   paymentDate="2020-10-06T08:14:50+05:30"
+                                                   operation="new">
+                              <PayableInfo>
+                                 <PayableInvoiceInfo>
+                                    <InvoiceIDInfo invoiceID="5105613282" invoiceDate="2020-09-06T08:14:50+05:30"/>
+                                 </PayableInvoiceInfo>
+                              </PayableInfo>
+                              <PaymentMethod type="ach">
+                                 <Description xml:lang="EN">
+                                    <ShortName>Scheck@!mit Scheckmanagement&amp;#</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                              <PaymentPartner>
+                                 <Contact role="payer" addressIDDomain="payeeID" addressID="000001">
+                                    <Name xml:lang="EN">SAP A.G.</Name>
+                                    <PostalAddress name="25871">
+                                       <Street>234</Street>
+                                       <Street/>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>1111111111555</Number>
+                                          <Extension>32</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>455555</Number>
+                                          <Extension>5555</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="payee" addressIDDomain="payerID" addressID="100000">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress name="25866">
+                                       <Street>Kolping Str. 15</Street>
+                                       <Street>Best Vendor For Product 12123</Street>
+                                       <Street/>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Email name="default">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="receivingBank" addressID="">
+                                    <Name xml:lang=""/>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <Street/>
+                                       <Street/>
+                                       <City/>
+                                       <State/>
+                                       <Country isoCountryCode=""/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <IdReference identifier="" domain="abaRoutingNumber"/>
+                              </PaymentPartner>
+                              <PaymentTerms paymentTermCode="0001"/>
+                              <GrossAmount>
+                                 <Money currency="EUR">1040.00</Money>
+                              </GrossAmount>
+                              <DiscountBasis>
+                                 <Money currency="EUR">1000.00</Money>
+                              </DiscountBasis>
+                              <DiscountAmount>
+                                 <Money currency="EUR">0.0</Money>
+                              </DiscountAmount>
+                              <Tax>
+                                 <Money currency="EUR">40.00</Money>
+                                 <Description xml:lang="EN">Tax Summary</Description>
+                                 <TaxDetail category="">
+                                    <TaxAmount>
+                                       <Money currency="EUR">40.0</Money>
+                                    </TaxAmount>
+                                    <TaxLocation xml:lang="EN"/>
+                                 </TaxDetail>
+                              </Tax>
+                              <NetAmount>
+                                 <Money currency="EUR">1040.00</Money>
+                              </NetAmount>
+                              <Comments xml:lang="en"/>
+                              <Extrinsic name="immediatepay"/>
+                              <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                              <Extrinsic name="organizationUnit">0001</Extrinsic>
+                              <Extrinsic name="originalInvoiceNo">5105613282</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">5100006373</Extrinsic>
+                              <Extrinsic name="fiscalYear">2020</Extrinsic>
+                              <Extrinsic name="earlyPaymentDiscount">
+                                 <Money currency="EUR">0.0</Money>
+                              </Extrinsic>
+                           </PaymentProposalRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario4"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xspec">
+      <label>Payment Proposal with Other Payment Method</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithOther.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:29:34514+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress>
+                                    <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                    <Street>Kolping Str. 15</Street>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </Correspondent>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret/>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <PaymentProposalRequest paymentProposalID="510000148420180010001Q8J"
+                                                operation="hold"
+                                                paymentDate="2018-06-07T13:36:27+05:30"
+                                                companyCode="0001">
+                           <PayableInfo>
+                              <PayableInvoiceInfo>
+                                 <InvoiceIDInfo invoiceID="INV-16514" invoiceDate="2018-05-31T13:36:27+05:30"/>
+                              </PayableInvoiceInfo>
+                           </PayableInfo>
+                           <PaymentMethod type="other">
+                              <Description xml:lang="EN">
+                                 <ShortName>other</ShortName>
+                              </Description>
+                           </PaymentMethod>
+                           <PaymentPartner>
+                              <Contact role="payer" addressID="000001" addressIDDomain="payeeID">
+                                 <Name xml:lang="EN">SAP A.G.</Name>
+                                 <PostalAddress name="25871">
+                                    <Street>234</Street>
+                                    <Street/>
+                                    <Street/>
+                                    <City>Walldorf</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>1111111111555</Number>
+                                       <Extension>32</Extension>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>455555</Number>
+                                       <Extension>5555</Extension>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="payee" addressID="100000" addressIDDomain="payerID">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress name="25866">
+                                    <Street>Kolping Str. 15</Street>
+                                    <Street>Best Vendor For Product 12123</Street>
+                                    <Street/>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Email name="default">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="receivingBank" addressID="">
+                                 <Name xml:lang=""/>
+                                 <PostalAddress>
+                                    <Street/>
+                                    <Street/>
+                                    <Street/>
+                                    <City/>
+                                    <State/>
+                                    <Country isoCountryCode=""/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference identifier="" domain="abaRoutingNumber"/>
+                           </PaymentPartner>
+                           <PaymentTerms paymentTermCode="0001"/>
+                           <GrossAmount>
+                              <Money currency="EUR">10.00</Money>
+                           </GrossAmount>
+                           <DiscountBasis>
+                              <Money currency="EUR">10.00</Money>
+                           </DiscountBasis>
+                           <DiscountAmount>
+                              <Money currency="EUR">0.0</Money>
+                           </DiscountAmount>
+                           <NetAmount>
+                              <Money currency="EUR">10.00</Money>
+                           </NetAmount>
+                           <Comments xml:lang="en"/>
+                           <Extrinsic name="immediatepay"/>
+                           <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                           <Extrinsic name="organizationUnit">0001</Extrinsic>
+                           <Extrinsic name="originalInvoiceNo">INV-16514</Extrinsic>
+                           <Extrinsic name="buyerInvoiceID">5100001484</Extrinsic>
+                           <Extrinsic name="fiscalYear">2018</Extrinsic>
+                           <Extrinsic name="earlyPaymentDiscount">
+                              <Money currency="EUR">0.0</Money>
+                           </Extrinsic>
+                        </PaymentProposalRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario4-expect1" successful="true">
+         <label>Payment Proposal with Other Payment Method</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                       <Street>Kolping Str. 15</Street>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </Correspondent>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret/>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <PaymentProposalRequest companyCode="0001"
+                                                   paymentProposalID="510000148420180010001Q8J"
+                                                   paymentDate="2018-06-07T13:36:27+05:30"
+                                                   operation="hold">
+                              <PayableInfo>
+                                 <PayableInvoiceInfo>
+                                    <InvoiceIDInfo invoiceID="INV-16514" invoiceDate="2018-05-31T13:36:27+05:30"/>
+                                 </PayableInvoiceInfo>
+                              </PayableInfo>
+                              <PaymentMethod type="other">
+                                 <Description xml:lang="EN">
+                                    <ShortName>other</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                              <PaymentPartner>
+                                 <Contact role="payer" addressIDDomain="payeeID" addressID="000001">
+                                    <Name xml:lang="EN">SAP A.G.</Name>
+                                    <PostalAddress name="25871">
+                                       <Street>234</Street>
+                                       <Street/>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>1111111111555</Number>
+                                          <Extension>32</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>455555</Number>
+                                          <Extension>5555</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="payee" addressIDDomain="payerID" addressID="100000">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress name="25866">
+                                       <Street>Kolping Str. 15</Street>
+                                       <Street>Best Vendor For Product 12123</Street>
+                                       <Street/>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Email name="default">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="receivingBank" addressID="">
+                                    <Name xml:lang=""/>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <Street/>
+                                       <Street/>
+                                       <City/>
+                                       <State/>
+                                       <Country isoCountryCode=""/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <IdReference identifier="" domain="abaRoutingNumber"/>
+                              </PaymentPartner>
+                              <PaymentTerms paymentTermCode="0001"/>
+                              <GrossAmount>
+                                 <Money currency="EUR">10.00</Money>
+                              </GrossAmount>
+                              <DiscountBasis>
+                                 <Money currency="EUR">10.00</Money>
+                              </DiscountBasis>
+                              <DiscountAmount>
+                                 <Money currency="EUR">0.0</Money>
+                              </DiscountAmount>
+                              <NetAmount>
+                                 <Money currency="EUR">10.00</Money>
+                              </NetAmount>
+                              <Comments xml:lang="en"/>
+                              <Extrinsic name="immediatepay"/>
+                              <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                              <Extrinsic name="organizationUnit">0001</Extrinsic>
+                              <Extrinsic name="originalInvoiceNo">INV-16514</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">5100001484</Extrinsic>
+                              <Extrinsic name="fiscalYear">2018</Extrinsic>
+                              <Extrinsic name="earlyPaymentDiscount">
+                                 <Money currency="EUR">0.0</Money>
+                              </Extrinsic>
+                           </PaymentProposalRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario5"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xspec">
+      <label>Payment Proposal with No Tax</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithNoTax.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:29:34552+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress>
+                                    <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                    <Street>Kolping Str. 15</Street>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </Correspondent>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret/>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <PaymentProposalRequest paymentProposalID="190043532420210010001Q8J"
+                                                operation="hold"
+                                                paymentDate="2021-07-02T12:25:26+05:30"
+                                                companyCode="0001">
+                           <PayableInfo>
+                              <PayableInvoiceInfo>
+                                 <InvoiceIDInfo invoiceID="RR" invoiceDate="2021-06-04T12:25:26+05:30"/>
+                              </PayableInvoiceInfo>
+                           </PayableInfo>
+                           <PaymentMethod type="other">
+                              <Description xml:lang="EN">
+                                 <ShortName>other</ShortName>
+                              </Description>
+                           </PaymentMethod>
+                           <PaymentPartner>
+                              <Contact role="payer" addressID="000001" addressIDDomain="payeeID">
+                                 <Name xml:lang="EN">SAP A.G.</Name>
+                                 <PostalAddress name="25871">
+                                    <Street>234</Street>
+                                    <Street/>
+                                    <Street/>
+                                    <City>Walldorf</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>1111111111555</Number>
+                                       <Extension>32</Extension>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>455555</Number>
+                                       <Extension>5555</Extension>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="payee" addressID="100000" addressIDDomain="payerID">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress name="25866">
+                                    <Street>Kolping Str. 15</Street>
+                                    <Street>Best Vendor For Product 12123</Street>
+                                    <Street/>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Email name="default">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="receivingBank" addressID="">
+                                 <Name xml:lang=""/>
+                                 <PostalAddress>
+                                    <Street/>
+                                    <Street/>
+                                    <Street/>
+                                    <City/>
+                                    <State/>
+                                    <Country isoCountryCode=""/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference identifier="" domain="abaRoutingNumber"/>
+                           </PaymentPartner>
+                           <PaymentTerms paymentTermCode="0001"/>
+                           <GrossAmount>
+                              <Money currency="EUR">10.00</Money>
+                           </GrossAmount>
+                           <DiscountBasis>
+                              <Money currency="EUR">0.00</Money>
+                           </DiscountBasis>
+                           <DiscountAmount>
+                              <Money currency="EUR">0.0</Money>
+                           </DiscountAmount>
+                           <NetAmount>
+                              <Money currency="EUR">10.00</Money>
+                           </NetAmount>
+                           <Comments xml:lang="en"/>
+                           <Extrinsic name="immediatepay"/>
+                           <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                           <Extrinsic name="organizationUnit">0001</Extrinsic>
+                           <Extrinsic name="originalInvoiceNo">RR</Extrinsic>
+                           <Extrinsic name="buyerInvoiceID">1900435324</Extrinsic>
+                           <Extrinsic name="fiscalYear">2021</Extrinsic>
+                           <Extrinsic name="earlyPaymentDiscount">
+                              <Money currency="EUR">0.0</Money>
+                           </Extrinsic>
+                        </PaymentProposalRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario5-expect1" successful="true">
+         <label>Payment Proposal with No Tax</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                       <Street>Kolping Str. 15</Street>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </Correspondent>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret/>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <PaymentProposalRequest companyCode="0001"
+                                                   paymentProposalID="190043532420210010001Q8J"
+                                                   paymentDate="2021-07-02T12:25:26+05:30"
+                                                   operation="hold">
+                              <PayableInfo>
+                                 <PayableInvoiceInfo>
+                                    <InvoiceIDInfo invoiceID="RR" invoiceDate="2021-06-04T12:25:26+05:30"/>
+                                 </PayableInvoiceInfo>
+                              </PayableInfo>
+                              <PaymentMethod type="other">
+                                 <Description xml:lang="EN">
+                                    <ShortName>other</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                              <PaymentPartner>
+                                 <Contact role="payer" addressIDDomain="payeeID" addressID="000001">
+                                    <Name xml:lang="EN">SAP A.G.</Name>
+                                    <PostalAddress name="25871">
+                                       <Street>234</Street>
+                                       <Street/>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>1111111111555</Number>
+                                          <Extension>32</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>455555</Number>
+                                          <Extension>5555</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="payee" addressIDDomain="payerID" addressID="100000">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress name="25866">
+                                       <Street>Kolping Str. 15</Street>
+                                       <Street>Best Vendor For Product 12123</Street>
+                                       <Street/>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Email name="default">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="receivingBank" addressID="">
+                                    <Name xml:lang=""/>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <Street/>
+                                       <Street/>
+                                       <City/>
+                                       <State/>
+                                       <Country isoCountryCode=""/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <IdReference identifier="" domain="abaRoutingNumber"/>
+                              </PaymentPartner>
+                              <PaymentTerms paymentTermCode="0001"/>
+                              <GrossAmount>
+                                 <Money currency="EUR">10.00</Money>
+                              </GrossAmount>
+                              <DiscountBasis>
+                                 <Money currency="EUR">0.00</Money>
+                              </DiscountBasis>
+                              <DiscountAmount>
+                                 <Money currency="EUR">0.0</Money>
+                              </DiscountAmount>
+                              <NetAmount>
+                                 <Money currency="EUR">10.00</Money>
+                              </NetAmount>
+                              <Comments xml:lang="en"/>
+                              <Extrinsic name="immediatepay"/>
+                              <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                              <Extrinsic name="organizationUnit">0001</Extrinsic>
+                              <Extrinsic name="originalInvoiceNo">RR</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">1900435324</Extrinsic>
+                              <Extrinsic name="fiscalYear">2021</Extrinsic>
+                              <Extrinsic name="earlyPaymentDiscount">
+                                 <Money currency="EUR">0.0</Money>
+                              </Extrinsic>
+                           </PaymentProposalRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario6"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xspec">
+      <label>Payment Proposal with Tax</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithTax.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:29:34802+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress>
+                                    <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                    <Street>Kolping Str. 15</Street>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </Correspondent>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret/>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <PaymentProposalRequest paymentProposalID="510000149720180010001Q8J"
+                                                operation="new"
+                                                paymentDate="2018-07-06T10:13:03+05:30"
+                                                companyCode="0001">
+                           <PayableInfo>
+                              <PayableInvoiceInfo>
+                                 <InvoiceIDInfo invoiceID="5100001497" invoiceDate="2018-06-06T10:13:03+05:30"/>
+                              </PayableInvoiceInfo>
+                           </PayableInfo>
+                           <PaymentMethod type="check">
+                              <Description xml:lang="EN">
+                                 <ShortName>Scheck@!mit Scheckmanagement&amp;#</ShortName>
+                              </Description>
+                           </PaymentMethod>
+                           <PaymentPartner>
+                              <Contact role="payer" addressID="000001" addressIDDomain="payeeID">
+                                 <Name xml:lang="EN">SAP A.G.</Name>
+                                 <PostalAddress name="25871">
+                                    <Street>234</Street>
+                                    <Street/>
+                                    <Street/>
+                                    <City>Walldorf</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>1111111111555</Number>
+                                       <Extension>32</Extension>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>455555</Number>
+                                       <Extension>5555</Extension>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="payee" addressID="100000" addressIDDomain="payerID">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress name="25866">
+                                    <Street>Kolping Str. 15</Street>
+                                    <Street>Best Vendor For Product 12123</Street>
+                                    <Street/>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Email name="default">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="receivingBank" addressID="">
+                                 <Name xml:lang=""/>
+                                 <PostalAddress>
+                                    <Street/>
+                                    <Street/>
+                                    <Street/>
+                                    <City/>
+                                    <State/>
+                                    <Country isoCountryCode=""/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference identifier="" domain="abaRoutingNumber"/>
+                           </PaymentPartner>
+                           <PaymentTerms paymentTermCode="0003"/>
+                           <GrossAmount>
+                              <Money currency="USD">10400.00</Money>
+                           </GrossAmount>
+                           <DiscountBasis>
+                              <Money currency="USD">10400.00</Money>
+                           </DiscountBasis>
+                           <DiscountAmount>
+                              <Money currency="USD">0.0</Money>
+                           </DiscountAmount>
+                           <Tax>
+                              <Money currency="USD">400.00</Money>
+                              <Description xml:lang="EN">Tax Summary</Description>
+                              <TaxDetail category="sales">
+                                 <TaxAmount>
+                                    <Money currency="USD">400.0</Money>
+                                 </TaxAmount>
+                                 <TaxLocation xml:lang="EN">Cayman Islands</TaxLocation>
+                              </TaxDetail>
+                           </Tax>
+                           <NetAmount>
+                              <Money currency="USD">10400.00</Money>
+                           </NetAmount>
+                           <Comments xml:lang="en"/>
+                           <Extrinsic name="immediatepay"/>
+                           <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                           <Extrinsic name="organizationUnit">0001</Extrinsic>
+                           <Extrinsic name="originalInvoiceNo">5100001497</Extrinsic>
+                           <Extrinsic name="buyerInvoiceID">5100001497</Extrinsic>
+                           <Extrinsic name="fiscalYear">2018</Extrinsic>
+                           <Extrinsic name="earlyPaymentDiscount">
+                              <Money currency="USD">0.0</Money>
+                           </Extrinsic>
+                        </PaymentProposalRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario6-expect1" successful="true">
+         <label>Payment Proposal with Tax</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                       <Street>Kolping Str. 15</Street>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </Correspondent>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret/>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <PaymentProposalRequest companyCode="0001"
+                                                   paymentProposalID="510000149720180010001Q8J"
+                                                   paymentDate="2018-07-06T10:13:03+05:30"
+                                                   operation="new">
+                              <PayableInfo>
+                                 <PayableInvoiceInfo>
+                                    <InvoiceIDInfo invoiceID="5100001497" invoiceDate="2018-06-06T10:13:03+05:30"/>
+                                 </PayableInvoiceInfo>
+                              </PayableInfo>
+                              <PaymentMethod type="check">
+                                 <Description xml:lang="EN">
+                                    <ShortName>Scheck@!mit Scheckmanagement&amp;#</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                              <PaymentPartner>
+                                 <Contact role="payer" addressIDDomain="payeeID" addressID="000001">
+                                    <Name xml:lang="EN">SAP A.G.</Name>
+                                    <PostalAddress name="25871">
+                                       <Street>234</Street>
+                                       <Street/>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>1111111111555</Number>
+                                          <Extension>32</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>455555</Number>
+                                          <Extension>5555</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="payee" addressIDDomain="payerID" addressID="100000">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress name="25866">
+                                       <Street>Kolping Str. 15</Street>
+                                       <Street>Best Vendor For Product 12123</Street>
+                                       <Street/>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Email name="default">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="receivingBank" addressID="">
+                                    <Name xml:lang=""/>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <Street/>
+                                       <Street/>
+                                       <City/>
+                                       <State/>
+                                       <Country isoCountryCode=""/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <IdReference identifier="" domain="abaRoutingNumber"/>
+                              </PaymentPartner>
+                              <PaymentTerms paymentTermCode="0003"/>
+                              <GrossAmount>
+                                 <Money currency="USD">10400.00</Money>
+                              </GrossAmount>
+                              <DiscountBasis>
+                                 <Money currency="USD">10400.00</Money>
+                              </DiscountBasis>
+                              <DiscountAmount>
+                                 <Money currency="USD">0.0</Money>
+                              </DiscountAmount>
+                              <Tax>
+                                 <Money currency="USD">400.00</Money>
+                                 <Description xml:lang="EN">Tax Summary</Description>
+                                 <TaxDetail category="sales">
+                                    <TaxAmount>
+                                       <Money currency="USD">400.0</Money>
+                                    </TaxAmount>
+                                    <TaxLocation xml:lang="EN">Cayman Islands</TaxLocation>
+                                 </TaxDetail>
+                              </Tax>
+                              <NetAmount>
+                                 <Money currency="USD">10400.00</Money>
+                              </NetAmount>
+                              <Comments xml:lang="en"/>
+                              <Extrinsic name="immediatepay"/>
+                              <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                              <Extrinsic name="organizationUnit">0001</Extrinsic>
+                              <Extrinsic name="originalInvoiceNo">5100001497</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">5100001497</Extrinsic>
+                              <Extrinsic name="fiscalYear">2018</Extrinsic>
+                              <Extrinsic name="earlyPaymentDiscount">
+                                 <Money currency="USD">0.0</Money>
+                              </Extrinsic>
+                           </PaymentProposalRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+   <scenario id="scenario7"
+             xspec="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/mapping/anBuyer/MAPPING_ANY_AddOn_0000_PaymentProposal_cXML_0000_PaymentProposalRequest.xspec">
+      <label>Payment Proposal with House Bank</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/Users/i320581/Documents/XSPEC_HOME/XSPEC/payloads/base/outbound/anBuyer/PPR/PPRwithHouseBank.xml"/>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <Combined>
+               <Payload>
+                  <cXML payloadID="" timestamp="2023-04-27T15:29:3469+05:30">
+                     <Header>
+                        <From>
+                           <Credential domain="NetworkID">
+                              <Identity>AN02005543705-T</Identity>
+                           </Credential>
+                           <Credential domain="EndPointID">
+                              <Identity>CIG</Identity>
+                           </Credential>
+                        </From>
+                        <To>
+                           <Credential domain="VendorID">
+                              <Identity>100000</Identity>
+                           </Credential>
+                           <Correspondent>
+                              <Contact role="correspondent">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress>
+                                    <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                    <Street>Kolping Str. 15</Street>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE"/>
+                                 </PostalAddress>
+                                 <Email name="routing">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </Correspondent>
+                        </To>
+                        <Sender>
+                           <Credential domain="NetworkID">
+                              <Identity>AN01000000087</Identity>
+                              <SharedSecret/>
+                           </Credential>
+                           <UserAgent>Ariba Supplier</UserAgent>
+                        </Sender>
+                     </Header>
+                     <Request deploymentMode="test">
+                        <PaymentProposalRequest paymentProposalID="510003694020210010001Q8J"
+                                                operation="new"
+                                                paymentDate="2021-06-16T13:37:04+05:30"
+                                                companyCode="0001">
+                           <PayableInfo>
+                              <PayableInvoiceInfo>
+                                 <InvoiceIDInfo invoiceID="000151000369402021001"
+                                                invoiceDate="2021-05-17T13:37:04+05:30"/>
+                              </PayableInvoiceInfo>
+                           </PayableInfo>
+                           <PaymentMethod type="other">
+                              <Description xml:lang="EN">
+                                 <ShortName>other</ShortName>
+                              </Description>
+                           </PaymentMethod>
+                           <PaymentPartner>
+                              <Contact role="payer" addressID="000001" addressIDDomain="payeeID">
+                                 <Name xml:lang="EN">SAP A.G.</Name>
+                                 <PostalAddress name="SAP Address">
+                                    <Street>234</Street>
+                                    <Street/>
+                                    <Street/>
+                                    <City>Walldorf</City>
+                                    <State>11</State>
+                                    <PostalCode>10243</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>1111111111555</Number>
+                                       <Extension>32</Extension>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>455555</Number>
+                                       <Extension>5555</Extension>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                              <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="payee" addressID="100000" addressIDDomain="payerID">
+                                 <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                 <PostalAddress name="25866">
+                                    <Street>Kolping Str. 15</Street>
+                                    <Street>Best Vendor For Product 12123</Street>
+                                    <Street/>
+                                    <City>NY</City>
+                                    <State>11</State>
+                                    <PostalCode>56066</PostalCode>
+                                    <Country isoCountryCode="DE">DE</Country>
+                                 </PostalAddress>
+                                 <Email name="default">Aribadefect@sap.com</Email>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>777777745</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                                 <Fax>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode="DE">49</CountryCode>
+                                       <AreaOrCityCode/>
+                                       <Number>3456</Number>
+                                    </TelephoneNumber>
+                                 </Fax>
+                              </Contact>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="receivingBank" addressID="">
+                                 <Name xml:lang=""/>
+                                 <PostalAddress>
+                                    <Street/>
+                                    <Street/>
+                                    <Street/>
+                                    <City/>
+                                    <State/>
+                                    <Country isoCountryCode=""/>
+                                 </PostalAddress>
+                              </Contact>
+                              <IdReference identifier="" domain="abaRoutingNumber"/>
+                           </PaymentPartner>
+                           <PaymentPartner>
+                              <Contact role="originatingBank">
+                                 <Name xml:lang="en">Bank of America</Name>
+                                 <PostalAddress>
+                                    <Street>345 Lindberg Avenue</Street>
+                                    <City>St Charles</City>
+                                    <State>MO</State>
+                                    <Country isoCountryCode="">USA</Country>
+                                 </PostalAddress>
+                                 <Phone>
+                                    <TelephoneNumber>
+                                       <CountryCode isoCountryCode=""/>
+                                       <AreaOrCityCode/>
+                                       <Number>+1(314)656 7878</Number>
+                                    </TelephoneNumber>
+                                 </Phone>
+                              </Contact>
+                              <IdReference identifier="562400019898" domain="bankAccountID"/>
+                           </PaymentPartner>
+                           <PaymentTerms paymentTermCode="0001"/>
+                           <GrossAmount>
+                              <Money currency="EUR">12.48</Money>
+                           </GrossAmount>
+                           <DiscountBasis>
+                              <Money currency="EUR">12.48</Money>
+                           </DiscountBasis>
+                           <DiscountAmount>
+                              <Money currency="EUR">0.0</Money>
+                           </DiscountAmount>
+                           <Tax>
+                              <Money currency="EUR">0.00</Money>
+                              <Description xml:lang="EN">Tax Summary</Description>
+                              <TaxDetail category="sales">
+                                 <TaxAmount>
+                                    <Money currency="EUR">0.00</Money>
+                                 </TaxAmount>
+                                 <TaxLocation xml:lang="EN"/>
+                              </TaxDetail>
+                           </Tax>
+                           <NetAmount>
+                              <Money currency="EUR">12.48</Money>
+                           </NetAmount>
+                           <Comments xml:lang="en"/>
+                           <Extrinsic name="immediatepay"/>
+                           <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                           <Extrinsic name="organizationUnit">0001</Extrinsic>
+                           <Extrinsic name="originalInvoiceNo">000151000369402021001</Extrinsic>
+                           <Extrinsic name="buyerInvoiceID">5100036940</Extrinsic>
+                           <Extrinsic name="fiscalYear">2021</Extrinsic>
+                           <Extrinsic name="earlyPaymentDiscount">
+                              <Money currency="EUR">0.0</Money>
+                           </Extrinsic>
+                        </PaymentProposalRequest>
+                     </Request>
+                  </cXML>
+               </Payload>
+            </Combined>
+         </content-wrap>
+      </result>
+      <test id="scenario7-expect1" successful="true">
+         <label>Payment Proposal with House Bank</label>
+         <expect select="/element()">
+            <content-wrap xmlns="">
+               <Combined>
+                  <Payload>
+                     <cXML payloadID="..." timestamp="...">
+                        <Header>
+                           <From>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN02005543705-T</Identity>
+                              </Credential>
+                              <Credential domain="EndPointID">
+                                 <Identity>CIG</Identity>
+                              </Credential>
+                           </From>
+                           <To>
+                              <Credential domain="VendorID">
+                                 <Identity>100000</Identity>
+                              </Credential>
+                              <Correspondent>
+                                 <Contact role="correspondent">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress>
+                                       <DeliverTo>Best Vendor For Product 12123</DeliverTo>
+                                       <Street>Kolping Str. 15</Street>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE"/>
+                                    </PostalAddress>
+                                    <Email name="routing">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </Correspondent>
+                           </To>
+                           <Sender>
+                              <Credential domain="NetworkID">
+                                 <Identity>AN01000000087</Identity>
+                                 <SharedSecret/>
+                              </Credential>
+                              <UserAgent>Ariba Supplier</UserAgent>
+                           </Sender>
+                        </Header>
+                        <Request deploymentMode="test">
+                           <PaymentProposalRequest paymentProposalID="510003694020210010001Q8J"
+                                                   operation="new"
+                                                   paymentDate="2021-06-16T13:37:04+05:30"
+                                                   companyCode="0001">
+                              <PayableInfo>
+                                 <PayableInvoiceInfo>
+                                    <InvoiceIDInfo invoiceID="000151000369402021001"
+                                                   invoiceDate="2021-05-17T13:37:04+05:30"/>
+                                 </PayableInvoiceInfo>
+                              </PayableInfo>
+                              <PaymentMethod type="other">
+                                 <Description xml:lang="EN">
+                                    <ShortName>other</ShortName>
+                                 </Description>
+                              </PaymentMethod>
+                              <PaymentPartner>
+                                 <Contact role="payer" addressID="000001" addressIDDomain="payeeID">
+                                    <Name xml:lang="EN">SAP A.G.</Name>
+                                    <PostalAddress name="SAP Address">
+                                       <Street>234</Street>
+                                       <Street/>
+                                       <Street/>
+                                       <City>Walldorf</City>
+                                       <State>11</State>
+                                       <PostalCode>10243</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>1111111111555</Number>
+                                          <Extension>32</Extension>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>455555</Number>
+                                          <Extension>5555</Extension>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                                 <IdReference identifier="11310012345098" domain="bankAccountID"/>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="payee" addressID="100000" addressIDDomain="payerID">
+                                    <Name xml:lang="EN">Best Vendor For Product 12123</Name>
+                                    <PostalAddress name="25866">
+                                       <Street>Kolping Str. 15</Street>
+                                       <Street>Best Vendor For Product 12123</Street>
+                                       <Street/>
+                                       <City>NY</City>
+                                       <State>11</State>
+                                       <PostalCode>56066</PostalCode>
+                                       <Country isoCountryCode="DE">DE</Country>
+                                    </PostalAddress>
+                                    <Email name="default">Aribadefect@sap.com</Email>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>777777745</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                    <Fax>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode="DE">49</CountryCode>
+                                          <AreaOrCityCode/>
+                                          <Number>3456</Number>
+                                       </TelephoneNumber>
+                                    </Fax>
+                                 </Contact>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="receivingBank" addressID="">
+                                    <Name xml:lang=""/>
+                                    <PostalAddress>
+                                       <Street/>
+                                       <Street/>
+                                       <Street/>
+                                       <City/>
+                                       <State/>
+                                       <Country isoCountryCode=""/>
+                                    </PostalAddress>
+                                 </Contact>
+                                 <IdReference identifier="" domain="abaRoutingNumber"/>
+                              </PaymentPartner>
+                              <PaymentPartner>
+                                 <Contact role="originatingBank">
+                                    <Name xml:lang="en">Bank of America</Name>
+                                    <PostalAddress>
+                                       <Street>345 Lindberg Avenue</Street>
+                                       <City>St Charles</City>
+                                       <State>MO</State>
+                                       <Country isoCountryCode="">USA</Country>
+                                    </PostalAddress>
+                                    <Phone>
+                                       <TelephoneNumber>
+                                          <CountryCode isoCountryCode=""/>
+                                          <AreaOrCityCode/>
+                                          <Number>+1(314)656 7878</Number>
+                                       </TelephoneNumber>
+                                    </Phone>
+                                 </Contact>
+                                 <IdReference identifier="562400019898" domain="bankAccountID"/>
+                              </PaymentPartner>
+                              <PaymentTerms paymentTermCode="0001"/>
+                              <GrossAmount>
+                                 <Money currency="EUR">12.48</Money>
+                              </GrossAmount>
+                              <DiscountBasis>
+                                 <Money currency="EUR">12.48</Money>
+                              </DiscountBasis>
+                              <DiscountAmount>
+                                 <Money currency="EUR">0.0</Money>
+                              </DiscountAmount>
+                              <Tax>
+                                 <Money currency="EUR">0.00</Money>
+                                 <Description xml:lang="EN">Tax Summary</Description>
+                                 <TaxDetail category="sales">
+                                    <TaxAmount>
+                                       <Money currency="EUR">0.00</Money>
+                                    </TaxAmount>
+                                    <TaxLocation xml:lang="EN"/>
+                                 </TaxDetail>
+                              </Tax>
+                              <NetAmount>
+                                 <Money currency="EUR">12.48</Money>
+                              </NetAmount>
+                              <Comments xml:lang="en"/>
+                              <Extrinsic name="immediatepay"/>
+                              <Extrinsic name="Ariba.relaxedOperationCheck"/>
+                              <Extrinsic name="organizationUnit">0001</Extrinsic>
+                              <Extrinsic name="originalInvoiceNo">000151000369402021001</Extrinsic>
+                              <Extrinsic name="buyerInvoiceID">5100036940</Extrinsic>
+                              <Extrinsic name="fiscalYear">2021</Extrinsic>
+                              <Extrinsic name="earlyPaymentDiscount">
+                                 <Money currency="EUR">0.0</Money>
+                              </Extrinsic>
+                           </PaymentProposalRequest>
+                        </Request>
+                     </cXML>
+                  </Payload>
+               </Combined>
+            </content-wrap>
+         </expect>
+      </test>
+   </scenario>
+</report>

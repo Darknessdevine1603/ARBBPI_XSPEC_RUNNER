@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_ProductReplenishmentMessage_AddOn_0000_ProductReplenishmentMessage.xsl">
+    <x:scenario label="PRM scenario">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ProductReplenishmentMessage'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM1.xml"/>
+        <x:expect label="PRM scenario" href="../../../XSPEC/payloads/target/inbound/anBuyer/ProductReplenish/PRM1.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PRM with Inventory scenario">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ProductReplenishmentMessage'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_Inventory.xml"/>
+        <x:expect label="PRM with Inventory scenario" href="../../../XSPEC/payloads/target/inbound/anBuyer/ProductReplenish/PRM_Inventory.dat" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PRM with Zero Quantity">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'-12:00'"/>
+        <x:param name="anSourceDocumentType" select="'ProductReplenishmentMessage'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_Zero_Qty.xml"/>
+        <x:expect label="PRM with Zero Quantity" href="../../../XSPEC/payloads/target/inbound/anBuyer/ProductReplenish/PRM_Zero_Qty.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PRM with Negative Quantity">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'ProductReplenishmentMessage'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_NegativeValues.xml"/>
+        <x:expect label="PRM with Negative Quantity" href="../../../XSPEC/payloads/target/inbound/anBuyer/ProductReplenish/PRM_NegativeValues.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PRM with Negative Quantity process type SMI">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'ProductReplenishmentMessage'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_withNegativeValues_SMI.xml"/>
+        <x:expect label="PRM with Negative Quantity process type SMI" href="../../../XSPEC/payloads/target/inbound/anBuyer/ProductReplenish/PRM_withNegativeValues_SMI.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PRM with Empty Quantity">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'ProductReplenishmentMessage'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_withEmptyQuantity.xml"/>
+        <x:expect label="PRM with Empty Quantity" href="../../../XSPEC/payloads/target/inbound/anBuyer/ProductReplenish/PRM_withEmptyQuantity.xml" select="element()"/>
+    </x:scenario>
+    <x:scenario label="PRM with Empty Quantity process type SMI">
+        <x:param name="anReceiverID" select="'AN02004204493-T'"/>
+        <x:param name="anERPSystemID" select="'QODCLNT002'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'ProductReplenishmentMessage'"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ProductReplenish/PRM_withEmptyQuantity_SMI.xml"/>
+        <x:expect label="PRM with Empty Quantity process type SMI" href="../../../XSPEC/payloads/target/inbound/anBuyer/ProductReplenish/PRM_withEmptyQuantity_SMI.xml" select="element()"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/PIDX/MAPPING_ANY_cXML_0000_OrderRequest_PIDX_1.61_OrderCreate.xsl">
+    <x:scenario label="PIDX Order Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag" select="'true'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/OrderRequest/OrderRequest_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/OrderRequest/OrderRequest_AM.dat"
+            select="element()" label="PIDX Order Request"/>
+    </x:scenario>
+    <x:scenario label="PIDX Order Request with BlanketItem and Tax details">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/OrderRequest/OrderRequest_RIT1_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/OrderRequest/OrderRequest_RIT1_AM.dat"
+            select="*" label="PIDX Order Request with BlanketItem and Tax details"/>
+    </x:scenario>
+    <x:scenario label="PIDX Order Request detail">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/OrderRequest/OrderRequest_RIT2_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/OrderRequest/OrderRequest_RIT2_AM.dat"
+            select="*" label="PIDX Order Request detail"/>
+    </x:scenario>
+    <x:scenario label="PIDX Order Request with Comments">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anAlternativeSender"/>
+        <x:param name="anAlternativeReceiver"/>
+        <x:param name="anSenderGroupID"/>
+        <x:param name="anReceiverGroupID"/>
+        <x:param name="anANSILookupFlag"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/PIDX/OrderRequest/OrderRequest_RIT3_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/inbound/PIDX/OrderRequest/OrderRequest_RIT3_AM.dat"
+            select="*" label="PIDX Order Request with Comments"/>
+    </x:scenario>
+</x:description>

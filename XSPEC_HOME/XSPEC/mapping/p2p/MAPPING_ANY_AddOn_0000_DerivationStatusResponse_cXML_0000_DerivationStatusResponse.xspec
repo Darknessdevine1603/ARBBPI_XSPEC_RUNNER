@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/p2p/MAPPING_ANY_AddOn_0000_DerivationStatusResponse_cXML_0000_DerivationStatusResponse.xsl">
+    
+    <x:scenario label="RequisitionDerive">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/DerivationStatusResponse/DerivationStatusResponse_BM.xml"/>
+        <x:expect label="RequisitionDerive" href="../../../XSPEC/payloads/target/outbound/p2p/DerivationStatusResponse/DerivationStatusResposne_AM.xml" select="element()" />        
+    </x:scenario>
+    
+    <x:scenario label="InvoiceDerive">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/DerivationStatusResponse/InvDerivationStatusResponse_BM.xml"/>
+        <x:expect label="InvoiceDerive" href="../../../XSPEC/payloads/target/outbound/p2p/DerivationStatusResponse/InvDerivationStatusResponse_AM.xml" select="element()" />           
+    </x:scenario>
+    
+    <x:scenario label="Requisition Derive Error case">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/DerivationStatusResponse/DerivationStatusResponseError_BM.xml"/>
+        <x:expect label="Requisition Derive Error case" href="../../../XSPEC/payloads/target/outbound/p2p/DerivationStatusResponse/DerivationStatusResponseError_AM.xml" select="element()" />           
+    </x:scenario>
+    
+    <x:scenario label="Invoice Derive Error case">
+        <x:context href="../../../XSPEC/payloads/base/outbound/p2p/DerivationStatusResponse/InvDerivationStatusResponseError_BM.xml"/>
+        <x:expect label="Invoice Derive Error case" href="../../../XSPEC/payloads/target/outbound/p2p/DerivationStatusResponse/InvDerivationStatusResponseError_AM.xml" select="element()" />           
+    </x:scenario>
+    
+</x:description>

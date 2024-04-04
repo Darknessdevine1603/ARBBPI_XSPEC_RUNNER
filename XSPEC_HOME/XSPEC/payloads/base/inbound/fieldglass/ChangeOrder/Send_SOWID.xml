@@ -1,0 +1,243 @@
+<Combined>
+	<Payload>
+<cXML payloadID="af875132-79e2-955c-844f-0505a7578c01" timestamp="2021-10-19T11:05:04+00:00" version="1.2.051">
+	<Header>
+		<From>
+			<Credential domain="NetworkID">
+				<Identity>AN02005084848-T</Identity>
+			</Credential>
+		</From>
+		<To>
+			<Credential domain="NetworkId">
+				<Identity>AN02005084849-T</Identity>
+			</Credential>
+			<Correspondent preferredLanguage="en-US">
+				<Contact role="routeTo">
+					<Name xml:lang="en-US">Fieldglass</Name>
+				</Contact>
+			</Correspondent>
+		</To>
+		<Sender>
+			<Credential domain="NetworkID">
+				<Identity>AN01000000001</Identity>
+			</Credential>
+			<UserAgent>Ariba Supplier</UserAgent>
+		</Sender>
+	</Header>
+	<Request deploymentMode="test">
+		<OrderRequest>
+			<OrderRequestHeader orderDate="2021-10-19T12:00:00+00:00" orderID="4500042651" orderType="regular" type="new">
+				<Total>
+					<Money currency="EUR">1800.00</Money>
+				</Total>
+				<ShipTo>
+					<Address addressID="1010" addressIDDomain="buyerLocationIDDomain" isoCountryCode="DE">
+						<Name xml:lang="de">Plant 1010 - Address Name 1</Name>
+						<PostalAddress>
+							<Street>Dietmar-Hopp-Allee 16</Street>
+							<City>Walldorf</City>
+							<State>BW</State>
+							<PostalCode>69190</PostalCode>
+							<Country isoCountryCode="DE">DE</Country>
+						</PostalAddress>
+					</Address>
+					<IdReference domain="buyerLocationID" identifier="1010"/>
+				</ShipTo>
+				<BillTo>
+					<Address addressID="1010" isoCountryCode="DE">
+						<Name xml:lang="de">Company Code 1010</Name>
+						<PostalAddress>
+							<Street>Dietmar-Hopp-Allee 16</Street>
+							<City>Walldorf</City>
+							<Municipality/>
+							<State>BW</State>
+							<PostalCode>69190</PostalCode>
+							<Country isoCountryCode="DE">DE</Country>
+						</PostalAddress>
+					</Address>
+				</BillTo>
+				<BusinessPartner role="soldTo" type="organization">
+					<Address addressID="1010" addressIDDomain="buyerAccountID" isoCountryCode="DE">
+						<Name xml:lang="de">Company Code 1010 - Address Name 1</Name>
+						<PostalAddress>
+							<Street>Dietmar-Hopp-Allee 16</Street>
+							<City>Walldorf</City>
+							<State>BW</State>
+							<PostalCode>69190</PostalCode>
+							<Country isoCountryCode="DE">DE</Country>
+						</PostalAddress>
+						<Email name="default">noreply@sap.com</Email>
+					</Address>
+					<IdReference domain="buyerAccountID" identifier="1010"/>
+				</BusinessPartner>
+				<LegalEntity>
+					<IdReference domain="CompanyCode" identifier="1010">
+						<Description xml:lang="de">Company Code 1010</Description>
+					</IdReference>
+				</LegalEntity>
+				<OrganizationalUnit>
+					<IdReference domain="PurchasingOrganization" identifier="1010">
+						<Description xml:lang="de">Purch. Org. 1010</Description>
+					</IdReference>
+				</OrganizationalUnit>
+				<OrganizationalUnit>
+					<IdReference domain="PurchasingGroup" identifier="001">
+						<Description xml:lang="de">Group 001</Description>
+					</IdReference>
+				</OrganizationalUnit>
+				<PaymentTerm payInNumberOfDays="14">
+					<Discount>
+						<DiscountPercent percent="3.0"/>
+					</Discount>
+				</PaymentTerm>
+				<PaymentTerm payInNumberOfDays="20">
+					<Discount>
+						<DiscountPercent percent="2.0"/>
+					</Discount>
+				</PaymentTerm>
+				<PaymentTerm payInNumberOfDays="30">
+					<Discount>
+						<DiscountPercent percent="0"/>
+					</Discount>
+				</PaymentTerm>
+				<Contact addressID="10300091" role="supplierCorporate">
+					<Name xml:lang="en">Inlandslieferant DE (ARB FG Integration)</Name>
+					<PostalAddress>
+						<Street>Holzweg 30</Street>
+						<City>Walldorf</City>
+						<State>BW</State>
+						<PostalCode>69190</PostalCode>
+						<Country isoCountryCode="DE">DE</Country>
+					</PostalAddress>
+					<Email name="default">10300091vendor@sap.com</Email>
+					<Phone>
+						<TelephoneNumber>
+							<CountryCode isoCountryCode="DE"/>
+							<AreaOrCityCode/>
+							<Number>625842533</Number>
+						</TelephoneNumber>
+					</Phone>
+					<Fax>
+						<TelephoneNumber>
+							<CountryCode isoCountryCode="DE"/>
+							<AreaOrCityCode/>
+							<Number>38136871</Number>
+						</TelephoneNumber>
+					</Fax>
+				</Contact>
+				<Extrinsic name="partyAdditionalID">10300091</Extrinsic>
+				<Extrinsic name="buyerVatID">DE123456789</Extrinsic>
+			</OrderRequestHeader>
+			<ItemOut itemCategory="limit" itemClassification="service" lineNumber="10" quantity="1" requestedDeliveryDate="2021-11-21T12:00:00+01:00" requiresServiceEntry="yes">
+				<ItemID>
+					<SupplierPartID>Non-Catalog-Item</SupplierPartID>
+				</ItemID>
+				<BlanketItemDetail>
+					<Description xml:lang="de">Office service</Description>
+					<ExpectedLimit>
+						<Money currency="EUR">800.0</Money>
+					</ExpectedLimit>
+					<UnitPrice>
+						<Money currency="EUR">800.0</Money>
+					</UnitPrice>
+					<UnitOfMeasure/>
+					<Classification domain="NotAvailable">2</Classification>
+					<Extrinsic name="ExpectedUnplanned">
+						<Money currency="EUR">800.0</Money>
+					</Extrinsic>
+					<Extrinsic name="FG.SOWnumber">PR14 10</Extrinsic>
+				</BlanketItemDetail>
+				<SpendDetail>
+					<Extrinsic name="ServicePeriod">
+						<Period endDate="2021-11-21T12:00:00+01:00" startDate="2021-10-19T12:00:00+02:00"/>
+					</Extrinsic>
+				</SpendDetail>
+				<ControlKeys>
+					<OCInstruction value="allowed">
+						<Lower>
+							<Tolerances>
+								<PriceTolerance>
+									<Percentage percent="3.0"/>
+								</PriceTolerance>
+							</Tolerances>
+						</Lower>
+						<Upper>
+							<Tolerances>
+								<PriceTolerance>
+									<Percentage percent="1.0"/>
+								</PriceTolerance>
+							</Tolerances>
+						</Upper>
+					</OCInstruction>
+					<SESInstruction value="allowed">
+						<Lower>
+							<Tolerances/>
+						</Lower>
+						<Upper>
+							<Tolerances/>
+						</Upper>
+					</SESInstruction>
+				</ControlKeys>
+				<ScheduleLine lineNumber="1" quantity="1" requestedDeliveryDate="2021-11-21T12:00:00+01:00">
+					<UnitOfMeasure/>
+				</ScheduleLine>
+			</ItemOut>
+			<ItemOut itemCategory="limit" itemClassification="service" lineNumber="20" quantity="1" requestedDeliveryDate="2021-11-21T12:00:00+01:00" requiresServiceEntry="yes">
+				<ItemID>
+					<SupplierPartID>Non-Catalog-Item</SupplierPartID>
+				</ItemID>
+				<BlanketItemDetail>
+					<Description xml:lang="de">house keeping services</Description>
+					<ExpectedLimit>
+						<Money currency="EUR">1000.0</Money>
+					</ExpectedLimit>
+					<UnitPrice>
+						<Money currency="EUR">1000.0</Money>
+					</UnitPrice>
+					<UnitOfMeasure/>
+					<Classification domain="NotAvailable">2</Classification>
+					<Extrinsic name="ExpectedUnplanned">
+						<Money currency="EUR">1000.0</Money>
+					</Extrinsic>
+					<Extrinsic name="FG.SOWnumber">PR14 10</Extrinsic>
+				</BlanketItemDetail>
+				<SpendDetail>
+					<Extrinsic name="ServicePeriod">
+						<Period endDate="2021-11-21T12:00:00+01:00" startDate="2021-10-19T12:00:00+02:00"/>
+					</Extrinsic>
+				</SpendDetail>
+				<ControlKeys>
+					<OCInstruction value="allowed">
+						<Lower>
+							<Tolerances>
+								<PriceTolerance>
+									<Percentage percent="3.0"/>
+								</PriceTolerance>
+							</Tolerances>
+						</Lower>
+						<Upper>
+							<Tolerances>
+								<PriceTolerance>
+									<Percentage percent="1.0"/>
+								</PriceTolerance>
+							</Tolerances>
+						</Upper>
+					</OCInstruction>
+					<SESInstruction value="allowed">
+						<Lower>
+							<Tolerances/>
+						</Lower>
+						<Upper>
+							<Tolerances/>
+						</Upper>
+					</SESInstruction>
+				</ControlKeys>
+				<ScheduleLine lineNumber="1" quantity="1" requestedDeliveryDate="2021-11-21T12:00:00+01:00">
+					<UnitOfMeasure/>
+				</ScheduleLine>
+			</ItemOut>
+		</OrderRequest>
+	</Request>
+</cXML>
+	</Payload>
+</Combined>

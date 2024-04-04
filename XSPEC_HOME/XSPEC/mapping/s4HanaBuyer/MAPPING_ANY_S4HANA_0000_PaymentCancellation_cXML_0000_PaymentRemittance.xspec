@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/s4HanaBuyer/MAPPING_ANY_S4HANA_0000_PaymentCancellation_cXML_0000_PaymentRemittance.xsl">
+    <x:scenario label="Payment Remittance Cancellation - Basic1">
+<!--        Parameter in main XSLT -->
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPName"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="cXMLAttachments"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        
+        <x:param name="anTargetDocumentType" select="'PaymentRemittance'"/>
+        <x:param name="anSupplierANID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anEnvName"/>
+        <x:param name="exchange"/>
+        <x:param name="anProviderANID" />
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPSystemID" select="'0LOI36K'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="Document_type"/>
+        <x:param name="anSourceDocumentType" select="'PaymentCancellation'"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/PaymentRemittanceCancellation/PaymentRemittanceCancellation.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/PaymentRemittanceCancellation/PaymentRemittanceCancellation.dat"
+            select="*" label="PaymentRemittanceCancellationRequest- Basic1"/>
+    </x:scenario>
+    <x:scenario label="Payment Remittance Cancellation - Basic2">
+        <!--        Parameter in main XSLT -->
+        <x:param name="anReceiverID"/>
+        <x:param name="anERPSystemID"/>
+        <x:param name="anERPName"/>
+        <x:param name="anSourceDocumentType"/>
+        <x:param name="cXMLAttachments"/>
+        <!--        Parameter in format addon  -->
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:param name="anTargetDocumentType" select="'PaymentRemittance'"/>
+        <x:param name="anSupplierANID"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        <x:param name="exchange"/>
+        <x:param name="anProviderANID" />
+        <x:param name="anIsMultiERP"/>
+        <x:param name="anERPSystemID" select="'0LOI36K'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderID"/>
+        <x:param name="Document_type"/>
+        <x:param name="anSourceDocumentType" select="'PaymentCancellation'"/>
+        <x:param name="anReceiverID"/>
+        <x:param name="cXMLAttachments" select="'YES'"/>
+        <x:param name="anSenderDefaultTimeZone" select="'+05:30'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/s4HanaBuyer/PaymentRemittanceCancellation/PaymentRemittanceCancellation1.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/s4HanaBuyer/PaymentRemittanceCancellation/PaymentRemittanceCancellation1.dat"
+            select="*" label="PaymentRemittanceCancellationRequest -Basic2"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:typens="urn:Ariba:Sourcing:vsap" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:Ariba:Sourcing:vsap"
+    elementFormDefault="qualified">
+    <xsd:element name="Headers">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" name="variant" type="xsd:string"/>
+                <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="PurchaseContractRequestExportRequest">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0" name="WSPurchaseContractRequestExportOutputBean_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="item"
+                                type="typens:WSPurchaseContractRequestExportOutputBean"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="PurchaseContractRequestExportReply">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element minOccurs="0" name="WSPurchaseContractRequestExportInputBean_Item">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="item"
+                                type="typens:WSPurchaseContractRequestExportInputBean"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="partition" type="xsd:string"/>
+            <xsd:attribute name="variant" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="WSPurchaseContractRequestExportOutputBean">
+        <xsd:all>
+            <xsd:element name="ContractRequest" type="typens:ContractRequest"/>
+            <xsd:element name="MessageHeader" type="typens:MessageHeader"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="WSPurchaseContractRequestExportInputBean">
+        <xsd:all>
+            <xsd:element name="Message" type="xsd:string"/>
+            <xsd:element name="Status" type="xsd:integer"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ContractRequest">
+        <xsd:all>
+            <xsd:element name="ContractRequestHeader" type="typens:ContractRequestHeader"/>
+            <xsd:element name="ContractRequestLineItems">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item"
+                            type="typens:ContractRequestLineItem"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="MessageHeader">
+        <xsd:all>
+            <xsd:element name="ANID" type="xsd:string"/>
+            <xsd:element name="BusinessSystemID" type="xsd:string"/>
+            <xsd:element name="PayloadID" type="xsd:string"/>
+            <xsd:element name="RealmID" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ContractRequestHeader">
+        <xsd:all>
+            <xsd:element name="AgreementDate" type="xsd:string"/>
+            <xsd:element name="Comment" type="xsd:string"/>
+            <xsd:element name="CompanyCode" type="xsd:string"/>
+            <xsd:element name="ContractAmount" type="typens:Money"/>
+            <xsd:element name="ContractID" type="xsd:string"/>
+            <xsd:element name="CreateDate" type="xsd:string"/>
+            <xsd:element name="CustomFields">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item" type="typens:CustomField"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DocumentCategory" type="xsd:string"/>
+            <xsd:element name="DocumentLocale" type="xsd:string"/>
+            <xsd:element name="DocumentType" type="xsd:string"/>
+            <xsd:element name="EffectiveDate" type="xsd:string"/>
+            <xsd:element name="ExpirationDate" type="xsd:string"/>
+            <xsd:element name="IntegratedByUser" type="xsd:string"/>
+            <xsd:element name="Operation" type="xsd:string"/>
+            <xsd:element name="PaymentTerms" type="typens:PaymentTerms"/>
+            <xsd:element name="PrivateID" type="xsd:string"/>
+            <xsd:element name="PurchasingGroup" type="xsd:string"/>
+            <xsd:element name="PurchasingOrganization" type="xsd:string"/>
+            <xsd:element name="RelatedID" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ContractRequestLineItem">
+        <xsd:all>
+            <xsd:element name="BuyerPartID" type="xsd:string"/>
+            <xsd:element name="Comment" type="xsd:string"/>
+            <xsd:element name="CreateOrUpdatePIR" type="xsd:string"/>
+            <xsd:element name="CustomFields">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item" type="typens:CustomField"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Description" type="xsd:string"/>
+            <xsd:element name="ExternalLineNumber" type="xsd:string"/>
+            <xsd:element name="Incoterm" type="typens:IncoTerm"/>
+            <xsd:element name="ItemCategory" type="xsd:string"/>
+            <xsd:element name="ItemType" type="xsd:string"/>
+            <xsd:element name="LineNumber" type="xsd:string"/>
+            <xsd:element name="ManufacturerPartID" type="xsd:string"/>
+            <xsd:element name="MaterialGroup" type="xsd:string"/>
+            <xsd:element name="MaterialType" type="xsd:string"/>
+            <xsd:element name="Operation" type="xsd:string"/>
+            <xsd:element name="ParentLineNumber" type="xsd:string"/>
+            <xsd:element name="Plant" type="xsd:string"/>
+            <xsd:element name="ProductType" type="xsd:string"/>
+            <xsd:element name="PurchaseRequisitionID" type="xsd:string"/>
+            <xsd:element name="PurchaseRequisitionItemID" type="xsd:string"/>
+            <xsd:element name="Quantity" type="typens:Quantity"/>
+            <xsd:element name="QuoteReferenceID" type="xsd:string"/>
+            <xsd:element name="QuoteReferenceItemID" type="xsd:string"/>
+            <xsd:element name="SequenceNumber" type="xsd:string"/>
+            <xsd:element name="SupplierPartID" type="xsd:string"/>
+            <xsd:element name="UnitPrice" type="typens:UnitPrice"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="Money">
+        <xsd:all>
+            <xsd:element name="Amount" type="xsd:decimal"/>
+            <xsd:element name="CurrencyCode" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="CustomField">
+        <xsd:all>
+            <xsd:element name="FieldName" type="xsd:string"/>
+            <xsd:element name="FieldType" type="xsd:string"/>
+            <xsd:element name="FieldValues">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item" type="typens:FieldValue"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="PaymentTerms">
+        <xsd:all>
+            <xsd:element name="PaymentTermId" type="xsd:string"/>
+            <xsd:element name="paymentTermsList">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item" type="typens:PaymentTerm"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="IncoTerm">
+        <xsd:all>
+            <xsd:element name="Classification" type="xsd:string"/>
+            <xsd:element name="Location1" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="Quantity">
+        <xsd:all>
+            <xsd:element name="UnitOfMeasure" type="xsd:string"/>
+            <xsd:element name="Value" type="xsd:decimal"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="UnitPrice">
+        <xsd:all>
+            <xsd:element name="Amount" type="typens:Money"/>
+            <xsd:element name="PriceUnit" type="typens:Quantity"/>
+            <xsd:element name="PricingCondition" type="typens:PricingCondition"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="FieldValue">
+        <xsd:all>
+            <xsd:element name="Name" type="xsd:string"/>
+            <xsd:element name="Value" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="PaymentTerm">
+        <xsd:all>
+            <xsd:element name="DiscountAmount" type="typens:Money"/>
+            <xsd:element name="DiscountPercent" type="xsd:decimal"/>
+            <xsd:element name="PayInNumberofDays" type="xsd:integer"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="PricingCondition">
+        <xsd:all>
+            <xsd:element name="ValidityPeriods">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item" type="typens:ValidityPeriod"
+                        />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ValidityPeriod">
+        <xsd:all>
+            <xsd:element name="ConditionTypes">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item" type="typens:ConditionType"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="FromDate" type="xsd:string"/>
+            <xsd:element name="ToDate" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="ConditionType">
+        <xsd:all>
+            <xsd:element name="Name" type="xsd:string"/>
+            <xsd:element name="ScaleType" type="xsd:string"/>
+            <xsd:element name="Scales">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="item" type="typens:Scale"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Type" type="xsd:string"/>
+            <xsd:element name="Value" type="typens:Value"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="Scale">
+        <xsd:all>
+            <xsd:element name="From" type="xsd:string"/>
+            <xsd:element name="To" type="xsd:string"/>
+            <xsd:element name="Value" type="typens:Value"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="Value">
+        <xsd:all>
+            <xsd:element name="Money" type="typens:Money"/>
+            <xsd:element name="Percentage" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+</xsd:schema>

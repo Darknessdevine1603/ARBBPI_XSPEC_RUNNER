@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_AddOn_0000_ProductActivityMessage_cXML_0000_ProductActivityMessage.xsl"> 
+   
+    <x:scenario label="Product Activity Message SMI">
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/> 
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>     
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>  
+        <x:param name="anTargetDocumentType"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PAM/ProductActivityMessageSMI.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/PAM/ProductActivityMessageSMI.dat"
+            select="element()" label="Product Activity Message SMI"/>
+    </x:scenario>
+    <x:scenario label="Product Activity Message SMI Product with Product Hierarchy">
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/> 
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName" select="'PROD'"/>     
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>  
+        <x:param name="anTargetDocumentType"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PAM/ProductActivityMessageSMI2.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/PAM/ProductActivityMessageSMI2.dat"
+            select="element()" label="Product Activity Message SMI Product with Product Hierarchy"/>
+    </x:scenario>
+  
+    <x:scenario label="Product Activity Message Sub Contracting">
+        
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/> 
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>     
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>  
+        <x:param name="anTargetDocumentType"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PAM/ProductActivityMessageSubCon.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/PAM/ProductActivityMessageSubCon.dat"
+            select="element()" label="Product Activity Message Sub Contracting"/>
+    </x:scenario>
+   
+    <x:scenario label="Product Activity Message Consignment">
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/> 
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>     
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>  
+        <x:param name="anTargetDocumentType"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PAM/ProductActivityMessageConsign.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/PAM/ProductActivityMessageConsign.dat"
+            select="element()" label="Product Activity Message Consignment"/>
+    </x:scenario>
+
+    <x:scenario label="Product Activity Message Forecast ">
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/> 
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>     
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>  
+        <x:param name="anTargetDocumentType"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PAM/ProductActivityMessageForecast.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/PAM/ProductActivityMessageForecast.dat"
+            select="element()" label="Product Activity Message Forecast"/>
+    </x:scenario>
+   
+    <x:scenario label="Product Activity Message STO ">
+        <x:param name="anIsMultiERP" select="'TRUE'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSupplierANID" select="'AN02005543705-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/> 
+        <x:param name="anPayloadID"/>
+        <x:param name="anEnvName"/>       
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>  
+        <x:param name="anTargetDocumentType"/>
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/outbound/anBuyer/PAM/ProductActivityMessageSTO.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/outbound/anBuyer/PAM/ProductActivityMessageSTO.dat"
+            select="element()" label="Product Activity Message STO"/>
+    </x:scenario>
+   
+</x:description>

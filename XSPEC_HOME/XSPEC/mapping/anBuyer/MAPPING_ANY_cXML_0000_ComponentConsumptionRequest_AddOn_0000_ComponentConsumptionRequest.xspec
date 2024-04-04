@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Buyer/mapping/anBuyer/MAPPING_ANY_cXML_0000_ComponentConsumptionRequest_AddOn_0000_ComponentConsumptionRequest.xsl">
+    <x:scenario label="Component Consumption Request">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'ComponentConsumptionRequest'"/> 
+
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ComponentConsumption/ComponentConsumption.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/ComponentConsumption/ComponentConsumption.dat"
+            select="element()" label="Component Consumption Request"/>
+    </x:scenario>
+    <x:scenario label="Component Consumption Request with Asset Info">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'ComponentConsumptionRequest'"/> 
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ComponentConsumption/ComponentConsumptionwithAssetInfo.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/ComponentConsumption/ComponentConsumptionwithAssetInfo.dat"
+            select="element()" label="Component Consumption Request with Asset Info"/>
+    </x:scenario>
+    <x:scenario label="Component Consumption Request with Comments and Attachments">
+        <x:param name="anReceiverID" select="'AN02005543705-T'"/>
+        <x:param name="anERPSystemID" select="'QKDCLNT521'"/>
+        <x:param name="anERPTimeZone" select="'+05:30'"/>
+        <x:param name="anSourceDocumentType" select="'ComponentConsumptionRequest'"/> 
+        
+        <x:param name="anCrossRefFlag" select="'YES'"/>
+        <x:param name="anLookUpFlag" select="'YES'"/>
+        <x:param name="anUOMFlag" select="'YES'"/>
+        <x:param name="anLocalTesting" select="'YES'"/>
+        <x:context href="../../../XSPEC/payloads/base/inbound/anBuyer/ComponentConsumption/ComponentConsumptionMultilineCommentsAttachments.xml"/>
+        <x:expect href="../../../XSPEC/payloads/target/inbound/anBuyer/ComponentConsumption/ComponentConsumptionMultilineCommentsAttachments.dat"
+            select="element()" label="Component Consumption Request with Comments and Attachments"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="../../../Supplier/mapping/X12/MAPPING_ANY_ASC-X12_004010_846_cXML_0000_ProductReplenishmentMessage.xsl">
+    <x:scenario label="Transport Confirmation Request">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="anEnvName"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ProductReplenishment/ProductReplenishment846_BM.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ProductReplenishment/ProductReplenishment846_AM.dat"
+            select="element()" label="Transport Confirmation Request"/>
+    </x:scenario>
+    <!--Extra Scenerio for mo-po-->
+    <x:scenario label="Transport Confirmation Request: MO-PO">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ProductReplenishment/ProductReplenishment846_BM_MoPo.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ProductReplenishment/ProductReplenishment846_AM_MoPo.dat"
+            select="element()" label="Transport Confirmation Request: MO-PO"/>
+    </x:scenario>
+    
+    <x:scenario label="Transport Confirmation Request: MoPo - Time Series Value">
+        <!--        Parameter in main XSLT -->
+        <x:param name="output"/>
+        <x:param name="upperAlpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</x:param>
+        <x:param name="lowerAlpha">abcdefghijklmnopqrstuvwxyz</x:param>
+        <x:param name="anSupplierANID" select="'AN02004417464-T'"/>
+        <x:param name="anBuyerANID" select="'AN02004417465-T'"/>
+        <x:param name="anProviderANID" select="'AN01000000087'"/>
+        <x:param name="anPayloadID"/>
+        <x:param name="anSenderDefaultTimeZone"/>
+        <x:param name="anEnvName" select="'PROD'"/>
+        
+        <x:context href="../../../XSPEC/payloads/base/outbound/X12/ProductReplenishment/ProductReplenishment846_BM_MoPo_TseriesV.xml"/>
+        <x:expect
+            href="../../../XSPEC/payloads/target/outbound/X12/ProductReplenishment/ProductReplenishment846_AM_MoPo_TseriesV.dat"
+            select="element()" label="Transport Confirmation Request: MoPo - Time Series Value"/>
+    </x:scenario>
+</x:description>
