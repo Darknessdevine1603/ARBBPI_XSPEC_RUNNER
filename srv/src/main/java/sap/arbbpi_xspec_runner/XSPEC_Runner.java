@@ -520,8 +520,7 @@ public class XSPEC_Runner  {
 			}
 
 			Source summaryInputXML = new StreamSource(summaryFileName);
-			Result summaryOutputXML = new StreamResult(new File(xspecReportsFolder + fileSperator + "reports"
-					+ fileSperator + moduleName + fileSperator + "CoverageReportSummary-coverage.html"));
+			Result summaryOutputXML = new StreamResult(new File("webapp" + fileSperator + moduleName + "_CoverageReportSummary-coverage.html"));
 
 			logFileString = XSLT_Transform(summaryxslt, summaryInputXML, summaryOutputXML, "", "", fileSperator,
 					new Date());

@@ -38,6 +38,12 @@ modules:
         - npm run build
     requires:
       - name: ARBBPI_XSPEC_RUNNER-db
+  - name: ARBBPI_XSPEC_RUNNER-srv
+    type: java
+    path: srv
+    requires:
+      - name: ARBBPI_XSPEC_RUNNER-auth
+      - name: ARBBPI_XSPEC_RUNNER-db
 
 resources:
   - name: ARBBPI_XSPEC_RUNNER-db
@@ -45,3 +51,12 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: ARBBPI_XSPEC_RUNNER-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: ARBBPI_XSPEC_RUNNER-${org}-${space}
+        tenant-mode: dedicated
